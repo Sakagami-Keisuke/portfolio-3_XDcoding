@@ -1,79 +1,398 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap");
-/* Box sizing rules */
-*,
-*::before,
-*::after {
+HTML CSSResult Skip Results Iframe EDIT ON *,
+::before,
+::after {
   box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
 }
 
-/* Remove default margin */
-body,
+/* Document */
+/* ============================================ */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Remove gray overlay on links for iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-tap-highlight-color: transparent;
+  /* 3*/
+}
+
+/* Sections */
+/* ============================================ */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/* Vertical rhythm */
+/* ============================================ */
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+/* Headings */
+/* ============================================ */
 h1,
 h2,
 h3,
 h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
   margin: 0;
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+/* Lists (enumeration) */
+/* ============================================ */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
+/* Lists (definition) */
+/* ============================================ */
+dt {
+  font-weight: bold;
 }
 
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+dd {
+  margin-left: 0;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+/* Grouping content */
+/* ============================================ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
 }
 
-/* Make images easier to work with */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: inherit;
+  /* 2 */
+}
+
+address {
+  font-style: inherit;
+}
+
+/* Text-level semantics */
+/* ============================================ */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: inherit;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Replaced content */
+/* ============================================ */
+/**
+ * Prevent vertical alignment issues.
+ */
+svg,
 img,
-picture {
-  max-width: 100%;
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+
+/* Forms */
+/* ============================================ */
+/**
+ * Reset form fields to make them styleable.
+ * 1. Make form elements stylable across systems iOS especially.
+ * 2. Inherit text-transform from parent.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none;
+  /* 1 */
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+  /* 2 */
+}
+
+/**
+ * Reset radio and checkbox appearance to preserve their look in iOS.
+ */
+[type=checkbox] {
+  -webkit-appearance: checkbox;
+  appearance: checkbox;
+}
+
+[type=radio] {
+  -webkit-appearance: radio;
+  appearance: radio;
+}
+
+/**
+ * Correct cursors for clickable elements.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled {
+  cursor: default;
+}
+
+/**
+ * Improve outlines for Firefox and unify style with input elements & buttons.
+ */
+:-moz-focusring {
+  outline: auto;
+}
+
+select:disabled {
+  opacity: inherit;
+}
+
+/**
+ * Remove padding
+ */
+option {
+  padding: 0;
+}
+
+/**
+ * Reset to invisible
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the outline style in Safari.
+ */
+[type=search] {
+  outline-offset: -2px;
+  /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Fix font inheritance.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/**
+ * Clickable labels
+ */
+label[for] {
+  cursor: pointer;
+}
+
+/* Interactive */
+/* ============================================ */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
 }
 
-/* Remove all animations and transitions for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-
-  *,
-*::before,
-*::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+/*
+ * Remove outline for editable content.
+ */
+[contenteditable]:focus {
+  outline: auto;
 }
+
+/* Tables */
+/* ============================================ */
+/**
+1. Correct table border color inheritance in all Chrome and Safari.
+*/
+table {
+  border-color: inherit;
+  /* 1 */
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
 .header {
   width: 1920px;
   height: 130px;
@@ -105,33 +424,43 @@ select {
   width: 190px;
   height: 73px;
 }
-.header .headercontainer .headertext p {
+.header .headercontainer .headertext p.uppertext {
+  padding-left: 8px;
   font-size: 30px;
   text-align: center;
+  line-height: 28px;
+}
+.header .headercontainer .headertext p.lowertext {
+  padding-left: 12px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 46px;
 }
 .header .headercontainer .headercontent {
-  width: 287px;
+  width: 300px;
   height: 73px;
   margin-right: 20px;
 }
 .header .headercontainer .headercontent .reception {
   font-size: 14px;
+  letter-spacing: 0.5px;
   text-align: right;
   margin-top: 5px;
 }
 .header .headercontainer .headercontent p.tel::before {
   content: "";
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 276x;
+  height: 26px;
   background: url("../images/受話器の線画アイコン.jpg") no-repeat;
   background-size: contain;
-  margin-right: 10px;
+  margin-right: 18px;
 }
 .header .headercontainer .headercontent p.tel {
-  color: #21A937;
+  color: #21a937;
   font-size: 24px;
   text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0, -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px, 0px -0.4px 0px;
+  letter-spacing: 0.5px;
   margin-top: 14px;
   text-align: right;
 }
@@ -174,29 +503,29 @@ ul {
   position: relative;
 }
 
-p.firstview-left {
+p.message-left {
   writing-mode: vertical-rl;
   font-size: 28px;
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
-  letter-spacing: 8px;
+  letter-spacing: 4.4px;
   padding-top: 25px;
   line-height: 102px;
   width: 102px;
   height: 565px;
   background-color: white;
   position: absolute;
-  top: 111px;
+  top: 133px;
   left: 197px;
 }
-p.firstview-left .color {
+p.message-left .color {
   color: green;
 }
 
-p.firstview-right {
+p.message-right {
   writing-mode: vertical-rl;
   font-size: 28px;
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
-  letter-spacing: 8px;
+  letter-spacing: 6px;
   padding-top: 25px;
   line-height: 102px;
   width: 102px;
@@ -225,8 +554,8 @@ p.firstview-right {
   font-size: 24px;
   background: linear-gradient(transparent 70%, #54c854 70%);
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
-  letter-spacing: -0.2px;
   margin-top: 200px;
+  line-height: 20px;
 }
 .aboutus .slbox {
   width: 216px;
@@ -237,18 +566,20 @@ p.firstview-right {
   font-size: 24px;
   background: linear-gradient(transparent 70%, #54c854 70%);
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.1px;
+  line-height: 33px;
 }
 .aboutus .thbox {
   width: 410px;
-  height: 130px;
-  margin-top: 46px;
+  height: 145px;
+  margin-top: 30px;
   margin-left: 32px;
 }
 .aboutus .third-line {
   font-size: 16px;
   line-height: 36px;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.1px;
+  line-height: 38px;
 }
 .aboutus .aboutus-img {
   width: 690px;
@@ -264,7 +595,7 @@ p.firstview-right {
 .treatment-content-container .treatment-content-box {
   width: 96px;
   margin: 0 auto;
-  padding-top: 85px;
+  padding-top: 84px;
   background: linear-gradient(transparent 90%, #86eb86 70%);
 }
 .treatment-content-container .treatment-content-box p.treatment-content {
@@ -275,12 +606,13 @@ p.firstview-right {
 }
 
 .consultationbox {
-  width: 445px;
-  margin: 79px auto 0 auto;
+  width: 448px;
+  margin: 71px auto 0 auto;
+  background-color: red;
 }
 .consultationbox .consultation {
   font-size: 16px;
-  letter-spacing: -0.3px;
+  letter-spacing: 0px;
 }
 
 .container_treatmentcontent {
@@ -300,20 +632,21 @@ p.firstview-right {
 }
 .container_treatmentcontent .medical-subjects .subjecrt-title {
   width: 192px;
-  margin: 47px 94px 0 94px;
+  margin: 41px 94px 0 94px;
 }
 .container_treatmentcontent .medical-subjects .subjecrt-title p {
   font-size: 24px;
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
 }
 .container_treatmentcontent .medical-subjects .description {
-  margin: 54px 29px 111px 31px;
+  margin: 42px 29px 111px 31px;
 }
 .container_treatmentcontent .medical-subjects .description p {
   font-size: 16px;
   line-height: 33px;
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
   letter-spacing: -0.1px;
+  line-height: 38px;
 }
 .container_treatmentcontent .medical-subjects .medical-image {
   position: absolute;
@@ -326,12 +659,12 @@ p.firstview-right {
 }
 
 .noticebox {
-  width: 96px;
-  margin: 89px auto 0px auto;
+  width: 100px;
+  margin: 84px auto 0px auto;
 }
 .noticebox .notice {
   font-size: 24px;
-  background: linear-gradient(transparent 70%, #54c854 70%);
+  background: linear-gradient(transparent 60%, #86eb86 90%);
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
 }
 
@@ -351,7 +684,7 @@ p.firstview-right {
   flex-wrap: wrap;
 }
 .container_notice .noticewrap {
-  height: 29.5px;
+  height: 25px;
 }
 .container_notice div.notice_contents {
   border-bottom: 1px solid #e7e7e7;
@@ -364,7 +697,8 @@ p.firstview-right {
   display: inline-block;
   width: 80px;
   height: 16px;
-  margin: 26.5px 37px 20.5px 0px;
+  margin: 25.4px 32px 20.5px 0px;
+  letter-spacing: 0.6px;
 }
 .container_notice div.notice_contents p.info {
   font-size: 12px;
@@ -389,26 +723,28 @@ div.seewrap {
   text-align: right;
 }
 div.seewrap div.seebox {
+  width: 1000px;
   margin: 0px 0px 0px 66px;
   text-align: right;
 }
 div.seewrap div.seebox p.see {
   font-size: 16px;
-  width: 79px;
+  width: 85px;
   height: 16px;
-  margin-top: 35px;
+  margin-top: 44px;
   display: inline-block;
+  letter-spacing: 0px;
 }
 div.seewrap div.seebox p.seeicon {
   font-size: 14px;
-  width: 10px;
+  width: 12px;
   height: 14px;
-  margin-top: 35x;
+  margin-top: 35px;
   display: inline-block;
 }
 
 .container_access {
-  width: 1180px;
+  width: 1190px;
   height: 799px;
   margin: 0px auto 0 auto;
   background-color: white;
@@ -419,13 +755,14 @@ div.seewrap div.seebox p.seeicon {
 .container_access .map {
   width: 608px;
   height: 440px;
-  padding-top: 200px;
-  margin-right: 34px;
+  padding-top: 197px;
+  margin-right: 39px;
+  padding-left: 4px;
 }
 .container_access .container_about {
   width: 538px;
   height: 625px;
-  margin-top: 200px;
+  margin-top: 197px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -442,44 +779,57 @@ div.seewrap div.seebox p.seeicon {
   height: 73px;
 }
 .container_access .container_about .company .companyname {
-  font-size: 30px;
-  line-height: 36px;
-  width: 180px;
+  width: 190px;
   height: 73px;
 }
+.container_access .container_about .company .companyname .upperline-name {
+  font-size: 30px;
+  line-height: 22.5px;
+  padding-left: 9.5px;
+}
+.container_access .container_about .company .companyname .lowerline-name {
+  font-size: 30px;
+  line-height: 57px;
+  padding-left: 24px;
+}
 .container_access .container_about .adresswrap {
-  margin-top: 30px;
+  margin-top: 28px;
   display: flex;
   flex-wrap: wrap;
   background-color: white;
 }
 .container_access .container_about .adresswrap .adressnumber {
   font-size: 16px;
-  margin-right: 16px;
+  margin-right: 17px;
+  letter-spacing: 0.3px;
 }
 .container_access .container_about .adresswrap .adress {
   font-size: 16px;
+  letter-spacing: 0.3px;
 }
 .container_access .container_about .telbox {
   height: 32px;
-  width: 200px;
+  width: 220px;
   position: relative;
-  margin-top: 36px;
+  margin-top: 29px;
 }
 .container_access .container_about .telbox p.tel::before {
   content: "";
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background: url("../images/受話器の線画アイコン.jpg") no-repeat;
   background-size: contain;
   margin-right: 15px;
+  margin-top: 2px;
 }
 .container_access .container_about .telbox p.tel {
   color: #21a937;
   font-size: 24px;
   text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0, -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px, 0px -0.4px 0px;
   text-align: right;
+  padding-left: 6px;
+  letter-spacing: 0.5px;
   position: absolute;
 }
 .container_access .container_about .border {
@@ -507,9 +857,10 @@ div.seewrap div.seebox p.seeicon {
   border-right: 1px solid;
   border-color: #e7e7e7;
 }
-.container_access .container_about .businesshour .examination-time-box .examination-time {
+.container_access .container_about .businesshour .examination-time-box p.examination-time {
   font-size: 14px;
   margin-top: 9px;
+  margin-left: 4.5px;
 }
 .container_access .container_about .businesshour .patternwrap {
   width: 449px;
@@ -523,23 +874,65 @@ div.seewrap div.seebox p.seeicon {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.container_access .container_about .businesshour .patternwrap .pattern .dayofweek {
+.container_access .container_about .businesshour .patternwrap .pattern .dayofweek-upper {
   font-size: 14px;
   display: inline-block;
   width: 42px;
-  margin: 10px 23px 0 28.5px;
+  margin: 9px 23px 0 32px;
 }
-.container_access .container_about .businesshour .patternwrap .pattern .morning {
+.container_access .container_about .businesshour .patternwrap .pattern .dayofweek-middle {
   font-size: 14px;
   display: inline-block;
-  width: 102px;
-  margin: 10px 16px 0 0;
+  width: 42px;
+  margin: 14px 23px 0 32px;
 }
-.container_access .container_about .businesshour .patternwrap .pattern .afternoon {
+.container_access .container_about .businesshour .patternwrap .pattern .dayofweek-lower {
+  font-size: 14px;
+  display: inline-block;
+  width: 42px;
+  margin: 18px 23px 0 32px;
+}
+.container_access .container_about .businesshour .patternwrap .pattern .morning-upper {
+  font-size: 14px;
+  display: inline-block;
+  width: 105px;
+  margin: 9px 16px 0 0;
+  letter-spacing: 0.5px;
+}
+.container_access .container_about .businesshour .patternwrap .pattern .morning-middle {
+  font-size: 14px;
+  display: inline-block;
+  width: 105px;
+  margin: 16px 16px 0 0;
+  letter-spacing: 0.5px;
+}
+.container_access .container_about .businesshour .patternwrap .pattern .morning-lower {
+  font-size: 14px;
+  display: inline-block;
+  width: 105px;
+  margin: 16px 16px 0 0;
+  letter-spacing: 0.5px;
+}
+.container_access .container_about .businesshour .patternwrap .pattern .afternoon-upper {
   font-size: 14px;
   display: inline-block;
   width: 110px;
-  margin: 10px 16px 0 0;
+  margin: 9px 16px 0 0;
+  letter-spacing: 0.3px;
+}
+.container_access .container_about .businesshour .patternwrap .pattern .afternoon-middle {
+  font-size: 14px;
+  display: inline-block;
+  width: 110px;
+  margin: 16px 16px 0 0;
+  letter-spacing: 0.3px;
+}
+.container_access .container_about .businesshour .patternwrap .pattern .afternoon-lower {
+  font-size: 14px;
+  display: inline-block;
+  width: 110px;
+  margin: 16px 16px 0 0;
+  letter-spacing: 0.3px;
 }
 .container_access .container_about .closeddays-line {
   width: 533px;
@@ -554,8 +947,9 @@ div.seewrap div.seebox p.seeicon {
   border-right: 1px solid;
   border-color: #e7e7e7;
 }
-.container_access .container_about .closeddays-line .closedday-box .closedday {
-  margin-top: 0px;
+.container_access .container_about .closeddays-line .closedday-box p.closedday {
+  margin-top: 14px;
+  margin-left: 4.5px;
 }
 .container_access .container_about .closedayofweekwrap {
   width: 449px;
@@ -568,21 +962,24 @@ div.seewrap div.seebox p.seeicon {
   font-size: 14px;
   display: inline-block;
   width: 70px;
-  margin-left: 28.5px;
+  margin-top: 14px;
+  margin-left: 32px;
 }
-.container_access .container_about .bordelower {
+.container_access .container_about .borderlower {
   height: 19px;
   width: 533px;
   border-bottom: 1px solid;
   border-color: #e7e7e7;
 }
 .container_access .container_about .crr {
-  width: 533px;
-  margin-top: 26.5px;
+  width: 553px;
+  margin-top: 22px;
   text-align: right;
 }
 .container_access .container_about .crr .crrtext {
   font-size: 11px;
+  letter-spacing: 0.45px;
+  padding-right: 15px;
   display: inline-block;
 }
 /*# sourceMappingURL=style.css.map */

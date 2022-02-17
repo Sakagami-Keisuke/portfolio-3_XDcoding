@@ -1,5 +1,5 @@
 // スタイルについて具体的な記述をする
-@use "./reset";
+
 @use "./header";
 
 *,
@@ -42,21 +42,21 @@ ul {
   position: relative;
 }
 
-p.firstview-left {
+p.message-left {
   writing-mode: vertical-rl;
   font-size: 28px;
   //bold効かない
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
     -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
     0px -0.5px 0px;
-  letter-spacing: 8px;
+  letter-spacing: 4.4px;
   padding-top: 25px;
   line-height: 102px;
   width: 102px;
   height: 565px;
   background-color: white;
   position: absolute;
-  top: 111px;
+  top: 133px;
   left: 197px;
 
   .color {
@@ -64,14 +64,14 @@ p.firstview-left {
   }
 }
 
-p.firstview-right {
+p.message-right {
   writing-mode: vertical-rl;
   font-size: 28px;
   //bold効かない
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
     -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
     0px -0.5px 0px;
-  letter-spacing: 8px;
+  letter-spacing: 6px;
   padding-top: 25px;
   line-height: 102px;
   width: 102px;
@@ -107,8 +107,8 @@ p.firstview-right {
     text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
       -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
       0px -0.5px 0px;
-    letter-spacing: -0.2px;
     margin-top: 200px;
+    line-height: 20px;
   }
 
   .slbox {
@@ -124,13 +124,14 @@ p.firstview-right {
     text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
       -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
       0px -0.5px 0px;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.1px;
+    line-height: 33px;
   }
 
   .thbox {
     width: 410px;
-    height: 130px;
-    margin-top: 46px;
+    height: 145px;
+    margin-top: 30px;
     margin-left: 32px;
     // background-color: red;
   }
@@ -138,7 +139,8 @@ p.firstview-right {
   .third-line {
     font-size: 16px;
     line-height: 36px;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.1px;
+    line-height: 38px;
   }
 
   .aboutus-img {
@@ -158,7 +160,7 @@ p.firstview-right {
   .treatment-content-box {
     width: 96px;
     margin: 0 auto;
-    padding-top: 85px;
+    padding-top: 84px;
     background: linear-gradient(transparent 90%, rgb(134, 235, 134) 70%);
 
     p.treatment-content {
@@ -174,12 +176,13 @@ p.firstview-right {
 }
 
 .consultationbox {
-  width: 445px;
-  margin: 79px auto 0 auto;
+  width: 448px;
+  margin: 71px auto 0 auto;
+  background-color: red;
 
   .consultation {
     font-size: 16px;
-    letter-spacing: -0.3px;
+    letter-spacing: 0px;
   }
 }
 
@@ -201,7 +204,7 @@ p.firstview-right {
 
     .subjecrt-title {
       width: 192px;
-      margin: 47px 94px 0 94px;
+      margin: 41px 94px 0 94px;
 
       // background-color: red;
       p {
@@ -214,7 +217,7 @@ p.firstview-right {
     }
 
     .description {
-      margin: 54px 29px 111px 31px;
+      margin: 42px 29px 111px 31px;
 
       p {
         font-size: 16px;
@@ -224,6 +227,7 @@ p.firstview-right {
           -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
           0px -0.5px 0px;
         letter-spacing: -0.1px;
+        line-height: 38px;
       }
     }
 
@@ -241,12 +245,12 @@ p.firstview-right {
 }
 
 .noticebox {
-  width: 96px;
-  margin: 89px auto 0px auto;
+  width: 100px;
+  margin: 84px auto 0px auto;
 
   .notice {
     font-size: 24px;
-    background: linear-gradient(transparent 70%, rgb(84, 200, 84) 70%);
+    background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
     //bold効かない
     text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
       -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
@@ -270,7 +274,7 @@ p.firstview-right {
   flex-wrap: wrap;
 
   .noticewrap {
-    height: 29.5px;
+    height: 25px;
     // background-color: red;
   }
 
@@ -289,7 +293,8 @@ p.firstview-right {
       display: inline-block;
       width: 80px;
       height: 16px;
-      margin: 26.5px 37px 20.5px 0px;
+      margin: 25.4px 32px 20.5px 0px;
+      letter-spacing: 0.6px;
     }
 
     p.info {
@@ -325,30 +330,32 @@ div.seewrap {
   // background-color: yellowgreen;
 
   div.seebox {
+    width:1000px;
     margin: 0px 0px 0px 66px;
     text-align: right;
-
     // background-color: red;
+
     p.see {
       font-size: 16px;
-      width: 79px;
+      width: 85px;
       height: 16px;
-      margin-top: 35px;
+      margin-top: 44px;
       display: inline-block;
+      letter-spacing: 0px;
     }
 
     p.seeicon {
       font-size: 14px;
-      width: 10px;
+      width: 12px;
       height: 14px;
-      margin-top: 35x;
-      display: inline-block;
+      margin-top: 35px;
+      display: inline-block;;
     }
   }
 }
 
 .container_access {
-  width: 1180px;
+  width: 1190px;
   height: 799px;
   margin: 0px auto 0 auto;
   background-color: white;
@@ -360,14 +367,15 @@ div.seewrap {
   .map {
     width: 608px;
     height: 440px;
-    padding-top: 200px;
-    margin-right: 34px;
+    padding-top: 197px;
+    margin-right: 39px;
+    padding-left: 4px;
   }
 
   .container_about {
     width: 538px;
     height: 625px;
-    margin-top: 200px;
+    margin-top: 197px;
     // background-color: rgb(238, 240, 233);
 
     display: flex;
@@ -389,45 +397,57 @@ div.seewrap {
       }
 
       .companyname {
-        font-size: 30px;
-        line-height: 36px;
-        width: 180px;
+        width: 190px;
         height: 73px;
+
+        .upperline-name{
+          font-size: 30px;
+          line-height: 22.5px;
+          padding-left: 9.5px;
+        }
+
+        .lowerline-name{
+          font-size: 30px;
+          line-height: 57px;
+          padding-left: 24px;
+        }
       }
     }
 
     .adresswrap {
-      margin-top: 30px;
+      margin-top: 28px;
       display: flex;
       flex-wrap: wrap;
-
       background-color: white;
 
       .adressnumber {
         font-size: 16px;
-        margin-right: 16px;
+        margin-right: 17px;
+        letter-spacing: 0.3px;
       }
 
       .adress {
         font-size: 16px;
+        letter-spacing: 0.3px;
       }
     }
 
     .telbox {
       height: 32px;
-      width: 200px;
+      width: 220px;
       position: relative;
-      margin-top: 36px;
+      margin-top: 29px;
       // background-color: rgb(236, 228, 228);
 
       p.tel::before {
         content: "";
         display: inline-block;
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
         background: url("../images/受話器の線画アイコン.jpg") no-repeat;
         background-size: contain;
         margin-right: 15px;
+        margin-top: 2px;
       }
 
       p.tel {
@@ -437,6 +457,8 @@ div.seewrap {
           -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px,
           0px -0.4px 0px;
         text-align: right;
+        padding-left: 6px;
+        letter-spacing: 0.5px;
         position: absolute;
       }
     }
@@ -470,9 +492,10 @@ div.seewrap {
         border-color: #e7e7e7;
 
         // background-color: rgb(253, 185, 185);
-        .examination-time {
+        p.examination-time {
           font-size: 14px;
           margin-top: 9px;
+          margin-left: 4.5px;
           // background-color: rgb(233, 217, 217);
         }
       }
@@ -492,27 +515,75 @@ div.seewrap {
           flex-direction: row;
           flex-wrap: wrap;
 
-          .dayofweek {
+          .dayofweek-upper {
             font-size: 14px;
             display: inline-block;
             width: 42px;
-            margin: 10px 23px 0 28.5px;
+            margin: 9px 23px 0 32px;
             // background-color: rgb(233, 217, 217);
           }
-
-          .morning {
+          .dayofweek-middle {
             font-size: 14px;
             display: inline-block;
-            width: 102px;
-            margin: 10px 16px 0 0;
+            width: 42px;
+            margin: 14px 23px 0 32px;
+            // background-color: rgb(233, 217, 217);
+          }
+          .dayofweek-lower {
+            font-size: 14px;
+            display: inline-block;
+            width: 42px;
+            margin: 18px 23px 0 32px;
             // background-color: rgb(233, 217, 217);
           }
 
-          .afternoon {
+          .morning-upper {
+            font-size: 14px;
+            display: inline-block;
+            width: 105px;
+            margin: 9px 16px 0 0;
+            letter-spacing: 0.5px;
+            // background-color: rgb(233, 217, 217);
+          }
+          .morning-middle {
+            font-size: 14px;
+            display: inline-block;
+            width: 105px;
+            margin: 16px 16px 0 0;
+            letter-spacing: 0.5px;
+            // background-color: rgb(233, 217, 217);
+          }
+          .morning-lower {
+            font-size: 14px;
+            display: inline-block;
+            width: 105px;
+            margin: 16px 16px 0 0;
+            letter-spacing: 0.5px;
+            // background-color: rgb(233, 217, 217);
+          }
+
+          .afternoon-upper {
             font-size: 14px;
             display: inline-block;
             width: 110px;
-            margin: 10px 16px 0 0;
+            margin: 9px 16px 0 0;
+            letter-spacing: 0.3px;
+            // background-color: rgb(233, 217, 217);
+          }
+          .afternoon-middle {
+            font-size: 14px;
+            display: inline-block;
+            width: 110px;
+            margin: 16px 16px 0 0;
+            letter-spacing: 0.3px;
+            // background-color: rgb(233, 217, 217);
+          }
+          .afternoon-lower {
+            font-size: 14px;
+            display: inline-block;
+            width: 110px;
+            margin: 16px 16px 0 0;
+                        letter-spacing: 0.3px;
             // background-color: rgb(233, 217, 217);
           }
         }
@@ -533,8 +604,9 @@ div.seewrap {
         border-right: 1px solid;
         border-color: #e7e7e7;
 
-        .closedday {
-          margin-top: 0px;
+        p.closedday {
+          margin-top: 14px;
+          margin-left: 4.5px;
           // background-color: rgb(233, 217, 217);
         }
       }
@@ -551,11 +623,12 @@ div.seewrap {
         font-size: 14px;
         display: inline-block;
         width: 70px;
-        margin-left: 28.5px;
+        margin-top: 14px;
+        margin-left: 32px;
         // background-color: rgb(207, 194, 226);
       }
     }
-    .bordelower {
+    .borderlower {
       height: 19px;
       width: 533px;
       border-bottom: 1px solid;
@@ -564,12 +637,14 @@ div.seewrap {
     }
 
     .crr {
-      width: 533px;
-      margin-top: 26.5px;
+      width: 553px;
+      margin-top: 22px;
       text-align: right;
       // background-color: rgb(110, 84, 84);
       .crrtext {
         font-size: 11px;
+        letter-spacing: 0.45px;
+        padding-right: 15px;
         display: inline-block;
       }
     }
