@@ -1,0 +1,85 @@
+// headerエリア
+.header {
+  width: 1920px;
+  height: 130px;
+
+  // background-color: gray;
+  .headercontainer {
+    width: 1180px;
+    height: 130px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    // background-color: #0000ff;
+
+    .headericon {
+      width: 73px;
+      height: 73px;
+    }
+
+    .headerbox {
+      width: 263px;
+      height: 73px;
+      margin-left: 20px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      // background-color: gray;
+    }
+
+    .headertext {
+      width: 190px;
+      height: 73px;
+
+      p {
+        font-size: 30px;
+        text-align: center;
+        // color:white;
+      }
+    }
+
+    .headercontent {
+      width: 287px;
+      height: 73px;
+      margin-right: 20px;
+      // background-color: whitesmoke;
+
+      .reception {
+        font-size: 14px;
+        text-align: right;
+        margin-top: 5px;
+      }
+
+      p.tel::before  {
+        content: "";
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url("../images/受話器の線画アイコン.jpg")no-repeat;
+        background-size: contain;
+        margin-right: 10px;
+      }
+
+      p.tel {
+        color: #21A937;
+        font-size: 24px;
+        text-shadow: 
+        0.4px 0.4px 0, 
+        0.4px -0.4px 0px,
+        -0.4px 0.4px 0,
+        -0.4px -0.4px 0px,
+        0.4px 0px 0px,
+        0px 0.4px 0px,
+        -0.4px 0px 0px,
+        0px -0.4px 0px;
+        margin-top: 14px;
+        text-align: right;
+      }
+
+    }
+  }
+}
