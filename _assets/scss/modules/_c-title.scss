@@ -51,7 +51,7 @@ ul {
 }
 
 // header
-.header {
+div.header {
   width: 1920px;
   height: 130px;
 
@@ -61,7 +61,7 @@ ul {
   }
 
   // background-color: gray;
-  .headercontainer {
+  div.header__container {
     width: 1180px;
     height: 130px;
     margin: 0 auto;
@@ -78,7 +78,7 @@ ul {
       display: block;
     }
 
-    .headerbox {
+    div.header__box {
       width: 263px;
       height: 73px;
       margin-left: 20px;
@@ -97,7 +97,7 @@ ul {
       }
     }
 
-    .headericon {
+    div.header__icon {
       width: 73px;
       height: 73px;
 
@@ -114,11 +114,11 @@ ul {
       }
     }
 
-    .headertext {
+    div.header__text {
       width: 190px;
       height: 73px;
 
-      p.uppertext {
+      p.header__text--upper {
         padding-left: 8px;
         font-size: 30px;
         text-align: center;
@@ -131,7 +131,7 @@ ul {
           line-height: 40px;
         }
       }
-      p.lowertext {
+      p.header__text--lower {
         padding-left: 12px;
         font-size: 30px;
         text-align: center;
@@ -146,7 +146,7 @@ ul {
       }
     }
 
-    .headercontent {
+    div.headercontent {
       width: 300px;
       height: 73px;
       margin-right: 20px;
@@ -157,7 +157,7 @@ ul {
         margin: 0 auto;
         background-color: red;
       }
-      .reception {
+      p.reception {
         font-size: 14px;
         letter-spacing: 0.5px;
         text-align: right;
@@ -198,7 +198,7 @@ ul {
 }
 
 //body section
-.fvbox {
+div.firstview__box {
   width: 1920px;
   height: 947px;
   position: relative;
@@ -244,25 +244,25 @@ p.message-right {
   left: 393px;
 }
 
-.aboutus {
+div.about__us {
   width: 1180px;
   height: 664px;
   margin: 0 auto;
   display: flex;
   // background-color: rgb(209, 197, 197);
 
-  .aboutus-content {
+  div.about__us--content {
     width: 490px;
     height: 664px;
     // background-color: yellow;
   }
 
-  .flbox {
+  div.firstline__box {
     width: 267px;
     margin-left: 32px;
   }
 
-  .first-line {
+  p.first-line {
     font-size: 24px;
     background: linear-gradient(transparent 70%, rgb(84, 200, 84) 70%);
     //bold効かない
@@ -273,13 +273,13 @@ p.message-right {
     line-height: 20px;
   }
 
-  .slbox {
+  div.secondline__box {
     width: 216px;
     margin-top: 40px;
     margin-left: 32px;
   }
 
-  .second-line {
+  p.second-line {
     font-size: 24px;
     background: linear-gradient(transparent 70%, rgb(84, 200, 84) 70%);
     //bold効かない
@@ -290,7 +290,7 @@ p.message-right {
     line-height: 33px;
   }
 
-  .thbox {
+  div.thirdline__box {
     width: 410px;
     height: 145px;
     margin-top: 30px;
@@ -298,14 +298,14 @@ p.message-right {
     // background-color: red;
   }
 
-  .third-line {
+  p.third-line {
     font-size: 16px;
     line-height: 36px;
     letter-spacing: -0.1px;
     line-height: 38px;
   }
 
-  .aboutus-img {
+  div.about__us--imgbox {
     width: 690px;
     height: 420px;
     margin-top: 162px;
@@ -313,19 +313,19 @@ p.message-right {
 }
 
 // second section
-.treatment-content-container {
+div.treatment__content--container {
   // width: 96px;
   width: 1920px;
   height: 1520px;
   background-color: #f5fcf8;
 
-  .treatment-content-box {
+  div.treatment__content--box {
     width: 96px;
     margin: 0 auto;
     padding-top: 84px;
     background: linear-gradient(transparent 90%, rgb(134, 235, 134) 70%);
 
-    h2.treatment-content {
+    h2.treatment-content--title {
       height: 32px;
       font-size: 24px;
       //bold効かない
@@ -337,25 +337,25 @@ p.message-right {
   }
 }
 
-.consultationbox {
+div.treatment-content--supplement {
   width: 448px;
   margin: 71px auto 0 auto;
   // background-color: red;
 
-  .consultation {
+  p.treatment-content--supplementtext {
     font-size: 16px;
     letter-spacing: 0px;
   }
 }
 
-.container_treatmentcontent {
+div.treatmentcontent__container {
   margin-top: 37px;
   display: flex;
   flex-wrap: wrap;
   // align-items: center;
   justify-content: center;
 
-  .medical-subjects {
+  article.medical__subjects {
     width: 380px;
     height: 591px;
     border: 1px solid;
@@ -364,7 +364,7 @@ p.message-right {
     position: relative;
     background-color: white;
 
-    .subjecrt-title {
+    div.medical__subject--title {
       width: 192px;
       margin: 41px 94px 0 94px;
 
@@ -378,10 +378,9 @@ p.message-right {
       }
     }
 
-    .description {
+    div.description__box {
       margin: 42px 29px 111px 31px;
-
-      p {
+      p.description {
         font-size: 16px;
         line-height: 33px;
         //bold効かない
@@ -393,7 +392,7 @@ p.message-right {
       }
     }
 
-    .medical-image {
+    div.medical__imagebox {
       position: absolute;
       bottom: 0;
       left: 97px;
@@ -406,7 +405,7 @@ p.message-right {
   }
 }
 
-.noticebox {
+div.notice__box {
   width: 100px;
   margin: 84px auto 0px auto;
 
@@ -420,7 +419,7 @@ p.message-right {
   }
 }
 
-.container_notice {
+div.notice__container {
   width: 1180px;
   height: 390px;
   margin: 74px auto 0 auto;
@@ -435,17 +434,17 @@ p.message-right {
   flex-direction: column;
   flex-wrap: wrap;
 
-  .noticewrap {
+  div.notice__wrap {
     height: 25px;
     // background-color: red;
   }
 
-  .notice_contents {
+  article.notice__contents {
     border-bottom: 1px solid #e7e7e7;
     margin: 0px 66px 0px 66px;
     // background-color: rgb(209, 197, 197);
 
-    p.date {
+    p.notice__contents--date {
       font-size: 16px;
       color: green;
       //bold効かない
@@ -459,7 +458,7 @@ p.message-right {
       letter-spacing: 0.6px;
     }
 
-    p.info {
+    p.notice__contents--info {
       font-size: 12px;
       color: white;
       //bold効かない
@@ -475,7 +474,7 @@ p.message-right {
       margin-right: 30px;
     }
 
-    p.info-content {
+    p.notice__contents--infocontent {
       font-size: 16px;
       //bold効かない
       text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
@@ -486,18 +485,18 @@ p.message-right {
   }
 }
 
-div.seewrap {
+div.seeall__wrap {
   margin: 0px 54px 0px 66px;
   text-align: right;
   // background-color: yellowgreen;
 
-  div.seebox {
+  div.seeall__box {
     width: 1000px;
     margin: 0px 0px 0px 66px;
     text-align: right;
     // background-color: red;
 
-    p.see {
+    p.seeall__text {
       font-size: 16px;
       width: 85px;
       height: 16px;
@@ -506,7 +505,7 @@ div.seewrap {
       letter-spacing: 0px;
     }
 
-    p.seeicon {
+    p.seeall__icon {
       font-size: 14px;
       width: 12px;
       height: 14px;
@@ -516,7 +515,7 @@ div.seewrap {
   }
 }
 
-.container_access {
+div.about__access--wrap {
   width: 1190px;
   height: 799px;
   margin: 0px auto 0 auto;
@@ -526,7 +525,7 @@ div.seewrap {
   flex-wrap: wrap;
   align-items: flex-start;
 
-  .map {
+  div.map__box {
     width: 608px;
     height: 440px;
     padding-top: 197px;
@@ -534,7 +533,7 @@ div.seewrap {
     padding-left: 4px;
   }
 
-  .container_about {
+  div.about__container {
     width: 538px;
     height: 625px;
     margin-top: 197px;
@@ -545,7 +544,7 @@ div.seewrap {
     flex-wrap: wrap;
     align-items: flex-start;
 
-    .company {
+    div.companyname__box {
       width: 263px;
       height: 73px;
       display: flex;
@@ -553,22 +552,22 @@ div.seewrap {
 
       // background-color: rgb(240, 240, 245);
 
-      .companyicon {
+      div.companyicon__box {
         width: 73px;
         height: 73px;
       }
 
-      .companyname {
+      div.companyname__box {
         width: 190px;
         height: 73px;
 
-        .upperline-name {
+        p.companyname__box--upperline {
           font-size: 30px;
           line-height: 22.5px;
           padding-left: 9.5px;
         }
 
-        .lowerline-name {
+        p.companyname__box--lowerline {
           font-size: 30px;
           line-height: 57px;
           padding-left: 24px;
@@ -576,32 +575,32 @@ div.seewrap {
       }
     }
 
-    .adresswrap {
+    div.adress__box {
       margin-top: 28px;
       display: flex;
       flex-wrap: wrap;
       background-color: white;
 
-      .adressnumber {
+      p.adress__box--number {
         font-size: 16px;
         margin-right: 17px;
         letter-spacing: 0.3px;
       }
 
-      .adress {
+      p.adress__box--text {
         font-size: 16px;
         letter-spacing: 0.3px;
       }
     }
 
-    .telbox {
+    div.tel__box {
       height: 32px;
       width: 220px;
       position: relative;
       margin-top: 29px;
       // background-color: rgb(236, 228, 228);
 
-      p.tel::before {
+      p.tel__number::before {
         content: "";
         display: inline-block;
         width: 24px;
@@ -612,7 +611,7 @@ div.seewrap {
         margin-top: 2px;
       }
 
-      p.tel {
+      p.tel__number{
         color: #21a937;
         font-size: 24px;
         text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0,
@@ -625,7 +624,7 @@ div.seewrap {
       }
     }
 
-    .border {
+    div.empty__border {
       height: 29.5px;
       width: 533px;
       border-bottom: 1px solid;
@@ -633,13 +632,13 @@ div.seewrap {
       background-color: rgb(255, 255, 255);
     }
 
-    .margin {
+    div.empty__margin {
       height: 15px;
       width: 533px;
       // background-color: rgb(104, 30, 30);
     }
 
-    .businesshour {
+    div.businesshour__box {
       height: 95px;
       width: 533px;
       background-color: white;
@@ -647,14 +646,14 @@ div.seewrap {
       flex-direction: column;
       flex-wrap: wrap;
 
-      .examination-time-box {
+      div.consultation__time--box {
         width: 85px;
         height: 114px;
         border-right: 1px solid;
         border-color: #e7e7e7;
 
         // background-color: rgb(253, 185, 185);
-        p.examination-time {
+        p.consultation__time {
           font-size: 14px;
           margin-top: 9px;
           margin-left: 4.5px;
@@ -662,7 +661,7 @@ div.seewrap {
         }
       }
 
-      .patternwrap {
+      .consultation__pattern--box {
         width: 449px;
         height: 114px;
         display: flex;
@@ -670,28 +669,28 @@ div.seewrap {
         flex-wrap: wrap;
         // background-color: rgb(250, 202, 112);
 
-        .pattern {
+        div.consultation__pattern{
           // background-color: rgb(233, 226, 240);
 
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
 
-          .dayofweek-upper {
+          p.dayofweek__upper {
             font-size: 14px;
             display: inline-block;
             width: 42px;
             margin: 9px 23px 0 32px;
             // background-color: rgb(233, 217, 217);
           }
-          .dayofweek-middle {
+          .dayofweek__middle {
             font-size: 14px;
             display: inline-block;
             width: 42px;
             margin: 14px 23px 0 32px;
             // background-color: rgb(233, 217, 217);
           }
-          .dayofweek-lower {
+          .dayofweek__lower {
             font-size: 14px;
             display: inline-block;
             width: 42px;
@@ -699,7 +698,7 @@ div.seewrap {
             // background-color: rgb(233, 217, 217);
           }
 
-          .morning-upper {
+          .morning__upper {
             font-size: 14px;
             display: inline-block;
             width: 105px;
@@ -707,7 +706,7 @@ div.seewrap {
             letter-spacing: 0.5px;
             // background-color: rgb(233, 217, 217);
           }
-          .morning-middle {
+          .morning__middle {
             font-size: 14px;
             display: inline-block;
             width: 105px;
@@ -715,7 +714,7 @@ div.seewrap {
             letter-spacing: 0.5px;
             // background-color: rgb(233, 217, 217);
           }
-          .morning-lower {
+          .morning__lower {
             font-size: 14px;
             display: inline-block;
             width: 105px;
@@ -724,7 +723,7 @@ div.seewrap {
             // background-color: rgb(233, 217, 217);
           }
 
-          .afternoon-upper {
+          .afternoon__upper {
             font-size: 14px;
             display: inline-block;
             width: 110px;
@@ -732,7 +731,7 @@ div.seewrap {
             letter-spacing: 0.3px;
             // background-color: rgb(233, 217, 217);
           }
-          .afternoon-middle {
+          .afternoon__middle {
             font-size: 14px;
             display: inline-block;
             width: 110px;
@@ -740,7 +739,7 @@ div.seewrap {
             letter-spacing: 0.3px;
             // background-color: rgb(233, 217, 217);
           }
-          .afternoon-lower {
+          .afternoon__lower {
             font-size: 14px;
             display: inline-block;
             width: 110px;
@@ -752,7 +751,7 @@ div.seewrap {
       }
     }
 
-    .closeddays-line {
+    div.closed__days--line {
       width: 533px;
       height: 35px;
       // background-color: rgb(224, 82, 82);
@@ -760,7 +759,7 @@ div.seewrap {
       flex-direction: column;
       flex-wrap: wrap;
 
-      .closedday-box {
+      div.closed__day-box {
         width: 85px;
         font-size: 14px;
         border-right: 1px solid;
@@ -774,14 +773,14 @@ div.seewrap {
       }
     }
 
-    .closedayofweekwrap {
+    div.closed_dayofweek--wrap {
       width: 449px;
       height: 114px;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
       // background-color: rgb(250, 202, 112);
-      .closedayofweek {
+      div.closed__dayofweek{
         font-size: 14px;
         display: inline-block;
         width: 70px;
@@ -790,7 +789,7 @@ div.seewrap {
         // background-color: rgb(207, 194, 226);
       }
     }
-    .borderlower {
+    div.empty__border--lower{
       height: 19px;
       width: 533px;
       border-bottom: 1px solid;
@@ -798,12 +797,12 @@ div.seewrap {
       // background-color: rgb(110, 84, 84);
     }
 
-    .crr {
+    div.copyright__reserved--box {
       width: 553px;
       margin-top: 22px;
       text-align: right;
       // background-color: rgb(110, 84, 84);
-      .crrtext {
+      small.copyright__reserved--text {
         font-size: 11px;
         letter-spacing: 0.45px;
         padding-right: 15px;

@@ -426,16 +426,16 @@ ul {
   list-style: none;
 }
 
-.header {
+div.header {
   width: 1920px;
   height: 130px;
 }
 @media (max-width: 480px) {
-  .header {
+  div.header {
     width: 100vw;
   }
 }
-.header .headercontainer {
+div.header div.header__container {
   width: 1180px;
   height: 130px;
   margin: 0 auto;
@@ -446,12 +446,12 @@ ul {
   align-items: center;
 }
 @media (max-width: 480px) {
-  .header .headercontainer {
+  div.header div.header__container {
     width: 100%;
     display: block;
   }
 }
-.header .headercontainer .headerbox {
+div.header div.header__container div.header__box {
   width: 263px;
   height: 73px;
   margin-left: 20px;
@@ -461,77 +461,77 @@ ul {
   align-items: center;
 }
 @media (max-width: 480px) {
-  .header .headercontainer .headerbox {
+  div.header div.header__container div.header__box {
     width: 200px;
     height: 55px;
     margin: 0 auto;
     margin-top: 22px;
   }
 }
-.header .headercontainer .headericon {
+div.header div.header__container div.header__icon {
   width: 73px;
   height: 73px;
 }
 @media (max-width: 480px) {
-  .header .headercontainer .headericon {
+  div.header div.header__container div.header__icon {
     width: 100px;
     height: 55px;
   }
-  .header .headercontainer .headericon img {
+  div.header div.header__container div.header__icon img {
     width: 53px;
     height: 53px;
     margin-left: 15.5px;
   }
 }
-.header .headercontainer .headertext {
+div.header div.header__container div.header__text {
   width: 190px;
   height: 73px;
 }
-.header .headercontainer .headertext p.uppertext {
+div.header div.header__container div.header__text p.header__text--upper {
   padding-left: 8px;
   font-size: 30px;
   text-align: center;
   line-height: 28px;
 }
 @media (max-width: 480px) {
-  .header .headercontainer .headertext p.uppertext {
+  div.header div.header__container div.header__text p.header__text--upper {
     font-size: 20px;
     padding-left: 5px;
     line-height: 40px;
   }
 }
-.header .headercontainer .headertext p.lowertext {
+div.header div.header__container div.header__text p.header__text--lower {
   padding-left: 12px;
   font-size: 30px;
   text-align: center;
   line-height: 46px;
 }
 @media (max-width: 480px) {
-  .header .headercontainer .headertext p.lowertext {
+  div.header div.header__container div.header__text p.header__text--lower {
     font-size: 20px;
     padding-left: 5px;
     line-height: 15px;
   }
 }
-.header .headercontainer .headercontent {
+div.header div.header__container div.headercontent {
   width: 300px;
   height: 73px;
   margin-right: 20px;
 }
 @media (max-width: 480px) {
-  .header .headercontainer .headercontent {
+  div.header div.header__container div.headercontent {
     width: 300px;
     margin: 0 auto;
     background-color: red;
   }
 }
-.header .headercontainer .headercontent .reception {
+div.header div.header__container div.headercontent p.reception {
   font-size: 14px;
   letter-spacing: 0.5px;
   text-align: right;
   margin-top: 5px;
 }
-.header .headercontainer .headercontent p.tel::before {
+div.header div.header__container div.headercontent p.tel::before {
   content: "";
   display: inline-block;
   width: 276x;
@@ -540,7 +540,7 @@ ul {
   background-size: contain;
   margin-right: 18px;
 }
-.header .headercontainer .headercontent p.tel {
+div.header div.header__container div.headercontent p.tel {
   color: #21a937;
   font-size: 24px;
   text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0, -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px, 0px -0.4px 0px;
@@ -548,7 +548,7 @@ ul {
   margin-top: 14px;
   text-align: right;
 }
-.fvbox {
+div.firstview__box {
   width: 1920px;
   height: 947px;
   position: relative;
@@ -587,91 +587,91 @@ p.message-right {
   left: 393px;
 }
 
-.aboutus {
+div.about__us {
   width: 1180px;
   height: 664px;
   margin: 0 auto;
   display: flex;
 }
-.aboutus .aboutus-content {
+div.about__us div.about__us--content {
   width: 490px;
   height: 664px;
 }
-.aboutus .flbox {
+div.about__us div.firstline__box {
   width: 267px;
   margin-left: 32px;
 }
-.aboutus .first-line {
+div.about__us p.first-line {
   font-size: 24px;
   background: linear-gradient(transparent 70%, #54c854 70%);
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
   margin-top: 200px;
   line-height: 20px;
 }
-.aboutus .slbox {
+div.about__us div.secondline__box {
   width: 216px;
   margin-top: 40px;
   margin-left: 32px;
 }
-.aboutus .second-line {
+div.about__us p.second-line {
   font-size: 24px;
   background: linear-gradient(transparent 70%, #54c854 70%);
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
   letter-spacing: -0.1px;
   line-height: 33px;
 }
-.aboutus .thbox {
+div.about__us div.thirdline__box {
   width: 410px;
   height: 145px;
   margin-top: 30px;
   margin-left: 32px;
 }
-.aboutus .third-line {
+div.about__us p.third-line {
   font-size: 16px;
   line-height: 36px;
   letter-spacing: -0.1px;
   line-height: 38px;
 }
-.aboutus .aboutus-img {
+div.about__us div.about__us--imgbox {
   width: 690px;
   height: 420px;
   margin-top: 162px;
 }
 
-.treatment-content-container {
+div.treatment__content--container {
   width: 1920px;
   height: 1520px;
   background-color: #f5fcf8;
 }
-.treatment-content-container .treatment-content-box {
+div.treatment__content--container div.treatment__content--box {
   width: 96px;
   margin: 0 auto;
   padding-top: 84px;
   background: linear-gradient(transparent 90%, #86eb86 70%);
 }
-.treatment-content-container .treatment-content-box h2.treatment-content {
+div.treatment__content--container div.treatment__content--box h2.treatment-content--title {
   height: 32px;
   font-size: 24px;
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
   text-align: center;
 }
 
-.consultationbox {
+div.treatment-content--supplement {
   width: 448px;
   margin: 71px auto 0 auto;
 }
-.consultationbox .consultation {
+div.treatment-content--supplement p.treatment-content--supplementtext {
   font-size: 16px;
   letter-spacing: 0px;
 }
 
-.container_treatmentcontent {
+div.treatmentcontent__container {
   margin-top: 37px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.container_treatmentcontent .medical-subjects {
+div.treatmentcontent__container article.medical__subjects {
   width: 380px;
   height: 591px;
   border: 1px solid;
@@ -680,45 +680,45 @@ p.message-right {
   position: relative;
   background-color: white;
 }
-.container_treatmentcontent .medical-subjects .subjecrt-title {
+div.treatmentcontent__container article.medical__subjects div.medical__subject--title {
   width: 192px;
   margin: 41px 94px 0 94px;
 }
-.container_treatmentcontent .medical-subjects .subjecrt-title h3 {
+div.treatmentcontent__container article.medical__subjects div.medical__subject--title h3 {
   font-size: 24px;
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
 }
-.container_treatmentcontent .medical-subjects .description {
+div.treatmentcontent__container article.medical__subjects div.description__box {
   margin: 42px 29px 111px 31px;
 }
-.container_treatmentcontent .medical-subjects .description p {
+div.treatmentcontent__container article.medical__subjects div.description__box p.description {
   font-size: 16px;
   line-height: 33px;
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
   letter-spacing: -0.1px;
   line-height: 38px;
 }
-.container_treatmentcontent .medical-subjects .medical-image {
+div.treatmentcontent__container article.medical__subjects div.medical__imagebox {
   position: absolute;
   bottom: 0;
   left: 97px;
 }
-.container_treatmentcontent .medical-subjects .medical-image img {
+div.treatmentcontent__container article.medical__subjects div.medical__imagebox img {
   width: 187px;
   height: 187px;
 }
 
-.noticebox {
+div.notice__box {
   width: 100px;
   margin: 84px auto 0px auto;
 }
-.noticebox h2.notice {
+div.notice__box h2.notice {
   font-size: 24px;
   background: linear-gradient(transparent 60%, #86eb86 90%);
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
 }
 
-.container_notice {
+div.notice__container {
   width: 1180px;
   height: 390px;
   margin: 74px auto 0 auto;
@@ -733,14 +733,14 @@ p.message-right {
   flex-direction: column;
   flex-wrap: wrap;
 }
-.container_notice .noticewrap {
+div.notice__container div.notice__wrap {
   height: 25px;
 }
-.container_notice .notice_contents {
+div.notice__container article.notice__contents {
   border-bottom: 1px solid #e7e7e7;
   margin: 0px 66px 0px 66px;
 }
-.container_notice .notice_contents p.date {
+div.notice__container article.notice__contents p.notice__contents--date {
   font-size: 16px;
   color: green;
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
@@ -750,7 +750,7 @@ p.message-right {
   margin: 25.4px 32px 20.5px 0px;
   letter-spacing: 0.6px;
 }
-.container_notice .notice_contents p.info {
+div.notice__container article.notice__contents p.notice__contents--info {
   font-size: 12px;
   color: white;
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
@@ -762,22 +762,22 @@ p.message-right {
   line-height: 25px;
   margin-right: 30px;
 }
-.container_notice .notice_contents p.info-content {
+div.notice__container article.notice__contents p.notice__contents--infocontent {
   font-size: 16px;
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
   display: inline-block;
 }
 
-div.seewrap {
+div.seeall__wrap {
   margin: 0px 54px 0px 66px;
   text-align: right;
 }
-div.seewrap div.seebox {
+div.seeall__wrap div.seeall__box {
   width: 1000px;
   margin: 0px 0px 0px 66px;
   text-align: right;
 }
-div.seewrap div.seebox p.see {
+div.seeall__wrap div.seeall__box p.seeall__text {
   font-size: 16px;
   width: 85px;
   height: 16px;
@@ -785,7 +785,7 @@ div.seewrap div.seebox p.see {
   display: inline-block;
   letter-spacing: 0px;
 }
-div.seewrap div.seebox p.seeicon {
+div.seeall__wrap div.seeall__box p.seeall__icon {
   font-size: 14px;
   width: 12px;
   height: 14px;
@@ -793,7 +793,7 @@ div.seewrap div.seebox p.seeicon {
   display: inline-block;
 }
 
-.container_access {
+div.about__access--wrap {
   width: 1190px;
   height: 799px;
   margin: 0px auto 0 auto;
@@ -802,14 +802,14 @@ div.seewrap div.seebox p.seeicon {
   flex-wrap: wrap;
   align-items: flex-start;
 }
-.container_access .map {
+div.about__access--wrap div.map__box {
   width: 608px;
   height: 440px;
   padding-top: 197px;
   margin-right: 39px;
   padding-left: 4px;
 }
-.container_access .container_about {
+div.about__access--wrap div.about__container {
   width: 538px;
   height: 625px;
   margin-top: 197px;
@@ -818,52 +818,52 @@ div.seewrap div.seebox p.seeicon {
   flex-wrap: wrap;
   align-items: flex-start;
 }
-.container_access .container_about .company {
+div.about__access--wrap div.about__container div.companyname__box {
   width: 263px;
   height: 73px;
   display: flex;
   flex-wrap: wrap;
 }
-.container_access .container_about .company .companyicon {
+div.about__access--wrap div.about__container div.companyname__box div.companyicon__box {
   width: 73px;
   height: 73px;
 }
-.container_access .container_about .company .companyname {
+div.about__access--wrap div.about__container div.companyname__box div.companyname__box {
   width: 190px;
   height: 73px;
 }
-.container_access .container_about .company .companyname .upperline-name {
+div.about__access--wrap div.about__container div.companyname__box div.companyname__box p.companyname__box--upperline {
   font-size: 30px;
   line-height: 22.5px;
   padding-left: 9.5px;
 }
-.container_access .container_about .company .companyname .lowerline-name {
+div.about__access--wrap div.about__container div.companyname__box div.companyname__box p.companyname__box--lowerline {
   font-size: 30px;
   line-height: 57px;
   padding-left: 24px;
 }
-.container_access .container_about .adresswrap {
+div.about__access--wrap div.about__container div.adress__box {
   margin-top: 28px;
   display: flex;
   flex-wrap: wrap;
   background-color: white;
 }
-.container_access .container_about .adresswrap .adressnumber {
+div.about__access--wrap div.about__container div.adress__box p.adress__box--number {
   font-size: 16px;
   margin-right: 17px;
   letter-spacing: 0.3px;
 }
-.container_access .container_about .adresswrap .adress {
+div.about__access--wrap div.about__container div.adress__box p.adress__box--text {
   font-size: 16px;
   letter-spacing: 0.3px;
 }
-.container_access .container_about .telbox {
+div.about__access--wrap div.about__container div.tel__box {
   height: 32px;
   width: 220px;
   position: relative;
   margin-top: 29px;
 }
-.container_access .container_about .telbox p.tel::before {
+div.about__access--wrap div.about__container div.tel__box p.tel__number::before {
   content: "";
   display: inline-block;
   width: 24px;
@@ -873,7 +873,7 @@ div.seewrap div.seebox p.seeicon {
   margin-right: 15px;
   margin-top: 2px;
 }
-.container_access .container_about .telbox p.tel {
+div.about__access--wrap div.about__container div.tel__box p.tel__number {
   color: #21a937;
   font-size: 24px;
   text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0, -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px, 0px -0.4px 0px;
@@ -882,18 +882,18 @@ div.seewrap div.seebox p.seeicon {
   letter-spacing: 0.5px;
   position: absolute;
 }
-.container_access .container_about .border {
+div.about__access--wrap div.about__container div.empty__border {
   height: 29.5px;
   width: 533px;
   border-bottom: 1px solid;
   border-color: #e7e7e7;
   background-color: white;
 }
-.container_access .container_about .margin {
+div.about__access--wrap div.about__container div.empty__margin {
   height: 15px;
   width: 533px;
 }
-.container_access .container_about .businesshour {
+div.about__access--wrap div.about__container div.businesshour__box {
   height: 95px;
   width: 533px;
   background-color: white;
@@ -901,132 +901,132 @@ div.seewrap div.seebox p.seeicon {
   flex-direction: column;
   flex-wrap: wrap;
 }
-.container_access .container_about .businesshour .examination-time-box {
+div.about__access--wrap div.about__container div.businesshour__box div.consultation__time--box {
   width: 85px;
   height: 114px;
   border-right: 1px solid;
   border-color: #e7e7e7;
 }
-.container_access .container_about .businesshour .examination-time-box p.examination-time {
+div.about__access--wrap div.about__container div.businesshour__box div.consultation__time--box p.consultation__time {
   font-size: 14px;
   margin-top: 9px;
   margin-left: 4.5px;
 }
-.container_access .container_about .businesshour .patternwrap {
+div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box {
   width: 449px;
   height: 114px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-.container_access .container_about .businesshour .patternwrap .pattern {
+div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.container_access .container_about .businesshour .patternwrap .pattern .dayofweek-upper {
+div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern p.dayofweek__upper {
   font-size: 14px;
   display: inline-block;
   width: 42px;
   margin: 9px 23px 0 32px;
 }
-.container_access .container_about .businesshour .patternwrap .pattern .dayofweek-middle {
+div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern .dayofweek__middle {
   font-size: 14px;
   display: inline-block;
   width: 42px;
   margin: 14px 23px 0 32px;
 }
-.container_access .container_about .businesshour .patternwrap .pattern .dayofweek-lower {
+div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern .dayofweek__lower {
   font-size: 14px;
   display: inline-block;
   width: 42px;
   margin: 18px 23px 0 32px;
 }
-.container_access .container_about .businesshour .patternwrap .pattern .morning-upper {
+div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern .morning__upper {
   font-size: 14px;
   display: inline-block;
   width: 105px;
   margin: 9px 16px 0 0;
   letter-spacing: 0.5px;
 }
-.container_access .container_about .businesshour .patternwrap .pattern .morning-middle {
+div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern .morning__middle {
   font-size: 14px;
   display: inline-block;
   width: 105px;
   margin: 16px 16px 0 0;
   letter-spacing: 0.5px;
 }
-.container_access .container_about .businesshour .patternwrap .pattern .morning-lower {
+div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern .morning__lower {
   font-size: 14px;
   display: inline-block;
   width: 105px;
   margin: 16px 16px 0 0;
   letter-spacing: 0.5px;
 }
-.container_access .container_about .businesshour .patternwrap .pattern .afternoon-upper {
+div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern .afternoon__upper {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 9px 16px 0 0;
   letter-spacing: 0.3px;
 }
-.container_access .container_about .businesshour .patternwrap .pattern .afternoon-middle {
+div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern .afternoon__middle {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 16px 16px 0 0;
   letter-spacing: 0.3px;
 }
-.container_access .container_about .businesshour .patternwrap .pattern .afternoon-lower {
+div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern .afternoon__lower {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 16px 16px 0 0;
   letter-spacing: 0.3px;
 }
-.container_access .container_about .closeddays-line {
+div.about__access--wrap div.about__container div.closed__days--line {
   width: 533px;
   height: 35px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-.container_access .container_about .closeddays-line .closedday-box {
+div.about__access--wrap div.about__container div.closed__days--line div.closed__day-box {
   width: 85px;
   font-size: 14px;
   border-right: 1px solid;
   border-color: #e7e7e7;
 }
-.container_access .container_about .closeddays-line .closedday-box p.closedday {
+div.about__access--wrap div.about__container div.closed__days--line div.closed__day-box p.closedday {
   margin-top: 14px;
   margin-left: 4.5px;
 }
-.container_access .container_about .closedayofweekwrap {
+div.about__access--wrap div.about__container div.closed_dayofweek--wrap {
   width: 449px;
   height: 114px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-.container_access .container_about .closedayofweekwrap .closedayofweek {
+div.about__access--wrap div.about__container div.closed_dayofweek--wrap div.closed__dayofweek {
   font-size: 14px;
   display: inline-block;
   width: 70px;
   margin-top: 14px;
   margin-left: 32px;
 }
-.container_access .container_about .borderlower {
+div.about__access--wrap div.about__container div.empty__border--lower {
   height: 19px;
   width: 533px;
   border-bottom: 1px solid;
   border-color: #e7e7e7;
 }
-.container_access .container_about .crr {
+div.about__access--wrap div.about__container div.copyright__reserved--box {
   width: 553px;
   margin-top: 22px;
   text-align: right;
 }
-.container_access .container_about .crr .crrtext {
+div.about__access--wrap div.about__container div.copyright__reserved--box small.copyright__reserved--text {
   font-size: 11px;
   letter-spacing: 0.45px;
   padding-right: 15px;
