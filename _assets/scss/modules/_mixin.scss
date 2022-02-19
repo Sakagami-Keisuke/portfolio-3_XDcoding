@@ -1,0 +1,80 @@
+
+// // メディアクエリ
+// // 変数、map-get、@contentを使ってmixinを作る。
+// // 呼出
+// // @include mixin名 @include 名前空間.mixin名
+// // @mixin <mixin名>($引数名1: 初期値1, $引数名2: 初期値2,,, ) { 処理 }
+// // 引数
+// // 引数を指定しない。（初期値が入る）
+// // 引数でプロパティの値を渡す。（渡した順番に値が適用される）
+// // 引数で変数名と値を指定して渡す。（引数の順番を気にしなくていい）
+
+// // 変数
+// // $theme-color: red;
+// // $original-size: 16px;
+// // 値がオブジェクト形式の変数を定義する
+// // $fsizes: ( 'default': 14px, 'small': 10px, 'large': 20px );
+// // //オブジェクト形式の変数をキー名を指定して呼び出す
+// // .headline {
+// //   font-size: map-get( $fsizes, large );
+// // }
+// // .detail {
+// //   font-size: map-get( $fsizes, small );
+// // }
+// // .contents {
+// //   font-size: map-get( $fsizes, default );
+// // }
+
+// // mixinを定義
+// // @mixin test($color: yellow, $fsize: 32px) {
+// //   color: $color;
+// //   font-size: $fsize;
+// //   @content; 呼び出し後に追記したものが反映される
+// // }
+
+
+// // #{ }の記述をインターポレーション（interpolation）
+// // プロパティ名など値以外で変数を呼び出すときに#{ }を使用しないと、そのプロパティは無視されます。
+// // @mediaの中で #{}を使わずに呼び出すとエラーになります。
+// // $fsize: font-size;
+// // $unit: px;
+// // p{
+// //   #{$fsize}: 20 + $unit;
+// // }
+
+// /*====================
+// スマホを基本設計にする
+// - 〜479px：スマートフォン縦 "sp-vertical"
+// - 480px〜599px：スマートフォン横 "sp-beside"
+// - 600px〜959px：タブレット "tb"
+// - 960px〜1279px：小型PC "pc"
+// - 1280px〜：大型PC "pc-large"
+// ====================*/
+// // ブレイクポイント
+// // min-width と max-width
+// $breakpoints: (
+//   "sp-vertical": "screen and (min-width: 0px) and (max-width: 479px)",
+//   "sp-beside": "screen and (min-width: 480px) and (max-width: 599px)",
+//   "tb": "screen and (min-width: 600px) and (max-width: 959px)",
+//   "pc": "screen and (min-width: 960px) and (max-width: 1279px)",
+//   "pc-large": "screen and (min-width: 1280px) and (max-width: 2560px)",
+// ) !default;
+// // -------------------------------------
+// /*====================
+// //メディアクエリ（@media）を使う記述を書きます。メディアクエリの内容は変数「$breakpoint」の値をmap-getで取得して表示するようにします。
+// // また、「@include」で呼び出されたときに、処理の内容がメディアクエリの中に入るように「@content」を記述しておきます。
+// ====================*/
+
+// //mixinを定義
+// @mixin mq($breakpoint) {
+//   @media #{map-get($breakpoints, $breakpoint)} {
+//     @content;
+//   }
+// }
+
+// /*====================
+// @mixin 呼び出し
+// @include mq('sp-vertical,sp-beside,tb,pc,pc-large'){
+//    処理
+//    }
+// ====================*/

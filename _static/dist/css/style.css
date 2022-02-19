@@ -393,9 +393,47 @@ th {
   font-weight: bold;
 }
 
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+#wrap {
+  width: 1920px;
+  /*全体の幅を指定する*/
+  margin: 0 auto;
+  /*マージンの指定をする、ブラウザ対策*/
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
 .header {
   width: 1920px;
   height: 130px;
+}
+@media (max-width: 480px) {
+  .header {
+    width: 100vw;
+  }
 }
 .header .headercontainer {
   width: 1180px;
@@ -407,9 +445,11 @@ th {
   justify-content: space-between;
   align-items: center;
 }
-.header .headercontainer .headericon {
-  width: 73px;
-  height: 73px;
+@media (max-width: 480px) {
+  .header .headercontainer {
+    width: 100%;
+    display: block;
+  }
 }
 .header .headercontainer .headerbox {
   width: 263px;
@@ -419,6 +459,29 @@ th {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+}
+@media (max-width: 480px) {
+  .header .headercontainer .headerbox {
+    width: 200px;
+    height: 55px;
+    margin: 0 auto;
+    margin-top: 22px;
+  }
+}
+.header .headercontainer .headericon {
+  width: 73px;
+  height: 73px;
+}
+@media (max-width: 480px) {
+  .header .headercontainer .headericon {
+    width: 100px;
+    height: 55px;
+  }
+  .header .headercontainer .headericon img {
+    width: 53px;
+    height: 53px;
+    margin-left: 15.5px;
+  }
 }
 .header .headercontainer .headertext {
   width: 190px;
@@ -430,16 +493,37 @@ th {
   text-align: center;
   line-height: 28px;
 }
+@media (max-width: 480px) {
+  .header .headercontainer .headertext p.uppertext {
+    font-size: 20px;
+    padding-left: 5px;
+    line-height: 40px;
+  }
+}
 .header .headercontainer .headertext p.lowertext {
   padding-left: 12px;
   font-size: 30px;
   text-align: center;
   line-height: 46px;
 }
+@media (max-width: 480px) {
+  .header .headercontainer .headertext p.lowertext {
+    font-size: 20px;
+    padding-left: 5px;
+    line-height: 15px;
+  }
+}
 .header .headercontainer .headercontent {
   width: 300px;
   height: 73px;
   margin-right: 20px;
+}
+@media (max-width: 480px) {
+  .header .headercontainer .headercontent {
+    width: 300px;
+    margin: 0 auto;
+    background-color: red;
+  }
 }
 .header .headercontainer .headercontent .reception {
   font-size: 14px;
@@ -464,39 +548,6 @@ th {
   margin-top: 14px;
   text-align: right;
 }
-
-*,
-*:before,
-*:after {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-html {
-  font-family: "Noto Sans JP", sans-serif;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-#wrap {
-  width: 1920px;
-  /*全体の幅を指定する*/
-  margin: 0 auto;
-  /*マージンの指定をする、ブラウザ対策*/
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-}
-
 .fvbox {
   width: 1920px;
   height: 947px;
@@ -598,7 +649,7 @@ p.message-right {
   padding-top: 84px;
   background: linear-gradient(transparent 90%, #86eb86 70%);
 }
-.treatment-content-container .treatment-content-box p.treatment-content {
+.treatment-content-container .treatment-content-box h2.treatment-content {
   height: 32px;
   font-size: 24px;
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
@@ -608,7 +659,6 @@ p.message-right {
 .consultationbox {
   width: 448px;
   margin: 71px auto 0 auto;
-  background-color: red;
 }
 .consultationbox .consultation {
   font-size: 16px;
@@ -634,7 +684,7 @@ p.message-right {
   width: 192px;
   margin: 41px 94px 0 94px;
 }
-.container_treatmentcontent .medical-subjects .subjecrt-title p {
+.container_treatmentcontent .medical-subjects .subjecrt-title h3 {
   font-size: 24px;
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
 }
@@ -662,7 +712,7 @@ p.message-right {
   width: 100px;
   margin: 84px auto 0px auto;
 }
-.noticebox .notice {
+.noticebox h2.notice {
   font-size: 24px;
   background: linear-gradient(transparent 60%, #86eb86 90%);
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
@@ -686,11 +736,11 @@ p.message-right {
 .container_notice .noticewrap {
   height: 25px;
 }
-.container_notice div.notice_contents {
+.container_notice .notice_contents {
   border-bottom: 1px solid #e7e7e7;
   margin: 0px 66px 0px 66px;
 }
-.container_notice div.notice_contents p.date {
+.container_notice .notice_contents p.date {
   font-size: 16px;
   color: green;
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
@@ -700,7 +750,7 @@ p.message-right {
   margin: 25.4px 32px 20.5px 0px;
   letter-spacing: 0.6px;
 }
-.container_notice div.notice_contents p.info {
+.container_notice .notice_contents p.info {
   font-size: 12px;
   color: white;
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
@@ -712,7 +762,7 @@ p.message-right {
   line-height: 25px;
   margin-right: 30px;
 }
-.container_notice div.notice_contents p.info-content {
+.container_notice .notice_contents p.info-content {
   font-size: 16px;
   text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
   display: inline-block;

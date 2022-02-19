@@ -1,6 +1,20 @@
 // スタイルについて具体的な記述をする
+// -------------------------------------
+$pc: 1279px; // PC
+$sp: 480px; // スマホ
 
-@use "./header";
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+// -------------------------------------
 
 *,
 *:before,
@@ -13,16 +27,17 @@
 
 html {
   font-family: "Noto Sans JP", sans-serif;
+  font-size: 16px;
+  // 親要素（基準）のフォントサイズ指定  デフォルト16px=1em, ⇨×0.625で10px相当
+  // 100% = 1em = 1rem = 16px = 12pt
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   overflow-x: hidden;
 }
 
 #wrap {
-  width: 1920px;
-  /*全体の幅を指定する*/
-  margin: 0 auto;
-  /*マージンの指定をする、ブラウザ対策*/
+  width: 1920px; /*全体の幅を指定する*/
+  margin: 0 auto; /*マージンの指定をする、ブラウザ対策*/
   // background-color: gray;
 }
 
@@ -33,6 +48,153 @@ a {
 
 ul {
   list-style: none;
+}
+
+// header
+.header {
+  width: 1920px;
+  height: 130px;
+
+  // レスポンシブ
+  @include sp {
+    width: 100vw;
+  }
+
+  // background-color: gray;
+  .headercontainer {
+    width: 1180px;
+    height: 130px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    // background-color: #0000ff;
+
+    // レスポンシブ
+    @include sp {
+      width: 100%;
+      display: block;
+    }
+
+    .headerbox {
+      width: 263px;
+      height: 73px;
+      margin-left: 20px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      // background-color: gray;
+
+      // レスポンシブ
+      @include sp {
+        width: 200px;
+        height: 55px;
+        margin: 0 auto;
+        margin-top: 22px;
+      }
+    }
+
+    .headericon {
+      width: 73px;
+      height: 73px;
+
+      // レスポンシブ
+      @include sp {
+        width: 100px;
+        height: 55px;
+
+        img {
+          width: 53px;
+          height: 53px;
+          margin-left: 15.5px;
+        }
+      }
+    }
+
+    .headertext {
+      width: 190px;
+      height: 73px;
+
+      p.uppertext {
+        padding-left: 8px;
+        font-size: 30px;
+        text-align: center;
+        line-height: 28px;
+        // color:white;
+        // レスポンシブ
+        @include sp {
+          font-size: 20px;
+          padding-left: 5px;
+          line-height: 40px;
+        }
+      }
+      p.lowertext {
+        padding-left: 12px;
+        font-size: 30px;
+        text-align: center;
+        line-height: 46px;
+        // color:white;
+        // レスポンシブ
+        @include sp {
+          font-size: 20px;
+          padding-left: 5px;
+          line-height: 15px;
+        }
+      }
+    }
+
+    .headercontent {
+      width: 300px;
+      height: 73px;
+      margin-right: 20px;
+      // background-color: rgb(224, 216, 216);
+      // レスポンシブ
+      @include sp {
+        width: 300px;
+        margin: 0 auto;
+        background-color: red;
+      }
+      .reception {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        text-align: right;
+        margin-top: 5px;
+      }
+
+      p.tel::before {
+        content: "";
+        display: inline-block;
+        width: 276x;
+        height: 26px;
+        background: url("../images/受話器の線画アイコン.jpg") no-repeat;
+        background-size: contain;
+        margin-right: 18px;
+        // レスポンシブ
+        @include sp {
+        }
+      }
+
+      p.tel {
+        color: #21a937;
+        font-size: 24px;
+        text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0,
+          -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px,
+          0px -0.4px 0px;
+        letter-spacing: 0.5px;
+        margin-top: 14px;
+        text-align: right;
+        // レスポンシブ
+        @include sp {
+          // text-align: center;
+          // margin-top: 0;
+          // background-color: rgb(157, 255, 0);
+        }
+      }
+    }
+  }
 }
 
 //body section
@@ -163,7 +325,7 @@ p.message-right {
     padding-top: 84px;
     background: linear-gradient(transparent 90%, rgb(134, 235, 134) 70%);
 
-    p.treatment-content {
+    h2.treatment-content {
       height: 32px;
       font-size: 24px;
       //bold効かない
@@ -178,7 +340,7 @@ p.message-right {
 .consultationbox {
   width: 448px;
   margin: 71px auto 0 auto;
-  background-color: red;
+  // background-color: red;
 
   .consultation {
     font-size: 16px;
@@ -207,7 +369,7 @@ p.message-right {
       margin: 41px 94px 0 94px;
 
       // background-color: red;
-      p {
+      h3 {
         font-size: 24px;
         //bold効かない
         text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
@@ -248,7 +410,7 @@ p.message-right {
   width: 100px;
   margin: 84px auto 0px auto;
 
-  .notice {
+  h2.notice {
     font-size: 24px;
     background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
     //bold効かない
@@ -278,7 +440,7 @@ p.message-right {
     // background-color: red;
   }
 
-  div.notice_contents {
+  .notice_contents {
     border-bottom: 1px solid #e7e7e7;
     margin: 0px 66px 0px 66px;
     // background-color: rgb(209, 197, 197);
@@ -330,7 +492,7 @@ div.seewrap {
   // background-color: yellowgreen;
 
   div.seebox {
-    width:1000px;
+    width: 1000px;
     margin: 0px 0px 0px 66px;
     text-align: right;
     // background-color: red;
@@ -349,7 +511,7 @@ div.seewrap {
       width: 12px;
       height: 14px;
       margin-top: 35px;
-      display: inline-block;;
+      display: inline-block;
     }
   }
 }
@@ -400,13 +562,13 @@ div.seewrap {
         width: 190px;
         height: 73px;
 
-        .upperline-name{
+        .upperline-name {
           font-size: 30px;
           line-height: 22.5px;
           padding-left: 9.5px;
         }
 
-        .lowerline-name{
+        .lowerline-name {
           font-size: 30px;
           line-height: 57px;
           padding-left: 24px;
@@ -583,7 +745,7 @@ div.seewrap {
             display: inline-block;
             width: 110px;
             margin: 16px 16px 0 0;
-                        letter-spacing: 0.3px;
+            letter-spacing: 0.3px;
             // background-color: rgb(233, 217, 217);
           }
         }
