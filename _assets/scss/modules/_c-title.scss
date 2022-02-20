@@ -35,7 +35,7 @@ html {
   overflow-x: hidden;
 }
 
-#wrap {
+.body__toppage--wrap {
   width: 1920px; /*全体の幅を指定する*/
   margin: 0 auto; /*マージンの指定をする、ブラウザ対策*/
   // background-color: gray;
@@ -78,7 +78,7 @@ div.header {
       display: block;
     }
 
-    div.header__box {
+    div.header__top--left {
       width: 263px;
       height: 73px;
       margin-left: 20px;
@@ -97,7 +97,7 @@ div.header {
       }
     }
 
-    div.header__icon {
+    div.header__logo {
       width: 73px;
       height: 73px;
 
@@ -114,11 +114,11 @@ div.header {
       }
     }
 
-    div.header__text {
+    div.header__tagline {
       width: 190px;
       height: 73px;
 
-      p.header__text--upper {
+      p.header__tagline--upper {
         padding-left: 8px;
         font-size: 30px;
         text-align: center;
@@ -131,7 +131,7 @@ div.header {
           line-height: 40px;
         }
       }
-      p.header__text--lower {
+      p.header__tagline--lower {
         padding-left: 12px;
         font-size: 30px;
         text-align: center;
@@ -146,7 +146,7 @@ div.header {
       }
     }
 
-    div.headercontent {
+    div.header__top--right {
       width: 300px;
       height: 73px;
       margin-right: 20px;
@@ -164,14 +164,16 @@ div.header {
         margin-top: 5px;
       }
 
-      p.tel::before {
+      .tel::before {
         content: "";
         display: inline-block;
-        width: 276x;
-        height: 26px;
+        width: 25px;
+        height: 25px;
         background: url("../images/受話器の線画アイコン.jpg") no-repeat;
         background-size: contain;
+        margin-top: 1.5px;
         margin-right: 18px;
+
         // レスポンシブ
         @include sp {
         }
@@ -219,7 +221,7 @@ p.message-left {
   background-color: white;
   position: absolute;
   top: 133px;
-  left: 197px;
+  left: 210px;
 
   .color {
     color: green;
@@ -249,20 +251,18 @@ div.about__us {
   height: 664px;
   margin: 0 auto;
   display: flex;
-  // background-color: rgb(209, 197, 197);
-
-  div.about__us--content {
+  & div.about__us--content {
     width: 490px;
     height: 664px;
     // background-color: yellow;
   }
 
-  div.firstline__box {
+  & div.firstline__box {
     width: 267px;
     margin-left: 32px;
   }
 
-  p.first-line {
+  & p.first-line {
     font-size: 24px;
     background: linear-gradient(transparent 70%, rgb(84, 200, 84) 70%);
     //bold効かない
@@ -273,13 +273,13 @@ div.about__us {
     line-height: 20px;
   }
 
-  div.secondline__box {
+  & div.secondline__box {
     width: 216px;
     margin-top: 40px;
     margin-left: 32px;
   }
 
-  p.second-line {
+  & p.second-line {
     font-size: 24px;
     background: linear-gradient(transparent 70%, rgb(84, 200, 84) 70%);
     //bold効かない
@@ -290,7 +290,7 @@ div.about__us {
     line-height: 33px;
   }
 
-  div.thirdline__box {
+  & div.thirdline__box {
     width: 410px;
     height: 145px;
     margin-top: 30px;
@@ -298,14 +298,14 @@ div.about__us {
     // background-color: red;
   }
 
-  p.third-line {
+  & p.third-line {
     font-size: 16px;
     line-height: 36px;
     letter-spacing: -0.1px;
     line-height: 38px;
   }
 
-  div.about__us--imgbox {
+  & div.about__us--imgbox {
     width: 690px;
     height: 420px;
     margin-top: 162px;
@@ -319,13 +319,13 @@ div.treatment__content--container {
   height: 1520px;
   background-color: #f5fcf8;
 
-  div.treatment__content--box {
+  & div.treatment__content--box {
     width: 96px;
     margin: 0 auto;
     padding-top: 84px;
     background: linear-gradient(transparent 90%, rgb(134, 235, 134) 70%);
 
-    h2.treatment-content--title {
+    & h2.treatment-content--title {
       height: 32px;
       font-size: 24px;
       //bold効かない
@@ -342,7 +342,7 @@ div.treatment-content--supplement {
   margin: 71px auto 0 auto;
   // background-color: red;
 
-  p.treatment-content--supplementtext {
+  & p.treatment-content--supplementtext {
     font-size: 16px;
     letter-spacing: 0px;
   }
@@ -355,7 +355,7 @@ div.treatmentcontent__container {
   // align-items: center;
   justify-content: center;
 
-  article.medical__subjects {
+  & article.medical__subjects {
     width: 380px;
     height: 591px;
     border: 1px solid;
@@ -364,12 +364,12 @@ div.treatmentcontent__container {
     position: relative;
     background-color: white;
 
-    div.medical__subject--title {
+    & div.medical__subject--title {
       width: 192px;
       margin: 41px 94px 0 94px;
 
       // background-color: red;
-      h3 {
+      & h3 {
         font-size: 24px;
         //bold効かない
         text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
@@ -380,7 +380,7 @@ div.treatmentcontent__container {
 
     div.description__box {
       margin: 42px 29px 111px 31px;
-      p.description {
+      & p.description {
         font-size: 16px;
         line-height: 33px;
         //bold効かない
@@ -397,7 +397,7 @@ div.treatmentcontent__container {
       bottom: 0;
       left: 97px;
 
-      img {
+      & img {
         width: 187px;
         height: 187px;
       }
@@ -409,7 +409,7 @@ div.notice__box {
   width: 100px;
   margin: 84px auto 0px auto;
 
-  h2.notice {
+  & h2.notice {
     font-size: 24px;
     background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
     //bold効かない
@@ -434,17 +434,17 @@ div.notice__container {
   flex-direction: column;
   flex-wrap: wrap;
 
-  div.notice__wrap {
+  & div.notice__wrap {
     height: 25px;
     // background-color: red;
   }
 
-  article.notice__contents {
+  & article.notice__contents {
     border-bottom: 1px solid #e7e7e7;
     margin: 0px 66px 0px 66px;
     // background-color: rgb(209, 197, 197);
 
-    p.notice__contents--date {
+    & p.notice__contents--date {
       font-size: 16px;
       color: green;
       //bold効かない
@@ -458,7 +458,7 @@ div.notice__container {
       letter-spacing: 0.6px;
     }
 
-    p.notice__contents--info {
+    & p.notice__contents--info {
       font-size: 12px;
       color: white;
       //bold効かない
@@ -474,7 +474,7 @@ div.notice__container {
       margin-right: 30px;
     }
 
-    p.notice__contents--infocontent {
+    & p.notice__contents--infocontent {
       font-size: 16px;
       //bold効かない
       text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
@@ -490,13 +490,13 @@ div.seeall__wrap {
   text-align: right;
   // background-color: yellowgreen;
 
-  div.seeall__box {
+  & div.seeall__box {
     width: 1000px;
     margin: 0px 0px 0px 66px;
     text-align: right;
     // background-color: red;
 
-    p.seeall__text {
+    & p.seeall__text {
       font-size: 16px;
       width: 85px;
       height: 16px;
@@ -505,7 +505,7 @@ div.seeall__wrap {
       letter-spacing: 0px;
     }
 
-    p.seeall__icon {
+    & p.seeall__icon {
       font-size: 14px;
       width: 12px;
       height: 14px;
@@ -525,7 +525,7 @@ div.about__access--wrap {
   flex-wrap: wrap;
   align-items: flex-start;
 
-  div.map__box {
+  & div.map__box {
     width: 608px;
     height: 440px;
     padding-top: 197px;
@@ -533,7 +533,7 @@ div.about__access--wrap {
     padding-left: 4px;
   }
 
-  div.about__container {
+  & div.about__container {
     width: 538px;
     height: 625px;
     margin-top: 197px;
@@ -544,7 +544,7 @@ div.about__access--wrap {
     flex-wrap: wrap;
     align-items: flex-start;
 
-    div.companyname__box {
+    & div.companyname__box {
       width: 263px;
       height: 73px;
       display: flex;
@@ -552,22 +552,22 @@ div.about__access--wrap {
 
       // background-color: rgb(240, 240, 245);
 
-      div.companyicon__box {
+      & div.companyicon__box {
         width: 73px;
         height: 73px;
       }
 
-      div.companyname__box {
+      & div.companyname__box {
         width: 190px;
         height: 73px;
 
-        p.companyname__box--upperline {
+        & p.companyname__box--upperline {
           font-size: 30px;
           line-height: 22.5px;
           padding-left: 9.5px;
         }
 
-        p.companyname__box--lowerline {
+        & p.companyname__box--lowerline {
           font-size: 30px;
           line-height: 57px;
           padding-left: 24px;
@@ -575,32 +575,32 @@ div.about__access--wrap {
       }
     }
 
-    div.adress__box {
+    & div.adress__box {
       margin-top: 28px;
       display: flex;
       flex-wrap: wrap;
       background-color: white;
 
-      p.adress__box--number {
+      & p.adress__box--number {
         font-size: 16px;
         margin-right: 17px;
         letter-spacing: 0.3px;
       }
 
-      p.adress__box--text {
+      & p.adress__box--text {
         font-size: 16px;
         letter-spacing: 0.3px;
       }
     }
 
-    div.tel__box {
+    & div.tel__box {
       height: 32px;
       width: 220px;
       position: relative;
       margin-top: 29px;
       // background-color: rgb(236, 228, 228);
 
-      p.tel__number::before {
+      & p.tel__number::before {
         content: "";
         display: inline-block;
         width: 24px;
@@ -611,7 +611,7 @@ div.about__access--wrap {
         margin-top: 2px;
       }
 
-      p.tel__number{
+      & p.tel__number{
         color: #21a937;
         font-size: 24px;
         text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0,
@@ -624,7 +624,7 @@ div.about__access--wrap {
       }
     }
 
-    div.empty__border {
+    & div.empty__border {
       height: 29.5px;
       width: 533px;
       border-bottom: 1px solid;
@@ -632,13 +632,13 @@ div.about__access--wrap {
       background-color: rgb(255, 255, 255);
     }
 
-    div.empty__margin {
+    & div.empty__margin {
       height: 15px;
       width: 533px;
       // background-color: rgb(104, 30, 30);
     }
 
-    div.businesshour__box {
+    & div.businesshour__box {
       height: 95px;
       width: 533px;
       background-color: white;
@@ -646,14 +646,14 @@ div.about__access--wrap {
       flex-direction: column;
       flex-wrap: wrap;
 
-      div.consultation__time--box {
+      & div.consultation__time--box {
         width: 85px;
         height: 114px;
         border-right: 1px solid;
         border-color: #e7e7e7;
 
         // background-color: rgb(253, 185, 185);
-        p.consultation__time {
+        & p.consultation__time {
           font-size: 14px;
           margin-top: 9px;
           margin-left: 4.5px;
@@ -661,7 +661,7 @@ div.about__access--wrap {
         }
       }
 
-      .consultation__pattern--box {
+      & div.consultation__pattern--box {
         width: 449px;
         height: 114px;
         display: flex;
@@ -669,28 +669,28 @@ div.about__access--wrap {
         flex-wrap: wrap;
         // background-color: rgb(250, 202, 112);
 
-        div.consultation__pattern{
+        & div.consultation__pattern{
           // background-color: rgb(233, 226, 240);
 
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
 
-          p.dayofweek__upper {
+          & p.dayofweek__upper {
             font-size: 14px;
             display: inline-block;
             width: 42px;
             margin: 9px 23px 0 32px;
             // background-color: rgb(233, 217, 217);
           }
-          .dayofweek__middle {
+          & p.dayofweek__middle {
             font-size: 14px;
             display: inline-block;
             width: 42px;
             margin: 14px 23px 0 32px;
             // background-color: rgb(233, 217, 217);
           }
-          .dayofweek__lower {
+          & p.dayofweek__lower {
             font-size: 14px;
             display: inline-block;
             width: 42px;
@@ -698,7 +698,7 @@ div.about__access--wrap {
             // background-color: rgb(233, 217, 217);
           }
 
-          .morning__upper {
+          & p.morning__upper {
             font-size: 14px;
             display: inline-block;
             width: 105px;
@@ -706,7 +706,7 @@ div.about__access--wrap {
             letter-spacing: 0.5px;
             // background-color: rgb(233, 217, 217);
           }
-          .morning__middle {
+          & p.morning__middle {
             font-size: 14px;
             display: inline-block;
             width: 105px;
@@ -723,7 +723,7 @@ div.about__access--wrap {
             // background-color: rgb(233, 217, 217);
           }
 
-          .afternoon__upper {
+          & p.afternoon__upper {
             font-size: 14px;
             display: inline-block;
             width: 110px;
@@ -731,7 +731,7 @@ div.about__access--wrap {
             letter-spacing: 0.3px;
             // background-color: rgb(233, 217, 217);
           }
-          .afternoon__middle {
+          & p.afternoon__middle {
             font-size: 14px;
             display: inline-block;
             width: 110px;
@@ -739,7 +739,7 @@ div.about__access--wrap {
             letter-spacing: 0.3px;
             // background-color: rgb(233, 217, 217);
           }
-          .afternoon__lower {
+          & p.afternoon__lower {
             font-size: 14px;
             display: inline-block;
             width: 110px;
@@ -751,7 +751,7 @@ div.about__access--wrap {
       }
     }
 
-    div.closed__days--line {
+    & div.closed__days--line {
       width: 533px;
       height: 35px;
       // background-color: rgb(224, 82, 82);
@@ -759,13 +759,13 @@ div.about__access--wrap {
       flex-direction: column;
       flex-wrap: wrap;
 
-      div.closed__day-box {
+      & div.closed__day-box {
         width: 85px;
         font-size: 14px;
         border-right: 1px solid;
         border-color: #e7e7e7;
 
-        p.closedday {
+        & p.closedday {
           margin-top: 14px;
           margin-left: 4.5px;
           // background-color: rgb(233, 217, 217);
@@ -773,14 +773,14 @@ div.about__access--wrap {
       }
     }
 
-    div.closed_dayofweek--wrap {
+    & div.closed_dayofweek--wrap {
       width: 449px;
       height: 114px;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
       // background-color: rgb(250, 202, 112);
-      div.closed__dayofweek{
+      & div.closed__dayofweek{
         font-size: 14px;
         display: inline-block;
         width: 70px;
@@ -789,7 +789,7 @@ div.about__access--wrap {
         // background-color: rgb(207, 194, 226);
       }
     }
-    div.empty__border--lower{
+    & div.empty__border--lower{
       height: 19px;
       width: 533px;
       border-bottom: 1px solid;
@@ -797,12 +797,12 @@ div.about__access--wrap {
       // background-color: rgb(110, 84, 84);
     }
 
-    div.copyright__reserved--box {
+    & div.copyright__reserved--box {
       width: 553px;
       margin-top: 22px;
       text-align: right;
       // background-color: rgb(110, 84, 84);
-      small.copyright__reserved--text {
+      & small.copyright__reserved--text {
         font-size: 11px;
         letter-spacing: 0.45px;
         padding-right: 15px;

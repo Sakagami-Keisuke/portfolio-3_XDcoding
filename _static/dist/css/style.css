@@ -410,7 +410,7 @@ html {
   overflow-x: hidden;
 }
 
-#wrap {
+.body__toppage--wrap {
   width: 1920px;
   /*全体の幅を指定する*/
   margin: 0 auto;
@@ -451,7 +451,7 @@ div.header div.header__container {
     display: block;
   }
 }
-div.header div.header__container div.header__box {
+div.header div.header__container div.header__top--left {
   width: 263px;
   height: 73px;
   margin-left: 20px;
@@ -461,86 +461,87 @@ div.header div.header__container div.header__box {
   align-items: center;
 }
 @media (max-width: 480px) {
-  div.header div.header__container div.header__box {
+  div.header div.header__container div.header__top--left {
     width: 200px;
     height: 55px;
     margin: 0 auto;
     margin-top: 22px;
   }
 }
-div.header div.header__container div.header__icon {
+div.header div.header__container div.header__logo {
   width: 73px;
   height: 73px;
 }
 @media (max-width: 480px) {
-  div.header div.header__container div.header__icon {
+  div.header div.header__container div.header__logo {
     width: 100px;
     height: 55px;
   }
-  div.header div.header__container div.header__icon img {
+  div.header div.header__container div.header__logo img {
     width: 53px;
     height: 53px;
     margin-left: 15.5px;
   }
 }
-div.header div.header__container div.header__text {
+div.header div.header__container div.header__tagline {
   width: 190px;
   height: 73px;
 }
-div.header div.header__container div.header__text p.header__text--upper {
+div.header div.header__container div.header__tagline p.header__tagline--upper {
   padding-left: 8px;
   font-size: 30px;
   text-align: center;
   line-height: 28px;
 }
 @media (max-width: 480px) {
-  div.header div.header__container div.header__text p.header__text--upper {
+  div.header div.header__container div.header__tagline p.header__tagline--upper {
     font-size: 20px;
     padding-left: 5px;
     line-height: 40px;
   }
 }
-div.header div.header__container div.header__text p.header__text--lower {
+div.header div.header__container div.header__tagline p.header__tagline--lower {
   padding-left: 12px;
   font-size: 30px;
   text-align: center;
   line-height: 46px;
 }
 @media (max-width: 480px) {
-  div.header div.header__container div.header__text p.header__text--lower {
+  div.header div.header__container div.header__tagline p.header__tagline--lower {
     font-size: 20px;
     padding-left: 5px;
     line-height: 15px;
   }
 }
-div.header div.header__container div.headercontent {
+div.header div.header__container div.header__top--right {
   width: 300px;
   height: 73px;
   margin-right: 20px;
 }
 @media (max-width: 480px) {
-  div.header div.header__container div.headercontent {
+  div.header div.header__container div.header__top--right {
     width: 300px;
     margin: 0 auto;
     background-color: red;
   }
 }
-div.header div.header__container div.headercontent p.reception {
+div.header div.header__container div.header__top--right p.reception {
   font-size: 14px;
   letter-spacing: 0.5px;
   text-align: right;
   margin-top: 5px;
 }
-div.header div.header__container div.headercontent p.tel::before {
+div.header div.header__container div.header__top--right .tel::before {
   content: "";
   display: inline-block;
-  width: 276x;
-  height: 26px;
+  width: 25px;
+  height: 25px;
   background: url("../images/受話器の線画アイコン.jpg") no-repeat;
   background-size: contain;
+  margin-top: 1.5px;
   margin-right: 18px;
 }
-div.header div.header__container div.headercontent p.tel {
+div.header div.header__container div.header__top--right p.tel {
   color: #21a937;
   font-size: 24px;
   text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0, -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px, 0px -0.4px 0px;
@@ -566,7 +567,7 @@ p.message-left {
   background-color: white;
   position: absolute;
   top: 133px;
-  left: 197px;
+  left: 210px;
 }
 p.message-left .color {
   color: green;
@@ -912,72 +913,72 @@ div.about__access--wrap div.about__container div.businesshour__box div.consultat
   margin-top: 9px;
   margin-left: 4.5px;
 }
-div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box {
+div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box {
   width: 449px;
   height: 114px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern {
+div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern p.dayofweek__upper {
+div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern p.dayofweek__upper {
   font-size: 14px;
   display: inline-block;
   width: 42px;
   margin: 9px 23px 0 32px;
 }
-div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern .dayofweek__middle {
+div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern p.dayofweek__middle {
   font-size: 14px;
   display: inline-block;
   width: 42px;
   margin: 14px 23px 0 32px;
 }
-div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern .dayofweek__lower {
+div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern p.dayofweek__lower {
   font-size: 14px;
   display: inline-block;
   width: 42px;
   margin: 18px 23px 0 32px;
 }
-div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern .morning__upper {
+div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern p.morning__upper {
   font-size: 14px;
   display: inline-block;
   width: 105px;
   margin: 9px 16px 0 0;
   letter-spacing: 0.5px;
 }
-div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern .morning__middle {
+div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern p.morning__middle {
   font-size: 14px;
   display: inline-block;
   width: 105px;
   margin: 16px 16px 0 0;
   letter-spacing: 0.5px;
 }
-div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern .morning__lower {
+div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern .morning__lower {
   font-size: 14px;
   display: inline-block;
   width: 105px;
   margin: 16px 16px 0 0;
   letter-spacing: 0.5px;
 }
-div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern .afternoon__upper {
+div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern p.afternoon__upper {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 9px 16px 0 0;
   letter-spacing: 0.3px;
 }
-div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern .afternoon__middle {
+div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern p.afternoon__middle {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 16px 16px 0 0;
   letter-spacing: 0.3px;
 }
-div.about__access--wrap div.about__container div.businesshour__box .consultation__pattern--box div.consultation__pattern .afternoon__lower {
+div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern p.afternoon__lower {
   font-size: 14px;
   display: inline-block;
   width: 110px;
