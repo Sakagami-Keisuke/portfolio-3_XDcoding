@@ -1,6 +1,7 @@
 // スタイルについて具体的な記述をする
 // -------------------------------------
 $pc: 1279px; // PC
+$tb: 768px; //タブレット
 $sp: 480px; // スマホ
 
 @mixin pc {
@@ -38,7 +39,6 @@ html {
 .body__toppage--wrap {
   width: 1920px; /*全体の幅を指定する*/
   margin: 0 auto; /*マージンの指定をする、ブラウザ対策*/
-  // background-color: gray;
 }
 
 a {
@@ -60,7 +60,6 @@ div.header {
     width: 100vw;
   }
 
-  // background-color: gray;
   div.header__container {
     width: 1180px;
     height: 130px;
@@ -70,7 +69,6 @@ div.header {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    // background-color: #0000ff;
 
     // レスポンシブ
     @include sp {
@@ -86,7 +84,6 @@ div.header {
       flex-direction: row;
       flex-wrap: nowrap;
       align-items: center;
-      // background-color: gray;
 
       // レスポンシブ
       @include sp {
@@ -123,7 +120,7 @@ div.header {
         font-size: 30px;
         text-align: center;
         line-height: 28px;
-        // color:white;
+
         // レスポンシブ
         @include sp {
           font-size: 20px;
@@ -135,8 +132,8 @@ div.header {
         padding-left: 12px;
         font-size: 30px;
         text-align: center;
-        line-height: 46px;
-        // color:white;
+        line-height: 48px;
+
         // レスポンシブ
         @include sp {
           font-size: 20px;
@@ -150,7 +147,8 @@ div.header {
       width: 300px;
       height: 73px;
       margin-right: 20px;
-      // background-color: rgb(224, 216, 216);
+      font-size: 0;// display: inline-block;ズレ対策
+
       // レスポンシブ
       @include sp {
         width: 300px;
@@ -159,7 +157,7 @@ div.header {
       }
       p.reception {
         font-size: 14px;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.2px;
         text-align: right;
         margin-top: 5px;
       }
@@ -172,7 +170,7 @@ div.header {
         background: url("../images/受話器の線画アイコン.jpg") no-repeat;
         background-size: contain;
         margin-top: 1.5px;
-        margin-right: 18px;
+        margin-right: 17px;
 
         // レスポンシブ
         @include sp {
@@ -181,12 +179,10 @@ div.header {
 
       p.tel {
         color: #21a937;
-        font-size: 24px;
-        text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0,
-          -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px,
-          0px -0.4px 0px;
+        font-size: 22px;
+        font-weight: 500;
         letter-spacing: 0.5px;
-        margin-top: 14px;
+        margin-top: 13px;
         text-align: right;
         // レスポンシブ
         @include sp {
@@ -209,11 +205,8 @@ div.firstview__box {
 p.message-left {
   writing-mode: vertical-rl;
   font-size: 28px;
-  //bold効かない
-  text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
-    -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
-    0px -0.5px 0px;
-  letter-spacing: 4.4px;
+  font-weight: 500;
+  letter-spacing: 5.5px;
   padding-top: 25px;
   line-height: 102px;
   width: 102px;
@@ -223,18 +216,18 @@ p.message-left {
   top: 133px;
   left: 210px;
 
-  .color {
+  span.color {
     color: green;
+    letter-spacing: 5.5px;
+    margin-top: -8px;
+    margin-bottom: -8px;
   }
 }
 
 p.message-right {
   writing-mode: vertical-rl;
   font-size: 28px;
-  //bold効かない
-  text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
-    -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
-    0px -0.5px 0px;
+  font-weight: 500;
   letter-spacing: 6px;
   padding-top: 25px;
   line-height: 102px;
@@ -246,116 +239,105 @@ p.message-right {
   left: 393px;
 }
 
-div.about__us {
+div.about_us {
   width: 1180px;
   height: 664px;
   margin: 0 auto;
   display: flex;
-  & div.about__us--content {
+
+  div.about_us__content {
     width: 490px;
     height: 664px;
-    // background-color: yellow;
+
+    div.firstline__box {
+      width: 275px;
+      margin-left: 32px;
+
+      p.firstline__text {
+        font-size: 24px;
+        font-weight: 500;
+        background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+        margin-top: 200px;
+        line-height: 22px;
+      }
+    }
   }
 
-  & div.firstline__box {
-    width: 267px;
-    margin-left: 32px;
-  }
-
-  & p.first-line {
-    font-size: 24px;
-    background: linear-gradient(transparent 70%, rgb(84, 200, 84) 70%);
-    //bold効かない
-    text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
-      -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
-      0px -0.5px 0px;
-    margin-top: 200px;
-    line-height: 20px;
-  }
-
-  & div.secondline__box {
+  div.secondline__box {
     width: 216px;
-    margin-top: 40px;
+    margin-top: 42px;
     margin-left: 32px;
+
+    & p.secondline__text {
+      background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: -0.1px;
+      line-height: 24px;
+    }
   }
 
-  & p.second-line {
-    font-size: 24px;
-    background: linear-gradient(transparent 70%, rgb(84, 200, 84) 70%);
-    //bold効かない
-    text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
-      -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
-      0px -0.5px 0px;
-    letter-spacing: -0.1px;
-    line-height: 33px;
-  }
 
-  & div.thirdline__box {
-    width: 410px;
+  div.thirdline__box {
+    width: 415px;
     height: 145px;
-    margin-top: 30px;
+    margin-top: 38px;
     margin-left: 32px;
-    // background-color: red;
+
+    p.thirdline__text {
+      font-size: 16px;
+      line-height: 36px;
+      letter-spacing: -0.18px;
+      line-height: 38px;
+    }
   }
 
-  & p.third-line {
-    font-size: 16px;
-    line-height: 36px;
-    letter-spacing: -0.1px;
-    line-height: 38px;
-  }
-
-  & div.about__us--imgbox {
+  div.about_us__imgbox {
     width: 690px;
     height: 420px;
     margin-top: 162px;
   }
 }
 
-// second section
+// second section------------------------
+
 div.treatment__content--container {
-  // width: 96px;
   width: 1920px;
   height: 1520px;
   background-color: #f5fcf8;
 
-  & div.treatment__content--box {
+  div.treatment__content--box {
     width: 96px;
     margin: 0 auto;
-    padding-top: 84px;
-    background: linear-gradient(transparent 90%, rgb(134, 235, 134) 70%);
+    padding-top: 82px;
+    background: linear-gradient(transparent 90%, rgb(134, 235, 134) 90%);
 
-    & h2.treatment-content--title {
+    h2.treatment-content--title {
       height: 32px;
       font-size: 24px;
-      //bold効かない
-      text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
-        -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
-        0px -0.5px 0px;
+      font-weight: 500;
       text-align: center;
     }
   }
 }
 
-div.treatment-content--supplement {
+div.treatment-content__supplement {
   width: 448px;
   margin: 71px auto 0 auto;
-  // background-color: red;
 
-  & p.treatment-content--supplementtext {
+  p.treatment-content__supplement--text {
     font-size: 16px;
     letter-spacing: 0px;
   }
 }
 
-div.treatmentcontent__container {
+div.medical_subjects__container {
   margin-top: 37px;
   display: flex;
   flex-wrap: wrap;
-  // align-items: center;
   justify-content: center;
 
-  & article.medical__subjects {
+  article.medical_subjects {
     width: 380px;
     height: 591px;
     border: 1px solid;
@@ -364,40 +346,51 @@ div.treatmentcontent__container {
     position: relative;
     background-color: white;
 
-    & div.medical__subject--title {
+    div.medical_subject__title {
       width: 192px;
       margin: 41px 94px 0 94px;
 
-      // background-color: red;
-      & h3 {
+      h3 {
         font-size: 24px;
-        //bold効かない
-        text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
-          -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
-          0px -0.5px 0px;
+        font-weight: 500;
       }
     }
 
     div.description__box {
+      width: 320px;
       margin: 42px 29px 111px 31px;
-      & p.description {
+
+      p.description__left {
         font-size: 16px;
         line-height: 33px;
-        //bold効かない
-        text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
-          -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
-          0px -0.5px 0px;
-        letter-spacing: -0.1px;
+        font-weight: 500;
+        letter-spacing: -0.11px;
         line-height: 38px;
+      }
+      p.description__center {
+        font-size: 16px;
+        line-height: 33px;
+        font-weight: 500;
+        letter-spacing: 0.05px;
+        line-height: 39px;
+        margin-left: 5px;
+      }
+      p.description__right {
+        font-size: 16px;
+        line-height: 33px;
+        font-weight: 500;
+        letter-spacing: 0px;
+        line-height: 38px;
+        margin-left: -3px;
       }
     }
 
-    div.medical__imagebox {
+    div.medical_imagebox {
       position: absolute;
       bottom: 0;
       left: 97px;
 
-      & img {
+      img {
         width: 187px;
         height: 187px;
       }
@@ -405,21 +398,18 @@ div.treatmentcontent__container {
   }
 }
 
-div.notice__box {
+div.notice_box {
   width: 100px;
   margin: 84px auto 0px auto;
 
-  & h2.notice {
+  h2.notice_title {
     font-size: 24px;
     background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
-    //bold効かない
-    text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
-      -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
-      0px -0.5px 0px;
+    font-weight: 500;
   }
 }
 
-div.notice__container {
+div.notice_container {
   width: 1180px;
   height: 390px;
   margin: 74px auto 0 auto;
@@ -434,37 +424,30 @@ div.notice__container {
   flex-direction: column;
   flex-wrap: wrap;
 
-  & div.notice__wrap {
+  div.notice_wrap {
     height: 25px;
-    // background-color: red;
   }
 
-  & article.notice__contents {
+  article.notice_contents {
     border-bottom: 1px solid #e7e7e7;
     margin: 0px 66px 0px 66px;
-    // background-color: rgb(209, 197, 197);
+    font-size: 0;// display: inline-block;ズレ対策
 
-    & p.notice__contents--date {
-      font-size: 16px;
+    p.notice_contents__date {
       color: green;
-      //bold効かない
-      text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
-        -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
-        0px -0.5px 0px;
+      font-size: 16px;
+      font-weight: 500;
       display: inline-block;
       width: 80px;
       height: 16px;
-      margin: 25.4px 32px 20.5px 0px;
-      letter-spacing: 0.6px;
+      margin: 25.4px 36px 20.5px -2px;
+      letter-spacing: 0px;
     }
 
-    & p.notice__contents--info {
+    p.notice_contents__info {
       font-size: 12px;
+      font-weight: 500;
       color: white;
-      //bold効かない
-      text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
-        -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
-        0px -0.5px 0px;
       display: inline-block;
       background-color: #444444;
       width: 80px;
@@ -474,48 +457,46 @@ div.notice__container {
       margin-right: 30px;
     }
 
-    & p.notice__contents--infocontent {
+    p.notice_contents__infocontent {
       font-size: 16px;
-      //bold効かない
-      text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0,
-        -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px,
-        0px -0.5px 0px;
+      font-weight: 500;
       display: inline-block;
+      margin-left: 6px;
+      letter-spacing: -0.1px;
     }
   }
 }
 
-div.seeall__wrap {
-  margin: 0px 54px 0px 66px;
+div.seeall_wrap {
+  margin: 0px 54px 0px 60px;
   text-align: right;
-  // background-color: yellowgreen;
 
-  & div.seeall__box {
-    width: 1000px;
+  div.seeall_box {
+    width: 1005px;
     margin: 0px 0px 0px 66px;
-    text-align: right;
-    // background-color: red;
+    text-align: right;      font-size: 0;// display: inline-block;ズレ対策
 
-    & p.seeall__text {
+    p.seeall_text {
       font-size: 16px;
-      width: 85px;
+      width: 198px;
       height: 16px;
       margin-top: 44px;
       display: inline-block;
-      letter-spacing: 0px;
+      letter-spacing: 1.2px;
+      margin-right: 2px;
     }
 
-    & p.seeall__icon {
+    p.seeall_icon {
       font-size: 14px;
       width: 12px;
       height: 14px;
-      margin-top: 35px;
       display: inline-block;
+      margin-top: 35px;
     }
   }
 }
 
-div.about__access--wrap {
+div.about_access__wrap {
   width: 1190px;
   height: 799px;
   margin: 0px auto 0 auto;
@@ -525,49 +506,45 @@ div.about__access--wrap {
   flex-wrap: wrap;
   align-items: flex-start;
 
-  & div.map__box {
+  div.map_box {
     width: 608px;
     height: 440px;
-    padding-top: 197px;
+    padding-top: 195px;
     margin-right: 39px;
     padding-left: 4px;
   }
 
-  & div.about__container {
+  div.about_container {
     width: 538px;
     height: 625px;
     margin-top: 197px;
-    // background-color: rgb(238, 240, 233);
-
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
 
-    & div.companyname__box {
+    div.company_name__box {
       width: 263px;
       height: 73px;
       display: flex;
       flex-wrap: wrap;
 
-      // background-color: rgb(240, 240, 245);
-
-      & div.companyicon__box {
+      div.company_logo__box {
         width: 73px;
         height: 73px;
       }
 
-      & div.companyname__box {
+      div.tagline_box {
         width: 190px;
         height: 73px;
 
-        & p.companyname__box--upperline {
+        p.tagline_box--upperline {
           font-size: 30px;
           line-height: 22.5px;
           padding-left: 9.5px;
         }
 
-        & p.companyname__box--lowerline {
+        p.tagline_box--lowerline {
           font-size: 30px;
           line-height: 57px;
           padding-left: 24px;
@@ -575,32 +552,32 @@ div.about__access--wrap {
       }
     }
 
-    & div.adress__box {
+    div.adress_box {
       margin-top: 28px;
       display: flex;
       flex-wrap: wrap;
       background-color: white;
 
-      & p.adress__box--number {
+      p.adress_number {
         font-size: 16px;
-        margin-right: 17px;
-        letter-spacing: 0.3px;
+        margin-right: 16px;
+        letter-spacing: 0.1px;
       }
 
-      & p.adress__box--text {
+      p.adress_text {
         font-size: 16px;
-        letter-spacing: 0.3px;
+        letter-spacing: 0px;
       }
     }
 
-    & div.tel__box {
+    div.tel_box {
       height: 32px;
       width: 220px;
       position: relative;
       margin-top: 29px;
-      // background-color: rgb(236, 228, 228);
+      font-size: 0;// display: inline-block;ズレ対策
 
-      & p.tel__number::before {
+      p.tel_number::before {
         content: "";
         display: inline-block;
         width: 24px;
@@ -611,7 +588,7 @@ div.about__access--wrap {
         margin-top: 2px;
       }
 
-      & p.tel__number{
+      p.tel_number {
         color: #21a937;
         font-size: 24px;
         text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0,
@@ -619,12 +596,11 @@ div.about__access--wrap {
           0px -0.4px 0px;
         text-align: right;
         padding-left: 6px;
-        letter-spacing: 0.5px;
         position: absolute;
       }
     }
 
-    & div.empty__border {
+    div.empty_border {
       height: 29.5px;
       width: 533px;
       border-bottom: 1px solid;
@@ -632,13 +608,12 @@ div.about__access--wrap {
       background-color: rgb(255, 255, 255);
     }
 
-    & div.empty__margin {
+    div.empty_margin {
       height: 15px;
       width: 533px;
-      // background-color: rgb(104, 30, 30);
     }
 
-    & div.businesshour__box {
+    div.businesshour_box {
       height: 95px;
       width: 533px;
       background-color: white;
@@ -646,112 +621,95 @@ div.about__access--wrap {
       flex-direction: column;
       flex-wrap: wrap;
 
-      & div.consultation__time--box {
+      div.consultation_time__box {
         width: 85px;
         height: 114px;
         border-right: 1px solid;
         border-color: #e7e7e7;
 
-        // background-color: rgb(253, 185, 185);
-        & p.consultation__time {
+        p.consultation_time {
           font-size: 14px;
-          margin-top: 9px;
+          margin-top: 8px;
           margin-left: 4.5px;
           // background-color: rgb(233, 217, 217);
         }
       }
 
-      & div.consultation__pattern--box {
+      div.consultation_pattern__box {
         width: 449px;
         height: 114px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        // background-color: rgb(250, 202, 112);
 
-        & div.consultation__pattern{
-          // background-color: rgb(233, 226, 240);
-
+        div.consultation_pattern__content {
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
+          font-size: 0;// display: inline-block;ズレ対策
 
-          & p.dayofweek__upper {
+          p.dayofweek_upper {
             font-size: 14px;
             display: inline-block;
             width: 42px;
             margin: 9px 23px 0 32px;
-            // background-color: rgb(233, 217, 217);
           }
-          & p.dayofweek__middle {
+          p.dayofweek_middle {
             font-size: 14px;
             display: inline-block;
             width: 42px;
-            margin: 14px 23px 0 32px;
-            // background-color: rgb(233, 217, 217);
+            margin: 14px 23px 0 36px;
           }
-          & p.dayofweek__lower {
+          p.dayofweek_lower {
             font-size: 14px;
             display: inline-block;
             width: 42px;
-            margin: 18px 23px 0 32px;
-            // background-color: rgb(233, 217, 217);
+            margin: 16px 23px 0 32px;
           }
 
-          & p.morning__upper {
+          p.morning_upper {
             font-size: 14px;
             display: inline-block;
             width: 105px;
-            margin: 9px 16px 0 0;
-            letter-spacing: 0.5px;
-            // background-color: rgb(233, 217, 217);
+            margin: 8px 16px 0 0;
+            letter-spacing: 0px;
           }
-          & p.morning__middle {
+          p.morning_middle {
             font-size: 14px;
             display: inline-block;
             width: 105px;
             margin: 16px 16px 0 0;
-            letter-spacing: 0.5px;
-            // background-color: rgb(233, 217, 217);
           }
-          .morning__lower {
+          p.morning_lower {
             font-size: 14px;
             display: inline-block;
             width: 105px;
             margin: 16px 16px 0 0;
-            letter-spacing: 0.5px;
-            // background-color: rgb(233, 217, 217);
           }
 
-          & p.afternoon__upper {
+          p.afternoon_upper {
             font-size: 14px;
             display: inline-block;
             width: 110px;
             margin: 9px 16px 0 0;
-            letter-spacing: 0.3px;
-            // background-color: rgb(233, 217, 217);
           }
-          & p.afternoon__middle {
+          p.afternoon_middle {
             font-size: 14px;
             display: inline-block;
             width: 110px;
             margin: 16px 16px 0 0;
-            letter-spacing: 0.3px;
-            // background-color: rgb(233, 217, 217);
           }
-          & p.afternoon__lower {
+          p.afternoon_lower {
             font-size: 14px;
             display: inline-block;
             width: 110px;
             margin: 16px 16px 0 0;
-            letter-spacing: 0.3px;
-            // background-color: rgb(233, 217, 217);
           }
         }
       }
     }
 
-    & div.closed__days--line {
+    div.closed_days__line {
       width: 533px;
       height: 35px;
       // background-color: rgb(224, 82, 82);
@@ -759,13 +717,13 @@ div.about__access--wrap {
       flex-direction: column;
       flex-wrap: wrap;
 
-      & div.closed__day-box {
+      div.closed_day__box{
         width: 85px;
         font-size: 14px;
         border-right: 1px solid;
         border-color: #e7e7e7;
 
-        & p.closedday {
+        p.closed_day {
           margin-top: 14px;
           margin-left: 4.5px;
           // background-color: rgb(233, 217, 217);
@@ -773,38 +731,37 @@ div.about__access--wrap {
       }
     }
 
-    & div.closed_dayofweek--wrap {
+    div.closed_dayofweek__wrap {
       width: 449px;
       height: 114px;
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      // background-color: rgb(250, 202, 112);
-      & div.closed__dayofweek{
+
+      div.closed__dayofweek {
         font-size: 14px;
-        display: inline-block;
         width: 70px;
         margin-top: 14px;
         margin-left: 32px;
-        // background-color: rgb(207, 194, 226);
       }
     }
-    & div.empty__border--lower{
+
+    div.empty_border__lower {
       height: 19px;
       width: 533px;
       border-bottom: 1px solid;
       border-color: #e7e7e7;
-      // background-color: rgb(110, 84, 84);
     }
 
-    & div.copyright__reserved--box {
-      width: 553px;
-      margin-top: 22px;
+    div.copyright_reserved__box {
+      width: 554px;
+      margin-top: 24.5px;
       text-align: right;
-      // background-color: rgb(110, 84, 84);
-      & small.copyright__reserved--text {
+      font-size: 0;// display: inline-block;ズレ
+
+      small.copyright_reserved__text {
         font-size: 11px;
-        letter-spacing: 0.45px;
+        letter-spacing: 0.15px;
         padding-right: 15px;
         display: inline-block;
       }

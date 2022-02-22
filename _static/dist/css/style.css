@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 HTML CSSResult Skip Results Iframe EDIT ON *,
 ::before,
 ::after {
@@ -504,7 +504,7 @@ div.header div.header__container div.header__tagline p.header__tagline--lower {
   padding-left: 12px;
   font-size: 30px;
   text-align: center;
-  line-height: 46px;
+  line-height: 48px;
 }
 @media (max-width: 480px) {
   div.header div.header__container div.header__tagline p.header__tagline--lower {
@@ -517,6 +517,7 @@ div.header div.header__container div.header__top--right {
   width: 300px;
   height: 73px;
   margin-right: 20px;
+  font-size: 0;
 }
 @media (max-width: 480px) {
   div.header div.header__container div.header__top--right {
@@ -527,7 +528,7 @@ div.header div.header__container div.header__top--right {
 }
 div.header div.header__container div.header__top--right p.reception {
   font-size: 14px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.2px;
   text-align: right;
   margin-top: 5px;
 }
@@ -539,14 +540,14 @@ div.header div.header__container div.header__top--right .tel::before {
   background: url("../images/受話器の線画アイコン.jpg") no-repeat;
   background-size: contain;
   margin-top: 1.5px;
-  margin-right: 18px;
+  margin-right: 17px;
 }
 div.header div.header__container div.header__top--right p.tel {
   color: #21a937;
-  font-size: 24px;
-  text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0, -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px, 0px -0.4px 0px;
+  font-size: 22px;
+  font-weight: 500;
   letter-spacing: 0.5px;
-  margin-top: 14px;
+  margin-top: 13px;
   text-align: right;
 }
 div.firstview__box {
@@ -558,8 +559,8 @@ div.firstview__box {
 p.message-left {
   writing-mode: vertical-rl;
   font-size: 28px;
-  text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
-  letter-spacing: 4.4px;
+  font-weight: 500;
+  letter-spacing: 5.5px;
   padding-top: 25px;
   line-height: 102px;
   width: 102px;
@@ -569,14 +570,17 @@ p.message-left {
   top: 133px;
   left: 210px;
 }
-p.message-left .color {
+p.message-left span.color {
   color: green;
+  letter-spacing: 5.5px;
+  margin-top: -8px;
+  margin-bottom: -8px;
 }
 
 p.message-right {
   writing-mode: vertical-rl;
   font-size: 28px;
-  text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
+  font-weight: 500;
   letter-spacing: 6px;
   padding-top: 25px;
   line-height: 102px;
@@ -588,52 +592,52 @@ p.message-right {
   left: 393px;
 }
 
-div.about__us {
+div.about_us {
   width: 1180px;
   height: 664px;
   margin: 0 auto;
   display: flex;
 }
-div.about__us div.about__us--content {
+div.about_us div.about_us__content {
   width: 490px;
   height: 664px;
 }
-div.about__us div.firstline__box {
-  width: 267px;
+div.about_us div.about_us__content div.firstline__box {
+  width: 275px;
   margin-left: 32px;
 }
-div.about__us p.first-line {
+div.about_us div.about_us__content div.firstline__box p.firstline__text {
   font-size: 24px;
-  background: linear-gradient(transparent 70%, #54c854 70%);
-  text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
+  font-weight: 500;
+  background: linear-gradient(transparent 60%, #86eb86 90%);
   margin-top: 200px;
-  line-height: 20px;
+  line-height: 22px;
 }
-div.about__us div.secondline__box {
+div.about_us div.secondline__box {
   width: 216px;
-  margin-top: 40px;
+  margin-top: 42px;
   margin-left: 32px;
 }
-div.about__us p.second-line {
+div.about_us div.secondline__box p.secondline__text {
+  background: linear-gradient(transparent 60%, #86eb86 90%);
   font-size: 24px;
-  background: linear-gradient(transparent 70%, #54c854 70%);
-  text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
+  font-weight: 500;
   letter-spacing: -0.1px;
-  line-height: 33px;
+  line-height: 24px;
 }
-div.about__us div.thirdline__box {
-  width: 410px;
+div.about_us div.thirdline__box {
+  width: 415px;
   height: 145px;
-  margin-top: 30px;
+  margin-top: 38px;
   margin-left: 32px;
 }
-div.about__us p.third-line {
+div.about_us div.thirdline__box p.thirdline__text {
   font-size: 16px;
   line-height: 36px;
-  letter-spacing: -0.1px;
+  letter-spacing: -0.18px;
   line-height: 38px;
 }
-div.about__us div.about__us--imgbox {
+div.about_us div.about_us__imgbox {
   width: 690px;
   height: 420px;
   margin-top: 162px;
@@ -647,32 +651,32 @@ div.treatment__content--container {
 div.treatment__content--container div.treatment__content--box {
   width: 96px;
   margin: 0 auto;
-  padding-top: 84px;
-  background: linear-gradient(transparent 90%, #86eb86 70%);
+  padding-top: 82px;
+  background: linear-gradient(transparent 90%, #86eb86 90%);
 }
 div.treatment__content--container div.treatment__content--box h2.treatment-content--title {
   height: 32px;
   font-size: 24px;
-  text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
+  font-weight: 500;
   text-align: center;
 }
 
-div.treatment-content--supplement {
+div.treatment-content__supplement {
   width: 448px;
   margin: 71px auto 0 auto;
 }
-div.treatment-content--supplement p.treatment-content--supplementtext {
+div.treatment-content__supplement p.treatment-content__supplement--text {
   font-size: 16px;
   letter-spacing: 0px;
 }
 
-div.treatmentcontent__container {
+div.medical_subjects__container {
   margin-top: 37px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-div.treatmentcontent__container article.medical__subjects {
+div.medical_subjects__container article.medical_subjects {
   width: 380px;
   height: 591px;
   border: 1px solid;
@@ -681,45 +685,62 @@ div.treatmentcontent__container article.medical__subjects {
   position: relative;
   background-color: white;
 }
-div.treatmentcontent__container article.medical__subjects div.medical__subject--title {
+div.medical_subjects__container article.medical_subjects div.medical_subject__title {
   width: 192px;
   margin: 41px 94px 0 94px;
 }
-div.treatmentcontent__container article.medical__subjects div.medical__subject--title h3 {
+div.medical_subjects__container article.medical_subjects div.medical_subject__title h3 {
   font-size: 24px;
-  text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
+  font-weight: 500;
 }
-div.treatmentcontent__container article.medical__subjects div.description__box {
+div.medical_subjects__container article.medical_subjects div.description__box {
+  width: 320px;
   margin: 42px 29px 111px 31px;
 }
-div.treatmentcontent__container article.medical__subjects div.description__box p.description {
+div.medical_subjects__container article.medical_subjects div.description__box p.description__left {
   font-size: 16px;
   line-height: 33px;
-  text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
-  letter-spacing: -0.1px;
+  font-weight: 500;
+  letter-spacing: -0.11px;
   line-height: 38px;
 }
-div.treatmentcontent__container article.medical__subjects div.medical__imagebox {
+div.medical_subjects__container article.medical_subjects div.description__box p.description__center {
+  font-size: 16px;
+  line-height: 33px;
+  font-weight: 500;
+  letter-spacing: 0.05px;
+  line-height: 39px;
+  margin-left: 5px;
+}
+div.medical_subjects__container article.medical_subjects div.description__box p.description__right {
+  font-size: 16px;
+  line-height: 33px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 38px;
+  margin-left: -3px;
+}
+div.medical_subjects__container article.medical_subjects div.medical_imagebox {
   position: absolute;
   bottom: 0;
   left: 97px;
 }
-div.treatmentcontent__container article.medical__subjects div.medical__imagebox img {
+div.medical_subjects__container article.medical_subjects div.medical_imagebox img {
   width: 187px;
   height: 187px;
 }
 
-div.notice__box {
+div.notice_box {
   width: 100px;
   margin: 84px auto 0px auto;
 }
-div.notice__box h2.notice {
+div.notice_box h2.notice_title {
   font-size: 24px;
   background: linear-gradient(transparent 60%, #86eb86 90%);
-  text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
+  font-weight: 500;
 }
 
-div.notice__container {
+div.notice_container {
   width: 1180px;
   height: 390px;
   margin: 74px auto 0 auto;
@@ -734,27 +755,28 @@ div.notice__container {
   flex-direction: column;
   flex-wrap: wrap;
 }
-div.notice__container div.notice__wrap {
+div.notice_container div.notice_wrap {
   height: 25px;
 }
-div.notice__container article.notice__contents {
+div.notice_container article.notice_contents {
   border-bottom: 1px solid #e7e7e7;
   margin: 0px 66px 0px 66px;
+  font-size: 0;
 }
-div.notice__container article.notice__contents p.notice__contents--date {
-  font-size: 16px;
+div.notice_container article.notice_contents p.notice_contents__date {
   color: green;
-  text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
+  font-size: 16px;
+  font-weight: 500;
   display: inline-block;
   width: 80px;
   height: 16px;
-  margin: 25.4px 32px 20.5px 0px;
-  letter-spacing: 0.6px;
+  margin: 25.4px 36px 20.5px -2px;
+  letter-spacing: 0px;
 }
-div.notice__container article.notice__contents p.notice__contents--info {
+div.notice_container article.notice_contents p.notice_contents__info {
   font-size: 12px;
+  font-weight: 500;
   color: white;
-  text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
   display: inline-block;
   background-color: #444444;
   width: 80px;
@@ -763,38 +785,42 @@ div.notice__container article.notice__contents p.notice__contents--info {
   line-height: 25px;
   margin-right: 30px;
 }
-div.notice__container article.notice__contents p.notice__contents--infocontent {
+div.notice_container article.notice_contents p.notice_contents__infocontent {
   font-size: 16px;
-  text-shadow: 0.5px 0.5px 0, 0.5px -0.5px 0px, -0.5px 0.5px 0, -0.5px -0.5px 0px, 0.5px 0px 0px, 0px 0.5px 0px, -0.5px 0px 0px, 0px -0.5px 0px;
+  font-weight: 500;
   display: inline-block;
+  margin-left: 6px;
+  letter-spacing: -0.1px;
 }
 
-div.seeall__wrap {
-  margin: 0px 54px 0px 66px;
+div.seeall_wrap {
+  margin: 0px 54px 0px 60px;
   text-align: right;
 }
-div.seeall__wrap div.seeall__box {
-  width: 1000px;
+div.seeall_wrap div.seeall_box {
+  width: 1005px;
   margin: 0px 0px 0px 66px;
   text-align: right;
+  font-size: 0;
 }
-div.seeall__wrap div.seeall__box p.seeall__text {
+div.seeall_wrap div.seeall_box p.seeall_text {
   font-size: 16px;
-  width: 85px;
+  width: 198px;
   height: 16px;
   margin-top: 44px;
   display: inline-block;
-  letter-spacing: 0px;
+  letter-spacing: 1.2px;
+  margin-right: 2px;
 }
-div.seeall__wrap div.seeall__box p.seeall__icon {
+div.seeall_wrap div.seeall_box p.seeall_icon {
   font-size: 14px;
   width: 12px;
   height: 14px;
-  margin-top: 35px;
   display: inline-block;
+  margin-top: 35px;
 }
 
-div.about__access--wrap {
+div.about_access__wrap {
   width: 1190px;
   height: 799px;
   margin: 0px auto 0 auto;
@@ -803,14 +829,14 @@ div.about__access--wrap {
   flex-wrap: wrap;
   align-items: flex-start;
 }
-div.about__access--wrap div.map__box {
+div.about_access__wrap div.map_box {
   width: 608px;
   height: 440px;
-  padding-top: 197px;
+  padding-top: 195px;
   margin-right: 39px;
   padding-left: 4px;
 }
-div.about__access--wrap div.about__container {
+div.about_access__wrap div.about_container {
   width: 538px;
   height: 625px;
   margin-top: 197px;
@@ -819,52 +845,53 @@ div.about__access--wrap div.about__container {
   flex-wrap: wrap;
   align-items: flex-start;
 }
-div.about__access--wrap div.about__container div.companyname__box {
+div.about_access__wrap div.about_container div.company_name__box {
   width: 263px;
   height: 73px;
   display: flex;
   flex-wrap: wrap;
 }
-div.about__access--wrap div.about__container div.companyname__box div.companyicon__box {
+div.about_access__wrap div.about_container div.company_name__box div.company_logo__box {
   width: 73px;
   height: 73px;
 }
-div.about__access--wrap div.about__container div.companyname__box div.companyname__box {
+div.about_access__wrap div.about_container div.company_name__box div.tagline_box {
   width: 190px;
   height: 73px;
 }
-div.about__access--wrap div.about__container div.companyname__box div.companyname__box p.companyname__box--upperline {
+div.about_access__wrap div.about_container div.company_name__box div.tagline_box p.tagline_box--upperline {
   font-size: 30px;
   line-height: 22.5px;
   padding-left: 9.5px;
 }
-div.about__access--wrap div.about__container div.companyname__box div.companyname__box p.companyname__box--lowerline {
+div.about_access__wrap div.about_container div.company_name__box div.tagline_box p.tagline_box--lowerline {
   font-size: 30px;
   line-height: 57px;
   padding-left: 24px;
 }
-div.about__access--wrap div.about__container div.adress__box {
+div.about_access__wrap div.about_container div.adress_box {
   margin-top: 28px;
   display: flex;
   flex-wrap: wrap;
   background-color: white;
 }
-div.about__access--wrap div.about__container div.adress__box p.adress__box--number {
+div.about_access__wrap div.about_container div.adress_box p.adress_number {
   font-size: 16px;
-  margin-right: 17px;
-  letter-spacing: 0.3px;
+  margin-right: 16px;
+  letter-spacing: 0.1px;
 }
-div.about__access--wrap div.about__container div.adress__box p.adress__box--text {
+div.about_access__wrap div.about_container div.adress_box p.adress_text {
   font-size: 16px;
-  letter-spacing: 0.3px;
+  letter-spacing: 0px;
 }
-div.about__access--wrap div.about__container div.tel__box {
+div.about_access__wrap div.about_container div.tel_box {
   height: 32px;
   width: 220px;
   position: relative;
   margin-top: 29px;
+  font-size: 0;
 }
-div.about__access--wrap div.about__container div.tel__box p.tel__number::before {
+div.about_access__wrap div.about_container div.tel_box p.tel_number::before {
   content: "";
   display: inline-block;
   width: 24px;
@@ -874,27 +901,26 @@ div.about__access--wrap div.about__container div.tel__box p.tel__number::before 
   margin-right: 15px;
   margin-top: 2px;
 }
-div.about__access--wrap div.about__container div.tel__box p.tel__number {
+div.about_access__wrap div.about_container div.tel_box p.tel_number {
   color: #21a937;
   font-size: 24px;
   text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0, -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px, 0px -0.4px 0px;
   text-align: right;
   padding-left: 6px;
-  letter-spacing: 0.5px;
   position: absolute;
 }
-div.about__access--wrap div.about__container div.empty__border {
+div.about_access__wrap div.about_container div.empty_border {
   height: 29.5px;
   width: 533px;
   border-bottom: 1px solid;
   border-color: #e7e7e7;
   background-color: white;
 }
-div.about__access--wrap div.about__container div.empty__margin {
+div.about_access__wrap div.about_container div.empty_margin {
   height: 15px;
   width: 533px;
 }
-div.about__access--wrap div.about__container div.businesshour__box {
+div.about_access__wrap div.about_container div.businesshour_box {
   height: 95px;
   width: 533px;
   background-color: white;
@@ -902,134 +928,130 @@ div.about__access--wrap div.about__container div.businesshour__box {
   flex-direction: column;
   flex-wrap: wrap;
 }
-div.about__access--wrap div.about__container div.businesshour__box div.consultation__time--box {
+div.about_access__wrap div.about_container div.businesshour_box div.consultation_time__box {
   width: 85px;
   height: 114px;
   border-right: 1px solid;
   border-color: #e7e7e7;
 }
-div.about__access--wrap div.about__container div.businesshour__box div.consultation__time--box p.consultation__time {
+div.about_access__wrap div.about_container div.businesshour_box div.consultation_time__box p.consultation_time {
   font-size: 14px;
-  margin-top: 9px;
+  margin-top: 8px;
   margin-left: 4.5px;
 }
-div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box {
+div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box {
   width: 449px;
   height: 114px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern {
+div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  font-size: 0;
 }
-div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern p.dayofweek__upper {
+div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_upper {
   font-size: 14px;
   display: inline-block;
   width: 42px;
   margin: 9px 23px 0 32px;
 }
-div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern p.dayofweek__middle {
+div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_middle {
   font-size: 14px;
   display: inline-block;
   width: 42px;
-  margin: 14px 23px 0 32px;
+  margin: 14px 23px 0 36px;
 }
-div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern p.dayofweek__lower {
+div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_lower {
   font-size: 14px;
   display: inline-block;
   width: 42px;
-  margin: 18px 23px 0 32px;
+  margin: 16px 23px 0 32px;
 }
-div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern p.morning__upper {
+div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.morning_upper {
   font-size: 14px;
   display: inline-block;
   width: 105px;
-  margin: 9px 16px 0 0;
-  letter-spacing: 0.5px;
+  margin: 8px 16px 0 0;
+  letter-spacing: 0px;
 }
-div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern p.morning__middle {
+div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.morning_middle {
   font-size: 14px;
   display: inline-block;
   width: 105px;
   margin: 16px 16px 0 0;
-  letter-spacing: 0.5px;
 }
-div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern .morning__lower {
+div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.morning_lower {
   font-size: 14px;
   display: inline-block;
   width: 105px;
   margin: 16px 16px 0 0;
-  letter-spacing: 0.5px;
 }
-div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern p.afternoon__upper {
+div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.afternoon_upper {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 9px 16px 0 0;
-  letter-spacing: 0.3px;
 }
-div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern p.afternoon__middle {
+div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.afternoon_middle {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 16px 16px 0 0;
-  letter-spacing: 0.3px;
 }
-div.about__access--wrap div.about__container div.businesshour__box div.consultation__pattern--box div.consultation__pattern p.afternoon__lower {
+div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.afternoon_lower {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 16px 16px 0 0;
-  letter-spacing: 0.3px;
 }
-div.about__access--wrap div.about__container div.closed__days--line {
+div.about_access__wrap div.about_container div.closed_days__line {
   width: 533px;
   height: 35px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-div.about__access--wrap div.about__container div.closed__days--line div.closed__day-box {
+div.about_access__wrap div.about_container div.closed_days__line div.closed_day__box {
   width: 85px;
   font-size: 14px;
   border-right: 1px solid;
   border-color: #e7e7e7;
 }
-div.about__access--wrap div.about__container div.closed__days--line div.closed__day-box p.closedday {
+div.about_access__wrap div.about_container div.closed_days__line div.closed_day__box p.closed_day {
   margin-top: 14px;
   margin-left: 4.5px;
 }
-div.about__access--wrap div.about__container div.closed_dayofweek--wrap {
+div.about_access__wrap div.about_container div.closed_dayofweek__wrap {
   width: 449px;
   height: 114px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-div.about__access--wrap div.about__container div.closed_dayofweek--wrap div.closed__dayofweek {
+div.about_access__wrap div.about_container div.closed_dayofweek__wrap div.closed__dayofweek {
   font-size: 14px;
-  display: inline-block;
   width: 70px;
   margin-top: 14px;
   margin-left: 32px;
 }
-div.about__access--wrap div.about__container div.empty__border--lower {
+div.about_access__wrap div.about_container div.empty_border__lower {
   height: 19px;
   width: 533px;
   border-bottom: 1px solid;
   border-color: #e7e7e7;
 }
-div.about__access--wrap div.about__container div.copyright__reserved--box {
-  width: 553px;
-  margin-top: 22px;
+div.about_access__wrap div.about_container div.copyright_reserved__box {
+  width: 554px;
+  margin-top: 24.5px;
   text-align: right;
+  font-size: 0;
 }
-div.about__access--wrap div.about__container div.copyright__reserved--box small.copyright__reserved--text {
+div.about_access__wrap div.about_container div.copyright_reserved__box small.copyright_reserved__text {
   font-size: 11px;
-  letter-spacing: 0.45px;
+  letter-spacing: 0.15px;
   padding-right: 15px;
   display: inline-block;
 }
