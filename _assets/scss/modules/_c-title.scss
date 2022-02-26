@@ -1,9 +1,10 @@
 // スタイルについて具体的な記述をする
 // -------------------------------------
-$pcl: 1600px; // PCワイド tab横
-$pc: 1280px; // PC
-$tab: 768px; //タブレット
-$sp: 480px; // スマホ
+$pc_l: 1280px; // 1280以上 大型PCモニタ
+$pc: 1279px;   // 1280pxまで PC
+$tab: 959px;   // 960pxまでタブレット
+$sp_b: 599px;  // 600pxまでスマホ横beside
+$sp_V: 480px;  // 480pxまでスマホ縦vertical
 
 @mixin pc-large($pcl) {
   @media (-width: ($pcl)) {
