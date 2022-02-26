@@ -302,10 +302,12 @@ body.body__toppage {
         background-size: contain;
 
         @include sp(480px) {
-          width: 100%;
-          height: 100%;
-          background: url("../images/firstview_image_SP.jpg");
-          background-size: cover;
+          width: clamp_vw_sp(480);
+          height: clamp_vw_sp(480);
+          background: url("../images/firstview_image_SP.jpg")no-repeat;
+          background-size: contain;
+          position: absolute;
+          // left:clamp_vw_sp(100);
         }
       }
 
@@ -348,6 +350,7 @@ body.body__toppage {
           // left: clamp(14px, 6.25vw, 30px);
           left: clamp_vw_sp(30);
           /* 最小値14(vw225),30÷480×100vw,最大値30(vw480) */
+          z-index: 5;
         }
 
         span.color {
@@ -392,6 +395,7 @@ body.body__toppage {
         line-height: clamp_vw_sp(55);
         top: clamp_vw_sp(100);
         left: clamp_vw_sp(100);
+        z-index: 5;
       }
     }
   }
@@ -516,11 +520,10 @@ body.body__toppage {
 
       @include sp(480px) {
         /* スマートフォン画面 */
-        width: 100%;
-        height: 100%;
+        width: clamp_vw_sp(480);
+        height:  clamp_vw_sp(400);
         background: url("../images/belief.jpg") no-repeat;
         background-size: contain;
-        background-size: clamp_vw_sp(660);
         margin-top: 0px;
       }
     }

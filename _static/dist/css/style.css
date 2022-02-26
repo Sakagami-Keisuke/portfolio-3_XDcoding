@@ -640,10 +640,11 @@ body.body__toppage div.body__toppage--wrap div.firstview__box div.firstview_imag
 }
 @media (max-width: 480px) {
   body.body__toppage div.body__toppage--wrap div.firstview__box div.firstview_image {
-    width: 100%;
-    height: 100%;
-    background: url("../images/firstview_image_SP.jpg");
-    background-size: cover;
+    width: clamp(225px, 100vw, 480px);
+    height: clamp(225px, 100vw, 480px);
+    background: url("../images/firstview_image_SP.jpg") no-repeat;
+    background-size: contain;
+    position: absolute;
   }
 }
 body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left {
@@ -679,6 +680,7 @@ body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left {
     /* 最小値47(vw225),100÷480×100vw,最大値100(vw480) */
     left: clamp(14px, 6vw, 30px);
     /* 最小値14(vw225),30÷480×100vw,最大値30(vw480) */
+    z-index: 5;
   }
 }
 body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left span.color {
@@ -722,6 +724,7 @@ body.body__toppage div.body__toppage--wrap p.message-right {
     line-height: clamp(25px, 11vw, 55px);
     top: clamp(47px, 21vw, 100px);
     left: clamp(47px, 21vw, 100px);
+    z-index: 5;
   }
 }
 body.body__toppage div.about_us {
@@ -846,11 +849,10 @@ body.body__toppage div.about_us div.about_us__imgbox {
 @media (max-width: 480px) {
   body.body__toppage div.about_us div.about_us__imgbox {
     /* スマートフォン画面 */
-    width: 100%;
-    height: 100%;
+    width: clamp(225px, 100vw, 480px);
+    height: clamp(187px, 83vw, 400px);
     background: url("../images/belief.jpg") no-repeat;
     background-size: contain;
-    background-size: clamp(311px, 138vw, 660px);
     margin-top: 0px;
   }
 }
