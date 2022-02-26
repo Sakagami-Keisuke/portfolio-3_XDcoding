@@ -393,6 +393,9 @@ th {
   font-weight: bold;
 }
 
+@media (max-width: 480px) {
+  /* スマートフォン画面 */
+}
 *,
 *:before,
 *:after {
@@ -410,13 +413,6 @@ html {
   overflow-x: hidden;
 }
 
-.body__toppage--wrap {
-  width: 1920px;
-  /*全体の幅を指定する*/
-  margin: 0 auto;
-  /*マージンの指定をする、ブラウザ対策*/
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -426,16 +422,42 @@ ul {
   list-style: none;
 }
 
-div.header {
+body.body__toppage {
+  width: 100vw;
+  /*全体の幅を指定する*/
+  /* section */
+}
+@media (max-width: 480px) {
+  body.body__toppage {
+    width: clamp(225px, 100vw, 480px);
+    padding: 0;
+    max-width: 0;
+  }
+}
+body.body__toppage div.body__toppage--wrap {
+  width: 1920px;
+  margin: 0 auto;
+}
+@media (max-width: 480px) {
+  body.body__toppage div.body__toppage--wrap {
+    /* スマートフォン画面 */
+    width: clamp(225px, 100vw, 480px);
+    height: auto;
+  }
+}
+body.body__toppage div.body__toppage--wrap div.header {
   width: 1920px;
   height: 130px;
 }
 @media (max-width: 480px) {
-  div.header {
-    width: 100vw;
+  body.body__toppage div.body__toppage--wrap div.header {
+    /* スマートフォン画面 */
+    width: auto;
+    max-width: 100%;
+    height: clamp(74px, 33vw, 160px);
   }
 }
-div.header div.header__container {
+body.body__toppage div.body__toppage--wrap div.header div.header__container {
   width: 1180px;
   height: 130px;
   margin: 0 auto;
@@ -446,12 +468,15 @@ div.header div.header__container {
   align-items: center;
 }
 @media (max-width: 480px) {
-  div.header div.header__container {
-    width: 100%;
+  body.body__toppage div.body__toppage--wrap div.header div.header__container {
+    /* スマートフォン画面 */
+    width: auto;
+    max-width: 100%;
+    height: auto;
     display: block;
   }
 }
-div.header div.header__container div.header__top--left {
+body.body__toppage div.body__toppage--wrap div.header div.header__container div.header__top--left {
   width: 263px;
   height: 73px;
   margin-left: 20px;
@@ -461,78 +486,104 @@ div.header div.header__container div.header__top--left {
   align-items: center;
 }
 @media (max-width: 480px) {
-  div.header div.header__container div.header__top--left {
-    width: 200px;
-    height: 55px;
+  body.body__toppage div.body__toppage--wrap div.header div.header__container div.header__top--left {
+    /* スマートフォン画面 */
+    width: auto;
+    max-width: 65%;
+    height: clamp(34px, 15vw, 73px);
     margin: 0 auto;
-    margin-top: 22px;
+    padding-top: 20px;
   }
 }
-div.header div.header__container div.header__logo {
+body.body__toppage div.body__toppage--wrap div.header div.header__container div.header__logo {
   width: 73px;
   height: 73px;
 }
 @media (max-width: 480px) {
-  div.header div.header__container div.header__logo {
-    width: 100px;
-    height: 55px;
+  body.body__toppage div.body__toppage--wrap div.header div.header__container div.header__logo {
+    /* スマートフォン画面 */
+    background-color: #d9e0f3;
+    width: auto;
+    max-width: 100%;
+    height: clamp(34px, 15vw, 73px);
   }
-  div.header div.header__container div.header__logo img {
-    width: 53px;
-    height: 53px;
-    margin-left: 15.5px;
+  body.body__toppage div.body__toppage--wrap div.header div.header__container div.header__logo img {
+    width: 100%;
+    height: 100%;
   }
 }
-div.header div.header__container div.header__tagline {
+body.body__toppage div.body__toppage--wrap div.header div.header__tagline {
   width: 190px;
   height: 73px;
 }
-div.header div.header__container div.header__tagline p.header__tagline--upper {
+@media (max-width: 480px) {
+  body.body__toppage div.body__toppage--wrap div.header div.header__tagline {
+    /* スマートフォン画面 */
+    height: clamp(34px, 15.208vw, 73px);
+  }
+}
+body.body__toppage div.body__toppage--wrap div.header div.header__tagline p.header__tagline--upper {
   padding-left: 8px;
   font-size: 30px;
   text-align: center;
   line-height: 28px;
 }
 @media (max-width: 480px) {
-  div.header div.header__container div.header__tagline p.header__tagline--upper {
-    font-size: 20px;
-    padding-left: 5px;
-    line-height: 40px;
+  body.body__toppage div.body__toppage--wrap div.header div.header__tagline p.header__tagline--upper {
+    /* スマートフォン画面 */
+    width: auto;
+    max-width: 100%;
+    font-size: clamp(14px, 6vw, 30px);
   }
 }
-div.header div.header__container div.header__tagline p.header__tagline--lower {
+body.body__toppage div.body__toppage--wrap div.header div.header__tagline p.header__tagline--lower {
   padding-left: 12px;
   font-size: 30px;
   text-align: center;
   line-height: 48px;
 }
 @media (max-width: 480px) {
-  div.header div.header__container div.header__tagline p.header__tagline--lower {
-    font-size: 20px;
-    padding-left: 5px;
-    line-height: 15px;
+  body.body__toppage div.body__toppage--wrap div.header div.header__tagline p.header__tagline--lower {
+    /* スマートフォン画面 */
+    width: auto;
+    max-width: 100%;
+    font-size: clamp(14px, 6vw, 30px);
+    line-height: clamp(23px, 10vw, 48px);
   }
 }
-div.header div.header__container div.header__top--right {
+body.body__toppage div.body__toppage--wrap div.header div.header__top--right {
   width: 300px;
   height: 73px;
   margin-right: 20px;
   font-size: 0;
 }
 @media (max-width: 480px) {
-  div.header div.header__container div.header__top--right {
-    width: 300px;
+  body.body__toppage div.body__toppage--wrap div.header div.header__top--right {
+    /* スマートフォン画面 */
+    width: auto;
+    max-width: 85%;
+    height: clamp(33px, 14.583vw, 73px);
+    /* 最小値33(vw225),70÷480×100vw,最大値70(vw480) */
     margin: 0 auto;
-    background-color: red;
+    margin-top: 24px;
   }
 }
-div.header div.header__container div.header__top--right p.reception {
+body.body__toppage div.body__toppage--wrap div.header div.header__top--right p.reception {
   font-size: 14px;
   letter-spacing: 0.2px;
   text-align: right;
   margin-top: 5px;
 }
-div.header div.header__container div.header__top--right .tel::before {
+@media (max-width: 480px) {
+  body.body__toppage div.body__toppage--wrap div.header div.header__top--right p.reception {
+    /* スマートフォン画面 */
+    width: auto;
+    max-width: 100%;
+    text-align: center;
+    font-size: clamp(9px, 4vw, 18px);
+  }
+}
+body.body__toppage div.body__toppage--wrap div.header div.header__top--right .tel::before {
   content: "";
   display: inline-block;
   width: 25px;
@@ -542,7 +593,15 @@ div.header div.header__container div.header__top--right .tel::before {
   margin-top: 1.5px;
   margin-right: 17px;
 }
-div.header div.header__container div.header__top--right p.tel {
+@media (max-width: 480px) {
+  body.body__toppage div.body__toppage--wrap div.header div.header__top--right .tel::before {
+    /* スマートフォン画面 */
+    margin-top: clamp(2px, 1vw, 5px);
+    margin-right: 0px;
+    height: clamp(11px, 5vw, 25px);
+  }
+}
+body.body__toppage div.body__toppage--wrap div.header div.header__top--right p.tel {
   color: #21a937;
   font-size: 22px;
   font-weight: 500;
@@ -550,13 +609,44 @@ div.header div.header__container div.header__top--right p.tel {
   margin-top: 13px;
   text-align: right;
 }
-div.firstview__box {
+@media (max-width: 480px) {
+  body.body__toppage div.body__toppage--wrap div.header div.header__top--right p.tel {
+    /* スマートフォン画面 */
+    width: auto;
+    max-width: 100%;
+    text-align: center;
+    font-size: clamp(11px, 5vw, 25px);
+    margin-top: -1px;
+  }
+}
+body.body__toppage div.body__toppage--wrap div.firstview__box {
   width: 1920px;
   height: 947px;
   position: relative;
 }
-
-p.message-left {
+@media (max-width: 480px) {
+  body.body__toppage div.body__toppage--wrap div.firstview__box {
+    /* スマートフォン画面 */
+    width: clamp(225px, 100vw, 480px);
+    height: clamp(225px, 100vw, 480px);
+    margin-top: clamp(5px, 2vw, 10px);
+  }
+}
+body.body__toppage div.body__toppage--wrap div.firstview__box div.firstview_image {
+  width: 100%;
+  height: 100%;
+  background: url("../images/fv.jpg") no-repeat;
+  background-size: contain;
+}
+@media (max-width: 480px) {
+  body.body__toppage div.body__toppage--wrap div.firstview__box div.firstview_image {
+    width: 100%;
+    height: 100%;
+    background: url("../images/firstview_image_SP.jpg");
+    background-size: cover;
+  }
+}
+body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left {
   writing-mode: vertical-rl;
   font-size: 28px;
   font-weight: 500;
@@ -570,14 +660,43 @@ p.message-left {
   top: 133px;
   left: 210px;
 }
-p.message-left span.color {
+@media (max-width: 480px) {
+  body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left {
+    /* スマートフォン画面 */
+    width: clamp(25px, 11vw, 55px);
+    /* 最小値30(vw225),65÷480×100vw,最大値65(vw480) */
+    height: clamp(162px, 72vw, 345px);
+    /* 最小値162(vw225),345÷480×100vw,最大値345(vw480) */
+    font-size: clamp(9px, 4vw, 20px);
+    /* 最小値9(vw225),20÷480×100vw,最大値20(vw480) */
+    letter-spacing: 0px;
+    padding-top: 0px;
+    text-align: center;
+    line-height: clamp(25px, 11vw, 55px);
+    /* 最小値30(vw225),65÷480×100vw,最大値65(vw480) */
+    /* 最小値30(vw225),65÷480×100vw,最大値65(vw480) */
+    top: clamp(47px, 21vw, 100px);
+    /* 最小値47(vw225),100÷480×100vw,最大値100(vw480) */
+    left: clamp(14px, 6vw, 30px);
+    /* 最小値14(vw225),30÷480×100vw,最大値30(vw480) */
+  }
+}
+body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left span.color {
   color: green;
   letter-spacing: 5.5px;
   margin-top: -8px;
   margin-bottom: -8px;
 }
-
-p.message-right {
+@media (max-width: 480px) {
+  body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left span.color {
+    /* スマートフォン画面 */
+    font-size: clamp(9px, 4vw, 20px);
+    letter-spacing: 0px;
+    padding-top: clamp(2px, 1vw, 3px);
+    padding-bottom: clamp(2px, 1vw, 3px);
+  }
+}
+body.body__toppage div.body__toppage--wrap p.message-right {
   writing-mode: vertical-rl;
   font-size: 28px;
   font-weight: 500;
@@ -591,92 +710,226 @@ p.message-right {
   top: 133px;
   left: 393px;
 }
-
-div.about_us {
+@media (max-width: 480px) {
+  body.body__toppage div.body__toppage--wrap p.message-right {
+    /* スマートフォン画面 */
+    width: clamp(25px, 11vw, 55px);
+    height: clamp(162px, 72vw, 345px);
+    font-size: clamp(9px, 4vw, 20px);
+    letter-spacing: 0px;
+    padding-top: 0px;
+    text-align: center;
+    line-height: clamp(25px, 11vw, 55px);
+    top: clamp(47px, 21vw, 100px);
+    left: clamp(47px, 21vw, 100px);
+  }
+}
+body.body__toppage div.about_us {
   width: 1180px;
   height: 664px;
   margin: 0 auto;
   display: flex;
 }
-div.about_us div.about_us__content {
+@media (max-width: 480px) {
+  body.body__toppage div.about_us {
+    /* スマートフォン画面 */
+    width: clamp(225px, 100vw, 480px);
+    height: clamp(311px, 138vw, 660px);
+    display: block;
+  }
+}
+body.body__toppage div.about_us div.about_us__content {
   width: 490px;
   height: 664px;
 }
-div.about_us div.about_us__content div.firstline__box {
+@media (max-width: 480px) {
+  body.body__toppage div.about_us div.about_us__content {
+    /* スマートフォン画面 */
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
+body.body__toppage div.about_us div.about_us__content div.firstline__box {
   width: 275px;
   margin-left: 32px;
 }
-div.about_us div.about_us__content div.firstline__box p.firstline__text {
+@media (max-width: 480px) {
+  body.body__toppage div.about_us div.about_us__content div.firstline__box {
+    /* スマートフォン画面 */
+    width: clamp(124px, 55vw, 265px);
+    margin: 0 auto;
+  }
+}
+body.body__toppage div.about_us div.about_us__content div.firstline__box p.firstline__text {
   font-size: 24px;
   font-weight: 500;
   background: linear-gradient(transparent 60%, #86eb86 90%);
   margin-top: 200px;
   line-height: 22px;
 }
-div.about_us div.secondline__box {
+@media (max-width: 480px) {
+  body.body__toppage div.about_us div.about_us__content div.firstline__box p.firstline__text {
+    /* スマートフォン画面 */
+    margin-top: clamp(29px, 13vw, 60px);
+    font-size: clamp(11px, 5vw, 23px);
+    letter-spacing: clamp(-2px, -1vw, -3px);
+    text-align: center;
+  }
+}
+body.body__toppage div.about_us div.secondline__box {
   width: 216px;
   margin-top: 42px;
   margin-left: 32px;
 }
-div.about_us div.secondline__box p.secondline__text {
+@media (max-width: 480px) {
+  body.body__toppage div.about_us div.secondline__box {
+    /* スマートフォン画面 */
+    width: clamp(104px, 46vw, 220px);
+    margin: 0 auto;
+  }
+}
+body.body__toppage div.about_us div.secondline__box p.secondline__text {
   background: linear-gradient(transparent 60%, #86eb86 90%);
   font-size: 24px;
   font-weight: 500;
   letter-spacing: -0.1px;
   line-height: 24px;
 }
-div.about_us div.thirdline__box {
+@media (max-width: 480px) {
+  body.body__toppage div.about_us div.secondline__box p.secondline__text {
+    /* スマートフォン画面 */
+    font-size: clamp(11px, 5vw, 23px);
+    margin-top: clamp(14px, 6vw, 30px);
+    letter-spacing: clamp(-2px, -1vw, -3px);
+    text-align: center;
+  }
+}
+body.body__toppage div.about_us div.thirdline__box {
   width: 415px;
   height: 145px;
   margin-top: 38px;
   margin-left: 32px;
 }
-div.about_us div.thirdline__box p.thirdline__text {
+@media (max-width: 480px) {
+  body.body__toppage div.about_us div.thirdline__box {
+    /* スマートフォン画面 */
+    width: clamp(198px, 88vw, 420px);
+    margin: 0 auto;
+  }
+}
+body.body__toppage div.about_us div.thirdline__box p.thirdline__text {
   font-size: 16px;
   line-height: 36px;
   letter-spacing: -0.18px;
   line-height: 38px;
 }
-div.about_us div.about_us__imgbox {
+@media (max-width: 480px) {
+  body.body__toppage div.about_us div.thirdline__box p.thirdline__text {
+    /* スマートフォン画面 */
+    margin-top: clamp(14px, 6vw, 30px);
+    font-size: clamp(7px, 3vw, 15px);
+    text-align: center;
+    line-height: clamp(18px, 8vw, 36px);
+    letter-spacing: clamp(0px, 0vw, -1px);
+    text-align: center;
+    line-height: clamp(16px, 7vw, 35px);
+  }
+}
+body.body__toppage div.about_us div.about_us__imgbox {
   width: 690px;
   height: 420px;
   margin-top: 162px;
+  background: url("../images/belief.jpg");
+  background-size: cover;
 }
-
-div.treatment__content--container {
+@media (max-width: 480px) {
+  body.body__toppage div.about_us div.about_us__imgbox {
+    /* スマートフォン画面 */
+    width: 100%;
+    height: 100%;
+    background: url("../images/belief.jpg") no-repeat;
+    background-size: contain;
+    background-size: clamp(311px, 138vw, 660px);
+    margin-top: 0px;
+  }
+}
+body.body__toppage div.treatment__content--container {
   width: 1920px;
   height: 1520px;
   background-color: #f5fcf8;
 }
-div.treatment__content--container div.treatment__content--box {
+@media (max-width: 480px) {
+  body.body__toppage div.treatment__content--container {
+    /* スマートフォン画面 */
+    width: clamp(225px, 100vw, 480px);
+    height: clamp(1312px, 583vw, 2800px);
+    height: auto;
+    background-color: #f5fcf8;
+  }
+}
+body.body__toppage div.treatment__content--container div.treatment__content--box {
   width: 96px;
   margin: 0 auto;
   padding-top: 82px;
   background: linear-gradient(transparent 90%, #86eb86 90%);
 }
-div.treatment__content--container div.treatment__content--box h2.treatment-content--title {
+@media (max-width: 480px) {
+  body.body__toppage div.treatment__content--container div.treatment__content--box {
+    /* スマートフォン画面 */
+    width: clamp(45px, 20vw, 96px);
+    padding-top: clamp(41px, 18vw, 85px);
+  }
+}
+body.body__toppage div.treatment__content--container div.treatment__content--box h2.treatment-content--title {
   height: 32px;
   font-size: 24px;
   font-weight: 500;
   text-align: center;
 }
-
-div.treatment-content__supplement {
+@media (max-width: 480px) {
+  body.body__toppage div.treatment__content--container div.treatment__content--box h2.treatment-content--title {
+    /* スマートフォン画面 */
+    font-size: clamp(11px, 5vw, 24px);
+  }
+}
+body.body__toppage div.treatment-content__supplement {
   width: 448px;
   margin: 71px auto 0 auto;
 }
-div.treatment-content__supplement p.treatment-content__supplement--text {
+@media (max-width: 480px) {
+  body.body__toppage div.treatment-content__supplement {
+    /* スマートフォン画面 */
+    width: clamp(151px, 67vw, 320px);
+    margin: 0 auto;
+    padding-top: clamp(32px, 14vw, 65px);
+  }
+}
+body.body__toppage div.treatment-content__supplement p.treatment-content__supplement--text {
   font-size: 16px;
   letter-spacing: 0px;
 }
-
-div.medical_subjects__container {
+@media (max-width: 480px) {
+  body.body__toppage div.treatment-content__supplement p.treatment-content__supplement--text {
+    /* スマートフォン画面 */
+    letter-spacing: clamp(2px, 1vw, 2.5px);
+  }
+}
+body.body__toppage div.medical_subjects__container {
   margin-top: 37px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-div.medical_subjects__container article.medical_subjects {
+@media (max-width: 480px) {
+  body.body__toppage div.medical_subjects__container {
+    /* スマートフォン画面 */
+    margin: 0;
+    width: clamp(225px, 100vw, 480px);
+    margin-top: clamp(23px, 10vw, 50px);
+  }
+}
+body.body__toppage div.medical_subjects__container article.medical_subjects {
   width: 380px;
   height: 591px;
   border: 1px solid;
@@ -685,26 +938,63 @@ div.medical_subjects__container article.medical_subjects {
   position: relative;
   background-color: white;
 }
-div.medical_subjects__container article.medical_subjects div.medical_subject__title {
+@media (max-width: 480px) {
+  body.body__toppage div.medical_subjects__container article.medical_subjects {
+    /* スマートフォン画面 */
+    width: clamp(187px, 83vw, 400px);
+    height: clamp(270px, 120vw, 575px);
+    margin-top: clamp(14px, 6vw, 30px);
+  }
+}
+body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_subject__title {
   width: 192px;
   margin: 41px 94px 0 94px;
 }
-div.medical_subjects__container article.medical_subjects div.medical_subject__title h3 {
+@media (max-width: 480px) {
+  body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_subject__title {
+    /* スマートフォン画面 */
+    margin: 0 auto;
+    margin-top: clamp(16px, 7vw, 35px);
+  }
+}
+body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_subject__title h3 {
   font-size: 24px;
   font-weight: 500;
 }
-div.medical_subjects__container article.medical_subjects div.description__box {
+@media (max-width: 480px) {
+  body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_subject__title h3 {
+    /* スマートフォン画面 */
+    font-size: clamp(11px, 5vw, 24px);
+  }
+}
+body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box {
   width: 320px;
   margin: 42px 29px 111px 31px;
 }
-div.medical_subjects__container article.medical_subjects div.description__box p.description__left {
+@media (max-width: 480px) {
+  body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box {
+    /* スマートフォン画面 */
+    width: clamp(164px, 73vw, 350px);
+    margin: 0 auto;
+    margin-top: clamp(16px, 7vw, 35px);
+  }
+}
+body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box p.description__left {
   font-size: 16px;
-  line-height: 33px;
   font-weight: 500;
   letter-spacing: -0.11px;
   line-height: 38px;
 }
-div.medical_subjects__container article.medical_subjects div.description__box p.description__center {
+@media (max-width: 480px) {
+  body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box p.description__left {
+    /* スマートフォン画面 */
+    font-size: clamp(9px, 4vw, 18px);
+    letter-spacing: clamp(-2px, -1vw, -3px);
+    text-align: left;
+    line-height: clamp(18px, 8vw, 38px);
+  }
+}
+body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box p.description__center {
   font-size: 16px;
   line-height: 33px;
   font-weight: 500;
@@ -712,7 +1002,16 @@ div.medical_subjects__container article.medical_subjects div.description__box p.
   line-height: 39px;
   margin-left: 5px;
 }
-div.medical_subjects__container article.medical_subjects div.description__box p.description__right {
+@media (max-width: 480px) {
+  body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box p.description__center {
+    /* スマートフォン画面 */
+    font-size: clamp(9px, 4vw, 18px);
+    letter-spacing: clamp(-2px, -1vw, -3px);
+    text-align: left;
+    line-height: clamp(18px, 8vw, 38px);
+  }
+}
+body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box p.description__right {
   font-size: 16px;
   line-height: 33px;
   font-weight: 500;
@@ -720,27 +1019,99 @@ div.medical_subjects__container article.medical_subjects div.description__box p.
   line-height: 38px;
   margin-left: -3px;
 }
-div.medical_subjects__container article.medical_subjects div.medical_imagebox {
-  position: absolute;
-  bottom: 0;
-  left: 97px;
+@media (max-width: 480px) {
+  body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box p.description__right {
+    /* スマートフォン画面 */
+    font-size: clamp(9px, 4vw, 18px);
+    letter-spacing: clamp(-2px, -1vw, -3px);
+    text-align: left;
+    line-height: clamp(18px, 8vw, 38px);
+  }
 }
-div.medical_subjects__container article.medical_subjects div.medical_imagebox img {
+body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_imagebox__first {
   width: 187px;
   height: 187px;
+  background: url("../images/g0108.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 83%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
-div.notice_box {
+@media (max-width: 480px) {
+  body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_imagebox__first {
+    /* スマートフォン画面 */
+    width: clamp(108px, 48vw, 230px);
+    height: clamp(108px, 48vw, 230px);
+    background: url("../images/g0108.jpg");
+    background-size: cover;
+    top: 77%;
+  }
+}
+body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_imagebox__second {
+  width: 187px;
+  height: 187px;
+  background: url("../images/g0099.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 83%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 480px) {
+  body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_imagebox__second {
+    /* スマートフォン画面 */
+    width: clamp(108px, 48vw, 230px);
+    height: clamp(108px, 48vw, 230px);
+    background: url("../images/g0099.jpg");
+    background-size: cover;
+    top: 77%;
+  }
+}
+body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_imagebox__third {
+  width: 187px;
+  height: 187px;
+  background: url("../images/g0092.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 83%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 480px) {
+  body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_imagebox__third {
+    /* スマートフォン画面 */
+    width: clamp(108px, 48vw, 230px);
+    height: clamp(108px, 48vw, 230px);
+    background: url("../images/g0092.jpg");
+    background-size: cover;
+    top: 77%;
+  }
+}
+body.body__toppage div.notice_title__box {
   width: 100px;
   margin: 84px auto 0px auto;
 }
-div.notice_box h2.notice_title {
+@media (max-width: 480px) {
+  body.body__toppage div.notice_title__box {
+    /* スマートフォン画面 */
+    width: clamp(47px, 21vw, 100px);
+    margin: 0 auto;
+    margin-top: clamp(43px, 19vw, 90px);
+  }
+}
+body.body__toppage div.notice_title__box h2.notice_title {
   font-size: 24px;
   background: linear-gradient(transparent 60%, #86eb86 90%);
   font-weight: 500;
 }
-
-div.notice_container {
+@media (max-width: 480px) {
+  body.body__toppage div.notice_title__box h2.notice_title {
+    /* スマートフォン画面 */
+    font-size: clamp(11px, 5vw, 24px);
+  }
+}
+body.body__toppage div.notice_container {
   width: 1180px;
   height: 390px;
   margin: 74px auto 0 auto;
@@ -755,15 +1126,48 @@ div.notice_container {
   flex-direction: column;
   flex-wrap: wrap;
 }
-div.notice_container div.notice_wrap {
+@media (max-width: 480px) {
+  body.body__toppage div.notice_container {
+    /* スマートフォン画面 */
+    width: clamp(187px, 83vw, 400px);
+    height: auto;
+    margin: 0 auto;
+    margin-top: clamp(23px, 10vw, 50px);
+  }
+}
+body.body__toppage div.notice_container div.notice_container__margin_upper {
   height: 25px;
 }
-div.notice_container article.notice_contents {
+body.body__toppage div.notice_container article.notice_contents {
   border-bottom: 1px solid #e7e7e7;
   margin: 0px 66px 0px 66px;
   font-size: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
 }
-div.notice_container article.notice_contents p.notice_contents__date {
+@media (max-width: 480px) {
+  body.body__toppage div.notice_container article.notice_contents {
+    /* スマートフォン画面 */
+    width: clamp(164px, 73vw, 350px);
+    margin-left: clamp(9px, 4vw, 20px);
+    margin-right: clamp(9px, 4vw, 20px);
+    align-items: flex-start;
+  }
+}
+body.body__toppage div.notice_container article.notice_contents div.notice_left__box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  body.body__toppage div.notice_container article.notice_contents div.notice_left__box {
+    /* スマートフォン画面 */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+body.body__toppage div.notice_container article.notice_contents div.notice_left__box p.notice_contents__date {
   color: green;
   font-size: 16px;
   font-weight: 500;
@@ -773,7 +1177,15 @@ div.notice_container article.notice_contents p.notice_contents__date {
   margin: 25.4px 36px 20.5px -2px;
   letter-spacing: 0px;
 }
-div.notice_container article.notice_contents p.notice_contents__info {
+@media (max-width: 480px) {
+  body.body__toppage div.notice_container article.notice_contents div.notice_left__box p.notice_contents__date {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 16px);
+    margin: 0;
+    margin-top: clamp(5px, 2vw, 10px);
+  }
+}
+body.body__toppage div.notice_container article.notice_contents div.notice_left__box p.notice_contents__info {
   font-size: 12px;
   font-weight: 500;
   color: white;
@@ -785,25 +1197,65 @@ div.notice_container article.notice_contents p.notice_contents__info {
   line-height: 25px;
   margin-right: 30px;
 }
-div.notice_container article.notice_contents p.notice_contents__infocontent {
+@media (max-width: 480px) {
+  body.body__toppage div.notice_container article.notice_contents div.notice_left__box p.notice_contents__info {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 12px);
+    margin: 0;
+    margin-top: clamp(5px, 2vw, 10px);
+    margin-bottom: clamp(5px, 2vw, 10px);
+  }
+}
+@media (max-width: 480px) {
+  body.body__toppage div.notice_container article.notice_contents div.notice_right__box {
+    /* スマートフォン画面 */
+    width: clamp(126px, 56vw, 270px);
+  }
+}
+body.body__toppage div.notice_container article.notice_contents div.notice_right__box p.notice_contents__infocontent {
   font-size: 16px;
   font-weight: 500;
-  display: inline-block;
   margin-left: 6px;
   letter-spacing: -0.1px;
 }
-
-div.seeall_wrap {
+@media (max-width: 480px) {
+  body.body__toppage div.notice_container article.notice_contents div.notice_right__box p.notice_contents__infocontent {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 16px);
+    margin: 0;
+    margin-top: clamp(5px, 2vw, 10px);
+    margin-bottom: clamp(5px, 2vw, 10px);
+    margin-left: clamp(14px, 6vw, 30px);
+  }
+}
+body.body__toppage div.notice_container div.seeall_wrap {
   margin: 0px 54px 0px 60px;
   text-align: right;
 }
-div.seeall_wrap div.seeall_box {
+@media (max-width: 480px) {
+  body.body__toppage div.notice_container div.seeall_wrap {
+    /* スマートフォン画面 */
+    width: clamp(187px, 83vw, 400px);
+    height: clamp(47px, 21vw, 100px);
+    margin: 0;
+  }
+}
+body.body__toppage div.notice_container div.seeall_wrap div.seeall_box {
   width: 1005px;
   margin: 0px 0px 0px 66px;
   text-align: right;
   font-size: 0;
 }
-div.seeall_wrap div.seeall_box p.seeall_text {
+@media (max-width: 480px) {
+  body.body__toppage div.notice_container div.seeall_wrap div.seeall_box {
+    /* スマートフォン画面 */
+    width: clamp(187px, 83vw, 400px);
+    height: clamp(47px, 21vw, 100px);
+    margin: 0;
+    margin-top: clamp(18px, 8vw, 40px);
+  }
+}
+body.body__toppage div.notice_container div.seeall_wrap div.seeall_box p.seeall_text {
   font-size: 16px;
   width: 198px;
   height: 16px;
@@ -812,115 +1264,292 @@ div.seeall_wrap div.seeall_box p.seeall_text {
   letter-spacing: 1.2px;
   margin-right: 2px;
 }
-div.seeall_wrap div.seeall_box p.seeall_icon {
+@media (max-width: 480px) {
+  body.body__toppage div.notice_container div.seeall_wrap div.seeall_box p.seeall_text {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 16px);
+    margin: 0;
+    margin-right: clamp(2px, 1vw, 7px);
+  }
+}
+body.body__toppage div.notice_container div.seeall_wrap div.seeall_box p.seeall_icon {
   font-size: 14px;
   width: 12px;
   height: 14px;
   display: inline-block;
   margin-top: 35px;
 }
-
-div.about_access__wrap {
+@media (max-width: 480px) {
+  body.body__toppage div.notice_container div.seeall_wrap div.seeall_box p.seeall_icon {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 14px);
+    margin: 0;
+    margin-right: clamp(23px, 10vw, 50px);
+  }
+}
+body.body__toppage div.about_access__wrap {
   width: 1190px;
   height: 799px;
   margin: 0px auto 0 auto;
-  background-color: white;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
 }
-div.about_access__wrap div.map_box {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap {
+    /* スマートフォン画面 */
+    width: clamp(225px, 100vw, 480px);
+    height: auto;
+    flex-direction: column-reverse;
+    padding: 0;
+    margin: 0;
+  }
+}
+body.body__toppage div.about_access__wrap div.copyright_reserved__box--sp {
+  visibility: hidden;
+}
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap div.copyright_reserved__box--sp {
+    /* スマートフォン画面 */
+    visibility: visible;
+    width: clamp(187px, 83vw, 400px);
+    margin: 0 auto;
+    margin-top: clamp(14px, 6vw, 30px);
+    text-align: center;
+  }
+}
+body.body__toppage div.about_access__wrap div.copyright_reserved__box--sp small.copyright_reserved__text--sp {
+  visibility: hidden;
+}
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap div.copyright_reserved__box--sp small.copyright_reserved__text--sp {
+    /* スマートフォン画面 */
+    visibility: visible;
+    font-size: clamp(5px, 2vw, 8px);
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container {
+  margin: 0px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+body.body__toppage div.about_access__wrap .about_access__container div.map_box {
   width: 608px;
   height: 440px;
-  padding-top: 195px;
-  margin-right: 39px;
+  margin-top: 200px;
   padding-left: 4px;
+  background: url("../images/map.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
 }
-div.about_access__wrap div.about_container {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.map_box {
+    /* スマートフォン画面 */
+    width: clamp(198px, 88vw, 420px);
+    height: clamp(146px, 65vw, 310px);
+    background: url("../images/map.jpg") no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    margin-top: clamp(14px, 6vw, 30px);
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap {
   width: 538px;
   height: 625px;
-  margin-top: 197px;
+  margin-top: 200px;
+  margin-left: 33px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
 }
-div.about_access__wrap div.about_container div.company_name__box {
-  width: 263px;
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap {
+    /* スマートフォン画面 */
+    width: clamp(198px, 88vw, 420px);
+    height: auto;
+    margin: 0 auto;
+    margin-top: clamp(56px, 25vw, 120px);
+    flex-wrap: nowrap;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box {
+  width: 275x;
   height: 73px;
   display: flex;
   flex-wrap: wrap;
 }
-div.about_access__wrap div.about_container div.company_name__box div.company_logo__box {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box {
+    /* スマートフォン画面 */
+    width: 100%;
+    margin-left: 0px;
+    margin: 0 auto;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.company_logo__box {
   width: 73px;
   height: 73px;
+  background: url("../images/病院の地図マーク.jpg");
+  background-size: cover;
 }
-div.about_access__wrap div.about_container div.company_name__box div.tagline_box {
-  width: 190px;
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.company_logo__box {
+    /* スマートフォン画面 */
+    width: clamp(34px, 15vw, 73px);
+    height: clamp(34px, 15vw, 73px);
+    margin-left: clamp(34px, 15vw, 73px);
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.tagline_box {
+  width: 200x;
   height: 73px;
 }
-div.about_access__wrap div.about_container div.company_name__box div.tagline_box p.tagline_box--upperline {
-  font-size: 30px;
-  line-height: 22.5px;
-  padding-left: 9.5px;
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.tagline_box {
+    /* スマートフォン画面 */
+    width: clamp(95px, 42vw, 200px);
+    height: clamp(34px, 15vw, 73px);
+    margin-left: clamp(7px, 3vw, 15px);
+  }
 }
-div.about_access__wrap div.about_container div.company_name__box div.tagline_box p.tagline_box--lowerline {
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.tagline_box p.tagline_box--upperline {
   font-size: 30px;
-  line-height: 57px;
-  padding-left: 24px;
+  line-height: 26px;
+  padding-left: 11px;
 }
-div.about_access__wrap div.about_container div.adress_box {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.tagline_box p.tagline_box--upperline {
+    /* スマートフォン画面 */
+    font-size: clamp(14px, 6vw, 30px);
+    line-height: clamp(14px, 6vw, 30px);
+    padding-left: clamp(5px, 2vw, 11px);
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.tagline_box p.tagline_box--lowerline {
+  font-size: 30px;
+  line-height: 55px;
+  padding-left: 26px;
+}
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.tagline_box p.tagline_box--lowerline {
+    /* スマートフォン画面 */
+    font-size: clamp(14px, 6vw, 30px);
+    line-height: clamp(14px, 6vw, 30px);
+    padding-left: clamp(11px, 5vw, 26px);
+    margin-top: clamp(7px, 3vw, 16px);
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.adress_box {
   margin-top: 28px;
   display: flex;
   flex-wrap: wrap;
   background-color: white;
 }
-div.about_access__wrap div.about_container div.adress_box p.adress_number {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.adress_box {
+    /* スマートフォン画面 */
+    width: 100%;
+    margin: 0 auto;
+    margin-top: clamp(14px, 6vw, 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.adress_box p.adress_number {
   font-size: 16px;
   margin-right: 16px;
   letter-spacing: 0.1px;
 }
-div.about_access__wrap div.about_container div.adress_box p.adress_text {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.adress_box p.adress_number {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 16px);
+    display: inline-block;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.adress_box p.adress_text {
   font-size: 16px;
   letter-spacing: 0px;
 }
-div.about_access__wrap div.about_container div.tel_box {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.adress_box p.adress_text {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 16px);
+    display: inline-block;
+    margin-top: clamp(5px, 2vw, 10px);
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.tel_box {
   height: 32px;
   width: 220px;
   position: relative;
-  margin-top: 29px;
+  margin-top: 30px;
   font-size: 0;
 }
-div.about_access__wrap div.about_container div.tel_box p.tel_number::before {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.tel_box {
+    /* スマートフォン画面 */
+    width: 80%;
+    margin: 0 auto;
+    margin-top: clamp(11px, 5vw, 25px);
+    display: flex;
+    justify-content: center;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.tel_box p.tel_number::before {
   content: "";
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 22px;
   background: url("../images/受話器の線画アイコン.jpg") no-repeat;
   background-size: contain;
   margin-right: 15px;
-  margin-top: 2px;
+  margin-top: 4px;
 }
-div.about_access__wrap div.about_container div.tel_box p.tel_number {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.tel_box p.tel_number::before {
+    /* スマートフォン画面 */
+    margin: 0;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.tel_box p.tel_number {
   color: #21a937;
   font-size: 24px;
   text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0, -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px, 0px -0.4px 0px;
   text-align: right;
-  padding-left: 6px;
+  padding-left: 4px;
+  margin-top: 1px;
   position: absolute;
 }
-div.about_access__wrap div.about_container div.empty_border {
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.empty_border {
   height: 29.5px;
   width: 533px;
   border-bottom: 1px solid;
   border-color: #e7e7e7;
   background-color: white;
 }
-div.about_access__wrap div.about_container div.empty_margin {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.empty_border {
+    /* スマートフォン画面 */
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.empty_margin {
   height: 15px;
   width: 533px;
 }
-div.about_access__wrap div.about_container div.businesshour_box {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.empty_margin {
+    /* スマートフォン画面 */
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box {
   height: 95px;
   width: 533px;
   background-color: white;
@@ -928,131 +1557,335 @@ div.about_access__wrap div.about_container div.businesshour_box {
   flex-direction: column;
   flex-wrap: wrap;
 }
-div.about_access__wrap div.about_container div.businesshour_box div.consultation_time__box {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box {
+    /* スマートフォン画面 */
+    width: clamp(198px, 88vw, 420px);
+    height: clamp(79px, 35vw, 170px);
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_time__box {
   width: 85px;
   height: 114px;
   border-right: 1px solid;
   border-color: #e7e7e7;
 }
-div.about_access__wrap div.about_container div.businesshour_box div.consultation_time__box p.consultation_time {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_time__box {
+    /* スマートフォン画面 */
+    width: clamp(56px, 25vw, 120px);
+    height: auto;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_time__box p.consultation_time {
   font-size: 14px;
   margin-top: 8px;
   margin-left: 4.5px;
 }
-div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_time__box p.consultation_time {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 14px);
+    margin-top: clamp(18px, 8vw, 38px);
+    text-align: center;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box {
   width: 449px;
   height: 114px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box {
+    /* スマートフォン画面 */
+    width: clamp(95px, 42vw, 200px);
+    height: auto;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   font-size: 0;
 }
-div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_upper {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content {
+    /* スマートフォン画面 */
+    width: clamp(142px, 63vw, 300px);
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin: 0;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_upper {
   font-size: 14px;
   display: inline-block;
   width: 42px;
-  margin: 9px 23px 0 32px;
+  margin: 9px 23px 0 35px;
 }
-div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_middle {
-  font-size: 14px;
-  display: inline-block;
-  width: 42px;
-  margin: 14px 23px 0 36px;
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_upper {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 14px);
+    margin: 0;
+    margin-top: clamp(14px, 6vw, 30px);
+    margin-right: clamp(9px, 4vw, 20px);
+    margin-left: clamp(9px, 4vw, 20px);
+  }
 }
-div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_lower {
-  font-size: 14px;
-  display: inline-block;
-  width: 42px;
-  margin: 16px 23px 0 32px;
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--upper {
+    /* スマートフォン画面 */
+    margin-top: clamp(11px, 5vw, 23px);
+  }
 }
-div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.morning_upper {
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--upper p.morning_upper {
   font-size: 14px;
   display: inline-block;
   width: 105px;
   margin: 8px 16px 0 0;
   letter-spacing: 0px;
 }
-div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.morning_middle {
-  font-size: 14px;
-  display: inline-block;
-  width: 105px;
-  margin: 16px 16px 0 0;
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--upper p.morning_upper {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 14px);
+    display: block;
+    margin: 0;
+    margin-right: clamp(9px, 4vw, 20px);
+    margin-left: clamp(9px, 4vw, 20px);
+  }
 }
-div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.morning_lower {
-  font-size: 14px;
-  display: inline-block;
-  width: 105px;
-  margin: 16px 16px 0 0;
-}
-div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.afternoon_upper {
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--upper p.afternoon_upper {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 9px 16px 0 0;
 }
-div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.afternoon_middle {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--upper p.afternoon_upper {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 14px);
+    display: block;
+    margin: 0;
+    margin-right: clamp(9px, 4vw, 20px);
+    margin-left: clamp(9px, 4vw, 20px);
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_middle {
+  font-size: 14px;
+  display: inline-block;
+  width: 42px;
+  margin: 16px 23px 0 33px;
+}
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_middle {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 14px);
+    margin: 0;
+    margin-top: clamp(14px, 6vw, 30px);
+    margin-right: clamp(9px, 4vw, 20px);
+    margin-left: clamp(9px, 4vw, 20px);
+  }
+}
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--middle {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 14px);
+    margin-top: clamp(9px, 4vw, 20px);
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--middle p.morning_middle {
+  font-size: 14px;
+  display: inline-block;
+  width: 105px;
+  margin: 16px 16px 0 0;
+}
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--middle p.morning_middle {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 14px);
+    display: block;
+    margin: 0;
+    margin-right: clamp(9px, 4vw, 20px);
+    margin-left: clamp(9px, 4vw, 20px);
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--middle p.afternoon_middle {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 16px 16px 0 0;
 }
-div.about_access__wrap div.about_container div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.afternoon_lower {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--middle p.afternoon_middle {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 14px);
+    display: block;
+    margin: 0;
+    margin-right: clamp(9px, 4vw, 20px);
+    margin-left: clamp(9px, 4vw, 20px);
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_lower {
+  font-size: 14px;
+  display: inline-block;
+  width: 42px;
+  margin: 17px 23px 0 33px;
+}
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_lower {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 14px);
+    margin: 0;
+    margin-top: clamp(14px, 6vw, 30px);
+    margin-right: clamp(9px, 4vw, 20px);
+    margin-left: clamp(9px, 4vw, 20px);
+  }
+}
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--lower {
+    /* スマートフォン画面 */
+    margin-top: clamp(9px, 4vw, 20px);
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--lower p.morning_lower {
+  font-size: 14px;
+  display: inline-block;
+  width: 105px;
+  margin: 16px 16px 0 0;
+}
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--lower p.morning_lower {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 14px);
+    display: block;
+    margin: 0;
+    margin-right: clamp(9px, 4vw, 20px);
+    margin-left: clamp(9px, 4vw, 20px);
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--lower p.afternoon_lower {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 16px 16px 0 0;
 }
-div.about_access__wrap div.about_container div.closed_days__line {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--lower p.afternoon_lower {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 14px);
+    display: block;
+    margin: 0;
+    margin-right: clamp(9px, 4vw, 20px);
+    margin-left: clamp(9px, 4vw, 20px);
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_days__line {
   width: 533px;
   height: 35px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-div.about_access__wrap div.about_container div.closed_days__line div.closed_day__box {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_days__line {
+    /* スマートフォン画面 */
+    width: clamp(198px, 88vw, 420px);
+    margin-top: clamp(5px, 2vw, 10px);
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_days__line div.closed_day__box {
   width: 85px;
   font-size: 14px;
   border-right: 1px solid;
   border-color: #e7e7e7;
 }
-div.about_access__wrap div.about_container div.closed_days__line div.closed_day__box p.closed_day {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_days__line div.closed_day__box {
+    /* スマートフォン画面 */
+    width: clamp(56px, 25vw, 120px);
+    font-size: clamp(7px, 3vw, 14px);
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_days__line div.closed_day__box p.closed_day {
   margin-top: 14px;
   margin-left: 4.5px;
 }
-div.about_access__wrap div.about_container div.closed_dayofweek__wrap {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_days__line div.closed_day__box p.closed_day {
+    /* スマートフォン画面 */
+    margin: 0;
+    text-align: center;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_dayofweek__wrap {
   width: 449px;
   height: 114px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
-div.about_access__wrap div.about_container div.closed_dayofweek__wrap div.closed__dayofweek {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_dayofweek__wrap {
+    /* スマートフォン画面 */
+    width: clamp(117px, 52vw, 250px);
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_dayofweek__wrap div.closed__dayofweek {
   font-size: 14px;
   width: 70px;
-  margin-top: 14px;
-  margin-left: 32px;
+  margin-top: 15px;
+  margin-left: 34px;
 }
-div.about_access__wrap div.about_container div.empty_border__lower {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_dayofweek__wrap div.closed__dayofweek {
+    /* スマートフォン画面 */
+    font-size: clamp(7px, 3vw, 14px);
+    margin: 0 auto;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.empty_border__lower {
   height: 19px;
   width: 533px;
   border-bottom: 1px solid;
   border-color: #e7e7e7;
 }
-div.about_access__wrap div.about_container div.copyright_reserved__box {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.empty_border__lower {
+    /* スマートフォン画面 */
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.copyright_reserved__box--pc {
   width: 554px;
   margin-top: 24.5px;
   text-align: right;
   font-size: 0;
 }
-div.about_access__wrap div.about_container div.copyright_reserved__box small.copyright_reserved__text {
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.copyright_reserved__box--pc {
+    /* スマートフォン画面 */
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.copyright_reserved__box--pc small.copyright_reserved__text {
   font-size: 11px;
   letter-spacing: 0.15px;
   padding-right: 15px;
   display: inline-block;
+}
+@media (max-width: 480px) {
+  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.copyright_reserved__box--pc small.copyright_reserved__text {
+    /* スマートフォン画面 */
+    font-size: clamp(5px, 2vw, 11px);
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

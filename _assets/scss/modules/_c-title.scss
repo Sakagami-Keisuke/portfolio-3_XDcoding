@@ -1,20 +1,59 @@
 // スタイルについて具体的な記述をする
 // -------------------------------------
-$pc: 1279px; // PC
-$tb: 768px; //タブレット
+$pcl: 1600px; // PCワイド tab横
+$pc: 1280px; // PC
+$tab: 768px; //タブレット
 $sp: 480px; // スマホ
 
-@mixin pc {
+@mixin pc-large($pcl) {
+  @media (-width: ($pcl)) {
+    @content;
+  }
+}
+
+@mixin pc($pc) {
   @media (max-width: ($pc)) {
     @content;
   }
 }
 
-@mixin sp {
+@mixin tab($tab) {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin sp($sp) {
   @media (max-width: ($sp)) {
     @content;
   }
 }
+
+//スマホ可変関数
+@function clamp_vw_sp($num) {
+  $minWidth: 225;
+  $maxWidth: 480;
+  $val_max: $num * 1px;
+  $val_vw: round($num/$maxWidth * 100);
+  $val_min: round($minWidth * ($val_vw/100)) * 1px;
+  @return clamp(#{$val_min}, #{$val_vw * 1vw}, #{$val_max});
+}
+
+// ひながたひながたひながたひながたひながたひながたひながた
+@include sp(480px) {
+  /* スマートフォン画面 */
+  // width: clamp_vw_sp(100);
+  // height: clamp_vw_sp(100);
+  // font-size: clamp_vw_sp(10);
+  // letter-spacing: clamp_vw_sp(10);
+  // line-height: clamp_vw_sp(10);
+  // background: url("../images/g0092.jpg");
+  // background-size: cover;
+  // margin-top: clamp_vw_sp(50);
+  // padding-top: clamp_vw_sp(50);
+}
+
+// ひながたひながたひながたひながたひながたひながたひながた
 // -------------------------------------
 
 *,
@@ -36,11 +75,6 @@ html {
   overflow-x: hidden;
 }
 
-.body__toppage--wrap {
-  width: 1920px; /*全体の幅を指定する*/
-  margin: 0 auto; /*マージンの指定をする、ブラウザ対策*/
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -50,720 +84,1492 @@ ul {
   list-style: none;
 }
 
-// header
-div.header {
-  width: 1920px;
-  height: 130px;
+// -------------------------------------
 
-  // レスポンシブ
-  @include sp {
-    width: 100vw;
+body.body__toppage {
+  width: 100vw;
+
+  /*全体の幅を指定する*/
+  @include sp(480px) {
+    width: clamp_vw_sp(480);
+    padding: 0;
+    max-width: 0;
   }
 
-  div.header__container {
-    width: 1180px;
-    height: 130px;
+  div.body__toppage--wrap {
+    width: 1920px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
 
-    // レスポンシブ
-    @include sp {
-      width: 100%;
-      display: block;
+    @include sp(480px) {
+      /* スマートフォン画面 */
+      width: clamp_vw_sp(480);
+      height: auto;
     }
 
-    div.header__top--left {
-      width: 263px;
-      height: 73px;
-      margin-left: 20px;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-items: center;
+    div.header {
+      width: 1920px;
+      height: 130px;
 
-      // レスポンシブ
-      @include sp {
-        width: 200px;
-        height: 55px;
+      @include sp(480px) {
+        /* スマートフォン画面 */
+        width: auto;
+        max-width: 100%;
+        height: clamp_vw_sp(160);
+      }
+
+      div.header__container {
+        // background-color: rgb(103, 231, 220);
+        width: 1180px;
+        height: 130px;
         margin: 0 auto;
-        margin-top: 22px;
-      }
-    }
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
 
-    div.header__logo {
-      width: 73px;
-      height: 73px;
-
-      // レスポンシブ
-      @include sp {
-        width: 100px;
-        height: 55px;
-
-        img {
-          width: 53px;
-          height: 53px;
-          margin-left: 15.5px;
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          width: auto;
+          max-width: 100%;
+          height: auto;
+          display: block;
         }
-      }
-    }
 
-    div.header__tagline {
-      width: 190px;
-      height: 73px;
+        div.header__top--left {
+          width: 263px;
+          height: 73px;
+          margin-left: 20px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
 
-      p.header__tagline--upper {
-        padding-left: 8px;
-        font-size: 30px;
-        text-align: center;
-        line-height: 28px;
-
-        // レスポンシブ
-        @include sp {
-          font-size: 20px;
-          padding-left: 5px;
-          line-height: 40px;
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            width: auto;
+            max-width: 65%;
+            height: clamp_vw_sp(73);
+            margin: 0 auto;
+            padding-top: 20px;
+          }
         }
-      }
-      p.header__tagline--lower {
-        padding-left: 12px;
-        font-size: 30px;
-        text-align: center;
-        line-height: 48px;
 
-        // レスポンシブ
-        @include sp {
-          font-size: 20px;
-          padding-left: 5px;
-          line-height: 15px;
-        }
-      }
-    }
+        div.header__logo {
+          width: 73px;
+          height: 73px;
 
-    div.header__top--right {
-      width: 300px;
-      height: 73px;
-      margin-right: 20px;
-      font-size: 0;// display: inline-block;ズレ対策
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            background-color: rgb(217, 224, 243);
+            width: auto;
+            max-width: 100%;
+            height: clamp_vw_sp(73);
 
-      // レスポンシブ
-      @include sp {
-        width: 300px;
-        margin: 0 auto;
-        background-color: red;
-      }
-      p.reception {
-        font-size: 14px;
-        letter-spacing: 0.2px;
-        text-align: right;
-        margin-top: 5px;
-      }
-
-      .tel::before {
-        content: "";
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-        background: url("../images/受話器の線画アイコン.jpg") no-repeat;
-        background-size: contain;
-        margin-top: 1.5px;
-        margin-right: 17px;
-
-        // レスポンシブ
-        @include sp {
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
         }
       }
 
-      p.tel {
-        color: #21a937;
-        font-size: 22px;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-        margin-top: 13px;
-        text-align: right;
-        // レスポンシブ
-        @include sp {
-          // text-align: center;
-          // margin-top: 0;
-          // background-color: rgb(157, 255, 0);
-        }
-      }
-    }
-  }
-}
-
-//body section
-div.firstview__box {
-  width: 1920px;
-  height: 947px;
-  position: relative;
-}
-
-p.message-left {
-  writing-mode: vertical-rl;
-  font-size: 28px;
-  font-weight: 500;
-  letter-spacing: 5.5px;
-  padding-top: 25px;
-  line-height: 102px;
-  width: 102px;
-  height: 565px;
-  background-color: white;
-  position: absolute;
-  top: 133px;
-  left: 210px;
-
-  span.color {
-    color: green;
-    letter-spacing: 5.5px;
-    margin-top: -8px;
-    margin-bottom: -8px;
-  }
-}
-
-p.message-right {
-  writing-mode: vertical-rl;
-  font-size: 28px;
-  font-weight: 500;
-  letter-spacing: 6px;
-  padding-top: 25px;
-  line-height: 102px;
-  width: 102px;
-  height: 565px;
-  background-color: white;
-  position: absolute;
-  top: 133px;
-  left: 393px;
-}
-
-div.about_us {
-  width: 1180px;
-  height: 664px;
-  margin: 0 auto;
-  display: flex;
-
-  div.about_us__content {
-    width: 490px;
-    height: 664px;
-
-    div.firstline__box {
-      width: 275px;
-      margin-left: 32px;
-
-      p.firstline__text {
-        font-size: 24px;
-        font-weight: 500;
-        background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
-        margin-top: 200px;
-        line-height: 22px;
-      }
-    }
-  }
-
-  div.secondline__box {
-    width: 216px;
-    margin-top: 42px;
-    margin-left: 32px;
-
-    & p.secondline__text {
-      background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
-      font-size: 24px;
-      font-weight: 500;
-      letter-spacing: -0.1px;
-      line-height: 24px;
-    }
-  }
-
-
-  div.thirdline__box {
-    width: 415px;
-    height: 145px;
-    margin-top: 38px;
-    margin-left: 32px;
-
-    p.thirdline__text {
-      font-size: 16px;
-      line-height: 36px;
-      letter-spacing: -0.18px;
-      line-height: 38px;
-    }
-  }
-
-  div.about_us__imgbox {
-    width: 690px;
-    height: 420px;
-    margin-top: 162px;
-  }
-}
-
-// second section------------------------
-
-div.treatment__content--container {
-  width: 1920px;
-  height: 1520px;
-  background-color: #f5fcf8;
-
-  div.treatment__content--box {
-    width: 96px;
-    margin: 0 auto;
-    padding-top: 82px;
-    background: linear-gradient(transparent 90%, rgb(134, 235, 134) 90%);
-
-    h2.treatment-content--title {
-      height: 32px;
-      font-size: 24px;
-      font-weight: 500;
-      text-align: center;
-    }
-  }
-}
-
-div.treatment-content__supplement {
-  width: 448px;
-  margin: 71px auto 0 auto;
-
-  p.treatment-content__supplement--text {
-    font-size: 16px;
-    letter-spacing: 0px;
-  }
-}
-
-div.medical_subjects__container {
-  margin-top: 37px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-
-  article.medical_subjects {
-    width: 380px;
-    height: 591px;
-    border: 1px solid;
-    border-radius: 10px;
-    margin: 0 10px 0 10px;
-    position: relative;
-    background-color: white;
-
-    div.medical_subject__title {
-      width: 192px;
-      margin: 41px 94px 0 94px;
-
-      h3 {
-        font-size: 24px;
-        font-weight: 500;
-      }
-    }
-
-    div.description__box {
-      width: 320px;
-      margin: 42px 29px 111px 31px;
-
-      p.description__left {
-        font-size: 16px;
-        line-height: 33px;
-        font-weight: 500;
-        letter-spacing: -0.11px;
-        line-height: 38px;
-      }
-      p.description__center {
-        font-size: 16px;
-        line-height: 33px;
-        font-weight: 500;
-        letter-spacing: 0.05px;
-        line-height: 39px;
-        margin-left: 5px;
-      }
-      p.description__right {
-        font-size: 16px;
-        line-height: 33px;
-        font-weight: 500;
-        letter-spacing: 0px;
-        line-height: 38px;
-        margin-left: -3px;
-      }
-    }
-
-    div.medical_imagebox {
-      position: absolute;
-      bottom: 0;
-      left: 97px;
-
-      img {
-        width: 187px;
-        height: 187px;
-      }
-    }
-  }
-}
-
-div.notice_box {
-  width: 100px;
-  margin: 84px auto 0px auto;
-
-  h2.notice_title {
-    font-size: 24px;
-    background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
-    font-weight: 500;
-  }
-}
-
-div.notice_container {
-  width: 1180px;
-  height: 390px;
-  margin: 74px auto 0 auto;
-  border: 0px solid;
-  border-radius: 20px;
-  border: 1px solid rgb(238, 238, 238);
-  box-shadow: rgba(238, 238, 238, 0.509804) 9px 9px 10px -4px;
-  -webkit-box-shadow: rgba(238, 238, 238, 0.509804) 9px 9px 10px -4px;
-  -moz-box-shadow: rgba(238, 238, 238, 0.509804) 9px 9px 10px -4px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-
-  div.notice_wrap {
-    height: 25px;
-  }
-
-  article.notice_contents {
-    border-bottom: 1px solid #e7e7e7;
-    margin: 0px 66px 0px 66px;
-    font-size: 0;// display: inline-block;ズレ対策
-
-    p.notice_contents__date {
-      color: green;
-      font-size: 16px;
-      font-weight: 500;
-      display: inline-block;
-      width: 80px;
-      height: 16px;
-      margin: 25.4px 36px 20.5px -2px;
-      letter-spacing: 0px;
-    }
-
-    p.notice_contents__info {
-      font-size: 12px;
-      font-weight: 500;
-      color: white;
-      display: inline-block;
-      background-color: #444444;
-      width: 80px;
-      height: 25px;
-      text-align: center;
-      line-height: 25px;
-      margin-right: 30px;
-    }
-
-    p.notice_contents__infocontent {
-      font-size: 16px;
-      font-weight: 500;
-      display: inline-block;
-      margin-left: 6px;
-      letter-spacing: -0.1px;
-    }
-  }
-}
-
-div.seeall_wrap {
-  margin: 0px 54px 0px 60px;
-  text-align: right;
-
-  div.seeall_box {
-    width: 1005px;
-    margin: 0px 0px 0px 66px;
-    text-align: right;      font-size: 0;// display: inline-block;ズレ対策
-
-    p.seeall_text {
-      font-size: 16px;
-      width: 198px;
-      height: 16px;
-      margin-top: 44px;
-      display: inline-block;
-      letter-spacing: 1.2px;
-      margin-right: 2px;
-    }
-
-    p.seeall_icon {
-      font-size: 14px;
-      width: 12px;
-      height: 14px;
-      display: inline-block;
-      margin-top: 35px;
-    }
-  }
-}
-
-div.about_access__wrap {
-  width: 1190px;
-  height: 799px;
-  margin: 0px auto 0 auto;
-  background-color: white;
-
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-
-  div.map_box {
-    width: 608px;
-    height: 440px;
-    padding-top: 195px;
-    margin-right: 39px;
-    padding-left: 4px;
-  }
-
-  div.about_container {
-    width: 538px;
-    height: 625px;
-    margin-top: 197px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: flex-start;
-
-    div.company_name__box {
-      width: 263px;
-      height: 73px;
-      display: flex;
-      flex-wrap: wrap;
-
-      div.company_logo__box {
-        width: 73px;
-        height: 73px;
-      }
-
-      div.tagline_box {
+      div.header__tagline {
         width: 190px;
         height: 73px;
 
-        p.tagline_box--upperline {
-          font-size: 30px;
-          line-height: 22.5px;
-          padding-left: 9.5px;
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          height: clamp(34px, 15.208vw, 73px);
         }
 
-        p.tagline_box--lowerline {
+        p.header__tagline--upper {
+          padding-left: 8px;
           font-size: 30px;
-          line-height: 57px;
-          padding-left: 24px;
+          text-align: center;
+          line-height: 28px;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            width: auto;
+            max-width: 100%;
+            font-size: clamp_vw_sp(30);
+          }
+        }
+
+        p.header__tagline--lower {
+          padding-left: 12px;
+          font-size: 30px;
+          text-align: center;
+          line-height: 48px;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            width: auto;
+            max-width: 100%;
+            font-size: clamp_vw_sp(30);
+            line-height: clamp_vw_sp(48);
+          }
         }
       }
-    }
 
-    div.adress_box {
-      margin-top: 28px;
-      display: flex;
-      flex-wrap: wrap;
-      background-color: white;
+      div.header__top--right {
+        width: 300px;
+        height: 73px;
+        margin-right: 20px;
+        font-size: 0; // display: inline-block;ズレ対策
 
-      p.adress_number {
-        font-size: 16px;
-        margin-right: 16px;
-        letter-spacing: 0.1px;
-      }
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          width: auto;
+          max-width: 85%;
+          height: clamp(33px, 14.583vw, 73px);
+          /* 最小値33(vw225),70÷480×100vw,最大値70(vw480) */
+          margin: 0 auto;
+          margin-top: 24px;
+        }
 
-      p.adress_text {
-        font-size: 16px;
-        letter-spacing: 0px;
-      }
-    }
-
-    div.tel_box {
-      height: 32px;
-      width: 220px;
-      position: relative;
-      margin-top: 29px;
-      font-size: 0;// display: inline-block;ズレ対策
-
-      p.tel_number::before {
-        content: "";
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        background: url("../images/受話器の線画アイコン.jpg") no-repeat;
-        background-size: contain;
-        margin-right: 15px;
-        margin-top: 2px;
-      }
-
-      p.tel_number {
-        color: #21a937;
-        font-size: 24px;
-        text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0,
-          -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px,
-          0px -0.4px 0px;
-        text-align: right;
-        padding-left: 6px;
-        position: absolute;
-      }
-    }
-
-    div.empty_border {
-      height: 29.5px;
-      width: 533px;
-      border-bottom: 1px solid;
-      border-color: #e7e7e7;
-      background-color: rgb(255, 255, 255);
-    }
-
-    div.empty_margin {
-      height: 15px;
-      width: 533px;
-    }
-
-    div.businesshour_box {
-      height: 95px;
-      width: 533px;
-      background-color: white;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-
-      div.consultation_time__box {
-        width: 85px;
-        height: 114px;
-        border-right: 1px solid;
-        border-color: #e7e7e7;
-
-        p.consultation_time {
+        p.reception {
           font-size: 14px;
-          margin-top: 8px;
-          margin-left: 4.5px;
-          // background-color: rgb(233, 217, 217);
+          letter-spacing: 0.2px;
+          text-align: right;
+          margin-top: 5px;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            width: auto;
+            max-width: 100%;
+            text-align: center;
+            font-size: clamp_vw_sp(18);
+          }
+        }
+
+        .tel::before {
+          content: "";
+          display: inline-block;
+          width: 25px;
+          height: 25px;
+          background: url("../images/受話器の線画アイコン.jpg") no-repeat;
+          background-size: contain;
+          margin-top: 1.5px;
+          margin-right: 17px;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            margin-top: clamp_vw_sp(5);
+            margin-right: 0px;
+            height: clamp_vw_sp(25);
+          }
+        }
+
+        p.tel {
+          color: #21a937;
+          font-size: 22px;
+          font-weight: 500;
+          letter-spacing: 0.5px;
+          margin-top: 13px;
+          text-align: right;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            width: auto;
+            max-width: 100%;
+            text-align: center;
+            font-size: clamp_vw_sp(25);
+            margin-top: -1px;
+          }
+        }
+      }
+    }
+
+    //body section
+    div.firstview__box {
+      width: 1920px;
+      height: 947px;
+      position: relative;
+
+      @include sp(480px) {
+        /* スマートフォン画面 */
+        width: clamp_vw_sp(480);
+        height: clamp_vw_sp(480);
+        margin-top: clamp_vw_sp(10);
+      }
+
+      div.firstview_image {
+        width: 100%;
+        height: 100%;
+        background: url("../images/fv.jpg") no-repeat;
+        background-size: contain;
+
+        @include sp(480px) {
+          width: 100%;
+          height: 100%;
+          background: url("../images/firstview_image_SP.jpg");
+          background-size: cover;
         }
       }
 
-      div.consultation_pattern__box {
-        width: 449px;
-        height: 114px;
+      p.message-left {
+        writing-mode: vertical-rl;
+        font-size: 28px;
+        font-weight: 500;
+        letter-spacing: 5.5px;
+        padding-top: 25px;
+        line-height: 102px;
+        width: 102px;
+        height: 565px;
+        background-color: white;
+        position: absolute;
+        top: 133px;
+        left: 210px;
+
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          // background-color: rgb(240, 113, 113);
+          // width: clamp(26px, 11.4583vw, 55px);
+          width: clamp_vw_sp(55);
+          /* 最小値30(vw225),65÷480×100vw,最大値65(vw480) */
+          // height: clamp(162px, 71.875vw, 345px);
+          height: clamp_vw_sp(345);
+          /* 最小値162(vw225),345÷480×100vw,最大値345(vw480) */
+          // font-size: clamp(9px, 4.166vw, 20px);
+          font-size: clamp_vw_sp(20);
+          /* 最小値9(vw225),20÷480×100vw,最大値20(vw480) */
+          letter-spacing: 0px;
+          padding-top: 0px;
+          text-align: center;
+          // line-height: clamp(26px, 11.4583vw, 55px);
+          line-height: clamp_vw_sp(55);
+          /* 最小値30(vw225),65÷480×100vw,最大値65(vw480) */
+          /* 最小値30(vw225),65÷480×100vw,最大値65(vw480) */
+          // top: clamp(47px, 20.833vw, 100px);
+          top: clamp_vw_sp(100);
+          /* 最小値47(vw225),100÷480×100vw,最大値100(vw480) */
+          // left: clamp(14px, 6.25vw, 30px);
+          left: clamp_vw_sp(30);
+          /* 最小値14(vw225),30÷480×100vw,最大値30(vw480) */
+        }
+
+        span.color {
+          color: green;
+          letter-spacing: 5.5px;
+          margin-top: -8px;
+          margin-bottom: -8px;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            font-size: clamp_vw_sp(20);
+            letter-spacing: 0px;
+            padding-top: clamp_vw_sp(3);
+            padding-bottom: clamp_vw_sp(3);
+          }
+        }
+      }
+    }
+
+    p.message-right {
+      writing-mode: vertical-rl;
+      font-size: 28px;
+      font-weight: 500;
+      letter-spacing: 6px;
+      padding-top: 25px;
+      line-height: 102px;
+      width: 102px;
+      height: 565px;
+      background-color: white;
+      position: absolute;
+      top: 133px;
+      left: 393px;
+
+      @include sp(480px) {
+        /* スマートフォン画面 */
+        width: clamp_vw_sp(55);
+        height: clamp_vw_sp(345);
+        font-size: clamp_vw_sp(20);
+        letter-spacing: 0px;
+        padding-top: 0px;
+        text-align: center;
+        line-height: clamp_vw_sp(55);
+        top: clamp_vw_sp(100);
+        left: clamp_vw_sp(100);
+      }
+    }
+  }
+
+  div.about_us {
+    width: 1180px;
+    height: 664px;
+    margin: 0 auto;
+    display: flex;
+
+    @include sp(480px) {
+      /* スマートフォン画面 */
+      width: clamp_vw_sp(480);
+      height: clamp_vw_sp(660);
+      display: block;
+    }
+
+    div.about_us__content {
+      width: 490px;
+      height: 664px;
+
+      @include sp(480px) {
+        /* スマートフォン画面 */
+        width: auto;
+        max-width: 100%;
+        height: auto;
+      }
+
+      div.firstline__box {
+        width: 275px;
+        margin-left: 32px;
+
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          width: clamp_vw_sp(265);
+          margin: 0 auto;
+        }
+
+        p.firstline__text {
+          font-size: 24px;
+          font-weight: 500;
+          background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+          margin-top: 200px;
+          line-height: 22px;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            margin-top: clamp_vw_sp(60);
+            font-size: clamp_vw_sp(23);
+            letter-spacing: clamp_vw_sp(-3);
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    div.secondline__box {
+      width: 216px;
+      margin-top: 42px;
+      margin-left: 32px;
+
+      @include sp(480px) {
+        /* スマートフォン画面 */
+        width: clamp_vw_sp(220);
+        margin: 0 auto;
+      }
+
+      p.secondline__text {
+        background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: -0.1px;
+        line-height: 24px;
+
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          font-size: clamp_vw_sp(23);
+          margin-top: clamp_vw_sp(30);
+          letter-spacing: clamp_vw_sp(-3);
+          text-align: center;
+        }
+      }
+    }
+
+    div.thirdline__box {
+      width: 415px;
+      height: 145px;
+      margin-top: 38px;
+      margin-left: 32px;
+
+      @include sp(480px) {
+        /* スマートフォン画面 */
+        width: clamp_vw_sp(420);
+        margin: 0 auto;
+      }
+
+      p.thirdline__text {
+        font-size: 16px;
+        line-height: 36px;
+        letter-spacing: -0.18px;
+        line-height: 38px;
+
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          margin-top: clamp_vw_sp(30);
+          font-size: clamp_vw_sp(15);
+          text-align: center;
+          line-height: clamp_vw_sp(36);
+          letter-spacing: clamp_vw_sp(-1);
+          text-align: center;
+          line-height: clamp_vw_sp(35);
+        }
+      }
+    }
+
+    div.about_us__imgbox {
+      width: 690px;
+      height: 420px;
+      margin-top: 162px;
+      background: url("../images/belief.jpg");
+      background-size: cover;
+
+      @include sp(480px) {
+        /* スマートフォン画面 */
+        width: 100%;
+        height: 100%;
+        background: url("../images/belief.jpg") no-repeat;
+        background-size: contain;
+        background-size: clamp_vw_sp(660);
+        margin-top: 0px;
+      }
+    }
+  }
+
+  // second section------------------------
+
+  div.treatment__content--container {
+    width: 1920px;
+    height: 1520px;
+    background-color: #f5fcf8;
+
+    @include sp(480px) {
+      /* スマートフォン画面 */
+      width: clamp_vw_sp(480);
+      height: clamp_vw_sp(2800);
+      height: auto;
+      background-color: #f5fcf8;
+    }
+
+    div.treatment__content--box {
+      width: 96px;
+      margin: 0 auto;
+      padding-top: 82px;
+      background: linear-gradient(transparent 90%, rgb(134, 235, 134) 90%);
+
+      @include sp(480px) {
+        /* スマートフォン画面 */
+        width: clamp_vw_sp(96);
+        padding-top: clamp_vw_sp(85);
+      }
+
+      h2.treatment-content--title {
+        height: 32px;
+        font-size: 24px;
+        font-weight: 500;
+        text-align: center;
+
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          font-size: clamp_vw_sp(24);
+        }
+      }
+    }
+  }
+
+  div.treatment-content__supplement {
+    width: 448px;
+    margin: 71px auto 0 auto;
+
+    @include sp(480px) {
+      /* スマートフォン画面 */
+      width: clamp_vw_sp(320);
+      margin: 0 auto;
+      padding-top: clamp_vw_sp(65);
+    }
+
+    p.treatment-content__supplement--text {
+      font-size: 16px;
+      letter-spacing: 0px;
+
+      @include sp(480px) {
+        /* スマートフォン画面 */
+        letter-spacing: clamp_vw_sp(2.5);
+      }
+    }
+  }
+
+  div.medical_subjects__container {
+    margin-top: 37px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include sp(480px) {
+      /* スマートフォン画面 */
+      margin: 0;
+      width: clamp_vw_sp(480);
+      margin-top: clamp_vw_sp(50);
+    }
+
+    article.medical_subjects {
+      width: 380px;
+      height: 591px;
+      border: 1px solid;
+      border-radius: 10px;
+      margin: 0 10px 0 10px;
+      position: relative;
+      background-color: rgb(255, 255, 255);
+
+      @include sp(480px) {
+        /* スマートフォン画面 */
+        width: clamp_vw_sp(400);
+        height: clamp_vw_sp(575);
+        margin-top: clamp_vw_sp(30);
+      }
+
+      div.medical_subject__title {
+        width: 192px;
+        margin: 41px 94px 0 94px;
+
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          margin: 0 auto;
+          margin-top: clamp_vw_sp(35);
+        }
+
+        h3 {
+          font-size: 24px;
+          font-weight: 500;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            font-size: clamp_vw_sp(24);
+          }
+        }
+      }
+
+      div.description__box {
+        width: 320px;
+        margin: 42px 29px 111px 31px;
+
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          width: clamp_vw_sp(350);
+          margin: 0 auto;
+          margin-top: clamp_vw_sp(35);
+        }
+
+        p.description__left {
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: -0.11px;
+          line-height: 38px;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            font-size: clamp_vw_sp(18);
+            letter-spacing: clamp_vw_sp(-3);
+            text-align: left;
+            line-height: clamp_vw_sp(38);
+          }
+        }
+
+        p.description__center {
+          font-size: 16px;
+          line-height: 33px;
+          font-weight: 500;
+          letter-spacing: 0.05px;
+          line-height: 39px;
+          margin-left: 5px;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            font-size: clamp_vw_sp(18);
+            letter-spacing: clamp_vw_sp(-3);
+            text-align: left;
+            line-height: clamp_vw_sp(38);
+          }
+        }
+
+        p.description__right {
+          font-size: 16px;
+          line-height: 33px;
+          font-weight: 500;
+          letter-spacing: 0px;
+          line-height: 38px;
+          margin-left: -3px;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            font-size: clamp_vw_sp(18);
+            letter-spacing: clamp_vw_sp(-3);
+            text-align: left;
+            line-height: clamp_vw_sp(38);
+          }
+        }
+      }
+
+      div.medical_imagebox__first {
+        width: 187px;
+        height: 187px;
+        background: url("../images/g0108.jpg");
+        background-size: cover;
+        position: absolute;
+        top: 83%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          width: clamp_vw_sp(230);
+          height: clamp_vw_sp(230);
+          background: url("../images/g0108.jpg");
+          background-size: cover;
+          top: 77%;
+        }
+      }
+
+      div.medical_imagebox__second {
+        width: 187px;
+        height: 187px;
+        background: url("../images/g0099.jpg");
+        background-size: cover;
+        position: absolute;
+        top: 83%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          width: clamp_vw_sp(230);
+          height: clamp_vw_sp(230);
+          background: url("../images/g0099.jpg");
+          background-size: cover;
+          top: 77%;
+        }
+      }
+
+      div.medical_imagebox__third {
+        width: 187px;
+        height: 187px;
+        background: url("../images/g0092.jpg");
+        background-size: cover;
+        position: absolute;
+        top: 83%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          width: clamp_vw_sp(230);
+          height: clamp_vw_sp(230);
+          background: url("../images/g0092.jpg");
+          background-size: cover;
+          top: 77%;
+        }
+      }
+    }
+  }
+
+  div.notice_title__box {
+    width: 100px;
+    margin: 84px auto 0px auto;
+
+    @include sp(480px) {
+      /* スマートフォン画面 */
+      width: clamp_vw_sp(100);
+      margin: 0 auto;
+      margin-top: clamp_vw_sp(90);
+    }
+
+    h2.notice_title {
+      font-size: 24px;
+      background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+      font-weight: 500;
+
+      @include sp(480px) {
+        /* スマートフォン画面 */
+        font-size: clamp_vw_sp(24);
+      }
+    }
+  }
+
+  div.notice_container {
+    width: 1180px;
+    height: 390px;
+    margin: 74px auto 0 auto;
+    border: 0px solid;
+    border-radius: 20px;
+    border: 1px solid rgb(238, 238, 238);
+    box-shadow: rgba(238, 238, 238, 0.509804) 9px 9px 10px -4px;
+    -webkit-box-shadow: rgba(238, 238, 238, 0.509804) 9px 9px 10px -4px;
+    -moz-box-shadow: rgba(238, 238, 238, 0.509804) 9px 9px 10px -4px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include sp(480px) {
+      /* スマートフォン画面 */
+      width: clamp_vw_sp(400);
+      height: auto;
+      margin: 0 auto;
+      margin-top: clamp_vw_sp(50);
+    }
+
+    div.notice_container__margin_upper {
+      height: 25px;
+    }
+
+    article.notice_contents {
+      border-bottom: 1px solid #e7e7e7;
+      margin: 0px 66px 0px 66px;
+      font-size: 0;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+
+      @include sp(480px) {
+        /* スマートフォン画面 */
+        width: clamp_vw_sp(350);
+        margin-left: clamp_vw_sp(20);
+        margin-right: clamp_vw_sp(20);
+        align-items: flex-start;
+      }
+
+      div.notice_left__box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        p.notice_contents__date {
+          color: green;
+          font-size: 16px;
+          font-weight: 500;
+          display: inline-block;
+          width: 80px;
+          height: 16px;
+          margin: 25.4px 36px 20.5px -2px;
+          letter-spacing: 0px;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            font-size: clamp_vw_sp(16);
+            margin: 0;
+            margin-top: clamp_vw_sp(10);
+          }
+        }
+
+        p.notice_contents__info {
+          font-size: 12px;
+          font-weight: 500;
+          color: white;
+          display: inline-block;
+          background-color: #444444;
+          width: 80px;
+          height: 25px;
+          text-align: center;
+          line-height: 25px;
+          margin-right: 30px;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            font-size: clamp_vw_sp(12);
+            margin: 0;
+            margin-top: clamp_vw_sp(10);
+            margin-bottom: clamp_vw_sp(10);
+          }
+        }
+      }
+
+      div.notice_right__box {
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          width: clamp_vw_sp(270);
+        }
+
+        p.notice_contents__infocontent {
+          font-size: 16px;
+          font-weight: 500;
+          margin-left: 6px;
+          letter-spacing: -0.1px;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            font-size: clamp_vw_sp(16);
+            margin: 0;
+            margin-top: clamp_vw_sp(10);
+            margin-bottom: clamp_vw_sp(10);
+            margin-left: clamp_vw_sp(30);
+          }
+        }
+      }
+    }
+
+    div.seeall_wrap {
+      margin: 0px 54px 0px 60px;
+      text-align: right;
+
+      @include sp(480px) {
+        /* スマートフォン画面 */
+        width: clamp_vw_sp(400);
+        height: clamp_vw_sp(100);
+        margin: 0;
+      }
+
+      div.seeall_box {
+        width: 1005px;
+        margin: 0px 0px 0px 66px;
+        text-align: right;
+        font-size: 0; // display: inline-block;ズレ対策
+
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          width: clamp_vw_sp(400);
+          height: clamp_vw_sp(100);
+          margin: 0;
+          margin-top: clamp_vw_sp(40);
+        }
+
+        p.seeall_text {
+          font-size: 16px;
+          width: 198px;
+          height: 16px;
+          margin-top: 44px;
+          display: inline-block;
+          letter-spacing: 1.2px;
+          margin-right: 2px;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            font-size: clamp_vw_sp(16);
+            margin: 0;
+            margin-right: clamp_vw_sp(7);
+          }
+        }
+
+        p.seeall_icon {
+          font-size: 14px;
+          width: 12px;
+          height: 14px;
+          display: inline-block;
+          margin-top: 35px;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            font-size: clamp_vw_sp(14);
+            margin: 0;
+            margin-right: clamp_vw_sp(50);
+          }
+        }
+      }
+    }
+  }
+
+  /* section */
+
+  div.about_access__wrap {
+    width: 1190px;
+    height: 799px;
+    margin: 0px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    @include sp(480px) {
+      /* スマートフォン画面 */
+      width: clamp_vw_sp(480);
+      height: auto;
+      flex-direction: column-reverse;
+      padding: 0;
+      margin: 0;
+    }
+
+    div.copyright_reserved__box--sp {
+      visibility: hidden;
+
+      @include sp(480px) {
+        /* スマートフォン画面 */
+        visibility: visible;
+        width: clamp_vw_sp(400);
+
+        margin: 0 auto;
+        margin-top: clamp_vw_sp(30);
+        text-align: center;
+      }
+
+      small.copyright_reserved__text--sp {
+        visibility: hidden;
+
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          visibility: visible;
+          font-size: clamp_vw_sp(8);
+        }
+      }
+    }
+
+    .about_access__container {
+      margin: 0px auto 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      div.map_box {
+        width: 608px;
+        height: 440px;
+        margin-top: 200px;
+        padding-left: 4px;
+        background: url("../images/map.jpg") no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          width: clamp_vw_sp(420);
+          height: clamp_vw_sp(310);
+          background: url("../images/map.jpg") no-repeat;
+          background-size: contain;
+          margin: 0 auto;
+          margin-top: clamp_vw_sp(30);
+        }
+      }
+
+      div.about_wrap {
+        width: 538px;
+        height: 625px;
+        margin-top: 200px;
+        margin-left: 33px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        align-items: flex-start;
 
-        div.consultation_pattern__content {
+        @include sp(480px) {
+          /* スマートフォン画面 */
+          width: clamp_vw_sp(420);
+          height: auto;
+          margin: 0 auto;
+          margin-top: clamp_vw_sp(120);
+          flex-wrap: nowrap;
+        }
+
+        div.company_name__box {
+          width: 275x;
+          height: 73px;
           display: flex;
-          flex-direction: row;
           flex-wrap: wrap;
-          font-size: 0;// display: inline-block;ズレ対策
 
-          p.dayofweek_upper {
-            font-size: 14px;
-            display: inline-block;
-            width: 42px;
-            margin: 9px 23px 0 32px;
-          }
-          p.dayofweek_middle {
-            font-size: 14px;
-            display: inline-block;
-            width: 42px;
-            margin: 14px 23px 0 36px;
-          }
-          p.dayofweek_lower {
-            font-size: 14px;
-            display: inline-block;
-            width: 42px;
-            margin: 16px 23px 0 32px;
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            width: 100%;
+            margin-left: 0px;
+            margin: 0 auto;
           }
 
-          p.morning_upper {
-            font-size: 14px;
-            display: inline-block;
-            width: 105px;
-            margin: 8px 16px 0 0;
+          div.company_logo__box {
+            width: 73px;
+            height: 73px;
+            background: url("../images/病院の地図マーク.jpg");
+            background-size: cover;
+
+            @include sp(480px) {
+              /* スマートフォン画面 */
+              width: clamp_vw_sp(73);
+              height: clamp_vw_sp(73);
+              margin-left: clamp_vw_sp(73);
+            }
+          }
+
+          div.tagline_box {
+            width: 200x;
+            height: 73px;
+
+            @include sp(480px) {
+              /* スマートフォン画面 */
+              width: clamp_vw_sp(200);
+              height: clamp_vw_sp(73);
+              margin-left: clamp_vw_sp(15);
+            }
+
+            p.tagline_box--upperline {
+              font-size: 30px;
+              line-height: 26px;
+              padding-left: 11px;
+
+              @include sp(480px) {
+                /* スマートフォン画面 */
+                font-size: clamp_vw_sp(30);
+                line-height: clamp_vw_sp(30);
+                padding-left: clamp_vw_sp(11);
+              }
+            }
+
+            p.tagline_box--lowerline {
+              font-size: 30px;
+              line-height: 55px;
+              padding-left: 26px;
+
+              @include sp(480px) {
+                /* スマートフォン画面 */
+                font-size: clamp_vw_sp(30);
+                line-height: clamp_vw_sp(30);
+                padding-left: clamp_vw_sp(26);
+                margin-top: clamp_vw_sp(16);
+              }
+            }
+          }
+        }
+
+        div.adress_box {
+          margin-top: 28px;
+          display: flex;
+          flex-wrap: wrap;
+          background-color: white;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            width: 100%;
+            margin: 0 auto;
+            margin-top: clamp_vw_sp(30);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          p.adress_number {
+            font-size: 16px;
+            margin-right: 16px;
+            letter-spacing: 0.1px;
+
+            @include sp(480px) {
+              /* スマートフォン画面 */
+              font-size: clamp_vw_sp(16);
+              display: inline-block;
+            }
+          }
+
+          p.adress_text {
+            font-size: 16px;
             letter-spacing: 0px;
-          }
-          p.morning_middle {
-            font-size: 14px;
-            display: inline-block;
-            width: 105px;
-            margin: 16px 16px 0 0;
-          }
-          p.morning_lower {
-            font-size: 14px;
-            display: inline-block;
-            width: 105px;
-            margin: 16px 16px 0 0;
-          }
 
-          p.afternoon_upper {
-            font-size: 14px;
-            display: inline-block;
-            width: 110px;
-            margin: 9px 16px 0 0;
-          }
-          p.afternoon_middle {
-            font-size: 14px;
-            display: inline-block;
-            width: 110px;
-            margin: 16px 16px 0 0;
-          }
-          p.afternoon_lower {
-            font-size: 14px;
-            display: inline-block;
-            width: 110px;
-            margin: 16px 16px 0 0;
+            @include sp(480px) {
+              /* スマートフォン画面 */
+              font-size: clamp_vw_sp(16);
+              display: inline-block;
+              margin-top: clamp_vw_sp(10);
+            }
           }
         }
-      }
-    }
 
-    div.closed_days__line {
-      width: 533px;
-      height: 35px;
-      // background-color: rgb(224, 82, 82);
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+        div.tel_box {
+          height: 32px;
+          width: 220px;
+          position: relative;
+          margin-top: 30px;
+          font-size: 0; // display: inline-block;ズレ対策
 
-      div.closed_day__box{
-        width: 85px;
-        font-size: 14px;
-        border-right: 1px solid;
-        border-color: #e7e7e7;
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            width: 80%;
+            margin: 0 auto;
+            margin-top: clamp_vw_sp(25);
+            display: flex;
+            justify-content: center;
+          }
 
-        p.closed_day {
-          margin-top: 14px;
-          margin-left: 4.5px;
-          // background-color: rgb(233, 217, 217);
+          p.tel_number::before {
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 22px;
+            background: url("../images/受話器の線画アイコン.jpg") no-repeat;
+            background-size: contain;
+            margin-right: 15px;
+            margin-top: 4px;
+
+            @include sp(480px) {
+              /* スマートフォン画面 */
+              margin: 0;
+            }
+          }
+
+          p.tel_number {
+            color: #21a937;
+            font-size: 24px;
+            text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0,
+              -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px,
+              0px -0.4px 0px;
+            text-align: right;
+            padding-left: 4px;
+            margin-top: 1px;
+            position: absolute;
+          }
         }
-      }
-    }
 
-    div.closed_dayofweek__wrap {
-      width: 449px;
-      height: 114px;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
+        div.empty_border {
+          height: 29.5px;
+          width: 533px;
+          border-bottom: 1px solid;
+          border-color: #e7e7e7;
+          background-color: rgb(255, 255, 255);
 
-      div.closed__dayofweek {
-        font-size: 14px;
-        width: 70px;
-        margin-top: 14px;
-        margin-left: 32px;
-      }
-    }
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            width: 100%;
+            margin: 0 auto;
+          }
+        }
 
-    div.empty_border__lower {
-      height: 19px;
-      width: 533px;
-      border-bottom: 1px solid;
-      border-color: #e7e7e7;
-    }
+        div.empty_margin {
+          height: 15px;
+          width: 533px;
 
-    div.copyright_reserved__box {
-      width: 554px;
-      margin-top: 24.5px;
-      text-align: right;
-      font-size: 0;// display: inline-block;ズレ
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            width: 100%;
+            margin: 0 auto;
+          }
+        }
 
-      small.copyright_reserved__text {
-        font-size: 11px;
-        letter-spacing: 0.15px;
-        padding-right: 15px;
-        display: inline-block;
+        div.businesshour_box {
+          height: 95px;
+          width: 533px;
+          background-color: white;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            width: clamp_vw_sp(420);
+            height: clamp_vw_sp(170);
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+
+          div.consultation_time__box {
+            width: 85px;
+            height: 114px;
+            border-right: 1px solid;
+            border-color: #e7e7e7;
+
+            @include sp(480px) {
+              /* スマートフォン画面 */
+              width: clamp_vw_sp(120);
+              height: auto;
+            }
+
+            p.consultation_time {
+              font-size: 14px;
+              margin-top: 8px;
+              margin-left: 4.5px;
+
+              @include sp(480px) {
+                /* スマートフォン画面 */
+                font-size: clamp_vw_sp(14);
+                margin-top: clamp_vw_sp(38);
+                text-align: center;
+              }
+            }
+          }
+
+          div.consultation_pattern__box {
+            width: 449px;
+            height: 114px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+            @include sp(480px) {
+              /* スマートフォン画面 */
+              width: clamp_vw_sp(200);
+              height: auto;
+            }
+
+            div.consultation_pattern__content {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              font-size: 0; // display: inline-block;ズレ対策
+
+              @include sp(480px) {
+                /* スマートフォン画面 */
+                width: clamp_vw_sp(300);
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                margin: 0;
+              }
+
+              p.dayofweek_upper {
+                font-size: 14px;
+                display: inline-block;
+                width: 42px;
+                margin: 9px 23px 0 35px;
+
+                @include sp(480px) {
+                  /* スマートフォン画面 */
+                  font-size: clamp_vw_sp(14);
+                  margin: 0;
+                  margin-top: clamp_vw_sp(30);
+                  margin-right: clamp_vw_sp(20);
+                  margin-left: clamp_vw_sp(20);
+                }
+              }
+
+              div.morning_afternoon__wrap--upper {
+                @include sp(480px) {
+                  /* スマートフォン画面 */
+                  margin-top: clamp_vw_sp(23);
+                }
+
+                p.morning_upper {
+                  font-size: 14px;
+                  display: inline-block;
+                  width: 105px;
+                  margin: 8px 16px 0 0;
+                  letter-spacing: 0px;
+
+                  @include sp(480px) {
+                    /* スマートフォン画面 */
+                    font-size: clamp_vw_sp(14);
+                    display: block;
+                    margin: 0;
+                    margin-right: clamp_vw_sp(20);
+                    margin-left: clamp_vw_sp(20);
+                  }
+                }
+
+                p.afternoon_upper {
+                  font-size: 14px;
+                  display: inline-block;
+                  width: 110px;
+                  margin: 9px 16px 0 0;
+
+                  @include sp(480px) {
+                    /* スマートフォン画面 */
+                    font-size: clamp_vw_sp(14);
+                    display: block;
+                    margin: 0;
+                    margin-right: clamp_vw_sp(20);
+                    margin-left: clamp_vw_sp(20);
+                  }
+                }
+              }
+
+              p.dayofweek_middle {
+                font-size: 14px;
+                display: inline-block;
+                width: 42px;
+                margin: 16px 23px 0 33px;
+
+                @include sp(480px) {
+                  /* スマートフォン画面 */
+                  font-size: clamp_vw_sp(14);
+                  margin: 0;
+                  margin-top: clamp_vw_sp(30);
+                  margin-right: clamp_vw_sp(20);
+                  margin-left: clamp_vw_sp(20);
+                }
+              }
+
+              div.morning_afternoon__wrap--middle {
+                @include sp(480px) {
+                  /* スマートフォン画面 */
+                  font-size: clamp_vw_sp(14);
+                  margin-top: clamp_vw_sp(20);
+                }
+
+                p.morning_middle {
+                  font-size: 14px;
+                  display: inline-block;
+                  width: 105px;
+                  margin: 16px 16px 0 0;
+
+                  @include sp(480px) {
+                    /* スマートフォン画面 */
+                    font-size: clamp_vw_sp(14);
+                    display: block;
+                    margin: 0;
+                    margin-right: clamp_vw_sp(20);
+                    margin-left: clamp_vw_sp(20);
+                  }
+                }
+
+                p.afternoon_middle {
+                  font-size: 14px;
+                  display: inline-block;
+                  width: 110px;
+                  margin: 16px 16px 0 0;
+
+                  @include sp(480px) {
+                    /* スマートフォン画面 */
+                    font-size: clamp_vw_sp(14);
+                    display: block;
+                    margin: 0;
+                    margin-right: clamp_vw_sp(20);
+                    margin-left: clamp_vw_sp(20);
+                  }
+                }
+              }
+
+              p.dayofweek_lower {
+                font-size: 14px;
+                display: inline-block;
+                width: 42px;
+                margin: 17px 23px 0 33px;
+
+                @include sp(480px) {
+                  /* スマートフォン画面 */
+                  font-size: clamp_vw_sp(14);
+                  margin: 0;
+                  margin-top: clamp_vw_sp(30);
+                  margin-right: clamp_vw_sp(20);
+                  margin-left: clamp_vw_sp(20);
+                }
+              }
+
+              div.morning_afternoon__wrap--lower {
+                @include sp(480px) {
+                  /* スマートフォン画面 */
+                  margin-top: clamp_vw_sp(20);
+                }
+
+                p.morning_lower {
+                  font-size: 14px;
+                  display: inline-block;
+                  width: 105px;
+                  margin: 16px 16px 0 0;
+
+                  @include sp(480px) {
+                    /* スマートフォン画面 */
+                    font-size: clamp_vw_sp(14);
+                    display: block;
+                    margin: 0;
+                    margin-right: clamp_vw_sp(20);
+                    margin-left: clamp_vw_sp(20);
+                  }
+                }
+
+                p.afternoon_lower {
+                  font-size: 14px;
+                  display: inline-block;
+                  width: 110px;
+                  margin: 16px 16px 0 0;
+
+                  @include sp(480px) {
+                    /* スマートフォン画面 */
+                    font-size: clamp_vw_sp(14);
+                    display: block;
+                    margin: 0;
+                    margin-right: clamp_vw_sp(20);
+                    margin-left: clamp_vw_sp(20);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        div.closed_days__line {
+          width: 533px;
+          height: 35px;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            width: clamp_vw_sp(420);
+            margin-top: clamp_vw_sp(10);
+          }
+
+          div.closed_day__box {
+            width: 85px;
+            font-size: 14px;
+            border-right: 1px solid;
+            border-color: #e7e7e7;
+
+            @include sp(480px) {
+              /* スマートフォン画面 */
+              width: clamp_vw_sp(120);
+              font-size: clamp_vw_sp(14);
+            }
+
+            p.closed_day {
+              margin-top: 14px;
+              margin-left: 4.5px;
+
+              @include sp(480px) {
+                /* スマートフォン画面 */
+                margin: 0;
+                text-align: center;
+              }
+            }
+          }
+        }
+
+        div.closed_dayofweek__wrap {
+          width: 449px;
+          height: 114px;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            width: clamp_vw_sp(250);
+          }
+
+          div.closed__dayofweek {
+            font-size: 14px;
+            width: 70px;
+            margin-top: 15px;
+            margin-left: 34px;
+
+            @include sp(480px) {
+              /* スマートフォン画面 */
+              font-size: clamp_vw_sp(14);
+              margin: 0 auto;
+            }
+          }
+        }
+
+        div.empty_border__lower {
+          height: 19px;
+          width: 533px;
+          border-bottom: 1px solid;
+          border-color: #e7e7e7;
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            width: 100%;
+            margin: 0 auto;
+          }
+        }
+
+        div.copyright_reserved__box--pc {
+          width: 554px;
+          margin-top: 24.5px;
+          text-align: right;
+          font-size: 0; // display: inline-block;ズレ
+
+          @include sp(480px) {
+            /* スマートフォン画面 */
+            width: 100%;
+            margin: 0 auto;
+          }
+
+          small.copyright_reserved__text {
+            font-size: 11px;
+            letter-spacing: 0.15px;
+            padding-right: 15px;
+            display: inline-block;
+
+            @include sp(480px) {
+              /* スマートフォン画面 */
+              font-size: clamp_vw_sp(11);
+              display: none;
+            }
+          }
+        }
       }
     }
   }
