@@ -1,58 +1,78 @@
 // スタイルについて具体的な記述をする
 // -------------------------------------
 $pc_l: 1280px; // 1280以上   大型PCモニタ
-$pc: 1279px;   // 1280pxまで  PC
-$tab: 959px;   // 960pxまで  タブレット
-$sp_b: 599px;  // 600pxまで  スマホ横beside
-$sp_V: 479px;  // 480pxまで  スマホ縦vertical
+$pc: 1279px; // 1280pxまで  PC
+$tab: 959px; // 960pxまで  タブレット
+$sp_b: 599px; // 600pxまで  スマホ横beside
+$sp_V: 479px; // 480pxまで  スマホ縦vertical
 
-@mixin pc-large($pcl) {
+@mixin pc-l($pcl) {
+  // 1280以上   大型PCモニタ
   @media (-width: ($pcl)) {
     @content;
   }
 }
 
 @mixin pc($pc) {
+  // 1280pxまで  PC
   @media (max-width: ($pc)) {
     @content;
   }
 }
 
 @mixin tab($tab) {
+  // 960pxまで  タブレット
   @media (max-width: ($tab)) {
     @content;
   }
 }
 
-@mixin sp($sp) {
-  @media (max-width: ($sp)) {
+@mixin sp_b($sp_b) {
+  // 600pxまで  スマホ横beside
+  @media (max-width: ($sp_b)) {
     @content;
   }
 }
 
-//スマホ可変関数
-@function clamp_vw_sp($num) {
+@mixin sp_v($sp_v) {
+  // 480pxまで  スマホ縦vertical
+  @media (max-width: ($sp_v)) {
+    @content;
+  }
+}
+
+//レスポンシブ関数 スマホ横画面
+@function clamp_vw_sp_b($num) {
+  $minWidth: 480;
+  $maxWidth: 599;
+  $val_max: $num * 1px;
+  $val_vw: round(calc($num / $maxWidth) * 100);
+  $val_min: round($minWidth * calc($val_vw / 100)) * 1px;
+  @return clamp(#{$val_min}, #{$val_vw * 1vw}, #{$val_max});
+}
+//レスポンシブ関数 スマホ縦画面
+@function clamp_vw_sp_v($num) {
   $minWidth: 225;
   $maxWidth: 479;
   $val_max: $num * 1px;
-  $val_vw: round($num/$maxWidth * 100);
-  $val_min: round($minWidth * ($val_vw/100)) * 1px;
+  $val_vw: round(calc($num / $maxWidth) * 100);
+  $val_min: round($minWidth * calc($val_vw / 100)) * 1px;
   @return clamp(#{$val_min}, #{$val_vw * 1vw}, #{$val_max});
 }
 
-// ひながたひながたひながたひながたひながたひながたひながた
-@include sp(479px) {
-  /* スマートフォン画面 */
-  // width: clamp_vw_sp(100);
-  // height: clamp_vw_sp(100);
-  // font-size: clamp_vw_sp(10);
-  // letter-spacing: clamp_vw_sp(10);
-  // line-height: clamp_vw_sp(10);
-  // background: url("../images/g0092.jpg");
-  // background-size: cover;
-  // margin-top: clamp_vw_sp(50);
-  // padding-top: clamp_vw_sp(50);
-}
+/* ひながたひながたひながたひながたひながたひながたひながた
+// @include sp_v(479px) {
+  /* スマートフォン縦画面 */
+// width: clamp_vw_sp_v(100);
+// height: clamp_vw_sp_v(100);
+// font-size: clamp_vw_sp_v(10);
+// letter-spacing: clamp_vw_sp_v(10);
+// line-height: clamp_vw_sp_v(10);
+// background: url("../images/g0092.jpg");
+// background-size: cover;
+// margin-top: clamp_vw_sp_v(50);
+// padding-top: clamp_vw_sp_v(50);
+// }
 
 // ひながたひながたひながたひながたひながたひながたひながた
 // -------------------------------------
@@ -90,9 +110,15 @@ ul {
 body.body__toppage {
   width: 100vw;
 
-  /*全体の幅を指定する*/
-  @include sp(479px) {
-    width: clamp_vw_sp(479);
+  @include sp_b(599px) {
+    /* スマートフォン横画面 */
+    width: clamp_vw_sp_b(599);
+    padding: 0;
+    max-width: 0;
+  }
+
+  @include sp_v(479px) {
+    width: clamp_vw_sp_v(479);
     padding: 0;
     max-width: 0;
   }
@@ -101,9 +127,15 @@ body.body__toppage {
     width: 1920px;
     margin: 0 auto;
 
-    @include sp(479px) {
-      /* スマートフォン画面 */
-      width: clamp_vw_sp(479);
+    @include sp_b(599px) {
+      /* スマートフォン横画面 */
+      width: 100vw;
+      height: auto;
+    }
+
+    @include sp_v(479px) {
+      /* スマートフォン縦画面 */
+      width: 100vw;
       height: auto;
     }
 
@@ -111,11 +143,18 @@ body.body__toppage {
       width: 1920px;
       height: 130px;
 
-      @include sp(479px) {
-        /* スマートフォン画面 */
+      @include sp_b(599px) {
+        /* スマートフォン横画面 */
         width: auto;
         max-width: 100%;
-        height: clamp_vw_sp(160);
+        height: clamp_vw_sp_b(160);
+      }
+
+      @include sp_v(479px) {
+        /* スマートフォン縦画面 */
+        width: auto;
+        max-width: 100%;
+        height: clamp_vw_sp_v(160);
       }
 
       div.header__container {
@@ -129,8 +168,16 @@ body.body__toppage {
         justify-content: space-between;
         align-items: center;
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          width: auto;
+          max-width: 100%;
+          height: auto;
+          display: block;
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
           width: auto;
           max-width: 100%;
           height: auto;
@@ -146,11 +193,20 @@ body.body__toppage {
           flex-wrap: nowrap;
           align-items: center;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
             width: auto;
             max-width: 65%;
-            height: clamp_vw_sp(73);
+            height: clamp_vw_sp_b(73);
+            margin-left: clamp_vw_sp_b(170);
+            padding-top: 25px;
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            width: auto;
+            max-width: 65%;
+            height: clamp_vw_sp_v(73);
             margin: 0 auto;
             padding-top: 20px;
           }
@@ -160,12 +216,23 @@ body.body__toppage {
           width: 73px;
           height: 73px;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            width: auto;
+            max-width: 100%;
+            height: clamp_vw_sp_b(73);
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
             background-color: rgb(217, 224, 243);
             width: auto;
             max-width: 100%;
-            height: clamp_vw_sp(73);
+            height: clamp_vw_sp_v(73);
 
             img {
               width: 100%;
@@ -179,37 +246,58 @@ body.body__toppage {
         width: 190px;
         height: 73px;
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          height: clamp_vw_sp_v(73);
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
           height: clamp(34px, 15.208vw, 73px);
         }
 
         p.header__tagline--upper {
           padding-left: 8px;
           font-size: 30px;
-          text-align: center;
+          text-align: left;
           line-height: 28px;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
             width: auto;
             max-width: 100%;
-            font-size: clamp_vw_sp(30);
+            font-size: clamp_vw_sp_b(30);
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            width: auto;
+            max-width: 100%;
+            font-size: clamp_vw_sp_v(30);
           }
         }
 
         p.header__tagline--lower {
           padding-left: 12px;
           font-size: 30px;
-          text-align: center;
+          text-align: left;
           line-height: 48px;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
             width: auto;
             max-width: 100%;
-            font-size: clamp_vw_sp(30);
-            line-height: clamp_vw_sp(48);
+            font-size: clamp_vw_sp_b(30);
+            line-height: clamp_vw_sp_b(48);
+            padding-left: clamp_vw_sp_b(25);
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            width: auto;
+            max-width: 100%;
+            font-size: clamp_vw_sp_v(30);
+            line-height: clamp_vw_sp_v(48);
           }
         }
       }
@@ -220,8 +308,17 @@ body.body__toppage {
         margin-right: 20px;
         font-size: 0; // display: inline-block;ズレ対策
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          width: auto;
+          max-width: 85%;
+          height: clamp_vw_sp_b(73);
+          margin: 0 auto;
+          margin-top: 24px;
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
           width: auto;
           max-width: 85%;
           height: clamp(33px, 14.583vw, 73px);
@@ -236,12 +333,20 @@ body.body__toppage {
           text-align: right;
           margin-top: 5px;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
             width: auto;
             max-width: 100%;
             text-align: center;
-            font-size: clamp_vw_sp(18);
+            font-size: clamp_vw_sp_b(20);
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            width: auto;
+            max-width: 100%;
+            text-align: center;
+            font-size: clamp_vw_sp_v(18);
           }
         }
 
@@ -255,11 +360,18 @@ body.body__toppage {
           margin-top: 1.5px;
           margin-right: 17px;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
-            margin-top: clamp_vw_sp(5);
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            margin-top: clamp_vw_sp_b(5);
             margin-right: 0px;
-            height: clamp_vw_sp(25);
+            height: clamp_vw_sp_b(25);
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            margin-top: clamp_vw_sp_v(5);
+            margin-right: 0px;
+            height: clamp_vw_sp_v(25);
           }
         }
 
@@ -271,12 +383,21 @@ body.body__toppage {
           margin-top: 13px;
           text-align: right;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
             width: auto;
             max-width: 100%;
             text-align: center;
-            font-size: clamp_vw_sp(25);
+            font-size: clamp_vw_sp_b(28);
+            margin-top: clamp_vw_sp_b(5);
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            width: auto;
+            max-width: 100%;
+            text-align: center;
+            font-size: clamp_vw_sp_v(25);
             margin-top: -1px;
           }
         }
@@ -289,11 +410,18 @@ body.body__toppage {
       height: 947px;
       position: relative;
 
-      @include sp(479px) {
-        /* スマートフォン画面 */
-        width: clamp_vw_sp(479);
-        height: clamp_vw_sp(479);
-        margin-top: clamp_vw_sp(10);
+      @include sp_b(599px) {
+        /* スマートフォン横画面 */
+        width: clamp_vw_sp_b(589);
+        height: clamp_vw_sp_b(589);
+        margin-top: clamp_vw_sp_b(10);
+      }
+
+      @include sp_v(479px) {
+        /* スマートフォン縦画面 */
+        width: clamp_vw_sp_v(479);
+        height: clamp_vw_sp_v(479);
+        margin-top: clamp_vw_sp_v(10);
       }
 
       div.firstview_image {
@@ -302,13 +430,22 @@ body.body__toppage {
         background: url("../images/fv.jpg") no-repeat;
         background-size: contain;
 
-        @include sp(479px) {
-          width: clamp_vw_sp(479);
-          height: clamp_vw_sp(479);
-          background: url("../images/firstview_image_SP.jpg")no-repeat;
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          width: clamp_vw_sp_b(599);
+          height: clamp_vw_sp_b(599);
+          background: url("../images/firstview_image_SP.jpg") no-repeat;
           background-size: contain;
           position: absolute;
-          // left:clamp_vw_sp(100);
+          left: clamp_vw_sp_b(0);
+        }
+
+        @include sp_v(479px) {
+          width: clamp_vw_sp_v(479);
+          height: clamp_vw_sp_v(479);
+          background: url("../images/firstview_image_SP.jpg") no-repeat;
+          background-size: contain;
+          position: absolute;
         }
       }
 
@@ -326,30 +463,44 @@ body.body__toppage {
         top: 133px;
         left: 210px;
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          width: clamp_vw_sp_b(55);
+          height: clamp_vw_sp_b(345);
+          font-size: clamp_vw_sp_b(20);
+          letter-spacing: 0px;
+          padding-top: 0px;
+          text-align: center;
+          line-height: clamp_vw_sp_b(55);
+          top: clamp_vw_sp_b(100);
+          left: clamp_vw_sp_b(30);
+          z-index: 5;
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
           // background-color: rgb(240, 113, 113);
           // width: clamp(26px, 11.4583vw, 55px);
-          width: clamp_vw_sp(55);
+          width: clamp_vw_sp_v(55);
           /* 最小値30(vw225),65÷479×100vw,最大値65(vw479) */
           // height: clamp(162px, 71.875vw, 345px);
-          height: clamp_vw_sp(345);
+          height: clamp_vw_sp_v(345);
           /* 最小値162(vw225),345÷479×100vw,最大値345(vw479) */
           // font-size: clamp(9px, 4.166vw, 20px);
-          font-size: clamp_vw_sp(20);
+          font-size: clamp_vw_sp_v(20);
           /* 最小値9(vw225),20÷479×100vw,最大値20(vw479) */
           letter-spacing: 0px;
           padding-top: 0px;
           text-align: center;
           // line-height: clamp(26px, 11.4583vw, 55px);
-          line-height: clamp_vw_sp(55);
+          line-height: clamp_vw_sp_v(55);
           /* 最小値30(vw225),65÷479×100vw,最大値65(vw479) */
           /* 最小値30(vw225),65÷479×100vw,最大値65(vw479) */
           // top: clamp(47px, 20.833vw, 100px);
-          top: clamp_vw_sp(100);
+          top: clamp_vw_sp_v(100);
           /* 最小値47(vw225),100÷479×100vw,最大値100(vw479) */
           // left: clamp(14px, 6.25vw, 30px);
-          left: clamp_vw_sp(30);
+          left: clamp_vw_sp_v(30);
           /* 最小値14(vw225),30÷479×100vw,最大値30(vw479) */
           z-index: 5;
         }
@@ -360,12 +511,20 @@ body.body__toppage {
           margin-top: -8px;
           margin-bottom: -8px;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
-            font-size: clamp_vw_sp(20);
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            font-size: clamp_vw_sp_b(20);
             letter-spacing: 0px;
-            padding-top: clamp_vw_sp(3);
-            padding-bottom: clamp_vw_sp(3);
+            padding-top: clamp_vw_sp_b(3);
+            padding-bottom: clamp_vw_sp_b(3);
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            font-size: clamp_vw_sp_v(20);
+            letter-spacing: 0px;
+            padding-top: clamp_vw_sp_v(3);
+            padding-bottom: clamp_vw_sp_v(3);
           }
         }
       }
@@ -385,17 +544,31 @@ body.body__toppage {
       top: 133px;
       left: 393px;
 
-      @include sp(479px) {
-        /* スマートフォン画面 */
-        width: clamp_vw_sp(55);
-        height: clamp_vw_sp(345);
-        font-size: clamp_vw_sp(20);
+      @include sp_b(599px) {
+        /* スマートフォン横画面 */
+        width: clamp_vw_sp_b(55);
+        height: clamp_vw_sp_b(345);
+        font-size: clamp_vw_sp_b(20);
         letter-spacing: 0px;
         padding-top: 0px;
         text-align: center;
-        line-height: clamp_vw_sp(55);
-        top: clamp_vw_sp(100);
-        left: clamp_vw_sp(100);
+        line-height: clamp_vw_sp_b(55);
+        top: clamp_vw_sp_b(100);
+        left: clamp_vw_sp_b(100);
+        z-index: 5;
+      }
+
+      @include sp_v(479px) {
+        /* スマートフォン縦画面 */
+        width: clamp_vw_sp_v(55);
+        height: clamp_vw_sp_v(345);
+        font-size: clamp_vw_sp_v(20);
+        letter-spacing: 0px;
+        padding-top: 0px;
+        text-align: center;
+        line-height: clamp_vw_sp_v(55);
+        top: clamp_vw_sp_v(100);
+        left: clamp_vw_sp_v(100);
         z-index: 5;
       }
     }
@@ -407,10 +580,17 @@ body.body__toppage {
     margin: 0 auto;
     display: flex;
 
-    @include sp(479px) {
-      /* スマートフォン画面 */
-      width: clamp_vw_sp(479);
-      height: clamp_vw_sp(660);
+    @include sp_b(599px) {
+      /* スマートフォン横画面 */
+      width: clamp_vw_sp_b(589);
+      height: clamp_vw_sp_b(660);
+      display: block;
+    }
+
+    @include sp_v(479px) {
+      /* スマートフォン縦画面 */
+      width: clamp_vw_sp_v(479);
+      height: clamp_vw_sp_v(660);
       display: block;
     }
 
@@ -418,8 +598,15 @@ body.body__toppage {
       width: 490px;
       height: 664px;
 
-      @include sp(479px) {
-        /* スマートフォン画面 */
+      @include sp_b(599px) {
+        /* スマートフォン横画面 */
+        width: auto;
+        max-width: 100%;
+        height: auto;
+      }
+
+      @include sp_v(479px) {
+        /* スマートフォン縦画面 */
         width: auto;
         max-width: 100%;
         height: auto;
@@ -429,9 +616,15 @@ body.body__toppage {
         width: 275px;
         margin-left: 32px;
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
-          width: clamp_vw_sp(265);
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          width: clamp_vw_sp_b(275);
+          margin: 0 auto;
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
+          width: clamp_vw_sp_v(265);
           margin: 0 auto;
         }
 
@@ -442,11 +635,19 @@ body.body__toppage {
           margin-top: 200px;
           line-height: 22px;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
-            margin-top: clamp_vw_sp(60);
-            font-size: clamp_vw_sp(23);
-            letter-spacing: clamp_vw_sp(-3);
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            margin-top: clamp_vw_sp_b(60);
+            font-size: clamp_vw_sp_b(23);
+            letter-spacing: clamp_vw_sp_b(-2);
+            text-align: center;
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            margin-top: clamp_vw_sp_v(60);
+            font-size: clamp_vw_sp_v(23);
+            letter-spacing: clamp_vw_sp_v(-3);
             text-align: center;
           }
         }
@@ -458,9 +659,15 @@ body.body__toppage {
       margin-top: 42px;
       margin-left: 32px;
 
-      @include sp(479px) {
-        /* スマートフォン画面 */
-        width: clamp_vw_sp(220);
+      @include sp_b(599px) {
+        /* スマートフォン横画面 */
+        width: clamp_vw_sp_b(220);
+        margin: 0 auto;
+      }
+
+      @include sp_v(479px) {
+        /* スマートフォン縦画面 */
+        width: clamp_vw_sp_v(220);
         margin: 0 auto;
       }
 
@@ -471,11 +678,19 @@ body.body__toppage {
         letter-spacing: -0.1px;
         line-height: 24px;
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
-          font-size: clamp_vw_sp(23);
-          margin-top: clamp_vw_sp(30);
-          letter-spacing: clamp_vw_sp(-3);
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          font-size: clamp_vw_sp_b(23);
+          margin-top: clamp_vw_sp_b(30);
+          letter-spacing: clamp_vw_sp_b(0);
+          text-align: center;
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
+          font-size: clamp_vw_sp_v(23);
+          margin-top: clamp_vw_sp_v(30);
+          letter-spacing: clamp_vw_sp_v(-3);
           text-align: center;
         }
       }
@@ -487,11 +702,18 @@ body.body__toppage {
       margin-top: 38px;
       margin-left: 32px;
 
-      @include sp(479px) {
-        /* スマートフォン画面 */
-        width: clamp_vw_sp(380);
+      @include sp_b(599px) {
+        /* スマートフォン横画面 */
+        width: clamp_vw_sp_b(480);
         margin: 0 auto;
-        margin-left: clamp_vw_sp(55);
+        margin-left: clamp_vw_sp_b(55);
+      }
+
+      @include sp_v(479px) {
+        /* スマートフォン縦画面 */
+        width: clamp_vw_sp_v(380);
+        margin: 0 auto;
+        margin-left: clamp_vw_sp_v(55);
       }
 
       p.thirdline__text {
@@ -500,15 +722,24 @@ body.body__toppage {
         letter-spacing: -0.18px;
         line-height: 38px;
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
-          margin-top: clamp_vw_sp(30);
-          font-size: clamp_vw_sp(16);
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          font-size: clamp_vw_sp_b(16);
           text-align: center;
-          line-height: clamp_vw_sp(36);
-          letter-spacing: clamp_vw_sp(-2);
-          text-align:left;
-          line-height: clamp_vw_sp(35);
+          line-height: clamp_vw_sp_b(36);
+          letter-spacing: clamp_vw_sp_b(-2);
+          text-align: left;
+          margin-top: clamp_vw_sp_b(30);
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
+          font-size: clamp_vw_sp_v(16);
+          text-align: center;
+          line-height: clamp_vw_sp_v(36);
+          letter-spacing: clamp_vw_sp_v(-2);
+          text-align: left;
+          margin-top: clamp_vw_sp_v(30);
         }
       }
     }
@@ -520,10 +751,20 @@ body.body__toppage {
       background: url("../images/belief.jpg");
       background-size: cover;
 
-      @include sp(479px) {
-        /* スマートフォン画面 */
-        width: clamp_vw_sp(479);
-        height:  clamp_vw_sp(400);
+      @include sp_b(599px) {
+        /* スマートフォン横画面 */
+        width: clamp_vw_sp_b(520);
+        height: clamp_vw_sp_b(400);
+        background: url("../images/belief.jpg") no-repeat;
+        background-size: contain;
+        margin: 0 auto;
+        margin-top: clamp_vw_sp_b(30);
+      }
+
+      @include sp_v(479px) {
+        /* スマートフォン縦画面 */
+        width: clamp_vw_sp_v(479);
+        height: clamp_vw_sp_v(400);
         background: url("../images/belief.jpg") no-repeat;
         background-size: contain;
         margin-top: 0px;
@@ -538,10 +779,18 @@ body.body__toppage {
     height: 1520px;
     background-color: #f5fcf8;
 
-    @include sp(479px) {
-      /* スマートフォン画面 */
-      width: clamp_vw_sp(479);
-      height: clamp_vw_sp(2800);
+    @include sp_b(599px) {
+      /* スマートフォン横画面 */
+      width: clamp_vw_sp_b(599);
+      height: clamp_vw_sp_b(2800);
+      height: auto;
+      background-color: #f5fcf8;
+    }
+
+    @include sp_v(479px) {
+      /* スマートフォン縦画面 */
+      width: clamp_vw_sp_v(479);
+      height: clamp_vw_sp_v(2800);
       height: auto;
       background-color: #f5fcf8;
     }
@@ -552,10 +801,16 @@ body.body__toppage {
       padding-top: 82px;
       background: linear-gradient(transparent 90%, rgb(134, 235, 134) 90%);
 
-      @include sp(479px) {
-        /* スマートフォン画面 */
-        width: clamp_vw_sp(96);
-        padding-top: clamp_vw_sp(85);
+      @include sp_b(599px) {
+        /* スマートフォン横画面 */
+        width: clamp_vw_sp_b(96);
+        padding-top: clamp_vw_sp_b(85);
+      }
+
+      @include sp_v(479px) {
+        /* スマートフォン縦画面 */
+        width: clamp_vw_sp_v(96);
+        padding-top: clamp_vw_sp_v(85);
       }
 
       h2.treatment-content--title {
@@ -564,9 +819,14 @@ body.body__toppage {
         font-weight: 500;
         text-align: center;
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
-          font-size: clamp_vw_sp(24);
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          font-size: clamp_vw_sp_b(24);
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
+          font-size: clamp_vw_sp_v(24);
         }
       }
     }
@@ -576,20 +836,32 @@ body.body__toppage {
     width: 448px;
     margin: 71px auto 0 auto;
 
-    @include sp(479px) {
-      /* スマートフォン画面 */
-      width: clamp_vw_sp(320);
+    @include sp_b(599px) {
+      /* スマートフォン横画面 */
+      width: clamp_vw_sp_b(320);
       margin: 0 auto;
-      padding-top: clamp_vw_sp(65);
+      padding-top: clamp_vw_sp_b(65);
+    }
+
+    @include sp_v(479px) {
+      /* スマートフォン縦画面 */
+      width: clamp_vw_sp_v(320);
+      margin: 0 auto;
+      padding-top: clamp_vw_sp_v(65);
     }
 
     p.treatment-content__supplement--text {
       font-size: 16px;
       letter-spacing: 0px;
 
-      @include sp(479px) {
-        /* スマートフォン画面 */
-        letter-spacing: clamp_vw_sp(2.5);
+      @include sp_b(599px) {
+        /* スマートフォン横画面 */
+        letter-spacing: clamp_vw_sp_b(2.5);
+      }
+
+      @include sp_v(479px) {
+        /* スマートフォン縦画面 */
+        letter-spacing: clamp_vw_sp_v(2.5);
       }
     }
   }
@@ -600,11 +872,18 @@ body.body__toppage {
     flex-wrap: wrap;
     justify-content: center;
 
-    @include sp(479px) {
-      /* スマートフォン画面 */
+    @include sp_b(599px) {
+      /* スマートフォン横画面 */
       margin: 0;
-      width: clamp_vw_sp(479);
-      margin-top: clamp_vw_sp(50);
+      width: clamp_vw_sp_b(599);
+      margin-top: clamp_vw_sp_b(50);
+    }
+
+    @include sp_v(479px) {
+      /* スマートフォン縦画面 */
+      margin: 0;
+      width: clamp_vw_sp_v(479);
+      margin-top: clamp_vw_sp_v(50);
     }
 
     article.medical_subjects {
@@ -616,30 +895,48 @@ body.body__toppage {
       position: relative;
       background-color: rgb(255, 255, 255);
 
-      @include sp(479px) {
-        /* スマートフォン画面 */
-        width: clamp_vw_sp(400);
-        height: clamp_vw_sp(575);
-        margin-top: clamp_vw_sp(30);
+      @include sp_b(599px) {
+        /* スマートフォン横画面 */
+        width: clamp_vw_sp_b(500);
+        height: clamp_vw_sp_b(575);
+        margin-top: clamp_vw_sp_b(30);
+      }
+
+      @include sp_v(479px) {
+        /* スマートフォン縦画面 */
+        width: clamp_vw_sp_v(400);
+        height: clamp_vw_sp_v(575);
+        margin-top: clamp_vw_sp_v(30);
       }
 
       div.medical_subject__title {
         width: 192px;
         margin: 41px 94px 0 94px;
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
           margin: 0 auto;
-          margin-top: clamp_vw_sp(35);
+          margin-top: clamp_vw_sp_b(35);
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
+          margin: 0 auto;
+          margin-top: clamp_vw_sp_v(35);
         }
 
         h3 {
           font-size: 24px;
           font-weight: 500;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
-            font-size: clamp_vw_sp(24);
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            font-size: clamp_vw_sp_b(24);
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            font-size: clamp_vw_sp_v(24);
           }
         }
       }
@@ -648,11 +945,18 @@ body.body__toppage {
         width: 320px;
         margin: 42px 29px 111px 31px;
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
-          width: clamp_vw_sp(350);
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          width: clamp_vw_sp_b(500);
           margin: 0 auto;
-          margin-top: clamp_vw_sp(35);
+          margin-top: clamp_vw_sp_b(35);
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
+          width: clamp_vw_sp_v(350);
+          margin: 0 auto;
+          margin-top: clamp_vw_sp_v(35);
         }
 
         p.description__left {
@@ -661,12 +965,20 @@ body.body__toppage {
           letter-spacing: -0.11px;
           line-height: 38px;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
-            font-size: clamp_vw_sp(18);
-            letter-spacing: clamp_vw_sp(-3);
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            font-size: clamp_vw_sp_b(18);
+            letter-spacing: clamp_vw_sp_b(0);
+            text-align: center;
+            line-height: clamp_vw_sp_b(38);
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            font-size: clamp_vw_sp_v(18);
+            letter-spacing: clamp_vw_sp_v(-3);
             text-align: left;
-            line-height: clamp_vw_sp(38);
+            line-height: clamp_vw_sp_v(38);
           }
         }
 
@@ -678,12 +990,20 @@ body.body__toppage {
           line-height: 39px;
           margin-left: 5px;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
-            font-size: clamp_vw_sp(18);
-            letter-spacing: clamp_vw_sp(-3);
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            font-size: clamp_vw_sp_b(18);
+            letter-spacing: clamp_vw_sp_b(0);
+            text-align: center;
+            line-height: clamp_vw_sp_b(38);
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            font-size: clamp_vw_sp_v(18);
+            letter-spacing: clamp_vw_sp_v(-3);
             text-align: left;
-            line-height: clamp_vw_sp(38);
+            line-height: clamp_vw_sp_v(38);
           }
         }
 
@@ -695,12 +1015,20 @@ body.body__toppage {
           line-height: 38px;
           margin-left: -3px;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
-            font-size: clamp_vw_sp(18);
-            letter-spacing: clamp_vw_sp(-3);
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            font-size: clamp_vw_sp_b(18);
+            letter-spacing: clamp_vw_sp_b(0);
+            text-align: center;
+            line-height: clamp_vw_sp_b(38);
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            font-size: clamp_vw_sp_v(18);
+            letter-spacing: clamp_vw_sp_v(-3);
             text-align: left;
-            line-height: clamp_vw_sp(38);
+            line-height: clamp_vw_sp_v(38);
           }
         }
       }
@@ -715,10 +1043,19 @@ body.body__toppage {
         left: 50%;
         transform: translate(-50%, -50%);
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
-          width: clamp_vw_sp(230);
-          height: clamp_vw_sp(230);
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          width: clamp_vw_sp_b(230);
+          height: clamp_vw_sp_b(230);
+          background: url("../images/g0108.jpg");
+          background-size: cover;
+          top: 77%;
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
+          width: clamp_vw_sp_v(230);
+          height: clamp_vw_sp_v(230);
           background: url("../images/g0108.jpg");
           background-size: cover;
           top: 77%;
@@ -735,10 +1072,19 @@ body.body__toppage {
         left: 50%;
         transform: translate(-50%, -50%);
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
-          width: clamp_vw_sp(230);
-          height: clamp_vw_sp(230);
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          width: clamp_vw_sp_b(230);
+          height: clamp_vw_sp_b(230);
+          background: url("../images/g0099.jpg");
+          background-size: cover;
+          top: 77%;
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
+          width: clamp_vw_sp_v(230);
+          height: clamp_vw_sp_v(230);
           background: url("../images/g0099.jpg");
           background-size: cover;
           top: 77%;
@@ -755,10 +1101,19 @@ body.body__toppage {
         left: 50%;
         transform: translate(-50%, -50%);
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
-          width: clamp_vw_sp(230);
-          height: clamp_vw_sp(230);
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          width: clamp_vw_sp_b(230);
+          height: clamp_vw_sp_b(230);
+          background: url("../images/g0092.jpg");
+          background-size: cover;
+          top: 77%;
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
+          width: clamp_vw_sp_v(230);
+          height: clamp_vw_sp_v(230);
           background: url("../images/g0092.jpg");
           background-size: cover;
           top: 77%;
@@ -771,11 +1126,18 @@ body.body__toppage {
     width: 100px;
     margin: 84px auto 0px auto;
 
-    @include sp(479px) {
-      /* スマートフォン画面 */
-      width: clamp_vw_sp(100);
+    @include sp_b(599px) {
+      /* スマートフォン横画面 */
+      width: clamp_vw_sp_b(100);
       margin: 0 auto;
-      margin-top: clamp_vw_sp(90);
+      margin-top: clamp_vw_sp_b(90);
+    }
+
+    @include sp_v(479px) {
+      /* スマートフォン縦画面 */
+      width: clamp_vw_sp_v(100);
+      margin: 0 auto;
+      margin-top: clamp_vw_sp_v(90);
     }
 
     h2.notice_title {
@@ -783,9 +1145,14 @@ body.body__toppage {
       background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
       font-weight: 500;
 
-      @include sp(479px) {
-        /* スマートフォン画面 */
-        font-size: clamp_vw_sp(24);
+      @include sp_b(599px) {
+        /* スマートフォン横画面 */
+        font-size: clamp_vw_sp_b(24);
+      }
+
+      @include sp_v(479px) {
+        /* スマートフォン縦画面 */
+        font-size: clamp_vw_sp_v(24);
       }
     }
   }
@@ -805,18 +1172,33 @@ body.body__toppage {
     flex-direction: column;
     flex-wrap: wrap;
 
-    @include sp(479px) {
-      /* スマートフォン画面 */
-      width: clamp_vw_sp(420);
+    @include sp_b(599px) {
+      /* スマートフォン横画面 */
+      width: clamp_vw_sp_b(540);
       height: auto;
       margin: 0 auto;
-      margin-top: clamp_vw_sp(50);
+      margin-top: clamp_vw_sp_v(50);
+    }
+
+    @include sp_v(479px) {
+      /* スマートフォン縦画面 */
+      width: clamp_vw_sp_v(420);
+      height: auto;
+      margin: 0 auto;
+      margin-top: clamp_vw_sp_v(50);
     }
 
     div.notice_container__margin_upper {
       height: 25px;
+      @include sp_b(599px) {
+        /* スマートフォン横画面 */
+        width: clamp_vw_sp_b(520);
+      }
+      @include sp_v(479px) {
+        /* スマートフォン縦画面 */
+        width: clamp_vw_sp_v(400);
+      }
     }
-
     article.notice_contents {
       border-bottom: 1px solid #e7e7e7;
       margin: 0px 66px 0px 66px;
@@ -825,11 +1207,19 @@ body.body__toppage {
       flex-wrap: nowrap;
       align-items: center;
 
-      @include sp(479px) {
-        /* スマートフォン画面 */
-        width: clamp_vw_sp(390);
-        margin-left: clamp_vw_sp(20);
-        margin-right: clamp_vw_sp(20);
+      @include sp_b(599px) {
+        /* スマートフォン横画面 */
+        width: clamp_vw_sp_b(490);
+        margin-left: clamp_vw_sp_b(20);
+        margin-right: clamp_vw_sp_b(20);
+        align-items: flex-start;
+      }
+
+      @include sp_v(479px) {
+        /* スマートフォン縦画面 */
+        width: clamp_vw_sp_v(390);
+        margin-left: clamp_vw_sp_v(20);
+        margin-right: clamp_vw_sp_v(20);
         align-items: flex-start;
       }
 
@@ -838,8 +1228,16 @@ body.body__toppage {
         flex-wrap: wrap;
         align-items: center;
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          width: clamp_vw_sp_b(120);
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
+          width: clamp_vw_sp_v(100);
           flex-direction: column;
           align-items: flex-start;
         }
@@ -854,11 +1252,21 @@ body.body__toppage {
           margin: 25.4px 36px 20.5px -2px;
           letter-spacing: 0px;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
-            font-size: clamp_vw_sp(16);
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            width: clamp_vw_sp_b(120);
+            font-size: clamp_vw_sp_b(16);
+            text-align: center;
             margin: 0;
-            margin-top: clamp_vw_sp(10);
+            margin-top: clamp_vw_sp_b(10);
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            width: clamp_vw_sp_v(100);
+            font-size: clamp_vw_sp_v(16);
+            margin: 0;
+            margin-top: clamp_vw_sp_v(10);
           }
         }
 
@@ -874,20 +1282,36 @@ body.body__toppage {
           line-height: 25px;
           margin-right: 30px;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
-            font-size: clamp_vw_sp(14);
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
             margin: 0;
-            margin-top: clamp_vw_sp(10);
-            margin-bottom: clamp_vw_sp(10);
+            width: clamp_vw_sp_b(120);
+            font-size: clamp_vw_sp_b(16);
+            text-align: center;
+            margin-top: clamp_vw_sp_b(10);
+            margin-bottom: clamp_vw_sp_b(10);
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            width: clamp_vw_sp_v(100);
+            font-size: clamp_vw_sp_v(14);
+            margin: 0;
+            margin-top: clamp_vw_sp_v(10);
+            margin-bottom: clamp_vw_sp_v(10);
           }
         }
       }
 
       div.notice_right__box {
-        @include sp(479px) {
-          /* スマートフォン画面 */
-          width: clamp_vw_sp(300);
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          width: clamp_vw_sp_b(350);
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
+          width: clamp_vw_sp_v(250);
         }
 
         p.notice_contents__infocontent {
@@ -896,13 +1320,24 @@ body.body__toppage {
           margin-left: 6px;
           letter-spacing: -0.1px;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
-            font-size: clamp_vw_sp(16);
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            width: clamp_vw_sp_b(320);
+            font-size: clamp_vw_sp_b(16);
             margin: 0;
-            margin-top: clamp_vw_sp(10);
-            margin-bottom: clamp_vw_sp(10);
-            margin-left: clamp_vw_sp(30);
+            margin-top: clamp_vw_sp_b(10);
+            margin-bottom: clamp_vw_sp_b(10);
+            margin-left: clamp_vw_sp_b(30);
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            width: clamp_vw_sp_v(250);
+            font-size: clamp_vw_sp_v(14);
+            margin: 0;
+            margin-top: clamp_vw_sp_v(10);
+            margin-bottom: clamp_vw_sp_v(10);
+            margin-left: clamp_vw_sp_v(30);
           }
         }
       }
@@ -912,10 +1347,17 @@ body.body__toppage {
       margin: 0px 54px 0px 60px;
       text-align: right;
 
-      @include sp(479px) {
-        /* スマートフォン画面 */
-        width: clamp_vw_sp(400);
-        height: clamp_vw_sp(100);
+      @include sp_b(599px) {
+        /* スマートフォン横画面 */
+        width: clamp_vw_sp_b(400);
+        height: clamp_vw_sp_b(100);
+        margin: 0;
+      }
+
+      @include sp_v(479px) {
+        /* スマートフォン縦画面 */
+        width: clamp_vw_sp_v(400);
+        height: clamp_vw_sp_v(100);
         margin: 0;
       }
 
@@ -925,12 +1367,20 @@ body.body__toppage {
         text-align: right;
         font-size: 0; // display: inline-block;ズレ対策
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
-          width: clamp_vw_sp(400);
-          height: clamp_vw_sp(100);
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          width: clamp_vw_sp_b(400);
+          height: clamp_vw_sp_b(100);
           margin: 0;
-          margin-top: clamp_vw_sp(40);
+          margin-top: clamp_vw_sp_b(40);
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
+          width: clamp_vw_sp_v(400);
+          height: clamp_vw_sp_v(100);
+          margin: 0;
+          margin-top: clamp_vw_sp_v(40);
         }
 
         p.seeall_text {
@@ -942,11 +1392,18 @@ body.body__toppage {
           letter-spacing: 1.2px;
           margin-right: 2px;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
-            font-size: clamp_vw_sp(16);
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            font-size: clamp_vw_sp_b(16);
             margin: 0;
-            margin-right: clamp_vw_sp(7);
+            margin-right: clamp_vw_sp_b(7);
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            font-size: clamp_vw_sp_v(16);
+            margin: 0;
+            margin-right: clamp_vw_sp_v(7);
           }
         }
 
@@ -957,11 +1414,15 @@ body.body__toppage {
           display: inline-block;
           margin-top: 35px;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
-            font-size: clamp_vw_sp(14);
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            font-size: clamp_vw_sp_v(14);
             margin: 0;
-            margin-right: clamp_vw_sp(50);
+            margin-right: clamp_vw_sp_v(50);
           }
         }
       }
@@ -978,9 +1439,18 @@ body.body__toppage {
     flex-wrap: wrap;
     align-items: flex-start;
 
-    @include sp(479px) {
-      /* スマートフォン画面 */
-      width: clamp_vw_sp(479);
+    @include sp_b(599px) {
+      /* スマートフォン横画面 */
+      width: clamp_vw_sp_b(589);
+      height: auto;
+      flex-direction: column-reverse;
+      padding: 0;
+      margin: 0;
+    }
+
+    @include sp_v(479px) {
+      /* スマートフォン縦画面 */
+      width: clamp_vw_sp_v(479);
       height: auto;
       flex-direction: column-reverse;
       padding: 0;
@@ -990,23 +1460,37 @@ body.body__toppage {
     div.copyright_reserved__box--sp {
       visibility: hidden;
 
-      @include sp(479px) {
-        /* スマートフォン画面 */
+      @include sp_b(599px) {
+        /* スマートフォン横画面 */
         visibility: visible;
-        width: clamp_vw_sp(400);
-
+        width: clamp_vw_sp_b(500);
         margin: 0 auto;
-        margin-top: clamp_vw_sp(30);
+        margin-top: clamp_vw_sp_b(30);
+        text-align: center;
+      }
+
+      @include sp_v(479px) {
+        /* スマートフォン縦画面 */
+        visibility: visible;
+        width: clamp_vw_sp_v(400);
+        margin: 0 auto;
+        margin-top: clamp_vw_sp_v(30);
         text-align: center;
       }
 
       small.copyright_reserved__text--sp {
         visibility: hidden;
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
           visibility: visible;
-          font-size: clamp_vw_sp(14);
+          font-size: clamp_vw_sp_b(14);
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
+          visibility: visible;
+          font-size: clamp_vw_sp_v(14);
         }
       }
     }
@@ -1016,7 +1500,12 @@ body.body__toppage {
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
-
+      @include sp_b(599px) {
+        width: clamp_vw_sp_b(599);
+      }
+      @include sp_v(479px) {
+        width: clamp_vw_sp_v(479);
+      }
       div.map_box {
         width: 608px;
         height: 440px;
@@ -1026,14 +1515,24 @@ body.body__toppage {
         background-position: center;
         background-size: cover;
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
-          width: clamp_vw_sp(420);
-          height: clamp_vw_sp(310);
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          width: clamp_vw_sp_b(559);
+          height: clamp_vw_sp_b(500);
           background: url("../images/map.jpg") no-repeat;
           background-size: contain;
           margin: 0 auto;
-          margin-top: clamp_vw_sp(30);
+          margin-top: clamp_vw_sp_b(30);
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
+          width: clamp_vw_sp_v(420);
+          height: clamp_vw_sp_v(310);
+          background: url("../images/map.jpg") no-repeat;
+          background-size: contain;
+          margin: 0 auto;
+          margin-top: clamp_vw_sp_v(30);
         }
       }
 
@@ -1047,12 +1546,21 @@ body.body__toppage {
         flex-wrap: wrap;
         align-items: flex-start;
 
-        @include sp(479px) {
-          /* スマートフォン画面 */
-          width: clamp_vw_sp(420);
+        @include sp_b(599px) {
+          /* スマートフォン横画面 */
+          width: clamp_vw_sp_b(599);
           height: auto;
           margin: 0 auto;
-          margin-top: clamp_vw_sp(120);
+          margin-top: clamp_vw_sp_b(90);
+          flex-wrap: nowrap;
+        }
+
+        @include sp_v(479px) {
+          /* スマートフォン縦画面 */
+          width: clamp_vw_sp_v(420);
+          height: auto;
+          margin: 0 auto;
+          margin-top: clamp_vw_sp_v(120);
           flex-wrap: nowrap;
         }
 
@@ -1062,8 +1570,15 @@ body.body__toppage {
           display: flex;
           flex-wrap: wrap;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            width: 100%;
+            margin-left: 0px;
+            margin: 0 auto;
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
             width: 100%;
             margin-left: 0px;
             margin: 0 auto;
@@ -1075,11 +1590,18 @@ body.body__toppage {
             background: url("../images/病院の地図マーク.jpg");
             background-size: cover;
 
-            @include sp(479px) {
-              /* スマートフォン画面 */
-              width: clamp_vw_sp(73);
-              height: clamp_vw_sp(73);
-              margin-left: clamp_vw_sp(73);
+            @include sp_b(599px) {
+              /* スマートフォン横画面 */
+              width: clamp_vw_sp_b(73);
+              height: clamp_vw_sp_b(73);
+              margin-left: clamp_vw_sp_b(145);
+            }
+
+            @include sp_v(479px) {
+              /* スマートフォン縦画面 */
+              width: clamp_vw_sp_v(73);
+              height: clamp_vw_sp_v(73);
+              margin-left: clamp_vw_sp_v(73);
             }
           }
 
@@ -1087,11 +1609,18 @@ body.body__toppage {
             width: 200x;
             height: 73px;
 
-            @include sp(479px) {
-              /* スマートフォン画面 */
-              width: clamp_vw_sp(200);
-              height: clamp_vw_sp(73);
-              margin-left: clamp_vw_sp(15);
+            @include sp_b(599px) {
+              /* スマートフォン横画面 */
+              width: clamp_vw_sp_b(200);
+              height: clamp_vw_sp_b(73);
+              margin-left: clamp_vw_sp_b(15);
+            }
+
+            @include sp_v(479px) {
+              /* スマートフォン縦画面 */
+              width: clamp_vw_sp_v(200);
+              height: clamp_vw_sp_v(73);
+              margin-left: clamp_vw_sp_v(15);
             }
 
             p.tagline_box--upperline {
@@ -1099,11 +1628,18 @@ body.body__toppage {
               line-height: 26px;
               padding-left: 11px;
 
-              @include sp(479px) {
-                /* スマートフォン画面 */
-                font-size: clamp_vw_sp(30);
-                line-height: clamp_vw_sp(30);
-                padding-left: clamp_vw_sp(11);
+              @include sp_b(599px) {
+                /* スマートフォン横画面 */
+                font-size: clamp_vw_sp_b(30);
+                line-height: clamp_vw_sp_b(30);
+                padding-left: clamp_vw_sp_b(11);
+              }
+
+              @include sp_v(479px) {
+                /* スマートフォン縦画面 */
+                font-size: clamp_vw_sp_v(30);
+                line-height: clamp_vw_sp_v(30);
+                padding-left: clamp_vw_sp_v(11);
               }
             }
 
@@ -1112,12 +1648,20 @@ body.body__toppage {
               line-height: 55px;
               padding-left: 26px;
 
-              @include sp(479px) {
-                /* スマートフォン画面 */
-                font-size: clamp_vw_sp(30);
-                line-height: clamp_vw_sp(30);
-                padding-left: clamp_vw_sp(26);
-                margin-top: clamp_vw_sp(16);
+              @include sp_b(599px) {
+                /* スマートフォン横画面 */
+                font-size: clamp_vw_sp_b(30);
+                line-height: clamp_vw_sp_b(30);
+                padding-left: clamp_vw_sp_b(26);
+                margin-top: clamp_vw_sp_b(16);
+              }
+
+              @include sp_v(479px) {
+                /* スマートフォン縦画面 */
+                font-size: clamp_vw_sp_v(30);
+                line-height: clamp_vw_sp_v(30);
+                padding-left: clamp_vw_sp_v(26);
+                margin-top: clamp_vw_sp_v(16);
               }
             }
           }
@@ -1129,11 +1673,21 @@ body.body__toppage {
           flex-wrap: wrap;
           background-color: white;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
             width: 100%;
             margin: 0 auto;
-            margin-top: clamp_vw_sp(30);
+            margin-top: clamp_vw_sp_b(30);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            width: 100%;
+            margin: 0 auto;
+            margin-top: clamp_vw_sp_v(30);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1144,9 +1698,15 @@ body.body__toppage {
             margin-right: 16px;
             letter-spacing: 0.1px;
 
-            @include sp(479px) {
-              /* スマートフォン画面 */
-              font-size: clamp_vw_sp(16);
+            @include sp_b(599px) {
+              /* スマートフォン横画面 */
+              font-size: clamp_vw_sp_b(16);
+              display: inline-block;
+            }
+
+            @include sp_v(479px) {
+              /* スマートフォン縦画面 */
+              font-size: clamp_vw_sp_v(16);
               display: inline-block;
             }
           }
@@ -1155,11 +1715,18 @@ body.body__toppage {
             font-size: 16px;
             letter-spacing: 0px;
 
-            @include sp(479px) {
-              /* スマートフォン画面 */
-              font-size: clamp_vw_sp(18);
+            @include sp_b(599px) {
+              /* スマートフォン横画面 */
+              font-size: clamp_vw_sp_b(18);
               display: inline-block;
-              margin-top: clamp_vw_sp(10);
+              margin-top: clamp_vw_sp_b(10);
+            }
+
+            @include sp_v(479px) {
+              /* スマートフォン縦画面 */
+              font-size: clamp_vw_sp_v(18);
+              display: inline-block;
+              margin-top: clamp_vw_sp_v(10);
             }
           }
         }
@@ -1171,11 +1738,20 @@ body.body__toppage {
           margin-top: 30px;
           font-size: 0; // display: inline-block;ズレ対策
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
             width: 80%;
             margin: 0 auto;
-            margin-top: clamp_vw_sp(25);
+            margin-top: clamp_vw_sp_b(15);
+            display: flex;
+            justify-content: center;
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            width: 80%;
+            margin: 0 auto;
+            margin-top: clamp_vw_sp_v(25);
             display: flex;
             justify-content: center;
           }
@@ -1190,8 +1766,13 @@ body.body__toppage {
             margin-right: 15px;
             margin-top: 4px;
 
-            @include sp(479px) {
-              /* スマートフォン画面 */
+            @include sp_b(599px) {
+              /* スマートフォン横画面 */
+              margin: 0;
+            }
+
+            @include sp_v(479px) {
+              /* スマートフォン縦画面 */
               margin: 0;
             }
           }
@@ -1216,8 +1797,14 @@ body.body__toppage {
           border-color: #e7e7e7;
           background-color: rgb(255, 255, 255);
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            width: 100%;
+            margin: 0 auto;
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
             width: 100%;
             margin: 0 auto;
           }
@@ -1227,8 +1814,15 @@ body.body__toppage {
           height: 15px;
           width: 533px;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            height: clamp_vw_sp_b(20);
+            width: 100%;
+            margin: 0 auto;
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
             width: 100%;
             margin: 0 auto;
           }
@@ -1242,10 +1836,18 @@ body.body__toppage {
           flex-direction: column;
           flex-wrap: wrap;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
-            width: clamp_vw_sp(420);
-            height: clamp_vw_sp(170);
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            width: clamp_vw_sp_b(599);
+            height: auto;
+            flex-direction: row;
+            justify-content: flex-start;
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            width: clamp_vw_sp_v(420);
+            height: clamp_vw_sp_v(170);
             flex-direction: row;
             justify-content: flex-start;
           }
@@ -1256,9 +1858,15 @@ body.body__toppage {
             border-right: 1px solid;
             border-color: #e7e7e7;
 
-            @include sp(479px) {
-              /* スマートフォン画面 */
-              width: clamp_vw_sp(120);
+            @include sp_b(599px) {
+              /* スマートフォン横画面 */
+              width: clamp_vw_sp_b(120);
+              height: auto;
+            }
+
+            @include sp_v(479px) {
+              /* スマートフォン縦画面 */
+              width: clamp_vw_sp_v(120);
               height: auto;
             }
 
@@ -1267,10 +1875,17 @@ body.body__toppage {
               margin-top: 8px;
               margin-left: 4.5px;
 
-              @include sp(479px) {
-                /* スマートフォン画面 */
-                font-size: clamp_vw_sp(14);
-                margin-top: clamp_vw_sp(38);
+              @include sp_b(599px) {
+                /* スマートフォン横画面 */
+                font-size: clamp_vw_sp_b(16);
+                margin-top: clamp_vw_sp_b(38);
+                text-align: center;
+              }
+
+              @include sp_v(479px) {
+                /* スマートフォン縦画面 */
+                font-size: clamp_vw_sp_v(14);
+                margin-top: clamp_vw_sp_v(38);
                 text-align: center;
               }
             }
@@ -1283,9 +1898,15 @@ body.body__toppage {
             flex-direction: column;
             flex-wrap: wrap;
 
-            @include sp(479px) {
-              /* スマートフォン画面 */
-              width: clamp_vw_sp(200);
+            @include sp_b(599px) {
+              /* スマートフォン横画面 */
+              width: clamp_vw_sp_b(400);
+              height: auto;
+            }
+
+            @include sp_v(479px) {
+              /* スマートフォン縦画面 */
+              width: clamp_vw_sp_v(200);
               height: auto;
             }
 
@@ -1295,9 +1916,17 @@ body.body__toppage {
               flex-wrap: wrap;
               font-size: 0; // display: inline-block;ズレ対策
 
-              @include sp(479px) {
-                /* スマートフォン画面 */
-                width: clamp_vw_sp(300);
+              @include sp_b(599px) {
+                /* スマートフォン横画面 */
+                width: clamp_vw_sp_b(450);
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                margin: 0;
+              }
+
+              @include sp_v(479px) {
+                /* スマートフォン縦画面 */
+                width: clamp_vw_sp_v(300);
                 flex-wrap: nowrap;
                 justify-content: flex-start;
                 margin: 0;
@@ -1309,20 +1938,36 @@ body.body__toppage {
                 width: 42px;
                 margin: 9px 23px 0 35px;
 
-                @include sp(479px) {
-                  /* スマートフォン画面 */
-                  font-size: clamp_vw_sp(14);
+                @include sp_b(599px) {
+                  /* スマートフォン横画面 */
+                  width: clamp_vw_sp_b(80);
+                  font-size: clamp_vw_sp_b(16);
                   margin: 0;
-                  margin-top: clamp_vw_sp(30);
-                  margin-right: clamp_vw_sp(20);
-                  margin-left: clamp_vw_sp(20);
+                  margin-top: clamp_vw_sp_b(30);
+                  margin-right: clamp_vw_sp_b(20);
+                  margin-left: clamp_vw_sp_b(40);
+                }
+
+                @include sp_v(479px) {
+                  /* スマートフォン縦画面 */
+                  font-size: clamp_vw_sp_v(14);
+                  margin: 0;
+                  margin-top: clamp_vw_sp_v(30);
+                  margin-right: clamp_vw_sp_v(20);
+                  margin-left: clamp_vw_sp_v(20);
                 }
               }
 
               div.morning_afternoon__wrap--upper {
-                @include sp(479px) {
-                  /* スマートフォン画面 */
-                  margin-top: clamp_vw_sp(23);
+                @include sp_b(599px) {
+                  /* スマートフォン横画面 */
+                  width: clamp_vw_sp_b(250);
+                  margin-top: clamp_vw_sp_b(23);
+                }
+
+                @include sp_v(479px) {
+                  /* スマートフォン縦画面 */
+                  margin-top: clamp_vw_sp_v(23);
                 }
 
                 p.morning_upper {
@@ -1332,13 +1977,23 @@ body.body__toppage {
                   margin: 8px 16px 0 0;
                   letter-spacing: 0px;
 
-                  @include sp(479px) {
-                    /* スマートフォン画面 */
-                    font-size: clamp_vw_sp(14);
+                  @include sp_b(599px) {
+                    /* スマートフォン横画面 */
+                    width: clamp_vw_sp_b(250);
+                    font-size: clamp_vw_sp_b(16);
+                    display: block;
+                    margin-top: clamp_vw_sp_b(8);
+                    margin-right: clamp_vw_sp_b(20);
+                    margin-left: clamp_vw_sp_b(20);
+                  }
+
+                  @include sp_v(479px) {
+                    /* スマートフォン縦画面 */
+                    font-size: clamp_vw_sp_v(14);
                     display: block;
                     margin: 0;
-                    margin-right: clamp_vw_sp(20);
-                    margin-left: clamp_vw_sp(20);
+                    margin-right: clamp_vw_sp_v(20);
+                    margin-left: clamp_vw_sp_v(20);
                   }
                 }
 
@@ -1348,13 +2003,23 @@ body.body__toppage {
                   width: 110px;
                   margin: 9px 16px 0 0;
 
-                  @include sp(479px) {
-                    /* スマートフォン画面 */
-                    font-size: clamp_vw_sp(14);
+                  @include sp_b(599px) {
+                    /* スマートフォン横画面 */
+                    width: clamp_vw_sp_b(250);
+                    font-size: clamp_vw_sp_b(16);
+                    display: block;
+                    margin-top: clamp_vw_sp_b(8);
+                    margin-right: clamp_vw_sp_b(20);
+                    margin-left: clamp_vw_sp_b(20);
+                  }
+
+                  @include sp_v(479px) {
+                    /* スマートフォン縦画面 */
+                    font-size: clamp_vw_sp_v(14);
                     display: block;
                     margin: 0;
-                    margin-right: clamp_vw_sp(20);
-                    margin-left: clamp_vw_sp(20);
+                    margin-right: clamp_vw_sp_v(20);
+                    margin-left: clamp_vw_sp_v(20);
                   }
                 }
               }
@@ -1365,21 +2030,38 @@ body.body__toppage {
                 width: 42px;
                 margin: 16px 23px 0 33px;
 
-                @include sp(479px) {
-                  /* スマートフォン画面 */
-                  font-size: clamp_vw_sp(14);
+                @include sp_b(599px) {
+                  /* スマートフォン横画面 */
+                  width: clamp_vw_sp_b(80);
+                  font-size: clamp_vw_sp_b(16);
                   margin: 0;
-                  margin-top: clamp_vw_sp(30);
-                  margin-right: clamp_vw_sp(20);
-                  margin-left: clamp_vw_sp(20);
+                  margin-top: clamp_vw_sp_b(30);
+                  margin-right: clamp_vw_sp_b(20);
+                  margin-left: clamp_vw_sp_b(40);
+                }
+
+                @include sp_v(479px) {
+                  /* スマートフォン縦画面 */
+                  font-size: clamp_vw_sp_v(14);
+                  margin: 0;
+                  margin-top: clamp_vw_sp_v(30);
+                  margin-right: clamp_vw_sp_v(20);
+                  margin-left: clamp_vw_sp_v(20);
                 }
               }
 
               div.morning_afternoon__wrap--middle {
-                @include sp(479px) {
-                  /* スマートフォン画面 */
-                  font-size: clamp_vw_sp(14);
-                  margin-top: clamp_vw_sp(20);
+                @include sp_b(599px) {
+                  /* スマートフォン横画面 */
+                  width: clamp_vw_sp_b(250);
+                  font-size: clamp_vw_sp_b(16);
+                  margin-top: clamp_vw_sp_b(20);
+                }
+
+                @include sp_v(479px) {
+                  /* スマートフォン縦画面 */
+                  font-size: clamp_vw_sp_v(14);
+                  margin-top: clamp_vw_sp_v(20);
                 }
 
                 p.morning_middle {
@@ -1388,13 +2070,23 @@ body.body__toppage {
                   width: 105px;
                   margin: 16px 16px 0 0;
 
-                  @include sp(479px) {
-                    /* スマートフォン画面 */
-                    font-size: clamp_vw_sp(14);
+                  @include sp_b(599px) {
+                    /* スマートフォン横画面 */
+                    width: clamp_vw_sp_b(250);
+                    font-size: clamp_vw_sp_b(16);
+                    display: block;
+                    margin-top: clamp_vw_sp_b(8);
+                    margin-right: clamp_vw_sp_b(20);
+                    margin-left: clamp_vw_sp_b(20);
+                  }
+
+                  @include sp_v(479px) {
+                    /* スマートフォン縦画面 */
+                    font-size: clamp_vw_sp_v(14);
                     display: block;
                     margin: 0;
-                    margin-right: clamp_vw_sp(20);
-                    margin-left: clamp_vw_sp(20);
+                    margin-right: clamp_vw_sp_v(20);
+                    margin-left: clamp_vw_sp_v(20);
                   }
                 }
 
@@ -1404,13 +2096,23 @@ body.body__toppage {
                   width: 110px;
                   margin: 16px 16px 0 0;
 
-                  @include sp(479px) {
-                    /* スマートフォン画面 */
-                    font-size: clamp_vw_sp(14);
+                  @include sp_b(599px) {
+                    /* スマートフォン横画面 */
+                    width: clamp_vw_sp_b(250);
+                    font-size: clamp_vw_sp_b(16);
+                    display: block;
+                    margin-top: clamp_vw_sp_b(8);
+                    margin-right: clamp_vw_sp_b(20);
+                    margin-left: clamp_vw_sp_b(20);
+                  }
+
+                  @include sp_v(479px) {
+                    /* スマートフォン縦画面 */
+                    font-size: clamp_vw_sp_v(14);
                     display: block;
                     margin: 0;
-                    margin-right: clamp_vw_sp(20);
-                    margin-left: clamp_vw_sp(20);
+                    margin-right: clamp_vw_sp_v(20);
+                    margin-left: clamp_vw_sp_v(20);
                   }
                 }
               }
@@ -1421,20 +2123,36 @@ body.body__toppage {
                 width: 42px;
                 margin: 17px 23px 0 33px;
 
-                @include sp(479px) {
-                  /* スマートフォン画面 */
-                  font-size: clamp_vw_sp(14);
+                @include sp_b(599px) {
+                  /* スマートフォン横画面 */
+                  width: clamp_vw_sp_b(80);
+                  font-size: clamp_vw_sp_b(16);
                   margin: 0;
-                  margin-top: clamp_vw_sp(30);
-                  margin-right: clamp_vw_sp(20);
-                  margin-left: clamp_vw_sp(20);
+                  margin-top: clamp_vw_sp_b(30);
+                  margin-right: clamp_vw_sp_b(20);
+                  margin-left: clamp_vw_sp_b(40);
+                }
+
+                @include sp_v(479px) {
+                  /* スマートフォン縦画面 */
+                  font-size: clamp_vw_sp_v(14);
+                  margin: 0;
+                  margin-top: clamp_vw_sp_v(30);
+                  margin-right: clamp_vw_sp_v(20);
+                  margin-left: clamp_vw_sp_v(20);
                 }
               }
 
               div.morning_afternoon__wrap--lower {
-                @include sp(479px) {
-                  /* スマートフォン画面 */
-                  margin-top: clamp_vw_sp(20);
+                @include sp_b(599px) {
+                  /* スマートフォン横画面 */
+                  width: clamp_vw_sp_b(250);
+                  margin-top: clamp_vw_sp_b(20);
+                }
+
+                @include sp_v(479px) {
+                  /* スマートフォン縦画面 */
+                  margin-top: clamp_vw_sp_v(20);
                 }
 
                 p.morning_lower {
@@ -1443,13 +2161,23 @@ body.body__toppage {
                   width: 105px;
                   margin: 16px 16px 0 0;
 
-                  @include sp(479px) {
-                    /* スマートフォン画面 */
-                    font-size: clamp_vw_sp(14);
+                  @include sp_b(599px) {
+                    /* スマートフォン横画面 */
+                    width: clamp_vw_sp_b(250);
+                    font-size: clamp_vw_sp_b(16);
+                    display: block;
+                    margin-top: clamp_vw_sp_b(8);
+                    margin-right: clamp_vw_sp_b(20);
+                    margin-left: clamp_vw_sp_b(20);
+                  }
+
+                  @include sp_v(479px) {
+                    /* スマートフォン縦画面 */
+                    font-size: clamp_vw_sp_v(14);
                     display: block;
                     margin: 0;
-                    margin-right: clamp_vw_sp(20);
-                    margin-left: clamp_vw_sp(20);
+                    margin-right: clamp_vw_sp_v(20);
+                    margin-left: clamp_vw_sp_v(20);
                   }
                 }
 
@@ -1459,13 +2187,23 @@ body.body__toppage {
                   width: 110px;
                   margin: 16px 16px 0 0;
 
-                  @include sp(479px) {
-                    /* スマートフォン画面 */
-                    font-size: clamp_vw_sp(14);
+                  @include sp_b(599px) {
+                    /* スマートフォン横画面 */
+                    width: clamp_vw_sp_b(250);
+                    font-size: clamp_vw_sp_b(16);
+                    display: block;
+                    margin-top: clamp_vw_sp_b(8);
+                    margin-right: clamp_vw_sp_b(20);
+                    margin-left: clamp_vw_sp_b(20);
+                  }
+
+                  @include sp_v(479px) {
+                    /* スマートフォン縦画面 */
+                    font-size: clamp_vw_sp_v(14);
                     display: block;
                     margin: 0;
-                    margin-right: clamp_vw_sp(20);
-                    margin-left: clamp_vw_sp(20);
+                    margin-right: clamp_vw_sp_v(20);
+                    margin-left: clamp_vw_sp_v(20);
                   }
                 }
               }
@@ -1480,10 +2218,16 @@ body.body__toppage {
           flex-direction: column;
           flex-wrap: wrap;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
-            width: clamp_vw_sp(420);
-            margin-top: clamp_vw_sp(10);
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            width: clamp_vw_sp_b(420);
+            margin-top: clamp_vw_sp_b(10);
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            width: clamp_vw_sp_v(420);
+            margin-top: clamp_vw_sp_v(10);
           }
 
           div.closed_day__box {
@@ -1492,18 +2236,30 @@ body.body__toppage {
             border-right: 1px solid;
             border-color: #e7e7e7;
 
-            @include sp(479px) {
-              /* スマートフォン画面 */
-              width: clamp_vw_sp(120);
-              font-size: clamp_vw_sp(14);
+            @include sp_b(599px) {
+              /* スマートフォン横画面 */
+              width: clamp_vw_sp_b(120);
+              font-size: clamp_vw_sp_b(16);
+            }
+
+            @include sp_v(479px) {
+              /* スマートフォン縦画面 */
+              width: clamp_vw_sp_v(120);
+              font-size: clamp_vw_sp_v(14);
             }
 
             p.closed_day {
               margin-top: 14px;
               margin-left: 4.5px;
 
-              @include sp(479px) {
-                /* スマートフォン画面 */
+              @include sp_b(599px) {
+                /* スマートフォン横画面 */
+                margin: 0;
+                text-align: center;
+              }
+
+              @include sp_v(479px) {
+                /* スマートフォン縦画面 */
                 margin: 0;
                 text-align: center;
               }
@@ -1518,9 +2274,14 @@ body.body__toppage {
           flex-direction: column;
           flex-wrap: wrap;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
-            width: clamp_vw_sp(250);
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            width: clamp_vw_sp_b(250);
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
+            width: clamp_vw_sp_v(250);
           }
 
           div.closed__dayofweek {
@@ -1529,9 +2290,16 @@ body.body__toppage {
             margin-top: 15px;
             margin-left: 34px;
 
-            @include sp(479px) {
-              /* スマートフォン画面 */
-              font-size: clamp_vw_sp(14);
+            @include sp_b(599px) {
+              /* スマートフォン横画面 */
+              width: 100%;
+              font-size: clamp_vw_sp_b(16);
+              margin: 0 auto;
+            }
+
+            @include sp_v(479px) {
+              /* スマートフォン縦画面 */
+              font-size: clamp_vw_sp_v(14);
               margin: 0 auto;
             }
           }
@@ -1543,8 +2311,14 @@ body.body__toppage {
           border-bottom: 1px solid;
           border-color: #e7e7e7;
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            width: 100%;
+            margin: 0 auto;
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
             width: 100%;
             margin: 0 auto;
           }
@@ -1556,8 +2330,14 @@ body.body__toppage {
           text-align: right;
           font-size: 0; // display: inline-block;ズレ
 
-          @include sp(479px) {
-            /* スマートフォン画面 */
+          @include sp_b(599px) {
+            /* スマートフォン横画面 */
+            width: 100%;
+            margin: 0 auto;
+          }
+
+          @include sp_v(479px) {
+            /* スマートフォン縦画面 */
             width: 100%;
             margin: 0 auto;
           }
@@ -1568,9 +2348,15 @@ body.body__toppage {
             padding-right: 15px;
             display: inline-block;
 
-            @include sp(479px) {
-              /* スマートフォン画面 */
-              font-size: clamp_vw_sp(11);
+            @include sp_b(599px) {
+              /* スマートフォン横画面 */
+              font-size: clamp_vw_sp_b(11);
+              display: none;
+            }
+
+            @include sp_v(479px) {
+              /* スマートフォン縦画面 */
+              font-size: clamp_vw_sp_v(11);
               display: none;
             }
           }
