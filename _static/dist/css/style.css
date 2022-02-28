@@ -422,12 +422,11 @@ ul {
   list-style: none;
 }
 
-body.body__toppage {
+body.body-toppage {
   width: 100vw;
-  /* section */
 }
 @media (max-width: 599px) {
-  body.body__toppage {
+  body.body-toppage {
     /* スマートフォン横画面 */
     width: clamp(480px, 100vw, 599px);
     padding: 0;
@@ -435,36 +434,36 @@ body.body__toppage {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage {
+  body.body-toppage {
     width: clamp(225px, 100vw, 479px);
     padding: 0;
     max-width: 0;
   }
 }
-body.body__toppage div.body__toppage--wrap {
+body.body-toppage div.toppage-wrap {
   width: 1920px;
   margin: 0 auto;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap {
+  body.body-toppage div.toppage-wrap {
     /* スマートフォン横画面 */
     width: 100vw;
     height: auto;
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap {
+  body.body-toppage div.toppage-wrap {
     /* スマートフォン縦画面 */
     width: 100vw;
     height: auto;
   }
 }
-body.body__toppage div.body__toppage--wrap div.header {
+body.body-toppage div.toppage-wrap div.header {
   width: 1920px;
   height: 130px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap div.header {
+  body.body-toppage div.toppage-wrap div.header {
     /* スマートフォン横画面 */
     width: auto;
     max-width: 100%;
@@ -472,14 +471,14 @@ body.body__toppage div.body__toppage--wrap div.header {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap div.header {
+  body.body-toppage div.toppage-wrap div.header {
     /* スマートフォン縦画面 */
     width: auto;
     max-width: 100%;
     height: clamp(74px, 33vw, 160px);
   }
 }
-body.body__toppage div.body__toppage--wrap div.header div.header__container {
+body.body-toppage div.toppage-wrap div.header div.header_container {
   width: 1180px;
   height: 130px;
   margin: 0 auto;
@@ -490,7 +489,7 @@ body.body__toppage div.body__toppage--wrap div.header div.header__container {
   align-items: center;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__container {
+  body.body-toppage div.toppage-wrap div.header div.header_container {
     /* スマートフォン横画面 */
     width: auto;
     max-width: 100%;
@@ -499,7 +498,7 @@ body.body__toppage div.body__toppage--wrap div.header div.header__container {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__container {
+  body.body-toppage div.toppage-wrap div.header div.header_container {
     /* スマートフォン縦画面 */
     width: auto;
     max-width: 100%;
@@ -507,7 +506,7 @@ body.body__toppage div.body__toppage--wrap div.header div.header__container {
     display: block;
   }
 }
-body.body__toppage div.body__toppage--wrap div.header div.header__container div.header__top--left {
+body.body-toppage div.toppage-wrap div.header div.header_container div.header_top-left {
   width: 263px;
   height: 73px;
   margin-left: 20px;
@@ -517,7 +516,7 @@ body.body__toppage div.body__toppage--wrap div.header div.header__container div.
   align-items: center;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__container div.header__top--left {
+  body.body-toppage div.toppage-wrap div.header div.header_container div.header_top-left {
     /* スマートフォン横画面 */
     width: auto;
     max-width: 65%;
@@ -527,7 +526,7 @@ body.body__toppage div.body__toppage--wrap div.header div.header__container div.
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__container div.header__top--left {
+  body.body-toppage div.toppage-wrap div.header div.header_container div.header_top-left {
     /* スマートフォン縦画面 */
     width: auto;
     max-width: 65%;
@@ -536,59 +535,59 @@ body.body__toppage div.body__toppage--wrap div.header div.header__container div.
     padding-top: 20px;
   }
 }
-body.body__toppage div.body__toppage--wrap div.header div.header__container div.header__logo {
+body.body-toppage div.toppage-wrap div.header div.header_container div.header_top-left__logo {
   width: 73px;
   height: 73px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__container div.header__logo {
+  body.body-toppage div.toppage-wrap div.header div.header_container div.header_top-left__logo {
     /* スマートフォン横画面 */
     width: auto;
     max-width: 100%;
     height: clamp(58px, 12vw, 73px);
   }
-  body.body__toppage div.body__toppage--wrap div.header div.header__container div.header__logo img {
+  body.body-toppage div.toppage-wrap div.header div.header_container div.header_top-left__logo img {
     width: 100%;
     height: 100%;
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__container div.header__logo {
+  body.body-toppage div.toppage-wrap div.header div.header_container div.header_top-left__logo {
     /* スマートフォン縦画面 */
     background-color: #d9e0f3;
     width: auto;
     max-width: 100%;
     height: clamp(34px, 15vw, 73px);
   }
-  body.body__toppage div.body__toppage--wrap div.header div.header__container div.header__logo img {
+  body.body-toppage div.toppage-wrap div.header div.header_container div.header_top-left__logo img {
     width: 100%;
     height: 100%;
   }
 }
-body.body__toppage div.body__toppage--wrap div.header div.header__tagline {
+body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline {
   width: 190px;
   height: 73px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__tagline {
+  body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline {
     /* スマートフォン横画面 */
     height: clamp(34px, 15vw, 73px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__tagline {
+  body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline {
     /* スマートフォン縦画面 */
     height: clamp(34px, 15.208vw, 73px);
   }
 }
-body.body__toppage div.body__toppage--wrap div.header div.header__tagline p.header__tagline--upper {
+body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline p.header_top-left__tagline--upper {
   padding-left: 8px;
   font-size: 30px;
   text-align: left;
   line-height: 28px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__tagline p.header__tagline--upper {
+  body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline p.header_top-left__tagline--upper {
     /* スマートフォン横画面 */
     width: auto;
     max-width: 100%;
@@ -596,21 +595,21 @@ body.body__toppage div.body__toppage--wrap div.header div.header__tagline p.head
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__tagline p.header__tagline--upper {
+  body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline p.header_top-left__tagline--upper {
     /* スマートフォン縦画面 */
     width: auto;
     max-width: 100%;
     font-size: clamp(14px, 6vw, 30px);
   }
 }
-body.body__toppage div.body__toppage--wrap div.header div.header__tagline p.header__tagline--lower {
+body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline p.header_top-left__tagline--lower {
   padding-left: 12px;
   font-size: 30px;
   text-align: left;
   line-height: 48px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__tagline p.header__tagline--lower {
+  body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline p.header_top-left__tagline--lower {
     /* スマートフォン横画面 */
     width: auto;
     max-width: 100%;
@@ -620,7 +619,7 @@ body.body__toppage div.body__toppage--wrap div.header div.header__tagline p.head
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__tagline p.header__tagline--lower {
+  body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline p.header_top-left__tagline--lower {
     /* スマートフォン縦画面 */
     width: auto;
     max-width: 100%;
@@ -628,14 +627,14 @@ body.body__toppage div.body__toppage--wrap div.header div.header__tagline p.head
     line-height: clamp(23px, 10vw, 48px);
   }
 }
-body.body__toppage div.body__toppage--wrap div.header div.header__top--right {
+body.body-toppage div.toppage-wrap div.header div.header_top-right {
   width: 300px;
   height: 73px;
   margin-right: 20px;
   font-size: 0;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__top--right {
+  body.body-toppage div.toppage-wrap div.header div.header_top-right {
     /* スマートフォン横画面 */
     width: auto;
     max-width: 85%;
@@ -645,7 +644,7 @@ body.body__toppage div.body__toppage--wrap div.header div.header__top--right {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__top--right {
+  body.body-toppage div.toppage-wrap div.header div.header_top-right {
     /* スマートフォン縦画面 */
     width: auto;
     max-width: 85%;
@@ -655,14 +654,14 @@ body.body__toppage div.body__toppage--wrap div.header div.header__top--right {
     margin-top: 24px;
   }
 }
-body.body__toppage div.body__toppage--wrap div.header div.header__top--right p.reception {
+body.body-toppage div.toppage-wrap div.header div.header_top-right p.header_top-right__reception {
   font-size: 14px;
   letter-spacing: 0.2px;
   text-align: right;
   margin-top: 5px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__top--right p.reception {
+  body.body-toppage div.toppage-wrap div.header div.header_top-right p.header_top-right__reception {
     /* スマートフォン横画面 */
     width: auto;
     max-width: 100%;
@@ -671,7 +670,7 @@ body.body__toppage div.body__toppage--wrap div.header div.header__top--right p.r
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__top--right p.reception {
+  body.body-toppage div.toppage-wrap div.header div.header_top-right p.header_top-right__reception {
     /* スマートフォン縦画面 */
     width: auto;
     max-width: 100%;
@@ -679,7 +678,7 @@ body.body__toppage div.body__toppage--wrap div.header div.header__top--right p.r
     font-size: clamp(9px, 4vw, 18px);
   }
 }
-body.body__toppage div.body__toppage--wrap div.header div.header__top--right .tel::before {
+body.body-toppage div.toppage-wrap div.header div.header_top-right .header_top-right__tel::before {
   content: "";
   display: inline-block;
   width: 25px;
@@ -690,7 +689,7 @@ body.body__toppage div.body__toppage--wrap div.header div.header__top--right .te
   margin-right: 17px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__top--right .tel::before {
+  body.body-toppage div.toppage-wrap div.header div.header_top-right .header_top-right__tel::before {
     /* スマートフォン横画面 */
     margin-top: clamp(5px, 1vw, 5px);
     margin-right: 0px;
@@ -698,14 +697,14 @@ body.body__toppage div.body__toppage--wrap div.header div.header__top--right .te
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__top--right .tel::before {
+  body.body-toppage div.toppage-wrap div.header div.header_top-right .header_top-right__tel::before {
     /* スマートフォン縦画面 */
     margin-top: clamp(2px, 1vw, 5px);
     margin-right: 0px;
     height: clamp(11px, 5vw, 25px);
   }
 }
-body.body__toppage div.body__toppage--wrap div.header div.header__top--right p.tel {
+body.body-toppage div.toppage-wrap div.header div.header_top-right p.header_top-right__tel {
   color: #21a937;
   font-size: 22px;
   font-weight: 500;
@@ -714,7 +713,7 @@ body.body__toppage div.body__toppage--wrap div.header div.header__top--right p.t
   text-align: right;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__top--right p.tel {
+  body.body-toppage div.toppage-wrap div.header div.header_top-right p.header_top-right__tel {
     /* スマートフォン横画面 */
     width: auto;
     max-width: 100%;
@@ -724,7 +723,7 @@ body.body__toppage div.body__toppage--wrap div.header div.header__top--right p.t
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap div.header div.header__top--right p.tel {
+  body.body-toppage div.toppage-wrap div.header div.header_top-right p.header_top-right__tel {
     /* スマートフォン縦画面 */
     width: auto;
     max-width: 100%;
@@ -733,13 +732,13 @@ body.body__toppage div.body__toppage--wrap div.header div.header__top--right p.t
     margin-top: -1px;
   }
 }
-body.body__toppage div.body__toppage--wrap div.firstview__box {
+body.body-toppage div.toppage-wrap div.firstview-inner {
   width: 1920px;
   height: 947px;
   position: relative;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap div.firstview__box {
+  body.body-toppage div.toppage-wrap div.firstview-inner {
     /* スマートフォン横画面 */
     width: clamp(470px, 98vw, 589px);
     height: clamp(470px, 98vw, 589px);
@@ -747,21 +746,21 @@ body.body__toppage div.body__toppage--wrap div.firstview__box {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap div.firstview__box {
+  body.body-toppage div.toppage-wrap div.firstview-inner {
     /* スマートフォン縦画面 */
     width: clamp(225px, 100vw, 479px);
     height: clamp(225px, 100vw, 479px);
     margin-top: clamp(5px, 2vw, 10px);
   }
 }
-body.body__toppage div.body__toppage--wrap div.firstview__box div.firstview_image {
+body.body-toppage div.toppage-wrap div.firstview-inner div.firstview-image {
   width: 100%;
   height: 100%;
   background: url("../images/fv.jpg") no-repeat;
   background-size: contain;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap div.firstview__box div.firstview_image {
+  body.body-toppage div.toppage-wrap div.firstview-inner div.firstview-image {
     /* スマートフォン横画面 */
     width: clamp(480px, 100vw, 599px);
     height: clamp(480px, 100vw, 599px);
@@ -772,7 +771,7 @@ body.body__toppage div.body__toppage--wrap div.firstview__box div.firstview_imag
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap div.firstview__box div.firstview_image {
+  body.body-toppage div.toppage-wrap div.firstview-inner div.firstview-image {
     width: clamp(225px, 100vw, 479px);
     height: clamp(225px, 100vw, 479px);
     background: url("../images/firstview_image_SP.jpg") no-repeat;
@@ -780,7 +779,7 @@ body.body__toppage div.body__toppage--wrap div.firstview__box div.firstview_imag
     position: absolute;
   }
 }
-body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left {
+body.body-toppage div.toppage-wrap div.firstview-inner p.firstview-inner__message--left {
   writing-mode: vertical-rl;
   font-size: 28px;
   font-weight: 500;
@@ -795,7 +794,7 @@ body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left {
   left: 210px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left {
+  body.body-toppage div.toppage-wrap div.firstview-inner p.firstview-inner__message--left {
     /* スマートフォン横画面 */
     width: clamp(43px, 9vw, 55px);
     height: clamp(278px, 58vw, 345px);
@@ -810,7 +809,7 @@ body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left {
+  body.body-toppage div.toppage-wrap div.firstview-inner p.firstview-inner__message--left {
     /* スマートフォン縦画面 */
     width: clamp(25px, 11vw, 55px);
     /* 最小値30(vw225),65÷479×100vw,最大値65(vw479) */
@@ -831,14 +830,14 @@ body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left {
     z-index: 5;
   }
 }
-body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left span.color {
+body.body-toppage div.toppage-wrap div.firstview-inner p.firstview-inner__message--left span.color {
   color: green;
   letter-spacing: 5.5px;
   margin-top: -8px;
   margin-bottom: -8px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left span.color {
+  body.body-toppage div.toppage-wrap div.firstview-inner p.firstview-inner__message--left span.color {
     /* スマートフォン横画面 */
     font-size: clamp(14px, 3vw, 20px);
     letter-spacing: 0px;
@@ -847,7 +846,7 @@ body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left spa
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left span.color {
+  body.body-toppage div.toppage-wrap div.firstview-inner p.firstview-inner__message--left span.color {
     /* スマートフォン縦画面 */
     font-size: clamp(9px, 4vw, 20px);
     letter-spacing: 0px;
@@ -855,7 +854,7 @@ body.body__toppage div.body__toppage--wrap div.firstview__box p.message-left spa
     padding-bottom: clamp(2px, 1vw, 3px);
   }
 }
-body.body__toppage div.body__toppage--wrap p.message-right {
+body.body-toppage div.toppage-wrap p.firstview-inner__message--right {
   writing-mode: vertical-rl;
   font-size: 28px;
   font-weight: 500;
@@ -870,7 +869,7 @@ body.body__toppage div.body__toppage--wrap p.message-right {
   left: 393px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.body__toppage--wrap p.message-right {
+  body.body-toppage div.toppage-wrap p.firstview-inner__message--right {
     /* スマートフォン横画面 */
     width: clamp(43px, 9vw, 55px);
     height: clamp(278px, 58vw, 345px);
@@ -885,7 +884,7 @@ body.body__toppage div.body__toppage--wrap p.message-right {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.body__toppage--wrap p.message-right {
+  body.body-toppage div.toppage-wrap p.firstview-inner__message--right {
     /* スマートフォン縦画面 */
     width: clamp(25px, 11vw, 55px);
     height: clamp(162px, 72vw, 345px);
@@ -899,14 +898,14 @@ body.body__toppage div.body__toppage--wrap p.message-right {
     z-index: 5;
   }
 }
-body.body__toppage div.about_us {
+body.body-toppage div.self_introduction {
   width: 1180px;
   height: 664px;
   margin: 0 auto;
   display: flex;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_us {
+  body.body-toppage div.self_introduction {
     /* スマートフォン横画面 */
     width: clamp(470px, 98vw, 589px);
     height: clamp(528px, 110vw, 660px);
@@ -914,19 +913,19 @@ body.body__toppage div.about_us {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_us {
+  body.body-toppage div.self_introduction {
     /* スマートフォン縦画面 */
     width: clamp(225px, 100vw, 479px);
     height: clamp(311px, 138vw, 660px);
     display: block;
   }
 }
-body.body__toppage div.about_us div.about_us__content {
+body.body-toppage div.self_introduction div.self_introduction-container {
   width: 490px;
   height: 664px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_us div.about_us__content {
+  body.body-toppage div.self_introduction div.self_introduction-container {
     /* スマートフォン横画面 */
     width: auto;
     max-width: 100%;
@@ -934,32 +933,32 @@ body.body__toppage div.about_us div.about_us__content {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_us div.about_us__content {
+  body.body-toppage div.self_introduction div.self_introduction-container {
     /* スマートフォン縦画面 */
     width: auto;
     max-width: 100%;
     height: auto;
   }
 }
-body.body__toppage div.about_us div.about_us__content div.firstline__box {
+body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner {
   width: 275px;
   margin-left: 32px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_us div.about_us__content div.firstline__box {
+  body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner {
     /* スマートフォン横画面 */
     width: clamp(221px, 46vw, 275px);
     margin: 0 auto;
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_us div.about_us__content div.firstline__box {
+  body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner {
     /* スマートフォン縦画面 */
     width: clamp(124px, 55vw, 265px);
     margin: 0 auto;
   }
 }
-body.body__toppage div.about_us div.about_us__content div.firstline__box p.firstline__text {
+body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner p.self_introduction-container__firstline--inner_text {
   font-size: 24px;
   font-weight: 500;
   background: linear-gradient(transparent 60%, #86eb86 90%);
@@ -967,7 +966,7 @@ body.body__toppage div.about_us div.about_us__content div.firstline__box p.first
   line-height: 22px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_us div.about_us__content div.firstline__box p.firstline__text {
+  body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner p.self_introduction-container__firstline--inner_text {
     /* スマートフォン横画面 */
     margin-top: clamp(48px, 10vw, 60px);
     font-size: clamp(19px, 4vw, 23px);
@@ -976,7 +975,7 @@ body.body__toppage div.about_us div.about_us__content div.firstline__box p.first
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_us div.about_us__content div.firstline__box p.firstline__text {
+  body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner p.self_introduction-container__firstline--inner_text {
     /* スマートフォン縦画面 */
     margin-top: clamp(29px, 13vw, 60px);
     font-size: clamp(11px, 5vw, 23px);
@@ -984,26 +983,26 @@ body.body__toppage div.about_us div.about_us__content div.firstline__box p.first
     text-align: center;
   }
 }
-body.body__toppage div.about_us div.secondline__box {
+body.body-toppage div.self_introduction div.self_introduction-container__secondline--inner {
   width: 216px;
   margin-top: 42px;
   margin-left: 32px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_us div.secondline__box {
+  body.body-toppage div.self_introduction div.self_introduction-container__secondline--inner {
     /* スマートフォン横画面 */
     width: clamp(178px, 37vw, 220px);
     margin: 0 auto;
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_us div.secondline__box {
+  body.body-toppage div.self_introduction div.self_introduction-container__secondline--inner {
     /* スマートフォン縦画面 */
     width: clamp(104px, 46vw, 220px);
     margin: 0 auto;
   }
 }
-body.body__toppage div.about_us div.secondline__box p.secondline__text {
+body.body-toppage div.self_introduction div.self_introduction-container__secondline--inner p.self_introduction-container__secondline--inner_text {
   background: linear-gradient(transparent 60%, #86eb86 90%);
   font-size: 24px;
   font-weight: 500;
@@ -1011,7 +1010,7 @@ body.body__toppage div.about_us div.secondline__box p.secondline__text {
   line-height: 24px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_us div.secondline__box p.secondline__text {
+  body.body-toppage div.self_introduction div.self_introduction-container__secondline--inner p.self_introduction-container__secondline--inner_text {
     /* スマートフォン横画面 */
     font-size: clamp(19px, 4vw, 23px);
     margin-top: clamp(24px, 5vw, 30px);
@@ -1020,7 +1019,7 @@ body.body__toppage div.about_us div.secondline__box p.secondline__text {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_us div.secondline__box p.secondline__text {
+  body.body-toppage div.self_introduction div.self_introduction-container__secondline--inner p.self_introduction-container__secondline--inner_text {
     /* スマートフォン縦画面 */
     font-size: clamp(11px, 5vw, 23px);
     margin-top: clamp(14px, 6vw, 30px);
@@ -1028,14 +1027,14 @@ body.body__toppage div.about_us div.secondline__box p.secondline__text {
     text-align: center;
   }
 }
-body.body__toppage div.about_us div.thirdline__box {
+body.body-toppage div.self_introduction div.self_introduction-container__thirdline--inner {
   width: 415px;
   height: 145px;
   margin-top: 38px;
   margin-left: 32px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_us div.thirdline__box {
+  body.body-toppage div.self_introduction div.self_introduction-container__thirdline--inner {
     /* スマートフォン横画面 */
     width: clamp(384px, 80vw, 480px);
     margin: 0 auto;
@@ -1043,21 +1042,21 @@ body.body__toppage div.about_us div.thirdline__box {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_us div.thirdline__box {
+  body.body-toppage div.self_introduction div.self_introduction-container__thirdline--inner {
     /* スマートフォン縦画面 */
     width: clamp(178px, 79vw, 380px);
     margin: 0 auto;
     margin-left: clamp(25px, 11vw, 55px);
   }
 }
-body.body__toppage div.about_us div.thirdline__box p.thirdline__text {
+body.body-toppage div.self_introduction div.self_introduction-container__thirdline--inner p.self_introduction-container__thirdline--inner_text {
   font-size: 16px;
   line-height: 36px;
   letter-spacing: -0.18px;
   line-height: 38px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_us div.thirdline__box p.thirdline__text {
+  body.body-toppage div.self_introduction div.self_introduction-container__thirdline--inner p.self_introduction-container__thirdline--inner_text {
     /* スマートフォン横画面 */
     font-size: clamp(14px, 3vw, 16px);
     text-align: center;
@@ -1068,7 +1067,7 @@ body.body__toppage div.about_us div.thirdline__box p.thirdline__text {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_us div.thirdline__box p.thirdline__text {
+  body.body-toppage div.self_introduction div.self_introduction-container__thirdline--inner p.self_introduction-container__thirdline--inner_text {
     /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 16px);
     text-align: center;
@@ -1078,7 +1077,7 @@ body.body__toppage div.about_us div.thirdline__box p.thirdline__text {
     margin-top: clamp(14px, 6vw, 30px);
   }
 }
-body.body__toppage div.about_us div.about_us__imgbox {
+body.body-toppage div.self_introduction div.self_introduction__image-conainer {
   width: 690px;
   height: 420px;
   margin-top: 162px;
@@ -1086,7 +1085,7 @@ body.body__toppage div.about_us div.about_us__imgbox {
   background-size: cover;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_us div.about_us__imgbox {
+  body.body-toppage div.self_introduction div.self_introduction__image-conainer {
     /* スマートフォン横画面 */
     width: clamp(418px, 87vw, 520px);
     height: clamp(322px, 67vw, 400px);
@@ -1097,7 +1096,7 @@ body.body__toppage div.about_us div.about_us__imgbox {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_us div.about_us__imgbox {
+  body.body-toppage div.self_introduction div.self_introduction__image-conainer {
     /* スマートフォン縦画面 */
     width: clamp(225px, 100vw, 479px);
     height: clamp(189px, 84vw, 400px);
@@ -1106,13 +1105,13 @@ body.body__toppage div.about_us div.about_us__imgbox {
     margin-top: 0px;
   }
 }
-body.body__toppage div.treatment__content--container {
+body.body-toppage div.medical-treatment-contents__container {
   width: 1920px;
   height: 1520px;
   background-color: #f5fcf8;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.treatment__content--container {
+  body.body-toppage div.medical-treatment-contents__container {
     /* スマートフォン横画面 */
     width: clamp(480px, 100vw, 599px);
     height: clamp(2242px, 467vw, 2800px);
@@ -1121,7 +1120,7 @@ body.body__toppage div.treatment__content--container {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.treatment__content--container {
+  body.body-toppage div.medical-treatment-contents__container {
     /* スマートフォン縦画面 */
     width: clamp(225px, 100vw, 479px);
     height: clamp(1316px, 585vw, 2800px);
@@ -1129,50 +1128,50 @@ body.body__toppage div.treatment__content--container {
     background-color: #f5fcf8;
   }
 }
-body.body__toppage div.treatment__content--container div.treatment__content--box {
+body.body-toppage div.medical-treatment-contents__container div.medical-treatment-contents__inner-firstline {
   width: 96px;
   margin: 0 auto;
   padding-top: 82px;
   background: linear-gradient(transparent 90%, #86eb86 90%);
 }
 @media (max-width: 599px) {
-  body.body__toppage div.treatment__content--container div.treatment__content--box {
+  body.body-toppage div.medical-treatment-contents__container div.medical-treatment-contents__inner-firstline {
     /* スマートフォン横画面 */
     width: clamp(77px, 16vw, 96px);
     padding-top: clamp(67px, 14vw, 85px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.treatment__content--container div.treatment__content--box {
+  body.body-toppage div.medical-treatment-contents__container div.medical-treatment-contents__inner-firstline {
     /* スマートフォン縦画面 */
     width: clamp(45px, 20vw, 96px);
     padding-top: clamp(41px, 18vw, 85px);
   }
 }
-body.body__toppage div.treatment__content--container div.treatment__content--box h2.treatment-content--title {
+body.body-toppage div.medical-treatment-contents__container div.medical-treatment-contents__inner-firstline h2.medical-treatment-contents__inner-firstline--text {
   height: 32px;
   font-size: 24px;
   font-weight: 500;
   text-align: center;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.treatment__content--container div.treatment__content--box h2.treatment-content--title {
+  body.body-toppage div.medical-treatment-contents__container div.medical-treatment-contents__inner-firstline h2.medical-treatment-contents__inner-firstline--text {
     /* スマートフォン横画面 */
     font-size: clamp(19px, 4vw, 24px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.treatment__content--container div.treatment__content--box h2.treatment-content--title {
+  body.body-toppage div.medical-treatment-contents__container div.medical-treatment-contents__inner-firstline h2.medical-treatment-contents__inner-firstline--text {
     /* スマートフォン縦画面 */
     font-size: clamp(11px, 5vw, 24px);
   }
 }
-body.body__toppage div.treatment-content__supplement {
+body.body-toppage div.medical-treatment-contents__inner-secondline {
   width: 448px;
   margin: 71px auto 0 auto;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.treatment-content__supplement {
+  body.body-toppage div.medical-treatment-contents__inner-secondline {
     /* スマートフォン横画面 */
     width: clamp(254px, 53vw, 320px);
     margin: 0 auto;
@@ -1180,37 +1179,37 @@ body.body__toppage div.treatment-content__supplement {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.treatment-content__supplement {
+  body.body-toppage div.medical-treatment-contents__inner-secondline {
     /* スマートフォン縦画面 */
     width: clamp(151px, 67vw, 320px);
     margin: 0 auto;
     padding-top: clamp(32px, 14vw, 65px);
   }
 }
-body.body__toppage div.treatment-content__supplement p.treatment-content__supplement--text {
+body.body-toppage div.medical-treatment-contents__inner-secondline p.medical-treatment-contents__inner-secondline--text {
   font-size: 16px;
   letter-spacing: 0px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.treatment-content__supplement p.treatment-content__supplement--text {
+  body.body-toppage div.medical-treatment-contents__inner-secondline p.medical-treatment-contents__inner-secondline--text {
     /* スマートフォン横画面 */
     letter-spacing: clamp(0px, 0vw, 2.5px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.treatment-content__supplement p.treatment-content__supplement--text {
+  body.body-toppage div.medical-treatment-contents__inner-secondline p.medical-treatment-contents__inner-secondline--text {
     /* スマートフォン縦画面 */
     letter-spacing: clamp(2px, 1vw, 2.5px);
   }
 }
-body.body__toppage div.medical_subjects__container {
+body.body-toppage div.medical-treatment-contents__menu-container {
   margin-top: 37px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.medical_subjects__container {
+  body.body-toppage div.medical-treatment-contents__menu-container {
     /* スマートフォン横画面 */
     margin: 0;
     width: clamp(480px, 100vw, 599px);
@@ -1218,14 +1217,14 @@ body.body__toppage div.medical_subjects__container {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.medical_subjects__container {
+  body.body-toppage div.medical-treatment-contents__menu-container {
     /* スマートフォン縦画面 */
     margin: 0;
     width: clamp(225px, 100vw, 479px);
     margin-top: clamp(23px, 10vw, 50px);
   }
 }
-body.body__toppage div.medical_subjects__container article.medical_subjects {
+body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu {
   width: 380px;
   height: 591px;
   border: 1px solid;
@@ -1235,7 +1234,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects {
   background-color: white;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu {
     /* スマートフォン横画面 */
     width: clamp(398px, 83vw, 500px);
     height: clamp(461px, 96vw, 575px);
@@ -1243,53 +1242,53 @@ body.body__toppage div.medical_subjects__container article.medical_subjects {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu {
     /* スマートフォン縦画面 */
     width: clamp(189px, 84vw, 400px);
     height: clamp(270px, 120vw, 575px);
     margin-top: clamp(14px, 6vw, 30px);
   }
 }
-body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_subject__title {
+body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title {
   width: 192px;
   margin: 41px 94px 0 94px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_subject__title {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title {
     /* スマートフォン横画面 */
     margin: 0 auto;
     margin-top: clamp(29px, 6vw, 35px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_subject__title {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title {
     /* スマートフォン縦画面 */
     margin: 0 auto;
     margin-top: clamp(16px, 7vw, 35px);
   }
 }
-body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_subject__title h3 {
+body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title h3 {
   font-size: 24px;
   font-weight: 500;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_subject__title h3 {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title h3 {
     /* スマートフォン横画面 */
     font-size: clamp(19px, 4vw, 24px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_subject__title h3 {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title h3 {
     /* スマートフォン縦画面 */
     font-size: clamp(11px, 5vw, 24px);
   }
 }
-body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box {
+body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner {
   width: 320px;
   margin: 42px 29px 111px 31px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner {
     /* スマートフォン横画面 */
     width: clamp(398px, 83vw, 500px);
     margin: 0 auto;
@@ -1297,21 +1296,21 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner {
     /* スマートフォン縦画面 */
     width: clamp(164px, 73vw, 350px);
     margin: 0 auto;
     margin-top: clamp(16px, 7vw, 35px);
   }
 }
-body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box p.description__left {
+body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_left {
   font-size: 16px;
   font-weight: 500;
   letter-spacing: -0.11px;
   line-height: 38px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box p.description__left {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_left {
     /* スマートフォン横画面 */
     font-size: clamp(14px, 3vw, 18px);
     letter-spacing: clamp(0px, 0vw, 0px);
@@ -1320,7 +1319,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box p.description__left {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_left {
     /* スマートフォン縦画面 */
     font-size: clamp(9px, 4vw, 18px);
     letter-spacing: clamp(-2px, -1vw, -3px);
@@ -1328,7 +1327,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
     line-height: clamp(18px, 8vw, 38px);
   }
 }
-body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box p.description__center {
+body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_center {
   font-size: 16px;
   line-height: 33px;
   font-weight: 500;
@@ -1337,7 +1336,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
   margin-left: 5px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box p.description__center {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_center {
     /* スマートフォン横画面 */
     font-size: clamp(14px, 3vw, 18px);
     letter-spacing: clamp(0px, 0vw, 0px);
@@ -1346,7 +1345,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box p.description__center {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_center {
     /* スマートフォン縦画面 */
     font-size: clamp(9px, 4vw, 18px);
     letter-spacing: clamp(-2px, -1vw, -3px);
@@ -1354,7 +1353,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
     line-height: clamp(18px, 8vw, 38px);
   }
 }
-body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box p.description__right {
+body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_right {
   font-size: 16px;
   line-height: 33px;
   font-weight: 500;
@@ -1363,7 +1362,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
   margin-left: -3px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box p.description__right {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_right {
     /* スマートフォン横画面 */
     font-size: clamp(14px, 3vw, 18px);
     letter-spacing: clamp(0px, 0vw, 0px);
@@ -1372,7 +1371,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.description__box p.description__right {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_right {
     /* スマートフォン縦画面 */
     font-size: clamp(9px, 4vw, 18px);
     letter-spacing: clamp(-2px, -1vw, -3px);
@@ -1380,7 +1379,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
     line-height: clamp(18px, 8vw, 38px);
   }
 }
-body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_imagebox__first {
+body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_left {
   width: 187px;
   height: 187px;
   background: url("../images/g0108.jpg");
@@ -1391,7 +1390,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
   transform: translate(-50%, -50%);
 }
 @media (max-width: 599px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_imagebox__first {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_left {
     /* スマートフォン横画面 */
     width: clamp(182px, 38vw, 230px);
     height: clamp(182px, 38vw, 230px);
@@ -1401,7 +1400,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_imagebox__first {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_left {
     /* スマートフォン縦画面 */
     width: clamp(108px, 48vw, 230px);
     height: clamp(108px, 48vw, 230px);
@@ -1410,7 +1409,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
     top: 77%;
   }
 }
-body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_imagebox__second {
+body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_center {
   width: 187px;
   height: 187px;
   background: url("../images/g0099.jpg");
@@ -1421,7 +1420,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
   transform: translate(-50%, -50%);
 }
 @media (max-width: 599px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_imagebox__second {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_center {
     /* スマートフォン横画面 */
     width: clamp(182px, 38vw, 230px);
     height: clamp(182px, 38vw, 230px);
@@ -1431,7 +1430,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_imagebox__second {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_center {
     /* スマートフォン縦画面 */
     width: clamp(108px, 48vw, 230px);
     height: clamp(108px, 48vw, 230px);
@@ -1440,7 +1439,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
     top: 77%;
   }
 }
-body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_imagebox__third {
+body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_right {
   width: 187px;
   height: 187px;
   background: url("../images/g0092.jpg");
@@ -1451,7 +1450,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
   transform: translate(-50%, -50%);
 }
 @media (max-width: 599px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_imagebox__third {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_right {
     /* スマートフォン横画面 */
     width: clamp(182px, 38vw, 230px);
     height: clamp(182px, 38vw, 230px);
@@ -1461,7 +1460,7 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.medical_subjects__container article.medical_subjects div.medical_imagebox__third {
+  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_right {
     /* スマートフォン縦画面 */
     width: clamp(108px, 48vw, 230px);
     height: clamp(108px, 48vw, 230px);
@@ -1470,12 +1469,12 @@ body.body__toppage div.medical_subjects__container article.medical_subjects div.
     top: 77%;
   }
 }
-body.body__toppage div.notice_title__box {
+body.body-toppage div.notice-title__inner {
   width: 100px;
   margin: 84px auto 0px auto;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.notice_title__box {
+  body.body-toppage div.notice-title__inner {
     /* スマートフォン横画面 */
     width: clamp(82px, 17vw, 100px);
     margin: 0 auto;
@@ -1483,31 +1482,31 @@ body.body__toppage div.notice_title__box {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.notice_title__box {
+  body.body-toppage div.notice-title__inner {
     /* スマートフォン縦画面 */
     width: clamp(47px, 21vw, 100px);
     margin: 0 auto;
     margin-top: clamp(43px, 19vw, 90px);
   }
 }
-body.body__toppage div.notice_title__box h2.notice_title {
+body.body-toppage div.notice-title__inner h2.notice-title {
   font-size: 24px;
   background: linear-gradient(transparent 60%, #86eb86 90%);
   font-weight: 500;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.notice_title__box h2.notice_title {
+  body.body-toppage div.notice-title__inner h2.notice-title {
     /* スマートフォン横画面 */
     font-size: clamp(19px, 4vw, 24px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.notice_title__box h2.notice_title {
+  body.body-toppage div.notice-title__inner h2.notice-title {
     /* スマートフォン縦画面 */
     font-size: clamp(11px, 5vw, 24px);
   }
 }
-body.body__toppage div.notice_container {
+body.body-toppage div.notice-detail__container {
   width: 1180px;
   height: 390px;
   margin: 74px auto 0 auto;
@@ -1523,7 +1522,7 @@ body.body__toppage div.notice_container {
   flex-wrap: wrap;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.notice_container {
+  body.body-toppage div.notice-detail__container {
     /* スマートフォン横画面 */
     width: clamp(432px, 90vw, 540px);
     height: auto;
@@ -1532,7 +1531,7 @@ body.body__toppage div.notice_container {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.notice_container {
+  body.body-toppage div.notice-detail__container {
     /* スマートフォン縦画面 */
     width: clamp(198px, 88vw, 420px);
     height: auto;
@@ -1540,22 +1539,22 @@ body.body__toppage div.notice_container {
     margin-top: clamp(23px, 10vw, 50px);
   }
 }
-body.body__toppage div.notice_container div.notice_container__margin_upper {
+body.body-toppage div.notice-detail__container div.notice-detail__container-margin_upper {
   height: 25px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.notice_container div.notice_container__margin_upper {
+  body.body-toppage div.notice-detail__container div.notice-detail__container-margin_upper {
     /* スマートフォン横画面 */
     width: clamp(418px, 87vw, 520px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.notice_container div.notice_container__margin_upper {
+  body.body-toppage div.notice-detail__container div.notice-detail__container-margin_upper {
     /* スマートフォン縦画面 */
     width: clamp(189px, 84vw, 400px);
   }
 }
-body.body__toppage div.notice_container article.notice_contents {
+body.body-toppage div.notice-detail__container article.notice-detail__container-article {
   border-bottom: 1px solid #e7e7e7;
   margin: 0px 66px 0px 66px;
   font-size: 0;
@@ -1564,7 +1563,7 @@ body.body__toppage div.notice_container article.notice_contents {
   align-items: center;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.notice_container article.notice_contents {
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article {
     /* スマートフォン横画面 */
     width: clamp(394px, 82vw, 490px);
     margin-left: clamp(14px, 3vw, 20px);
@@ -1573,7 +1572,7 @@ body.body__toppage div.notice_container article.notice_contents {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.notice_container article.notice_contents {
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article {
     /* スマートフォン縦画面 */
     width: clamp(182px, 81vw, 390px);
     margin-left: clamp(9px, 4vw, 20px);
@@ -1581,13 +1580,13 @@ body.body__toppage div.notice_container article.notice_contents {
     align-items: flex-start;
   }
 }
-body.body__toppage div.notice_container article.notice_contents div.notice_left__box {
+body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.notice_container article.notice_contents div.notice_left__box {
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap {
     /* スマートフォン横画面 */
     width: clamp(96px, 20vw, 120px);
     flex-direction: column;
@@ -1595,14 +1594,14 @@ body.body__toppage div.notice_container article.notice_contents div.notice_left_
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.notice_container article.notice_contents div.notice_left__box {
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap {
     /* スマートフォン縦画面 */
     width: clamp(47px, 21vw, 100px);
     flex-direction: column;
     align-items: flex-start;
   }
 }
-body.body__toppage div.notice_container article.notice_contents div.notice_left__box p.notice_contents__date {
+body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap p.notice-detail__container-article--leftinner_date_text {
   color: green;
   font-size: 16px;
   font-weight: 500;
@@ -1613,7 +1612,7 @@ body.body__toppage div.notice_container article.notice_contents div.notice_left_
   letter-spacing: 0px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.notice_container article.notice_contents div.notice_left__box p.notice_contents__date {
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap p.notice-detail__container-article--leftinner_date_text {
     /* スマートフォン横画面 */
     width: clamp(96px, 20vw, 120px);
     font-size: clamp(14px, 3vw, 16px);
@@ -1623,7 +1622,7 @@ body.body__toppage div.notice_container article.notice_contents div.notice_left_
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.notice_container article.notice_contents div.notice_left__box p.notice_contents__date {
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap p.notice-detail__container-article--leftinner_date_text {
     /* スマートフォン縦画面 */
     width: clamp(47px, 21vw, 100px);
     font-size: clamp(7px, 3vw, 16px);
@@ -1631,7 +1630,7 @@ body.body__toppage div.notice_container article.notice_contents div.notice_left_
     margin-top: clamp(5px, 2vw, 10px);
   }
 }
-body.body__toppage div.notice_container article.notice_contents div.notice_left__box p.notice_contents__info {
+body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap p.notice-detail__container-article--left__info {
   font-size: 12px;
   font-weight: 500;
   color: white;
@@ -1644,7 +1643,7 @@ body.body__toppage div.notice_container article.notice_contents div.notice_left_
   margin-right: 30px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.notice_container article.notice_contents div.notice_left__box p.notice_contents__info {
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap p.notice-detail__container-article--left__info {
     /* スマートフォン横画面 */
     margin: 0;
     width: clamp(96px, 20vw, 120px);
@@ -1655,7 +1654,7 @@ body.body__toppage div.notice_container article.notice_contents div.notice_left_
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.notice_container article.notice_contents div.notice_left__box p.notice_contents__info {
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap p.notice-detail__container-article--left__info {
     /* スマートフォン縦画面 */
     width: clamp(47px, 21vw, 100px);
     font-size: clamp(7px, 3vw, 14px);
@@ -1665,25 +1664,25 @@ body.body__toppage div.notice_container article.notice_contents div.notice_left_
   }
 }
 @media (max-width: 599px) {
-  body.body__toppage div.notice_container article.notice_contents div.notice_right__box {
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--right_inner {
     /* スマートフォン横画面 */
     width: clamp(278px, 58vw, 350px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.notice_container article.notice_contents div.notice_right__box {
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--right_inner {
     /* スマートフォン縦画面 */
     width: clamp(117px, 52vw, 250px);
   }
 }
-body.body__toppage div.notice_container article.notice_contents div.notice_right__box p.notice_contents__infocontent {
+body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--right_inner p.notice-detail__container-article--right_text {
   font-size: 16px;
   font-weight: 500;
   margin-left: 6px;
   letter-spacing: -0.1px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.notice_container article.notice_contents div.notice_right__box p.notice_contents__infocontent {
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--right_inner p.notice-detail__container-article--right_text {
     /* スマートフォン横画面 */
     width: clamp(254px, 53vw, 320px);
     font-size: clamp(14px, 3vw, 16px);
@@ -1694,7 +1693,7 @@ body.body__toppage div.notice_container article.notice_contents div.notice_right
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.notice_container article.notice_contents div.notice_right__box p.notice_contents__infocontent {
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--right_inner p.notice-detail__container-article--right_text {
     /* スマートフォン縦画面 */
     width: clamp(117px, 52vw, 250px);
     font-size: clamp(7px, 3vw, 14px);
@@ -1704,12 +1703,12 @@ body.body__toppage div.notice_container article.notice_contents div.notice_right
     margin-left: clamp(14px, 6vw, 30px);
   }
 }
-body.body__toppage div.notice_container div.seeall_wrap {
+body.body-toppage div.notice-detail__container div.see-all_line {
   margin: 0px 54px 0px 60px;
   text-align: right;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.notice_container div.seeall_wrap {
+  body.body-toppage div.notice-detail__container div.see-all_line {
     /* スマートフォン横画面 */
     width: clamp(322px, 67vw, 400px);
     height: clamp(82px, 17vw, 100px);
@@ -1717,30 +1716,29 @@ body.body__toppage div.notice_container div.seeall_wrap {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.notice_container div.seeall_wrap {
+  body.body-toppage div.notice-detail__container div.see-all_line {
     /* スマートフォン縦画面 */
     width: clamp(189px, 84vw, 400px);
     height: clamp(47px, 21vw, 100px);
     margin: 0;
   }
 }
-body.body__toppage div.notice_container div.seeall_wrap div.seeall_box {
+body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner {
   width: 1005px;
   margin: 0px 0px 0px 66px;
   text-align: right;
   font-size: 0;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.notice_container div.seeall_wrap div.seeall_box {
+  body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner {
     /* スマートフォン横画面 */
-    width: clamp(322px, 67vw, 400px);
+    width: clamp(374px, 78vw, 470px);
     height: clamp(82px, 17vw, 100px);
     margin: 0;
-    margin-top: clamp(34px, 7vw, 40px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.notice_container div.seeall_wrap div.seeall_box {
+  body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner {
     /* スマートフォン縦画面 */
     width: clamp(189px, 84vw, 400px);
     height: clamp(47px, 21vw, 100px);
@@ -1748,7 +1746,7 @@ body.body__toppage div.notice_container div.seeall_wrap div.seeall_box {
     margin-top: clamp(18px, 8vw, 40px);
   }
 }
-body.body__toppage div.notice_container div.seeall_wrap div.seeall_box p.seeall_text {
+body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner p.see-all_inner-text {
   font-size: 16px;
   width: 198px;
   height: 16px;
@@ -1758,7 +1756,7 @@ body.body__toppage div.notice_container div.seeall_wrap div.seeall_box p.seeall_
   margin-right: 2px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.notice_container div.seeall_wrap div.seeall_box p.seeall_text {
+  body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner p.see-all_inner-text {
     /* スマートフォン横画面 */
     font-size: clamp(14px, 3vw, 16px);
     margin: 0;
@@ -1766,14 +1764,14 @@ body.body__toppage div.notice_container div.seeall_wrap div.seeall_box p.seeall_
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.notice_container div.seeall_wrap div.seeall_box p.seeall_text {
+  body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner p.see-all_inner-text {
     /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 16px);
     margin: 0;
     margin-right: clamp(2px, 1vw, 7px);
   }
 }
-body.body__toppage div.notice_container div.seeall_wrap div.seeall_box p.seeall_icon {
+body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner p.see-all_inner-icon {
   font-size: 14px;
   width: 12px;
   height: 14px;
@@ -1781,19 +1779,19 @@ body.body__toppage div.notice_container div.seeall_wrap div.seeall_box p.seeall_
   margin-top: 35px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.notice_container div.seeall_wrap div.seeall_box p.seeall_icon {
+  body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner p.see-all_inner-icon {
     /* スマートフォン横画面 */
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.notice_container div.seeall_wrap div.seeall_box p.seeall_icon {
+  body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner p.see-all_inner-icon {
     /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 14px);
     margin: 0;
     margin-right: clamp(23px, 10vw, 50px);
   }
 }
-body.body__toppage div.about_access__wrap {
+body.body-toppage div.access__wrap {
   width: 1190px;
   height: 799px;
   margin: 0px auto 0 auto;
@@ -1802,7 +1800,7 @@ body.body__toppage div.about_access__wrap {
   align-items: flex-start;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap {
+  body.body-toppage div.access__wrap {
     /* スマートフォン横画面 */
     width: clamp(470px, 98vw, 589px);
     height: auto;
@@ -1812,7 +1810,7 @@ body.body__toppage div.about_access__wrap {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap {
+  body.body-toppage div.access__wrap {
     /* スマートフォン縦画面 */
     width: clamp(225px, 100vw, 479px);
     height: auto;
@@ -1821,11 +1819,11 @@ body.body__toppage div.about_access__wrap {
     margin: 0;
   }
 }
-body.body__toppage div.about_access__wrap div.copyright_reserved__box--sp {
+body.body-toppage div.access__wrap div.copyright-reserved__inner-sp {
   visibility: hidden;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap div.copyright_reserved__box--sp {
+  body.body-toppage div.access__wrap div.copyright-reserved__inner-sp {
     /* スマートフォン横画面 */
     visibility: visible;
     width: clamp(398px, 83vw, 500px);
@@ -1835,7 +1833,7 @@ body.body__toppage div.about_access__wrap div.copyright_reserved__box--sp {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap div.copyright_reserved__box--sp {
+  body.body-toppage div.access__wrap div.copyright-reserved__inner-sp {
     /* スマートフォン縦画面 */
     visibility: visible;
     width: clamp(189px, 84vw, 400px);
@@ -1844,40 +1842,40 @@ body.body__toppage div.about_access__wrap div.copyright_reserved__box--sp {
     text-align: center;
   }
 }
-body.body__toppage div.about_access__wrap div.copyright_reserved__box--sp small.copyright_reserved__text--sp {
+body.body-toppage div.access__wrap div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
   visibility: hidden;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap div.copyright_reserved__box--sp small.copyright_reserved__text--sp {
+  body.body-toppage div.access__wrap div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
     /* スマートフォン横画面 */
     visibility: visible;
     font-size: clamp(10px, 2vw, 14px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap div.copyright_reserved__box--sp small.copyright_reserved__text--sp {
+  body.body-toppage div.access__wrap div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
     /* スマートフォン縦画面 */
     visibility: visible;
     font-size: clamp(7px, 3vw, 14px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container {
+body.body-toppage div.access__wrap .access-container {
   margin: 0px auto 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container {
+  body.body-toppage div.access__wrap .access-container {
     width: clamp(480px, 100vw, 599px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container {
+  body.body-toppage div.access__wrap .access-container {
     width: clamp(225px, 100vw, 479px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.map_box {
+body.body-toppage div.access__wrap .access-container div.access-container__map-inner {
   width: 608px;
   height: 440px;
   margin-top: 200px;
@@ -1887,7 +1885,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.map_box {
   background-size: cover;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.map_box {
+  body.body-toppage div.access__wrap .access-container div.access-container__map-inner {
     /* スマートフォン横画面 */
     width: clamp(446px, 93vw, 559px);
     height: clamp(398px, 83vw, 500px);
@@ -1898,7 +1896,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.map_box {
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.map_box {
+  body.body-toppage div.access__wrap .access-container div.access-container__map-inner {
     /* スマートフォン縦画面 */
     width: clamp(198px, 88vw, 420px);
     height: clamp(146px, 65vw, 310px);
@@ -1908,7 +1906,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.map_box {
     margin-top: clamp(14px, 6vw, 30px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap {
+body.body-toppage div.access__wrap .access-container div.access-container__detail {
   width: 538px;
   height: 625px;
   margin-top: 200px;
@@ -1919,7 +1917,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   align-items: flex-start;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail {
     /* スマートフォン横画面 */
     width: clamp(480px, 100vw, 599px);
     height: auto;
@@ -1929,7 +1927,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail {
     /* スマートフォン縦画面 */
     width: clamp(198px, 88vw, 420px);
     height: auto;
@@ -1938,14 +1936,14 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
     flex-wrap: nowrap;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner {
   width: 275x;
   height: 73px;
   display: flex;
   flex-wrap: wrap;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner {
     /* スマートフォン横画面 */
     width: 100%;
     margin-left: 0px;
@@ -1953,21 +1951,21 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner {
     /* スマートフォン縦画面 */
     width: 100%;
     margin-left: 0px;
     margin: 0 auto;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.company_logo__box {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-logo {
   width: 73px;
   height: 73px;
   background: url("../images/病院の地図マーク.jpg");
   background-size: cover;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.company_logo__box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-logo {
     /* スマートフォン横画面 */
     width: clamp(58px, 12vw, 73px);
     height: clamp(58px, 12vw, 73px);
@@ -1975,19 +1973,19 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.company_logo__box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-logo {
     /* スマートフォン縦画面 */
     width: clamp(34px, 15vw, 73px);
     height: clamp(34px, 15vw, 73px);
     margin-left: clamp(34px, 15vw, 73px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.tagline_box {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner {
   width: 200x;
   height: 73px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.tagline_box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner {
     /* スマートフォン横画面 */
     width: clamp(158px, 33vw, 200px);
     height: clamp(58px, 12vw, 73px);
@@ -1995,20 +1993,20 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.tagline_box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner {
     /* スマートフォン縦画面 */
     width: clamp(95px, 42vw, 200px);
     height: clamp(34px, 15vw, 73px);
     margin-left: clamp(7px, 3vw, 15px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.tagline_box p.tagline_box--upperline {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--upper {
   font-size: 30px;
   line-height: 26px;
   padding-left: 11px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.tagline_box p.tagline_box--upperline {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--upper {
     /* スマートフォン横画面 */
     font-size: clamp(24px, 5vw, 30px);
     line-height: clamp(24px, 5vw, 30px);
@@ -2016,20 +2014,20 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.tagline_box p.tagline_box--upperline {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--upper {
     /* スマートフォン縦画面 */
     font-size: clamp(14px, 6vw, 30px);
     line-height: clamp(14px, 6vw, 30px);
     padding-left: clamp(5px, 2vw, 11px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.tagline_box p.tagline_box--lowerline {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--lower {
   font-size: 30px;
   line-height: 55px;
   padding-left: 26px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.tagline_box p.tagline_box--lowerline {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--lower {
     /* スマートフォン横画面 */
     font-size: clamp(24px, 5vw, 30px);
     line-height: clamp(24px, 5vw, 30px);
@@ -2038,7 +2036,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.company_name__box div.tagline_box p.tagline_box--lowerline {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--lower {
     /* スマートフォン縦画面 */
     font-size: clamp(14px, 6vw, 30px);
     line-height: clamp(14px, 6vw, 30px);
@@ -2046,14 +2044,14 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
     margin-top: clamp(7px, 3vw, 16px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.adress_box {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner {
   margin-top: 28px;
   display: flex;
   flex-wrap: wrap;
   background-color: white;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.adress_box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner {
     /* スマートフォン横画面 */
     width: 100%;
     margin: 0 auto;
@@ -2064,7 +2062,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.adress_box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner {
     /* スマートフォン縦画面 */
     width: 100%;
     margin: 0 auto;
@@ -2074,31 +2072,31 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
     align-items: center;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.adress_box p.adress_number {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress--number {
   font-size: 16px;
   margin-right: 16px;
   letter-spacing: 0.1px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.adress_box p.adress_number {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress--number {
     /* スマートフォン横画面 */
     font-size: clamp(14px, 3vw, 16px);
     display: inline-block;
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.adress_box p.adress_number {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress--number {
     /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 16px);
     display: inline-block;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.adress_box p.adress_text {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress {
   font-size: 16px;
   letter-spacing: 0px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.adress_box p.adress_text {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress {
     /* スマートフォン横画面 */
     font-size: clamp(14px, 3vw, 18px);
     display: inline-block;
@@ -2106,14 +2104,14 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.adress_box p.adress_text {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress {
     /* スマートフォン縦画面 */
     font-size: clamp(9px, 4vw, 18px);
     display: inline-block;
     margin-top: clamp(5px, 2vw, 10px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.tel_box {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-tel--inner {
   height: 32px;
   width: 220px;
   position: relative;
@@ -2121,7 +2119,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   font-size: 0;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.tel_box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-tel--inner {
     /* スマートフォン横画面 */
     width: 80%;
     margin: 0 auto;
@@ -2131,7 +2129,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.tel_box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-tel--inner {
     /* スマートフォン縦画面 */
     width: 80%;
     margin: 0 auto;
@@ -2140,7 +2138,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
     justify-content: center;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.tel_box p.tel_number::before {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-tel--inner p.access-container__detail-tel--number::before {
   content: "";
   display: inline-block;
   width: 26px;
@@ -2151,18 +2149,18 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   margin-top: 4px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.tel_box p.tel_number::before {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-tel--inner p.access-container__detail-tel--number::before {
     /* スマートフォン横画面 */
     margin: 0;
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.tel_box p.tel_number::before {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-tel--inner p.access-container__detail-tel--number::before {
     /* スマートフォン縦画面 */
     margin: 0;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.tel_box p.tel_number {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-tel--inner p.access-container__detail-tel--number {
   color: #21a937;
   font-size: 24px;
   text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0, -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px, 0px -0.4px 0px;
@@ -2171,7 +2169,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   margin-top: 1px;
   position: absolute;
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.empty_border {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank--border {
   height: 29.5px;
   width: 533px;
   border-bottom: 1px solid;
@@ -2179,25 +2177,25 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   background-color: white;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.empty_border {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank--border {
     /* スマートフォン横画面 */
     width: 100%;
     margin: 0 auto;
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.empty_border {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank--border {
     /* スマートフォン縦画面 */
     width: 100%;
     margin: 0 auto;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.empty_margin {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank--margin {
   height: 15px;
   width: 533px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.empty_margin {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank--margin {
     /* スマートフォン横画面 */
     height: clamp(14px, 3vw, 20px);
     width: 100%;
@@ -2205,13 +2203,13 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.empty_margin {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank--margin {
     /* スマートフォン縦画面 */
     width: 100%;
     margin: 0 auto;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner {
   height: 95px;
   width: 533px;
   background-color: white;
@@ -2220,7 +2218,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   flex-wrap: wrap;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner {
     /* スマートフォン横画面 */
     width: clamp(480px, 100vw, 599px);
     height: auto;
@@ -2229,7 +2227,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner {
     /* スマートフォン縦画面 */
     width: clamp(198px, 88vw, 420px);
     height: clamp(79px, 35vw, 170px);
@@ -2237,33 +2235,33 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
     justify-content: flex-start;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_time__box {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time {
   width: 85px;
   height: 114px;
   border-right: 1px solid;
   border-color: #e7e7e7;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_time__box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time {
     /* スマートフォン横画面 */
     width: clamp(96px, 20vw, 120px);
     height: auto;
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_time__box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time {
     /* スマートフォン縦画面 */
     width: clamp(56px, 25vw, 120px);
     height: auto;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_time__box p.consultation_time {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time p {
   font-size: 14px;
   margin-top: 8px;
   margin-left: 4.5px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_time__box p.consultation_time {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time p {
     /* スマートフォン横画面 */
     font-size: clamp(14px, 3vw, 16px);
     margin-top: clamp(29px, 6vw, 38px);
@@ -2271,14 +2269,14 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_time__box p.consultation_time {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time p {
     /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 14px);
     margin-top: clamp(18px, 8vw, 38px);
     text-align: center;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap {
   width: 449px;
   height: 114px;
   display: flex;
@@ -2286,27 +2284,27 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   flex-wrap: wrap;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap {
     /* スマートフォン横画面 */
     width: clamp(322px, 67vw, 400px);
     height: auto;
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap {
     /* スマートフォン縦画面 */
     width: clamp(95px, 42vw, 200px);
     height: auto;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   font-size: 0;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern {
     /* スマートフォン横画面 */
     width: clamp(360px, 75vw, 450px);
     flex-wrap: nowrap;
@@ -2315,7 +2313,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern {
     /* スマートフォン縦画面 */
     width: clamp(142px, 63vw, 300px);
     flex-wrap: nowrap;
@@ -2323,14 +2321,14 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
     margin: 0;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_upper {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_upper {
   font-size: 14px;
   display: inline-block;
   width: 42px;
   margin: 9px 23px 0 35px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_upper {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_upper {
     /* スマートフォン横画面 */
     width: clamp(62px, 13vw, 80px);
     font-size: clamp(14px, 3vw, 16px);
@@ -2341,7 +2339,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_upper {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_upper {
     /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 14px);
     margin: 0;
@@ -2351,19 +2349,19 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--upper {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--upper {
     /* スマートフォン横画面 */
     width: clamp(202px, 42vw, 250px);
     margin-top: clamp(19px, 4vw, 23px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--upper {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--upper {
     /* スマートフォン縦画面 */
     margin-top: clamp(11px, 5vw, 23px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--upper p.morning_upper {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--upper p.morning_upper {
   font-size: 14px;
   display: inline-block;
   width: 105px;
@@ -2371,7 +2369,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   letter-spacing: 0px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--upper p.morning_upper {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--upper p.morning_upper {
     /* スマートフォン横画面 */
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
@@ -2382,7 +2380,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--upper p.morning_upper {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--upper p.morning_upper {
     /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 14px);
     display: block;
@@ -2391,14 +2389,14 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
     margin-left: clamp(9px, 4vw, 20px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--upper p.afternoon_upper {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--upper p.afternoon_upper {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 9px 16px 0 0;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--upper p.afternoon_upper {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--upper p.afternoon_upper {
     /* スマートフォン横画面 */
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
@@ -2409,7 +2407,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--upper p.afternoon_upper {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--upper p.afternoon_upper {
     /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 14px);
     display: block;
@@ -2418,14 +2416,14 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
     margin-left: clamp(9px, 4vw, 20px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_middle {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_middle {
   font-size: 14px;
   display: inline-block;
   width: 42px;
   margin: 16px 23px 0 33px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_middle {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_middle {
     /* スマートフォン横画面 */
     width: clamp(62px, 13vw, 80px);
     font-size: clamp(14px, 3vw, 16px);
@@ -2436,7 +2434,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_middle {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_middle {
     /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 14px);
     margin: 0;
@@ -2446,7 +2444,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--middle {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--middle {
     /* スマートフォン横画面 */
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
@@ -2454,20 +2452,20 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--middle {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--middle {
     /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 14px);
     margin-top: clamp(9px, 4vw, 20px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--middle p.morning_middle {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--middle p.morning_middle {
   font-size: 14px;
   display: inline-block;
   width: 105px;
   margin: 16px 16px 0 0;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--middle p.morning_middle {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--middle p.morning_middle {
     /* スマートフォン横画面 */
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
@@ -2478,7 +2476,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--middle p.morning_middle {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--middle p.morning_middle {
     /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 14px);
     display: block;
@@ -2487,14 +2485,14 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
     margin-left: clamp(9px, 4vw, 20px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--middle p.afternoon_middle {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--middle p.afternoon_middle {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 16px 16px 0 0;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--middle p.afternoon_middle {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--middle p.afternoon_middle {
     /* スマートフォン横画面 */
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
@@ -2505,7 +2503,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--middle p.afternoon_middle {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--middle p.afternoon_middle {
     /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 14px);
     display: block;
@@ -2514,14 +2512,14 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
     margin-left: clamp(9px, 4vw, 20px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_lower {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_lower {
   font-size: 14px;
   display: inline-block;
   width: 42px;
   margin: 17px 23px 0 33px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_lower {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_lower {
     /* スマートフォン横画面 */
     width: clamp(62px, 13vw, 80px);
     font-size: clamp(14px, 3vw, 16px);
@@ -2532,7 +2530,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content p.dayofweek_lower {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_lower {
     /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 14px);
     margin: 0;
@@ -2542,26 +2540,26 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--lower {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--lower {
     /* スマートフォン横画面 */
     width: clamp(202px, 42vw, 250px);
     margin-top: clamp(14px, 3vw, 20px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--lower {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--lower {
     /* スマートフォン縦画面 */
     margin-top: clamp(9px, 4vw, 20px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--lower p.morning_lower {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--lower p.morning_lower {
   font-size: 14px;
   display: inline-block;
   width: 105px;
   margin: 16px 16px 0 0;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--lower p.morning_lower {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--lower p.morning_lower {
     /* スマートフォン横画面 */
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
@@ -2572,7 +2570,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--lower p.morning_lower {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--lower p.morning_lower {
     /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 14px);
     display: block;
@@ -2581,14 +2579,14 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
     margin-left: clamp(9px, 4vw, 20px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--lower p.afternoon_lower {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--lower p.afternoon_lower {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 16px 16px 0 0;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--lower p.afternoon_lower {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--lower p.afternoon_lower {
     /* スマートフォン横画面 */
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
@@ -2599,7 +2597,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.businesshour_box div.consultation_pattern__box div.consultation_pattern__content div.morning_afternoon__wrap--lower p.afternoon_lower {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--lower p.afternoon_lower {
     /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 14px);
     display: block;
@@ -2608,7 +2606,7 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
     margin-left: clamp(9px, 4vw, 20px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_days__line {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner {
   width: 533px;
   height: 35px;
   display: flex;
@@ -2616,58 +2614,58 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   flex-wrap: wrap;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_days__line {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner {
     /* スマートフォン横画面 */
     width: clamp(336px, 70vw, 420px);
     margin-top: clamp(10px, 2vw, 10px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_days__line {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner {
     /* スマートフォン縦画面 */
     width: clamp(198px, 88vw, 420px);
     margin-top: clamp(5px, 2vw, 10px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_days__line div.closed_day__box {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day {
   width: 85px;
   font-size: 14px;
   border-right: 1px solid;
   border-color: #e7e7e7;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_days__line div.closed_day__box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day {
     /* スマートフォン横画面 */
     width: clamp(96px, 20vw, 120px);
     font-size: clamp(14px, 3vw, 16px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_days__line div.closed_day__box {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day {
     /* スマートフォン縦画面 */
     width: clamp(56px, 25vw, 120px);
     font-size: clamp(7px, 3vw, 14px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_days__line div.closed_day__box p.closed_day {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day p {
   margin-top: 14px;
   margin-left: 4.5px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_days__line div.closed_day__box p.closed_day {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day p {
     /* スマートフォン横画面 */
     margin: 0;
     text-align: center;
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_days__line div.closed_day__box p.closed_day {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day p {
     /* スマートフォン縦画面 */
     margin: 0;
     text-align: center;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_dayofweek__wrap {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrap {
   width: 449px;
   height: 114px;
   display: flex;
@@ -2675,25 +2673,25 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   flex-wrap: wrap;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_dayofweek__wrap {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrap {
     /* スマートフォン横画面 */
     width: clamp(202px, 42vw, 250px);
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_dayofweek__wrap {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrap {
     /* スマートフォン縦画面 */
     width: clamp(117px, 52vw, 250px);
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_dayofweek__wrap div.closed__dayofweek {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrap div.access-container__detail-closed-dayofweek {
   font-size: 14px;
   width: 70px;
   margin-top: 15px;
   margin-left: 34px;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_dayofweek__wrap div.closed__dayofweek {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrap div.access-container__detail-closed-dayofweek {
     /* スマートフォン横画面 */
     width: 100%;
     font-size: clamp(14px, 3vw, 16px);
@@ -2701,67 +2699,67 @@ body.body__toppage div.about_access__wrap .about_access__container div.about_wra
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.closed_dayofweek__wrap div.closed__dayofweek {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrap div.access-container__detail-closed-dayofweek {
     /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 14px);
     margin: 0 auto;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.empty_border__lower {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank-border--lower {
   height: 19px;
   width: 533px;
   border-bottom: 1px solid;
   border-color: #e7e7e7;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.empty_border__lower {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank-border--lower {
     /* スマートフォン横画面 */
     width: 100%;
     margin: 0 auto;
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.empty_border__lower {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank-border--lower {
     /* スマートフォン縦画面 */
     width: 100%;
     margin: 0 auto;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.copyright_reserved__box--pc {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc {
   width: 554px;
   margin-top: 24.5px;
   text-align: right;
   font-size: 0;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.copyright_reserved__box--pc {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc {
     /* スマートフォン横画面 */
     width: 100%;
     margin: 0 auto;
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.copyright_reserved__box--pc {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc {
     /* スマートフォン縦画面 */
     width: 100%;
     margin: 0 auto;
   }
 }
-body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.copyright_reserved__box--pc small.copyright_reserved__text {
+body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc small {
   font-size: 11px;
   letter-spacing: 0.15px;
   padding-right: 15px;
   display: inline-block;
 }
 @media (max-width: 599px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.copyright_reserved__box--pc small.copyright_reserved__text {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc small {
     /* スマートフォン横画面 */
     font-size: clamp(10px, 2vw, 11px);
     display: none;
   }
 }
 @media (max-width: 479px) {
-  body.body__toppage div.about_access__wrap .about_access__container div.about_wrap div.copyright_reserved__box--pc small.copyright_reserved__text {
+  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc small {
     /* スマートフォン縦画面 */
     font-size: clamp(5px, 2vw, 11px);
     display: none;

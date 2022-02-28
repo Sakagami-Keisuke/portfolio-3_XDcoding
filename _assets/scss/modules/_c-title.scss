@@ -105,9 +105,8 @@ ul {
   list-style: none;
 }
 
-// -------------------------------------
-
-body.body__toppage {
+// body ==============================
+body.body-toppage {
   width: 100vw;
 
   @include sp_b(599px) {
@@ -123,7 +122,7 @@ body.body__toppage {
     max-width: 0;
   }
 
-  div.body__toppage--wrap {
+  div.toppage-wrap {
     width: 1920px;
     margin: 0 auto;
 
@@ -138,7 +137,9 @@ body.body__toppage {
       width: 100vw;
       height: auto;
     }
+    // body ==============================
 
+    // header ==============================
     div.header {
       width: 1920px;
       height: 130px;
@@ -157,7 +158,7 @@ body.body__toppage {
         height: clamp_vw_sp_v(160);
       }
 
-      div.header__container {
+      div.header_container {
         // background-color: rgb(103, 231, 220);
         width: 1180px;
         height: 130px;
@@ -184,7 +185,7 @@ body.body__toppage {
           display: block;
         }
 
-        div.header__top--left {
+        div.header_top-left {
           width: 263px;
           height: 73px;
           margin-left: 20px;
@@ -212,7 +213,7 @@ body.body__toppage {
           }
         }
 
-        div.header__logo {
+        div.header_top-left__logo {
           width: 73px;
           height: 73px;
 
@@ -242,7 +243,7 @@ body.body__toppage {
         }
       }
 
-      div.header__tagline {
+      div.header_top-left__tagline {
         width: 190px;
         height: 73px;
 
@@ -256,7 +257,7 @@ body.body__toppage {
           height: clamp(34px, 15.208vw, 73px);
         }
 
-        p.header__tagline--upper {
+        p.header_top-left__tagline--upper {
           padding-left: 8px;
           font-size: 30px;
           text-align: left;
@@ -277,7 +278,7 @@ body.body__toppage {
           }
         }
 
-        p.header__tagline--lower {
+        p.header_top-left__tagline--lower {
           padding-left: 12px;
           font-size: 30px;
           text-align: left;
@@ -302,7 +303,7 @@ body.body__toppage {
         }
       }
 
-      div.header__top--right {
+      div.header_top-right {
         width: 300px;
         height: 73px;
         margin-right: 20px;
@@ -327,7 +328,7 @@ body.body__toppage {
           margin-top: 24px;
         }
 
-        p.reception {
+        p.header_top-right__reception {
           font-size: 14px;
           letter-spacing: 0.2px;
           text-align: right;
@@ -350,7 +351,7 @@ body.body__toppage {
           }
         }
 
-        .tel::before {
+        .header_top-right__tel::before {
           content: "";
           display: inline-block;
           width: 25px;
@@ -375,7 +376,7 @@ body.body__toppage {
           }
         }
 
-        p.tel {
+        p.header_top-right__tel {
           color: #21a937;
           font-size: 22px;
           font-weight: 500;
@@ -403,9 +404,10 @@ body.body__toppage {
         }
       }
     }
+    // header ==============================
 
-    //body section
-    div.firstview__box {
+    // section 1  ==============================
+    div.firstview-inner {
       width: 1920px;
       height: 947px;
       position: relative;
@@ -424,7 +426,7 @@ body.body__toppage {
         margin-top: clamp_vw_sp_v(10);
       }
 
-      div.firstview_image {
+      div.firstview-image {
         width: 100%;
         height: 100%;
         background: url("../images/fv.jpg") no-repeat;
@@ -449,7 +451,7 @@ body.body__toppage {
         }
       }
 
-      p.message-left {
+      p.firstview-inner__message--left {
         writing-mode: vertical-rl;
         font-size: 28px;
         font-weight: 500;
@@ -530,7 +532,7 @@ body.body__toppage {
       }
     }
 
-    p.message-right {
+    p.firstview-inner__message--right {
       writing-mode: vertical-rl;
       font-size: 28px;
       font-weight: 500;
@@ -573,8 +575,10 @@ body.body__toppage {
       }
     }
   }
+  // section 1  ==============================
 
-  div.about_us {
+  // section 2  ==============================
+  div.self_introduction {
     width: 1180px;
     height: 664px;
     margin: 0 auto;
@@ -594,7 +598,7 @@ body.body__toppage {
       display: block;
     }
 
-    div.about_us__content {
+    div.self_introduction-container {
       width: 490px;
       height: 664px;
 
@@ -612,7 +616,7 @@ body.body__toppage {
         height: auto;
       }
 
-      div.firstline__box {
+      div.self_introduction-container__firstline--inner {
         width: 275px;
         margin-left: 32px;
 
@@ -628,7 +632,7 @@ body.body__toppage {
           margin: 0 auto;
         }
 
-        p.firstline__text {
+        p.self_introduction-container__firstline--inner_text {
           font-size: 24px;
           font-weight: 500;
           background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
@@ -654,7 +658,7 @@ body.body__toppage {
       }
     }
 
-    div.secondline__box {
+    div.self_introduction-container__secondline--inner {
       width: 216px;
       margin-top: 42px;
       margin-left: 32px;
@@ -671,7 +675,7 @@ body.body__toppage {
         margin: 0 auto;
       }
 
-      p.secondline__text {
+      p.self_introduction-container__secondline--inner_text {
         background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
         font-size: 24px;
         font-weight: 500;
@@ -696,7 +700,7 @@ body.body__toppage {
       }
     }
 
-    div.thirdline__box {
+    div.self_introduction-container__thirdline--inner {
       width: 415px;
       height: 145px;
       margin-top: 38px;
@@ -716,7 +720,7 @@ body.body__toppage {
         margin-left: clamp_vw_sp_v(55);
       }
 
-      p.thirdline__text {
+      p.self_introduction-container__thirdline--inner_text {
         font-size: 16px;
         line-height: 36px;
         letter-spacing: -0.18px;
@@ -744,7 +748,7 @@ body.body__toppage {
       }
     }
 
-    div.about_us__imgbox {
+    div.self_introduction__image-conainer {
       width: 690px;
       height: 420px;
       margin-top: 162px;
@@ -771,10 +775,10 @@ body.body__toppage {
       }
     }
   }
+  // section 2  ==============================
 
-  // second section------------------------
-
-  div.treatment__content--container {
+  // section 3  ==============================
+  div.medical-treatment-contents__container {
     width: 1920px;
     height: 1520px;
     background-color: #f5fcf8;
@@ -795,7 +799,7 @@ body.body__toppage {
       background-color: #f5fcf8;
     }
 
-    div.treatment__content--box {
+    div.medical-treatment-contents__inner-firstline {
       width: 96px;
       margin: 0 auto;
       padding-top: 82px;
@@ -813,7 +817,7 @@ body.body__toppage {
         padding-top: clamp_vw_sp_v(85);
       }
 
-      h2.treatment-content--title {
+      h2.medical-treatment-contents__inner-firstline--text {
         height: 32px;
         font-size: 24px;
         font-weight: 500;
@@ -832,7 +836,7 @@ body.body__toppage {
     }
   }
 
-  div.treatment-content__supplement {
+  div.medical-treatment-contents__inner-secondline {
     width: 448px;
     margin: 71px auto 0 auto;
 
@@ -850,7 +854,7 @@ body.body__toppage {
       padding-top: clamp_vw_sp_v(65);
     }
 
-    p.treatment-content__supplement--text {
+    p.medical-treatment-contents__inner-secondline--text {
       font-size: 16px;
       letter-spacing: 0px;
 
@@ -866,7 +870,7 @@ body.body__toppage {
     }
   }
 
-  div.medical_subjects__container {
+  div.medical-treatment-contents__menu-container {
     margin-top: 37px;
     display: flex;
     flex-wrap: wrap;
@@ -886,7 +890,7 @@ body.body__toppage {
       margin-top: clamp_vw_sp_v(50);
     }
 
-    article.medical_subjects {
+    article.medical-treatment-contents__menu {
       width: 380px;
       height: 591px;
       border: 1px solid;
@@ -909,7 +913,7 @@ body.body__toppage {
         margin-top: clamp_vw_sp_v(30);
       }
 
-      div.medical_subject__title {
+      div.medical-treatment-contents__menu--title {
         width: 192px;
         margin: 41px 94px 0 94px;
 
@@ -941,7 +945,7 @@ body.body__toppage {
         }
       }
 
-      div.description__box {
+      div.medical-treatment-contents__menu--detailinner {
         width: 320px;
         margin: 42px 29px 111px 31px;
 
@@ -959,7 +963,7 @@ body.body__toppage {
           margin-top: clamp_vw_sp_v(35);
         }
 
-        p.description__left {
+        p.medical-treatment-contents__menu--detail_left {
           font-size: 16px;
           font-weight: 500;
           letter-spacing: -0.11px;
@@ -982,7 +986,7 @@ body.body__toppage {
           }
         }
 
-        p.description__center {
+        p.medical-treatment-contents__menu--detail_center {
           font-size: 16px;
           line-height: 33px;
           font-weight: 500;
@@ -1007,7 +1011,7 @@ body.body__toppage {
           }
         }
 
-        p.description__right {
+        p.medical-treatment-contents__menu--detail_right {
           font-size: 16px;
           line-height: 33px;
           font-weight: 500;
@@ -1033,7 +1037,7 @@ body.body__toppage {
         }
       }
 
-      div.medical_imagebox__first {
+      div.medical-treatment-contents__menu--image_left {
         width: 187px;
         height: 187px;
         background: url("../images/g0108.jpg");
@@ -1062,7 +1066,7 @@ body.body__toppage {
         }
       }
 
-      div.medical_imagebox__second {
+      div.medical-treatment-contents__menu--image_center {
         width: 187px;
         height: 187px;
         background: url("../images/g0099.jpg");
@@ -1091,7 +1095,7 @@ body.body__toppage {
         }
       }
 
-      div.medical_imagebox__third {
+      div.medical-treatment-contents__menu--image_right {
         width: 187px;
         height: 187px;
         background: url("../images/g0092.jpg");
@@ -1122,7 +1126,7 @@ body.body__toppage {
     }
   }
 
-  div.notice_title__box {
+  div.notice-title__inner {
     width: 100px;
     margin: 84px auto 0px auto;
 
@@ -1140,7 +1144,7 @@ body.body__toppage {
       margin-top: clamp_vw_sp_v(90);
     }
 
-    h2.notice_title {
+    h2.notice-title {
       font-size: 24px;
       background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
       font-weight: 500;
@@ -1157,7 +1161,7 @@ body.body__toppage {
     }
   }
 
-  div.notice_container {
+  div.notice-detail__container {
     width: 1180px;
     height: 390px;
     margin: 74px auto 0 auto;
@@ -1188,7 +1192,7 @@ body.body__toppage {
       margin-top: clamp_vw_sp_v(50);
     }
 
-    div.notice_container__margin_upper {
+    div.notice-detail__container-margin_upper {
       height: 25px;
       @include sp_b(599px) {
         /* スマートフォン横画面 */
@@ -1199,7 +1203,7 @@ body.body__toppage {
         width: clamp_vw_sp_v(400);
       }
     }
-    article.notice_contents {
+    article.notice-detail__container-article {
       border-bottom: 1px solid #e7e7e7;
       margin: 0px 66px 0px 66px;
       font-size: 0;
@@ -1223,7 +1227,7 @@ body.body__toppage {
         align-items: flex-start;
       }
 
-      div.notice_left__box {
+      div.notice-detail__container-article--leftwrap {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -1242,7 +1246,7 @@ body.body__toppage {
           align-items: flex-start;
         }
 
-        p.notice_contents__date {
+        p.notice-detail__container-article--leftinner_date_text {
           color: green;
           font-size: 16px;
           font-weight: 500;
@@ -1270,7 +1274,7 @@ body.body__toppage {
           }
         }
 
-        p.notice_contents__info {
+        p.notice-detail__container-article--left__info {
           font-size: 12px;
           font-weight: 500;
           color: white;
@@ -1303,7 +1307,7 @@ body.body__toppage {
         }
       }
 
-      div.notice_right__box {
+      div.notice-detail__container-article--right_inner {
         @include sp_b(599px) {
           /* スマートフォン横画面 */
           width: clamp_vw_sp_b(350);
@@ -1314,7 +1318,7 @@ body.body__toppage {
           width: clamp_vw_sp_v(250);
         }
 
-        p.notice_contents__infocontent {
+        p.notice-detail__container-article--right_text {
           font-size: 16px;
           font-weight: 500;
           margin-left: 6px;
@@ -1343,7 +1347,7 @@ body.body__toppage {
       }
     }
 
-    div.seeall_wrap {
+    div.see-all_line {
       margin: 0px 54px 0px 60px;
       text-align: right;
 
@@ -1361,7 +1365,7 @@ body.body__toppage {
         margin: 0;
       }
 
-      div.seeall_box {
+      div.see-all_inner {
         width: 1005px;
         margin: 0px 0px 0px 66px;
         text-align: right;
@@ -1369,10 +1373,9 @@ body.body__toppage {
 
         @include sp_b(599px) {
           /* スマートフォン横画面 */
-          width: clamp_vw_sp_b(400);
+          width: clamp_vw_sp_b(470);
           height: clamp_vw_sp_b(100);
           margin: 0;
-          margin-top: clamp_vw_sp_b(40);
         }
 
         @include sp_v(479px) {
@@ -1383,7 +1386,7 @@ body.body__toppage {
           margin-top: clamp_vw_sp_v(40);
         }
 
-        p.seeall_text {
+        p.see-all_inner-text {
           font-size: 16px;
           width: 198px;
           height: 16px;
@@ -1407,7 +1410,7 @@ body.body__toppage {
           }
         }
 
-        p.seeall_icon {
+        p.see-all_inner-icon {
           font-size: 14px;
           width: 12px;
           height: 14px;
@@ -1428,10 +1431,10 @@ body.body__toppage {
       }
     }
   }
+  // section 3  ==============================
 
-  /* section */
-
-  div.about_access__wrap {
+  // section 4  ==============================
+  div.access__wrap {
     width: 1190px;
     height: 799px;
     margin: 0px auto 0 auto;
@@ -1457,7 +1460,7 @@ body.body__toppage {
       margin: 0;
     }
 
-    div.copyright_reserved__box--sp {
+    div.copyright-reserved__inner-sp {
       visibility: hidden;
 
       @include sp_b(599px) {
@@ -1478,7 +1481,7 @@ body.body__toppage {
         text-align: center;
       }
 
-      small.copyright_reserved__text--sp {
+      small.copyright-reserved__text-sp {
         visibility: hidden;
 
         @include sp_b(599px) {
@@ -1495,7 +1498,7 @@ body.body__toppage {
       }
     }
 
-    .about_access__container {
+    .access-container {
       margin: 0px auto 0 auto;
       display: flex;
       flex-wrap: wrap;
@@ -1506,7 +1509,7 @@ body.body__toppage {
       @include sp_v(479px) {
         width: clamp_vw_sp_v(479);
       }
-      div.map_box {
+      div.access-container__map-inner {
         width: 608px;
         height: 440px;
         margin-top: 200px;
@@ -1536,7 +1539,7 @@ body.body__toppage {
         }
       }
 
-      div.about_wrap {
+      div.access-container__detail {
         width: 538px;
         height: 625px;
         margin-top: 200px;
@@ -1564,7 +1567,7 @@ body.body__toppage {
           flex-wrap: nowrap;
         }
 
-        div.company_name__box {
+        div.access-container__detail-logo--inner {
           width: 275x;
           height: 73px;
           display: flex;
@@ -1584,7 +1587,7 @@ body.body__toppage {
             margin: 0 auto;
           }
 
-          div.company_logo__box {
+          div.access-container__detail-logo {
             width: 73px;
             height: 73px;
             background: url("../images/病院の地図マーク.jpg");
@@ -1605,7 +1608,7 @@ body.body__toppage {
             }
           }
 
-          div.tagline_box {
+          div.access-container__detail-tagline--inner {
             width: 200x;
             height: 73px;
 
@@ -1623,7 +1626,7 @@ body.body__toppage {
               margin-left: clamp_vw_sp_v(15);
             }
 
-            p.tagline_box--upperline {
+            p.access-container__detail-tagline--upper {
               font-size: 30px;
               line-height: 26px;
               padding-left: 11px;
@@ -1643,7 +1646,7 @@ body.body__toppage {
               }
             }
 
-            p.tagline_box--lowerline {
+            p.access-container__detail-tagline--lower {
               font-size: 30px;
               line-height: 55px;
               padding-left: 26px;
@@ -1667,7 +1670,7 @@ body.body__toppage {
           }
         }
 
-        div.adress_box {
+        div.access-container__detail-adress--inner {
           margin-top: 28px;
           display: flex;
           flex-wrap: wrap;
@@ -1693,7 +1696,7 @@ body.body__toppage {
             align-items: center;
           }
 
-          p.adress_number {
+          p.access-container__detail-adress--number {
             font-size: 16px;
             margin-right: 16px;
             letter-spacing: 0.1px;
@@ -1711,7 +1714,7 @@ body.body__toppage {
             }
           }
 
-          p.adress_text {
+          p.access-container__detail-adress {
             font-size: 16px;
             letter-spacing: 0px;
 
@@ -1731,7 +1734,7 @@ body.body__toppage {
           }
         }
 
-        div.tel_box {
+        div.access-container__detail-tel--inner {
           height: 32px;
           width: 220px;
           position: relative;
@@ -1756,7 +1759,7 @@ body.body__toppage {
             justify-content: center;
           }
 
-          p.tel_number::before {
+          p.access-container__detail-tel--number::before {
             content: "";
             display: inline-block;
             width: 26px;
@@ -1777,7 +1780,7 @@ body.body__toppage {
             }
           }
 
-          p.tel_number {
+          p.access-container__detail-tel--number {
             color: #21a937;
             font-size: 24px;
             text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0,
@@ -1790,7 +1793,7 @@ body.body__toppage {
           }
         }
 
-        div.empty_border {
+        div.access-container__detail-blank--border {
           height: 29.5px;
           width: 533px;
           border-bottom: 1px solid;
@@ -1810,7 +1813,7 @@ body.body__toppage {
           }
         }
 
-        div.empty_margin {
+        div.access-container__detail-blank--margin {
           height: 15px;
           width: 533px;
 
@@ -1828,7 +1831,7 @@ body.body__toppage {
           }
         }
 
-        div.businesshour_box {
+        div.access-container__detail-businesshour--inner {
           height: 95px;
           width: 533px;
           background-color: white;
@@ -1852,7 +1855,7 @@ body.body__toppage {
             justify-content: flex-start;
           }
 
-          div.consultation_time__box {
+          div.access-container__detail-businesshour--consultation-time {
             width: 85px;
             height: 114px;
             border-right: 1px solid;
@@ -1870,7 +1873,7 @@ body.body__toppage {
               height: auto;
             }
 
-            p.consultation_time {
+            p {
               font-size: 14px;
               margin-top: 8px;
               margin-left: 4.5px;
@@ -1891,7 +1894,7 @@ body.body__toppage {
             }
           }
 
-          div.consultation_pattern__box {
+          div.access-container__detail-businesshour--wrap {
             width: 449px;
             height: 114px;
             display: flex;
@@ -1910,7 +1913,7 @@ body.body__toppage {
               height: auto;
             }
 
-            div.consultation_pattern__content {
+            div.access-container__detail-businesshour-consultation-pattern {
               display: flex;
               flex-direction: row;
               flex-wrap: wrap;
@@ -2211,7 +2214,7 @@ body.body__toppage {
           }
         }
 
-        div.closed_days__line {
+        div.access-container__detail-closed-day--inner {
           width: 533px;
           height: 35px;
           display: flex;
@@ -2230,7 +2233,7 @@ body.body__toppage {
             margin-top: clamp_vw_sp_v(10);
           }
 
-          div.closed_day__box {
+          div.access-container__detail-closed-day {
             width: 85px;
             font-size: 14px;
             border-right: 1px solid;
@@ -2248,7 +2251,7 @@ body.body__toppage {
               font-size: clamp_vw_sp_v(14);
             }
 
-            p.closed_day {
+            p {
               margin-top: 14px;
               margin-left: 4.5px;
 
@@ -2267,7 +2270,7 @@ body.body__toppage {
           }
         }
 
-        div.closed_dayofweek__wrap {
+        div.access-container__detail-closed-dayofweek--wrap {
           width: 449px;
           height: 114px;
           display: flex;
@@ -2284,7 +2287,7 @@ body.body__toppage {
             width: clamp_vw_sp_v(250);
           }
 
-          div.closed__dayofweek {
+          div.access-container__detail-closed-dayofweek {
             font-size: 14px;
             width: 70px;
             margin-top: 15px;
@@ -2305,7 +2308,7 @@ body.body__toppage {
           }
         }
 
-        div.empty_border__lower {
+        div.access-container__detail-blank-border--lower {
           height: 19px;
           width: 533px;
           border-bottom: 1px solid;
@@ -2324,7 +2327,7 @@ body.body__toppage {
           }
         }
 
-        div.copyright_reserved__box--pc {
+        div.access-container__detail-copyright_reserved--pc {
           width: 554px;
           margin-top: 24.5px;
           text-align: right;
@@ -2342,7 +2345,7 @@ body.body__toppage {
             margin: 0 auto;
           }
 
-          small.copyright_reserved__text {
+          small {
             font-size: 11px;
             letter-spacing: 0.15px;
             padding-right: 15px;
