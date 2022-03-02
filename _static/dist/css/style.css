@@ -394,8 +394,7 @@ th {
 }
 
 /* ひながたひながたひながたひながたひながたひながたひながた
-// @include sp_v(479px) {
-  /* スマートフォン縦画面 */
+/* メディアクエリ・スマートフォン縦画面 */
 *,
 *:before,
 *:after {
@@ -424,10 +423,10 @@ ul {
 
 body.body-toppage {
   width: 100vw;
+  /* メディアクエリ・スマートフォン横画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage {
-    /* スマートフォン横画面 */
     width: clamp(480px, 100vw, 599px);
     padding: 0;
     max-width: 0;
@@ -440,45 +439,45 @@ body.body-toppage {
     max-width: 0;
   }
 }
-body.body-toppage div.toppage-wrap {
+body.body-toppage div.toppage-wrapper {
   width: 1920px;
   margin: 0 auto;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper {
     width: 100vw;
     height: auto;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.toppage-wrapper {
     width: 100vw;
     height: auto;
   }
 }
-body.body-toppage div.toppage-wrap div.header {
+body.body-toppage div.toppage-wrapper div.header {
   width: 1920px;
   height: 130px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap div.header {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper div.header {
     width: auto;
     max-width: 100%;
     height: clamp(130px, 27vw, 160px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap div.header {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.toppage-wrapper div.header {
     width: auto;
     max-width: 100%;
     height: clamp(74px, 33vw, 160px);
   }
 }
-body.body-toppage div.toppage-wrap div.header div.header_container {
+body.body-toppage div.toppage-wrapper div.header div.header_container {
   width: 1180px;
   height: 130px;
   margin: 0 auto;
@@ -487,10 +486,11 @@ body.body-toppage div.toppage-wrap div.header div.header_container {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap div.header div.header_container {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_container {
     width: auto;
     max-width: 100%;
     height: auto;
@@ -498,15 +498,14 @@ body.body-toppage div.toppage-wrap div.header div.header_container {
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap div.header div.header_container {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_container {
     width: auto;
     max-width: 100%;
     height: auto;
     display: block;
   }
 }
-body.body-toppage div.toppage-wrap div.header div.header_container div.header_top-left {
+body.body-toppage div.toppage-wrapper div.header div.header_container div.header_top-left {
   width: 263px;
   height: 73px;
   margin-left: 20px;
@@ -514,10 +513,11 @@ body.body-toppage div.toppage-wrap div.header div.header_container div.header_to
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap div.header div.header_container div.header_top-left {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_container div.header_top-left {
     width: auto;
     max-width: 65%;
     height: clamp(58px, 12vw, 73px);
@@ -526,8 +526,7 @@ body.body-toppage div.toppage-wrap div.header div.header_container div.header_to
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap div.header div.header_container div.header_top-left {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_container div.header_top-left {
     width: auto;
     max-width: 65%;
     height: clamp(34px, 15vw, 73px);
@@ -535,82 +534,83 @@ body.body-toppage div.toppage-wrap div.header div.header_container div.header_to
     padding-top: 20px;
   }
 }
-body.body-toppage div.toppage-wrap div.header div.header_container div.header_top-left__logo {
+body.body-toppage div.toppage-wrapper div.header div.header_container div.header_top-left__logo {
   width: 73px;
   height: 73px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap div.header div.header_container div.header_top-left__logo {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_container div.header_top-left__logo {
     width: auto;
     max-width: 100%;
     height: clamp(58px, 12vw, 73px);
   }
-  body.body-toppage div.toppage-wrap div.header div.header_container div.header_top-left__logo img {
+  body.body-toppage div.toppage-wrapper div.header div.header_container div.header_top-left__logo img {
     width: 100%;
     height: 100%;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap div.header div.header_container div.header_top-left__logo {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_container div.header_top-left__logo {
     background-color: #d9e0f3;
     width: auto;
     max-width: 100%;
     height: clamp(34px, 15vw, 73px);
   }
-  body.body-toppage div.toppage-wrap div.header div.header_container div.header_top-left__logo img {
+  body.body-toppage div.toppage-wrapper div.header div.header_container div.header_top-left__logo img {
     width: 100%;
     height: 100%;
   }
 }
-body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline {
+body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline {
   width: 190px;
   height: 73px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline {
     height: clamp(34px, 15vw, 73px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline {
     height: clamp(34px, 15.208vw, 73px);
   }
 }
-body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline p.header_top-left__tagline--upper {
+body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline p.header_top-left__tagline--upper {
   padding-left: 8px;
   font-size: 30px;
   text-align: left;
   line-height: 28px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline p.header_top-left__tagline--upper {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline p.header_top-left__tagline--upper {
     width: auto;
     max-width: 100%;
     font-size: clamp(24px, 5vw, 30px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline p.header_top-left__tagline--upper {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline p.header_top-left__tagline--upper {
     width: auto;
     max-width: 100%;
     font-size: clamp(14px, 6vw, 30px);
   }
 }
-body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline p.header_top-left__tagline--lower {
+body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline p.header_top-left__tagline--lower {
   padding-left: 12px;
   font-size: 30px;
   text-align: left;
   line-height: 48px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline p.header_top-left__tagline--lower {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline p.header_top-left__tagline--lower {
     width: auto;
     max-width: 100%;
     font-size: clamp(24px, 5vw, 30px);
@@ -619,23 +619,23 @@ body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline p.hea
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap div.header div.header_top-left__tagline p.header_top-left__tagline--lower {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline p.header_top-left__tagline--lower {
     width: auto;
     max-width: 100%;
     font-size: clamp(14px, 6vw, 30px);
     line-height: clamp(23px, 10vw, 48px);
   }
 }
-body.body-toppage div.toppage-wrap div.header div.header_top-right {
+body.body-toppage div.toppage-wrapper div.header div.header_top-right {
   width: 300px;
   height: 73px;
   margin-right: 20px;
   font-size: 0;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap div.header div.header_top-right {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_top-right {
     width: auto;
     max-width: 85%;
     height: clamp(58px, 12vw, 73px);
@@ -644,8 +644,7 @@ body.body-toppage div.toppage-wrap div.header div.header_top-right {
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap div.header div.header_top-right {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_top-right {
     width: auto;
     max-width: 85%;
     height: clamp(33px, 14.583vw, 73px);
@@ -654,15 +653,16 @@ body.body-toppage div.toppage-wrap div.header div.header_top-right {
     margin-top: 24px;
   }
 }
-body.body-toppage div.toppage-wrap div.header div.header_top-right p.header_top-right__reception {
+body.body-toppage div.toppage-wrapper div.header div.header_top-right p.header_top-right__reception {
   font-size: 14px;
   letter-spacing: 0.2px;
   text-align: right;
   margin-top: 5px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap div.header div.header_top-right p.header_top-right__reception {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_top-right p.header_top-right__reception {
     width: auto;
     max-width: 100%;
     text-align: center;
@@ -670,15 +670,14 @@ body.body-toppage div.toppage-wrap div.header div.header_top-right p.header_top-
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap div.header div.header_top-right p.header_top-right__reception {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_top-right p.header_top-right__reception {
     width: auto;
     max-width: 100%;
     text-align: center;
     font-size: clamp(9px, 4vw, 18px);
   }
 }
-body.body-toppage div.toppage-wrap div.header div.header_top-right .header_top-right__tel::before {
+body.body-toppage div.toppage-wrapper div.header div.header_top-right .header_top-right__tel::before {
   content: "";
   display: inline-block;
   width: 25px;
@@ -687,34 +686,35 @@ body.body-toppage div.toppage-wrap div.header div.header_top-right .header_top-r
   background-size: contain;
   margin-top: 1.5px;
   margin-right: 17px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap div.header div.header_top-right .header_top-right__tel::before {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_top-right .header_top-right__tel::before {
     margin-top: clamp(5px, 1vw, 5px);
     margin-right: 0px;
     height: clamp(19px, 4vw, 25px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap div.header div.header_top-right .header_top-right__tel::before {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_top-right .header_top-right__tel::before {
     margin-top: clamp(2px, 1vw, 5px);
     margin-right: 0px;
     height: clamp(11px, 5vw, 25px);
   }
 }
-body.body-toppage div.toppage-wrap div.header div.header_top-right p.header_top-right__tel {
+body.body-toppage div.toppage-wrapper div.header div.header_top-right p.header_top-right__tel {
   color: #21a937;
   font-size: 22px;
   font-weight: 500;
   letter-spacing: 0.5px;
   margin-top: 13px;
   text-align: right;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap div.header div.header_top-right p.header_top-right__tel {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_top-right p.header_top-right__tel {
     width: auto;
     max-width: 100%;
     text-align: center;
@@ -723,8 +723,7 @@ body.body-toppage div.toppage-wrap div.header div.header_top-right p.header_top-
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap div.header div.header_top-right p.header_top-right__tel {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.toppage-wrapper div.header div.header_top-right p.header_top-right__tel {
     width: auto;
     max-width: 100%;
     text-align: center;
@@ -732,36 +731,36 @@ body.body-toppage div.toppage-wrap div.header div.header_top-right p.header_top-
     margin-top: -1px;
   }
 }
-body.body-toppage div.toppage-wrap div.firstview-inner {
+body.body-toppage div.toppage-wrapper div.firstview-inner {
   width: 1920px;
   height: 947px;
   position: relative;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap div.firstview-inner {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper div.firstview-inner {
     width: clamp(470px, 98vw, 589px);
     height: clamp(470px, 98vw, 589px);
     margin-top: clamp(10px, 2vw, 10px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap div.firstview-inner {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.toppage-wrapper div.firstview-inner {
     width: clamp(225px, 100vw, 479px);
     height: clamp(225px, 100vw, 479px);
     margin-top: clamp(5px, 2vw, 10px);
   }
 }
-body.body-toppage div.toppage-wrap div.firstview-inner div.firstview-image {
+body.body-toppage div.toppage-wrapper div.firstview-inner div.firstview-image {
   width: 100%;
   height: 100%;
   background: url("../images/fv.jpg") no-repeat;
   background-size: contain;
+  /* メディアクエリ・スマートフォン横画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap div.firstview-inner div.firstview-image {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper div.firstview-inner div.firstview-image {
     width: clamp(480px, 100vw, 599px);
     height: clamp(480px, 100vw, 599px);
     background: url("../images/firstview_image_SP.jpg") no-repeat;
@@ -771,7 +770,7 @@ body.body-toppage div.toppage-wrap div.firstview-inner div.firstview-image {
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap div.firstview-inner div.firstview-image {
+  body.body-toppage div.toppage-wrapper div.firstview-inner div.firstview-image {
     width: clamp(225px, 100vw, 479px);
     height: clamp(225px, 100vw, 479px);
     background: url("../images/firstview_image_SP.jpg") no-repeat;
@@ -779,7 +778,7 @@ body.body-toppage div.toppage-wrap div.firstview-inner div.firstview-image {
     position: absolute;
   }
 }
-body.body-toppage div.toppage-wrap div.firstview-inner p.firstview-inner__message--left {
+body.body-toppage div.toppage-wrapper div.firstview-inner p.firstview-inner__message--left {
   writing-mode: vertical-rl;
   font-size: 28px;
   font-weight: 500;
@@ -792,10 +791,11 @@ body.body-toppage div.toppage-wrap div.firstview-inner p.firstview-inner__messag
   position: absolute;
   top: 133px;
   left: 210px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap div.firstview-inner p.firstview-inner__message--left {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper div.firstview-inner p.firstview-inner__message--left {
     width: clamp(43px, 9vw, 55px);
     height: clamp(278px, 58vw, 345px);
     font-size: clamp(14px, 3vw, 20px);
@@ -809,8 +809,7 @@ body.body-toppage div.toppage-wrap div.firstview-inner p.firstview-inner__messag
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap div.firstview-inner p.firstview-inner__message--left {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.toppage-wrapper div.firstview-inner p.firstview-inner__message--left {
     width: clamp(25px, 11vw, 55px);
     /* 最小値30(vw225),65÷479×100vw,最大値65(vw479) */
     height: clamp(162px, 72vw, 345px);
@@ -830,15 +829,16 @@ body.body-toppage div.toppage-wrap div.firstview-inner p.firstview-inner__messag
     z-index: 5;
   }
 }
-body.body-toppage div.toppage-wrap div.firstview-inner p.firstview-inner__message--left span.color {
+body.body-toppage div.toppage-wrapper div.firstview-inner p.firstview-inner__message--left span.color {
   color: green;
   letter-spacing: 5.5px;
   margin-top: -8px;
   margin-bottom: -8px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap div.firstview-inner p.firstview-inner__message--left span.color {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper div.firstview-inner p.firstview-inner__message--left span.color {
     font-size: clamp(14px, 3vw, 20px);
     letter-spacing: 0px;
     padding-top: clamp(5px, 1vw, 3px);
@@ -846,15 +846,14 @@ body.body-toppage div.toppage-wrap div.firstview-inner p.firstview-inner__messag
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap div.firstview-inner p.firstview-inner__message--left span.color {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.toppage-wrapper div.firstview-inner p.firstview-inner__message--left span.color {
     font-size: clamp(9px, 4vw, 20px);
     letter-spacing: 0px;
     padding-top: clamp(2px, 1vw, 3px);
     padding-bottom: clamp(2px, 1vw, 3px);
   }
 }
-body.body-toppage div.toppage-wrap p.firstview-inner__message--right {
+body.body-toppage div.toppage-wrapper p.firstview-inner__message--right {
   writing-mode: vertical-rl;
   font-size: 28px;
   font-weight: 500;
@@ -867,10 +866,11 @@ body.body-toppage div.toppage-wrap p.firstview-inner__message--right {
   position: absolute;
   top: 133px;
   left: 393px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.toppage-wrap p.firstview-inner__message--right {
-    /* スマートフォン横画面 */
+  body.body-toppage div.toppage-wrapper p.firstview-inner__message--right {
     width: clamp(43px, 9vw, 55px);
     height: clamp(278px, 58vw, 345px);
     font-size: clamp(14px, 3vw, 20px);
@@ -884,8 +884,7 @@ body.body-toppage div.toppage-wrap p.firstview-inner__message--right {
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.toppage-wrap p.firstview-inner__message--right {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.toppage-wrapper p.firstview-inner__message--right {
     width: clamp(25px, 11vw, 55px);
     height: clamp(162px, 72vw, 345px);
     font-size: clamp(9px, 4vw, 20px);
@@ -903,10 +902,11 @@ body.body-toppage div.self_introduction {
   height: 664px;
   margin: 0 auto;
   display: flex;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.self_introduction {
-    /* スマートフォン横画面 */
     width: clamp(470px, 98vw, 589px);
     height: clamp(528px, 110vw, 660px);
     display: block;
@@ -914,7 +914,6 @@ body.body-toppage div.self_introduction {
 }
 @media (max-width: 479px) {
   body.body-toppage div.self_introduction {
-    /* スマートフォン縦画面 */
     width: clamp(225px, 100vw, 479px);
     height: clamp(311px, 138vw, 660px);
     display: block;
@@ -923,10 +922,11 @@ body.body-toppage div.self_introduction {
 body.body-toppage div.self_introduction div.self_introduction-container {
   width: 490px;
   height: 664px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.self_introduction div.self_introduction-container {
-    /* スマートフォン横画面 */
     width: auto;
     max-width: 100%;
     height: auto;
@@ -934,7 +934,6 @@ body.body-toppage div.self_introduction div.self_introduction-container {
 }
 @media (max-width: 479px) {
   body.body-toppage div.self_introduction div.self_introduction-container {
-    /* スマートフォン縦画面 */
     width: auto;
     max-width: 100%;
     height: auto;
@@ -943,17 +942,17 @@ body.body-toppage div.self_introduction div.self_introduction-container {
 body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner {
   width: 275px;
   margin-left: 32px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner {
-    /* スマートフォン横画面 */
     width: clamp(221px, 46vw, 275px);
     margin: 0 auto;
   }
 }
 @media (max-width: 479px) {
   body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner {
-    /* スマートフォン縦画面 */
     width: clamp(124px, 55vw, 265px);
     margin: 0 auto;
   }
@@ -964,10 +963,11 @@ body.body-toppage div.self_introduction div.self_introduction-container div.self
   background: linear-gradient(transparent 60%, #86eb86 90%);
   margin-top: 200px;
   line-height: 22px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner p.self_introduction-container__firstline--inner_text {
-    /* スマートフォン横画面 */
     margin-top: clamp(48px, 10vw, 60px);
     font-size: clamp(19px, 4vw, 23px);
     letter-spacing: clamp(0px, 0vw, -2px);
@@ -976,7 +976,6 @@ body.body-toppage div.self_introduction div.self_introduction-container div.self
 }
 @media (max-width: 479px) {
   body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner p.self_introduction-container__firstline--inner_text {
-    /* スマートフォン縦画面 */
     margin-top: clamp(29px, 13vw, 60px);
     font-size: clamp(11px, 5vw, 23px);
     letter-spacing: clamp(-2px, -1vw, -3px);
@@ -987,17 +986,17 @@ body.body-toppage div.self_introduction div.self_introduction-container__secondl
   width: 216px;
   margin-top: 42px;
   margin-left: 32px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.self_introduction div.self_introduction-container__secondline--inner {
-    /* スマートフォン横画面 */
     width: clamp(178px, 37vw, 220px);
     margin: 0 auto;
   }
 }
 @media (max-width: 479px) {
   body.body-toppage div.self_introduction div.self_introduction-container__secondline--inner {
-    /* スマートフォン縦画面 */
     width: clamp(104px, 46vw, 220px);
     margin: 0 auto;
   }
@@ -1008,10 +1007,11 @@ body.body-toppage div.self_introduction div.self_introduction-container__secondl
   font-weight: 500;
   letter-spacing: -0.1px;
   line-height: 24px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.self_introduction div.self_introduction-container__secondline--inner p.self_introduction-container__secondline--inner_text {
-    /* スマートフォン横画面 */
     font-size: clamp(19px, 4vw, 23px);
     margin-top: clamp(24px, 5vw, 30px);
     letter-spacing: clamp(0px, 0vw, 0px);
@@ -1020,7 +1020,6 @@ body.body-toppage div.self_introduction div.self_introduction-container__secondl
 }
 @media (max-width: 479px) {
   body.body-toppage div.self_introduction div.self_introduction-container__secondline--inner p.self_introduction-container__secondline--inner_text {
-    /* スマートフォン縦画面 */
     font-size: clamp(11px, 5vw, 23px);
     margin-top: clamp(14px, 6vw, 30px);
     letter-spacing: clamp(-2px, -1vw, -3px);
@@ -1032,10 +1031,11 @@ body.body-toppage div.self_introduction div.self_introduction-container__thirdli
   height: 145px;
   margin-top: 38px;
   margin-left: 32px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.self_introduction div.self_introduction-container__thirdline--inner {
-    /* スマートフォン横画面 */
     width: clamp(384px, 80vw, 480px);
     margin: 0 auto;
     margin-left: clamp(43px, 9vw, 55px);
@@ -1043,7 +1043,6 @@ body.body-toppage div.self_introduction div.self_introduction-container__thirdli
 }
 @media (max-width: 479px) {
   body.body-toppage div.self_introduction div.self_introduction-container__thirdline--inner {
-    /* スマートフォン縦画面 */
     width: clamp(178px, 79vw, 380px);
     margin: 0 auto;
     margin-left: clamp(25px, 11vw, 55px);
@@ -1054,10 +1053,11 @@ body.body-toppage div.self_introduction div.self_introduction-container__thirdli
   line-height: 36px;
   letter-spacing: -0.18px;
   line-height: 38px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.self_introduction div.self_introduction-container__thirdline--inner p.self_introduction-container__thirdline--inner_text {
-    /* スマートフォン横画面 */
     font-size: clamp(14px, 3vw, 16px);
     text-align: center;
     line-height: clamp(29px, 6vw, 36px);
@@ -1068,7 +1068,6 @@ body.body-toppage div.self_introduction div.self_introduction-container__thirdli
 }
 @media (max-width: 479px) {
   body.body-toppage div.self_introduction div.self_introduction-container__thirdline--inner p.self_introduction-container__thirdline--inner_text {
-    /* スマートフォン縦画面 */
     font-size: clamp(7px, 3vw, 16px);
     text-align: center;
     line-height: clamp(18px, 8vw, 36px);
@@ -1083,10 +1082,11 @@ body.body-toppage div.self_introduction div.self_introduction__image-conainer {
   margin-top: 162px;
   background: url("../images/belief.jpg");
   background-size: cover;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.self_introduction div.self_introduction__image-conainer {
-    /* スマートフォン横画面 */
     width: clamp(418px, 87vw, 520px);
     height: clamp(322px, 67vw, 400px);
     background: url("../images/belief.jpg") no-repeat;
@@ -1097,7 +1097,6 @@ body.body-toppage div.self_introduction div.self_introduction__image-conainer {
 }
 @media (max-width: 479px) {
   body.body-toppage div.self_introduction div.self_introduction__image-conainer {
-    /* スマートフォン縦画面 */
     width: clamp(225px, 100vw, 479px);
     height: clamp(189px, 84vw, 400px);
     background: url("../images/belief.jpg") no-repeat;
@@ -1109,10 +1108,11 @@ body.body-toppage div.medical-treatment-contents__container {
   width: 1920px;
   height: 1520px;
   background-color: #f5fcf8;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.medical-treatment-contents__container {
-    /* スマートフォン横画面 */
     width: clamp(480px, 100vw, 599px);
     height: clamp(2242px, 467vw, 2800px);
     height: auto;
@@ -1121,7 +1121,6 @@ body.body-toppage div.medical-treatment-contents__container {
 }
 @media (max-width: 479px) {
   body.body-toppage div.medical-treatment-contents__container {
-    /* スマートフォン縦画面 */
     width: clamp(225px, 100vw, 479px);
     height: clamp(1316px, 585vw, 2800px);
     height: auto;
@@ -1133,17 +1132,17 @@ body.body-toppage div.medical-treatment-contents__container div.medical-treatmen
   margin: 0 auto;
   padding-top: 82px;
   background: linear-gradient(transparent 90%, #86eb86 90%);
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.medical-treatment-contents__container div.medical-treatment-contents__inner-firstline {
-    /* スマートフォン横画面 */
     width: clamp(77px, 16vw, 96px);
     padding-top: clamp(67px, 14vw, 85px);
   }
 }
 @media (max-width: 479px) {
   body.body-toppage div.medical-treatment-contents__container div.medical-treatment-contents__inner-firstline {
-    /* スマートフォン縦画面 */
     width: clamp(45px, 20vw, 96px);
     padding-top: clamp(41px, 18vw, 85px);
   }
@@ -1153,26 +1152,27 @@ body.body-toppage div.medical-treatment-contents__container div.medical-treatmen
   font-size: 24px;
   font-weight: 500;
   text-align: center;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.medical-treatment-contents__container div.medical-treatment-contents__inner-firstline h2.medical-treatment-contents__inner-firstline--text {
-    /* スマートフォン横画面 */
     font-size: clamp(19px, 4vw, 24px);
   }
 }
 @media (max-width: 479px) {
   body.body-toppage div.medical-treatment-contents__container div.medical-treatment-contents__inner-firstline h2.medical-treatment-contents__inner-firstline--text {
-    /* スマートフォン縦画面 */
     font-size: clamp(11px, 5vw, 24px);
   }
 }
 body.body-toppage div.medical-treatment-contents__inner-secondline {
   width: 448px;
   margin: 71px auto 0 auto;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.medical-treatment-contents__inner-secondline {
-    /* スマートフォン横画面 */
     width: clamp(254px, 53vw, 320px);
     margin: 0 auto;
     padding-top: clamp(53px, 11vw, 65px);
@@ -1180,7 +1180,6 @@ body.body-toppage div.medical-treatment-contents__inner-secondline {
 }
 @media (max-width: 479px) {
   body.body-toppage div.medical-treatment-contents__inner-secondline {
-    /* スマートフォン縦画面 */
     width: clamp(151px, 67vw, 320px);
     margin: 0 auto;
     padding-top: clamp(32px, 14vw, 65px);
@@ -1189,16 +1188,16 @@ body.body-toppage div.medical-treatment-contents__inner-secondline {
 body.body-toppage div.medical-treatment-contents__inner-secondline p.medical-treatment-contents__inner-secondline--text {
   font-size: 16px;
   letter-spacing: 0px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.medical-treatment-contents__inner-secondline p.medical-treatment-contents__inner-secondline--text {
-    /* スマートフォン横画面 */
     letter-spacing: clamp(0px, 0vw, 2.5px);
   }
 }
 @media (max-width: 479px) {
   body.body-toppage div.medical-treatment-contents__inner-secondline p.medical-treatment-contents__inner-secondline--text {
-    /* スマートフォン縦画面 */
     letter-spacing: clamp(2px, 1vw, 2.5px);
   }
 }
@@ -1207,10 +1206,11 @@ body.body-toppage div.medical-treatment-contents__menu-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.medical-treatment-contents__menu-container {
-    /* スマートフォン横画面 */
     margin: 0;
     width: clamp(480px, 100vw, 599px);
     margin-top: clamp(38px, 8vw, 50px);
@@ -1218,7 +1218,6 @@ body.body-toppage div.medical-treatment-contents__menu-container {
 }
 @media (max-width: 479px) {
   body.body-toppage div.medical-treatment-contents__menu-container {
-    /* スマートフォン縦画面 */
     margin: 0;
     width: clamp(225px, 100vw, 479px);
     margin-top: clamp(23px, 10vw, 50px);
@@ -1232,10 +1231,11 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
   margin: 0 10px 0 10px;
   position: relative;
   background-color: white;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu {
-    /* スマートフォン横画面 */
     width: clamp(398px, 83vw, 500px);
     height: clamp(461px, 96vw, 575px);
     margin-top: clamp(24px, 5vw, 30px);
@@ -1243,7 +1243,6 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
 }
 @media (max-width: 479px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu {
-    /* スマートフォン縦画面 */
     width: clamp(189px, 84vw, 400px);
     height: clamp(270px, 120vw, 575px);
     margin-top: clamp(14px, 6vw, 30px);
@@ -1252,17 +1251,17 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
 body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title {
   width: 192px;
   margin: 41px 94px 0 94px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title {
-    /* スマートフォン横画面 */
     margin: 0 auto;
     margin-top: clamp(29px, 6vw, 35px);
   }
 }
 @media (max-width: 479px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title {
-    /* スマートフォン縦画面 */
     margin: 0 auto;
     margin-top: clamp(16px, 7vw, 35px);
   }
@@ -1270,26 +1269,27 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
 body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title h3 {
   font-size: 24px;
   font-weight: 500;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title h3 {
-    /* スマートフォン横画面 */
     font-size: clamp(19px, 4vw, 24px);
   }
 }
 @media (max-width: 479px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title h3 {
-    /* スマートフォン縦画面 */
     font-size: clamp(11px, 5vw, 24px);
   }
 }
 body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner {
   width: 320px;
   margin: 42px 29px 111px 31px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner {
-    /* スマートフォン横画面 */
     width: clamp(398px, 83vw, 500px);
     margin: 0 auto;
     margin-top: clamp(29px, 6vw, 35px);
@@ -1297,7 +1297,6 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
 }
 @media (max-width: 479px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner {
-    /* スマートフォン縦画面 */
     width: clamp(164px, 73vw, 350px);
     margin: 0 auto;
     margin-top: clamp(16px, 7vw, 35px);
@@ -1308,10 +1307,11 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
   font-weight: 500;
   letter-spacing: -0.11px;
   line-height: 38px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_left {
-    /* スマートフォン横画面 */
     font-size: clamp(14px, 3vw, 18px);
     letter-spacing: clamp(0px, 0vw, 0px);
     text-align: center;
@@ -1320,7 +1320,6 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
 }
 @media (max-width: 479px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_left {
-    /* スマートフォン縦画面 */
     font-size: clamp(9px, 4vw, 18px);
     letter-spacing: clamp(-2px, -1vw, -3px);
     text-align: left;
@@ -1334,10 +1333,11 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
   letter-spacing: 0.05px;
   line-height: 39px;
   margin-left: 5px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_center {
-    /* スマートフォン横画面 */
     font-size: clamp(14px, 3vw, 18px);
     letter-spacing: clamp(0px, 0vw, 0px);
     text-align: center;
@@ -1346,7 +1346,6 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
 }
 @media (max-width: 479px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_center {
-    /* スマートフォン縦画面 */
     font-size: clamp(9px, 4vw, 18px);
     letter-spacing: clamp(-2px, -1vw, -3px);
     text-align: left;
@@ -1360,10 +1359,11 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
   letter-spacing: 0px;
   line-height: 38px;
   margin-left: -3px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_right {
-    /* スマートフォン横画面 */
     font-size: clamp(14px, 3vw, 18px);
     letter-spacing: clamp(0px, 0vw, 0px);
     text-align: center;
@@ -1372,7 +1372,6 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
 }
 @media (max-width: 479px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_right {
-    /* スマートフォン縦画面 */
     font-size: clamp(9px, 4vw, 18px);
     letter-spacing: clamp(-2px, -1vw, -3px);
     text-align: left;
@@ -1388,10 +1387,11 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
   top: 83%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_left {
-    /* スマートフォン横画面 */
     width: clamp(182px, 38vw, 230px);
     height: clamp(182px, 38vw, 230px);
     background: url("../images/g0108.jpg");
@@ -1401,7 +1401,6 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
 }
 @media (max-width: 479px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_left {
-    /* スマートフォン縦画面 */
     width: clamp(108px, 48vw, 230px);
     height: clamp(108px, 48vw, 230px);
     background: url("../images/g0108.jpg");
@@ -1418,10 +1417,11 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
   top: 83%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_center {
-    /* スマートフォン横画面 */
     width: clamp(182px, 38vw, 230px);
     height: clamp(182px, 38vw, 230px);
     background: url("../images/g0099.jpg");
@@ -1431,7 +1431,6 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
 }
 @media (max-width: 479px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_center {
-    /* スマートフォン縦画面 */
     width: clamp(108px, 48vw, 230px);
     height: clamp(108px, 48vw, 230px);
     background: url("../images/g0099.jpg");
@@ -1448,10 +1447,11 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
   top: 83%;
   left: 50%;
   transform: translate(-50%, -50%);
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_right {
-    /* スマートフォン横画面 */
     width: clamp(182px, 38vw, 230px);
     height: clamp(182px, 38vw, 230px);
     background: url("../images/g0092.jpg");
@@ -1461,7 +1461,6 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
 }
 @media (max-width: 479px) {
   body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_right {
-    /* スマートフォン縦画面 */
     width: clamp(108px, 48vw, 230px);
     height: clamp(108px, 48vw, 230px);
     background: url("../images/g0092.jpg");
@@ -1472,10 +1471,11 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
 body.body-toppage div.notice-title__inner {
   width: 100px;
   margin: 84px auto 0px auto;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.notice-title__inner {
-    /* スマートフォン横画面 */
     width: clamp(82px, 17vw, 100px);
     margin: 0 auto;
     margin-top: clamp(72px, 15vw, 90px);
@@ -1483,7 +1483,6 @@ body.body-toppage div.notice-title__inner {
 }
 @media (max-width: 479px) {
   body.body-toppage div.notice-title__inner {
-    /* スマートフォン縦画面 */
     width: clamp(47px, 21vw, 100px);
     margin: 0 auto;
     margin-top: clamp(43px, 19vw, 90px);
@@ -1493,16 +1492,16 @@ body.body-toppage div.notice-title__inner h2.notice-title {
   font-size: 24px;
   background: linear-gradient(transparent 60%, #86eb86 90%);
   font-weight: 500;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.notice-title__inner h2.notice-title {
-    /* スマートフォン横画面 */
     font-size: clamp(19px, 4vw, 24px);
   }
 }
 @media (max-width: 479px) {
   body.body-toppage div.notice-title__inner h2.notice-title {
-    /* スマートフォン縦画面 */
     font-size: clamp(11px, 5vw, 24px);
   }
 }
@@ -1520,10 +1519,11 @@ body.body-toppage div.notice-detail__container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.notice-detail__container {
-    /* スマートフォン横画面 */
     width: clamp(432px, 90vw, 540px);
     height: auto;
     margin: 0 auto;
@@ -1532,7 +1532,6 @@ body.body-toppage div.notice-detail__container {
 }
 @media (max-width: 479px) {
   body.body-toppage div.notice-detail__container {
-    /* スマートフォン縦画面 */
     width: clamp(198px, 88vw, 420px);
     height: auto;
     margin: 0 auto;
@@ -1541,16 +1540,16 @@ body.body-toppage div.notice-detail__container {
 }
 body.body-toppage div.notice-detail__container div.notice-detail__container-margin_upper {
   height: 25px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.notice-detail__container div.notice-detail__container-margin_upper {
-    /* スマートフォン横画面 */
     width: clamp(418px, 87vw, 520px);
   }
 }
 @media (max-width: 479px) {
   body.body-toppage div.notice-detail__container div.notice-detail__container-margin_upper {
-    /* スマートフォン縦画面 */
     width: clamp(189px, 84vw, 400px);
   }
 }
@@ -1561,10 +1560,11 @@ body.body-toppage div.notice-detail__container article.notice-detail__container-
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.notice-detail__container article.notice-detail__container-article {
-    /* スマートフォン横画面 */
     width: clamp(394px, 82vw, 490px);
     margin-left: clamp(14px, 3vw, 20px);
     margin-right: clamp(14px, 3vw, 20px);
@@ -1573,35 +1573,34 @@ body.body-toppage div.notice-detail__container article.notice-detail__container-
 }
 @media (max-width: 479px) {
   body.body-toppage div.notice-detail__container article.notice-detail__container-article {
-    /* スマートフォン縦画面 */
     width: clamp(182px, 81vw, 390px);
     margin-left: clamp(9px, 4vw, 20px);
     margin-right: clamp(9px, 4vw, 20px);
     align-items: flex-start;
   }
 }
-body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap {
+body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap {
-    /* スマートフォン横画面 */
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper {
     width: clamp(96px, 20vw, 120px);
     flex-direction: column;
     align-items: flex-start;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper {
     width: clamp(47px, 21vw, 100px);
     flex-direction: column;
     align-items: flex-start;
   }
 }
-body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap p.notice-detail__container-article--leftinner_date_text {
+body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper p.notice-detail__container-article--leftinner_date_text {
   color: green;
   font-size: 16px;
   font-weight: 500;
@@ -1610,10 +1609,11 @@ body.body-toppage div.notice-detail__container article.notice-detail__container-
   height: 16px;
   margin: 25.4px 36px 20.5px -2px;
   letter-spacing: 0px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap p.notice-detail__container-article--leftinner_date_text {
-    /* スマートフォン横画面 */
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper p.notice-detail__container-article--leftinner_date_text {
     width: clamp(96px, 20vw, 120px);
     font-size: clamp(14px, 3vw, 16px);
     text-align: center;
@@ -1622,15 +1622,14 @@ body.body-toppage div.notice-detail__container article.notice-detail__container-
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap p.notice-detail__container-article--leftinner_date_text {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper p.notice-detail__container-article--leftinner_date_text {
     width: clamp(47px, 21vw, 100px);
     font-size: clamp(7px, 3vw, 16px);
     margin: 0;
     margin-top: clamp(5px, 2vw, 10px);
   }
 }
-body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap p.notice-detail__container-article--left__info {
+body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper p.notice-detail__container-article--left__info {
   font-size: 12px;
   font-weight: 500;
   color: white;
@@ -1641,10 +1640,11 @@ body.body-toppage div.notice-detail__container article.notice-detail__container-
   text-align: center;
   line-height: 25px;
   margin-right: 30px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap p.notice-detail__container-article--left__info {
-    /* スマートフォン横画面 */
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper p.notice-detail__container-article--left__info {
     margin: 0;
     width: clamp(96px, 20vw, 120px);
     font-size: clamp(14px, 3vw, 16px);
@@ -1654,8 +1654,7 @@ body.body-toppage div.notice-detail__container article.notice-detail__container-
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrap p.notice-detail__container-article--left__info {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper p.notice-detail__container-article--left__info {
     width: clamp(47px, 21vw, 100px);
     font-size: clamp(7px, 3vw, 14px);
     margin: 0;
@@ -1663,15 +1662,17 @@ body.body-toppage div.notice-detail__container article.notice-detail__container-
     margin-bottom: clamp(5px, 2vw, 10px);
   }
 }
+body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--right_inner {
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
+}
 @media (max-width: 599px) {
   body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--right_inner {
-    /* スマートフォン横画面 */
     width: clamp(278px, 58vw, 350px);
   }
 }
 @media (max-width: 479px) {
   body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--right_inner {
-    /* スマートフォン縦画面 */
     width: clamp(117px, 52vw, 250px);
   }
 }
@@ -1680,10 +1681,11 @@ body.body-toppage div.notice-detail__container article.notice-detail__container-
   font-weight: 500;
   margin-left: 6px;
   letter-spacing: -0.1px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
   body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--right_inner p.notice-detail__container-article--right_text {
-    /* スマートフォン横画面 */
     width: clamp(254px, 53vw, 320px);
     font-size: clamp(14px, 3vw, 16px);
     margin: 0;
@@ -1694,7 +1696,6 @@ body.body-toppage div.notice-detail__container article.notice-detail__container-
 }
 @media (max-width: 479px) {
   body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--right_inner p.notice-detail__container-article--right_text {
-    /* スマートフォン縦画面 */
     width: clamp(117px, 52vw, 250px);
     font-size: clamp(7px, 3vw, 14px);
     margin: 0;
@@ -1703,50 +1704,30 @@ body.body-toppage div.notice-detail__container article.notice-detail__container-
     margin-left: clamp(14px, 6vw, 30px);
   }
 }
-body.body-toppage div.notice-detail__container div.see-all_line {
-  margin: 0px 54px 0px 60px;
-  text-align: right;
-}
-@media (max-width: 599px) {
-  body.body-toppage div.notice-detail__container div.see-all_line {
-    /* スマートフォン横画面 */
-    width: clamp(322px, 67vw, 400px);
-    height: clamp(82px, 17vw, 100px);
-    margin: 0;
-  }
-}
-@media (max-width: 479px) {
-  body.body-toppage div.notice-detail__container div.see-all_line {
-    /* スマートフォン縦画面 */
-    width: clamp(189px, 84vw, 400px);
-    height: clamp(47px, 21vw, 100px);
-    margin: 0;
-  }
-}
-body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner {
+body.body-toppage div.notice-detail__container div.see-all_inner {
   width: 1005px;
   margin: 0px 0px 0px 66px;
   text-align: right;
   font-size: 0;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner {
-    /* スマートフォン横画面 */
-    width: clamp(374px, 78vw, 470px);
+  body.body-toppage div.notice-detail__container div.see-all_inner {
+    width: clamp(384px, 80vw, 480px);
     height: clamp(82px, 17vw, 100px);
     margin: 0;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner {
-    /* スマートフォン縦画面 */
-    width: clamp(189px, 84vw, 400px);
-    height: clamp(47px, 21vw, 100px);
+  body.body-toppage div.notice-detail__container div.see-all_inner {
+    width: clamp(203px, 90vw, 430px);
+    height: clamp(23px, 10vw, 50px);
     margin: 0;
-    margin-top: clamp(18px, 8vw, 40px);
+    margin-top: clamp(11px, 5vw, 25px);
   }
 }
-body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner p.see-all_inner-text {
+body.body-toppage div.notice-detail__container div.see-all_inner p.see-all_inner-text {
   font-size: 16px;
   width: 198px;
   height: 16px;
@@ -1754,54 +1735,51 @@ body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inne
   display: inline-block;
   letter-spacing: 1.2px;
   margin-right: 2px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner p.see-all_inner-text {
-    /* スマートフォン横画面 */
+  body.body-toppage div.notice-detail__container div.see-all_inner p.see-all_inner-text {
     font-size: clamp(14px, 3vw, 16px);
     margin: 0;
     margin-right: clamp(5px, 1vw, 7px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner p.see-all_inner-text {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.notice-detail__container div.see-all_inner p.see-all_inner-text {
     font-size: clamp(7px, 3vw, 16px);
     margin: 0;
     margin-right: clamp(2px, 1vw, 7px);
   }
 }
-body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner p.see-all_inner-icon {
+body.body-toppage div.notice-detail__container div.see-all_inner p.see-all_inner-icon {
   font-size: 14px;
   width: 12px;
   height: 14px;
   display: inline-block;
   margin-top: 35px;
-}
-@media (max-width: 599px) {
-  body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner p.see-all_inner-icon {
-    /* スマートフォン横画面 */
-  }
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 479px) {
-  body.body-toppage div.notice-detail__container div.see-all_line div.see-all_inner p.see-all_inner-icon {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.notice-detail__container div.see-all_inner p.see-all_inner-icon {
     font-size: clamp(7px, 3vw, 14px);
     margin: 0;
     margin-right: clamp(23px, 10vw, 50px);
   }
 }
-body.body-toppage div.access__wrap {
+body.body-toppage div.access__wrapper {
   width: 1190px;
   height: 799px;
   margin: 0px auto 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper {
     width: clamp(470px, 98vw, 589px);
     height: auto;
     flex-direction: column-reverse;
@@ -1810,8 +1788,7 @@ body.body-toppage div.access__wrap {
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper {
     width: clamp(225px, 100vw, 479px);
     height: auto;
     flex-direction: column-reverse;
@@ -1819,12 +1796,13 @@ body.body-toppage div.access__wrap {
     margin: 0;
   }
 }
-body.body-toppage div.access__wrap div.copyright-reserved__inner-sp {
+body.body-toppage div.access__wrapper div.copyright-reserved__inner-sp {
   visibility: hidden;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap div.copyright-reserved__inner-sp {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper div.copyright-reserved__inner-sp {
     visibility: visible;
     width: clamp(398px, 83vw, 500px);
     margin: 0 auto;
@@ -1833,8 +1811,7 @@ body.body-toppage div.access__wrap div.copyright-reserved__inner-sp {
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap div.copyright-reserved__inner-sp {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper div.copyright-reserved__inner-sp {
     visibility: visible;
     width: clamp(189px, 84vw, 400px);
     margin: 0 auto;
@@ -1842,40 +1819,40 @@ body.body-toppage div.access__wrap div.copyright-reserved__inner-sp {
     text-align: center;
   }
 }
-body.body-toppage div.access__wrap div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
+body.body-toppage div.access__wrapper div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
   visibility: hidden;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
     visibility: visible;
-    font-size: clamp(10px, 2vw, 14px);
+    font-size: clamp(14px, 3vw, 18px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
     visibility: visible;
     font-size: clamp(7px, 3vw, 14px);
   }
 }
-body.body-toppage div.access__wrap .access-container {
+body.body-toppage div.access__wrapper .access-container {
   margin: 0px auto 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container {
+  body.body-toppage div.access__wrapper .access-container {
     width: clamp(480px, 100vw, 599px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container {
+  body.body-toppage div.access__wrapper .access-container {
     width: clamp(225px, 100vw, 479px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__map-inner {
+body.body-toppage div.access__wrapper .access-container div.access-container__map-inner {
   width: 608px;
   height: 440px;
   margin-top: 200px;
@@ -1883,10 +1860,11 @@ body.body-toppage div.access__wrap .access-container div.access-container__map-i
   background: url("../images/map.jpg") no-repeat;
   background-position: center;
   background-size: cover;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__map-inner {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__map-inner {
     width: clamp(446px, 93vw, 559px);
     height: clamp(398px, 83vw, 500px);
     background: url("../images/map.jpg") no-repeat;
@@ -1896,8 +1874,7 @@ body.body-toppage div.access__wrap .access-container div.access-container__map-i
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__map-inner {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__map-inner {
     width: clamp(198px, 88vw, 420px);
     height: clamp(146px, 65vw, 310px);
     background: url("../images/map.jpg") no-repeat;
@@ -1906,7 +1883,7 @@ body.body-toppage div.access__wrap .access-container div.access-container__map-i
     margin-top: clamp(14px, 6vw, 30px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail {
   width: 538px;
   height: 625px;
   margin-top: 200px;
@@ -1915,10 +1892,11 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail {
     width: clamp(480px, 100vw, 599px);
     height: auto;
     margin: 0 auto;
@@ -1927,8 +1905,7 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail {
     width: clamp(198px, 88vw, 420px);
     height: auto;
     margin: 0 auto;
@@ -1936,99 +1913,100 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
     flex-wrap: nowrap;
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner {
   width: 275x;
   height: 73px;
   display: flex;
   flex-wrap: wrap;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner {
     width: 100%;
     margin-left: 0px;
     margin: 0 auto;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner {
     width: 100%;
     margin-left: 0px;
     margin: 0 auto;
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-logo {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-logo {
   width: 73px;
   height: 73px;
   background: url("../images/病院の地図マーク.jpg");
   background-size: cover;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-logo {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-logo {
     width: clamp(58px, 12vw, 73px);
     height: clamp(58px, 12vw, 73px);
     margin-left: clamp(115px, 24vw, 145px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-logo {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-logo {
     width: clamp(34px, 15vw, 73px);
     height: clamp(34px, 15vw, 73px);
     margin-left: clamp(34px, 15vw, 73px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner {
   width: 200x;
   height: 73px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner {
     width: clamp(158px, 33vw, 200px);
     height: clamp(58px, 12vw, 73px);
     margin-left: clamp(14px, 3vw, 15px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner {
     width: clamp(95px, 42vw, 200px);
     height: clamp(34px, 15vw, 73px);
     margin-left: clamp(7px, 3vw, 15px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--upper {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--upper {
   font-size: 30px;
   line-height: 26px;
   padding-left: 11px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--upper {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--upper {
     font-size: clamp(24px, 5vw, 30px);
     line-height: clamp(24px, 5vw, 30px);
     padding-left: clamp(10px, 2vw, 11px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--upper {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--upper {
     font-size: clamp(14px, 6vw, 30px);
     line-height: clamp(14px, 6vw, 30px);
     padding-left: clamp(5px, 2vw, 11px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--lower {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--lower {
   font-size: 30px;
   line-height: 55px;
   padding-left: 26px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--lower {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--lower {
     font-size: clamp(24px, 5vw, 30px);
     line-height: clamp(24px, 5vw, 30px);
     padding-left: clamp(19px, 4vw, 26px);
@@ -2036,23 +2014,23 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--lower {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--lower {
     font-size: clamp(14px, 6vw, 30px);
     line-height: clamp(14px, 6vw, 30px);
     padding-left: clamp(11px, 5vw, 26px);
     margin-top: clamp(7px, 3vw, 16px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner {
   margin-top: 28px;
   display: flex;
   flex-wrap: wrap;
   background-color: white;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner {
     width: 100%;
     margin: 0 auto;
     margin-top: clamp(24px, 5vw, 30px);
@@ -2062,8 +2040,7 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner {
     width: 100%;
     margin: 0 auto;
     margin-top: clamp(14px, 6vw, 30px);
@@ -2072,55 +2049,56 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
     align-items: center;
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress--number {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress--number {
   font-size: 16px;
   margin-right: 16px;
   letter-spacing: 0.1px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress--number {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress--number {
     font-size: clamp(14px, 3vw, 16px);
     display: inline-block;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress--number {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress--number {
     font-size: clamp(7px, 3vw, 16px);
     display: inline-block;
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress {
   font-size: 16px;
   letter-spacing: 0px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress {
     font-size: clamp(14px, 3vw, 18px);
     display: inline-block;
     margin-top: clamp(10px, 2vw, 10px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress {
     font-size: clamp(9px, 4vw, 18px);
     display: inline-block;
     margin-top: clamp(5px, 2vw, 10px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-tel--inner {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-tel--inner {
   height: 32px;
   width: 220px;
   position: relative;
   margin-top: 30px;
   font-size: 0;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-tel--inner {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-tel--inner {
     width: 80%;
     margin: 0 auto;
     margin-top: clamp(14px, 3vw, 15px);
@@ -2129,8 +2107,7 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-tel--inner {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-tel--inner {
     width: 80%;
     margin: 0 auto;
     margin-top: clamp(11px, 5vw, 25px);
@@ -2138,7 +2115,7 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
     justify-content: center;
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-tel--inner p.access-container__detail-tel--number::before {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-tel--inner p.access-container__detail-tel--number::before {
   content: "";
   display: inline-block;
   width: 26px;
@@ -2147,20 +2124,20 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
   background-size: contain;
   margin-right: 15px;
   margin-top: 4px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-tel--inner p.access-container__detail-tel--number::before {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-tel--inner p.access-container__detail-tel--number::before {
     margin: 0;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-tel--inner p.access-container__detail-tel--number::before {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-tel--inner p.access-container__detail-tel--number::before {
     margin: 0;
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-tel--inner p.access-container__detail-tel--number {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-tel--inner p.access-container__detail-tel--number {
   color: #21a937;
   font-size: 24px;
   text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0, -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px, 0px -0.4px 0px;
@@ -2169,57 +2146,58 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
   margin-top: 1px;
   position: absolute;
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank--border {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank--border {
   height: 29.5px;
   width: 533px;
   border-bottom: 1px solid;
   border-color: #e7e7e7;
   background-color: white;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank--border {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank--border {
     width: 100%;
     margin: 0 auto;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank--border {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank--border {
     width: 100%;
     margin: 0 auto;
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank--margin {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank--margin {
   height: 15px;
   width: 533px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank--margin {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank--margin {
     height: clamp(14px, 3vw, 20px);
     width: 100%;
     margin: 0 auto;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank--margin {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank--margin {
     width: 100%;
     margin: 0 auto;
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner {
   height: 95px;
   width: 533px;
   background-color: white;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner {
     width: clamp(480px, 100vw, 599px);
     height: auto;
     flex-direction: row;
@@ -2227,85 +2205,85 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner {
     width: clamp(198px, 88vw, 420px);
     height: clamp(79px, 35vw, 170px);
     flex-direction: row;
     justify-content: flex-start;
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time {
   width: 85px;
   height: 114px;
   border-right: 1px solid;
   border-color: #e7e7e7;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time {
-    /* スマートフォン横画面 */
-    width: clamp(96px, 20vw, 120px);
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time {
+    width: clamp(144px, 30vw, 180px);
     height: auto;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time {
-    /* スマートフォン縦画面 */
-    width: clamp(56px, 25vw, 120px);
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time {
+    width: clamp(70px, 31vw, 150px);
     height: auto;
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time p {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time p {
   font-size: 14px;
   margin-top: 8px;
   margin-left: 4.5px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time p {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time p {
     font-size: clamp(14px, 3vw, 16px);
     margin-top: clamp(29px, 6vw, 38px);
     text-align: center;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time p {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time p {
     font-size: clamp(7px, 3vw, 14px);
     margin-top: clamp(18px, 8vw, 38px);
     text-align: center;
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper {
   width: 449px;
   height: 114px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper {
     width: clamp(322px, 67vw, 400px);
     height: auto;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap {
-    /* スマートフォン縦画面 */
-    width: clamp(95px, 42vw, 200px);
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper {
+    width: clamp(117px, 52vw, 250px);
     height: auto;
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   font-size: 0;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern {
     width: clamp(360px, 75vw, 450px);
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -2313,64 +2291,70 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern {
-    /* スマートフォン縦画面 */
-    width: clamp(142px, 63vw, 300px);
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern {
+    width: clamp(117px, 52vw, 250px);
     flex-wrap: nowrap;
     justify-content: flex-start;
     margin: 0;
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_upper {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_upper {
   font-size: 14px;
   display: inline-block;
   width: 42px;
   margin: 9px 23px 0 35px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_upper {
-    /* スマートフォン横画面 */
-    width: clamp(62px, 13vw, 80px);
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_upper {
+    width: clamp(82px, 17vw, 100px);
     font-size: clamp(14px, 3vw, 16px);
     margin: 0;
     margin-top: clamp(24px, 5vw, 30px);
-    margin-right: clamp(14px, 3vw, 20px);
-    margin-left: clamp(34px, 7vw, 40px);
+    margin-left: clamp(14px, 3vw, 15px);
+    margin-right: clamp(18px, 8vw, 40px);
+    text-align: right;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_upper {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_upper {
+    display: inline-block;
+    width: clamp(56px, 25vw, 120px);
     font-size: clamp(7px, 3vw, 14px);
     margin: 0;
     margin-top: clamp(14px, 6vw, 30px);
     margin-right: clamp(9px, 4vw, 20px);
-    margin-left: clamp(9px, 4vw, 20px);
+    text-align: right;
   }
 }
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper {
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
+}
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--upper {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper {
     width: clamp(202px, 42vw, 250px);
     margin-top: clamp(19px, 4vw, 23px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--upper {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper {
+    width: clamp(70px, 31vw, 150px);
     margin-top: clamp(11px, 5vw, 23px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--upper p.morning_upper {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper p.morning_upper {
   font-size: 14px;
   display: inline-block;
   width: 105px;
   margin: 8px 16px 0 0;
   letter-spacing: 0px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--upper p.morning_upper {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper p.morning_upper {
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
     display: block;
@@ -2380,8 +2364,7 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--upper p.morning_upper {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper p.morning_upper {
     font-size: clamp(7px, 3vw, 14px);
     display: block;
     margin: 0;
@@ -2389,15 +2372,16 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
     margin-left: clamp(9px, 4vw, 20px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--upper p.afternoon_upper {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper p.afternoon_upper {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 9px 16px 0 0;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--upper p.afternoon_upper {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper p.afternoon_upper {
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
     display: block;
@@ -2407,8 +2391,7 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--upper p.afternoon_upper {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper p.afternoon_upper {
     font-size: clamp(7px, 3vw, 14px);
     display: block;
     margin: 0;
@@ -2416,26 +2399,28 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
     margin-left: clamp(9px, 4vw, 20px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_middle {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_middle {
   font-size: 14px;
   display: inline-block;
   width: 42px;
   margin: 16px 23px 0 33px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_middle {
-    /* スマートフォン横画面 */
-    width: clamp(62px, 13vw, 80px);
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_middle {
+    width: clamp(82px, 17vw, 100px);
     font-size: clamp(14px, 3vw, 16px);
     margin: 0;
     margin-top: clamp(24px, 5vw, 30px);
-    margin-right: clamp(14px, 3vw, 20px);
-    margin-left: clamp(34px, 7vw, 40px);
+    margin-left: clamp(14px, 3vw, 15px);
+    margin-right: clamp(18px, 8vw, 40px);
+    text-align: right;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_middle {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_middle {
+    width: clamp(95px, 42vw, 200px);
     font-size: clamp(7px, 3vw, 14px);
     margin: 0;
     margin-top: clamp(14px, 6vw, 30px);
@@ -2443,30 +2428,33 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
     margin-left: clamp(9px, 4vw, 20px);
   }
 }
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle {
+  /* メディアクエリスマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
+}
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--middle {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle {
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
     margin-top: clamp(14px, 3vw, 20px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--middle {
-    /* スマートフォン縦画面 */
-    font-size: clamp(7px, 3vw, 14px);
-    margin-top: clamp(9px, 4vw, 20px);
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle {
+    width: clamp(70px, 31vw, 150px);
+    margin-top: clamp(11px, 5vw, 23px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--middle p.morning_middle {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle p.morning_middle {
   font-size: 14px;
   display: inline-block;
   width: 105px;
   margin: 16px 16px 0 0;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--middle p.morning_middle {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle p.morning_middle {
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
     display: block;
@@ -2476,8 +2464,7 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--middle p.morning_middle {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle p.morning_middle {
     font-size: clamp(7px, 3vw, 14px);
     display: block;
     margin: 0;
@@ -2485,15 +2472,16 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
     margin-left: clamp(9px, 4vw, 20px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--middle p.afternoon_middle {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle p.afternoon_middle {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 16px 16px 0 0;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--middle p.afternoon_middle {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle p.afternoon_middle {
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
     display: block;
@@ -2503,8 +2491,7 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--middle p.afternoon_middle {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle p.afternoon_middle {
     font-size: clamp(7px, 3vw, 14px);
     display: block;
     margin: 0;
@@ -2512,26 +2499,27 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
     margin-left: clamp(9px, 4vw, 20px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_lower {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_lower {
   font-size: 14px;
   display: inline-block;
   width: 42px;
   margin: 17px 23px 0 33px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_lower {
-    /* スマートフォン横画面 */
-    width: clamp(62px, 13vw, 80px);
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_lower {
+    width: clamp(82px, 17vw, 100px);
     font-size: clamp(14px, 3vw, 16px);
     margin: 0;
     margin-top: clamp(24px, 5vw, 30px);
-    margin-right: clamp(14px, 3vw, 20px);
-    margin-left: clamp(34px, 7vw, 40px);
+    margin-left: clamp(14px, 3vw, 15px);
+    margin-right: clamp(18px, 8vw, 40px);
+    text-align: right;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern p.dayofweek_lower {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_lower {
     font-size: clamp(7px, 3vw, 14px);
     margin: 0;
     margin-top: clamp(14px, 6vw, 30px);
@@ -2539,28 +2527,32 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
     margin-left: clamp(9px, 4vw, 20px);
   }
 }
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower {
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
+}
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--lower {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower {
     width: clamp(202px, 42vw, 250px);
     margin-top: clamp(14px, 3vw, 20px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--lower {
-    /* スマートフォン縦画面 */
-    margin-top: clamp(9px, 4vw, 20px);
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower {
+    width: clamp(70px, 31vw, 150px);
+    margin-top: clamp(11px, 5vw, 23px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--lower p.morning_lower {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower p.morning_lower {
   font-size: 14px;
   display: inline-block;
   width: 105px;
   margin: 16px 16px 0 0;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--lower p.morning_lower {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower p.morning_lower {
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
     display: block;
@@ -2570,8 +2562,7 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--lower p.morning_lower {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower p.morning_lower {
     font-size: clamp(7px, 3vw, 14px);
     display: block;
     margin: 0;
@@ -2579,15 +2570,16 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
     margin-left: clamp(9px, 4vw, 20px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--lower p.afternoon_lower {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower p.afternoon_lower {
   font-size: 14px;
   display: inline-block;
   width: 110px;
   margin: 16px 16px 0 0;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--lower p.afternoon_lower {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower p.afternoon_lower {
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
     display: block;
@@ -2597,8 +2589,7 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrap div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrap--lower p.afternoon_lower {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower p.afternoon_lower {
     font-size: clamp(7px, 3vw, 14px);
     display: block;
     margin: 0;
@@ -2606,161 +2597,163 @@ body.body-toppage div.access__wrap .access-container div.access-container__detai
     margin-left: clamp(9px, 4vw, 20px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner {
   width: 533px;
   height: 35px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner {
     width: clamp(336px, 70vw, 420px);
     margin-top: clamp(10px, 2vw, 10px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner {
     width: clamp(198px, 88vw, 420px);
     margin-top: clamp(5px, 2vw, 10px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day {
   width: 85px;
   font-size: 14px;
   border-right: 1px solid;
   border-color: #e7e7e7;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day {
-    /* スマートフォン横画面 */
-    width: clamp(96px, 20vw, 120px);
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day {
+    width: clamp(144px, 30vw, 180px);
     font-size: clamp(14px, 3vw, 16px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day {
-    /* スマートフォン縦画面 */
-    width: clamp(56px, 25vw, 120px);
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day {
+    width: clamp(70px, 31vw, 150px);
     font-size: clamp(7px, 3vw, 14px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day p {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day p {
   margin-top: 14px;
   margin-left: 4.5px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day p {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day p {
     margin: 0;
     text-align: center;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day p {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day p {
     margin: 0;
     text-align: center;
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrap {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrapper {
   width: 449px;
   height: 114px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrap {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrapper {
     width: clamp(202px, 42vw, 250px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrap {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrapper {
     width: clamp(117px, 52vw, 250px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrap div.access-container__detail-closed-dayofweek {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrapper div.access-container__detail-closed-dayofweek {
   font-size: 14px;
   width: 70px;
   margin-top: 15px;
   margin-left: 34px;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrap div.access-container__detail-closed-dayofweek {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrapper div.access-container__detail-closed-dayofweek {
     width: 100%;
     font-size: clamp(14px, 3vw, 16px);
-    margin: 0 auto;
+    margin: 0;
+    margin-left: clamp(48px, 10vw, 60px);
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrap div.access-container__detail-closed-dayofweek {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrapper div.access-container__detail-closed-dayofweek {
     font-size: clamp(7px, 3vw, 14px);
-    margin: 0 auto;
+    margin: 0;
+    margin-left: clamp(19px, 4vw, 25px);
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank-border--lower {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank-border--lower {
   height: 19px;
   width: 533px;
   border-bottom: 1px solid;
   border-color: #e7e7e7;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank-border--lower {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank-border--lower {
     width: 100%;
     margin: 0 auto;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-blank-border--lower {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank-border--lower {
     width: 100%;
     margin: 0 auto;
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc {
   width: 554px;
   margin-top: 24.5px;
   text-align: right;
   font-size: 0;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc {
     width: 100%;
     margin: 0 auto;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc {
     width: 100%;
     margin: 0 auto;
   }
 }
-body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc small {
+body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc small {
   font-size: 11px;
   letter-spacing: 0.15px;
   padding-right: 15px;
   display: inline-block;
+  /* メディアクエリ・スマートフォン横画面 */
+  /* メディアクエリ・スマートフォン縦画面 */
 }
 @media (max-width: 599px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc small {
-    /* スマートフォン横画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc small {
     font-size: clamp(10px, 2vw, 11px);
     display: none;
   }
 }
 @media (max-width: 479px) {
-  body.body-toppage div.access__wrap .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc small {
-    /* スマートフォン縦画面 */
+  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc small {
     font-size: clamp(5px, 2vw, 11px);
     display: none;
   }
