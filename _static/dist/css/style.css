@@ -419,88 +419,87 @@ ul {
   list-style: none;
 }
 
-body.body-toppage {
-  width: 100vw;
-  /* 大型モニタ */
-  /* PC */
-  /* タブレット */
-  /* スマートフォン横画面 */
-}
-@media not all and (min-width: 599px) {
-  body.body-toppage {
-    width: clamp(480px, 100vw, 599px);
-    padding: 0;
-    max-width: 0;
-  }
-}
-@media not all and (min-width: 479px) {
-  body.body-toppage {
-    width: clamp(280px, 100vw, 479px);
-    padding: 0;
-    max-width: 0;
-  }
-}
-body.body-toppage div.toppage-wrapper {
-  width: 1920px;
-  margin: 0 auto;
+div.header {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
-@media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper {
-    width: 100vw;
-    height: auto;
+@media (min-width: 1280px) {
+  div.header {
+    width: clamp(1280px, 100vw, 1920px);
+    height: 130px;
   }
 }
-@media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper {
-    width: 100vw;
-    height: auto;
+@media not all and (min-width: 1279px) {
+  div.header {
+    width: clamp(1025px, 100vw, 1279px);
+    height: 130px;
   }
 }
-body.body-toppage div.toppage-wrapper div.header {
-  width: 1920px;
-  height: 130px;
-  /* 大型モニタ */
-  /* PC */
-  /* タブレット */
-  /* スマートフォン横画面 */
-  /* スマートフォン縦画面 */
+@media not all and (min-width: 1024px) {
+  div.header {
+    width: clamp(600px, 100vw, 1024px);
+    height: clamp(126px, 21vw, 220px);
+  }
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper div.header {
+  div.header {
     width: auto;
     max-width: 100%;
     height: clamp(130px, 27vw, 160px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper div.header {
+  div.header {
     width: auto;
     max-width: 100%;
     height: clamp(92px, 33vw, 160px);
   }
 }
-body.body-toppage div.toppage-wrapper div.header div.header_container {
-  width: 1180px;
-  height: 130px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
+div.header_container {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  div.header_container {
+    width: 1180px;
+    height: 130px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media not all and (min-width: 1279px) {
+  div.header_container {
+    background-color: #67e7dc;
+    width: clamp(943px, 92vw, 1180px);
+    height: 130px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media not all and (min-width: 1024px) {
+  div.header_container {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_container {
+  div.header_container {
     width: auto;
     max-width: 100%;
     height: auto;
@@ -508,29 +507,52 @@ body.body-toppage div.toppage-wrapper div.header div.header_container {
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_container {
+  div.header_container {
     width: auto;
     max-width: 100%;
     height: auto;
     display: block;
   }
 }
-body.body-toppage div.toppage-wrapper div.header div.header_container div.header_top-left {
-  width: 263px;
-  height: 73px;
-  margin-left: 20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
+div.header_container .header__top-left {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  div.header_container .header__top-left {
+    width: 263px;
+    height: 73px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
+@media not all and (min-width: 1279px) {
+  div.header_container .header__top-left {
+    width: 263px;
+    height: 73px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
+@media not all and (min-width: 1024px) {
+  div.header_container .header__top-left {
+    width: auto;
+    height: clamp(54px, 9vw, 90px);
+    margin-left: clamp(204px, 34vw, 345px);
+    padding-top: 30px;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_container div.header_top-left {
+  div.header_container .header__top-left {
     width: auto;
     max-width: 65%;
     height: clamp(58px, 12vw, 73px);
@@ -539,7 +561,7 @@ body.body-toppage div.toppage-wrapper div.header div.header_container div.header
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_container div.header_top-left {
+  div.header_container .header__top-left {
     width: auto;
     max-width: 65%;
     height: clamp(42px, 15vw, 73px);
@@ -547,95 +569,164 @@ body.body-toppage div.toppage-wrapper div.header div.header_container div.header
     padding-top: 20px;
   }
 }
-body.body-toppage div.toppage-wrapper div.header div.header_container div.header_top-left__logo {
-  width: 73px;
-  height: 73px;
+div.header_container .header__top-left-logo {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  div.header_container .header__top-left-logo {
+    width: 73px;
+    height: 73px;
+  }
+}
+@media not all and (min-width: 1279px) {
+  div.header_container .header__top-left-logo {
+    width: 73px;
+    height: 73px;
+  }
+}
+@media not all and (min-width: 1024px) {
+  div.header_container .header__top-left-logo {
+    width: clamp(42px, 7vw, 73px);
+    height: clamp(42px, 7vw, 73px);
+  }
+  div.header_container .header__top-left-logo img {
+    width: 100%;
+    height: 100%;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_container div.header_top-left__logo {
-    width: auto;
-    max-width: 100%;
+  div.header_container .header__top-left-logo {
+    width: clamp(58px, 12vw, 73px);
     height: clamp(58px, 12vw, 73px);
   }
-  body.body-toppage div.toppage-wrapper div.header div.header_container div.header_top-left__logo img {
+  div.header_container .header__top-left-logo img {
     width: 100%;
     height: 100%;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_container div.header_top-left__logo {
-    background-color: #d9e0f3;
-    width: auto;
-    max-width: 100%;
+  div.header_container .header__top-left-logo {
+    width: clamp(42px, 15vw, 73px);
     height: clamp(42px, 15vw, 73px);
   }
-  body.body-toppage div.toppage-wrapper div.header div.header_container div.header_top-left__logo img {
+  div.header_container .header__top-left-logo img {
     width: 100%;
     height: 100%;
   }
 }
-body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline {
-  width: 190px;
-  height: 73px;
+div.header_container .header__top-left-tagline {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  div.header_container .header__top-left-tagline {
+    width: 190px;
+    height: 73px;
+  }
+}
+@media not all and (min-width: 1279px) {
+  div.header_container .header__top-left-tagline {
+    width: 190px;
+    height: 73px;
+  }
+}
+@media not all and (min-width: 1024px) {
+  div.header_container .header__top-left-tagline {
+    height: clamp(42px, 7vw, 73px);
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline {
+  div.header_container .header__top-left-tagline {
     height: clamp(42px, 15vw, 73px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline {
+  div.header_container .header__top-left-tagline {
     height: clamp(34px, 15.208vw, 73px);
   }
 }
-body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline p.header_top-left__tagline--upper {
-  padding-left: 8px;
-  font-size: 30px;
-  text-align: left;
-  line-height: 28px;
+div.header_container .header__top-left-tagline--upper {
+  /* 大型モニタ */
+  /* PC */
+  /* タブレット */
+  /* スマートフォン横画面 */
+}
+@media (min-width: 1280px) {
+  div.header_container .header__top-left-tagline--upper {
+    padding-left: 8px;
+    font-size: 30px;
+    text-align: left;
+    line-height: 28px;
+  }
+}
+@media not all and (min-width: 1279px) {
+  div.header_container .header__top-left-tagline--upper {
+    padding-left: 8px;
+    font-size: 30px;
+    text-align: left;
+    line-height: 28px;
+  }
+}
+@media not all and (min-width: 1024px) {
+  div.header_container .header__top-left-tagline--upper {
+    width: auto;
+    max-width: 100%;
+    font-size: clamp(18px, 3vw, 30px);
+  }
+}
+@media not all and (min-width: 599px) {
+  div.header_container .header__top-left-tagline--upper {
+    /* スマートフォン縦画面 */
+  }
+  @media not all and (min-width: 479px) {
+    div.header_container .header__top-left-tagline--upper {
+      width: auto;
+      max-width: 100%;
+      font-size: clamp(17px, 6vw, 30px);
+    }
+  }
+}
+div.header_container .header__top-left-tagline--lower {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
-@media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline p.header_top-left__tagline--upper {
-    width: auto;
-    max-width: 100%;
-    font-size: clamp(24px, 5vw, 30px);
+@media (min-width: 1280px) {
+  div.header_container .header__top-left-tagline--lower {
+    padding-left: 12px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 48px;
   }
 }
-@media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline p.header_top-left__tagline--upper {
-    width: auto;
-    max-width: 100%;
-    font-size: clamp(17px, 6vw, 30px);
+@media not all and (min-width: 1279px) {
+  div.header_container .header__top-left-tagline--lower {
+    padding-left: 12px;
+    font-size: 30px;
+    text-align: left;
+    line-height: 48px;
   }
 }
-body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline p.header_top-left__tagline--lower {
-  padding-left: 12px;
-  font-size: 30px;
-  text-align: left;
-  line-height: 48px;
-  /* 大型モニタ */
-  /* PC */
-  /* タブレット */
-  /* スマートフォン横画面 */
-  /* スマートフォン縦画面 */
+@media not all and (min-width: 1024px) {
+  div.header_container .header__top-left-tagline--lower {
+    width: auto;
+    max-width: 100%;
+    font-size: clamp(18px, 3vw, 30px);
+    line-height: clamp(30px, 5vw, 48px);
+    padding-left: clamp(12px, 2vw, 25px);
+  }
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline p.header_top-left__tagline--lower {
+  div.header_container .header__top-left-tagline--lower {
     width: auto;
     max-width: 100%;
     font-size: clamp(24px, 5vw, 30px);
@@ -644,26 +735,47 @@ body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline p.
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_top-left__tagline p.header_top-left__tagline--lower {
+  div.header_container .header__top-left-tagline--lower {
     width: auto;
     max-width: 100%;
     font-size: clamp(17px, 6vw, 30px);
     line-height: clamp(28px, 10vw, 48px);
   }
 }
-body.body-toppage div.toppage-wrapper div.header div.header_top-right {
-  width: 300px;
-  height: 73px;
-  margin-right: 20px;
-  font-size: 0;
+div.header_container .header__top-right {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  div.header_container .header__top-right {
+    width: 300px;
+    height: 73px;
+    margin-right: 20px;
+    font-size: 0;
+  }
+}
+@media not all and (min-width: 1279px) {
+  div.header_container .header__top-right {
+    width: 300px;
+    height: 73px;
+    margin-right: 20px;
+    font-size: 0;
+  }
+}
+@media not all and (min-width: 1024px) {
+  div.header_container .header__top-right {
+    width: auto;
+    max-width: 85%;
+    height: clamp(42px, 7vw, 73px);
+    margin: 0 auto;
+    margin-top: 24px;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_top-right {
+  div.header_container .header__top-right {
     width: auto;
     max-width: 85%;
     height: clamp(58px, 12vw, 73px);
@@ -672,7 +784,7 @@ body.body-toppage div.toppage-wrapper div.header div.header_top-right {
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_top-right {
+  div.header_container .header__top-right {
     width: auto;
     max-width: 85%;
     height: clamp(33px, 14.583vw, 73px);
@@ -681,19 +793,40 @@ body.body-toppage div.toppage-wrapper div.header div.header_top-right {
     margin-top: 24px;
   }
 }
-body.body-toppage div.toppage-wrapper div.header div.header_top-right p.header_top-right__reception {
-  font-size: 14px;
-  letter-spacing: 0.2px;
-  text-align: right;
-  margin-top: 5px;
+div.header_container .header__top-right--reception {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  div.header_container .header__top-right--reception {
+    font-size: 14px;
+    letter-spacing: 0px;
+    text-align: right;
+    padding-right: 4px;
+    margin-top: 5.5px;
+  }
+}
+@media not all and (min-width: 1279px) {
+  div.header_container .header__top-right--reception {
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    text-align: right;
+    margin-top: 5px;
+  }
+}
+@media not all and (min-width: 1024px) {
+  div.header_container .header__top-right--reception {
+    width: auto;
+    max-width: 100%;
+    text-align: center;
+    font-size: clamp(12px, 2vw, 20px);
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_top-right p.header_top-right__reception {
+  div.header_container .header__top-right--reception {
     width: auto;
     max-width: 100%;
     text-align: center;
@@ -701,57 +834,100 @@ body.body-toppage div.toppage-wrapper div.header div.header_top-right p.header_t
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_top-right p.header_top-right__reception {
+  div.header_container .header__top-right--reception {
     width: auto;
     max-width: 100%;
     text-align: center;
     font-size: clamp(11px, 4vw, 18px);
   }
 }
-body.body-toppage div.toppage-wrapper div.header div.header_top-right .header_top-right__tel::before {
-  content: "";
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background: url("../images/受話器の線画アイコン.jpg") no-repeat;
-  background-size: contain;
-  margin-top: 1.5px;
-  margin-right: 17px;
+div.header_container .header__top-right--tel::before {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
+  margin-top: clamp(0px, 0vw, 5px);
+  margin-right: 0px;
+  height: clamp(12px, 2vw, 25px);
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  div.header_container .header__top-right--tel::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url("../images/受話器の線画アイコン.jpg") no-repeat;
+    background-size: contain;
+    margin-right: 16px;
+    position: relative;
+    top: 5px;
+  }
+}
+@media not all and (min-width: 1279px) {
+  div.header_container .header__top-right--tel::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url("../images/受話器の線画アイコン.jpg") no-repeat;
+    background-size: contain;
+    margin-top: 1.5px;
+    margin-right: 17px;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_top-right .header_top-right__tel::before {
+  div.header_container .header__top-right--tel::before {
     margin-top: clamp(5px, 1vw, 5px);
     margin-right: 0px;
     height: clamp(19px, 4vw, 25px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_top-right .header_top-right__tel::before {
+  div.header_container .header__top-right--tel::before {
     margin-top: clamp(3px, 1vw, 5px);
     margin-right: 0px;
     height: clamp(14px, 5vw, 25px);
   }
 }
-body.body-toppage div.toppage-wrapper div.header div.header_top-right p.header_top-right__tel {
-  color: #21a937;
-  font-size: 22px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  margin-top: 13px;
-  text-align: right;
+div.header_container .header__top-right--tel {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  div.header_container .header__top-right--tel {
+    color: #21a937;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    margin-top: 12px;
+    text-align: right;
+  }
+}
+@media not all and (min-width: 1279px) {
+  div.header_container .header__top-right--tel {
+    color: #21a937;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-top: 13px;
+    text-align: right;
+  }
+}
+@media not all and (min-width: 1024px) {
+  div.header_container .header__top-right--tel {
+    width: auto;
+    max-width: 100%;
+    text-align: center;
+    font-size: clamp(18px, 3vw, 28px);
+    margin-top: clamp(0px, 0vw, 5px);
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_top-right p.header_top-right__tel {
+  div.header_container .header__top-right--tel {
     width: auto;
     max-width: 100%;
     text-align: center;
@@ -760,7 +936,7 @@ body.body-toppage div.toppage-wrapper div.header div.header_top-right p.header_t
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper div.header div.header_top-right p.header_top-right__tel {
+  div.header_container .header__top-right--tel {
     width: auto;
     max-width: 100%;
     text-align: center;
@@ -768,80 +944,183 @@ body.body-toppage div.toppage-wrapper div.header div.header_top-right p.header_t
     margin-top: -1px;
   }
 }
-body.body-toppage div.toppage-wrapper div.firstview-inner {
-  width: 1920px;
-  height: 947px;
-  position: relative;
+
+body.body {
+  /* 大型モニタ */
+  /* PC */
+  /* タブレット */
+  /* スマートフォン横画面 */
+}
+@media (min-width: 1280px) {
+  body.body {
+    width: 100vw;
+    background-color: yellow;
+  }
+}
+@media not all and (min-width: 1279px) {
+  body.body {
+    width: 100vw;
+  }
+}
+@media not all and (min-width: 1024px) {
+  body.body {
+    width: 100vw;
+  }
+}
+@media not all and (min-width: 599px) {
+  body.body {
+    width: clamp(480px, 100vw, 599px);
+    padding: 0;
+    max-width: 0;
+  }
+}
+@media not all and (min-width: 479px) {
+  body.body {
+    width: clamp(280px, 100vw, 479px);
+    padding: 0;
+    max-width: 0;
+  }
+}
+body.body div.top-page_wrapper {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  body.body div.top-page_wrapper {
+    width: clamp(1280px, 100vw, 1920px);
+    height: auto;
+    margin: 0 auto;
+    background-color: #31e731;
+  }
+}
+@media not all and (min-width: 1279px) {
+  body.body div.top-page_wrapper {
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+@media not all and (min-width: 1024px) {
+  body.body div.top-page_wrapper {
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper div.firstview-inner {
+  body.body div.top-page_wrapper {
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+@media not all and (min-width: 479px) {
+  body.body div.top-page_wrapper {
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+body.body div.top-page_wrapper .first-view_inner {
+  /* 大型モニタ */
+  /* PC */
+  /* タブレット */
+  /* スマートフォン横画面 */
+  /* スマートフォン縦画面 */
+}
+@media (min-width: 1280px) {
+  body.body div.top-page_wrapper .first-view_inner {
+    width: clamp(1280px, 100vw, 1920px);
+    height: clamp(627px, 49vw, 947px);
+    position: relative;
+  }
+}
+@media not all and (min-width: 1279px) {
+  body.body div.top-page_wrapper .first-view_inner {
+    width: clamp(1025px, 100vw, 1279px);
+    height: clamp(502px, 49vw, 625px);
+    position: relative;
+  }
+}
+@media not all and (min-width: 1024px) {
+  body.body div.top-page_wrapper .first-view_inner {
+    width: clamp(600px, 100vw, 1024px);
+    height: clamp(600px, 100vw, 1024px);
+    margin-top: clamp(6px, 1vw, 10px);
+  }
+}
+@media not all and (min-width: 599px) {
+  body.body div.top-page_wrapper .first-view_inner {
     width: clamp(470px, 98vw, 589px);
     height: clamp(470px, 98vw, 589px);
     margin-top: clamp(10px, 2vw, 10px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper div.firstview-inner {
+  body.body div.top-page_wrapper .first-view_inner {
     width: clamp(280px, 100vw, 479px);
     height: clamp(280px, 100vw, 479px);
     margin-top: clamp(6px, 2vw, 10px);
   }
 }
-body.body-toppage div.toppage-wrapper div.firstview-inner div.firstview-image {
-  width: 100%;
-  height: 100%;
-  background: url("../images/fv.jpg") no-repeat;
-  background-size: contain;
-  /* 大型モニタ */
-  /* PC */
-  /* タブレット */
-  /* スマートフォン横画面 */
-}
-@media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper div.firstview-inner div.firstview-image {
-    width: clamp(480px, 100vw, 599px);
-    height: clamp(480px, 100vw, 599px);
-    background: url("../images/firstview_image_SP.jpg") no-repeat;
-    background-size: contain;
-    position: absolute;
-    left: clamp(0px, 0vw, 0px);
-  }
-}
-@media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper div.firstview-inner div.firstview-image {
-    width: clamp(280px, 100vw, 479px);
-    height: clamp(280px, 100vw, 479px);
-    background: url("../images/firstview_image_SP.jpg") no-repeat;
-    background-size: contain;
-    position: absolute;
-  }
-}
-body.body-toppage div.toppage-wrapper div.firstview-inner p.firstview-inner__message--left {
-  writing-mode: vertical-rl;
-  font-size: 28px;
-  font-weight: 500;
-  letter-spacing: 5.5px;
-  padding-top: 25px;
-  line-height: 102px;
-  width: 102px;
-  height: 565px;
-  background-color: white;
-  position: absolute;
-  top: 133px;
-  left: 210px;
+body.body div.top-page_wrapper .first-view_inner__message-left {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  body.body div.top-page_wrapper .first-view_inner__message-left {
+    width: 102px;
+    height: 565px;
+    writing-mode: vertical-rl;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 5.5px;
+    padding-top: 25px;
+    line-height: 102px;
+    background-color: white;
+    position: absolute;
+    top: 133px;
+    left: 210px;
+  }
+}
+@media not all and (min-width: 1279px) {
+  body.body div.top-page_wrapper .first-view_inner__message-left {
+    writing-mode: vertical-rl;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: clamp(0px, 0vw, 5.5px);
+    padding-top: clamp(21px, 2vw, 25px);
+    line-height: clamp(82px, 8vw, 102px);
+    width: clamp(82px, 8vw, 102px);
+    height: clamp(451px, 44vw, 565px);
+    background-color: white;
+    position: absolute;
+    top: clamp(21px, 2vw, 25px);
+    left: clamp(164px, 16vw, 210px);
+  }
+}
+@media not all and (min-width: 1024px) {
+  body.body div.top-page_wrapper .first-view_inner__message-left {
+    width: clamp(54px, 9vw, 90px);
+    height: clamp(408px, 68vw, 700px);
+    font-size: clamp(18px, 3vw, 26px);
+    letter-spacing: clamp(6px, 1vw, 6px);
+    padding-top: 0px;
+    text-align: center;
+    line-height: clamp(48px, 8vw, 78px);
+    top: clamp(60px, 10vw, 100px);
+    left: clamp(84px, 14vw, 140px);
+    z-index: 5;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper div.firstview-inner p.firstview-inner__message--left {
+  body.body div.top-page_wrapper .first-view_inner__message-left {
     width: clamp(43px, 9vw, 55px);
     height: clamp(278px, 58vw, 345px);
     font-size: clamp(14px, 3vw, 20px);
@@ -855,7 +1134,7 @@ body.body-toppage div.toppage-wrapper div.firstview-inner p.firstview-inner__mes
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper div.firstview-inner p.firstview-inner__message--left {
+  body.body div.top-page_wrapper .first-view_inner__message-left {
     width: clamp(31px, 11vw, 55px);
     /* 最小値30(vw225),65÷479×100vw,最大値65(vw479) */
     height: clamp(202px, 72vw, 345px);
@@ -875,19 +1154,39 @@ body.body-toppage div.toppage-wrapper div.firstview-inner p.firstview-inner__mes
     z-index: 5;
   }
 }
-body.body-toppage div.toppage-wrapper div.firstview-inner p.firstview-inner__message--left span.color {
-  color: green;
-  letter-spacing: 5.5px;
-  margin-top: -8px;
-  margin-bottom: -8px;
+body.body div.top-page_wrapper .first-view_inner__message-left span.color {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  body.body div.top-page_wrapper .first-view_inner__message-left span.color {
+    color: green;
+    letter-spacing: 5.5px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+  }
+}
+@media not all and (min-width: 1279px) {
+  body.body div.top-page_wrapper .first-view_inner__message-left span.color {
+    color: green;
+    letter-spacing: 5.5px;
+    margin-top: -8px;
+    margin-bottom: -8px;
+  }
+}
+@media not all and (min-width: 1024px) {
+  body.body div.top-page_wrapper .first-view_inner__message-left span.color {
+    font-size: clamp(18px, 3vw, 26px);
+    letter-spacing: clamp(6px, 1vw, 6px);
+    padding-top: clamp(0px, 0vw, 3px);
+    padding-bottom: clamp(0px, 0vw, 3px);
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper div.firstview-inner p.firstview-inner__message--left span.color {
+  body.body div.top-page_wrapper .first-view_inner__message-left span.color {
     font-size: clamp(14px, 3vw, 20px);
     letter-spacing: 0px;
     padding-top: clamp(5px, 1vw, 3px);
@@ -895,34 +1194,68 @@ body.body-toppage div.toppage-wrapper div.firstview-inner p.firstview-inner__mes
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper div.firstview-inner p.firstview-inner__message--left span.color {
+  body.body div.top-page_wrapper .first-view_inner__message-left span.color {
     font-size: clamp(11px, 4vw, 20px);
     letter-spacing: 0px;
     padding-top: clamp(3px, 1vw, 3px);
     padding-bottom: clamp(3px, 1vw, 3px);
   }
 }
-body.body-toppage div.toppage-wrapper p.firstview-inner__message--right {
-  writing-mode: vertical-rl;
-  font-size: 28px;
-  font-weight: 500;
-  letter-spacing: 6px;
-  padding-top: 25px;
-  line-height: 102px;
-  width: 102px;
-  height: 565px;
-  background-color: white;
-  position: absolute;
-  top: 133px;
-  left: 393px;
+body.body div.top-page_wrapper .first-view_inner__message-right {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  body.body div.top-page_wrapper .first-view_inner__message-right {
+    width: 102px;
+    height: 565px;
+    writing-mode: vertical-rl;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 6px;
+    padding-top: 25px;
+    line-height: 102px;
+    background-color: white;
+    position: absolute;
+    top: 133px;
+    left: 393px;
+  }
+}
+@media not all and (min-width: 1279px) {
+  body.body div.top-page_wrapper .first-view_inner__message-right {
+    writing-mode: vertical-rl;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 6px;
+    padding-top: 25px;
+    line-height: 102px;
+    width: clamp(82px, 8vw, 102px);
+    height: clamp(451px, 44vw, 565px);
+    background-color: white;
+    position: absolute;
+    top: clamp(21px, 2vw, 25px);
+    left: clamp(277px, 27vw, 340px);
+  }
+}
+@media not all and (min-width: 1024px) {
+  body.body div.top-page_wrapper .first-view_inner__message-right {
+    width: clamp(54px, 9vw, 90px);
+    height: clamp(408px, 68vw, 700px);
+    font-size: clamp(18px, 3vw, 26px);
+    letter-spacing: clamp(6px, 1vw, 6px);
+    padding-top: 0px;
+    text-align: center;
+    line-height: clamp(48px, 8vw, 78px);
+    top: clamp(60px, 10vw, 100px);
+    left: clamp(174px, 29vw, 300px);
+    z-index: 5;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.toppage-wrapper p.firstview-inner__message--right {
+  body.body div.top-page_wrapper .first-view_inner__message-right {
     width: clamp(43px, 9vw, 55px);
     height: clamp(278px, 58vw, 345px);
     font-size: clamp(14px, 3vw, 20px);
@@ -936,7 +1269,7 @@ body.body-toppage div.toppage-wrapper p.firstview-inner__message--right {
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.toppage-wrapper p.firstview-inner__message--right {
+  body.body div.top-page_wrapper .first-view_inner__message-right {
     width: clamp(31px, 11vw, 55px);
     height: clamp(202px, 72vw, 345px);
     font-size: clamp(11px, 4vw, 20px);
@@ -949,89 +1282,186 @@ body.body-toppage div.toppage-wrapper p.firstview-inner__message--right {
     z-index: 5;
   }
 }
-body.body-toppage div.self_introduction {
-  width: 1180px;
-  height: 664px;
-  margin: 0 auto;
-  display: flex;
+body.body div.top-page_wrapper .first-view_inner__image {
+  /* 大型モニタ */
+  /* PC */
+  /* タブレット */
+  /* スマートフォン横画面 */
+}
+@media (min-width: 1280px) {
+  body.body div.top-page_wrapper .first-view_inner__image {
+    width: clamp(1280px, 100vw, 1920px);
+    height: clamp(627px, 49vw, 947px);
+    background: url("../images/fv.jpg") no-repeat;
+    background-size: contain;
+  }
+}
+@media not all and (min-width: 1279px) {
+  body.body div.top-page_wrapper .first-view_inner__image {
+    width: clamp(1025px, 100vw, 1279px);
+    height: clamp(502px, 49vw, 625px);
+    background: url("../images/fv.jpg") no-repeat;
+    background-size: contain;
+  }
+}
+@media not all and (min-width: 1024px) {
+  body.body div.top-page_wrapper .first-view_inner__image {
+    width: clamp(600px, 100vw, 1024px);
+    height: clamp(600px, 100vw, 1024px);
+    background: url("../images/firstview_image_SP.jpg") no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: clamp(0px, 0vw, 0px);
+  }
+}
+@media not all and (min-width: 599px) {
+  body.body div.top-page_wrapper .first-view_inner__image {
+    width: clamp(480px, 100vw, 599px);
+    height: clamp(480px, 100vw, 599px);
+    background: url("../images/firstview_image_SP.jpg") no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: clamp(0px, 0vw, 0px);
+  }
+}
+@media not all and (min-width: 479px) {
+  body.body div.top-page_wrapper .first-view_inner__image {
+    width: clamp(280px, 100vw, 479px);
+    height: clamp(280px, 100vw, 479px);
+    background: url("../images/firstview_image_SP.jpg") no-repeat;
+    background-size: contain;
+    position: absolute;
+  }
+}
+body.body .self-introduction {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  body.body .self-introduction {
+    width: clamp(781px, 61vw, 1180px);
+    height: clamp(448px, 35vw, 664px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media not all and (min-width: 1279px) {
+  body.body .self-introduction {
+    width: clamp(625px, 61vw, 780px);
+    height: clamp(359px, 35vw, 448px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media not all and (min-width: 1024px) {
+  body.body .self-introduction {
+    width: clamp(600px, 100vw, 1024px);
+    height: clamp(516px, 86vw, 880px);
+    display: block;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.self_introduction {
+  body.body .self-introduction {
     width: clamp(470px, 98vw, 589px);
     height: clamp(528px, 110vw, 660px);
     display: block;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.self_introduction {
+  body.body .self-introduction {
     width: clamp(280px, 100vw, 479px);
     height: clamp(386px, 138vw, 660px);
     display: block;
   }
 }
-body.body-toppage div.self_introduction div.self_introduction-container {
-  width: 490px;
-  height: 664px;
+body.body .self-introduction-inner {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  body.body .self-introduction-inner {
+    width: clamp(333px, 26vw, 490px);
+    height: clamp(282px, 22vw, 420px);
+  }
+}
+@media not all and (min-width: 1279px) {
+  body.body .self-introduction-inner {
+    width: clamp(277px, 27vw, 345px);
+    height: clamp(236px, 23vw, 300px);
+    margin-top: clamp(82px, 8vw, 100px);
+  }
+}
+@media not all and (min-width: 1024px) {
+  body.body .self-introduction-inner {
+    width: clamp(600px, 100vw, 1024px);
+    height: auto;
+    text-align: center;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.self_introduction div.self_introduction-container {
+  body.body .self-introduction-inner {
     width: auto;
-    max-width: 100%;
     height: auto;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.self_introduction div.self_introduction-container {
+  body.body .self-introduction-inner {
     width: auto;
-    max-width: 100%;
     height: auto;
   }
 }
-body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner {
-  width: 275px;
-  margin-left: 32px;
+body.body .self-introduction-inner__first-line_text {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
-@media not all and (min-width: 599px) {
-  body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner {
-    width: clamp(221px, 46vw, 275px);
-    margin: 0 auto;
+@media (min-width: 1280px) {
+  body.body .self-introduction-inner__first-line_text {
+    display: inline-block;
+    width: auto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 22px;
+    background: linear-gradient(transparent 60%, #86eb86 90%);
+    margin-top: clamp(128px, 10vw, 200px);
+    margin-left: clamp(26px, 2vw, 32px);
   }
 }
-@media not all and (min-width: 479px) {
-  body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner {
-    width: clamp(154px, 55vw, 265px);
-    margin: 0 auto;
+@media not all and (min-width: 1279px) {
+  body.body .self-introduction-inner__first-line_text {
+    display: inline-block;
+    width: auto;
+    font-size: 24px;
+    font-weight: 500;
+    background: linear-gradient(transparent 60%, #86eb86 90%);
+    margin-top: clamp(38px, 3vw, 60px);
+    line-height: 22px;
   }
 }
-body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner p.self_introduction-container__firstline--inner_text {
-  font-size: 24px;
-  font-weight: 500;
-  background: linear-gradient(transparent 60%, #86eb86 90%);
-  margin-top: 200px;
-  line-height: 22px;
-  /* 大型モニタ */
-  /* PC */
-  /* タブレット */
-  /* スマートフォン横画面 */
-  /* スマートフォン縦画面 */
+@media not all and (min-width: 1024px) {
+  body.body .self-introduction-inner__first-line_text {
+    display: inline-block;
+    width: auto;
+    margin-top: clamp(36px, 6vw, 60px);
+    font-size: clamp(18px, 3vw, 26px);
+    letter-spacing: clamp(0px, 0vw, -1px);
+    text-align: center;
+  }
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner p.self_introduction-container__firstline--inner_text {
+  body.body .self-introduction-inner__first-line_text {
+    display: inline-block;
+    width: auto;
     margin-top: clamp(48px, 10vw, 60px);
     font-size: clamp(19px, 4vw, 23px);
     letter-spacing: clamp(0px, 0vw, -2px);
@@ -1039,101 +1469,123 @@ body.body-toppage div.self_introduction div.self_introduction-container div.self
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.self_introduction div.self_introduction-container div.self_introduction-container__firstline--inner p.self_introduction-container__firstline--inner_text {
+  body.body .self-introduction-inner__first-line_text {
+    display: inline-block;
+    width: auto;
     margin-top: clamp(36px, 13vw, 60px);
     font-size: clamp(14px, 5vw, 23px);
     letter-spacing: clamp(-3px, -1vw, -3px);
     text-align: center;
   }
 }
-body.body-toppage div.self_introduction div.self_introduction-container__secondline--inner {
-  width: 216px;
-  margin-top: 42px;
-  margin-left: 32px;
+body.body .self-introduction-inner__second-line_text {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
-@media not all and (min-width: 599px) {
-  body.body-toppage div.self_introduction div.self_introduction-container__secondline--inner {
-    width: clamp(178px, 37vw, 220px);
-    margin: 0 auto;
+@media (min-width: 1280px) {
+  body.body .self-introduction-inner__second-line_text {
+    display: inline-block;
+    width: auto;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    line-height: 24px;
+    background: linear-gradient(transparent 60%, #86eb86 90%);
+    margin-top: 40px;
+    margin-left: 32px;
   }
 }
-@media not all and (min-width: 479px) {
-  body.body-toppage div.self_introduction div.self_introduction-container__secondline--inner {
-    width: clamp(129px, 46vw, 220px);
-    margin: 0 auto;
+@media not all and (min-width: 1279px) {
+  body.body .self-introduction-inner__second-line_text {
+    display: inline-block;
+    width: auto;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.1px;
+    line-height: 24px;
+    margin-top: clamp(38px, 3vw, 60px);
+    background: linear-gradient(transparent 60%, #86eb86 90%);
   }
 }
-body.body-toppage div.self_introduction div.self_introduction-container__secondline--inner p.self_introduction-container__secondline--inner_text {
-  background: linear-gradient(transparent 60%, #86eb86 90%);
-  font-size: 24px;
-  font-weight: 500;
-  letter-spacing: -0.1px;
-  line-height: 24px;
-  /* 大型モニタ */
-  /* PC */
-  /* タブレット */
-  /* スマートフォン横画面 */
-  /* スマートフォン縦画面 */
+@media not all and (min-width: 1024px) {
+  body.body .self-introduction-inner__second-line_text {
+    display: inline-block;
+    width: auto;
+    margin-top: clamp(36px, 6vw, 60px);
+    font-size: clamp(18px, 3vw, 26px);
+    letter-spacing: clamp(0px, 0vw, -1px);
+    background: linear-gradient(transparent 60%, #86eb86 90%);
+  }
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.self_introduction div.self_introduction-container__secondline--inner p.self_introduction-container__secondline--inner_text {
+  body.body .self-introduction-inner__second-line_text {
+    display: inline-block;
+    width: auto;
     font-size: clamp(19px, 4vw, 23px);
     margin-top: clamp(24px, 5vw, 30px);
     letter-spacing: clamp(0px, 0vw, 0px);
     text-align: center;
+    background: linear-gradient(transparent 60%, #86eb86 90%);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.self_introduction div.self_introduction-container__secondline--inner p.self_introduction-container__secondline--inner_text {
+  body.body .self-introduction-inner__second-line_text {
+    display: inline-block;
+    width: auto;
     font-size: clamp(14px, 5vw, 23px);
     margin-top: clamp(17px, 6vw, 30px);
     letter-spacing: clamp(-3px, -1vw, -3px);
     text-align: center;
+    background: linear-gradient(transparent 60%, #86eb86 90%);
   }
 }
-body.body-toppage div.self_introduction div.self_introduction-container__thirdline--inner {
-  width: 415px;
-  height: 145px;
-  margin-top: 38px;
-  margin-left: 32px;
+body.body .self-introduction-inner__third-line_text {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
-@media not all and (min-width: 599px) {
-  body.body-toppage div.self_introduction div.self_introduction-container__thirdline--inner {
-    width: clamp(384px, 80vw, 480px);
-    margin: 0 auto;
-    margin-left: clamp(43px, 9vw, 55px);
+@media (min-width: 1280px) {
+  body.body .self-introduction-inner__third-line_text {
+    display: inline-block;
+    width: auto;
+    font-size: 16px;
+    line-height: 38px;
+    letter-spacing: -0.15px;
+    margin-top: 35px;
+    margin-left: 32px;
   }
 }
-@media not all and (min-width: 479px) {
-  body.body-toppage div.self_introduction div.self_introduction-container__thirdline--inner {
-    width: clamp(221px, 79vw, 380px);
-    margin: 0 auto;
-    margin-left: clamp(31px, 11vw, 55px);
+@media not all and (min-width: 1279px) {
+  body.body .self-introduction-inner__third-line_text {
+    display: inline-block;
+    width: auto;
+    font-size: clamp(10px, 1vw, 16px);
+    letter-spacing: -0.18px;
+    line-height: clamp(21px, 2vw, 24px);
+    margin-top: clamp(21px, 2vw, 30px);
   }
 }
-body.body-toppage div.self_introduction div.self_introduction-container__thirdline--inner p.self_introduction-container__thirdline--inner_text {
-  font-size: 16px;
-  line-height: 36px;
-  letter-spacing: -0.18px;
-  line-height: 38px;
-  /* 大型モニタ */
-  /* PC */
-  /* タブレット */
-  /* スマートフォン横画面 */
-  /* スマートフォン縦画面 */
+@media not all and (min-width: 1024px) {
+  body.body .self-introduction-inner__third-line_text {
+    display: inline-block;
+    width: auto;
+    font-size: clamp(12px, 2vw, 16px);
+    text-align: center;
+    line-height: clamp(24px, 4vw, 36px);
+    letter-spacing: clamp(0px, 0vw, -2px);
+    text-align: left;
+    margin-top: clamp(18px, 3vw, 30px);
+  }
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.self_introduction div.self_introduction-container__thirdline--inner p.self_introduction-container__thirdline--inner_text {
+  body.body .self-introduction-inner__third-line_text {
+    display: inline-block;
+    width: auto;
     font-size: clamp(14px, 3vw, 16px);
     text-align: center;
     line-height: clamp(29px, 6vw, 36px);
@@ -1143,7 +1595,9 @@ body.body-toppage div.self_introduction div.self_introduction-container__thirdli
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.self_introduction div.self_introduction-container__thirdline--inner p.self_introduction-container__thirdline--inner_text {
+  body.body .self-introduction-inner__third-line_text {
+    display: inline-block;
+    width: auto;
     font-size: clamp(8px, 3vw, 16px);
     text-align: center;
     line-height: clamp(22px, 8vw, 36px);
@@ -1152,20 +1606,43 @@ body.body-toppage div.self_introduction div.self_introduction-container__thirdli
     margin-top: clamp(17px, 6vw, 30px);
   }
 }
-body.body-toppage div.self_introduction div.self_introduction__image-conainer {
-  width: 690px;
-  height: 420px;
-  margin-top: 162px;
-  background: url("../images/belief.jpg");
-  background-size: cover;
+body.body .self-introduction__image {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  body.body .self-introduction__image {
+    width: clamp(461px, 36vw, 690px);
+    height: clamp(282px, 22vw, 420px);
+    margin-top: clamp(102px, 8vw, 162px);
+    background: url("../images/belief.jpg");
+    background-size: cover;
+  }
+}
+@media not all and (min-width: 1279px) {
+  body.body .self-introduction__image {
+    width: clamp(369px, 36vw, 460px);
+    height: clamp(226px, 22vw, 285px);
+    margin-top: clamp(82px, 8vw, 100px);
+    background: url("../images/belief.jpg");
+    background-size: cover;
+  }
+}
+@media not all and (min-width: 1024px) {
+  body.body .self-introduction__image {
+    width: clamp(306px, 51vw, 520px);
+    height: clamp(234px, 39vw, 400px);
+    background: url("../images/belief.jpg") no-repeat;
+    background-size: contain;
+    margin: 0 auto;
+    margin-top: clamp(18px, 3vw, 30px);
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.self_introduction div.self_introduction__image-conainer {
+  body.body .self-introduction__image {
     width: clamp(418px, 87vw, 520px);
     height: clamp(322px, 67vw, 400px);
     background: url("../images/belief.jpg") no-repeat;
@@ -1175,26 +1652,51 @@ body.body-toppage div.self_introduction div.self_introduction__image-conainer {
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.self_introduction div.self_introduction__image-conainer {
+  body.body .self-introduction__image {
     width: clamp(280px, 100vw, 479px);
-    height: clamp(235px, 84vw, 400px);
+    height: clamp(232px, 83vw, 400px);
     background: url("../images/belief.jpg") no-repeat;
     background-size: contain;
     margin-top: 0px;
   }
 }
-body.body-toppage div.medical-treatment-contents__container {
-  width: 1920px;
-  height: 1520px;
-  background-color: #f5fcf8;
+
+.medical-treatment-contents {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  .medical-treatment-contents {
+    width: clamp(1280px, 100vw, 1920px);
+    height: auto;
+    background-color: #f5fcf8;
+    text-align: center;
+    padding-bottom: 112px;
+    background-color: #ff006a;
+  }
+}
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents {
+    width: clamp(1025px, 100vw, 1279px);
+    height: auto;
+    background-color: #f5fcf8;
+    text-align: center;
+    padding-bottom: clamp(92px, 9vw, 112px);
+    background-color: red;
+  }
+}
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents {
+    width: clamp(600px, 100vw, 1024px);
+    height: auto;
+    background-color: #f3d27f;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.medical-treatment-contents__container {
+  .medical-treatment-contents {
     width: clamp(480px, 100vw, 599px);
     height: clamp(2242px, 467vw, 2800px);
     height: auto;
@@ -1202,317 +1704,466 @@ body.body-toppage div.medical-treatment-contents__container {
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.medical-treatment-contents__container {
+  .medical-treatment-contents {
     width: clamp(280px, 100vw, 479px);
-    height: clamp(1638px, 585vw, 2800px);
+    height: clamp(1632px, 583vw, 2800px);
     height: auto;
     background-color: #f5fcf8;
   }
 }
-body.body-toppage div.medical-treatment-contents__container div.medical-treatment-contents__inner-firstline {
-  width: 96px;
-  margin: 0 auto;
-  padding-top: 82px;
-  background: linear-gradient(transparent 90%, #86eb86 90%);
+.medical-treatment-contents__first-line-text {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
-@media not all and (min-width: 599px) {
-  body.body-toppage div.medical-treatment-contents__container div.medical-treatment-contents__inner-firstline {
-    width: clamp(77px, 16vw, 96px);
-    padding-top: clamp(67px, 14vw, 85px);
+@media (min-width: 1280px) {
+  .medical-treatment-contents__first-line-text {
+    display: inline-block;
+    width: auto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 22px;
+    background: linear-gradient(transparent 60%, #86eb86 90%);
+    margin-top: 83px;
   }
 }
-@media not all and (min-width: 479px) {
-  body.body-toppage div.medical-treatment-contents__container div.medical-treatment-contents__inner-firstline {
-    width: clamp(56px, 20vw, 96px);
-    padding-top: clamp(50px, 18vw, 85px);
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents__first-line-text {
+    display: inline-block;
+    width: auto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 22px;
+    background: linear-gradient(transparent 60%, #86eb86 90%);
+    margin-top: clamp(72px, 7vw, 85px);
   }
 }
-body.body-toppage div.medical-treatment-contents__container div.medical-treatment-contents__inner-firstline h2.medical-treatment-contents__inner-firstline--text {
-  height: 32px;
-  font-size: 24px;
-  font-weight: 500;
-  text-align: center;
-  /* 大型モニタ */
-  /* PC */
-  /* タブレット */
-  /* スマートフォン横画面 */
-  /* スマートフォン縦画面 */
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents__first-line-text {
+    font-size: clamp(18px, 3vw, 28px);
+  }
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.medical-treatment-contents__container div.medical-treatment-contents__inner-firstline h2.medical-treatment-contents__inner-firstline--text {
+  .medical-treatment-contents__first-line-text {
     font-size: clamp(19px, 4vw, 24px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.medical-treatment-contents__container div.medical-treatment-contents__inner-firstline h2.medical-treatment-contents__inner-firstline--text {
+  .medical-treatment-contents__first-line-text {
     font-size: clamp(14px, 5vw, 24px);
   }
 }
-body.body-toppage div.medical-treatment-contents__inner-secondline {
-  width: 448px;
-  margin: 71px auto 0 auto;
+.medical-treatment-contents__second-line-text {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
-@media not all and (min-width: 599px) {
-  body.body-toppage div.medical-treatment-contents__inner-secondline {
-    width: clamp(254px, 53vw, 320px);
-    margin: 0 auto;
-    padding-top: clamp(53px, 11vw, 65px);
+@media (min-width: 1280px) {
+  .medical-treatment-contents__second-line-text {
+    display: inline-block;
+    width: auto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-top: 77px;
   }
 }
-@media not all and (min-width: 479px) {
-  body.body-toppage div.medical-treatment-contents__inner-secondline {
-    width: clamp(188px, 67vw, 320px);
-    margin: 0 auto;
-    padding-top: clamp(39px, 14vw, 65px);
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents__second-line-text {
+    display: inline-block;
+    width: auto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-top: clamp(62px, 6vw, 79px);
   }
 }
-body.body-toppage div.medical-treatment-contents__inner-secondline p.medical-treatment-contents__inner-secondline--text {
-  font-size: 16px;
-  letter-spacing: 0px;
-  /* 大型モニタ */
-  /* PC */
-  /* タブレット */
-  /* スマートフォン横画面 */
-  /* スマートフォン縦画面 */
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents__second-line-text {
+    font-size: clamp(12px, 2vw, 24px);
+  }
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.medical-treatment-contents__inner-secondline p.medical-treatment-contents__inner-secondline--text {
+  .medical-treatment-contents__second-line-text {
     letter-spacing: clamp(0px, 0vw, 2.5px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.medical-treatment-contents__inner-secondline p.medical-treatment-contents__inner-secondline--text {
+  .medical-treatment-contents__second-line-text {
     letter-spacing: clamp(3px, 1vw, 2.5px);
   }
 }
-body.body-toppage div.medical-treatment-contents__menu-container {
-  margin-top: 37px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.medical-treatment-contents__inner {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  .medical-treatment-contents__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 34px;
+  }
+}
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: clamp(31px, 3vw, 37px);
+  }
+}
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents__inner {
+    margin: 0;
+    width: clamp(600px, 100vw, 1024px);
+    margin-top: clamp(30px, 5vw, 50px);
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.medical-treatment-contents__menu-container {
+  .medical-treatment-contents__inner {
     margin: 0;
     width: clamp(480px, 100vw, 599px);
     margin-top: clamp(38px, 8vw, 50px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.medical-treatment-contents__menu-container {
+  .medical-treatment-contents__inner {
     margin: 0;
     width: clamp(280px, 100vw, 479px);
     margin-top: clamp(28px, 10vw, 50px);
   }
 }
-body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu {
-  width: 380px;
-  height: 591px;
-  border: 1px solid;
-  border-radius: 10px;
-  margin: 0 10px 0 10px;
-  position: relative;
-  background-color: white;
+.medical-treatment-contents__inner-article-board {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  .medical-treatment-contents__inner-article-board {
+    width: 380px;
+    height: 591px;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 0 10px 0 10px;
+    position: relative;
+    background-color: white;
+  }
+}
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents__inner-article-board {
+    width: clamp(308px, 30vw, 380px);
+    height: clamp(472px, 46vw, 591px);
+    border: 1px solid;
+    border-radius: 10px;
+    margin-left: clamp(10px, 1vw, 10px);
+    margin-right: clamp(10px, 1vw, 10px);
+    text-align: center;
+    position: relative;
+    background-color: white;
+  }
+}
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents__inner-article-board {
+    width: clamp(468px, 78vw, 800px);
+    height: clamp(408px, 68vw, 700px);
+    margin-top: clamp(18px, 3vw, 30px);
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu {
+  .medical-treatment-contents__inner-article-board {
     width: clamp(398px, 83vw, 500px);
     height: clamp(461px, 96vw, 575px);
     margin-top: clamp(24px, 5vw, 30px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu {
-    width: clamp(235px, 84vw, 400px);
+  .medical-treatment-contents__inner-article-board {
+    width: clamp(232px, 83vw, 400px);
     height: clamp(336px, 120vw, 575px);
     margin-top: clamp(17px, 6vw, 30px);
   }
 }
-body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title {
-  width: 192px;
-  margin: 41px 94px 0 94px;
+.medical-treatment-contents__inner-article-board--title {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  .medical-treatment-contents__inner-article-board--title {
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 42px;
+  }
+}
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents__inner-article-board--title {
+    font-size: clamp(21px, 2vw, 24px);
+    font-weight: 500;
+    margin-top: clamp(31px, 3vw, 35px);
+  }
+}
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents__inner-article-board--title {
+    font-size: clamp(18px, 3vw, 26px);
+    margin: 0 auto;
+    margin-top: clamp(18px, 3vw, 35px);
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title {
+  .medical-treatment-contents__inner-article-board--title {
+    font-size: clamp(19px, 4vw, 24px);
     margin: 0 auto;
     margin-top: clamp(29px, 6vw, 35px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title {
+  .medical-treatment-contents__inner-article-board--title {
+    font-size: clamp(14px, 5vw, 24px);
     margin: 0 auto;
     margin-top: clamp(20px, 7vw, 35px);
   }
 }
-body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title h3 {
-  font-size: 24px;
-  font-weight: 500;
+.medical-treatment-contents__inner-article-board--content-left {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
-@media not all and (min-width: 599px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title h3 {
-    font-size: clamp(19px, 4vw, 24px);
+@media (min-width: 1280px) {
+  .medical-treatment-contents__inner-article-board--content-left {
+    width: 320px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.11px;
+    line-height: 38px;
+    text-align: left;
+    margin: 42px 29px 111px 31px;
   }
 }
-@media not all and (min-width: 479px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--title h3 {
-    font-size: clamp(14px, 5vw, 24px);
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents__inner-article-board--content-left {
+    width: clamp(256px, 25vw, 320px);
+    font-size: clamp(10px, 1vw, 16px);
+    font-weight: 500;
+    letter-spacing: -0.11px;
+    line-height: 38px;
+    margin: 0 auto;
+    margin-top: clamp(41px, 4vw, 54px);
+    margin-bottom: clamp(21px, 2vw, 31px);
   }
 }
-body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner {
-  width: 320px;
-  margin: 42px 29px 111px 31px;
-  /* 大型モニタ */
-  /* PC */
-  /* タブレット */
-  /* スマートフォン横画面 */
-  /* スマートフォン縦画面 */
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents__inner-article-board--content-left {
+    font-size: clamp(12px, 2vw, 22px);
+    text-align: center;
+    line-height: clamp(24px, 4vw, 38px);
+    width: clamp(408px, 68vw, 700px);
+    margin: 0 auto;
+    margin-top: clamp(18px, 3vw, 35px);
+  }
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner {
+  .medical-treatment-contents__inner-article-board--content-left {
+    font-size: clamp(14px, 3vw, 18px);
+    letter-spacing: clamp(0px, 0vw, 0px);
+    text-align: center;
+    line-height: clamp(29px, 6vw, 38px);
     width: clamp(398px, 83vw, 500px);
     margin: 0 auto;
     margin-top: clamp(29px, 6vw, 35px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner {
+  .medical-treatment-contents__inner-article-board--content-left {
+    font-size: clamp(11px, 4vw, 18px);
+    letter-spacing: clamp(-3px, -1vw, -3px);
+    text-align: left;
+    line-height: clamp(22px, 8vw, 38px);
     width: clamp(204px, 73vw, 350px);
     margin: 0 auto;
     margin-top: clamp(20px, 7vw, 35px);
   }
 }
-body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_left {
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: -0.11px;
-  line-height: 38px;
+.medical-treatment-contents__inner-article-board--content-center {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  .medical-treatment-contents__inner-article-board--content-center {
+    width: 320px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.11px;
+    line-height: 38px;
+    text-align: left;
+    margin: 43px 29px 111px 36px;
+  }
+}
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents__inner-article-board--content-center {
+    width: clamp(256px, 25vw, 320px);
+    font-size: clamp(10px, 1vw, 16px);
+    font-weight: 500;
+    letter-spacing: -0.11px;
+    line-height: 38px;
+    margin: 0 auto;
+    margin-top: clamp(41px, 4vw, 54px);
+    margin-bottom: clamp(21px, 2vw, 31px);
+  }
+}
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents__inner-article-board--content-center {
+    font-size: clamp(12px, 2vw, 22px);
+    text-align: center;
+    line-height: clamp(24px, 4vw, 38px);
+    width: clamp(408px, 68vw, 700px);
+    margin: 0 auto;
+    margin-top: clamp(18px, 3vw, 35px);
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_left {
+  .medical-treatment-contents__inner-article-board--content-center {
     font-size: clamp(14px, 3vw, 18px);
     letter-spacing: clamp(0px, 0vw, 0px);
     text-align: center;
     line-height: clamp(29px, 6vw, 38px);
+    width: clamp(398px, 83vw, 500px);
+    margin: 0 auto;
+    margin-top: clamp(29px, 6vw, 35px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_left {
+  .medical-treatment-contents__inner-article-board--content-center {
     font-size: clamp(11px, 4vw, 18px);
     letter-spacing: clamp(-3px, -1vw, -3px);
     text-align: left;
     line-height: clamp(22px, 8vw, 38px);
+    width: clamp(204px, 73vw, 350px);
+    margin: 0 auto;
+    margin-top: clamp(20px, 7vw, 35px);
   }
 }
-body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_center {
-  font-size: 16px;
-  line-height: 33px;
-  font-weight: 500;
-  letter-spacing: 0.05px;
-  line-height: 39px;
-  margin-left: 5px;
+.medical-treatment-contents__inner-article-board--content-right {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  .medical-treatment-contents__inner-article-board--content-right {
+    width: 320px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.11px;
+    line-height: 38px;
+    text-align: left;
+    margin: 42px 29px 111px 27px;
+  }
+}
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents__inner-article-board--content-right {
+    width: clamp(256px, 25vw, 320px);
+    font-size: clamp(10px, 1vw, 16px);
+    font-weight: 500;
+    letter-spacing: -0.11px;
+    line-height: 38px;
+    margin: 0 auto;
+    margin-top: clamp(41px, 4vw, 54px);
+    margin-bottom: clamp(21px, 2vw, 31px);
+  }
+}
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents__inner-article-board--content-right {
+    font-size: clamp(12px, 2vw, 22px);
+    text-align: center;
+    line-height: clamp(24px, 4vw, 38px);
+    width: clamp(408px, 68vw, 700px);
+    margin: 0 auto;
+    margin-top: clamp(18px, 3vw, 35px);
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_center {
+  .medical-treatment-contents__inner-article-board--content-right {
     font-size: clamp(14px, 3vw, 18px);
     letter-spacing: clamp(0px, 0vw, 0px);
     text-align: center;
     line-height: clamp(29px, 6vw, 38px);
+    width: clamp(398px, 83vw, 500px);
+    margin: 0 auto;
+    margin-top: clamp(29px, 6vw, 35px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_center {
+  .medical-treatment-contents__inner-article-board--content-right {
     font-size: clamp(11px, 4vw, 18px);
     letter-spacing: clamp(-3px, -1vw, -3px);
     text-align: left;
     line-height: clamp(22px, 8vw, 38px);
+    width: clamp(204px, 73vw, 350px);
+    margin: 0 auto;
+    margin-top: clamp(20px, 7vw, 35px);
   }
 }
-body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_right {
-  font-size: 16px;
-  line-height: 33px;
-  font-weight: 500;
-  letter-spacing: 0px;
-  line-height: 38px;
-  margin-left: -3px;
+.medical-treatment-contents__inner-article-board--image-left {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
-@media not all and (min-width: 599px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_right {
-    font-size: clamp(14px, 3vw, 18px);
-    letter-spacing: clamp(0px, 0vw, 0px);
-    text-align: center;
-    line-height: clamp(29px, 6vw, 38px);
+@media (min-width: 1280px) {
+  .medical-treatment-contents__inner-article-board--image-left {
+    width: 187px;
+    height: 180px;
+    background: url("../images/g0108.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 84%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
-@media not all and (min-width: 479px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--detailinner p.medical-treatment-contents__menu--detail_right {
-    font-size: clamp(11px, 4vw, 18px);
-    letter-spacing: clamp(-3px, -1vw, -3px);
-    text-align: left;
-    line-height: clamp(22px, 8vw, 38px);
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents__inner-article-board--image-left {
+    width: clamp(154px, 15vw, 187px);
+    height: clamp(154px, 15vw, 187px);
+    background: url("../images/g0108.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
-body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_left {
-  width: 187px;
-  height: 187px;
-  background: url("../images/g0108.jpg");
-  background-size: cover;
-  position: absolute;
-  top: 83%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* 大型モニタ */
-  /* PC */
-  /* タブレット */
-  /* スマートフォン横画面 */
-  /* スマートフォン縦画面 */
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents__inner-article-board--image-left {
+    width: clamp(198px, 33vw, 340px);
+    height: clamp(198px, 33vw, 340px);
+    background: url("../images/g0108.jpg");
+    background-size: cover;
+    top: 72%;
+  }
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_left {
+  .medical-treatment-contents__inner-article-board--image-left {
     width: clamp(182px, 38vw, 230px);
     height: clamp(182px, 38vw, 230px);
     background: url("../images/g0108.jpg");
@@ -1521,7 +2172,7 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_left {
+  .medical-treatment-contents__inner-article-board--image-left {
     width: clamp(134px, 48vw, 230px);
     height: clamp(134px, 48vw, 230px);
     background: url("../images/g0108.jpg");
@@ -1529,56 +2180,106 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
     top: 77%;
   }
 }
-body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_center {
-  width: 187px;
-  height: 187px;
-  background: url("../images/g0099.jpg");
-  background-size: cover;
-  position: absolute;
-  top: 83%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.medical-treatment-contents__inner-article-board--image-center {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  .medical-treatment-contents__inner-article-board--image-center {
+    width: 187px;
+    height: 180px;
+    background: url("../images/g0099.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 84%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents__inner-article-board--image-center {
+    width: clamp(154px, 15vw, 187px);
+    height: clamp(154px, 15vw, 187px);
+    background: url("../images/g0099.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents__inner-article-board--image-center {
+    width: clamp(198px, 33vw, 340px);
+    height: clamp(198px, 33vw, 340px);
+    background: url("../images/g0099.jpg");
+    background-size: cover;
+    top: 70%;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_center {
+  .medical-treatment-contents__inner-article-board--image-center {
     width: clamp(182px, 38vw, 230px);
     height: clamp(182px, 38vw, 230px);
     background: url("../images/g0099.jpg");
     background-size: cover;
-    top: 77%;
+    top: 70%;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_center {
+  .medical-treatment-contents__inner-article-board--image-center {
     width: clamp(134px, 48vw, 230px);
     height: clamp(134px, 48vw, 230px);
     background: url("../images/g0099.jpg");
     background-size: cover;
-    top: 77%;
+    top: 70%;
   }
 }
-body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_right {
-  width: 187px;
-  height: 187px;
-  background: url("../images/g0092.jpg");
-  background-size: cover;
-  position: absolute;
-  top: 83%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.medical-treatment-contents__inner-article-board--image-right {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  .medical-treatment-contents__inner-article-board--image-right {
+    width: 187px;
+    height: 180px;
+    background: url("../images/g0092.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 84%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents__inner-article-board--image-right {
+    width: clamp(154px, 15vw, 187px);
+    height: clamp(154px, 15vw, 187px);
+    background: url("../images/g0092.jpg");
+    background-size: cover;
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents__inner-article-board--image-right {
+    width: clamp(198px, 33vw, 340px);
+    height: clamp(198px, 33vw, 340px);
+    background: url("../images/g0092.jpg");
+    background-size: cover;
+    top: 72%;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_right {
+  .medical-treatment-contents__inner-article-board--image-right {
     width: clamp(182px, 38vw, 230px);
     height: clamp(182px, 38vw, 230px);
     background: url("../images/g0092.jpg");
@@ -1587,7 +2288,7 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.medical-treatment-contents__menu-container article.medical-treatment-contents__menu div.medical-treatment-contents__menu--image_right {
+  .medical-treatment-contents__inner-article-board--image-right {
     width: clamp(134px, 48vw, 230px);
     height: clamp(134px, 48vw, 230px);
     background: url("../images/g0092.jpg");
@@ -1595,55 +2296,53 @@ body.body-toppage div.medical-treatment-contents__menu-container article.medical
     top: 77%;
   }
 }
-body.body-toppage div.notice-title__inner {
-  width: 100px;
-  margin: 84px auto 0px auto;
+.medical-treatment-contents .notice-title {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
-@media not all and (min-width: 599px) {
-  body.body-toppage div.notice-title__inner {
-    width: clamp(82px, 17vw, 100px);
-    margin: 0 auto;
-    margin-top: clamp(72px, 15vw, 90px);
+@media (min-width: 1280px) {
+  .medical-treatment-contents .notice-title {
+    display: inline-block;
+    width: auto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 22px;
+    background: linear-gradient(transparent 60%, #86eb86 90%);
+    margin-top: 87px;
   }
 }
-@media not all and (min-width: 479px) {
-  body.body-toppage div.notice-title__inner {
-    width: clamp(59px, 21vw, 100px);
-    margin: 0 auto;
-    margin-top: clamp(53px, 19vw, 90px);
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents .notice-title {
+    display: inline-block;
+    width: auto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 22px;
+    background: linear-gradient(transparent 60%, #86eb86 90%);
+    margin-top: clamp(72px, 7vw, 85px);
   }
 }
-body.body-toppage div.notice-title__inner h2.notice-title {
-  font-size: 24px;
-  background: linear-gradient(transparent 60%, #86eb86 90%);
-  font-weight: 500;
-  /* 大型モニタ */
-  /* PC */
-  /* タブレット */
-  /* スマートフォン横画面 */
-  /* スマートフォン縦画面 */
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents .notice-title {
+    font-size: clamp(18px, 3vw, 28px);
+  }
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.notice-title__inner h2.notice-title {
+  .medical-treatment-contents .notice-title {
     font-size: clamp(19px, 4vw, 24px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.notice-title__inner h2.notice-title {
+  .medical-treatment-contents .notice-title {
     font-size: clamp(14px, 5vw, 24px);
   }
 }
-body.body-toppage div.notice-detail__container {
-  width: 1180px;
-  height: 390px;
-  margin: 74px auto 0 auto;
+.medical-treatment-contents .notice-detail_container {
   border: 0px solid;
-  border-radius: 20px;
+  border-radius: 28px;
   border: 1px solid #eeeeee;
   box-shadow: rgba(238, 238, 238, 0.509804) 9px 9px 10px -4px;
   -webkit-box-shadow: rgba(238, 238, 238, 0.509804) 9px 9px 10px -4px;
@@ -1658,191 +2357,292 @@ body.body-toppage div.notice-detail__container {
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  .medical-treatment-contents .notice-detail_container {
+    width: 1180px;
+    height: 394px;
+    margin: 0 auto;
+    margin-top: 74px;
+  }
+}
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents .notice-detail_container {
+    width: clamp(943px, 92vw, 1180px);
+    height: auto;
+    margin: 0 auto;
+    margin-top: clamp(62px, 6vw, 74px);
+  }
+}
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents .notice-detail_container {
+    width: clamp(528px, 88vw, 900px);
+    height: auto;
+    margin: 0 auto;
+    margin-top: clamp(30px, 5vw, 50px);
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.notice-detail__container {
+  .medical-treatment-contents .notice-detail_container {
     width: clamp(432px, 90vw, 540px);
     height: auto;
     margin: 0 auto;
-    margin-top: clamp(28px, 10vw, 50px);
+    margin-top: clamp(38px, 8vw, 50px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.notice-detail__container {
+  .medical-treatment-contents .notice-detail_container {
     width: clamp(246px, 88vw, 420px);
     height: auto;
     margin: 0 auto;
     margin-top: clamp(28px, 10vw, 50px);
   }
 }
-body.body-toppage div.notice-detail__container div.notice-detail__container-margin_upper {
-  height: 25px;
+.medical-treatment-contents .notice-detail_container__margin-upper {
+  height: 34px;
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  .medical-treatment-contents .notice-detail_container__margin-upper {
+    width: clamp(878px, 183vw, 1100px);
+  }
+}
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents .notice-detail_container__margin-upper {
+    width: clamp(882px, 86vw, 1100px);
+  }
+}
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents .notice-detail_container__margin-upper {
+    width: clamp(528px, 88vw, 900px);
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.notice-detail__container div.notice-detail__container-margin_upper {
-    width: clamp(418px, 87vw, 520px);
+  .medical-treatment-contents .notice-detail_container__margin-upper {
+    width: clamp(394px, 82vw, 490px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.notice-detail__container div.notice-detail__container-margin_upper {
-    width: clamp(235px, 84vw, 400px);
+  .medical-treatment-contents .notice-detail_container__margin-upper {
+    width: clamp(221px, 79vw, 380px);
   }
 }
-body.body-toppage div.notice-detail__container article.notice-detail__container-article {
+.medical-treatment-contents .notice-detail_container .article-inner {
+  width: 1048px;
   border-bottom: 1px solid #e7e7e7;
   margin: 0px 66px 0px 66px;
-  font-size: 0;
+  padding-top: 18px;
+  padding-bottom: 18.5px;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents .notice-detail_container .article-inner {
+    width: clamp(841px, 82vw, 1048px);
+    border-bottom: 1px solid #e7e7e7;
+    margin-right: clamp(51px, 5vw, 66px);
+    margin-left: clamp(51px, 5vw, 66px);
+    padding-top: clamp(21px, 2vw, 24.5px);
+    padding-bottom: clamp(21px, 2vw, 20.5px);
+  }
+}
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents .notice-detail_container .article-inner {
+    background-color: yellow;
+    margin-left: clamp(12px, 2vw, 20px);
+    margin-right: clamp(12px, 2vw, 20px);
+    align-items: flex-start;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article {
-    width: clamp(394px, 82vw, 490px);
+  .medical-treatment-contents .notice-detail_container .article-inner {
     margin-left: clamp(14px, 3vw, 20px);
     margin-right: clamp(14px, 3vw, 20px);
     align-items: flex-start;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article {
-    width: clamp(227px, 81vw, 390px);
+  .medical-treatment-contents .notice-detail_container .article-inner {
     margin-left: clamp(11px, 4vw, 20px);
     margin-right: clamp(11px, 4vw, 20px);
     align-items: flex-start;
   }
 }
-body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper {
+.medical-treatment-contents .notice-detail_container .article-inner__left-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  /* 大型モニタ */
-  /* PC */
-  /* タブレット */
+  flex-wrap: nowrap;
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper {
+  .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper {
     width: clamp(96px, 20vw, 120px);
     flex-direction: column;
     align-items: flex-start;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper {
+  .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper {
     width: clamp(59px, 21vw, 100px);
     flex-direction: column;
     align-items: flex-start;
   }
 }
-body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper p.notice-detail__container-article--leftinner_date_text {
-  color: green;
-  font-size: 16px;
-  font-weight: 500;
-  display: inline-block;
-  width: 80px;
-  height: 16px;
-  margin: 25.4px 36px 20.5px -2px;
-  letter-spacing: 0px;
-  /* 大型モニタ */
+.medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--date {
   /* PC */
   /* タブレット */
-  /* スマートフォン横画面 */
-  /* スマートフォン縦画面 */
 }
-@media not all and (min-width: 599px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper p.notice-detail__container-article--leftinner_date_text {
-    width: clamp(96px, 20vw, 120px);
-    font-size: clamp(14px, 3vw, 16px);
+@media (min-width: 1280px) {
+  .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--date {
+    width: aut0;
+    height: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    color: green;
+    text-align: center;
+    line-height: 25px;
+    letter-spacing: -0.3px;
+    display: inline-block;
+  }
+}
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--date {
+    font-size: clamp(10px, 1vw, 16px);
+  }
+}
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--date {
+    width: clamp(72px, 12vw, 120px);
+    font-size: clamp(12px, 2vw, 16px);
     text-align: center;
     margin: 0;
-    margin-top: clamp(10px, 2vw, 10px);
+    margin-top: clamp(6px, 1vw, 10px);
   }
 }
-@media not all and (min-width: 479px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper p.notice-detail__container-article--leftinner_date_text {
-    width: clamp(59px, 21vw, 100px);
-    font-size: clamp(8px, 3vw, 16px);
-    margin: 0;
-    margin-top: clamp(6px, 2vw, 10px);
-  }
-}
-body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper p.notice-detail__container-article--left__info {
-  font-size: 12px;
-  font-weight: 500;
-  color: white;
-  display: inline-block;
-  background-color: #444444;
-  width: 80px;
-  height: 25px;
-  text-align: center;
-  line-height: 25px;
-  margin-right: 30px;
-  /* 大型モニタ */
+.medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
-@media not all and (min-width: 599px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper p.notice-detail__container-article--left__info {
+@media (min-width: 1280px) {
+  .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
+    width: 80px;
+    height: 25px;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    display: inline-block;
+    background-color: #444444;
+    margin-left: 34px;
+  }
+}
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
+    width: clamp(62px, 6vw, 80px);
+    height: clamp(21px, 2vw, 25px);
+    font-size: clamp(10px, 1vw, 12px);
+  }
+}
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
     margin: 0;
-    width: clamp(96px, 20vw, 120px);
-    font-size: clamp(14px, 3vw, 16px);
+    font-size: clamp(6px, 1vw, 12px);
+    text-align: center;
+    margin-top: clamp(6px, 1vw, 10px);
+    margin-bottom: clamp(6px, 1vw, 10px);
+  }
+}
+@media not all and (min-width: 599px) {
+  .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
+    margin: 0;
+    font-size: clamp(10px, 2vw, 12px);
     text-align: center;
     margin-top: clamp(10px, 2vw, 10px);
     margin-bottom: clamp(10px, 2vw, 10px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--leftwrapper p.notice-detail__container-article--left__info {
-    width: clamp(59px, 21vw, 100px);
+  .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
     font-size: clamp(8px, 3vw, 14px);
     margin: 0;
     margin-top: clamp(6px, 2vw, 10px);
     margin-bottom: clamp(6px, 2vw, 10px);
   }
 }
-body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--right_inner {
+.medical-treatment-contents .notice-detail_container .article-inner .article-inner__right {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right {
+    width: clamp(638px, 133vw, 800px);
+  }
+}
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right {
+    width: clamp(294px, 49vw, 500px);
+    background-color: red;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--right_inner {
+  .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right {
     width: clamp(278px, 58vw, 350px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--right_inner {
+  .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right {
     width: clamp(146px, 52vw, 250px);
   }
 }
-body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--right_inner p.notice-detail__container-article--right_text {
-  font-size: 16px;
-  font-weight: 500;
-  margin-left: 6px;
-  letter-spacing: -0.1px;
+.medical-treatment-contents .notice-detail_container .article-inner .article-inner__right-text {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right-text {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    width: auto;
+    margin-left: 35px;
+    letter-spacing: -0.1px;
+  }
+}
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right-text {
+    font-size: clamp(10px, 1vw, 16px);
+    margin-left: 6px;
+    letter-spacing: -0.1px;
+  }
+}
+@media not all and (min-width: 1024px) {
+  .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right-text {
+    font-size: clamp(12px, 2vw, 16px);
+    margin: 0;
+    margin-top: clamp(6px, 1vw, 10px);
+    margin-bottom: clamp(6px, 1vw, 10px);
+    margin-left: clamp(18px, 3vw, 30px);
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--right_inner p.notice-detail__container-article--right_text {
+  .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right-text {
     width: clamp(254px, 53vw, 320px);
     font-size: clamp(14px, 3vw, 16px);
     margin: 0;
@@ -1852,7 +2652,7 @@ body.body-toppage div.notice-detail__container article.notice-detail__container-
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.notice-detail__container article.notice-detail__container-article div.notice-detail__container-article--right_inner p.notice-detail__container-article--right_text {
+  .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right-text {
     width: clamp(146px, 52vw, 250px);
     font-size: clamp(8px, 3vw, 14px);
     margin: 0;
@@ -1861,66 +2661,77 @@ body.body-toppage div.notice-detail__container article.notice-detail__container-
     margin-left: clamp(17px, 6vw, 30px);
   }
 }
-body.body-toppage div.notice-detail__container div.see-all_inner {
-  width: 1005px;
-  margin: 0px 0px 0px 66px;
-  text-align: right;
-  font-size: 0;
-  /* 大型モニタ */
+.medical-treatment-contents .notice-detail_container .see-all_inner {
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  .medical-treatment-contents .notice-detail_container .see-all_inner {
+    width: 1065px;
+    height: 100px;
+    margin-left: 66px;
+    text-align: right;
+  }
+}
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents .notice-detail_container .see-all_inner {
+    width: clamp(851px, 83vw, 1065px);
+    margin-left: clamp(51px, 5vw, 66px);
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.notice-detail__container div.see-all_inner {
+  .medical-treatment-contents .notice-detail_container .see-all_inner {
     width: clamp(384px, 80vw, 480px);
     height: clamp(82px, 17vw, 100px);
     margin: 0;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.notice-detail__container div.see-all_inner {
+  .medical-treatment-contents .notice-detail_container .see-all_inner {
     width: clamp(252px, 90vw, 430px);
     height: clamp(28px, 10vw, 50px);
     margin: 0;
     margin-top: clamp(14px, 5vw, 25px);
   }
 }
-body.body-toppage div.notice-detail__container div.see-all_inner p.see-all_inner-text {
+.medical-treatment-contents .notice-detail_container .see-all_inner__text {
   font-size: 16px;
-  width: 198px;
-  height: 16px;
-  margin-top: 44px;
+  width: auto;
+  margin-top: 40px;
+  margin-bottom: 49px;
   display: inline-block;
   letter-spacing: 1.2px;
-  margin-right: 2px;
-  /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media not all and (min-width: 1279px) {
+  .medical-treatment-contents .notice-detail_container .see-all_inner__text {
+    font-size: clamp(10px, 1vw, 16px);
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.notice-detail__container div.see-all_inner p.see-all_inner-text {
+  .medical-treatment-contents .notice-detail_container .see-all_inner__text {
     font-size: clamp(14px, 3vw, 16px);
     margin: 0;
     margin-right: clamp(5px, 1vw, 7px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.notice-detail__container div.see-all_inner p.see-all_inner-text {
+  .medical-treatment-contents .notice-detail_container .see-all_inner__text {
     font-size: clamp(8px, 3vw, 16px);
     margin: 0;
     margin-right: clamp(3px, 1vw, 7px);
   }
 }
-body.body-toppage div.notice-detail__container div.see-all_inner p.see-all_inner-icon {
+.medical-treatment-contents .notice-detail_container .see-all_inner__icon {
   font-size: 14px;
   width: 12px;
   height: 14px;
   display: inline-block;
-  margin-top: 35px;
   /* 大型モニタ */
   /* PC */
   /* タブレット */
@@ -1928,13 +2739,14 @@ body.body-toppage div.notice-detail__container div.see-all_inner p.see-all_inner
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.notice-detail__container div.see-all_inner p.see-all_inner-icon {
+  .medical-treatment-contents .notice-detail_container .see-all_inner__icon {
     font-size: clamp(8px, 3vw, 14px);
     margin: 0;
     margin-right: clamp(28px, 10vw, 50px);
   }
 }
-body.body-toppage div.access__wrapper {
+
+div.access__wrapper {
   width: 1190px;
   height: 799px;
   margin: 0px auto 0 auto;
@@ -1948,7 +2760,7 @@ body.body-toppage div.access__wrapper {
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper {
+  div.access__wrapper {
     width: clamp(470px, 98vw, 589px);
     height: auto;
     flex-direction: column-reverse;
@@ -1957,7 +2769,7 @@ body.body-toppage div.access__wrapper {
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper {
+  div.access__wrapper {
     width: clamp(280px, 100vw, 479px);
     height: auto;
     flex-direction: column-reverse;
@@ -1965,7 +2777,7 @@ body.body-toppage div.access__wrapper {
     margin: 0;
   }
 }
-body.body-toppage div.access__wrapper div.copyright-reserved__inner-sp {
+div.access__wrapper div.copyright-reserved__inner-sp {
   visibility: hidden;
   /* 大型モニタ */
   /* PC */
@@ -1974,7 +2786,7 @@ body.body-toppage div.access__wrapper div.copyright-reserved__inner-sp {
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper div.copyright-reserved__inner-sp {
+  div.access__wrapper div.copyright-reserved__inner-sp {
     visibility: visible;
     width: clamp(398px, 83vw, 500px);
     margin: 0 auto;
@@ -1983,15 +2795,15 @@ body.body-toppage div.access__wrapper div.copyright-reserved__inner-sp {
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper div.copyright-reserved__inner-sp {
+  div.access__wrapper div.copyright-reserved__inner-sp {
     visibility: visible;
-    width: clamp(235px, 84vw, 400px);
+    width: clamp(232px, 83vw, 400px);
     margin: 0 auto;
     margin-top: clamp(17px, 6vw, 30px);
     text-align: center;
   }
 }
-body.body-toppage div.access__wrapper div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
+div.access__wrapper div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
   visibility: hidden;
   /* 大型モニタ */
   /* PC */
@@ -2000,38 +2812,40 @@ body.body-toppage div.access__wrapper div.copyright-reserved__inner-sp small.cop
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
+  div.access__wrapper div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
     visibility: visible;
     font-size: clamp(14px, 3vw, 18px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
+  div.access__wrapper div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
     visibility: visible;
     font-size: clamp(8px, 3vw, 14px);
   }
 }
-body.body-toppage div.access__wrapper .access-container {
+div.access__wrapper .access-container {
   margin: 0px auto 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  /* 大型モニタ */
+  /* PC */
+  /* タブレット */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container {
+  div.access__wrapper .access-container {
     width: clamp(480px, 100vw, 599px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container {
+  div.access__wrapper .access-container {
     width: clamp(280px, 100vw, 479px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__map-inner {
+div.access__wrapper .access-container__map {
   width: 608px;
   height: 440px;
-  margin-top: 200px;
-  padding-left: 4px;
+  margin-top: 178px;
   background: url("../images/map.jpg") no-repeat;
   background-position: center;
   background-size: cover;
@@ -2042,7 +2856,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__ma
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__map-inner {
+  div.access__wrapper .access-container__map {
     width: clamp(446px, 93vw, 559px);
     height: clamp(398px, 83vw, 500px);
     background: url("../images/map.jpg") no-repeat;
@@ -2052,7 +2866,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__ma
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__map-inner {
+  div.access__wrapper .access-container__map {
     width: clamp(246px, 88vw, 420px);
     height: clamp(182px, 65vw, 310px);
     background: url("../images/map.jpg") no-repeat;
@@ -2061,10 +2875,10 @@ body.body-toppage div.access__wrapper .access-container div.access-container__ma
     margin-top: clamp(17px, 6vw, 30px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail {
+div.access__wrapper .access-container__detail {
   width: 538px;
   height: 625px;
-  margin-top: 200px;
+  margin-top: 176px;
   margin-left: 33px;
   display: flex;
   flex-direction: column;
@@ -2077,7 +2891,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail {
+  div.access__wrapper .access-container__detail {
     width: clamp(480px, 100vw, 599px);
     height: auto;
     margin: 0 auto;
@@ -2086,7 +2900,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail {
+  div.access__wrapper .access-container__detail {
     width: clamp(246px, 88vw, 420px);
     height: auto;
     margin: 0 auto;
@@ -2094,7 +2908,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
     flex-wrap: nowrap;
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner {
+div.access__wrapper .access-container__detail-logo_inner {
   width: 275x;
   height: 73px;
   display: flex;
@@ -2106,20 +2920,20 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner {
+  div.access__wrapper .access-container__detail-logo_inner {
     width: 100%;
     margin-left: 0px;
     margin: 0 auto;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner {
+  div.access__wrapper .access-container__detail-logo_inner {
     width: 100%;
     margin-left: 0px;
     margin: 0 auto;
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-logo {
+div.access__wrapper .access-container__detail-logo_inner--icon {
   width: 73px;
   height: 73px;
   background: url("../images/病院の地図マーク.jpg");
@@ -2131,20 +2945,20 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-logo {
+  div.access__wrapper .access-container__detail-logo_inner--icon {
     width: clamp(58px, 12vw, 73px);
     height: clamp(58px, 12vw, 73px);
     margin-left: clamp(115px, 24vw, 145px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-logo {
+  div.access__wrapper .access-container__detail-logo_inner--icon {
     width: clamp(42px, 15vw, 73px);
     height: clamp(42px, 15vw, 73px);
     margin-left: clamp(42px, 15vw, 73px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner {
+div.access__wrapper .access-container__detail-logo_inner-tagline {
   width: 200x;
   height: 73px;
   /* 大型モニタ */
@@ -2154,20 +2968,20 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner {
+  div.access__wrapper .access-container__detail-logo_inner-tagline {
     width: clamp(158px, 33vw, 200px);
     height: clamp(58px, 12vw, 73px);
     margin-left: clamp(14px, 3vw, 15px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner {
+  div.access__wrapper .access-container__detail-logo_inner-tagline {
     width: clamp(118px, 42vw, 200px);
     height: clamp(42px, 15vw, 73px);
     margin-left: clamp(8px, 3vw, 15px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--upper {
+div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
   font-size: 30px;
   line-height: 26px;
   padding-left: 11px;
@@ -2178,20 +2992,20 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--upper {
+  div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
     font-size: clamp(24px, 5vw, 30px);
     line-height: clamp(24px, 5vw, 30px);
     padding-left: clamp(10px, 2vw, 11px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--upper {
+  div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
     font-size: clamp(17px, 6vw, 30px);
     line-height: clamp(17px, 6vw, 30px);
     padding-left: clamp(6px, 2vw, 11px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--lower {
+div.access__wrapper .access-container__detail-logo_inner-tagline--lower {
   font-size: 30px;
   line-height: 55px;
   padding-left: 26px;
@@ -2202,7 +3016,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--lower {
+  div.access__wrapper .access-container__detail-logo_inner-tagline--lower {
     font-size: clamp(24px, 5vw, 30px);
     line-height: clamp(24px, 5vw, 30px);
     padding-left: clamp(19px, 4vw, 26px);
@@ -2210,14 +3024,14 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-logo--inner div.access-container__detail-tagline--inner p.access-container__detail-tagline--lower {
+  div.access__wrapper .access-container__detail-logo_inner-tagline--lower {
     font-size: clamp(17px, 6vw, 30px);
     line-height: clamp(17px, 6vw, 30px);
     padding-left: clamp(14px, 5vw, 26px);
     margin-top: clamp(8px, 3vw, 16px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner {
+div.access__wrapper .access-container__detail-address-inner {
   margin-top: 28px;
   display: flex;
   flex-wrap: wrap;
@@ -2229,7 +3043,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner {
+  div.access__wrapper .access-container__detail-address-inner {
     width: 100%;
     margin: 0 auto;
     margin-top: clamp(24px, 5vw, 30px);
@@ -2239,7 +3053,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner {
+  div.access__wrapper .access-container__detail-address-inner {
     width: 100%;
     margin: 0 auto;
     margin-top: clamp(17px, 6vw, 30px);
@@ -2248,7 +3062,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
     align-items: center;
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress--number {
+div.access__wrapper .access-container__detail-address-inner--number {
   font-size: 16px;
   margin-right: 16px;
   letter-spacing: 0.1px;
@@ -2259,18 +3073,18 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress--number {
+  div.access__wrapper .access-container__detail-address-inner--number {
     font-size: clamp(14px, 3vw, 16px);
     display: inline-block;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress--number {
+  div.access__wrapper .access-container__detail-address-inner--number {
     font-size: clamp(8px, 3vw, 16px);
     display: inline-block;
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress {
+div.access__wrapper .access-container__detail-address-inner--text {
   font-size: 16px;
   letter-spacing: 0px;
   /* 大型モニタ */
@@ -2280,20 +3094,20 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress {
+  div.access__wrapper .access-container__detail-address-inner--text {
     font-size: clamp(14px, 3vw, 18px);
     display: inline-block;
     margin-top: clamp(10px, 2vw, 10px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-adress--inner p.access-container__detail-adress {
+  div.access__wrapper .access-container__detail-address-inner--text {
     font-size: clamp(11px, 4vw, 18px);
     display: inline-block;
     margin-top: clamp(6px, 2vw, 10px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-tel--inner {
+div.access__wrapper .access-container__detail-tel {
   height: 32px;
   width: 220px;
   position: relative;
@@ -2306,7 +3120,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-tel--inner {
+  div.access__wrapper .access-container__detail-tel {
     width: 80%;
     margin: 0 auto;
     margin-top: clamp(14px, 3vw, 15px);
@@ -2315,7 +3129,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-tel--inner {
+  div.access__wrapper .access-container__detail-tel {
     width: 80%;
     margin: 0 auto;
     margin-top: clamp(14px, 5vw, 25px);
@@ -2323,7 +3137,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
     justify-content: center;
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-tel--inner p.access-container__detail-tel--number::before {
+div.access__wrapper .access-container__detail-tel--number::before {
   content: "";
   display: inline-block;
   width: 26px;
@@ -2339,16 +3153,16 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-tel--inner p.access-container__detail-tel--number::before {
+  div.access__wrapper .access-container__detail-tel--number::before {
     margin: 0;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-tel--inner p.access-container__detail-tel--number::before {
+  div.access__wrapper .access-container__detail-tel--number::before {
     margin: 0;
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-tel--inner p.access-container__detail-tel--number {
+div.access__wrapper .access-container__detail-tel--number {
   color: #21a937;
   font-size: 24px;
   text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0, -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px, 0px -0.4px 0px;
@@ -2357,12 +3171,13 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   margin-top: 1px;
   position: absolute;
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank--border {
+div.access__wrapper .access-container__detail-blank-border {
   height: 29.5px;
   width: 533px;
   border-bottom: 1px solid;
   border-color: #e7e7e7;
   background-color: white;
+  margin-left: 4px;
   /* 大型モニタ */
   /* PC */
   /* タブレット */
@@ -2370,19 +3185,19 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank--border {
+  div.access__wrapper .access-container__detail-blank-border {
     width: 100%;
     margin: 0 auto;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank--border {
+  div.access__wrapper .access-container__detail-blank-border {
     width: 100%;
     margin: 0 auto;
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank--margin {
-  height: 15px;
+div.access__wrapper .access-container__detail-blank-margin {
+  height: 18px;
   width: 533px;
   /* 大型モニタ */
   /* PC */
@@ -2391,19 +3206,19 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank--margin {
+  div.access__wrapper .access-container__detail-blank-margin {
     height: clamp(14px, 3vw, 20px);
     width: 100%;
     margin: 0 auto;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank--margin {
+  div.access__wrapper .access-container__detail-blank-margin {
     width: 100%;
     margin: 0 auto;
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner {
+div.access__wrapper .access-container__detail-business-hour-inner {
   height: 95px;
   width: 533px;
   background-color: white;
@@ -2417,7 +3232,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner {
+  div.access__wrapper .access-container__detail-business-hour-inner {
     width: clamp(480px, 100vw, 599px);
     height: auto;
     flex-direction: row;
@@ -2425,15 +3240,15 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner {
+  div.access__wrapper .access-container__detail-business-hour-inner {
     width: clamp(246px, 88vw, 420px);
     height: clamp(98px, 35vw, 170px);
     flex-direction: row;
     justify-content: flex-start;
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time {
-  width: 85px;
+div.access__wrapper .access-container__detail-business-hour-inner--consultation-time {
+  width: 90px;
   height: 114px;
   border-right: 1px solid;
   border-color: #e7e7e7;
@@ -2444,20 +3259,20 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time {
+  div.access__wrapper .access-container__detail-business-hour-inner--consultation-time {
     width: clamp(144px, 30vw, 180px);
     height: auto;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time {
+  div.access__wrapper .access-container__detail-business-hour-inner--consultation-time {
     width: clamp(87px, 31vw, 150px);
     height: auto;
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time p {
+div.access__wrapper .access-container__detail-business-hour-inner--consultation-time p {
   font-size: 14px;
-  margin-top: 8px;
+  margin-top: 5px;
   margin-left: 4.5px;
   /* 大型モニタ */
   /* PC */
@@ -2466,20 +3281,20 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time p {
+  div.access__wrapper .access-container__detail-business-hour-inner--consultation-time p {
     font-size: clamp(14px, 3vw, 16px);
     margin-top: clamp(29px, 6vw, 38px);
     text-align: center;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--consultation-time p {
+  div.access__wrapper .access-container__detail-business-hour-inner--consultation-time p {
     font-size: clamp(8px, 3vw, 14px);
     margin-top: clamp(22px, 8vw, 38px);
     text-align: center;
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper {
+div.access__wrapper .access-container__detail-business-hour-inner--wrapper {
   width: 449px;
   height: 114px;
   display: flex;
@@ -2492,18 +3307,18 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper {
     width: clamp(322px, 67vw, 400px);
     height: auto;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper {
     width: clamp(146px, 52vw, 250px);
     height: auto;
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern {
+div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -2515,7 +3330,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern {
     width: clamp(360px, 75vw, 450px);
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -2523,18 +3338,18 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern {
     width: clamp(146px, 52vw, 250px);
     flex-wrap: nowrap;
     justify-content: flex-start;
     margin: 0;
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_upper {
+div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern p.day-of-week_upper {
   font-size: 14px;
   display: inline-block;
   width: 42px;
-  margin: 9px 23px 0 35px;
+  margin: 5px 23px 0 28px;
   /* 大型モニタ */
   /* PC */
   /* タブレット */
@@ -2542,7 +3357,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_upper {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern p.day-of-week_upper {
     width: clamp(82px, 17vw, 100px);
     font-size: clamp(14px, 3vw, 16px);
     margin: 0;
@@ -2553,7 +3368,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_upper {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern p.day-of-week_upper {
     display: inline-block;
     width: clamp(70px, 25vw, 120px);
     font-size: clamp(8px, 3vw, 14px);
@@ -2563,31 +3378,45 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
     text-align: right;
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper {
+div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--upper {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--upper {
+    margin-top: 5px;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--upper {
     width: clamp(202px, 42vw, 250px);
     margin-top: clamp(19px, 4vw, 23px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--upper {
     width: clamp(87px, 31vw, 150px);
     margin-top: clamp(14px, 5vw, 23px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper p.morning_upper {
+div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--upper p.morning_upper {
+  width: 115px;
   font-size: 14px;
+  letter-spacing: 0.2px;
   display: inline-block;
-  width: 105px;
-  margin: 8px 16px 0 0;
-  letter-spacing: 0px;
+  /* 大型モニタ */
+  /* PC */
+  /* タブレット */
+}
+div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
+  width: 120px;
+  font-size: 14px;
+  letter-spacing: 0.1px;
+  display: inline-block;
+  margin-left: 4px;
   /* 大型モニタ */
   /* PC */
   /* タブレット */
@@ -2595,7 +3424,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper p.morning_upper {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
     display: block;
@@ -2605,7 +3434,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper p.morning_upper {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
     font-size: clamp(8px, 3vw, 14px);
     display: block;
     margin: 0;
@@ -2613,41 +3442,11 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
     margin-left: clamp(11px, 4vw, 20px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper p.afternoon_upper {
-  font-size: 14px;
-  display: inline-block;
-  width: 110px;
-  margin: 9px 16px 0 0;
-  /* 大型モニタ */
-  /* PC */
-  /* タブレット */
-  /* スマートフォン横画面 */
-  /* スマートフォン縦画面 */
-}
-@media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper p.afternoon_upper {
-    width: clamp(202px, 42vw, 250px);
-    font-size: clamp(14px, 3vw, 16px);
-    display: block;
-    margin-top: clamp(5px, 1vw, 8px);
-    margin-right: clamp(14px, 3vw, 20px);
-    margin-left: clamp(14px, 3vw, 20px);
-  }
-}
-@media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--upper p.afternoon_upper {
-    font-size: clamp(8px, 3vw, 14px);
-    display: block;
-    margin: 0;
-    margin-right: clamp(11px, 4vw, 20px);
-    margin-left: clamp(11px, 4vw, 20px);
-  }
-}
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_middle {
+div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern p.day-of-week_middle {
   font-size: 14px;
   display: inline-block;
   width: 42px;
-  margin: 16px 23px 0 33px;
+  margin: 16px 23px 0 28px;
   /* 大型モニタ */
   /* PC */
   /* タブレット */
@@ -2655,7 +3454,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_middle {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern p.day-of-week_middle {
     width: clamp(82px, 17vw, 100px);
     font-size: clamp(14px, 3vw, 16px);
     margin: 0;
@@ -2666,7 +3465,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_middle {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern p.day-of-week_middle {
     width: clamp(118px, 42vw, 200px);
     font-size: clamp(8px, 3vw, 14px);
     margin: 0;
@@ -2675,28 +3474,36 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
     margin-left: clamp(11px, 4vw, 20px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle {
+div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--middle {
+  /* 大型モニタ */
+  /* PC */
+  /* タブレット */
   /* メディアクエリスマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--middle {
+    margin-top: 17px;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--middle {
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
     margin-top: clamp(14px, 3vw, 20px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--middle {
     width: clamp(87px, 31vw, 150px);
     margin-top: clamp(14px, 5vw, 23px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle p.morning_middle {
+div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--middle p.morning_middle {
+  width: 115px;
   font-size: 14px;
+  letter-spacing: 0.2px;
   display: inline-block;
-  width: 105px;
-  margin: 16px 16px 0 0;
   /* 大型モニタ */
   /* PC */
   /* タブレット */
@@ -2704,7 +3511,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle p.morning_middle {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--middle p.morning_middle {
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
     display: block;
@@ -2714,7 +3521,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle p.morning_middle {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--middle p.morning_middle {
     font-size: clamp(8px, 3vw, 14px);
     display: block;
     margin: 0;
@@ -2722,11 +3529,12 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
     margin-left: clamp(11px, 4vw, 20px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle p.afternoon_middle {
+div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
+  width: 120px;
   font-size: 14px;
+  letter-spacing: 0.1px;
   display: inline-block;
-  width: 110px;
-  margin: 16px 16px 0 0;
+  margin-left: 4px;
   /* 大型モニタ */
   /* PC */
   /* タブレット */
@@ -2734,7 +3542,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle p.afternoon_middle {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
     display: block;
@@ -2744,7 +3552,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--middle p.afternoon_middle {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
     font-size: clamp(8px, 3vw, 14px);
     display: block;
     margin: 0;
@@ -2752,11 +3560,11 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
     margin-left: clamp(11px, 4vw, 20px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_lower {
+div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern p.day-of-week_lower {
   font-size: 14px;
   display: inline-block;
   width: 42px;
-  margin: 17px 23px 0 33px;
+  margin: 17px 23px 0 28px;
   /* 大型モニタ */
   /* PC */
   /* タブレット */
@@ -2764,7 +3572,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_lower {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern p.day-of-week_lower {
     width: clamp(82px, 17vw, 100px);
     font-size: clamp(14px, 3vw, 16px);
     margin: 0;
@@ -2775,7 +3583,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern p.dayofweek_lower {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern p.day-of-week_lower {
     font-size: clamp(8px, 3vw, 14px);
     margin: 0;
     margin-top: clamp(17px, 6vw, 30px);
@@ -2783,30 +3591,35 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
     margin-left: clamp(11px, 4vw, 20px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower {
+div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--lower {
   /* 大型モニタ */
   /* PC */
   /* タブレット */
   /* スマートフォン横画面 */
   /* スマートフォン縦画面 */
 }
+@media (min-width: 1280px) {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--lower {
+    margin-top: 17px;
+  }
+}
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--lower {
     width: clamp(202px, 42vw, 250px);
     margin-top: clamp(14px, 3vw, 20px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--lower {
     width: clamp(87px, 31vw, 150px);
     margin-top: clamp(14px, 5vw, 23px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower p.morning_lower {
+div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--lower p.morning_lower {
+  width: 115px;
   font-size: 14px;
+  letter-spacing: 0.2px;
   display: inline-block;
-  width: 105px;
-  margin: 16px 16px 0 0;
   /* 大型モニタ */
   /* PC */
   /* タブレット */
@@ -2814,7 +3627,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower p.morning_lower {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--lower p.morning_lower {
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
     display: block;
@@ -2824,7 +3637,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower p.morning_lower {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--lower p.morning_lower {
     font-size: clamp(8px, 3vw, 14px);
     display: block;
     margin: 0;
@@ -2832,11 +3645,12 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
     margin-left: clamp(11px, 4vw, 20px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower p.afternoon_lower {
+div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--lower p.afternoon_lower {
+  width: 120px;
   font-size: 14px;
+  letter-spacing: 0.1px;
   display: inline-block;
-  width: 110px;
-  margin: 16px 16px 0 0;
+  margin-left: 4px;
   /* 大型モニタ */
   /* PC */
   /* タブレット */
@@ -2844,7 +3658,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower p.afternoon_lower {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--lower p.afternoon_lower {
     width: clamp(202px, 42vw, 250px);
     font-size: clamp(14px, 3vw, 16px);
     display: block;
@@ -2854,7 +3668,7 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-businesshour--inner div.access-container__detail-businesshour--wrapper div.access-container__detail-businesshour-consultation-pattern div.morning_afternoon__wrapper--lower p.afternoon_lower {
+  div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--lower p.afternoon_lower {
     font-size: clamp(8px, 3vw, 14px);
     display: block;
     margin: 0;
@@ -2862,9 +3676,9 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
     margin-left: clamp(11px, 4vw, 20px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner {
+div.access__wrapper .access-container__detail .closed-day--inner {
   width: 533px;
-  height: 35px;
+  height: 50px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -2875,22 +3689,26 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner {
+  div.access__wrapper .access-container__detail .closed-day--inner {
     width: clamp(336px, 70vw, 420px);
     margin-top: clamp(10px, 2vw, 10px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner {
+  div.access__wrapper .access-container__detail .closed-day--inner {
     width: clamp(246px, 88vw, 420px);
     margin-top: clamp(6px, 2vw, 10px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day {
-  width: 85px;
+div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
+  width: 89px;
+  height: 25px;
   font-size: 14px;
   border-right: 1px solid;
   border-color: #e7e7e7;
+  margin-top: 20px;
+  padding-top: 7px;
+  padding-left: 5px;
   /* 大型モニタ */
   /* PC */
   /* タブレット */
@@ -2898,44 +3716,24 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day {
+  div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
     width: clamp(144px, 30vw, 180px);
     font-size: clamp(14px, 3vw, 16px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day {
+  div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
     width: clamp(87px, 31vw, 150px);
     font-size: clamp(8px, 3vw, 14px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day p {
-  margin-top: 14px;
-  margin-left: 4.5px;
-  /* 大型モニタ */
-  /* PC */
-  /* タブレット */
-  /* スマートフォン横画面 */
-  /* スマートフォン縦画面 */
-}
-@media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day p {
-    margin: 0;
-    text-align: center;
-  }
-}
-@media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-day--inner div.access-container__detail-closed-day p {
-    margin: 0;
-    text-align: center;
-  }
-}
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrapper {
+div.access__wrapper .access-container__detail .closed-day-of-week {
   width: 449px;
   height: 114px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  font-size: 14px;
+  margin-top: 20px;
+  padding-top: 7px;
+  padding-left: 28px;
   /* 大型モニタ */
   /* PC */
   /* タブレット */
@@ -2943,46 +3741,21 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrapper {
+  div.access__wrapper .access-container__detail .closed-day-of-week {
     width: clamp(202px, 42vw, 250px);
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrapper {
+  div.access__wrapper .access-container__detail .closed-day-of-week {
     width: clamp(146px, 52vw, 250px);
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrapper div.access-container__detail-closed-dayofweek {
-  font-size: 14px;
-  width: 70px;
-  margin-top: 15px;
-  margin-left: 34px;
-  /* 大型モニタ */
-  /* PC */
-  /* タブレット */
-  /* スマートフォン横画面 */
-  /* スマートフォン縦画面 */
-}
-@media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrapper div.access-container__detail-closed-dayofweek {
-    width: 100%;
-    font-size: clamp(14px, 3vw, 16px);
-    margin: 0;
-    margin-left: clamp(48px, 10vw, 60px);
-  }
-}
-@media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-closed-dayofweek--wrapper div.access-container__detail-closed-dayofweek {
-    font-size: clamp(8px, 3vw, 14px);
-    margin: 0;
-    margin-left: clamp(19px, 4vw, 25px);
-  }
-}
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank-border--lower {
+div.access__wrapper .access-container__detail-blank-border--lower {
   height: 19px;
   width: 533px;
   border-bottom: 1px solid;
   border-color: #e7e7e7;
+  margin-left: 5px;
   /* 大型モニタ */
   /* PC */
   /* タブレット */
@@ -2990,18 +3763,18 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank-border--lower {
+  div.access__wrapper .access-container__detail-blank-border--lower {
     width: 100%;
     margin: 0 auto;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-blank-border--lower {
+  div.access__wrapper .access-container__detail-blank-border--lower {
     width: 100%;
     margin: 0 auto;
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc {
+div.access__wrapper .access-container__detail div.access-container__detail-copyright_reserved--pc {
   width: 554px;
   margin-top: 24.5px;
   text-align: right;
@@ -3013,18 +3786,18 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc {
+  div.access__wrapper .access-container__detail div.access-container__detail-copyright_reserved--pc {
     width: 100%;
     margin: 0 auto;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc {
+  div.access__wrapper .access-container__detail div.access-container__detail-copyright_reserved--pc {
     width: 100%;
     margin: 0 auto;
   }
 }
-body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc small {
+div.access__wrapper .access-container__detail div.access-container__detail-copyright_reserved--pc small {
   font-size: 11px;
   letter-spacing: 0.15px;
   padding-right: 15px;
@@ -3036,13 +3809,13 @@ body.body-toppage div.access__wrapper .access-container div.access-container__de
   /* スマートフォン縦画面 */
 }
 @media not all and (min-width: 599px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc small {
+  div.access__wrapper .access-container__detail div.access-container__detail-copyright_reserved--pc small {
     font-size: clamp(10px, 2vw, 11px);
     display: none;
   }
 }
 @media not all and (min-width: 479px) {
-  body.body-toppage div.access__wrapper .access-container div.access-container__detail div.access-container__detail-copyright_reserved--pc small {
+  div.access__wrapper .access-container__detail div.access-container__detail-copyright_reserved--pc small {
     font-size: clamp(6px, 2vw, 11px);
     display: none;
   }

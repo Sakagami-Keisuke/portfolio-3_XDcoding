@@ -1,4 +1,5 @@
 // _c-title.scssを読み込む用
 @use "./reset";
-@use './fonts';
-@use './c-title';
+@use './config';
+@use './header';
+@use './top-page-body';

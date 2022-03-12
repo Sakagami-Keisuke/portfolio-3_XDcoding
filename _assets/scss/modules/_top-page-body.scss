@@ -1,0 +1,3275 @@
+@import "mixin";
+// body ======================================================
+
+body.body {
+  /* 大型モニタ */
+  @include pc-l(1280px) {
+    width: 100vw;
+    background-color: yellow;
+  }
+
+  /* PC */
+  @include pc(1279px) {
+    width: 100vw;
+  }
+
+  /* タブレット */
+  @include tab(1024px) {
+    width: 100vw;
+  }
+
+  /* スマートフォン横画面 */
+  @include sp_b(599px) {
+    width: clamp_vw_sp_b(599);
+    padding: 0;
+    max-width: 0;
+  }
+
+  @include sp_v(479px) {
+    width: clamp_vw_sp_v(479);
+    padding: 0;
+    max-width: 0;
+  }
+
+  // ===================================================================
+
+  div.top-page_wrapper {
+    /* 大型モニタ */
+    @include pc-l(1280px) {
+      width: clamp_vw_pc_l(1920); //最大1920指定
+      height: auto;
+      margin: 0 auto;
+      background-color: rgb(49, 231, 49);
+    }
+
+    /* PC */
+    @include pc(1279px) {
+      width: 100vw;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    /* タブレット */
+    @include tab(1024px) {
+      width: 100vw;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    /* スマートフォン横画面 */
+    @include sp_b(599px) {
+      width: 100vw;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    /* スマートフォン縦画面 */
+    @include sp_v(479px) {
+      width: 100vw;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    // body ============================================================
+
+    // section 1 <ファーストビュー> ============================================================================================
+
+    .first-view_inner {
+      /* 大型モニタ */
+      @include pc-l(1280px) {
+        width: clamp_vw_pc_l(1920); //最大1920指定
+        height: clamp_vw_pc_l(947); //947指定
+        position: relative;
+      }
+
+      /* PC */
+      @include pc(1279px) {
+        width: clamp_vw_pc(1279);
+        height: clamp_vw_pc(625);
+        position: relative;
+      }
+
+      /* タブレット */
+      @include tab(1024px) {
+        width: clamp_vw_tab(1024);
+        height: clamp_vw_tab(1024);
+        margin-top: clamp_vw_tab(10);
+      }
+
+      /* スマートフォン横画面 */
+      @include sp_b(599px) {
+        width: clamp_vw_sp_b(589);
+        height: clamp_vw_sp_b(589);
+        margin-top: clamp_vw_sp_b(10);
+      }
+
+      /* スマートフォン縦画面 */
+      @include sp_v(479px) {
+        width: clamp_vw_sp_v(479);
+        height: clamp_vw_sp_v(479);
+        margin-top: clamp_vw_sp_v(10);
+      }
+
+      // ================================
+
+      &__message-left {
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+          width: 102px;
+          height: 565px;
+          writing-mode: vertical-rl;
+          font-size: 28px;
+          font-weight: 500;
+          letter-spacing: 5.5px;
+          padding-top: 25px;
+          line-height: 102px;
+          background-color: white;
+          position: absolute;
+          top: 133px;
+          left: 210px;
+        }
+
+        /* PC */
+        @include pc(1279px) {
+          writing-mode: vertical-rl;
+          font-size: 28px;
+          font-weight: 500;
+          letter-spacing: clamp_vw_pc(5.5);
+          padding-top: clamp_vw_pc(25);
+          line-height: clamp_vw_pc(102);
+          width: clamp_vw_pc(102);
+          height: clamp_vw_pc(565);
+          background-color: white;
+          position: absolute;
+          top: clamp_vw_pc(25);
+          left: clamp_vw_pc(210);
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+          width: clamp_vw_tab(90);
+          height: clamp_vw_tab(700);
+          font-size: clamp_vw_tab(26);
+          letter-spacing: clamp_vw_tab(6);
+          padding-top: 0px;
+          text-align: center;
+          line-height: clamp_vw_tab(78);
+          top: clamp_vw_tab(100);
+          left: clamp_vw_tab(140);
+          z-index: 5;
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: clamp_vw_sp_b(55);
+          height: clamp_vw_sp_b(345);
+          font-size: clamp_vw_sp_b(20);
+          letter-spacing: 0px;
+          padding-top: 0px;
+          text-align: center;
+          line-height: clamp_vw_sp_b(55);
+          top: clamp_vw_sp_b(100);
+          left: clamp_vw_sp_b(30);
+          z-index: 5;
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          // background-color: rgb(240, 113, 113);
+          // width: clamp(26px, 11.4583vw, 55px);
+          width: clamp_vw_sp_v(55);
+          /* 最小値30(vw225),65÷479×100vw,最大値65(vw479) */
+          // height: clamp(162px, 71.875vw, 345px);
+          height: clamp_vw_sp_v(345);
+          /* 最小値162(vw225),345÷479×100vw,最大値345(vw479) */
+          // font-size: clamp(9px, 4.166vw, 20px);
+          font-size: clamp_vw_sp_v(20);
+          /* 最小値9(vw225),20÷479×100vw,最大値20(vw479) */
+          letter-spacing: 0px;
+          padding-top: 0px;
+          text-align: center;
+          // line-height: clamp(26px, 11.4583vw, 55px);
+          line-height: clamp_vw_sp_v(55);
+          /* 最小値30(vw225),65÷479×100vw,最大値65(vw479) */
+          /* 最小値30(vw225),65÷479×100vw,最大値65(vw479) */
+          // top: clamp(47px, 20.833vw, 100px);
+          top: clamp_vw_sp_v(100);
+          /* 最小値47(vw225),100÷479×100vw,最大値100(vw479) */
+          // left: clamp(14px, 6.25vw, 30px);
+          left: clamp_vw_sp_v(30);
+          /* 最小値14(vw225),30÷479×100vw,最大値30(vw479) */
+          z-index: 5;
+        }
+
+        // ==============================
+
+        span.color {
+          /* 大型モニタ */
+          @include pc-l(1280px) {
+            color: green;
+            letter-spacing: 5.5px;
+            margin-top: -8px;
+            margin-bottom: -8px;
+          }
+
+          /* PC */
+          @include pc(1279px) {
+            color: green;
+            letter-spacing: 5.5px;
+            margin-top: -8px;
+            margin-bottom: -8px;
+          }
+
+          /* タブレット */
+          @include tab(1024px) {
+            font-size: clamp_vw_tab(26);
+            letter-spacing: clamp_vw_tab(6);
+            padding-top: clamp_vw_tab(3);
+            padding-bottom: clamp_vw_tab(3);
+          }
+
+          /* スマートフォン横画面 */
+          @include sp_b(599px) {
+            font-size: clamp_vw_sp_b(20);
+            letter-spacing: 0px;
+            padding-top: clamp_vw_sp_b(3);
+            padding-bottom: clamp_vw_sp_b(3);
+          }
+
+          /* スマートフォン縦画面 */
+          @include sp_v(479px) {
+            font-size: clamp_vw_sp_v(20);
+            letter-spacing: 0px;
+            padding-top: clamp_vw_sp_v(3);
+            padding-bottom: clamp_vw_sp_v(3);
+          }
+        }
+      }
+
+      // =============================
+
+      &__message-right {
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+          width: 102px;
+          height: 565px;
+          writing-mode: vertical-rl;
+          font-size: 28px;
+          font-weight: 500;
+          letter-spacing: 6px;
+          padding-top: 25px;
+          line-height: 102px;
+          background-color: white;
+          position: absolute;
+          top: 133px;
+          left: 393px;
+        }
+
+        /* PC */
+        @include pc(1279px) {
+          writing-mode: vertical-rl;
+          font-size: 28px;
+          font-weight: 500;
+          letter-spacing: 6px;
+          padding-top: 25px;
+          line-height: 102px;
+          width: clamp_vw_pc(102);
+          height: clamp_vw_pc(565);
+          background-color: white;
+          position: absolute;
+          top: clamp_vw_pc(25);
+          left: clamp_vw_pc(340);
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+          width: clamp_vw_tab(90);
+          height: clamp_vw_tab(700);
+          font-size: clamp_vw_tab(26);
+          letter-spacing: clamp_vw_tab(6);
+          padding-top: 0px;
+          text-align: center;
+          line-height: clamp_vw_tab(78);
+          top: clamp_vw_tab(100);
+          left: clamp_vw_tab(300);
+          z-index: 5;
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: clamp_vw_sp_b(55);
+          height: clamp_vw_sp_b(345);
+          font-size: clamp_vw_sp_b(20);
+          letter-spacing: 0px;
+          padding-top: 0px;
+          text-align: center;
+          line-height: clamp_vw_sp_b(55);
+          top: clamp_vw_sp_b(100);
+          left: clamp_vw_sp_b(100);
+          z-index: 5;
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          width: clamp_vw_sp_v(55);
+          height: clamp_vw_sp_v(345);
+          font-size: clamp_vw_sp_v(20);
+          letter-spacing: 0px;
+          padding-top: 0px;
+          text-align: center;
+          line-height: clamp_vw_sp_v(55);
+          top: clamp_vw_sp_v(100);
+          left: clamp_vw_sp_v(100);
+          z-index: 5;
+        }
+      }
+
+      // ========================
+
+      &__image {
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+          width: clamp_vw_pc_l(1920); //1920指定
+          height: clamp_vw_pc_l(947); //947指定
+          background: url("../images/fv.jpg") no-repeat;
+          background-size: contain;
+        }
+
+        /* PC */
+        @include pc(1279px) {
+          width: clamp_vw_pc(1279);
+          height: clamp_vw_pc(625);
+          background: url("../images/fv.jpg") no-repeat;
+          background-size: contain;
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+          width: clamp_vw_tab(1024);
+          height: clamp_vw_tab(1024);
+          background: url("../images/firstview_image_SP.jpg") no-repeat;
+          background-size: contain;
+          position: absolute;
+          left: clamp_vw_tab(0);
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: clamp_vw_sp_b(599);
+          height: clamp_vw_sp_b(599);
+          background: url("../images/firstview_image_SP.jpg") no-repeat;
+          background-size: contain;
+          position: absolute;
+          left: clamp_vw_sp_b(0);
+        }
+
+        @include sp_v(479px) {
+          width: clamp_vw_sp_v(479);
+          height: clamp_vw_sp_v(479);
+          background: url("../images/firstview_image_SP.jpg") no-repeat;
+          background-size: contain;
+          position: absolute;
+        }
+      }
+    }
+  }
+
+  // section 1 <ファーストビュー>============================================================================================
+
+  // section 2 <自己紹介>============================================================================================
+
+  .self-introduction {
+    /* 大型モニタ */
+    @include pc-l(1280px) {
+      width: clamp_vw_pc_l(1180); //1180指定
+      height: clamp_vw_pc_l(664); //664指定
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      // background-color: rgb(238, 78, 185);
+    }
+
+    /* PC */
+    @include pc(1279px) {
+      width: clamp_vw_pc(780);
+      height: clamp_vw_pc(448);
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      // background-color: rgb(33, 61, 60);
+    }
+
+    /* タブレット */
+    @include tab(1024px) {
+      width: clamp_vw_tab(1024);
+      height: clamp_vw_tab(880);
+      display: block;
+    }
+
+    /* スマートフォン横画面 */
+    @include sp_b(599px) {
+      width: clamp_vw_sp_b(589);
+      height: clamp_vw_sp_b(660);
+      display: block;
+    }
+
+    /* スマートフォン縦画面 */
+    @include sp_v(479px) {
+      width: clamp_vw_sp_v(479);
+      height: clamp_vw_sp_v(660);
+      display: block;
+    }
+
+    // =============================
+
+    &-inner {
+      /* 大型モニタ */
+      @include pc-l(1280px) {
+        width: clamp_vw_pc_l(490);
+        height: clamp_vw_pc_l(420);
+      }
+
+      /* PC */
+      @include pc(1279px) {
+        width: clamp_vw_pc(345);
+        height: clamp_vw_pc(300);
+        margin-top: clamp_vw_pc(100);
+        // background-color: red;
+      }
+
+      /* タブレット */
+      @include tab(1024px) {
+        width: clamp_vw_tab(1024);
+        height: auto;
+        text-align: center;
+      }
+
+      /* スマートフォン横画面 */
+      @include sp_b(599px) {
+        width: auto;
+        height: auto;
+      }
+
+      /* スマートフォン縦画面 */
+      @include sp_v(479px) {
+        width: auto;
+        height: auto;
+      }
+
+      // ======================
+
+      &__first-line_text {
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+          display: inline-block;
+          width: auto;
+          font-size: 24px; //固定
+          font-weight: 500;
+          line-height: 22px;
+          background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+          margin-top: clamp_vw_pc_l(200);
+          margin-left: clamp_vw_pc_l(32);
+        }
+
+        /* PC */
+        @include pc(1279px) {
+          display: inline-block;
+          width: auto;
+          font-size: 24px; //固定
+          font-weight: 500;
+          background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+          margin-top: clamp_vw_pc_l(60);
+          line-height: 22px;
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+          display: inline-block;
+          width: auto;
+          margin-top: clamp_vw_tab(60);
+          font-size: clamp_vw_tab(26);
+          letter-spacing: clamp_vw_tab(-1);
+          text-align: center;
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          display: inline-block;
+          width: auto;
+          margin-top: clamp_vw_sp_b(60);
+          font-size: clamp_vw_sp_b(23);
+          letter-spacing: clamp_vw_sp_b(-2);
+          text-align: center;
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          display: inline-block;
+          width: auto;
+          margin-top: clamp_vw_sp_v(60);
+          font-size: clamp_vw_sp_v(23);
+          letter-spacing: clamp_vw_sp_v(-3);
+          text-align: center;
+        }
+      }
+
+      // =======================
+
+      &__second-line_text {
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+          display: inline-block;
+          width: auto;
+          font-size: 24px;
+          font-weight: 500;
+          letter-spacing: -0.2px;
+          line-height: 24px;
+          background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+          margin-top: 40px;
+          margin-left: 32px;
+        }
+
+        /* PC */
+        @include pc(1279px) {
+          display: inline-block;
+          width: auto;
+          font-size: 24px; //固定
+          font-weight: 500;
+          letter-spacing: -0.1px;
+          line-height: 24px;
+          margin-top: clamp_vw_pc_l(60);
+          background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+          display: inline-block;
+          width: auto;
+          margin-top: clamp_vw_tab(60);
+          font-size: clamp_vw_tab(26);
+          letter-spacing: clamp_vw_tab(-1);
+
+          background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          display: inline-block;
+          width: auto;
+          font-size: clamp_vw_sp_b(23);
+          margin-top: clamp_vw_sp_b(30);
+          letter-spacing: clamp_vw_sp_b(0);
+          text-align: center;
+          background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          display: inline-block;
+          width: auto;
+          font-size: clamp_vw_sp_v(23);
+          margin-top: clamp_vw_sp_v(30);
+          letter-spacing: clamp_vw_sp_v(-3);
+          text-align: center;
+          background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+        }
+      }
+
+      // ====================
+
+      &__third-line_text {
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+          display: inline-block;
+          width: auto;
+          font-size: 16px;
+          line-height: 38px;
+          letter-spacing: -0.15px;
+          margin-top: 35px;
+          margin-left: 32px;
+        }
+
+        /* PC */
+        @include pc(1279px) {
+          display: inline-block;
+          width: auto;
+          font-size: clamp_vw_pc(16);
+          letter-spacing: -0.18px;
+          line-height: clamp_vw_pc(24);
+          margin-top: clamp_vw_pc(30);
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+          display: inline-block;
+          width: auto;
+          font-size: clamp_vw_tab(16);
+          text-align: center;
+          line-height: clamp_vw_tab(36);
+          letter-spacing: clamp_vw_tab(-2);
+          text-align: left;
+          margin-top: clamp_vw_tab(30);
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          display: inline-block;
+          width: auto;
+          font-size: clamp_vw_sp_b(16);
+          text-align: center;
+          line-height: clamp_vw_sp_b(36);
+          letter-spacing: clamp_vw_sp_b(-2);
+          text-align: left;
+          margin-top: clamp_vw_sp_b(30);
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          display: inline-block;
+          width: auto;
+          font-size: clamp_vw_sp_v(16);
+          text-align: center;
+          line-height: clamp_vw_sp_v(36);
+          letter-spacing: clamp_vw_sp_v(-2);
+          text-align: left;
+          margin-top: clamp_vw_sp_v(30);
+        }
+      }
+    }
+
+    // ===================================
+
+    &__image {
+      /* 大型モニタ */
+      @include pc-l(1280px) {
+        width: clamp_vw_pc_l(690); //690指定
+        height: clamp_vw_pc_l(420); //420指定
+        margin-top: clamp_vw_pc_l(162); //162指定
+        background: url("../images/belief.jpg");
+        background-size: cover;
+      }
+
+      /* PC */
+      @include pc(1279px) {
+        width: clamp_vw_pc(460);
+        height: clamp_vw_pc(285);
+        margin-top: clamp_vw_pc(100);
+        background: url("../images/belief.jpg");
+        background-size: cover;
+      }
+
+      /* タブレット */
+      @include tab(1024px) {
+        width: clamp_vw_tab(520);
+        height: clamp_vw_tab(400);
+        background: url("../images/belief.jpg") no-repeat;
+        background-size: contain;
+        margin: 0 auto;
+        margin-top: clamp_vw_tab(30);
+      }
+
+      /* スマートフォン横画面 */
+      @include sp_b(599px) {
+        width: clamp_vw_sp_b(520);
+        height: clamp_vw_sp_b(400);
+        background: url("../images/belief.jpg") no-repeat;
+        background-size: contain;
+        margin: 0 auto;
+        margin-top: clamp_vw_sp_b(30);
+      }
+
+      /* スマートフォン縦画面 */
+      @include sp_v(479px) {
+        width: clamp_vw_sp_v(479);
+        height: clamp_vw_sp_v(400);
+        background: url("../images/belief.jpg") no-repeat;
+        background-size: contain;
+        margin-top: 0px;
+      }
+    }
+  }
+}
+
+// section 2 <自己紹介> ============================================================================================
+
+// section 3 <治療内容>============================================================================================
+
+.medical-treatment-contents {
+  /* 大型モニタ */
+  @include pc-l(1280px) {
+    width: clamp_vw_pc_l(1920);
+    height: auto;
+    background-color: #f5fcf8;
+    text-align: center;
+    padding-bottom: 112px;
+    background-color: rgb(255, 0, 106);
+  }
+
+  /* PC */
+  @include pc(1279px) {
+    width: clamp_vw_pc(1279);
+    height: auto;
+    background-color: #f5fcf8;
+    text-align: center;
+    padding-bottom: clamp_vw_pc(112);
+    background-color: red;
+  }
+
+  /* タブレット */
+  @include tab(1024px) {
+    width: clamp_vw_tab(1024);
+    height: auto;
+    background-color: #f3d27f;
+  }
+
+  /* スマートフォン横画面 */
+  @include sp_b(599px) {
+    width: clamp_vw_sp_b(599);
+    height: clamp_vw_sp_b(2800);
+    height: auto;
+    background-color: #f5fcf8;
+  }
+
+  /* スマートフォン縦画面 */
+  @include sp_v(479px) {
+    width: clamp_vw_sp_v(479);
+    height: clamp_vw_sp_v(2800);
+    height: auto;
+    background-color: #f5fcf8;
+  }
+
+  // ===================
+
+  &__first-line-text {
+    /* 大型モニタ */
+    @include pc-l(1280px) {
+      display: inline-block;
+      width: auto;
+      font-size: 24px; //固定
+      font-weight: 500;
+      line-height: 22px;
+      background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+      margin-top: 83px;
+    }
+
+    /* PC */
+    @include pc(1279px) {
+      display: inline-block;
+      width: auto;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 22px;
+      background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+      margin-top: clamp_vw_pc(85);
+    }
+
+    /* タブレット */
+    @include tab(1024px) {
+      font-size: clamp_vw_tab(28);
+    }
+
+    /* スマートフォン横画面 */
+    @include sp_b(599px) {
+      font-size: clamp_vw_sp_b(24);
+    }
+
+    /* スマートフォン縦画面 */
+    @include sp_v(479px) {
+      font-size: clamp_vw_sp_v(24);
+    }
+  }
+
+  // ==============================================
+
+  &__second-line-text {
+    /* 大型モニタ */
+    @include pc-l(1280px) {
+      display: inline-block;
+      width: auto;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      margin-top: 77px;
+    }
+
+    /* PC */
+    @include pc(1279px) {
+      display: inline-block;
+      width: auto;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      margin-top: clamp_vw_pc(79);
+    }
+
+    /* タブレット */
+    @include tab(1024px) {
+      font-size: clamp_vw_tab(24);
+    }
+
+    /* スマートフォン横画面 */
+    @include sp_b(599px) {
+      letter-spacing: clamp_vw_sp_b(2.5);
+    }
+
+    /* スマートフォン縦画面 */
+    @include sp_v(479px) {
+      letter-spacing: clamp_vw_sp_v(2.5);
+    }
+  }
+
+  // ==============================================
+
+  &__inner {
+    /* 大型モニタ */
+    @include pc-l(1280px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 34px;
+    }
+
+    /* PC */
+    @include pc(1279px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: clamp_vw_pc(37);
+    }
+
+    /* タブレット */
+    @include tab(1024px) {
+      margin: 0;
+      width: clamp_vw_tab(1024);
+      margin-top: clamp_vw_tab(50);
+    }
+
+    /* スマートフォン横画面 */
+    @include sp_b(599px) {
+      margin: 0;
+      width: clamp_vw_sp_b(599);
+      margin-top: clamp_vw_sp_b(50);
+    }
+
+    /* スマートフォン縦画面 */
+    @include sp_v(479px) {
+      margin: 0;
+      width: clamp_vw_sp_v(479);
+      margin-top: clamp_vw_sp_v(50);
+    }
+
+    // =========================================
+
+    &-article-board {
+      /* 大型モニタ */
+      @include pc-l(1280px) {
+        width: 380px;
+        height: 591px;
+        border: 1px solid;
+        border-radius: 10px;
+        margin: 0 10px 0 10px;
+        position: relative;
+        background-color: rgb(255, 255, 255);
+      }
+
+      /* PC */
+      @include pc(1279px) {
+        width: clamp_vw_pc(380);
+        height: clamp_vw_pc(591);
+        border: 1px solid;
+        border-radius: 10px;
+        margin-left: clamp_vw_pc(10);
+        margin-right: clamp_vw_pc(10);
+        text-align: center;
+        position: relative;
+        background-color: rgb(255, 255, 255);
+      }
+
+      /* タブレット */
+      @include tab(1024px) {
+        width: clamp_vw_tab(800);
+        height: clamp_vw_tab(700);
+        margin-top: clamp_vw_tab(30);
+      }
+
+      /* スマートフォン横画面 */
+      @include sp_b(599px) {
+        width: clamp_vw_sp_b(500);
+        height: clamp_vw_sp_b(575);
+        margin-top: clamp_vw_sp_b(30);
+      }
+
+      /* スマートフォン縦画面 */
+      @include sp_v(479px) {
+        width: clamp_vw_sp_v(400);
+        height: clamp_vw_sp_v(575);
+        margin-top: clamp_vw_sp_v(30);
+      }
+
+      // ==============================================
+
+      &--title {
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+          font-size: 24px;
+          font-weight: 500;
+          text-align: center;
+          margin-top: 42px;
+        }
+
+        /* PC */
+        @include pc(1279px) {
+          font-size: clamp_vw_pc(24);
+          font-weight: 500;
+          margin-top: clamp_vw_pc(35);
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+          font-size: clamp_vw_tab(26);
+          margin: 0 auto;
+          margin-top: clamp_vw_tab(35);
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          font-size: clamp_vw_sp_b(24);
+          margin: 0 auto;
+          margin-top: clamp_vw_sp_b(35);
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          font-size: clamp_vw_sp_v(24);
+          margin: 0 auto;
+          margin-top: clamp_vw_sp_v(35);
+        }
+      }
+
+      // ====================================================
+
+      &--content-left {
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+          width: 320px;
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: -0.11px;
+          line-height: 38px;
+          text-align: left;
+          margin: 42px 29px 111px 31px;
+        }
+
+        /* PC */
+        @include pc(1279px) {
+          width: clamp_vw_pc(320);
+          font-size: clamp_vw_pc(16);
+          font-weight: 500;
+          letter-spacing: -0.11px;
+          line-height: 38px;
+          margin: 0 auto;
+          margin-top: clamp_vw_pc(54);
+          margin-bottom: clamp_vw_pc(31);
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+          font-size: clamp_vw_tab(22);
+          text-align: center;
+          line-height: clamp_vw_tab(38);
+          width: clamp_vw_tab(700);
+          margin: 0 auto;
+          margin-top: clamp_vw_tab(35);
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          font-size: clamp_vw_sp_b(18);
+          letter-spacing: clamp_vw_sp_b(0);
+          text-align: center;
+          line-height: clamp_vw_sp_b(38);
+          width: clamp_vw_sp_b(500);
+          margin: 0 auto;
+          margin-top: clamp_vw_sp_b(35);
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          font-size: clamp_vw_sp_v(18);
+          letter-spacing: clamp_vw_sp_v(-3);
+          text-align: left;
+          line-height: clamp_vw_sp_v(38);
+          width: clamp_vw_sp_v(350);
+          margin: 0 auto;
+          margin-top: clamp_vw_sp_v(35);
+        }
+      }
+
+      // ==================================================
+
+      &--content-center {
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+          width: 320px;
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: -0.11px;
+          line-height: 38px;
+          text-align: left;
+          margin: 43px 29px 111px 36px;
+        }
+
+        /* PC */
+        @include pc(1279px) {
+          width: clamp_vw_pc(320);
+          font-size: clamp_vw_pc(16);
+          font-weight: 500;
+          letter-spacing: -0.11px;
+          line-height: 38px;
+          margin: 0 auto;
+          margin-top: clamp_vw_pc(54);
+          margin-bottom: clamp_vw_pc(31);
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+          font-size: clamp_vw_tab(22);
+          text-align: center;
+          line-height: clamp_vw_tab(38);
+          width: clamp_vw_tab(700);
+          margin: 0 auto;
+          margin-top: clamp_vw_tab(35);
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          font-size: clamp_vw_sp_b(18);
+          letter-spacing: clamp_vw_sp_b(0);
+          text-align: center;
+          line-height: clamp_vw_sp_b(38);
+          width: clamp_vw_sp_b(500);
+          margin: 0 auto;
+          margin-top: clamp_vw_sp_b(35);
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          font-size: clamp_vw_sp_v(18);
+          letter-spacing: clamp_vw_sp_v(-3);
+          text-align: left;
+          line-height: clamp_vw_sp_v(38);
+          width: clamp_vw_sp_v(350);
+          margin: 0 auto;
+          margin-top: clamp_vw_sp_v(35);
+        }
+      }
+
+      // ==================================================
+
+      &--content-right {
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+          width: 320px;
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: -0.11px;
+          line-height: 38px;
+          text-align: left;
+          margin: 42px 29px 111px 27px;
+        }
+
+        /* PC */
+        @include pc(1279px) {
+          width: clamp_vw_pc(320);
+          font-size: clamp_vw_pc(16);
+          font-weight: 500;
+          letter-spacing: -0.11px;
+          line-height: 38px;
+          margin: 0 auto;
+          margin-top: clamp_vw_pc(54);
+          margin-bottom: clamp_vw_pc(31);
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+          font-size: clamp_vw_tab(22);
+          text-align: center;
+          line-height: clamp_vw_tab(38);
+          width: clamp_vw_tab(700);
+          margin: 0 auto;
+          margin-top: clamp_vw_tab(35);
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          font-size: clamp_vw_sp_b(18);
+          letter-spacing: clamp_vw_sp_b(0);
+          text-align: center;
+          line-height: clamp_vw_sp_b(38);
+          width: clamp_vw_sp_b(500);
+          margin: 0 auto;
+          margin-top: clamp_vw_sp_b(35);
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          font-size: clamp_vw_sp_v(18);
+          letter-spacing: clamp_vw_sp_v(-3);
+          text-align: left;
+          line-height: clamp_vw_sp_v(38);
+          width: clamp_vw_sp_v(350);
+          margin: 0 auto;
+          margin-top: clamp_vw_sp_v(35);
+        }
+      }
+
+      // ==================================================
+
+      &--image-left {
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+          width: 187px;
+          height: 180px;
+          background: url("../images/g0108.jpg");
+          background-size: cover;
+          position: absolute;
+          top: 84%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        /* PC */
+        @include pc(1279px) {
+          width: clamp_vw_pc(187);
+          height: clamp_vw_pc(187);
+          background: url("../images/g0108.jpg");
+          background-size: cover;
+          position: absolute;
+          top: 83%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+          width: clamp_vw_tab(340);
+          height: clamp_vw_tab(340);
+          background: url("../images/g0108.jpg");
+          background-size: cover;
+          top: 72%;
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: clamp_vw_sp_b(230);
+          height: clamp_vw_sp_b(230);
+          background: url("../images/g0108.jpg");
+          background-size: cover;
+          top: 77%;
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          width: clamp_vw_sp_v(230);
+          height: clamp_vw_sp_v(230);
+          background: url("../images/g0108.jpg");
+          background-size: cover;
+          top: 77%;
+        }
+      }
+
+      // ===================================================
+
+      &--image-center {
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+          width: 187px;
+          height: 180px;
+          background: url("../images/g0099.jpg");
+          background-size: cover;
+          position: absolute;
+          top: 84%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        /* PC */
+        @include pc(1279px) {
+          width: clamp_vw_pc(187);
+          height: clamp_vw_pc(187);
+          background: url("../images/g0099.jpg");
+          background-size: cover;
+          position: absolute;
+          top: 83%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+          width: clamp_vw_tab(340);
+          height: clamp_vw_tab(340);
+          background: url("../images/g0099.jpg");
+          background-size: cover;
+          top: 70%;
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: clamp_vw_sp_b(230);
+          height: clamp_vw_sp_b(230);
+          background: url("../images/g0099.jpg");
+          background-size: cover;
+          top: 70%;
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          width: clamp_vw_sp_v(230);
+          height: clamp_vw_sp_v(230);
+          background: url("../images/g0099.jpg");
+          background-size: cover;
+          top: 70%;
+        }
+      }
+
+      // ==================
+
+      &--image-right {
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+          width: 187px;
+          height: 180px;
+          background: url("../images/g0092.jpg");
+          background-size: cover;
+          position: absolute;
+          top: 84%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        /* PC */
+        @include pc(1279px) {
+          width: clamp_vw_pc(187);
+          height: clamp_vw_pc(187);
+          background: url("../images/g0092.jpg");
+          background-size: cover;
+          position: absolute;
+          top: 83%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+          width: clamp_vw_tab(340);
+          height: clamp_vw_tab(340);
+          background: url("../images/g0092.jpg");
+          background-size: cover;
+          top: 72%;
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: clamp_vw_sp_b(230);
+          height: clamp_vw_sp_b(230);
+          background: url("../images/g0092.jpg");
+          background-size: cover;
+          top: 77%;
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          width: clamp_vw_sp_v(230);
+          height: clamp_vw_sp_v(230);
+          background: url("../images/g0092.jpg");
+          background-size: cover;
+          top: 77%;
+        }
+      }
+    }
+  }
+
+  // ======================================================
+
+  .notice-title {
+    /* 大型モニタ */
+    @include pc-l(1280px) {
+      display: inline-block;
+      width: auto;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 22px;
+      background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+      margin-top: 87px;
+    }
+
+    /* PC */
+    @include pc(1279px) {
+      display: inline-block;
+      width: auto;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 22px;
+      background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+      margin-top: clamp_vw_pc(85);
+    }
+
+    /* タブレット */
+    @include tab(1024px) {
+      font-size: clamp_vw_tab(28);
+    }
+
+    /* スマートフォン横画面 */
+    @include sp_b(599px) {
+      font-size: clamp_vw_sp_b(24);
+    }
+
+    /* スマートフォン縦画面 */
+    @include sp_v(479px) {
+      font-size: clamp_vw_sp_v(24);
+    }
+  }
+
+  // =============================
+
+  .notice-detail_container {
+    border: 0px solid;
+    border-radius: 28px;
+    border: 1px solid rgb(238, 238, 238);
+    box-shadow: rgba(238, 238, 238, 0.509804) 9px 9px 10px -4px;
+    -webkit-box-shadow: rgba(238, 238, 238, 0.509804) 9px 9px 10px -4px;
+    -moz-box-shadow: rgba(238, 238, 238, 0.509804) 9px 9px 10px -4px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    /* 大型モニタ */
+    @include pc-l(1280px) {
+      width: 1180px;
+      height: 394px;
+      margin: 0 auto;
+      margin-top: 74px;
+    }
+
+    /* PC */
+    @include pc(1279px) {
+      width: clamp_vw_pc(1180);
+      height: auto;
+      margin: 0 auto;
+      margin-top: clamp_vw_pc(74);
+    }
+
+    /* タブレット */
+    @include tab(1024px) {
+      width: clamp_vw_tab(900);
+      height: auto;
+      margin: 0 auto;
+      margin-top: clamp_vw_tab(50);
+    }
+
+    /* スマートフォン横画面 */
+    @include sp_b(599px) {
+      width: clamp_vw_sp_b(540);
+      height: auto;
+      margin: 0 auto;
+      margin-top: clamp_vw_sp_b(50);
+    }
+
+    /* スマートフォン縦画面 */
+    @include sp_v(479px) {
+      width: clamp_vw_sp_v(420);
+      height: auto;
+      margin: 0 auto;
+      margin-top: clamp_vw_sp_v(50);
+    }
+
+    // ============================================
+
+    &__margin-upper {
+      height: 34px;
+
+      /* 大型モニタ */
+      @include pc-l(1280px) {
+        width: clamp_vw_sp_b(1100);
+      }
+
+      /* PC */
+      @include pc(1279px) {
+        width: clamp_vw_pc(1100);
+      }
+
+      /* タブレット */
+      @include tab(1024px) {
+        width: clamp_vw_tab(900);
+      }
+
+      /* スマートフォン横画面 */
+      @include sp_b(599px) {
+        width: clamp_vw_sp_b(490);
+      }
+
+      /* スマートフォン縦画面 */
+      @include sp_v(479px) {
+        width: clamp_vw_sp_v(380);
+      }
+    }
+
+    // =========================================
+
+    .article-inner {
+      width: 1048px;
+      border-bottom: 1px solid #e7e7e7;
+      margin: 0px 66px 0px 66px;
+      padding-top: 18px;
+      padding-bottom: 18.5px;
+
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+
+      // /* 大型モニタ */
+      // @include pc-l(1280px) {
+      // }
+
+      /* PC */
+      @include pc(1279px) {
+        width: clamp_vw_pc(1048);
+        border-bottom: 1px solid #e7e7e7;
+        margin-right: clamp_vw_pc(66);
+        margin-left: clamp_vw_pc(66);
+        padding-top: clamp_vw_pc(24.5);
+        padding-bottom: clamp_vw_pc(20.5);
+      }
+
+      /* タブレット */
+      @include tab(1024px) {
+        background-color: yellow;
+        margin-left: clamp_vw_tab(20);
+        margin-right: clamp_vw_tab(20);
+        align-items: flex-start;
+      }
+
+      /* スマートフォン横画面 */
+      @include sp_b(599px) {
+        margin-left: clamp_vw_sp_b(20);
+        margin-right: clamp_vw_sp_b(20);
+        align-items: flex-start;
+      }
+
+      /* スマートフォン縦画面 */
+      @include sp_v(479px) {
+        margin-left: clamp_vw_sp_v(20);
+        margin-right: clamp_vw_sp_v(20);
+        align-items: flex-start;
+      }
+
+      // ====================================================
+      &__left-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+
+        // /* 大型モニタ */
+        // @include pc-l(1280px) {
+        // }
+
+        // /* PC */
+        // @include pc(1279px) {
+        // }
+
+        // /* タブレット */
+        // @include tab(1024px) {
+        // }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: clamp_vw_sp_b(120);
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          width: clamp_vw_sp_v(100);
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        // ========================================================
+        &--date {
+          // /* 大型モニタ */
+          @include pc-l(1280px) {
+            width: aut0;
+            height: 25px;
+            font-size: 16px;
+            font-weight: 500;
+            color: green;
+            text-align: center;
+            line-height: 25px;
+            letter-spacing: -0.3px;
+            display: inline-block;
+          }
+
+          /* PC */
+          @include pc(1279px) {
+            font-size: clamp_vw_pc(16);
+          }
+
+          /* タブレット */
+          @include tab(1024px) {
+            width: clamp_vw_tab(120);
+            font-size: clamp_vw_tab(16);
+            text-align: center;
+            margin: 0;
+            margin-top: clamp_vw_tab(10);
+          }
+
+          // /* スマートフォン横画面 */
+          // @include sp_b(599px) {
+          //   width: clamp_vw_sp_b(120);
+          //   font-size: clamp_vw_sp_b(16);
+          //   text-align: center;
+          //   margin: 0;
+          //   margin-top: clamp_vw_sp_b(10);
+          // }
+
+          // /* スマートフォン縦画面 */
+          // @include sp_v(479px) {
+          //   width: clamp_vw_sp_v(100);
+          //   font-size: clamp_vw_sp_v(16);
+          //   margin: 0;
+          //   margin-top: clamp_vw_sp_v(10);
+          // }
+        }
+
+        // ===============================================
+        &--info {
+          // /* 大型モニタ */
+          @include pc-l(1280px) {
+            width: 80px;
+            height: 25px;
+            font-size: 12px;
+            font-weight: 500;
+            color: white;
+            text-align: center;
+            line-height: 25px;
+            display: inline-block;
+            background-color: #444444;
+            margin-left: 34px;
+          }
+
+          /* PC */
+          @include pc(1279px) {
+            width: clamp_vw_pc(80);
+            height: clamp_vw_pc(25);
+            font-size: clamp_vw_pc(12);
+          }
+
+          /* タブレット */
+          @include tab(1024px) {
+            margin: 0;
+
+            font-size: clamp_vw_tab(12);
+            text-align: center;
+            margin-top: clamp_vw_tab(10);
+            margin-bottom: clamp_vw_tab(10);
+          }
+
+          /* スマートフォン横画面 */
+          @include sp_b(599px) {
+            margin: 0;
+
+            font-size: clamp_vw_sp_b(12);
+            text-align: center;
+            margin-top: clamp_vw_sp_b(10);
+            margin-bottom: clamp_vw_sp_b(10);
+          }
+
+          /* スマートフォン縦画面 */
+          @include sp_v(479px) {
+            font-size: clamp_vw_sp_v(14);
+            margin: 0;
+            margin-top: clamp_vw_sp_v(10);
+            margin-bottom: clamp_vw_sp_v(10);
+          }
+        }
+      }
+
+      // ==================================================
+      .article-inner__right {
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+        }
+
+        /* PC */
+        @include pc(1279px) {
+          width: clamp_vw_sp_b(800);
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+          width: clamp_vw_tab(500);
+          background-color: red;
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: clamp_vw_sp_b(350);
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          width: clamp_vw_sp_v(250);
+        }
+
+        // ===============================================
+        &-text {
+          /* 大型モニタ */
+          @include pc-l(1280px) {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: left;
+            width: auto;
+            margin-left: 35px;
+            letter-spacing: -0.1px;
+          }
+          /* PC */
+          @include pc(1279px) {
+            font-size: clamp_vw_pc(16);
+            margin-left: 6px;
+            letter-spacing: -0.1px;
+          }
+
+          /* タブレット */
+          @include tab(1024px) {
+            font-size: clamp_vw_tab(16);
+            margin: 0;
+            margin-top: clamp_vw_tab(10);
+            margin-bottom: clamp_vw_tab(10);
+            margin-left: clamp_vw_tab(30);
+          }
+
+          /* スマートフォン横画面 */
+          @include sp_b(599px) {
+            width: clamp_vw_sp_b(320);
+            font-size: clamp_vw_sp_b(16);
+            margin: 0;
+            margin-top: clamp_vw_sp_b(10);
+            margin-bottom: clamp_vw_sp_b(10);
+            margin-left: clamp_vw_sp_b(30);
+          }
+
+          /* スマートフォン縦画面 */
+          @include sp_v(479px) {
+            width: clamp_vw_sp_v(250);
+            font-size: clamp_vw_sp_v(14);
+            margin: 0;
+            margin-top: clamp_vw_sp_v(10);
+            margin-bottom: clamp_vw_sp_v(10);
+            margin-left: clamp_vw_sp_v(30);
+          }
+        }
+      }
+    }
+
+    // ====================================
+
+    .see-all_inner {
+      // /* 大型モニタ */
+      @include pc-l(1280px) {
+        width: 1065px;
+        height: 100px;
+        margin-left: 66px;
+        text-align: right;
+        // background-color: green;
+      }
+
+      /* PC */
+      @include pc(1279px) {
+        width: clamp_vw_pc(1065);
+        margin-left: clamp_vw_pc(66);
+      }
+
+      /* タブレット */
+      @include tab(1024px) {
+      }
+
+      /* スマートフォン横画面 */
+      @include sp_b(599px) {
+        width: clamp_vw_sp_b(480);
+        height: clamp_vw_sp_b(100);
+        margin: 0;
+      }
+
+      /* スマートフォン縦画面 */
+      @include sp_v(479px) {
+        width: clamp_vw_sp_v(430);
+        height: clamp_vw_sp_v(50);
+        margin: 0;
+        margin-top: clamp_vw_sp_v(25);
+      }
+
+      // =============================
+      &__text {
+        font-size: 16px;
+        width: auto;
+        margin-top: 40px;
+        margin-bottom: 49px;
+        display: inline-block;
+        letter-spacing: 1.2px;
+
+        // /* 大型モニタ */
+        // @include pc-l(1280px) {
+        // }
+
+        /* PC */
+        @include pc(1279px) {
+          font-size: clamp_vw_pc(16);
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          font-size: clamp_vw_sp_b(16);
+          margin: 0;
+          margin-right: clamp_vw_sp_b(7);
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          font-size: clamp_vw_sp_v(16);
+          margin: 0;
+          margin-right: clamp_vw_sp_v(7);
+        }
+      }
+
+      // ================================
+      &__icon {
+        font-size: 14px;
+        width: 12px;
+        height: 14px;
+        display: inline-block;
+        // margin-top: 30px;
+
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+        }
+
+        /* PC */
+        @include pc(1279px) {
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          font-size: clamp_vw_sp_v(14);
+          margin: 0;
+          margin-right: clamp_vw_sp_v(50);
+        }
+      }
+    }
+  }
+}
+
+// section 3 <治療内容> ==============================================
+
+// section 4 <アクセス> ==============================================
+
+div.access__wrapper {
+  width: 1190px;
+  height: 799px;
+  margin: 0px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  /* 大型モニタ */
+  @include pc-l(1280px) {
+  }
+
+  /* PC */
+  @include pc(1279px) {
+  }
+
+  /* タブレット */
+  @include tab(1024px) {
+  }
+
+  /* スマートフォン横画面 */
+  @include sp_b(599px) {
+    width: clamp_vw_sp_b(589);
+    height: auto;
+    flex-direction: column-reverse;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* スマートフォン縦画面 */
+  @include sp_v(479px) {
+    width: clamp_vw_sp_v(479);
+    height: auto;
+    flex-direction: column-reverse;
+    padding: 0;
+    margin: 0;
+  }
+
+  // ==================================
+
+  div.copyright-reserved__inner-sp {
+    visibility: hidden;
+
+    /* 大型モニタ */
+    @include pc-l(1280px) {
+    }
+
+    /* PC */
+    @include pc(1279px) {
+    }
+
+    /* タブレット */
+    @include tab(1024px) {
+    }
+
+    /* スマートフォン横画面 */
+    @include sp_b(599px) {
+      visibility: visible;
+      width: clamp_vw_sp_b(500);
+      margin: 0 auto;
+      margin-top: clamp_vw_sp_b(30);
+      text-align: center;
+    }
+
+    /* スマートフォン縦画面 */
+    @include sp_v(479px) {
+      visibility: visible;
+      width: clamp_vw_sp_v(400);
+      margin: 0 auto;
+      margin-top: clamp_vw_sp_v(30);
+      text-align: center;
+    }
+
+    // ==================================
+
+    small.copyright-reserved__text-sp {
+      visibility: hidden;
+
+      /* 大型モニタ */
+      @include pc-l(1280px) {
+      }
+
+      /* PC */
+      @include pc(1279px) {
+      }
+
+      /* タブレット */
+      @include tab(1024px) {
+      }
+
+      /* スマートフォン横画面 */
+      @include sp_b(599px) {
+        visibility: visible;
+        font-size: clamp_vw_sp_b(18);
+      }
+
+      /* スマートフォン縦画面 */
+      @include sp_v(479px) {
+        visibility: visible;
+        font-size: clamp_vw_sp_v(14);
+      }
+    }
+  }
+
+  // =======================================
+
+  .access-container {
+    margin: 0px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    /* 大型モニタ */
+    @include pc-l(1280px) {
+    }
+
+    /* PC */
+    @include pc(1279px) {
+    }
+
+    /* タブレット */
+    @include tab(1024px) {
+    }
+
+    @include sp_b(599px) {
+      width: clamp_vw_sp_b(599);
+    }
+
+    @include sp_v(479px) {
+      width: clamp_vw_sp_v(479);
+    }
+
+    // ===============================
+
+    &__map {
+      width: 608px;
+      height: 440px;
+      margin-top: 178px;
+      background: url("../images/map.jpg") no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      /* 大型モニタ */
+      @include pc-l(1280px) {
+      }
+
+      /* PC */
+      @include pc(1279px) {
+      }
+
+      /* タブレット */
+      @include tab(1024px) {
+      }
+
+      /* スマートフォン横画面 */
+      @include sp_b(599px) {
+        width: clamp_vw_sp_b(559);
+        height: clamp_vw_sp_b(500);
+        background: url("../images/map.jpg") no-repeat;
+        background-size: contain;
+        margin: 0 auto;
+        margin-top: clamp_vw_sp_b(30);
+      }
+
+      /* スマートフォン縦画面 */
+      @include sp_v(479px) {
+        width: clamp_vw_sp_v(420);
+        height: clamp_vw_sp_v(310);
+        background: url("../images/map.jpg") no-repeat;
+        background-size: contain;
+        margin: 0 auto;
+        margin-top: clamp_vw_sp_v(30);
+      }
+    }
+
+    // =====================
+
+    &__detail {
+      width: 538px;
+      height: 625px;
+      margin-top: 176px;
+      margin-left: 33px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      /* 大型モニタ */
+      @include pc-l(1280px) {
+      }
+
+      /* PC */
+      @include pc(1279px) {
+      }
+
+      /* タブレット */
+      @include tab(1024px) {
+      }
+
+      /* スマートフォン横画面 */
+      @include sp_b(599px) {
+        width: clamp_vw_sp_b(599);
+        height: auto;
+        margin: 0 auto;
+        margin-top: clamp_vw_sp_b(90);
+        flex-wrap: nowrap;
+      }
+
+      /* スマートフォン縦画面 */
+      @include sp_v(479px) {
+        width: clamp_vw_sp_v(420);
+        height: auto;
+        margin: 0 auto;
+        margin-top: clamp_vw_sp_v(120);
+        flex-wrap: nowrap;
+      }
+
+      // =======================================
+
+      &-logo_inner {
+        width: 275x;
+        height: 73px;
+        display: flex;
+        flex-wrap: wrap;
+
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+        }
+
+        /* PC */
+        @include pc(1279px) {
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: 100%;
+          margin-left: 0px;
+          margin: 0 auto;
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          width: 100%;
+          margin-left: 0px;
+          margin: 0 auto;
+        }
+
+        // ==================================
+
+        &--icon {
+          width: 73px;
+          height: 73px;
+          background: url("../images/病院の地図マーク.jpg");
+          background-size: cover;
+
+          /* 大型モニタ */
+          @include pc-l(1280px) {
+          }
+
+          /* PC */
+          @include pc(1279px) {
+          }
+
+          /* タブレット */
+          @include tab(1024px) {
+          }
+
+          /* スマートフォン横画面 */
+          @include sp_b(599px) {
+            width: clamp_vw_sp_b(73);
+            height: clamp_vw_sp_b(73);
+            margin-left: clamp_vw_sp_b(145);
+          }
+
+          /* スマートフォン縦画面 */
+          @include sp_v(479px) {
+            width: clamp_vw_sp_v(73);
+            height: clamp_vw_sp_v(73);
+            margin-left: clamp_vw_sp_v(73);
+          }
+        }
+
+        // =================
+
+        &-tagline {
+          width: 200x;
+          height: 73px;
+
+          /* 大型モニタ */
+          @include pc-l(1280px) {
+          }
+
+          /* PC */
+          @include pc(1279px) {
+          }
+
+          /* タブレット */
+          @include tab(1024px) {
+          }
+
+          /* スマートフォン横画面 */
+          @include sp_b(599px) {
+            width: clamp_vw_sp_b(200);
+            height: clamp_vw_sp_b(73);
+            margin-left: clamp_vw_sp_b(15);
+          }
+
+          /* スマートフォン縦画面 */
+          @include sp_v(479px) {
+            width: clamp_vw_sp_v(200);
+            height: clamp_vw_sp_v(73);
+            margin-left: clamp_vw_sp_v(15);
+          }
+
+          // ==========================================
+
+          &--upper {
+            font-size: 30px;
+            line-height: 26px;
+            padding-left: 11px;
+
+            /* 大型モニタ */
+            @include pc-l(1280px) {
+            }
+
+            /* PC */
+            @include pc(1279px) {
+            }
+
+            /* タブレット */
+            @include tab(1024px) {
+            }
+
+            /* スマートフォン横画面 */
+            @include sp_b(599px) {
+              font-size: clamp_vw_sp_b(30);
+              line-height: clamp_vw_sp_b(30);
+              padding-left: clamp_vw_sp_b(11);
+            }
+
+            /* スマートフォン縦画面 */
+            @include sp_v(479px) {
+              font-size: clamp_vw_sp_v(30);
+              line-height: clamp_vw_sp_v(30);
+              padding-left: clamp_vw_sp_v(11);
+            }
+          }
+
+          // ===========
+
+          &--lower {
+            font-size: 30px;
+            line-height: 55px;
+            padding-left: 26px;
+
+            /* 大型モニタ */
+            @include pc-l(1280px) {
+            }
+
+            /* PC */
+            @include pc(1279px) {
+            }
+
+            /* タブレット */
+            @include tab(1024px) {
+            }
+
+            /* スマートフォン横画面 */
+            @include sp_b(599px) {
+              font-size: clamp_vw_sp_b(30);
+              line-height: clamp_vw_sp_b(30);
+              padding-left: clamp_vw_sp_b(26);
+              margin-top: clamp_vw_sp_b(16);
+            }
+
+            /* スマートフォン縦画面 */
+            @include sp_v(479px) {
+              font-size: clamp_vw_sp_v(30);
+              line-height: clamp_vw_sp_v(30);
+              padding-left: clamp_vw_sp_v(26);
+              margin-top: clamp_vw_sp_v(16);
+            }
+          }
+        }
+      }
+
+      // ==================
+
+      &-address-inner {
+        margin-top: 28px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: white;
+
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+        }
+
+        /* PC */
+        @include pc(1279px) {
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: 100%;
+          margin: 0 auto;
+          margin-top: clamp_vw_sp_b(30);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          width: 100%;
+          margin: 0 auto;
+          margin-top: clamp_vw_sp_v(30);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        // ============
+
+        &--number {
+          font-size: 16px;
+          margin-right: 16px;
+          letter-spacing: 0.1px;
+
+          /* 大型モニタ */
+          @include pc-l(1280px) {
+          }
+
+          /* PC */
+          @include pc(1279px) {
+          }
+
+          /* タブレット */
+          @include tab(1024px) {
+          }
+
+          /* スマートフォン横画面 */
+          @include sp_b(599px) {
+            font-size: clamp_vw_sp_b(16);
+            display: inline-block;
+          }
+
+          /* スマートフォン縦画面 */
+          @include sp_v(479px) {
+            font-size: clamp_vw_sp_v(16);
+            display: inline-block;
+          }
+        }
+
+        // ==========
+
+        &--text {
+          font-size: 16px;
+          letter-spacing: 0px;
+
+          /* 大型モニタ */
+          @include pc-l(1280px) {
+          }
+
+          /* PC */
+          @include pc(1279px) {
+          }
+
+          /* タブレット */
+          @include tab(1024px) {
+          }
+
+          /* スマートフォン横画面 */
+          @include sp_b(599px) {
+            font-size: clamp_vw_sp_b(18);
+            display: inline-block;
+            margin-top: clamp_vw_sp_b(10);
+          }
+
+          /* スマートフォン縦画面 */
+          @include sp_v(479px) {
+            font-size: clamp_vw_sp_v(18);
+            display: inline-block;
+            margin-top: clamp_vw_sp_v(10);
+          }
+        }
+      }
+
+      // ================
+
+      &-tel {
+        height: 32px;
+        width: 220px;
+        position: relative;
+        margin-top: 30px;
+        font-size: 0; // display: inline-block;ズレ対策
+
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+        }
+
+        /* PC */
+        @include pc(1279px) {
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: 80%;
+          margin: 0 auto;
+          margin-top: clamp_vw_sp_b(15);
+          display: flex;
+          justify-content: center;
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          width: 80%;
+          margin: 0 auto;
+          margin-top: clamp_vw_sp_v(25);
+          display: flex;
+          justify-content: center;
+        }
+
+        // ======================
+
+        &--number::before {
+          content: "";
+          display: inline-block;
+          width: 26px;
+          height: 22px;
+          background: url("../images/受話器の線画アイコン.jpg") no-repeat;
+          background-size: contain;
+          margin-right: 15px;
+          margin-top: 4px;
+
+          /* 大型モニタ */
+          @include pc-l(1280px) {
+          }
+
+          /* PC */
+          @include pc(1279px) {
+          }
+
+          /* タブレット */
+          @include tab(1024px) {
+          }
+
+          /* スマートフォン横画面 */
+          @include sp_b(599px) {
+            margin: 0;
+          }
+
+          /* スマートフォン縦画面 */
+          @include sp_v(479px) {
+            margin: 0;
+          }
+        }
+
+        // ================
+
+        &--number {
+          color: #21a937;
+          font-size: 24px;
+          text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0, -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px,
+            -0.4px 0px 0px, 0px -0.4px 0px;
+          text-align: right;
+          padding-left: 4px;
+          margin-top: 1px;
+          position: absolute;
+        }
+      }
+
+      // ====================
+
+      &-blank-border {
+        height: 29.5px;
+        width: 533px;
+        border-bottom: 1px solid;
+        border-color: #e7e7e7;
+        background-color: rgb(255, 255, 255);
+        margin-left: 4px;
+
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+        }
+
+        /* PC */
+        @include pc(1279px) {
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+
+      // ==================
+
+      &-blank-margin {
+        height: 18px;
+        width: 533px;
+
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+        }
+
+        /* PC */
+        @include pc(1279px) {
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          height: clamp_vw_sp_b(20);
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+
+      // ========================
+
+      &-business-hour-inner {
+        height: 95px;
+        width: 533px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+        }
+
+        /* PC */
+        @include pc(1279px) {
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: clamp_vw_sp_b(599);
+          height: auto;
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          width: clamp_vw_sp_v(420);
+          height: clamp_vw_sp_v(170);
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+
+        // ======================
+
+        &--consultation-time {
+          width: 90px;
+          height: 114px;
+          border-right: 1px solid;
+          border-color: #e7e7e7;
+
+          /* 大型モニタ */
+          @include pc-l(1280px) {
+          }
+
+          /* PC */
+          @include pc(1279px) {
+          }
+
+          /* タブレット */
+          @include tab(1024px) {
+          }
+
+          /* スマートフォン横画面 */
+          @include sp_b(599px) {
+            width: clamp_vw_sp_b(180);
+            height: auto;
+          }
+
+          /* スマートフォン縦画面 */
+          @include sp_v(479px) {
+            width: clamp_vw_sp_v(150);
+            height: auto;
+          }
+
+          // ====================
+
+          p {
+            font-size: 14px;
+            margin-top: 5px;
+            margin-left: 4.5px;
+
+            /* 大型モニタ */
+            @include pc-l(1280px) {
+            }
+
+            /* PC */
+            @include pc(1279px) {
+            }
+
+            /* タブレット */
+            @include tab(1024px) {
+            }
+
+            /* スマートフォン横画面 */
+            @include sp_b(599px) {
+              font-size: clamp_vw_sp_b(16);
+              margin-top: clamp_vw_sp_b(38);
+              text-align: center;
+            }
+
+            /* スマートフォン縦画面 */
+            @include sp_v(479px) {
+              font-size: clamp_vw_sp_v(14);
+              margin-top: clamp_vw_sp_v(38);
+              text-align: center;
+            }
+          }
+        }
+
+        // ===============
+
+        &--wrapper {
+          width: 449px;
+          height: 114px;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+
+          /* 大型モニタ */
+          @include pc-l(1280px) {
+          }
+
+          /* PC */
+          @include pc(1279px) {
+          }
+
+          /* タブレット */
+          @include tab(1024px) {
+          }
+
+          /* スマートフォン横画面 */
+          @include sp_b(599px) {
+            width: clamp_vw_sp_b(400);
+            height: auto;
+          }
+
+          /* スマートフォン縦画面 */
+          @include sp_v(479px) {
+            width: clamp_vw_sp_v(250);
+            height: auto;
+          }
+
+          // ==========================
+
+          .consultation-pattern {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            font-size: 0; // display: inline-block;ズレ対策
+
+            /* 大型モニタ */
+            @include pc-l(1280px) {
+            }
+
+            /* PC */
+            @include pc(1279px) {
+            }
+
+            /* タブレット */
+            @include tab(1024px) {
+            }
+
+            /* スマートフォン横画面 */
+            @include sp_b(599px) {
+              width: clamp_vw_sp_b(450);
+              flex-wrap: nowrap;
+              justify-content: flex-start;
+              margin: 0;
+            }
+
+            /* スマートフォン縦画面 */
+            @include sp_v(479px) {
+              width: clamp_vw_sp_v(250);
+              flex-wrap: nowrap;
+              justify-content: flex-start;
+              margin: 0;
+            }
+
+            // ====================
+
+            p.day-of-week_upper {
+              font-size: 14px;
+              display: inline-block;
+              width: 42px;
+              margin: 5px 23px 0 28px;
+
+              /* 大型モニタ */
+              @include pc-l(1280px) {
+              }
+
+              /* PC */
+              @include pc(1279px) {
+              }
+
+              /* タブレット */
+              @include tab(1024px) {
+              }
+
+              /* スマートフォン横画面 */
+              @include sp_b(599px) {
+                width: clamp_vw_sp_b(100);
+                font-size: clamp_vw_sp_b(16);
+                margin: 0;
+                margin-top: clamp_vw_sp_b(30);
+                margin-left: clamp_vw_sp_b(15);
+                margin-right: clamp_vw_sp_v(40);
+                text-align: right;
+              }
+
+              /* スマートフォン縦画面 */
+              @include sp_v(479px) {
+                display: inline-block;
+                width: clamp_vw_sp_v(120);
+                font-size: clamp_vw_sp_v(14);
+                margin: 0;
+                margin-top: clamp_vw_sp_v(30);
+                margin-right: clamp_vw_sp_v(20);
+                text-align: right;
+              }
+            }
+
+            // =======================================
+
+            .morning_afternoon__wrapper--upper {
+              /* 大型モニタ */
+              @include pc-l(1280px) {
+                margin-top: 5px;
+              }
+
+              /* PC */
+              @include pc(1279px) {
+              }
+
+              /* タブレット */
+              @include tab(1024px) {
+              }
+
+              /* スマートフォン横画面 */
+              @include sp_b(599px) {
+                width: clamp_vw_sp_b(250);
+                margin-top: clamp_vw_sp_b(23);
+              }
+
+              /* スマートフォン縦画面 */
+              @include sp_v(479px) {
+                width: clamp_vw_sp_v(150);
+                margin-top: clamp_vw_sp_v(23);
+              }
+
+              // ===================
+
+              p.morning_upper {
+                width: 115px;
+                font-size: 14px;
+                letter-spacing: 0.2px;
+                display: inline-block;
+
+                /* 大型モニタ */
+                @include pc-l(1280px) {
+                }
+
+                /* PC */
+                @include pc(1279px) {
+                }
+
+                /* タブレット */
+                @include tab(1024px) {
+                }
+
+                // /* スマートフォン横画面 */
+                // @include sp_b(599px) {
+                //   width: clamp_vw_sp_b(250);
+                //   font-size: clamp_vw_sp_b(16);
+                //   display: block;
+                //   margin-top: clamp_vw_sp_b(8);
+                //   margin-right: clamp_vw_sp_b(20);
+                //   margin-left: clamp_vw_sp_b(20);
+                // }
+
+                // /* スマートフォン縦画面 */
+                // @include sp_v(479px) {
+                //   font-size: clamp_vw_sp_v(14);
+                //   display: block;
+                //   margin: 0;
+                //   margin-right: clamp_vw_sp_v(20);
+                //   margin-left: clamp_vw_sp_v(20);
+                // }
+              }
+
+              // ===================
+
+              p.afternoon_upper {
+                width: 120px;
+                font-size: 14px;
+                letter-spacing: 0.1px;
+                display: inline-block;
+                margin-left: 4px;
+
+                /* 大型モニタ */
+                @include pc-l(1280px) {
+                }
+
+                /* PC */
+                @include pc(1279px) {
+                }
+
+                /* タブレット */
+                @include tab(1024px) {
+                }
+
+                /* スマートフォン横画面 */
+                @include sp_b(599px) {
+                  width: clamp_vw_sp_b(250);
+                  font-size: clamp_vw_sp_b(16);
+                  display: block;
+                  margin-top: clamp_vw_sp_b(8);
+                  margin-right: clamp_vw_sp_b(20);
+                  margin-left: clamp_vw_sp_b(20);
+                }
+
+                /* スマートフォン縦画面 */
+                @include sp_v(479px) {
+                  font-size: clamp_vw_sp_v(14);
+                  display: block;
+                  margin: 0;
+                  margin-right: clamp_vw_sp_v(20);
+                  margin-left: clamp_vw_sp_v(20);
+                }
+              }
+            }
+
+            // ======================
+
+            p.day-of-week_middle {
+              font-size: 14px;
+              display: inline-block;
+              width: 42px;
+              margin: 16px 23px 0 28px;
+
+              /* 大型モニタ */
+              @include pc-l(1280px) {
+              }
+
+              /* PC */
+              @include pc(1279px) {
+              }
+
+              /* タブレット */
+              @include tab(1024px) {
+              }
+
+              /* スマートフォン横画面 */
+              @include sp_b(599px) {
+                width: clamp_vw_sp_b(100);
+                font-size: clamp_vw_sp_b(16);
+                margin: 0;
+                margin-top: clamp_vw_sp_b(30);
+                margin-left: clamp_vw_sp_b(15);
+                margin-right: clamp_vw_sp_v(40);
+                text-align: right;
+              }
+
+              /* スマートフォン縦画面 */
+              @include sp_v(479px) {
+                width: clamp_vw_sp_v(200);
+                font-size: clamp_vw_sp_v(14);
+                margin: 0;
+                margin-top: clamp_vw_sp_v(30);
+                margin-right: clamp_vw_sp_v(20);
+                margin-left: clamp_vw_sp_v(20);
+              }
+            }
+
+            // ======================================
+
+            .morning_afternoon__wrapper--middle {
+              /* 大型モニタ */
+              @include pc-l(1280px) {
+                margin-top: 17px;
+              }
+
+              /* PC */
+              @include pc(1279px) {
+              }
+
+              /* タブレット */
+              @include tab(1024px) {
+              }
+
+              /* メディアクエリスマートフォン横画面 */
+              @include sp_b(599px) {
+                width: clamp_vw_sp_b(250);
+                font-size: clamp_vw_sp_b(16);
+                margin-top: clamp_vw_sp_b(20);
+              }
+
+              /* スマートフォン縦画面 */
+              @include sp_v(479px) {
+                width: clamp_vw_sp_v(150);
+                margin-top: clamp_vw_sp_v(23);
+              }
+
+              // ======================
+
+              p.morning_middle {
+                width: 115px;
+                font-size: 14px;
+                letter-spacing: 0.2px;
+                display: inline-block;
+
+                /* 大型モニタ */
+                @include pc-l(1280px) {
+                }
+
+                /* PC */
+                @include pc(1279px) {
+                }
+
+                /* タブレット */
+                @include tab(1024px) {
+                }
+
+                /* スマートフォン横画面 */
+                @include sp_b(599px) {
+                  width: clamp_vw_sp_b(250);
+                  font-size: clamp_vw_sp_b(16);
+                  display: block;
+                  margin-top: clamp_vw_sp_b(8);
+                  margin-right: clamp_vw_sp_b(20);
+                  margin-left: clamp_vw_sp_b(20);
+                }
+
+                /* スマートフォン縦画面 */
+                @include sp_v(479px) {
+                  font-size: clamp_vw_sp_v(14);
+                  display: block;
+                  margin: 0;
+                  margin-right: clamp_vw_sp_v(20);
+                  margin-left: clamp_vw_sp_v(20);
+                }
+              }
+
+              // ===================
+
+              p.afternoon_middle {
+                width: 120px;
+                font-size: 14px;
+                letter-spacing: 0.1px;
+                display: inline-block;
+                margin-left: 4px;
+
+                /* 大型モニタ */
+                @include pc-l(1280px) {
+                }
+
+                /* PC */
+                @include pc(1279px) {
+                }
+
+                /* タブレット */
+                @include tab(1024px) {
+                }
+
+                /* スマートフォン横画面 */
+                @include sp_b(599px) {
+                  width: clamp_vw_sp_b(250);
+                  font-size: clamp_vw_sp_b(16);
+                  display: block;
+                  margin-top: clamp_vw_sp_b(8);
+                  margin-right: clamp_vw_sp_b(20);
+                  margin-left: clamp_vw_sp_b(20);
+                }
+
+                /* スマートフォン縦画面 */
+                @include sp_v(479px) {
+                  font-size: clamp_vw_sp_v(14);
+                  display: block;
+                  margin: 0;
+                  margin-right: clamp_vw_sp_v(20);
+                  margin-left: clamp_vw_sp_v(20);
+                }
+              }
+            }
+
+            // ======================
+
+            p.day-of-week_lower {
+              font-size: 14px;
+              display: inline-block;
+              width: 42px;
+              margin: 17px 23px 0 28px;
+
+              /* 大型モニタ */
+              @include pc-l(1280px) {
+              }
+
+              /* PC */
+              @include pc(1279px) {
+              }
+
+              /* タブレット */
+              @include tab(1024px) {
+              }
+
+              /* スマートフォン横画面 */
+              @include sp_b(599px) {
+                width: clamp_vw_sp_b(100);
+                font-size: clamp_vw_sp_b(16);
+                margin: 0;
+                margin-top: clamp_vw_sp_b(30);
+                margin-left: clamp_vw_sp_b(15);
+                margin-right: clamp_vw_sp_v(40);
+                text-align: right;
+              }
+
+              /* スマートフォン縦画面 */
+              @include sp_v(479px) {
+                font-size: clamp_vw_sp_v(14);
+                margin: 0;
+                margin-top: clamp_vw_sp_v(30);
+                margin-right: clamp_vw_sp_v(20);
+                margin-left: clamp_vw_sp_v(20);
+              }
+            }
+
+            // =======================================
+
+            .morning_afternoon__wrapper--lower {
+              /* 大型モニタ */
+              @include pc-l(1280px) {
+                margin-top: 17px;
+              }
+
+              /* PC */
+              @include pc(1279px) {
+              }
+
+              /* タブレット */
+              @include tab(1024px) {
+              }
+
+              /* スマートフォン横画面 */
+              @include sp_b(599px) {
+                width: clamp_vw_sp_b(250);
+                margin-top: clamp_vw_sp_b(20);
+              }
+
+              /* スマートフォン縦画面 */
+              @include sp_v(479px) {
+                width: clamp_vw_sp_v(150);
+                margin-top: clamp_vw_sp_v(23);
+              }
+
+              // =============================
+
+              p.morning_lower {
+                width: 115px;
+                font-size: 14px;
+                letter-spacing: 0.2px;
+                display: inline-block;
+
+                /* 大型モニタ */
+                @include pc-l(1280px) {
+                }
+
+                /* PC */
+                @include pc(1279px) {
+                }
+
+                /* タブレット */
+                @include tab(1024px) {
+                }
+
+                /* スマートフォン横画面 */
+                @include sp_b(599px) {
+                  width: clamp_vw_sp_b(250);
+                  font-size: clamp_vw_sp_b(16);
+                  display: block;
+                  margin-top: clamp_vw_sp_b(8);
+                  margin-right: clamp_vw_sp_b(20);
+                  margin-left: clamp_vw_sp_b(20);
+                }
+
+                /* スマートフォン縦画面 */
+                @include sp_v(479px) {
+                  font-size: clamp_vw_sp_v(14);
+                  display: block;
+                  margin: 0;
+                  margin-right: clamp_vw_sp_v(20);
+                  margin-left: clamp_vw_sp_v(20);
+                }
+              }
+
+              // ====================
+
+              p.afternoon_lower {
+                width: 120px;
+                font-size: 14px;
+                letter-spacing: 0.1px;
+                display: inline-block;
+                margin-left: 4px;
+
+                /* 大型モニタ */
+                @include pc-l(1280px) {
+                }
+
+                /* PC */
+                @include pc(1279px) {
+                }
+
+                /* タブレット */
+                @include tab(1024px) {
+                }
+
+                /* スマートフォン横画面 */
+                @include sp_b(599px) {
+                  width: clamp_vw_sp_b(250);
+                  font-size: clamp_vw_sp_b(16);
+                  display: block;
+                  margin-top: clamp_vw_sp_b(8);
+                  margin-right: clamp_vw_sp_b(20);
+                  margin-left: clamp_vw_sp_b(20);
+                }
+
+                /* スマートフォン縦画面 */
+                @include sp_v(479px) {
+                  font-size: clamp_vw_sp_v(14);
+                  display: block;
+                  margin: 0;
+                  margin-right: clamp_vw_sp_v(20);
+                  margin-left: clamp_vw_sp_v(20);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // ====================
+
+      .closed-day--inner {
+        width: 533px;
+        height: 50px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+        }
+
+        /* PC */
+        @include pc(1279px) {
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: clamp_vw_sp_b(420);
+          margin-top: clamp_vw_sp_b(10);
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          width: clamp_vw_sp_v(420);
+          margin-top: clamp_vw_sp_v(10);
+        }
+
+        // ====================
+
+        .closed-day {
+          width: 89px;
+          height: 25px;
+          font-size: 14px;
+          border-right: 1px solid;
+          border-color: #e7e7e7;
+          margin-top: 20px;
+          padding-top: 7px;
+          padding-left: 5px;
+
+          /* 大型モニタ */
+          @include pc-l(1280px) {
+          }
+
+          /* PC */
+          @include pc(1279px) {
+          }
+
+          /* タブレット */
+          @include tab(1024px) {
+          }
+
+          /* スマートフォン横画面 */
+          @include sp_b(599px) {
+            width: clamp_vw_sp_b(180);
+            font-size: clamp_vw_sp_b(16);
+          }
+
+          /* スマートフォン縦画面 */
+          @include sp_v(479px) {
+            width: clamp_vw_sp_v(150);
+            font-size: clamp_vw_sp_v(14);
+          }
+        }
+      }
+
+      // ====================
+
+      .closed-day-of-week {
+        width: 449px;
+        height: 114px;
+        font-size: 14px;
+        margin-top: 20px;
+        padding-top: 7px;
+        padding-left: 28px;
+
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+        }
+
+        /* PC */
+        @include pc(1279px) {
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: clamp_vw_sp_b(250);
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          width: clamp_vw_sp_v(250);
+        }
+      }
+
+      // =============================
+
+      &-blank-border--lower {
+        height: 19px;
+        width: 533px;
+        border-bottom: 1px solid;
+        border-color: #e7e7e7;
+        margin-left: 5px;
+
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+        }
+
+        /* PC */
+        @include pc(1279px) {
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+
+      div.access-container__detail-copyright_reserved--pc {
+        width: 554px;
+        margin-top: 24.5px;
+        text-align: right;
+        font-size: 0; // display: inline-block;ズレ
+
+        /* 大型モニタ */
+        @include pc-l(1280px) {
+        }
+
+        /* PC */
+        @include pc(1279px) {
+        }
+
+        /* タブレット */
+        @include tab(1024px) {
+        }
+
+        /* スマートフォン横画面 */
+        @include sp_b(599px) {
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        /* スマートフォン縦画面 */
+        @include sp_v(479px) {
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        small {
+          font-size: 11px;
+          letter-spacing: 0.15px;
+          padding-right: 15px;
+          display: inline-block;
+
+          /* 大型モニタ */
+          @include pc-l(1280px) {
+          }
+
+          /* PC */
+          @include pc(1279px) {
+          }
+
+          /* タブレット */
+          @include tab(1024px) {
+          }
+
+          /* スマートフォン横画面 */
+          @include sp_b(599px) {
+            font-size: clamp_vw_sp_b(11);
+            display: none;
+          }
+
+          /* スマートフォン縦画面 */
+          @include sp_v(479px) {
+            font-size: clamp_vw_sp_v(11);
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

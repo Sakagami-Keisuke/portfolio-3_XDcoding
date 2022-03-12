@@ -51,7 +51,7 @@ $sp_V: 479px; // ~479px  スマホ縦vertical
 // ===========================================================
 @function clamp_vw_pc_l($num) {
   $minWidth: 1280;
-  $maxWidth: 2000;
+  $maxWidth: 1920;
   $val_max: $num * 1px;
   $val_vw: round(calc($num / $maxWidth) * 100);
   $val_min: round($minWidth * calc($val_vw / 100)) * 1px;
@@ -62,7 +62,7 @@ $sp_V: 479px; // ~479px  スマホ縦vertical
 // ===========================================================
 @function clamp_vw_pc($num) {
   $minWidth: 1025;
-  $maxWidth: 1279;
+  $maxWidth: 1280;
   $val_max: $num * 1px;
   $val_vw: round(calc($num / $maxWidth) * 100);
   $val_min: round($minWidth * calc($val_vw / 100)) * 1px;
@@ -73,7 +73,7 @@ $sp_V: 479px; // ~479px  スマホ縦vertical
 // ===========================================================
 @function clamp_vw_tab($num) {
   $minWidth: 600;
-  $maxWidth: 1024;
+  $maxWidth: 1025;
   $val_max: $num * 1px;
   $val_vw: round(calc($num / $maxWidth) * 100);
   $val_min: round($minWidth * calc($val_vw / 100)) * 1px;
@@ -84,7 +84,7 @@ $sp_V: 479px; // ~479px  スマホ縦vertical
 // ===========================================================
 @function clamp_vw_sp_b($num) {
   $minWidth: 480;
-  $maxWidth: 599;
+  $maxWidth: 600;
   $val_max: $num * 1px;
   $val_vw: round(calc($num / $maxWidth) * 100);
   $val_min: round($minWidth * calc($val_vw / 100)) * 1px;
@@ -95,7 +95,7 @@ $sp_V: 479px; // ~479px  スマホ縦vertical
 // ===========================================================
 @function clamp_vw_sp_v($num) {
   $minWidth: 280;
-  $maxWidth: 479;
+  $maxWidth: 480;
   $val_max: $num * 1px;
   $val_vw: round(calc($num / $maxWidth) * 100);
   $val_min: round($minWidth * calc($val_vw / 100)) * 1px;
@@ -104,3 +104,4 @@ $sp_V: 479px; // ~479px  スマホ縦vertical
 
 // ===========================================================
 // ===========================================================
+
