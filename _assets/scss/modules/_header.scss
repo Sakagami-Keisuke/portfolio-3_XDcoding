@@ -4,21 +4,23 @@
 // header
 
 div.header {
-    /* 大型モニタ */
-    @include pc-l(1280px) {
-        width:clamp_vw_pc_l(1920);
+    background-color: red;
+
+    /* pc 1920px以上  */
+    @include pc-l(1920px) {
+        width: 1920px;
         height: 130px;
     }
 
     /* PC */
-    @include pc(1279px) {
-        width:clamp_vw_pc(1279);
+    @include pc(1919px) {
+        width: clamp_vw_pc(1919);
         height: 130px;
     }
 
     /* タブレット */
     @include tab(1024px) {
-        width:clamp_vw_tab(1024);
+        width: clamp_vw_tab(1024);
         height: clamp_vw_tab(220);
     }
 
@@ -38,8 +40,8 @@ div.header {
 
     // ===================================================================
     &_container {
-        /* 大型モニタ */
-        @include pc-l(1280px) {
+        /* pc 1920px以上  */
+        @include pc-l(1920px) {
             width: 1180px;
             height: 130px;
             margin: 0 auto;
@@ -51,10 +53,10 @@ div.header {
         }
 
         /* PC */
-        @include pc(1279px) {
+        @include pc(1919px) {
             background-color: rgb(103, 231, 220);
             width: clamp_vw_pc(1180);
-            height: 130px;
+            height: clamp_vw_pc(130);
             margin: 0 auto;
             display: flex;
             flex-direction: row;
@@ -65,7 +67,7 @@ div.header {
 
         /* タブレット */
         @include tab(1024px) {
-            // background-color: rgb(103, 231, 220);
+           
             width: auto;
             max-width: 100%;
             height: auto;
@@ -90,9 +92,10 @@ div.header {
 
         // ===================================================================
         .header__top-left {
-            /* 大型モニタ */
-            @include pc-l(1280px) {
-                width: 263px;
+            // background-color: yellow;
+            /* pc 1920px以上  */
+            @include pc-l(1920px) {
+                width: 350px;
                 height: 73px;
                 margin-left: 20px;
                 display: flex;
@@ -102,14 +105,13 @@ div.header {
             }
 
             /* PC */
-            @include pc(1279px) {
-                width: 263px;
-                height: 73px;
+            @include pc(1919px) {
+                width:clamp_vw_pc(350);
+                height:  73px;
                 margin-left: 20px;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: nowrap;
-                align-items: center;
             }
 
             /* タブレット */
@@ -140,16 +142,17 @@ div.header {
 
             // ===================================================================
             &-logo {
-                /* 大型モニタ */
-                @include pc-l(1280px) {
+                /* pc 1920px以上  */
+                @include pc-l(1920px) {
                     width: 73px;
                     height: 73px;
                 }
 
                 /* PC */
-                @include pc(1279px) {
-                    width: 73px;
-                    height: 73px;
+                @include pc(1919px) {
+                    width: clamp_vw_pc(73  );
+                    height: auto;
+                    margin-right: 20px;
                 }
 
                 /* タブレット */
@@ -188,16 +191,18 @@ div.header {
 
             // ===================================================================
             &-tagline {
-                /* 大型モニタ */
-                @include pc-l(1280px) {
+                // background-color: rgb(224, 149, 195);
+                /* pc 1920px以上  */
+                @include pc-l(1920px) {
                     width: 190px;
                     height: 73px;
                 }
 
                 /* PC */
-                @include pc(1279px) {
-                    width: 190px;
-                    height: 73px;
+                @include pc(1919px) {
+                    width:  clamp_vw_pc(250  );
+                    height:  clamp_vw_pc(73  );
+   
                 }
 
                 /* タブレット */
@@ -217,8 +222,9 @@ div.header {
 
                 // ===================================================================
                 &--upper {
-                    /* 大型モニタ */
-                    @include pc-l(1280px) {
+
+                    /* pc 1920px以上  */
+                    @include pc-l(1920px) {
                         padding-left: 8px;
                         font-size: 30px;
                         text-align: left;
@@ -226,11 +232,12 @@ div.header {
                     }
 
                     /* PC */
-                    @include pc(1279px) {
-                        padding-left: 8px;
-                        font-size: 30px;
+                    @include pc(1919px) {
+                        width: clamp_vw_pc( 260 );
+                        font-size: variableFontPc(30, 20);
                         text-align: left;
                         line-height: 28px;
+                        padding-left:  clamp_vw_pc(25 );
                     }
 
                     /* タブレット */
@@ -253,20 +260,22 @@ div.header {
 
                 // ===================================================================
                 &--lower {
-                    /* 大型モニタ */
-                    @include pc-l(1280px) {
-                        padding-left: 12px;
+                    // background-color: rgb(195, 61, 128);
+                    /* pc 1920px以上  */
+                    @include pc-l(1920px) {
+                        padding-left:  clamp_vw_pc(12  );
                         font-size: 30px;
                         text-align: center;
                         line-height: 48px;
                     }
 
                     /* PC */
-                    @include pc(1279px) {
-                        padding-left: 12px;
-                        font-size: 30px;
+                    @include pc(1919px) {
+                        width: clamp_vw_pc( 260 );
+                        font-size: variableFontPc(30, 20);
                         text-align: left;
                         line-height: 48px;
+                        padding-left:  clamp_vw_pc(25 );
                     }
 
                     /* タブレット */
@@ -300,8 +309,8 @@ div.header {
 
         // ===================================================================
         .header__top-right {
-            /* 大型モニタ */
-            @include pc-l(1280px) {
+            /* pc 1920px以上  */
+            @include pc-l(1920px) {
                 width: 300px;
                 height: 73px;
                 margin-right: 20px;
@@ -309,10 +318,10 @@ div.header {
             }
 
             /* PC */
-            @include pc(1279px) {
-                width: 300px;
-                height: 73px;
-                margin-right: 20px;
+            @include pc(1919px) {
+                width:clamp_vw_pc(450 );
+                height: clamp_vw_pc( 73 );
+                margin-right:  clamp_vw_pc(20  );
                 font-size: 0;
             }
 
@@ -346,8 +355,8 @@ div.header {
 
             // ===================================================================
             &--reception {
-                /* 大型モニタ */
-                @include pc-l(1280px) {
+                /* pc 1920px以上  */
+                @include pc-l(1920px) {
                     font-size: 14px;
                     letter-spacing: 0px;
                     text-align: right;
@@ -356,8 +365,8 @@ div.header {
                 }
 
                 /* PC */
-                @include pc(1279px) {
-                    font-size: 14px;
+                @include pc(1919px) {
+                    font-size: variableFontPc(14,12);
                     letter-spacing: 0.2px;
                     text-align: right;
                     margin-top: 5px;
@@ -390,8 +399,8 @@ div.header {
 
             // ===================================================================
             &--tel::before {
-                /* 大型モニタ */
-                @include pc-l(1280px) {
+                /* pc 1920px以上  */
+                @include pc-l(1920px) {
                     content: "";
                     display: inline-block;
                     width: 25px;
@@ -399,20 +408,20 @@ div.header {
                     background: url("../images/受話器の線画アイコン.jpg") no-repeat;
                     background-size: contain;
                     margin-right: 16px;
-                    position:relative;
-                    top:5px;
+                    position: relative;
+                    top: 5px;
                 }
 
                 /* PC */
-                @include pc(1279px) {
+                @include pc(1919px) {
                     content: "";
                     display: inline-block;
-                    width: 25px;
-                    height: 25px;
+                    width:  clamp_vw_pc( 25 );
+                    height:  clamp_vw_pc( 25 );
                     background: url("../images/受話器の線画アイコン.jpg") no-repeat;
                     background-size: contain;
                     margin-top: 1.5px;
-                    margin-right: 17px;
+                    margin-right: clamp_vw_pc( 17 );
                 }
 
                 /* タブレット */
@@ -440,8 +449,8 @@ div.header {
 
             // ===================================================================
             &--tel {
-                /* 大型モニタ */
-                @include pc-l(1280px) {
+                /* pc 1920px以上  */
+                @include pc-l(1920px) {
                     color: #21a937;
                     font-size: 22px;
                     font-weight: 500;
@@ -451,12 +460,12 @@ div.header {
                 }
 
                 /* PC */
-                @include pc(1279px) {
+                @include pc(1919px) {
                     color: #21a937;
-                    font-size: 22px;
+                    font-size: variableFontPc(22, 16);
                     font-weight: 500;
                     letter-spacing: 0.5px;
-                    margin-top: 13px;
+                    margin-top: clamp_vw_pc(13  );
                     text-align: right;
                 }
 
