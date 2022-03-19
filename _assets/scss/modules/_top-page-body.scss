@@ -1,5 +1,6 @@
 @use "mixin";
-// body ======================================================
+
+// body ==========================================
 
 .body {
   /* pc 1920px以上  */
@@ -31,7 +32,7 @@
     max-width: 0;
   }
 
-  // ===================================================================
+  // ===============================================
 
   .top-page_wrapper {
     background-color: greenyellow;
@@ -134,8 +135,7 @@
           width: mixin.clamp_vw_pc(102);
           height: mixin.clamp_vw_pc(565);
           writing-mode: vertical-rl;
-          font-size: mixin.variableFontPc(28, 14);
-          // @debug mixin.variableFontPc(28,20);
+          font-size: mixin.variableFontPc(2.8, 1.4);
           font-weight: 500;
           letter-spacing: 5.5px;
           padding-top: mixin.clamp_vw_pc(25);
@@ -254,7 +254,7 @@
           width: 102px;
           height: 565px;
           writing-mode: vertical-rl;
-          font-size: 28px;
+          font-size: 2.8em;
           font-weight: 500;
           letter-spacing: 6px;
           padding-top: 25px;
@@ -270,7 +270,7 @@
           width: mixin.clamp_vw_pc(102);
           height: mixin.clamp_vw_pc(565);
           writing-mode: vertical-rl;
-          font-size: mixin.variableFontPc(28, 14);
+          font-size: mixin.variableFontPc(2.8, 1.4);
           font-weight: 500;
           letter-spacing: 5.5px;
           padding-top: mixin.clamp_vw_pc(25);
@@ -460,7 +460,7 @@
         @include mixin.pc-l(1920px) {
           display: inline-block;
           width: auto;
-          font-size: 24px; //固定
+          font-size: 2.4em; //固定
           font-weight: 500;
           line-height: 22px;
           background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
@@ -472,7 +472,7 @@
         @include mixin.pc(1919px) {
           display: inline-block;
           width: auto;
-          font-size: 24px; //固定
+          font-size: 2.4em; //固定
           font-weight: 500;
           background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
           margin-top: mixin.clamp_vw_pc(60);
@@ -517,12 +517,12 @@
         @include mixin.pc-l(1920px) {
           display: inline-block;
           width: auto;
-          font-size: 24px;
+          font-size: 2.4em;
           font-weight: 500;
           letter-spacing: -0.2px;
           line-height: 24px;
           background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
-          margin-top: 40px;
+          margin-top: 41px;
           margin-left: 32px;
         }
 
@@ -530,7 +530,7 @@
         @include mixin.pc(1919px) {
           display: inline-block;
           width: auto;
-          font-size: 24px; //固定
+          font-size: 2.4em; //固定
           font-weight: 500;
           letter-spacing: -0.1px;
           line-height: 24px;
@@ -578,7 +578,7 @@
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           width: auto;
-          font-size: 16px;
+          font-size: 1.6em;
           line-height: 38px;
           letter-spacing: -0.15px;
           margin-top: 35px;
@@ -590,7 +590,7 @@
         @include mixin.pc(1919px) {
           display: inline-block;
           width: auto;
-          font-size: mixin.clamp_vw_pc(16);
+          font-size: mixin.variableFontPc(1.6, 1.2);
           letter-spacing: -0.18px;
           line-height: mixin.clamp_vw_pc(24);
           margin-top: mixin.clamp_vw_pc(30);
@@ -739,11 +739,11 @@
     /* pc 1920px以上  */
     @include mixin.pc-l(1920px) {
       width: auto;
-      font-size: 24px;
+      font-size: 2.4em;
       font-weight: 500;
       line-height: 22px;
       background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
-      margin-top: 83px;
+      margin-top: 84px;
       display: inline-block;
     }
 
@@ -751,7 +751,7 @@
     @include mixin.pc(1919px) {
       display: inline-block;
       width: auto;
-      font-size: 24px;
+      font-size: 2.4em;
       font-weight: 500;
       line-height: 22px;
       background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
@@ -780,7 +780,7 @@
     /* pc 1920px以上  */
     @include mixin.pc-l(1920px) {
       width: auto;
-      font-size: 16px;
+      font-size: 1.6em;
       font-weight: 500;
       line-height: 22px;
       display: inline-block;
@@ -791,7 +791,7 @@
     @include mixin.pc(1919px) {
       display: inline-block;
       width: auto;
-      font-size: 16px;
+      font-size: 1.6em;
       font-weight: 500;
       line-height: 22px;
       margin-top: mixin.clamp_vw_pc(79);
@@ -906,15 +906,15 @@
       &--title {
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
-          font-size: 24px;
+          font-size: 2.4em;
           font-weight: 500;
           text-align: center;
-          margin-top: 42px;
+          margin-top: 43px;
         }
 
         /* PC */
         @include mixin.pc(1919px) {
-          font-size: mixin.clamp_vw_pc(24);
+          font-size: mixin.variableFontPc(2.4, 1.8);
           font-weight: 500;
           margin-top: mixin.clamp_vw_pc(35);
         }
@@ -947,7 +947,7 @@
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           width: 320px;
-          font-size: 16px;
+          font-size: 1.6em;
           font-weight: 500;
           letter-spacing: -0.11px;
           line-height: 38px;
@@ -958,7 +958,7 @@
         /* PC */
         @include mixin.pc(1919px) {
           width: mixin.clamp_vw_pc(320);
-          font-size: mixin.clamp_vw_pc(16);
+          font-size: mixin.variableFontPc(1.6, 1.2);
           font-weight: 500;
           letter-spacing: -0.11px;
           line-height: 38px;
@@ -1006,7 +1006,7 @@
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           width: 320px;
-          font-size: 16px;
+          font-size: 1.6em;
           font-weight: 500;
           letter-spacing: -0.11px;
           line-height: 38px;
@@ -1017,7 +1017,7 @@
         /* PC */
         @include mixin.pc(1919px) {
           width: mixin.clamp_vw_pc(320);
-          font-size: mixin.clamp_vw_pc(16);
+          font-size: mixin.variableFontPc(1.6, 1.4);
           font-weight: 500;
           letter-spacing: -0.11px;
           line-height: 38px;
@@ -1065,7 +1065,7 @@
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           width: 320px;
-          font-size: 16px;
+          font-size: 1.6em;
           font-weight: 500;
           letter-spacing: -0.11px;
           line-height: 38px;
@@ -1076,7 +1076,7 @@
         /* PC */
         @include mixin.pc(1919px) {
           width: mixin.clamp_vw_pc(320);
-          font-size: mixin.clamp_vw_pc(16);
+          font-size: mixin.variableFontPc(1.6, 1.4);
           font-weight: 500;
           letter-spacing: -0.11px;
           line-height: 38px;
@@ -1286,24 +1286,25 @@
   }
 
   // ======================================================
+  // ======================================================
 
   .notice-title {
     /* pc 1920px以上  */
     @include mixin.pc-l(1920px) {
       display: inline-block;
       width: auto;
-      font-size: 24px;
+      font-size: 2.4em;
       font-weight: 500;
       line-height: 22px;
       background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
-      margin-top: 87px;
+      margin-top: 88px;
     }
 
     /* PC */
     @include mixin.pc(1919px) {
       display: inline-block;
       width: auto;
-      font-size: 24px;
+      font-size: 2.4em;
       font-weight: 500;
       line-height: 22px;
       background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
@@ -1497,7 +1498,7 @@
           @include mixin.pc-l(1920px) {
             width: aut0;
             height: 25px;
-            font-size: 16px;
+            font-size: 1.6em;
             font-weight: 500;
             text-align: center;
             line-height: 25px;
@@ -1507,7 +1508,7 @@
 
           /* PC */
           @include mixin.pc(1919px) {
-            font-size: mixin.clamp_vw_pc(16);
+            font-size: mixin.variableFontPc(1.6, 1.4);
           }
 
           /* タブレット */
@@ -1543,21 +1544,21 @@
           @include mixin.pc-l(1920px) {
             width: 80px;
             height: 25px;
-            font-size: 12px;
+            font-size: 1.2em;
             font-weight: 500;
             color: white;
             text-align: center;
             line-height: 25px;
             display: inline-block;
             background-color: #444444;
-            margin-left: 34px;
+            margin-left: 38px;
           }
 
           /* PC */
           @include mixin.pc(1919px) {
             width: mixin.clamp_vw_pc(80);
             height: mixin.clamp_vw_pc(25);
-            font-size: mixin.clamp_vw_pc(12);
+            font-size: mixin.variableFontPc(1.2, 1);
           }
 
           /* タブレット */
@@ -1620,16 +1621,15 @@
         &-text {
           /* pc 1920px以上  */
           @include mixin.pc-l(1920px) {
-            font-size: 16px;
+            font-size: 1.6em;
             font-weight: 500;
             text-align: left;
             width: auto;
             margin-left: 35px;
-            letter-spacing: -0.1px;
           }
           /* PC */
           @include mixin.pc(1919px) {
-            font-size: mixin.clamp_vw_pc(16);
+            font-size: mixin.variableFontPc(1.6, 1.4);
             margin-left: 6px;
             letter-spacing: -0.1px;
           }
@@ -1704,7 +1704,7 @@
 
       // =============================
       &__text {
-        font-size: 16px;
+        font-size: 1.6em;
         width: auto;
         margin-top: 40px;
         margin-bottom: 49px;
@@ -1717,7 +1717,7 @@
 
         /* PC */
         @include mixin.pc(1919px) {
-          font-size: mixin.clamp_vw_pc(16);
+          font-size: mixin.variableFontPc(1.6, 1.4);
         }
 
         /* タブレット */
@@ -1741,7 +1741,7 @@
 
       // ================================
       &__icon {
-        font-size: 14px;
+        font-size: 1.4em;
         width: 12px;
         height: 14px;
         display: inline-block;
@@ -1915,7 +1915,7 @@ div.access__wrapper {
     &__map {
       width: 608px;
       height: 440px;
-      margin-top: 178px;
+      margin-top: 181px;
       background: url("../images/map.jpg") no-repeat;
       background-position: center;
       background-size: cover;
@@ -1958,7 +1958,7 @@ div.access__wrapper {
     &__detail {
       width: 538px;
       height: 625px;
-      margin-top: 176px;
+      margin-top: 181px;
       margin-left: 33px;
       display: flex;
       flex-direction: column;
@@ -2099,12 +2099,12 @@ div.access__wrapper {
           // ==========================================
 
           &--upper {
-            font-size: 30px;
-            line-height: 26px;
-            padding-left: 11px;
-
             /* pc 1920px以上  */
             @include mixin.pc-l(1920px) {
+              font-size: 3em;
+              line-height: 26px;
+              margin-top: 2px;
+              padding-left: 11px;
             }
 
             /* PC */
@@ -2133,7 +2133,7 @@ div.access__wrapper {
           // ===========
 
           &--lower {
-            font-size: 30px;
+            font-size: 3em;
             line-height: 55px;
             padding-left: 26px;
 
@@ -2171,12 +2171,11 @@ div.access__wrapper {
       // ==================
 
       &-address-inner {
-        margin-top: 28px;
-        display: flex;
-        flex-wrap: wrap;
-
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
+          margin-top: 28px;
+          display: flex;
+          flex-wrap: wrap;
         }
 
         /* PC */
@@ -2207,10 +2206,11 @@ div.access__wrapper {
           align-items: center;
         }
 
-        // ============
+        // ========================
 
         &--number {
-          font-size: 16px;
+          font-size: 1.6em;
+          margin-top: 1px;
           margin-right: 16px;
           letter-spacing: 0.1px;
 
@@ -2239,14 +2239,13 @@ div.access__wrapper {
           }
         }
 
-        // ==========
+        // ==============================
 
         &--text {
-          font-size: 16px;
-          letter-spacing: 0px;
-
           /* pc 1920px以上  */
           @include mixin.pc-l(1920px) {
+            font-size: 1.6em;
+            margin-top: 1px;
           }
 
           /* PC */
@@ -2280,7 +2279,6 @@ div.access__wrapper {
         width: 220px;
         position: relative;
         margin-top: 30px;
-        font-size: 0; // display: inline-block;ズレ対策
 
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
@@ -2316,16 +2314,16 @@ div.access__wrapper {
 
         &--number::before {
           content: "";
-          display: inline-block;
-          width: 26px;
-          height: 22px;
-          background: url("../images/受話器の線画アイコン.jpg") no-repeat;
-          background-size: contain;
-          margin-right: 15px;
-          margin-top: 4px;
 
           /* pc 1920px以上  */
           @include mixin.pc-l(1920px) {
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            background: url("../images/受話器の線画アイコン.jpg") no-repeat;
+            background-size: contain;
+            margin-right: 15px;
+            margin-top: 4px;
           }
 
           /* PC */
@@ -2350,14 +2348,34 @@ div.access__wrapper {
         // ================
 
         &--number {
-          color: #21a937;
-          font-size: 24px;
-          text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0, -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px,
-            -0.4px 0px 0px, 0px -0.4px 0px;
-          text-align: right;
-          padding-left: 4px;
-          margin-top: 1px;
-          position: absolute;
+          /* pc 1920px以上  */
+          @include mixin.pc-l(1920px) {
+            color: #21a937;
+            font-size: 2.4em;
+            text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0, -0.4px -0.4px 0px, 0.4px 0px 0px,
+              0px 0.4px 0px, -0.4px 0px 0px, 0px -0.4px 0px;
+            text-align: right;
+            padding-left: 4px;
+            position: absolute;
+          }
+
+          /* PC */
+          @include mixin.pc(1919px) {
+          }
+
+          /* タブレット */
+          @include mixin.tab(1024px) {
+          }
+
+          /* スマートフォン横画面 */
+          @include mixin.sp_b(599px) {
+            margin: 0;
+          }
+
+          /* スマートフォン縦画面 */
+          @include mixin.sp_v(479px) {
+            margin: 0;
+          }
         }
       }
 
@@ -2500,7 +2518,7 @@ div.access__wrapper {
           // ====================
 
           p {
-            font-size: 14px;
+            font-size: 1.4em;
             margin-top: 5px;
             margin-left: 4.5px;
 
@@ -2571,7 +2589,6 @@ div.access__wrapper {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            font-size: 0; // display: inline-block;ズレ対策
 
             /* pc 1920px以上  */
             @include mixin.pc-l(1920px) {
@@ -2604,7 +2621,7 @@ div.access__wrapper {
             // ====================
 
             p.day-of-week_upper {
-              font-size: 14px;
+              font-size: 1.4em;
               display: inline-block;
               width: 42px;
               margin: 5px 23px 0 28px;
@@ -2676,7 +2693,7 @@ div.access__wrapper {
 
               p.morning_upper {
                 width: 115px;
-                font-size: 14px;
+                font-size: 1.4em;
                 letter-spacing: 0.2px;
                 display: inline-block;
 
@@ -2716,7 +2733,7 @@ div.access__wrapper {
 
               p.afternoon_upper {
                 width: 120px;
-                font-size: 14px;
+                font-size: 1.4em;
                 letter-spacing: 0.1px;
                 display: inline-block;
                 margin-left: 4px;
@@ -2757,7 +2774,7 @@ div.access__wrapper {
             // ======================
 
             p.day-of-week_middle {
-              font-size: 14px;
+              font-size: 1.4em;
               display: inline-block;
               width: 42px;
               margin: 16px 23px 0 28px;
@@ -2829,7 +2846,7 @@ div.access__wrapper {
 
               p.morning_middle {
                 width: 115px;
-                font-size: 14px;
+                font-size: 1.4em;
                 letter-spacing: 0.2px;
                 display: inline-block;
 
@@ -2869,7 +2886,7 @@ div.access__wrapper {
 
               p.afternoon_middle {
                 width: 120px;
-                font-size: 14px;
+                font-size: 1.4em;
                 letter-spacing: 0.1px;
                 display: inline-block;
                 margin-left: 4px;
@@ -2910,7 +2927,7 @@ div.access__wrapper {
             // ======================
 
             p.day-of-week_lower {
-              font-size: 14px;
+              font-size: 1.4em;
               display: inline-block;
               width: 42px;
               margin: 17px 23px 0 28px;
@@ -2980,7 +2997,7 @@ div.access__wrapper {
 
               p.morning_lower {
                 width: 115px;
-                font-size: 14px;
+                font-size: 1.4em;
                 letter-spacing: 0.2px;
                 display: inline-block;
 
@@ -3020,7 +3037,7 @@ div.access__wrapper {
 
               p.afternoon_lower {
                 width: 120px;
-                font-size: 14px;
+                font-size: 1.4em;
                 letter-spacing: 0.1px;
                 display: inline-block;
                 margin-left: 4px;
@@ -3099,7 +3116,7 @@ div.access__wrapper {
         .closed-day {
           width: 89px;
           height: 25px;
-          font-size: 14px;
+          font-size: 1.4em;
           border-right: 1px solid;
           border-color: #e7e7e7;
           margin-top: 20px;
@@ -3137,7 +3154,7 @@ div.access__wrapper {
       .closed-day-of-week {
         width: 449px;
         height: 114px;
-        font-size: 14px;
+        font-size: 1.4em;
         margin-top: 20px;
         padding-top: 7px;
         padding-left: 28px;
@@ -3203,7 +3220,6 @@ div.access__wrapper {
         width: 554px;
         margin-top: 24.5px;
         text-align: right;
-        font-size: 0; // display: inline-block;ズレ
 
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
@@ -3229,8 +3245,10 @@ div.access__wrapper {
           margin: 0 auto;
         }
 
+        // ==================================
+        
         small {
-          font-size: 11px;
+          font-size: 1.1em;
           letter-spacing: 0.15px;
           padding-right: 15px;
           display: inline-block;

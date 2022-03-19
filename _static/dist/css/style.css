@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 HTML CSSResult Skip Results Iframe EDIT ON *,
 ::before,
 ::after {
@@ -393,6 +392,15 @@ th {
   font-weight: bold;
 }
 
+html {
+  /* @font-faceのfont-familyでつけた名前を指定 */
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 *,
 *:before,
 *:after {
@@ -400,14 +408,6 @@ th {
   padding: 0;
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
-}
-
-html {
-  font-family: "Noto Sans JP", sans-serif;
-  font-size: 16px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  overflow-x: hidden;
 }
 
 a {
@@ -420,7 +420,6 @@ ul {
 }
 
 div.header {
-  background-color: red;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
@@ -691,7 +690,7 @@ div.header_container .header__top-left-tagline--upper {
 @media (min-width: 1920px) {
   div.header_container .header__top-left-tagline--upper {
     padding-left: 8px;
-    font-size: 30px;
+    font-size: 3em;
     text-align: left;
     line-height: 28px;
   }
@@ -699,7 +698,7 @@ div.header_container .header__top-left-tagline--upper {
 @media not all and (min-width: 1919px) {
   div.header_container .header__top-left-tagline--upper {
     width: clamp(144px, 14vw, 260px);
-    font-size: calc(20px + ((1vw - 10.24px) ) * 1.1173184358);
+    font-size: calc(2em + ((1vw - 10.24px)) * 1.1173184358);
     text-align: left;
     line-height: 28px;
     padding-left: clamp(10px, 1vw, 25px);
@@ -740,7 +739,7 @@ div.header_container .header__top-left-tagline--lower {
 @media (min-width: 1920px) {
   div.header_container .header__top-left-tagline--lower {
     padding-left: clamp(10px, 1vw, 12px);
-    font-size: 30px;
+    font-size: 3em;
     text-align: center;
     line-height: 48px;
   }
@@ -748,7 +747,7 @@ div.header_container .header__top-left-tagline--lower {
 @media not all and (min-width: 1919px) {
   div.header_container .header__top-left-tagline--lower {
     width: clamp(144px, 14vw, 260px);
-    font-size: calc(20px + ((1vw - 10.24px) ) * 1.1173184358);
+    font-size: calc(2em + ((1vw - 10.24px)) * 1.1173184358);
     text-align: left;
     line-height: 48px;
     padding-left: clamp(10px, 1vw, 25px);
@@ -797,7 +796,6 @@ div.header_container .header__top-right {
     width: 300px;
     height: 73px;
     margin-right: 20px;
-    font-size: 0;
   }
 }
 @media not all and (min-width: 1919px) {
@@ -805,7 +803,6 @@ div.header_container .header__top-right {
     width: clamp(236px, 23vw, 450px);
     height: clamp(41px, 4vw, 73px);
     margin-right: clamp(10px, 1vw, 20px);
-    font-size: 0;
   }
 }
 @media not all and (min-width: 1024px) {
@@ -850,16 +847,15 @@ div.header_container .header__top-right--reception {
 }
 @media (min-width: 1920px) {
   div.header_container .header__top-right--reception {
-    font-size: 14px;
-    letter-spacing: 0px;
+    font-size: 1.4em;
     text-align: right;
     padding-right: 4px;
-    margin-top: 5.5px;
+    margin-top: 7px;
   }
 }
 @media not all and (min-width: 1919px) {
   div.header_container .header__top-right--reception {
-    font-size: calc(12px + ((1vw - 10.24px) ) * 0.2234636872);
+    font-size: calc(1.2em + ((1vw - 10.24px)) * 0.2234636872);
     letter-spacing: 0.2px;
     text-align: right;
     margin-top: 5px;
@@ -958,17 +954,17 @@ div.header_container .header__top-right--tel {
 @media (min-width: 1920px) {
   div.header_container .header__top-right--tel {
     color: #21a937;
-    font-size: 22px;
+    font-size: 2.2em;
     font-weight: 500;
-    letter-spacing: 0.7px;
-    margin-top: 12px;
+    letter-spacing: 1px;
+    margin-top: 11px;
     text-align: right;
   }
 }
 @media not all and (min-width: 1919px) {
   div.header_container .header__top-right--tel {
     color: #21a937;
-    font-size: calc(16px + ((1vw - 10.24px) ) * 0.6703910615);
+    font-size: calc(16em + ((1vw - 10.24px)) * -15.4189944134);
     font-weight: 500;
     letter-spacing: 0.5px;
     margin-top: clamp(10px, 1vw, 13px);
@@ -1172,7 +1168,7 @@ div.header_container .header__top-right--tel {
     width: clamp(51px, 5vw, 102px);
     height: clamp(297px, 29vw, 565px);
     writing-mode: vertical-rl;
-    font-size: calc(14px + ((1vw - 10.24px) ) * 1.5642458101);
+    font-size: calc(1.4em + ((1vw - 10.24px)) * 1.5642458101);
     font-weight: 500;
     letter-spacing: 5.5px;
     padding-top: clamp(10px, 1vw, 25px);
@@ -1300,7 +1296,7 @@ div.header_container .header__top-right--tel {
     width: 102px;
     height: 565px;
     writing-mode: vertical-rl;
-    font-size: 28px;
+    font-size: 2.8em;
     font-weight: 500;
     letter-spacing: 6px;
     padding-top: 25px;
@@ -1316,7 +1312,7 @@ div.header_container .header__top-right--tel {
     width: clamp(51px, 5vw, 102px);
     height: clamp(297px, 29vw, 565px);
     writing-mode: vertical-rl;
-    font-size: calc(14px + ((1vw - 10.24px) ) * 1.5642458101);
+    font-size: calc(1.4em + ((1vw - 10.24px)) * 1.5642458101);
     font-weight: 500;
     letter-spacing: 5.5px;
     padding-top: clamp(10px, 1vw, 25px);
@@ -1536,7 +1532,7 @@ div.header_container .header__top-right--tel {
   .body .self-introduction-inner__first-line_text {
     display: inline-block;
     width: auto;
-    font-size: 24px;
+    font-size: 2.4em;
     font-weight: 500;
     line-height: 22px;
     background: linear-gradient(transparent 60%, #86eb86 90%);
@@ -1548,7 +1544,7 @@ div.header_container .header__top-right--tel {
   .body .self-introduction-inner__first-line_text {
     display: inline-block;
     width: auto;
-    font-size: 24px;
+    font-size: 2.4em;
     font-weight: 500;
     background: linear-gradient(transparent 60%, #86eb86 90%);
     margin-top: clamp(31px, 3vw, 60px);
@@ -1601,12 +1597,12 @@ div.header_container .header__top-right--tel {
   .body .self-introduction-inner__second-line_text {
     display: inline-block;
     width: auto;
-    font-size: 24px;
+    font-size: 2.4em;
     font-weight: 500;
     letter-spacing: -0.2px;
     line-height: 24px;
     background: linear-gradient(transparent 60%, #86eb86 90%);
-    margin-top: 40px;
+    margin-top: 41px;
     margin-left: 32px;
   }
 }
@@ -1614,7 +1610,7 @@ div.header_container .header__top-right--tel {
   .body .self-introduction-inner__second-line_text {
     display: inline-block;
     width: auto;
-    font-size: 24px;
+    font-size: 2.4em;
     font-weight: 500;
     letter-spacing: -0.1px;
     line-height: 24px;
@@ -1669,7 +1665,7 @@ div.header_container .header__top-right--tel {
 @media (min-width: 1920px) {
   .body .self-introduction-inner__third-line_text {
     width: auto;
-    font-size: 16px;
+    font-size: 1.6em;
     line-height: 38px;
     letter-spacing: -0.15px;
     margin-top: 35px;
@@ -1681,7 +1677,7 @@ div.header_container .header__top-right--tel {
   .body .self-introduction-inner__third-line_text {
     display: inline-block;
     width: auto;
-    font-size: clamp(10px, 1vw, 16px);
+    font-size: calc(1.2em + ((1vw - 10.24px)) * 0.4469273743);
     letter-spacing: -0.18px;
     line-height: clamp(10px, 1vw, 24px);
     margin-top: clamp(21px, 2vw, 30px);
@@ -1851,11 +1847,11 @@ div.header_container .header__top-right--tel {
 @media (min-width: 1920px) {
   .medical-treatment-contents__first-line-text {
     width: auto;
-    font-size: 24px;
+    font-size: 2.4em;
     font-weight: 500;
     line-height: 22px;
     background: linear-gradient(transparent 60%, #86eb86 90%);
-    margin-top: 83px;
+    margin-top: 84px;
     display: inline-block;
   }
 }
@@ -1863,7 +1859,7 @@ div.header_container .header__top-right--tel {
   .medical-treatment-contents__first-line-text {
     display: inline-block;
     width: auto;
-    font-size: 24px;
+    font-size: 2.4em;
     font-weight: 500;
     line-height: 22px;
     background: linear-gradient(transparent 60%, #86eb86 90%);
@@ -1900,7 +1896,7 @@ div.header_container .header__top-right--tel {
 @media (min-width: 1920px) {
   .medical-treatment-contents__second-line-text {
     width: auto;
-    font-size: 16px;
+    font-size: 1.6em;
     font-weight: 500;
     line-height: 22px;
     display: inline-block;
@@ -1911,7 +1907,7 @@ div.header_container .header__top-right--tel {
   .medical-treatment-contents__second-line-text {
     display: inline-block;
     width: auto;
-    font-size: 16px;
+    font-size: 1.6em;
     font-weight: 500;
     line-height: 22px;
     margin-top: clamp(41px, 4vw, 79px);
@@ -2052,15 +2048,15 @@ div.header_container .header__top-right--tel {
 }
 @media (min-width: 1920px) {
   .medical-treatment-contents__inner-article-board--title {
-    font-size: 24px;
+    font-size: 2.4em;
     font-weight: 500;
     text-align: center;
-    margin-top: 42px;
+    margin-top: 43px;
   }
 }
 @media not all and (min-width: 1919px) {
   .medical-treatment-contents__inner-article-board--title {
-    font-size: clamp(10px, 1vw, 24px);
+    font-size: calc(1.8em + ((1vw - 10.24px)) * 0.6703910615);
     font-weight: 500;
     margin-top: clamp(21px, 2vw, 35px);
   }
@@ -2101,7 +2097,7 @@ div.header_container .header__top-right--tel {
 @media (min-width: 1920px) {
   .medical-treatment-contents__inner-article-board--content-left {
     width: 320px;
-    font-size: 16px;
+    font-size: 1.6em;
     font-weight: 500;
     letter-spacing: -0.11px;
     line-height: 38px;
@@ -2112,7 +2108,7 @@ div.header_container .header__top-right--tel {
 @media not all and (min-width: 1919px) {
   .medical-treatment-contents__inner-article-board--content-left {
     width: clamp(174px, 17vw, 320px);
-    font-size: clamp(10px, 1vw, 16px);
+    font-size: calc(1.2em + ((1vw - 10.24px)) * 0.4469273743);
     font-weight: 500;
     letter-spacing: -0.11px;
     line-height: 38px;
@@ -2168,7 +2164,7 @@ div.header_container .header__top-right--tel {
 @media (min-width: 1920px) {
   .medical-treatment-contents__inner-article-board--content-center {
     width: 320px;
-    font-size: 16px;
+    font-size: 1.6em;
     font-weight: 500;
     letter-spacing: -0.11px;
     line-height: 38px;
@@ -2179,7 +2175,7 @@ div.header_container .header__top-right--tel {
 @media not all and (min-width: 1919px) {
   .medical-treatment-contents__inner-article-board--content-center {
     width: clamp(174px, 17vw, 320px);
-    font-size: clamp(10px, 1vw, 16px);
+    font-size: calc(1.4em + ((1vw - 10.24px)) * 0.2234636872);
     font-weight: 500;
     letter-spacing: -0.11px;
     line-height: 38px;
@@ -2235,7 +2231,7 @@ div.header_container .header__top-right--tel {
 @media (min-width: 1920px) {
   .medical-treatment-contents__inner-article-board--content-right {
     width: 320px;
-    font-size: 16px;
+    font-size: 1.6em;
     font-weight: 500;
     letter-spacing: -0.11px;
     line-height: 38px;
@@ -2246,7 +2242,7 @@ div.header_container .header__top-right--tel {
 @media not all and (min-width: 1919px) {
   .medical-treatment-contents__inner-article-board--content-right {
     width: clamp(174px, 17vw, 320px);
-    font-size: clamp(10px, 1vw, 16px);
+    font-size: calc(1.4em + ((1vw - 10.24px)) * 0.2234636872);
     font-weight: 500;
     letter-spacing: -0.11px;
     line-height: 38px;
@@ -2492,18 +2488,18 @@ div.header_container .header__top-right--tel {
   .medical-treatment-contents .notice-title {
     display: inline-block;
     width: auto;
-    font-size: 24px;
+    font-size: 2.4em;
     font-weight: 500;
     line-height: 22px;
     background: linear-gradient(transparent 60%, #86eb86 90%);
-    margin-top: 87px;
+    margin-top: 88px;
   }
 }
 @media not all and (min-width: 1919px) {
   .medical-treatment-contents .notice-title {
     display: inline-block;
     width: auto;
-    font-size: 24px;
+    font-size: 2.4em;
     font-weight: 500;
     line-height: 22px;
     background: linear-gradient(transparent 60%, #86eb86 90%);
@@ -2708,7 +2704,7 @@ div.header_container .header__top-right--tel {
   .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--date {
     width: aut0;
     height: 25px;
-    font-size: 16px;
+    font-size: 1.6em;
     font-weight: 500;
     text-align: center;
     line-height: 25px;
@@ -2718,7 +2714,7 @@ div.header_container .header__top-right--tel {
 }
 @media not all and (min-width: 1919px) {
   .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--date {
-    font-size: clamp(10px, 1vw, 16px);
+    font-size: calc(1.4em + ((1vw - 10.24px)) * 0.2234636872);
   }
 }
 @media not all and (min-width: 1024px) {
@@ -2745,21 +2741,21 @@ div.header_container .header__top-right--tel {
   .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
     width: 80px;
     height: 25px;
-    font-size: 12px;
+    font-size: 1.2em;
     font-weight: 500;
     color: white;
     text-align: center;
     line-height: 25px;
     display: inline-block;
     background-color: #444444;
-    margin-left: 34px;
+    margin-left: 38px;
   }
 }
 @media not all and (min-width: 1919px) {
   .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
     width: clamp(41px, 4vw, 80px);
     height: clamp(10px, 1vw, 25px);
-    font-size: clamp(10px, 1vw, 12px);
+    font-size: calc(1em + ((1vw - 10.24px)) * 0.2234636872);
   }
 }
 @media not all and (min-width: 1024px) {
@@ -2834,17 +2830,16 @@ div.header_container .header__top-right--tel {
 }
 @media (min-width: 1920px) {
   .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right-text {
-    font-size: 16px;
+    font-size: 1.6em;
     font-weight: 500;
     text-align: left;
     width: auto;
     margin-left: 35px;
-    letter-spacing: -0.1px;
   }
 }
 @media not all and (min-width: 1919px) {
   .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right-text {
-    font-size: clamp(10px, 1vw, 16px);
+    font-size: calc(1.4em + ((1vw - 10.24px)) * 0.2234636872);
     margin-left: 6px;
     letter-spacing: -0.1px;
   }
@@ -2919,7 +2914,7 @@ div.header_container .header__top-right--tel {
   }
 }
 .medical-treatment-contents .notice-detail_container .see-all_inner__text {
-  font-size: 16px;
+  font-size: 1.6em;
   width: auto;
   margin-top: 40px;
   margin-bottom: 49px;
@@ -2936,7 +2931,7 @@ div.header_container .header__top-right--tel {
 }
 @media not all and (min-width: 1919px) {
   .medical-treatment-contents .notice-detail_container .see-all_inner__text {
-    font-size: clamp(10px, 1vw, 16px);
+    font-size: calc(1.4em + ((1vw - 10.24px)) * 0.2234636872);
   }
 }
 @media not all and (min-width: 599px) {
@@ -2954,7 +2949,7 @@ div.header_container .header__top-right--tel {
   }
 }
 .medical-treatment-contents .notice-detail_container .see-all_inner__icon {
-  font-size: 14px;
+  font-size: 1.4em;
   width: 12px;
   height: 14px;
   display: inline-block;
@@ -3096,7 +3091,7 @@ div.access__wrapper .access-container {
 div.access__wrapper .access-container__map {
   width: 608px;
   height: 440px;
-  margin-top: 178px;
+  margin-top: 181px;
   background: url("../images/map.jpg") no-repeat;
   background-position: center;
   background-size: cover;
@@ -3134,7 +3129,7 @@ div.access__wrapper .access-container__map {
 div.access__wrapper .access-container__detail {
   width: 538px;
   height: 625px;
-  margin-top: 176px;
+  margin-top: 181px;
   margin-left: 33px;
   display: flex;
   flex-direction: column;
@@ -3258,9 +3253,6 @@ div.access__wrapper .access-container__detail-logo_inner-tagline {
   }
 }
 div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
-  font-size: 30px;
-  line-height: 26px;
-  padding-left: 11px;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
@@ -3271,6 +3263,14 @@ div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
+}
+@media (min-width: 1920px) {
+  div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
+    font-size: 3em;
+    line-height: 26px;
+    margin-top: 2px;
+    padding-left: 11px;
+  }
 }
 @media not all and (min-width: 599px) {
   div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
@@ -3287,7 +3287,7 @@ div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
   }
 }
 div.access__wrapper .access-container__detail-logo_inner-tagline--lower {
-  font-size: 30px;
+  font-size: 3em;
   line-height: 55px;
   padding-left: 26px;
   /* pc 1920px以上  */
@@ -3318,9 +3318,6 @@ div.access__wrapper .access-container__detail-logo_inner-tagline--lower {
   }
 }
 div.access__wrapper .access-container__detail-address-inner {
-  margin-top: 28px;
-  display: flex;
-  flex-wrap: wrap;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
@@ -3331,6 +3328,13 @@ div.access__wrapper .access-container__detail-address-inner {
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
+}
+@media (min-width: 1920px) {
+  div.access__wrapper .access-container__detail-address-inner {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 @media not all and (min-width: 599px) {
   div.access__wrapper .access-container__detail-address-inner {
@@ -3353,7 +3357,8 @@ div.access__wrapper .access-container__detail-address-inner {
   }
 }
 div.access__wrapper .access-container__detail-address-inner--number {
-  font-size: 16px;
+  font-size: 1.6em;
+  margin-top: 1px;
   margin-right: 16px;
   letter-spacing: 0.1px;
   /* pc 1920px以上  */
@@ -3380,8 +3385,6 @@ div.access__wrapper .access-container__detail-address-inner--number {
   }
 }
 div.access__wrapper .access-container__detail-address-inner--text {
-  font-size: 16px;
-  letter-spacing: 0px;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
@@ -3392,6 +3395,12 @@ div.access__wrapper .access-container__detail-address-inner--text {
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
+}
+@media (min-width: 1920px) {
+  div.access__wrapper .access-container__detail-address-inner--text {
+    font-size: 1.6em;
+    margin-top: 1px;
+  }
 }
 @media not all and (min-width: 599px) {
   div.access__wrapper .access-container__detail-address-inner--text {
@@ -3412,7 +3421,6 @@ div.access__wrapper .access-container__detail-tel {
   width: 220px;
   position: relative;
   margin-top: 30px;
-  font-size: 0;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
@@ -3444,13 +3452,6 @@ div.access__wrapper .access-container__detail-tel {
 }
 div.access__wrapper .access-container__detail-tel--number::before {
   content: "";
-  display: inline-block;
-  width: 26px;
-  height: 22px;
-  background: url("../images/受話器の線画アイコン.jpg") no-repeat;
-  background-size: contain;
-  margin-right: 15px;
-  margin-top: 4px;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
@@ -3461,6 +3462,17 @@ div.access__wrapper .access-container__detail-tel--number::before {
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
+}
+@media (min-width: 1920px) {
+  div.access__wrapper .access-container__detail-tel--number::before {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background: url("../images/受話器の線画アイコン.jpg") no-repeat;
+    background-size: contain;
+    margin-right: 15px;
+    margin-top: 4px;
+  }
 }
 @media not all and (min-width: 599px) {
   div.access__wrapper .access-container__detail-tel--number::before {
@@ -3473,13 +3485,36 @@ div.access__wrapper .access-container__detail-tel--number::before {
   }
 }
 div.access__wrapper .access-container__detail-tel--number {
-  color: #21a937;
-  font-size: 24px;
-  text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0, -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px, 0px -0.4px 0px;
-  text-align: right;
-  padding-left: 4px;
-  margin-top: 1px;
-  position: absolute;
+  /* pc 1920px以上  */
+  /* 1920px 以上 */
+  /* PC */
+  /* $** pxを含まずそれより小さい */
+  /* タブレット */
+  /* $** pxを含まずそれより小さい */
+  /* スマートフォン横画面 */
+  /* $** pxを含まずそれより小さい */
+  /* スマートフォン縦画面 */
+  /* $** pxを含まずそれより小さい */
+}
+@media (min-width: 1920px) {
+  div.access__wrapper .access-container__detail-tel--number {
+    color: #21a937;
+    font-size: 2.4em;
+    text-shadow: 0.4px 0.4px 0, 0.4px -0.4px 0px, -0.4px 0.4px 0, -0.4px -0.4px 0px, 0.4px 0px 0px, 0px 0.4px 0px, -0.4px 0px 0px, 0px -0.4px 0px;
+    text-align: right;
+    padding-left: 4px;
+    position: absolute;
+  }
+}
+@media not all and (min-width: 599px) {
+  div.access__wrapper .access-container__detail-tel--number {
+    margin: 0;
+  }
+}
+@media not all and (min-width: 479px) {
+  div.access__wrapper .access-container__detail-tel--number {
+    margin: 0;
+  }
 }
 div.access__wrapper .access-container__detail-blank-border {
   height: 29.5px;
@@ -3600,7 +3635,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--consultation-
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--consultation-time p {
-  font-size: 14px;
+  font-size: 1.4em;
   margin-top: 5px;
   margin-left: 4.5px;
   /* pc 1920px以上  */
@@ -3661,7 +3696,6 @@ div.access__wrapper .access-container__detail-business-hour-inner--wrapper .cons
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  font-size: 0;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
@@ -3690,7 +3724,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--wrapper .cons
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern p.day-of-week_upper {
-  font-size: 14px;
+  font-size: 1.4em;
   display: inline-block;
   width: 42px;
   margin: 5px 23px 0 28px;
@@ -3758,7 +3792,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--wrapper .cons
 }
 div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--upper p.morning_upper {
   width: 115px;
-  font-size: 14px;
+  font-size: 1.4em;
   letter-spacing: 0.2px;
   display: inline-block;
   /* pc 1920px以上  */
@@ -3770,7 +3804,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--wrapper .cons
 }
 div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
   width: 120px;
-  font-size: 14px;
+  font-size: 1.4em;
   letter-spacing: 0.1px;
   display: inline-block;
   margin-left: 4px;
@@ -3805,7 +3839,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--wrapper .cons
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern p.day-of-week_middle {
-  font-size: 14px;
+  font-size: 1.4em;
   display: inline-block;
   width: 42px;
   margin: 16px 23px 0 28px;
@@ -3873,7 +3907,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--wrapper .cons
 }
 div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--middle p.morning_middle {
   width: 115px;
-  font-size: 14px;
+  font-size: 1.4em;
   letter-spacing: 0.2px;
   display: inline-block;
   /* pc 1920px以上  */
@@ -3908,7 +3942,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--wrapper .cons
 }
 div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
   width: 120px;
-  font-size: 14px;
+  font-size: 1.4em;
   letter-spacing: 0.1px;
   display: inline-block;
   margin-left: 4px;
@@ -3943,7 +3977,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--wrapper .cons
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern p.day-of-week_lower {
-  font-size: 14px;
+  font-size: 1.4em;
   display: inline-block;
   width: 42px;
   margin: 17px 23px 0 28px;
@@ -4009,7 +4043,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--wrapper .cons
 }
 div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--lower p.morning_lower {
   width: 115px;
-  font-size: 14px;
+  font-size: 1.4em;
   letter-spacing: 0.2px;
   display: inline-block;
   /* pc 1920px以上  */
@@ -4044,7 +4078,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--wrapper .cons
 }
 div.access__wrapper .access-container__detail-business-hour-inner--wrapper .consultation-pattern .morning_afternoon__wrapper--lower p.afternoon_lower {
   width: 120px;
-  font-size: 14px;
+  font-size: 1.4em;
   letter-spacing: 0.1px;
   display: inline-block;
   margin-left: 4px;
@@ -4110,7 +4144,7 @@ div.access__wrapper .access-container__detail .closed-day--inner {
 div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
   width: 89px;
   height: 25px;
-  font-size: 14px;
+  font-size: 1.4em;
   border-right: 1px solid;
   border-color: #e7e7e7;
   margin-top: 20px;
@@ -4142,7 +4176,7 @@ div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
 div.access__wrapper .access-container__detail .closed-day-of-week {
   width: 449px;
   height: 114px;
-  font-size: 14px;
+  font-size: 1.4em;
   margin-top: 20px;
   padding-top: 7px;
   padding-left: 28px;
@@ -4200,7 +4234,6 @@ div.access__wrapper .access-container__detail div.access-container__detail-copyr
   width: 554px;
   margin-top: 24.5px;
   text-align: right;
-  font-size: 0;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
@@ -4225,7 +4258,7 @@ div.access__wrapper .access-container__detail div.access-container__detail-copyr
   }
 }
 div.access__wrapper .access-container__detail div.access-container__detail-copyright_reserved--pc small {
-  font-size: 11px;
+  font-size: 1.1em;
   letter-spacing: 0.15px;
   padding-right: 15px;
   display: inline-block;
