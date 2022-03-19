@@ -1,32 +1,32 @@
-@import "mixin";
+@use "mixin";
 // body ======================================================
 
 .body {
   /* pc 1920px以上  */
-  @include pc-l(1920px) {
+  @include mixin.pc-l(1920px) {
     width: 100vw;
     background-color: #f3d27f;
   }
 
   /* PC */
-  @include pc(1919px) {
+  @include mixin.pc(1919px) {
     width: 100vw;
   }
 
   /* タブレット */
-  @include tab(1024px) {
+  @include mixin.tab(1024px) {
     width: 100vw;
   }
 
   /* スマートフォン横画面 */
-  @include sp_b(599px) {
-    width: clamp_vw_sp_b(599);
+  @include mixin.sp_b(599px) {
+    width: mixin.clamp_vw_sp_b(599);
     padding: 0;
     max-width: 0;
   }
 
-  @include sp_v(479px) {
-    width: clamp_vw_sp_v(479);
+  @include mixin.sp_v(479px) {
+    width: mixin.clamp_vw_sp_v(479);
     padding: 0;
     max-width: 0;
   }
@@ -36,35 +36,35 @@
   .top-page_wrapper {
     background-color: greenyellow;
     /* pc 1920px以上  */
-    @include pc-l(1920px) {
+    @include mixin.pc-l(1920px) {
       width: 1920px;
       height: auto;
       margin-left: calc((100vw - 1920px) / 2); //中央揃え
     }
 
     /* PC */
-    @include pc(1919px) {
+    @include mixin.pc(1919px) {
       width: 100vw;
       height: auto;
       margin: 0 auto;
     }
 
     /* タブレット */
-    @include tab(1024px) {
+    @include mixin.tab(1024px) {
       width: 100vw;
       height: auto;
       margin: 0 auto;
     }
 
     /* スマートフォン横画面 */
-    @include sp_b(599px) {
+    @include mixin.sp_b(599px) {
       width: 100vw;
       height: auto;
       margin: 0 auto;
     }
 
     /* スマートフォン縦画面 */
-    @include sp_v(479px) {
+    @include mixin.sp_v(479px) {
       width: 100vw;
       height: auto;
       margin: 0 auto;
@@ -76,45 +76,45 @@
 
     .first-view_inner {
       /* pc 1920px以上  */
-      @include pc-l(1920px) {
+      @include mixin.pc-l(1920px) {
         width: 1920px;
         height: 947px;
         position: relative;
       }
 
       /* PC */
-      @include pc(1919px) {
-        width: clamp_vw_pc(1919);
-        height: clamp_vw_pc(625);
+      @include mixin.pc(1919px) {
+        width: mixin.clamp_vw_pc(1919);
+        height: mixin.clamp_vw_pc(625);
         position: relative;
       }
 
       /* タブレット */
-      @include tab(1024px) {
-        width: clamp_vw_tab(1024);
-        height: clamp_vw_tab(1024);
-        margin-top: clamp_vw_tab(10);
+      @include mixin.tab(1024px) {
+        width: mixin.clamp_vw_tab(1024);
+        height: mixin.clamp_vw_tab(1024);
+        margin-top: mixin.clamp_vw_tab(10);
       }
 
       /* スマートフォン横画面 */
-      @include sp_b(599px) {
-        width: clamp_vw_sp_b(589);
-        height: clamp_vw_sp_b(589);
-        margin-top: clamp_vw_sp_b(10);
+      @include mixin.sp_b(599px) {
+        width: mixin.clamp_vw_sp_b(589);
+        height: mixin.clamp_vw_sp_b(589);
+        margin-top: mixin.clamp_vw_sp_b(10);
       }
 
       /* スマートフォン縦画面 */
-      @include sp_v(479px) {
-        width: clamp_vw_sp_v(479);
-        height: clamp_vw_sp_v(479);
-        margin-top: clamp_vw_sp_v(10);
+      @include mixin.sp_v(479px) {
+        width: mixin.clamp_vw_sp_v(479);
+        height: mixin.clamp_vw_sp_v(479);
+        margin-top: mixin.clamp_vw_sp_v(10);
       }
 
       // ================================
 
       &__message-left {
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
           width: 102px;
           height: 565px;
           writing-mode: vertical-rl;
@@ -130,74 +130,74 @@
         }
 
         /* PC */
-        @include pc(1919px) {
-          width: clamp_vw_pc(102);
-          height: clamp_vw_pc(565);
+        @include mixin.pc(1919px) {
+          width: mixin.clamp_vw_pc(102);
+          height: mixin.clamp_vw_pc(565);
           writing-mode: vertical-rl;
-          font-size: variableFontPc(28, 14);
-          // @debug variableFontPc(28,20);
+          font-size: mixin.variableFontPc(28, 14);
+          // @debug mixin.variableFontPc(28,20);
           font-weight: 500;
           letter-spacing: 5.5px;
-          padding-top: clamp_vw_pc(25);
-          line-height: clamp_vw_pc(102);
+          padding-top: mixin.clamp_vw_pc(25);
+          line-height: mixin.clamp_vw_pc(102);
           background-color: white;
           position: absolute;
-          top: clamp_vw_pc(133);
-          left: clamp_vw_pc(210);
+          top: mixin.clamp_vw_pc(133);
+          left: mixin.clamp_vw_pc(210);
         }
 
         /* タブレット */
-        @include tab(1024px) {
-          width: clamp_vw_tab(90);
-          height: clamp_vw_tab(700);
-          font-size: clamp_vw_tab(26);
-          letter-spacing: clamp_vw_tab(6);
+        @include mixin.tab(1024px) {
+          width: mixin.clamp_vw_tab(90);
+          height: mixin.clamp_vw_tab(700);
+          font-size: mixin.clamp_vw_tab(26);
+          letter-spacing: mixin.clamp_vw_tab(6);
           padding-top: 0px;
           text-align: center;
-          line-height: clamp_vw_tab(78);
-          top: clamp_vw_tab(100);
-          left: clamp_vw_tab(140);
+          line-height: mixin.clamp_vw_tab(78);
+          top: mixin.clamp_vw_tab(100);
+          left: mixin.clamp_vw_tab(140);
           z-index: 5;
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          width: clamp_vw_sp_b(55);
-          height: clamp_vw_sp_b(345);
-          font-size: clamp_vw_sp_b(20);
+        @include mixin.sp_b(599px) {
+          width: mixin.clamp_vw_sp_b(55);
+          height: mixin.clamp_vw_sp_b(345);
+          font-size: mixin.clamp_vw_sp_b(20);
           letter-spacing: 0px;
           padding-top: 0px;
           text-align: center;
-          line-height: clamp_vw_sp_b(55);
-          top: clamp_vw_sp_b(100);
-          left: clamp_vw_sp_b(30);
+          line-height: mixin.clamp_vw_sp_b(55);
+          top: mixin.clamp_vw_sp_b(100);
+          left: mixin.clamp_vw_sp_b(30);
           z-index: 5;
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
+        @include mixin.sp_v(479px) {
           // background-color: rgb(240, 113, 113);
           // width: clamp(26px, 11.4583vw, 55px);
-          width: clamp_vw_sp_v(55);
+          width: mixin.clamp_vw_sp_v(55);
           /* 最小値30(vw225),65÷479×100vw,最大値65(vw479) */
           // height: clamp(162px, 71.875vw, 345px);
-          height: clamp_vw_sp_v(345);
+          height: mixin.clamp_vw_sp_v(345);
           /* 最小値162(vw225),345÷479×100vw,最大値345(vw479) */
           // font-size: clamp(9px, 4.166vw, 20px);
-          font-size: clamp_vw_sp_v(20);
+          font-size: mixin.clamp_vw_sp_v(20);
           /* 最小値9(vw225),20÷479×100vw,最大値20(vw479) */
           letter-spacing: 0px;
           padding-top: 0px;
           text-align: center;
           // line-height: clamp(26px, 11.4583vw, 55px);
-          line-height: clamp_vw_sp_v(55);
+          line-height: mixin.clamp_vw_sp_v(55);
           /* 最小値30(vw225),65÷479×100vw,最大値65(vw479) */
           /* 最小値30(vw225),65÷479×100vw,最大値65(vw479) */
           // top: clamp(47px, 20.833vw, 100px);
-          top: clamp_vw_sp_v(100);
+          top: mixin.clamp_vw_sp_v(100);
           /* 最小値47(vw225),100÷479×100vw,最大値100(vw479) */
           // left: clamp(14px, 6.25vw, 30px);
-          left: clamp_vw_sp_v(30);
+          left: mixin.clamp_vw_sp_v(30);
           /* 最小値14(vw225),30÷479×100vw,最大値30(vw479) */
           z-index: 5;
         }
@@ -207,41 +207,41 @@
         span.color {
           color: green;
           /* pc 1920px以上  */
-          @include pc-l(1920px) {
+          @include mixin.pc-l(1920px) {
             letter-spacing: 5.5px;
             margin-top: -8px;
             margin-bottom: -8px;
           }
 
           /* PC */
-          @include pc(1919px) {
+          @include mixin.pc(1919px) {
             letter-spacing: 5.5px;
             margin-top: -8px;
             margin-bottom: -8px;
           }
 
           /* タブレット */
-          @include tab(1024px) {
-            font-size: clamp_vw_tab(26);
-            letter-spacing: clamp_vw_tab(6);
-            padding-top: clamp_vw_tab(3);
-            padding-bottom: clamp_vw_tab(3);
+          @include mixin.tab(1024px) {
+            font-size: mixin.clamp_vw_tab(26);
+            letter-spacing: mixin.clamp_vw_tab(6);
+            padding-top: mixin.clamp_vw_tab(3);
+            padding-bottom: mixin.clamp_vw_tab(3);
           }
 
           /* スマートフォン横画面 */
-          @include sp_b(599px) {
-            font-size: clamp_vw_sp_b(20);
+          @include mixin.sp_b(599px) {
+            font-size: mixin.clamp_vw_sp_b(20);
             letter-spacing: 0px;
-            padding-top: clamp_vw_sp_b(3);
-            padding-bottom: clamp_vw_sp_b(3);
+            padding-top: mixin.clamp_vw_sp_b(3);
+            padding-bottom: mixin.clamp_vw_sp_b(3);
           }
 
           /* スマートフォン縦画面 */
-          @include sp_v(479px) {
-            font-size: clamp_vw_sp_v(20);
+          @include mixin.sp_v(479px) {
+            font-size: mixin.clamp_vw_sp_v(20);
             letter-spacing: 0px;
-            padding-top: clamp_vw_sp_v(3);
-            padding-bottom: clamp_vw_sp_v(3);
+            padding-top: mixin.clamp_vw_sp_v(3);
+            padding-bottom: mixin.clamp_vw_sp_v(3);
           }
         }
       }
@@ -250,7 +250,7 @@
 
       &__message-right {
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
           width: 102px;
           height: 565px;
           writing-mode: vertical-rl;
@@ -266,60 +266,60 @@
         }
 
         /* PC */
-        @include pc(1919px) {
-          width: clamp_vw_pc(102);
-          height: clamp_vw_pc(565);
+        @include mixin.pc(1919px) {
+          width: mixin.clamp_vw_pc(102);
+          height: mixin.clamp_vw_pc(565);
           writing-mode: vertical-rl;
-          font-size: variableFontPc(28, 14);
+          font-size: mixin.variableFontPc(28, 14);
           font-weight: 500;
           letter-spacing: 5.5px;
-          padding-top: clamp_vw_pc(25);
-          line-height: clamp_vw_pc(102);
+          padding-top: mixin.clamp_vw_pc(25);
+          line-height: mixin.clamp_vw_pc(102);
           background-color: white;
           position: absolute;
-          top: clamp_vw_pc(133);
-          left: clamp_vw_pc(340);
+          top: mixin.clamp_vw_pc(133);
+          left: mixin.clamp_vw_pc(340);
         }
 
         /* タブレット */
-        @include tab(1024px) {
-          width: clamp_vw_tab(90);
-          height: clamp_vw_tab(700);
-          font-size: clamp_vw_tab(26);
-          letter-spacing: clamp_vw_tab(6);
+        @include mixin.tab(1024px) {
+          width: mixin.clamp_vw_tab(90);
+          height: mixin.clamp_vw_tab(700);
+          font-size: mixin.clamp_vw_tab(26);
+          letter-spacing: mixin.clamp_vw_tab(6);
           padding-top: 0px;
           text-align: center;
-          line-height: clamp_vw_tab(78);
-          top: clamp_vw_tab(100);
-          left: clamp_vw_tab(300);
+          line-height: mixin.clamp_vw_tab(78);
+          top: mixin.clamp_vw_tab(100);
+          left: mixin.clamp_vw_tab(300);
           z-index: 5;
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          width: clamp_vw_sp_b(55);
-          height: clamp_vw_sp_b(345);
-          font-size: clamp_vw_sp_b(20);
+        @include mixin.sp_b(599px) {
+          width: mixin.clamp_vw_sp_b(55);
+          height: mixin.clamp_vw_sp_b(345);
+          font-size: mixin.clamp_vw_sp_b(20);
           letter-spacing: 0px;
           padding-top: 0px;
           text-align: center;
-          line-height: clamp_vw_sp_b(55);
-          top: clamp_vw_sp_b(100);
-          left: clamp_vw_sp_b(100);
+          line-height: mixin.clamp_vw_sp_b(55);
+          top: mixin.clamp_vw_sp_b(100);
+          left: mixin.clamp_vw_sp_b(100);
           z-index: 5;
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
-          width: clamp_vw_sp_v(55);
-          height: clamp_vw_sp_v(345);
-          font-size: clamp_vw_sp_v(20);
+        @include mixin.sp_v(479px) {
+          width: mixin.clamp_vw_sp_v(55);
+          height: mixin.clamp_vw_sp_v(345);
+          font-size: mixin.clamp_vw_sp_v(20);
           letter-spacing: 0px;
           padding-top: 0px;
           text-align: center;
-          line-height: clamp_vw_sp_v(55);
-          top: clamp_vw_sp_v(100);
-          left: clamp_vw_sp_v(100);
+          line-height: mixin.clamp_vw_sp_v(55);
+          top: mixin.clamp_vw_sp_v(100);
+          left: mixin.clamp_vw_sp_v(100);
           z-index: 5;
         }
       }
@@ -328,7 +328,7 @@
 
       &__image {
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
           width: 1920px;
           height: 947px;
           background: url("../images/fv.jpg") no-repeat;
@@ -336,36 +336,36 @@
         }
 
         /* PC */
-        @include pc(1919px) {
-          width: clamp_vw_pc(1919);
-          height: clamp_vw_pc(947);
+        @include mixin.pc(1919px) {
+          width: mixin.clamp_vw_pc(1919);
+          height: mixin.clamp_vw_pc(947);
           background: url("../images/fv.jpg") no-repeat;
           background-size: contain;
         }
 
         /* タブレット */
-        @include tab(1024px) {
-          width: clamp_vw_tab(1024);
-          height: clamp_vw_tab(1024);
+        @include mixin.tab(1024px) {
+          width: mixin.clamp_vw_tab(1024);
+          height: mixin.clamp_vw_tab(1024);
           background: url("../images/firstview_image_SP.jpg") no-repeat;
           background-size: contain;
           position: absolute;
-          left: clamp_vw_tab(0);
+          left: mixin.clamp_vw_tab(0);
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          width: clamp_vw_sp_b(599);
-          height: clamp_vw_sp_b(599);
+        @include mixin.sp_b(599px) {
+          width: mixin.clamp_vw_sp_b(599);
+          height: mixin.clamp_vw_sp_b(599);
           background: url("../images/firstview_image_SP.jpg") no-repeat;
           background-size: contain;
           position: absolute;
-          left: clamp_vw_sp_b(0);
+          left: mixin.clamp_vw_sp_b(0);
         }
 
-        @include sp_v(479px) {
-          width: clamp_vw_sp_v(479);
-          height: clamp_vw_sp_v(479);
+        @include mixin.sp_v(479px) {
+          width: mixin.clamp_vw_sp_v(479);
+          height: mixin.clamp_vw_sp_v(479);
           background: url("../images/firstview_image_SP.jpg") no-repeat;
           background-size: contain;
           position: absolute;
@@ -380,7 +380,7 @@
 
   .self-introduction {
     /* pc 1920px以上  */
-    @include pc-l(1920px) {
+    @include mixin.pc-l(1920px) {
       width: 1180px;
       height: 664px;
       margin: 0 auto;
@@ -389,32 +389,32 @@
     }
 
     /* PC */
-    @include pc(1919px) {
-      width: clamp_vw_pc(780);
-      height: clamp_vw_pc(448);
+    @include mixin.pc(1919px) {
+      width: mixin.clamp_vw_pc(780);
+      height: mixin.clamp_vw_pc(448);
       margin: 0 auto;
       display: flex;
       justify-content: center;
     }
 
     /* タブレット */
-    @include tab(1024px) {
-      width: clamp_vw_tab(1024);
-      height: clamp_vw_tab(880);
+    @include mixin.tab(1024px) {
+      width: mixin.clamp_vw_tab(1024);
+      height: mixin.clamp_vw_tab(880);
       display: block;
     }
 
     /* スマートフォン横画面 */
-    @include sp_b(599px) {
-      width: clamp_vw_sp_b(589);
-      height: clamp_vw_sp_b(660);
+    @include mixin.sp_b(599px) {
+      width: mixin.clamp_vw_sp_b(589);
+      height: mixin.clamp_vw_sp_b(660);
       display: block;
     }
 
     /* スマートフォン縦画面 */
-    @include sp_v(479px) {
-      width: clamp_vw_sp_v(479);
-      height: clamp_vw_sp_v(660);
+    @include mixin.sp_v(479px) {
+      width: mixin.clamp_vw_sp_v(479);
+      height: mixin.clamp_vw_sp_v(660);
       display: block;
     }
 
@@ -422,33 +422,33 @@
 
     &-inner {
       /* pc 1920px以上  */
-      @include pc-l(1920px) {
+      @include mixin.pc-l(1920px) {
         width: 490px;
         height: 420px;
       }
 
       /* PC */
-      @include pc(1919px) {
-        width: clamp_vw_pc(345);
-        height: clamp_vw_pc(300);
-        margin-top: clamp_vw_pc(100);
+      @include mixin.pc(1919px) {
+        width: mixin.clamp_vw_pc(345);
+        height: mixin.clamp_vw_pc(300);
+        margin-top: mixin.clamp_vw_pc(100);
       }
 
       /* タブレット */
-      @include tab(1024px) {
-        width: clamp_vw_tab(1024);
+      @include mixin.tab(1024px) {
+        width: mixin.clamp_vw_tab(1024);
         height: auto;
         text-align: center;
       }
 
       /* スマートフォン横画面 */
-      @include sp_b(599px) {
+      @include mixin.sp_b(599px) {
         width: auto;
         height: auto;
       }
 
       /* スマートフォン縦画面 */
-      @include sp_v(479px) {
+      @include mixin.sp_v(479px) {
         width: auto;
         height: auto;
       }
@@ -457,7 +457,7 @@
 
       &__first-line_text {
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
           display: inline-block;
           width: auto;
           font-size: 24px; //固定
@@ -469,43 +469,43 @@
         }
 
         /* PC */
-        @include pc(1919px) {
+        @include mixin.pc(1919px) {
           display: inline-block;
           width: auto;
           font-size: 24px; //固定
           font-weight: 500;
           background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
-          margin-top: clamp_vw_pc(60);
+          margin-top: mixin.clamp_vw_pc(60);
           line-height: 22px;
         }
 
         /* タブレット */
-        @include tab(1024px) {
+        @include mixin.tab(1024px) {
           display: inline-block;
           width: auto;
-          margin-top: clamp_vw_tab(60);
-          font-size: clamp_vw_tab(26);
-          letter-spacing: clamp_vw_tab(-1);
+          margin-top: mixin.clamp_vw_tab(60);
+          font-size: mixin.clamp_vw_tab(26);
+          letter-spacing: mixin.clamp_vw_tab(-1);
           text-align: center;
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
+        @include mixin.sp_b(599px) {
           display: inline-block;
           width: auto;
-          margin-top: clamp_vw_sp_b(60);
-          font-size: clamp_vw_sp_b(23);
-          letter-spacing: clamp_vw_sp_b(-2);
+          margin-top: mixin.clamp_vw_sp_b(60);
+          font-size: mixin.clamp_vw_sp_b(23);
+          letter-spacing: mixin.clamp_vw_sp_b(-2);
           text-align: center;
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
+        @include mixin.sp_v(479px) {
           display: inline-block;
           width: auto;
-          margin-top: clamp_vw_sp_v(60);
-          font-size: clamp_vw_sp_v(23);
-          letter-spacing: clamp_vw_sp_v(-3);
+          margin-top: mixin.clamp_vw_sp_v(60);
+          font-size: mixin.clamp_vw_sp_v(23);
+          letter-spacing: mixin.clamp_vw_sp_v(-3);
           text-align: center;
         }
       }
@@ -514,7 +514,7 @@
 
       &__second-line_text {
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
           display: inline-block;
           width: auto;
           font-size: 24px;
@@ -527,46 +527,46 @@
         }
 
         /* PC */
-        @include pc(1919px) {
+        @include mixin.pc(1919px) {
           display: inline-block;
           width: auto;
           font-size: 24px; //固定
           font-weight: 500;
           letter-spacing: -0.1px;
           line-height: 24px;
-          margin-top: clamp_vw_pc(60);
+          margin-top: mixin.clamp_vw_pc(60);
           background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
         }
 
         /* タブレット */
-        @include tab(1024px) {
+        @include mixin.tab(1024px) {
           display: inline-block;
           width: auto;
-          margin-top: clamp_vw_tab(60);
-          font-size: clamp_vw_tab(26);
-          letter-spacing: clamp_vw_tab(-1);
+          margin-top: mixin.clamp_vw_tab(60);
+          font-size: mixin.clamp_vw_tab(26);
+          letter-spacing: mixin.clamp_vw_tab(-1);
 
           background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
+        @include mixin.sp_b(599px) {
           display: inline-block;
           width: auto;
-          font-size: clamp_vw_sp_b(23);
-          margin-top: clamp_vw_sp_b(30);
-          letter-spacing: clamp_vw_sp_b(0);
+          font-size: mixin.clamp_vw_sp_b(23);
+          margin-top: mixin.clamp_vw_sp_b(30);
+          letter-spacing: mixin.clamp_vw_sp_b(0);
           text-align: center;
           background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
+        @include mixin.sp_v(479px) {
           display: inline-block;
           width: auto;
-          font-size: clamp_vw_sp_v(23);
-          margin-top: clamp_vw_sp_v(30);
-          letter-spacing: clamp_vw_sp_v(-3);
+          font-size: mixin.clamp_vw_sp_v(23);
+          margin-top: mixin.clamp_vw_sp_v(30);
+          letter-spacing: mixin.clamp_vw_sp_v(-3);
           text-align: center;
           background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
         }
@@ -576,7 +576,7 @@
 
       &__third-line_text {
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
           width: auto;
           font-size: 16px;
           line-height: 38px;
@@ -587,49 +587,49 @@
         }
 
         /* PC */
-        @include pc(1919px) {
+        @include mixin.pc(1919px) {
           display: inline-block;
           width: auto;
-          font-size: clamp_vw_pc(16);
+          font-size: mixin.clamp_vw_pc(16);
           letter-spacing: -0.18px;
-          line-height: clamp_vw_pc(24);
-          margin-top: clamp_vw_pc(30);
+          line-height: mixin.clamp_vw_pc(24);
+          margin-top: mixin.clamp_vw_pc(30);
         }
 
         /* タブレット */
-        @include tab(1024px) {
+        @include mixin.tab(1024px) {
           display: inline-block;
           width: auto;
-          font-size: clamp_vw_tab(16);
+          font-size: mixin.clamp_vw_tab(16);
           text-align: center;
-          line-height: clamp_vw_tab(36);
-          letter-spacing: clamp_vw_tab(-2);
+          line-height: mixin.clamp_vw_tab(36);
+          letter-spacing: mixin.clamp_vw_tab(-2);
           text-align: left;
-          margin-top: clamp_vw_tab(30);
+          margin-top: mixin.clamp_vw_tab(30);
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
+        @include mixin.sp_b(599px) {
           display: inline-block;
           width: auto;
-          font-size: clamp_vw_sp_b(16);
+          font-size: mixin.clamp_vw_sp_b(16);
           text-align: center;
-          line-height: clamp_vw_sp_b(36);
-          letter-spacing: clamp_vw_sp_b(-2);
+          line-height: mixin.clamp_vw_sp_b(36);
+          letter-spacing: mixin.clamp_vw_sp_b(-2);
           text-align: left;
-          margin-top: clamp_vw_sp_b(30);
+          margin-top: mixin.clamp_vw_sp_b(30);
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
+        @include mixin.sp_v(479px) {
           display: inline-block;
           width: auto;
-          font-size: clamp_vw_sp_v(16);
+          font-size: mixin.clamp_vw_sp_v(16);
           text-align: center;
-          line-height: clamp_vw_sp_v(36);
-          letter-spacing: clamp_vw_sp_v(-2);
+          line-height: mixin.clamp_vw_sp_v(36);
+          letter-spacing: mixin.clamp_vw_sp_v(-2);
           text-align: left;
-          margin-top: clamp_vw_sp_v(30);
+          margin-top: mixin.clamp_vw_sp_v(30);
         }
       }
     }
@@ -638,7 +638,7 @@
 
     &__image {
       /* pc 1920px以上  */
-      @include pc-l(1920px) {
+      @include mixin.pc-l(1920px) {
         width: 690px;
         height: 420px;
         margin-top: 162px;
@@ -647,38 +647,38 @@
       }
 
       /* PC */
-      @include pc(1919px) {
-        width: clamp_vw_pc(460);
-        height: clamp_vw_pc(285);
-        margin-top: clamp_vw_pc(100);
+      @include mixin.pc(1919px) {
+        width: mixin.clamp_vw_pc(460);
+        height: mixin.clamp_vw_pc(285);
+        margin-top: mixin.clamp_vw_pc(100);
         background: url("../images/belief.jpg");
         background-size: cover;
       }
 
       /* タブレット */
-      @include tab(1024px) {
-        width: clamp_vw_tab(520);
-        height: clamp_vw_tab(400);
+      @include mixin.tab(1024px) {
+        width: mixin.clamp_vw_tab(520);
+        height: mixin.clamp_vw_tab(400);
         background: url("../images/belief.jpg") no-repeat;
         background-size: contain;
         margin: 0 auto;
-        margin-top: clamp_vw_tab(30);
+        margin-top: mixin.clamp_vw_tab(30);
       }
 
       /* スマートフォン横画面 */
-      @include sp_b(599px) {
-        width: clamp_vw_sp_b(520);
-        height: clamp_vw_sp_b(400);
+      @include mixin.sp_b(599px) {
+        width: mixin.clamp_vw_sp_b(520);
+        height: mixin.clamp_vw_sp_b(400);
         background: url("../images/belief.jpg") no-repeat;
         background-size: contain;
         margin: 0 auto;
-        margin-top: clamp_vw_sp_b(30);
+        margin-top: mixin.clamp_vw_sp_b(30);
       }
 
       /* スマートフォン縦画面 */
-      @include sp_v(479px) {
-        width: clamp_vw_sp_v(479);
-        height: clamp_vw_sp_v(400);
+      @include mixin.sp_v(479px) {
+        width: mixin.clamp_vw_sp_v(479);
+        height: mixin.clamp_vw_sp_v(400);
         background: url("../images/belief.jpg") no-repeat;
         background-size: contain;
         margin-top: 0px;
@@ -693,7 +693,7 @@
 
 .medical-treatment-contents {
   /* pc 1920px以上  */
-  @include pc-l(1920px) {
+  @include mixin.pc-l(1920px) {
     width: 1920px;
     height: auto;
     text-align: center;
@@ -702,33 +702,33 @@
   }
 
   /* PC */
-  @include pc(1919px) {
-    width: clamp_vw_pc(1279);
+  @include mixin.pc(1919px) {
+    width: mixin.clamp_vw_pc(1279);
     height: auto;
     background-color: #f5fcf8;
     text-align: center;
-    padding-bottom: clamp_vw_pc(112);
+    padding-bottom: mixin.clamp_vw_pc(112);
   }
 
   /* タブレット */
-  @include tab(1024px) {
-    width: clamp_vw_tab(1024);
+  @include mixin.tab(1024px) {
+    width: mixin.clamp_vw_tab(1024);
     height: auto;
     background-color: #f3d27f;
   }
 
   /* スマートフォン横画面 */
-  @include sp_b(599px) {
-    width: clamp_vw_sp_b(599);
-    height: clamp_vw_sp_b(2800);
+  @include mixin.sp_b(599px) {
+    width: mixin.clamp_vw_sp_b(599);
+    height: mixin.clamp_vw_sp_b(2800);
     height: auto;
     background-color: #f5fcf8;
   }
 
   /* スマートフォン縦画面 */
-  @include sp_v(479px) {
-    width: clamp_vw_sp_v(479);
-    height: clamp_vw_sp_v(2800);
+  @include mixin.sp_v(479px) {
+    width: mixin.clamp_vw_sp_v(479);
+    height: mixin.clamp_vw_sp_v(2800);
     height: auto;
     background-color: #f5fcf8;
   }
@@ -737,7 +737,7 @@
 
   &__first-line-text {
     /* pc 1920px以上  */
-    @include pc-l(1920px) {
+    @include mixin.pc-l(1920px) {
       width: auto;
       font-size: 24px;
       font-weight: 500;
@@ -748,29 +748,29 @@
     }
 
     /* PC */
-    @include pc(1919px) {
+    @include mixin.pc(1919px) {
       display: inline-block;
       width: auto;
       font-size: 24px;
       font-weight: 500;
       line-height: 22px;
       background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
-      margin-top: clamp_vw_pc(85);
+      margin-top: mixin.clamp_vw_pc(85);
     }
 
     /* タブレット */
-    @include tab(1024px) {
-      font-size: clamp_vw_tab(28);
+    @include mixin.tab(1024px) {
+      font-size: mixin.clamp_vw_tab(28);
     }
 
     /* スマートフォン横画面 */
-    @include sp_b(599px) {
-      font-size: clamp_vw_sp_b(24);
+    @include mixin.sp_b(599px) {
+      font-size: mixin.clamp_vw_sp_b(24);
     }
 
     /* スマートフォン縦画面 */
-    @include sp_v(479px) {
-      font-size: clamp_vw_sp_v(24);
+    @include mixin.sp_v(479px) {
+      font-size: mixin.clamp_vw_sp_v(24);
     }
   }
 
@@ -778,7 +778,7 @@
 
   &__second-line-text {
     /* pc 1920px以上  */
-    @include pc-l(1920px) {
+    @include mixin.pc-l(1920px) {
       width: auto;
       font-size: 16px;
       font-weight: 500;
@@ -788,28 +788,28 @@
     }
 
     /* PC */
-    @include pc(1919px) {
+    @include mixin.pc(1919px) {
       display: inline-block;
       width: auto;
       font-size: 16px;
       font-weight: 500;
       line-height: 22px;
-      margin-top: clamp_vw_pc(79);
+      margin-top: mixin.clamp_vw_pc(79);
     }
 
     /* タブレット */
-    @include tab(1024px) {
-      font-size: clamp_vw_tab(24);
+    @include mixin.tab(1024px) {
+      font-size: mixin.clamp_vw_tab(24);
     }
 
     /* スマートフォン横画面 */
-    @include sp_b(599px) {
-      letter-spacing: clamp_vw_sp_b(2.5);
+    @include mixin.sp_b(599px) {
+      letter-spacing: mixin.clamp_vw_sp_b(2.5);
     }
 
     /* スマートフォン縦画面 */
-    @include sp_v(479px) {
-      letter-spacing: clamp_vw_sp_v(2.5);
+    @include mixin.sp_v(479px) {
+      letter-spacing: mixin.clamp_vw_sp_v(2.5);
     }
   }
 
@@ -817,7 +817,7 @@
 
   &__inner {
     /* pc 1920px以上  */
-    @include pc-l(1920px) {
+    @include mixin.pc-l(1920px) {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -825,39 +825,39 @@
     }
 
     /* PC */
-    @include pc(1919px) {
+    @include mixin.pc(1919px) {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: clamp_vw_pc(37);
+      margin-top: mixin.clamp_vw_pc(37);
     }
 
     /* タブレット */
-    @include tab(1024px) {
+    @include mixin.tab(1024px) {
       margin: 0;
-      width: clamp_vw_tab(1024);
-      margin-top: clamp_vw_tab(50);
+      width: mixin.clamp_vw_tab(1024);
+      margin-top: mixin.clamp_vw_tab(50);
     }
 
     /* スマートフォン横画面 */
-    @include sp_b(599px) {
+    @include mixin.sp_b(599px) {
       margin: 0;
-      width: clamp_vw_sp_b(599);
-      margin-top: clamp_vw_sp_b(50);
+      width: mixin.clamp_vw_sp_b(599);
+      margin-top: mixin.clamp_vw_sp_b(50);
     }
 
     /* スマートフォン縦画面 */
-    @include sp_v(479px) {
+    @include mixin.sp_v(479px) {
       margin: 0;
-      width: clamp_vw_sp_v(479);
-      margin-top: clamp_vw_sp_v(50);
+      width: mixin.clamp_vw_sp_v(479);
+      margin-top: mixin.clamp_vw_sp_v(50);
     }
 
     // =========================================
 
     &-article-board {
       /* pc 1920px以上  */
-      @include pc-l(1920px) {
+      @include mixin.pc-l(1920px) {
         width: 380px;
         height: 591px;
         border: 1px solid;
@@ -868,44 +868,44 @@
       }
 
       /* PC */
-      @include pc(1919px) {
-        width: clamp_vw_pc(380);
-        height: clamp_vw_pc(591);
+      @include mixin.pc(1919px) {
+        width: mixin.clamp_vw_pc(380);
+        height: mixin.clamp_vw_pc(591);
         border: 1px solid;
         border-radius: 10px;
-        margin-left: clamp_vw_pc(10);
-        margin-right: clamp_vw_pc(10);
+        margin-left: mixin.clamp_vw_pc(10);
+        margin-right: mixin.clamp_vw_pc(10);
         text-align: center;
         position: relative;
         background-color: rgb(255, 255, 255);
       }
 
       /* タブレット */
-      @include tab(1024px) {
-        width: clamp_vw_tab(800);
-        height: clamp_vw_tab(700);
-        margin-top: clamp_vw_tab(30);
+      @include mixin.tab(1024px) {
+        width: mixin.clamp_vw_tab(800);
+        height: mixin.clamp_vw_tab(700);
+        margin-top: mixin.clamp_vw_tab(30);
       }
 
       /* スマートフォン横画面 */
-      @include sp_b(599px) {
-        width: clamp_vw_sp_b(500);
-        height: clamp_vw_sp_b(575);
-        margin-top: clamp_vw_sp_b(30);
+      @include mixin.sp_b(599px) {
+        width: mixin.clamp_vw_sp_b(500);
+        height: mixin.clamp_vw_sp_b(575);
+        margin-top: mixin.clamp_vw_sp_b(30);
       }
 
       /* スマートフォン縦画面 */
-      @include sp_v(479px) {
-        width: clamp_vw_sp_v(400);
-        height: clamp_vw_sp_v(575);
-        margin-top: clamp_vw_sp_v(30);
+      @include mixin.sp_v(479px) {
+        width: mixin.clamp_vw_sp_v(400);
+        height: mixin.clamp_vw_sp_v(575);
+        margin-top: mixin.clamp_vw_sp_v(30);
       }
 
       // ==============================================
 
       &--title {
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
           font-size: 24px;
           font-weight: 500;
           text-align: center;
@@ -913,31 +913,31 @@
         }
 
         /* PC */
-        @include pc(1919px) {
-          font-size: clamp_vw_pc(24);
+        @include mixin.pc(1919px) {
+          font-size: mixin.clamp_vw_pc(24);
           font-weight: 500;
-          margin-top: clamp_vw_pc(35);
+          margin-top: mixin.clamp_vw_pc(35);
         }
 
         /* タブレット */
-        @include tab(1024px) {
-          font-size: clamp_vw_tab(26);
+        @include mixin.tab(1024px) {
+          font-size: mixin.clamp_vw_tab(26);
           margin: 0 auto;
-          margin-top: clamp_vw_tab(35);
+          margin-top: mixin.clamp_vw_tab(35);
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          font-size: clamp_vw_sp_b(24);
+        @include mixin.sp_b(599px) {
+          font-size: mixin.clamp_vw_sp_b(24);
           margin: 0 auto;
-          margin-top: clamp_vw_sp_b(35);
+          margin-top: mixin.clamp_vw_sp_b(35);
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
-          font-size: clamp_vw_sp_v(24);
+        @include mixin.sp_v(479px) {
+          font-size: mixin.clamp_vw_sp_v(24);
           margin: 0 auto;
-          margin-top: clamp_vw_sp_v(35);
+          margin-top: mixin.clamp_vw_sp_v(35);
         }
       }
 
@@ -945,7 +945,7 @@
 
       &--content-left {
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
           width: 320px;
           font-size: 16px;
           font-weight: 500;
@@ -956,47 +956,47 @@
         }
 
         /* PC */
-        @include pc(1919px) {
-          width: clamp_vw_pc(320);
-          font-size: clamp_vw_pc(16);
+        @include mixin.pc(1919px) {
+          width: mixin.clamp_vw_pc(320);
+          font-size: mixin.clamp_vw_pc(16);
           font-weight: 500;
           letter-spacing: -0.11px;
           line-height: 38px;
           margin: 0 auto;
-          margin-top: clamp_vw_pc(54);
-          margin-bottom: clamp_vw_pc(31);
+          margin-top: mixin.clamp_vw_pc(54);
+          margin-bottom: mixin.clamp_vw_pc(31);
         }
 
         /* タブレット */
-        @include tab(1024px) {
-          font-size: clamp_vw_tab(22);
+        @include mixin.tab(1024px) {
+          font-size: mixin.clamp_vw_tab(22);
           text-align: center;
-          line-height: clamp_vw_tab(38);
-          width: clamp_vw_tab(700);
+          line-height: mixin.clamp_vw_tab(38);
+          width: mixin.clamp_vw_tab(700);
           margin: 0 auto;
-          margin-top: clamp_vw_tab(35);
+          margin-top: mixin.clamp_vw_tab(35);
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          font-size: clamp_vw_sp_b(18);
-          letter-spacing: clamp_vw_sp_b(0);
+        @include mixin.sp_b(599px) {
+          font-size: mixin.clamp_vw_sp_b(18);
+          letter-spacing: mixin.clamp_vw_sp_b(0);
           text-align: center;
-          line-height: clamp_vw_sp_b(38);
-          width: clamp_vw_sp_b(500);
+          line-height: mixin.clamp_vw_sp_b(38);
+          width: mixin.clamp_vw_sp_b(500);
           margin: 0 auto;
-          margin-top: clamp_vw_sp_b(35);
+          margin-top: mixin.clamp_vw_sp_b(35);
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
-          font-size: clamp_vw_sp_v(18);
-          letter-spacing: clamp_vw_sp_v(-3);
+        @include mixin.sp_v(479px) {
+          font-size: mixin.clamp_vw_sp_v(18);
+          letter-spacing: mixin.clamp_vw_sp_v(-3);
           text-align: left;
-          line-height: clamp_vw_sp_v(38);
-          width: clamp_vw_sp_v(350);
+          line-height: mixin.clamp_vw_sp_v(38);
+          width: mixin.clamp_vw_sp_v(350);
           margin: 0 auto;
-          margin-top: clamp_vw_sp_v(35);
+          margin-top: mixin.clamp_vw_sp_v(35);
         }
       }
 
@@ -1004,7 +1004,7 @@
 
       &--content-center {
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
           width: 320px;
           font-size: 16px;
           font-weight: 500;
@@ -1015,47 +1015,47 @@
         }
 
         /* PC */
-        @include pc(1919px) {
-          width: clamp_vw_pc(320);
-          font-size: clamp_vw_pc(16);
+        @include mixin.pc(1919px) {
+          width: mixin.clamp_vw_pc(320);
+          font-size: mixin.clamp_vw_pc(16);
           font-weight: 500;
           letter-spacing: -0.11px;
           line-height: 38px;
           margin: 0 auto;
-          margin-top: clamp_vw_pc(54);
-          margin-bottom: clamp_vw_pc(31);
+          margin-top: mixin.clamp_vw_pc(54);
+          margin-bottom: mixin.clamp_vw_pc(31);
         }
 
         /* タブレット */
-        @include tab(1024px) {
-          font-size: clamp_vw_tab(22);
+        @include mixin.tab(1024px) {
+          font-size: mixin.clamp_vw_tab(22);
           text-align: center;
-          line-height: clamp_vw_tab(38);
-          width: clamp_vw_tab(700);
+          line-height: mixin.clamp_vw_tab(38);
+          width: mixin.clamp_vw_tab(700);
           margin: 0 auto;
-          margin-top: clamp_vw_tab(35);
+          margin-top: mixin.clamp_vw_tab(35);
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          font-size: clamp_vw_sp_b(18);
-          letter-spacing: clamp_vw_sp_b(0);
+        @include mixin.sp_b(599px) {
+          font-size: mixin.clamp_vw_sp_b(18);
+          letter-spacing: mixin.clamp_vw_sp_b(0);
           text-align: center;
-          line-height: clamp_vw_sp_b(38);
-          width: clamp_vw_sp_b(500);
+          line-height: mixin.clamp_vw_sp_b(38);
+          width: mixin.clamp_vw_sp_b(500);
           margin: 0 auto;
-          margin-top: clamp_vw_sp_b(35);
+          margin-top: mixin.clamp_vw_sp_b(35);
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
-          font-size: clamp_vw_sp_v(18);
-          letter-spacing: clamp_vw_sp_v(-3);
+        @include mixin.sp_v(479px) {
+          font-size: mixin.clamp_vw_sp_v(18);
+          letter-spacing: mixin.clamp_vw_sp_v(-3);
           text-align: left;
-          line-height: clamp_vw_sp_v(38);
-          width: clamp_vw_sp_v(350);
+          line-height: mixin.clamp_vw_sp_v(38);
+          width: mixin.clamp_vw_sp_v(350);
           margin: 0 auto;
-          margin-top: clamp_vw_sp_v(35);
+          margin-top: mixin.clamp_vw_sp_v(35);
         }
       }
 
@@ -1063,7 +1063,7 @@
 
       &--content-right {
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
           width: 320px;
           font-size: 16px;
           font-weight: 500;
@@ -1074,47 +1074,47 @@
         }
 
         /* PC */
-        @include pc(1919px) {
-          width: clamp_vw_pc(320);
-          font-size: clamp_vw_pc(16);
+        @include mixin.pc(1919px) {
+          width: mixin.clamp_vw_pc(320);
+          font-size: mixin.clamp_vw_pc(16);
           font-weight: 500;
           letter-spacing: -0.11px;
           line-height: 38px;
           margin: 0 auto;
-          margin-top: clamp_vw_pc(54);
-          margin-bottom: clamp_vw_pc(31);
+          margin-top: mixin.clamp_vw_pc(54);
+          margin-bottom: mixin.clamp_vw_pc(31);
         }
 
         /* タブレット */
-        @include tab(1024px) {
-          font-size: clamp_vw_tab(22);
+        @include mixin.tab(1024px) {
+          font-size: mixin.clamp_vw_tab(22);
           text-align: center;
-          line-height: clamp_vw_tab(38);
-          width: clamp_vw_tab(700);
+          line-height: mixin.clamp_vw_tab(38);
+          width: mixin.clamp_vw_tab(700);
           margin: 0 auto;
-          margin-top: clamp_vw_tab(35);
+          margin-top: mixin.clamp_vw_tab(35);
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          font-size: clamp_vw_sp_b(18);
-          letter-spacing: clamp_vw_sp_b(0);
+        @include mixin.sp_b(599px) {
+          font-size: mixin.clamp_vw_sp_b(18);
+          letter-spacing: mixin.clamp_vw_sp_b(0);
           text-align: center;
-          line-height: clamp_vw_sp_b(38);
-          width: clamp_vw_sp_b(500);
+          line-height: mixin.clamp_vw_sp_b(38);
+          width: mixin.clamp_vw_sp_b(500);
           margin: 0 auto;
-          margin-top: clamp_vw_sp_b(35);
+          margin-top: mixin.clamp_vw_sp_b(35);
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
-          font-size: clamp_vw_sp_v(18);
-          letter-spacing: clamp_vw_sp_v(-3);
+        @include mixin.sp_v(479px) {
+          font-size: mixin.clamp_vw_sp_v(18);
+          letter-spacing: mixin.clamp_vw_sp_v(-3);
           text-align: left;
-          line-height: clamp_vw_sp_v(38);
-          width: clamp_vw_sp_v(350);
+          line-height: mixin.clamp_vw_sp_v(38);
+          width: mixin.clamp_vw_sp_v(350);
           margin: 0 auto;
-          margin-top: clamp_vw_sp_v(35);
+          margin-top: mixin.clamp_vw_sp_v(35);
         }
       }
 
@@ -1122,7 +1122,7 @@
 
       &--image-left {
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
           width: 187px;
           height: 180px;
           background: url("../images/g0108.jpg");
@@ -1134,9 +1134,9 @@
         }
 
         /* PC */
-        @include pc(1919px) {
-          width: clamp_vw_pc(187);
-          height: clamp_vw_pc(187);
+        @include mixin.pc(1919px) {
+          width: mixin.clamp_vw_pc(187);
+          height: mixin.clamp_vw_pc(187);
           background: url("../images/g0108.jpg");
           background-size: cover;
           position: absolute;
@@ -1146,27 +1146,27 @@
         }
 
         /* タブレット */
-        @include tab(1024px) {
-          width: clamp_vw_tab(340);
-          height: clamp_vw_tab(340);
+        @include mixin.tab(1024px) {
+          width: mixin.clamp_vw_tab(340);
+          height: mixin.clamp_vw_tab(340);
           background: url("../images/g0108.jpg");
           background-size: cover;
           top: 72%;
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          width: clamp_vw_sp_b(230);
-          height: clamp_vw_sp_b(230);
+        @include mixin.sp_b(599px) {
+          width: mixin.clamp_vw_sp_b(230);
+          height: mixin.clamp_vw_sp_b(230);
           background: url("../images/g0108.jpg");
           background-size: cover;
           top: 77%;
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
-          width: clamp_vw_sp_v(230);
-          height: clamp_vw_sp_v(230);
+        @include mixin.sp_v(479px) {
+          width: mixin.clamp_vw_sp_v(230);
+          height: mixin.clamp_vw_sp_v(230);
           background: url("../images/g0108.jpg");
           background-size: cover;
           top: 77%;
@@ -1177,7 +1177,7 @@
 
       &--image-center {
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
           width: 187px;
           height: 180px;
           background: url("../images/g0099.jpg");
@@ -1189,9 +1189,9 @@
         }
 
         /* PC */
-        @include pc(1919px) {
-          width: clamp_vw_pc(187);
-          height: clamp_vw_pc(187);
+        @include mixin.pc(1919px) {
+          width: mixin.clamp_vw_pc(187);
+          height: mixin.clamp_vw_pc(187);
           background: url("../images/g0099.jpg");
           background-size: cover;
           position: absolute;
@@ -1201,27 +1201,27 @@
         }
 
         /* タブレット */
-        @include tab(1024px) {
-          width: clamp_vw_tab(340);
-          height: clamp_vw_tab(340);
+        @include mixin.tab(1024px) {
+          width: mixin.clamp_vw_tab(340);
+          height: mixin.clamp_vw_tab(340);
           background: url("../images/g0099.jpg");
           background-size: cover;
           top: 70%;
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          width: clamp_vw_sp_b(230);
-          height: clamp_vw_sp_b(230);
+        @include mixin.sp_b(599px) {
+          width: mixin.clamp_vw_sp_b(230);
+          height: mixin.clamp_vw_sp_b(230);
           background: url("../images/g0099.jpg");
           background-size: cover;
           top: 70%;
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
-          width: clamp_vw_sp_v(230);
-          height: clamp_vw_sp_v(230);
+        @include mixin.sp_v(479px) {
+          width: mixin.clamp_vw_sp_v(230);
+          height: mixin.clamp_vw_sp_v(230);
           background: url("../images/g0099.jpg");
           background-size: cover;
           top: 70%;
@@ -1232,7 +1232,7 @@
 
       &--image-right {
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
           width: 187px;
           height: 180px;
           background: url("../images/g0092.jpg");
@@ -1244,9 +1244,9 @@
         }
 
         /* PC */
-        @include pc(1919px) {
-          width: clamp_vw_pc(187);
-          height: clamp_vw_pc(187);
+        @include mixin.pc(1919px) {
+          width: mixin.clamp_vw_pc(187);
+          height: mixin.clamp_vw_pc(187);
           background: url("../images/g0092.jpg");
           background-size: cover;
           position: absolute;
@@ -1256,27 +1256,27 @@
         }
 
         /* タブレット */
-        @include tab(1024px) {
-          width: clamp_vw_tab(340);
-          height: clamp_vw_tab(340);
+        @include mixin.tab(1024px) {
+          width: mixin.clamp_vw_tab(340);
+          height: mixin.clamp_vw_tab(340);
           background: url("../images/g0092.jpg");
           background-size: cover;
           top: 72%;
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          width: clamp_vw_sp_b(230);
-          height: clamp_vw_sp_b(230);
+        @include mixin.sp_b(599px) {
+          width: mixin.clamp_vw_sp_b(230);
+          height: mixin.clamp_vw_sp_b(230);
           background: url("../images/g0092.jpg");
           background-size: cover;
           top: 77%;
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
-          width: clamp_vw_sp_v(230);
-          height: clamp_vw_sp_v(230);
+        @include mixin.sp_v(479px) {
+          width: mixin.clamp_vw_sp_v(230);
+          height: mixin.clamp_vw_sp_v(230);
           background: url("../images/g0092.jpg");
           background-size: cover;
           top: 77%;
@@ -1289,7 +1289,7 @@
 
   .notice-title {
     /* pc 1920px以上  */
-    @include pc-l(1920px) {
+    @include mixin.pc-l(1920px) {
       display: inline-block;
       width: auto;
       font-size: 24px;
@@ -1300,29 +1300,29 @@
     }
 
     /* PC */
-    @include pc(1919px) {
+    @include mixin.pc(1919px) {
       display: inline-block;
       width: auto;
       font-size: 24px;
       font-weight: 500;
       line-height: 22px;
       background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
-      margin-top: clamp_vw_pc(85);
+      margin-top: mixin.clamp_vw_pc(85);
     }
 
     /* タブレット */
-    @include tab(1024px) {
-      font-size: clamp_vw_tab(28);
+    @include mixin.tab(1024px) {
+      font-size: mixin.clamp_vw_tab(28);
     }
 
     /* スマートフォン横画面 */
-    @include sp_b(599px) {
-      font-size: clamp_vw_sp_b(24);
+    @include mixin.sp_b(599px) {
+      font-size: mixin.clamp_vw_sp_b(24);
     }
 
     /* スマートフォン縦画面 */
-    @include sp_v(479px) {
-      font-size: clamp_vw_sp_v(24);
+    @include mixin.sp_v(479px) {
+      font-size: mixin.clamp_vw_sp_v(24);
     }
   }
 
@@ -1341,7 +1341,7 @@
     flex-wrap: wrap;
 
     /* pc 1920px以上  */
-    @include pc-l(1920px) {
+    @include mixin.pc-l(1920px) {
       width: 1180px;
       height: 394px;
       margin: 0 auto;
@@ -1349,35 +1349,35 @@
     }
 
     /* PC */
-    @include pc(1919px) {
-      width: clamp_vw_pc(1180);
+    @include mixin.pc(1919px) {
+      width: mixin.clamp_vw_pc(1180);
       height: auto;
       margin: 0 auto;
-      margin-top: clamp_vw_pc(74);
+      margin-top: mixin.clamp_vw_pc(74);
     }
 
     /* タブレット */
-    @include tab(1024px) {
-      width: clamp_vw_tab(900);
+    @include mixin.tab(1024px) {
+      width: mixin.clamp_vw_tab(900);
       height: auto;
       margin: 0 auto;
-      margin-top: clamp_vw_tab(50);
+      margin-top: mixin.clamp_vw_tab(50);
     }
 
     /* スマートフォン横画面 */
-    @include sp_b(599px) {
-      width: clamp_vw_sp_b(540);
+    @include mixin.sp_b(599px) {
+      width: mixin.clamp_vw_sp_b(540);
       height: auto;
       margin: 0 auto;
-      margin-top: clamp_vw_sp_b(50);
+      margin-top: mixin.clamp_vw_sp_b(50);
     }
 
     /* スマートフォン縦画面 */
-    @include sp_v(479px) {
-      width: clamp_vw_sp_v(420);
+    @include mixin.sp_v(479px) {
+      width: mixin.clamp_vw_sp_v(420);
       height: auto;
       margin: 0 auto;
-      margin-top: clamp_vw_sp_v(50);
+      margin-top: mixin.clamp_vw_sp_v(50);
     }
 
     // ============================================
@@ -1386,28 +1386,28 @@
       height: 34px;
 
       /* pc 1920px以上  */
-      @include pc-l(1920px) {
-        width: clamp_vw_sp_b(1100);
+      @include mixin.pc-l(1920px) {
+        width: mixin.clamp_vw_sp_b(1100);
       }
 
       /* PC */
-      @include pc(1919px) {
-        width: clamp_vw_pc(1100);
+      @include mixin.pc(1919px) {
+        width: mixin.clamp_vw_pc(1100);
       }
 
       /* タブレット */
-      @include tab(1024px) {
-        width: clamp_vw_tab(900);
+      @include mixin.tab(1024px) {
+        width: mixin.clamp_vw_tab(900);
       }
 
       /* スマートフォン横画面 */
-      @include sp_b(599px) {
-        width: clamp_vw_sp_b(490);
+      @include mixin.sp_b(599px) {
+        width: mixin.clamp_vw_sp_b(490);
       }
 
       /* スマートフォン縦画面 */
-      @include sp_v(479px) {
-        width: clamp_vw_sp_v(380);
+      @include mixin.sp_v(479px) {
+        width: mixin.clamp_vw_sp_v(380);
       }
     }
 
@@ -1425,38 +1425,38 @@
       align-items: center;
 
       // /* pc 1920px以上  */
-      // @include pc-l(1920px) {
+      // @include mixin.pc-l(1920px) {
       // }
 
       /* PC */
-      @include pc(1919px) {
-        width: clamp_vw_pc(1048);
+      @include mixin.pc(1919px) {
+        width: mixin.clamp_vw_pc(1048);
         border-bottom: 1px solid #e7e7e7;
-        margin-right: clamp_vw_pc(66);
-        margin-left: clamp_vw_pc(66);
-        padding-top: clamp_vw_pc(24.5);
-        padding-bottom: clamp_vw_pc(20.5);
+        margin-right: mixin.clamp_vw_pc(66);
+        margin-left: mixin.clamp_vw_pc(66);
+        padding-top: mixin.clamp_vw_pc(24.5);
+        padding-bottom: mixin.clamp_vw_pc(20.5);
       }
 
       /* タブレット */
-      @include tab(1024px) {
+      @include mixin.tab(1024px) {
         background-color: yellow;
-        margin-left: clamp_vw_tab(20);
-        margin-right: clamp_vw_tab(20);
+        margin-left: mixin.clamp_vw_tab(20);
+        margin-right: mixin.clamp_vw_tab(20);
         align-items: flex-start;
       }
 
       /* スマートフォン横画面 */
-      @include sp_b(599px) {
-        margin-left: clamp_vw_sp_b(20);
-        margin-right: clamp_vw_sp_b(20);
+      @include mixin.sp_b(599px) {
+        margin-left: mixin.clamp_vw_sp_b(20);
+        margin-right: mixin.clamp_vw_sp_b(20);
         align-items: flex-start;
       }
 
       /* スマートフォン縦画面 */
-      @include sp_v(479px) {
-        margin-left: clamp_vw_sp_v(20);
-        margin-right: clamp_vw_sp_v(20);
+      @include mixin.sp_v(479px) {
+        margin-left: mixin.clamp_vw_sp_v(20);
+        margin-right: mixin.clamp_vw_sp_v(20);
         align-items: flex-start;
       }
 
@@ -1466,27 +1466,27 @@
         flex-wrap: nowrap;
 
         // /* pc 1920px以上  */
-        // @include pc-l(1920px) {
+        // @include mixin.pc-l(1920px) {
         // }
 
         // /* PC */
-        // @include pc(1919px) {
+        // @include mixin.pc(1919px) {
         // }
 
         // /* タブレット */
-        // @include tab(1024px) {
+        // @include mixin.tab(1024px) {
         // }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          width: clamp_vw_sp_b(120);
+        @include mixin.sp_b(599px) {
+          width: mixin.clamp_vw_sp_b(120);
           flex-direction: column;
           align-items: flex-start;
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
-          width: clamp_vw_sp_v(100);
+        @include mixin.sp_v(479px) {
+          width: mixin.clamp_vw_sp_v(100);
           flex-direction: column;
           align-items: flex-start;
         }
@@ -1494,7 +1494,7 @@
         // ========================================================
         &--date {
           // /* pc 1920px以上  */
-          @include pc-l(1920px) {
+          @include mixin.pc-l(1920px) {
             width: aut0;
             height: 25px;
             font-size: 16px;
@@ -1506,41 +1506,41 @@
           }
 
           /* PC */
-          @include pc(1919px) {
-            font-size: clamp_vw_pc(16);
+          @include mixin.pc(1919px) {
+            font-size: mixin.clamp_vw_pc(16);
           }
 
           /* タブレット */
-          @include tab(1024px) {
-            width: clamp_vw_tab(120);
-            font-size: clamp_vw_tab(16);
+          @include mixin.tab(1024px) {
+            width: mixin.clamp_vw_tab(120);
+            font-size: mixin.clamp_vw_tab(16);
             text-align: center;
             margin: 0;
-            margin-top: clamp_vw_tab(10);
+            margin-top: mixin.clamp_vw_tab(10);
           }
 
           // /* スマートフォン横画面 */
-          // @include sp_b(599px) {
-          //   width: clamp_vw_sp_b(120);
-          //   font-size: clamp_vw_sp_b(16);
+          // @include mixin.sp_b(599px) {
+          //   width: mixin.clamp_vw_sp_b(120);
+          //   font-size: mixin.clamp_vw_sp_b(16);
           //   text-align: center;
           //   margin: 0;
-          //   margin-top: clamp_vw_sp_b(10);
+          //   margin-top: mixin.clamp_vw_sp_b(10);
           // }
 
           // /* スマートフォン縦画面 */
-          // @include sp_v(479px) {
-          //   width: clamp_vw_sp_v(100);
-          //   font-size: clamp_vw_sp_v(16);
+          // @include mixin.sp_v(479px) {
+          //   width: mixin.clamp_vw_sp_v(100);
+          //   font-size: mixin.clamp_vw_sp_v(16);
           //   margin: 0;
-          //   margin-top: clamp_vw_sp_v(10);
+          //   margin-top: mixin.clamp_vw_sp_v(10);
           // }
         }
 
         // ===============================================
         &--info {
           // /* pc 1920px以上  */
-          @include pc-l(1920px) {
+          @include mixin.pc-l(1920px) {
             width: 80px;
             height: 25px;
             font-size: 12px;
@@ -1554,38 +1554,38 @@
           }
 
           /* PC */
-          @include pc(1919px) {
-            width: clamp_vw_pc(80);
-            height: clamp_vw_pc(25);
-            font-size: clamp_vw_pc(12);
+          @include mixin.pc(1919px) {
+            width: mixin.clamp_vw_pc(80);
+            height: mixin.clamp_vw_pc(25);
+            font-size: mixin.clamp_vw_pc(12);
           }
 
           /* タブレット */
-          @include tab(1024px) {
+          @include mixin.tab(1024px) {
             margin: 0;
 
-            font-size: clamp_vw_tab(12);
+            font-size: mixin.clamp_vw_tab(12);
             text-align: center;
-            margin-top: clamp_vw_tab(10);
-            margin-bottom: clamp_vw_tab(10);
+            margin-top: mixin.clamp_vw_tab(10);
+            margin-bottom: mixin.clamp_vw_tab(10);
           }
 
           /* スマートフォン横画面 */
-          @include sp_b(599px) {
+          @include mixin.sp_b(599px) {
             margin: 0;
 
-            font-size: clamp_vw_sp_b(12);
+            font-size: mixin.clamp_vw_sp_b(12);
             text-align: center;
-            margin-top: clamp_vw_sp_b(10);
-            margin-bottom: clamp_vw_sp_b(10);
+            margin-top: mixin.clamp_vw_sp_b(10);
+            margin-bottom: mixin.clamp_vw_sp_b(10);
           }
 
           /* スマートフォン縦画面 */
-          @include sp_v(479px) {
-            font-size: clamp_vw_sp_v(14);
+          @include mixin.sp_v(479px) {
+            font-size: mixin.clamp_vw_sp_v(14);
             margin: 0;
-            margin-top: clamp_vw_sp_v(10);
-            margin-bottom: clamp_vw_sp_v(10);
+            margin-top: mixin.clamp_vw_sp_v(10);
+            margin-bottom: mixin.clamp_vw_sp_v(10);
           }
         }
       }
@@ -1593,33 +1593,33 @@
       // ==================================================
       .article-inner__right {
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
         }
 
         /* PC */
-        @include pc(1919px) {
-          width: clamp_vw_sp_b(800);
+        @include mixin.pc(1919px) {
+          width: mixin.clamp_vw_sp_b(800);
         }
 
         /* タブレット */
-        @include tab(1024px) {
-          width: clamp_vw_tab(500);
+        @include mixin.tab(1024px) {
+          width: mixin.clamp_vw_tab(500);
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          width: clamp_vw_sp_b(350);
+        @include mixin.sp_b(599px) {
+          width: mixin.clamp_vw_sp_b(350);
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
-          width: clamp_vw_sp_v(250);
+        @include mixin.sp_v(479px) {
+          width: mixin.clamp_vw_sp_v(250);
         }
 
         // ===============================================
         &-text {
           /* pc 1920px以上  */
-          @include pc-l(1920px) {
+          @include mixin.pc-l(1920px) {
             font-size: 16px;
             font-weight: 500;
             text-align: left;
@@ -1628,39 +1628,39 @@
             letter-spacing: -0.1px;
           }
           /* PC */
-          @include pc(1919px) {
-            font-size: clamp_vw_pc(16);
+          @include mixin.pc(1919px) {
+            font-size: mixin.clamp_vw_pc(16);
             margin-left: 6px;
             letter-spacing: -0.1px;
           }
 
           /* タブレット */
-          @include tab(1024px) {
-            font-size: clamp_vw_tab(16);
+          @include mixin.tab(1024px) {
+            font-size: mixin.clamp_vw_tab(16);
             margin: 0;
-            margin-top: clamp_vw_tab(10);
-            margin-bottom: clamp_vw_tab(10);
-            margin-left: clamp_vw_tab(30);
+            margin-top: mixin.clamp_vw_tab(10);
+            margin-bottom: mixin.clamp_vw_tab(10);
+            margin-left: mixin.clamp_vw_tab(30);
           }
 
           /* スマートフォン横画面 */
-          @include sp_b(599px) {
-            width: clamp_vw_sp_b(320);
-            font-size: clamp_vw_sp_b(16);
+          @include mixin.sp_b(599px) {
+            width: mixin.clamp_vw_sp_b(320);
+            font-size: mixin.clamp_vw_sp_b(16);
             margin: 0;
-            margin-top: clamp_vw_sp_b(10);
-            margin-bottom: clamp_vw_sp_b(10);
-            margin-left: clamp_vw_sp_b(30);
+            margin-top: mixin.clamp_vw_sp_b(10);
+            margin-bottom: mixin.clamp_vw_sp_b(10);
+            margin-left: mixin.clamp_vw_sp_b(30);
           }
 
           /* スマートフォン縦画面 */
-          @include sp_v(479px) {
-            width: clamp_vw_sp_v(250);
-            font-size: clamp_vw_sp_v(14);
+          @include mixin.sp_v(479px) {
+            width: mixin.clamp_vw_sp_v(250);
+            font-size: mixin.clamp_vw_sp_v(14);
             margin: 0;
-            margin-top: clamp_vw_sp_v(10);
-            margin-bottom: clamp_vw_sp_v(10);
-            margin-left: clamp_vw_sp_v(30);
+            margin-top: mixin.clamp_vw_sp_v(10);
+            margin-bottom: mixin.clamp_vw_sp_v(10);
+            margin-left: mixin.clamp_vw_sp_v(30);
           }
         }
       }
@@ -1670,7 +1670,7 @@
 
     .see-all_inner {
       // /* pc 1920px以上  */
-      @include pc-l(1920px) {
+      @include mixin.pc-l(1920px) {
         width: 1065px;
         height: 100px;
         margin-left: 66px;
@@ -1678,28 +1678,28 @@
       }
 
       /* PC */
-      @include pc(1919px) {
-        width: clamp_vw_pc(1065);
-        margin-left: clamp_vw_pc(66);
+      @include mixin.pc(1919px) {
+        width: mixin.clamp_vw_pc(1065);
+        margin-left: mixin.clamp_vw_pc(66);
       }
 
       /* タブレット */
-      @include tab(1024px) {
+      @include mixin.tab(1024px) {
       }
 
       /* スマートフォン横画面 */
-      @include sp_b(599px) {
-        width: clamp_vw_sp_b(480);
-        height: clamp_vw_sp_b(100);
+      @include mixin.sp_b(599px) {
+        width: mixin.clamp_vw_sp_b(480);
+        height: mixin.clamp_vw_sp_b(100);
         margin: 0;
       }
 
       /* スマートフォン縦画面 */
-      @include sp_v(479px) {
-        width: clamp_vw_sp_v(430);
-        height: clamp_vw_sp_v(50);
+      @include mixin.sp_v(479px) {
+        width: mixin.clamp_vw_sp_v(430);
+        height: mixin.clamp_vw_sp_v(50);
         margin: 0;
-        margin-top: clamp_vw_sp_v(25);
+        margin-top: mixin.clamp_vw_sp_v(25);
       }
 
       // =============================
@@ -1712,30 +1712,30 @@
         letter-spacing: 1.2px;
 
         // /* pc 1920px以上  */
-        // @include pc-l(1920px) {
+        // @include mixin.pc-l(1920px) {
         // }
 
         /* PC */
-        @include pc(1919px) {
-          font-size: clamp_vw_pc(16);
+        @include mixin.pc(1919px) {
+          font-size: mixin.clamp_vw_pc(16);
         }
 
         /* タブレット */
-        @include tab(1024px) {
+        @include mixin.tab(1024px) {
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          font-size: clamp_vw_sp_b(16);
+        @include mixin.sp_b(599px) {
+          font-size: mixin.clamp_vw_sp_b(16);
           margin: 0;
-          margin-right: clamp_vw_sp_b(7);
+          margin-right: mixin.clamp_vw_sp_b(7);
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
-          font-size: clamp_vw_sp_v(16);
+        @include mixin.sp_v(479px) {
+          font-size: mixin.clamp_vw_sp_v(16);
           margin: 0;
-          margin-right: clamp_vw_sp_v(7);
+          margin-right: mixin.clamp_vw_sp_v(7);
         }
       }
 
@@ -1748,26 +1748,26 @@
         // margin-top: 30px;
 
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
         }
 
         /* PC */
-        @include pc(1919px) {
+        @include mixin.pc(1919px) {
         }
 
         /* タブレット */
-        @include tab(1024px) {
+        @include mixin.tab(1024px) {
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
+        @include mixin.sp_b(599px) {
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
-          font-size: clamp_vw_sp_v(14);
+        @include mixin.sp_v(479px) {
+          font-size: mixin.clamp_vw_sp_v(14);
           margin: 0;
-          margin-right: clamp_vw_sp_v(50);
+          margin-right: mixin.clamp_vw_sp_v(50);
         }
       }
     }
@@ -1787,20 +1787,20 @@ div.access__wrapper {
   align-items: flex-start;
 
   /* pc 1920px以上  */
-  @include pc-l(1920px) {
+  @include mixin.pc-l(1920px) {
   }
 
   /* PC */
-  @include pc(1919px) {
+  @include mixin.pc(1919px) {
   }
 
   /* タブレット */
-  @include tab(1024px) {
+  @include mixin.tab(1024px) {
   }
 
   /* スマートフォン横画面 */
-  @include sp_b(599px) {
-    width: clamp_vw_sp_b(589);
+  @include mixin.sp_b(599px) {
+    width: mixin.clamp_vw_sp_b(589);
     height: auto;
     flex-direction: column-reverse;
     padding: 0;
@@ -1808,8 +1808,8 @@ div.access__wrapper {
   }
 
   /* スマートフォン縦画面 */
-  @include sp_v(479px) {
-    width: clamp_vw_sp_v(479);
+  @include mixin.sp_v(479px) {
+    width: mixin.clamp_vw_sp_v(479);
     height: auto;
     flex-direction: column-reverse;
     padding: 0;
@@ -1822,32 +1822,32 @@ div.access__wrapper {
     visibility: hidden;
 
     /* pc 1920px以上  */
-    @include pc-l(1920px) {
+    @include mixin.pc-l(1920px) {
     }
 
     /* PC */
-    @include pc(1919px) {
+    @include mixin.pc(1919px) {
     }
 
     /* タブレット */
-    @include tab(1024px) {
+    @include mixin.tab(1024px) {
     }
 
     /* スマートフォン横画面 */
-    @include sp_b(599px) {
+    @include mixin.sp_b(599px) {
       visibility: visible;
-      width: clamp_vw_sp_b(500);
+      width: mixin.clamp_vw_sp_b(500);
       margin: 0 auto;
-      margin-top: clamp_vw_sp_b(30);
+      margin-top: mixin.clamp_vw_sp_b(30);
       text-align: center;
     }
 
     /* スマートフォン縦画面 */
-    @include sp_v(479px) {
+    @include mixin.sp_v(479px) {
       visibility: visible;
-      width: clamp_vw_sp_v(400);
+      width: mixin.clamp_vw_sp_v(400);
       margin: 0 auto;
-      margin-top: clamp_vw_sp_v(30);
+      margin-top: mixin.clamp_vw_sp_v(30);
       text-align: center;
     }
 
@@ -1857,27 +1857,27 @@ div.access__wrapper {
       visibility: hidden;
 
       /* pc 1920px以上  */
-      @include pc-l(1920px) {
+      @include mixin.pc-l(1920px) {
       }
 
       /* PC */
-      @include pc(1919px) {
+      @include mixin.pc(1919px) {
       }
 
       /* タブレット */
-      @include tab(1024px) {
+      @include mixin.tab(1024px) {
       }
 
       /* スマートフォン横画面 */
-      @include sp_b(599px) {
+      @include mixin.sp_b(599px) {
         visibility: visible;
-        font-size: clamp_vw_sp_b(18);
+        font-size: mixin.clamp_vw_sp_b(18);
       }
 
       /* スマートフォン縦画面 */
-      @include sp_v(479px) {
+      @include mixin.sp_v(479px) {
         visibility: visible;
-        font-size: clamp_vw_sp_v(14);
+        font-size: mixin.clamp_vw_sp_v(14);
       }
     }
   }
@@ -1891,23 +1891,23 @@ div.access__wrapper {
     align-items: flex-start;
 
     /* pc 1920px以上  */
-    @include pc-l(1920px) {
+    @include mixin.pc-l(1920px) {
     }
 
     /* PC */
-    @include pc(1919px) {
+    @include mixin.pc(1919px) {
     }
 
     /* タブレット */
-    @include tab(1024px) {
+    @include mixin.tab(1024px) {
     }
 
-    @include sp_b(599px) {
-      width: clamp_vw_sp_b(599);
+    @include mixin.sp_b(599px) {
+      width: mixin.clamp_vw_sp_b(599);
     }
 
-    @include sp_v(479px) {
-      width: clamp_vw_sp_v(479);
+    @include mixin.sp_v(479px) {
+      width: mixin.clamp_vw_sp_v(479);
     }
 
     // ===============================
@@ -1921,35 +1921,35 @@ div.access__wrapper {
       background-size: cover;
 
       /* pc 1920px以上  */
-      @include pc-l(1920px) {
+      @include mixin.pc-l(1920px) {
       }
 
       /* PC */
-      @include pc(1919px) {
+      @include mixin.pc(1919px) {
       }
 
       /* タブレット */
-      @include tab(1024px) {
+      @include mixin.tab(1024px) {
       }
 
       /* スマートフォン横画面 */
-      @include sp_b(599px) {
-        width: clamp_vw_sp_b(559);
-        height: clamp_vw_sp_b(500);
+      @include mixin.sp_b(599px) {
+        width: mixin.clamp_vw_sp_b(559);
+        height: mixin.clamp_vw_sp_b(500);
         background: url("../images/map.jpg") no-repeat;
         background-size: contain;
         margin: 0 auto;
-        margin-top: clamp_vw_sp_b(30);
+        margin-top: mixin.clamp_vw_sp_b(30);
       }
 
       /* スマートフォン縦画面 */
-      @include sp_v(479px) {
-        width: clamp_vw_sp_v(420);
-        height: clamp_vw_sp_v(310);
+      @include mixin.sp_v(479px) {
+        width: mixin.clamp_vw_sp_v(420);
+        height: mixin.clamp_vw_sp_v(310);
         background: url("../images/map.jpg") no-repeat;
         background-size: contain;
         margin: 0 auto;
-        margin-top: clamp_vw_sp_v(30);
+        margin-top: mixin.clamp_vw_sp_v(30);
       }
     }
 
@@ -1966,32 +1966,32 @@ div.access__wrapper {
       align-items: flex-start;
 
       /* pc 1920px以上  */
-      @include pc-l(1920px) {
+      @include mixin.pc-l(1920px) {
       }
 
       /* PC */
-      @include pc(1919px) {
+      @include mixin.pc(1919px) {
       }
 
       /* タブレット */
-      @include tab(1024px) {
+      @include mixin.tab(1024px) {
       }
 
       /* スマートフォン横画面 */
-      @include sp_b(599px) {
-        width: clamp_vw_sp_b(599);
+      @include mixin.sp_b(599px) {
+        width: mixin.clamp_vw_sp_b(599);
         height: auto;
         margin: 0 auto;
-        margin-top: clamp_vw_sp_b(90);
+        margin-top: mixin.clamp_vw_sp_b(90);
         flex-wrap: nowrap;
       }
 
       /* スマートフォン縦画面 */
-      @include sp_v(479px) {
-        width: clamp_vw_sp_v(420);
+      @include mixin.sp_v(479px) {
+        width: mixin.clamp_vw_sp_v(420);
         height: auto;
         margin: 0 auto;
-        margin-top: clamp_vw_sp_v(120);
+        margin-top: mixin.clamp_vw_sp_v(120);
         flex-wrap: nowrap;
       }
 
@@ -2004,26 +2004,26 @@ div.access__wrapper {
         flex-wrap: wrap;
 
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
         }
 
         /* PC */
-        @include pc(1919px) {
+        @include mixin.pc(1919px) {
         }
 
         /* タブレット */
-        @include tab(1024px) {
+        @include mixin.tab(1024px) {
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
+        @include mixin.sp_b(599px) {
           width: 100%;
           margin-left: 0px;
           margin: 0 auto;
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
+        @include mixin.sp_v(479px) {
           width: 100%;
           margin-left: 0px;
           margin: 0 auto;
@@ -2038,29 +2038,29 @@ div.access__wrapper {
           background-size: cover;
 
           /* pc 1920px以上  */
-          @include pc-l(1920px) {
+          @include mixin.pc-l(1920px) {
           }
 
           /* PC */
-          @include pc(1919px) {
+          @include mixin.pc(1919px) {
           }
 
           /* タブレット */
-          @include tab(1024px) {
+          @include mixin.tab(1024px) {
           }
 
           /* スマートフォン横画面 */
-          @include sp_b(599px) {
-            width: clamp_vw_sp_b(73);
-            height: clamp_vw_sp_b(73);
-            margin-left: clamp_vw_sp_b(145);
+          @include mixin.sp_b(599px) {
+            width: mixin.clamp_vw_sp_b(73);
+            height: mixin.clamp_vw_sp_b(73);
+            margin-left: mixin.clamp_vw_sp_b(145);
           }
 
           /* スマートフォン縦画面 */
-          @include sp_v(479px) {
-            width: clamp_vw_sp_v(73);
-            height: clamp_vw_sp_v(73);
-            margin-left: clamp_vw_sp_v(73);
+          @include mixin.sp_v(479px) {
+            width: mixin.clamp_vw_sp_v(73);
+            height: mixin.clamp_vw_sp_v(73);
+            margin-left: mixin.clamp_vw_sp_v(73);
           }
         }
 
@@ -2071,29 +2071,29 @@ div.access__wrapper {
           height: 73px;
 
           /* pc 1920px以上  */
-          @include pc-l(1920px) {
+          @include mixin.pc-l(1920px) {
           }
 
           /* PC */
-          @include pc(1919px) {
+          @include mixin.pc(1919px) {
           }
 
           /* タブレット */
-          @include tab(1024px) {
+          @include mixin.tab(1024px) {
           }
 
           /* スマートフォン横画面 */
-          @include sp_b(599px) {
-            width: clamp_vw_sp_b(200);
-            height: clamp_vw_sp_b(73);
-            margin-left: clamp_vw_sp_b(15);
+          @include mixin.sp_b(599px) {
+            width: mixin.clamp_vw_sp_b(200);
+            height: mixin.clamp_vw_sp_b(73);
+            margin-left: mixin.clamp_vw_sp_b(15);
           }
 
           /* スマートフォン縦画面 */
-          @include sp_v(479px) {
-            width: clamp_vw_sp_v(200);
-            height: clamp_vw_sp_v(73);
-            margin-left: clamp_vw_sp_v(15);
+          @include mixin.sp_v(479px) {
+            width: mixin.clamp_vw_sp_v(200);
+            height: mixin.clamp_vw_sp_v(73);
+            margin-left: mixin.clamp_vw_sp_v(15);
           }
 
           // ==========================================
@@ -2104,29 +2104,29 @@ div.access__wrapper {
             padding-left: 11px;
 
             /* pc 1920px以上  */
-            @include pc-l(1920px) {
+            @include mixin.pc-l(1920px) {
             }
 
             /* PC */
-            @include pc(1919px) {
+            @include mixin.pc(1919px) {
             }
 
             /* タブレット */
-            @include tab(1024px) {
+            @include mixin.tab(1024px) {
             }
 
             /* スマートフォン横画面 */
-            @include sp_b(599px) {
-              font-size: clamp_vw_sp_b(30);
-              line-height: clamp_vw_sp_b(30);
-              padding-left: clamp_vw_sp_b(11);
+            @include mixin.sp_b(599px) {
+              font-size: mixin.clamp_vw_sp_b(30);
+              line-height: mixin.clamp_vw_sp_b(30);
+              padding-left: mixin.clamp_vw_sp_b(11);
             }
 
             /* スマートフォン縦画面 */
-            @include sp_v(479px) {
-              font-size: clamp_vw_sp_v(30);
-              line-height: clamp_vw_sp_v(30);
-              padding-left: clamp_vw_sp_v(11);
+            @include mixin.sp_v(479px) {
+              font-size: mixin.clamp_vw_sp_v(30);
+              line-height: mixin.clamp_vw_sp_v(30);
+              padding-left: mixin.clamp_vw_sp_v(11);
             }
           }
 
@@ -2138,31 +2138,31 @@ div.access__wrapper {
             padding-left: 26px;
 
             /* pc 1920px以上  */
-            @include pc-l(1920px) {
+            @include mixin.pc-l(1920px) {
             }
 
             /* PC */
-            @include pc(1919px) {
+            @include mixin.pc(1919px) {
             }
 
             /* タブレット */
-            @include tab(1024px) {
+            @include mixin.tab(1024px) {
             }
 
             /* スマートフォン横画面 */
-            @include sp_b(599px) {
-              font-size: clamp_vw_sp_b(30);
-              line-height: clamp_vw_sp_b(30);
-              padding-left: clamp_vw_sp_b(26);
-              margin-top: clamp_vw_sp_b(16);
+            @include mixin.sp_b(599px) {
+              font-size: mixin.clamp_vw_sp_b(30);
+              line-height: mixin.clamp_vw_sp_b(30);
+              padding-left: mixin.clamp_vw_sp_b(26);
+              margin-top: mixin.clamp_vw_sp_b(16);
             }
 
             /* スマートフォン縦画面 */
-            @include sp_v(479px) {
-              font-size: clamp_vw_sp_v(30);
-              line-height: clamp_vw_sp_v(30);
-              padding-left: clamp_vw_sp_v(26);
-              margin-top: clamp_vw_sp_v(16);
+            @include mixin.sp_v(479px) {
+              font-size: mixin.clamp_vw_sp_v(30);
+              line-height: mixin.clamp_vw_sp_v(30);
+              padding-left: mixin.clamp_vw_sp_v(26);
+              margin-top: mixin.clamp_vw_sp_v(16);
             }
           }
         }
@@ -2176,32 +2176,32 @@ div.access__wrapper {
         flex-wrap: wrap;
 
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
         }
 
         /* PC */
-        @include pc(1919px) {
+        @include mixin.pc(1919px) {
         }
 
         /* タブレット */
-        @include tab(1024px) {
+        @include mixin.tab(1024px) {
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
+        @include mixin.sp_b(599px) {
           width: 100%;
           margin: 0 auto;
-          margin-top: clamp_vw_sp_b(30);
+          margin-top: mixin.clamp_vw_sp_b(30);
           display: flex;
           flex-direction: column;
           align-items: center;
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
+        @include mixin.sp_v(479px) {
           width: 100%;
           margin: 0 auto;
-          margin-top: clamp_vw_sp_v(30);
+          margin-top: mixin.clamp_vw_sp_v(30);
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -2215,26 +2215,26 @@ div.access__wrapper {
           letter-spacing: 0.1px;
 
           /* pc 1920px以上  */
-          @include pc-l(1920px) {
+          @include mixin.pc-l(1920px) {
           }
 
           /* PC */
-          @include pc(1919px) {
+          @include mixin.pc(1919px) {
           }
 
           /* タブレット */
-          @include tab(1024px) {
+          @include mixin.tab(1024px) {
           }
 
           /* スマートフォン横画面 */
-          @include sp_b(599px) {
-            font-size: clamp_vw_sp_b(16);
+          @include mixin.sp_b(599px) {
+            font-size: mixin.clamp_vw_sp_b(16);
             display: inline-block;
           }
 
           /* スマートフォン縦画面 */
-          @include sp_v(479px) {
-            font-size: clamp_vw_sp_v(16);
+          @include mixin.sp_v(479px) {
+            font-size: mixin.clamp_vw_sp_v(16);
             display: inline-block;
           }
         }
@@ -2246,29 +2246,29 @@ div.access__wrapper {
           letter-spacing: 0px;
 
           /* pc 1920px以上  */
-          @include pc-l(1920px) {
+          @include mixin.pc-l(1920px) {
           }
 
           /* PC */
-          @include pc(1919px) {
+          @include mixin.pc(1919px) {
           }
 
           /* タブレット */
-          @include tab(1024px) {
+          @include mixin.tab(1024px) {
           }
 
           /* スマートフォン横画面 */
-          @include sp_b(599px) {
-            font-size: clamp_vw_sp_b(18);
+          @include mixin.sp_b(599px) {
+            font-size: mixin.clamp_vw_sp_b(18);
             display: inline-block;
-            margin-top: clamp_vw_sp_b(10);
+            margin-top: mixin.clamp_vw_sp_b(10);
           }
 
           /* スマートフォン縦画面 */
-          @include sp_v(479px) {
-            font-size: clamp_vw_sp_v(18);
+          @include mixin.sp_v(479px) {
+            font-size: mixin.clamp_vw_sp_v(18);
             display: inline-block;
-            margin-top: clamp_vw_sp_v(10);
+            margin-top: mixin.clamp_vw_sp_v(10);
           }
         }
       }
@@ -2283,31 +2283,31 @@ div.access__wrapper {
         font-size: 0; // display: inline-block;ズレ対策
 
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
         }
 
         /* PC */
-        @include pc(1919px) {
+        @include mixin.pc(1919px) {
         }
 
         /* タブレット */
-        @include tab(1024px) {
+        @include mixin.tab(1024px) {
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
+        @include mixin.sp_b(599px) {
           width: 80%;
           margin: 0 auto;
-          margin-top: clamp_vw_sp_b(15);
+          margin-top: mixin.clamp_vw_sp_b(15);
           display: flex;
           justify-content: center;
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
+        @include mixin.sp_v(479px) {
           width: 80%;
           margin: 0 auto;
-          margin-top: clamp_vw_sp_v(25);
+          margin-top: mixin.clamp_vw_sp_v(25);
           display: flex;
           justify-content: center;
         }
@@ -2325,24 +2325,24 @@ div.access__wrapper {
           margin-top: 4px;
 
           /* pc 1920px以上  */
-          @include pc-l(1920px) {
+          @include mixin.pc-l(1920px) {
           }
 
           /* PC */
-          @include pc(1919px) {
+          @include mixin.pc(1919px) {
           }
 
           /* タブレット */
-          @include tab(1024px) {
+          @include mixin.tab(1024px) {
           }
 
           /* スマートフォン横画面 */
-          @include sp_b(599px) {
+          @include mixin.sp_b(599px) {
             margin: 0;
           }
 
           /* スマートフォン縦画面 */
-          @include sp_v(479px) {
+          @include mixin.sp_v(479px) {
             margin: 0;
           }
         }
@@ -2371,25 +2371,25 @@ div.access__wrapper {
         margin-left: 4px;
 
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
         }
 
         /* PC */
-        @include pc(1919px) {
+        @include mixin.pc(1919px) {
         }
 
         /* タブレット */
-        @include tab(1024px) {
+        @include mixin.tab(1024px) {
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
+        @include mixin.sp_b(599px) {
           width: 100%;
           margin: 0 auto;
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
+        @include mixin.sp_v(479px) {
           width: 100%;
           margin: 0 auto;
         }
@@ -2402,26 +2402,26 @@ div.access__wrapper {
         width: 533px;
 
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
         }
 
         /* PC */
-        @include pc(1919px) {
+        @include mixin.pc(1919px) {
         }
 
         /* タブレット */
-        @include tab(1024px) {
+        @include mixin.tab(1024px) {
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          height: clamp_vw_sp_b(20);
+        @include mixin.sp_b(599px) {
+          height: mixin.clamp_vw_sp_b(20);
           width: 100%;
           margin: 0 auto;
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
+        @include mixin.sp_v(479px) {
           width: 100%;
           margin: 0 auto;
         }
@@ -2438,29 +2438,29 @@ div.access__wrapper {
         flex-wrap: wrap;
 
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
         }
 
         /* PC */
-        @include pc(1919px) {
+        @include mixin.pc(1919px) {
         }
 
         /* タブレット */
-        @include tab(1024px) {
+        @include mixin.tab(1024px) {
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          width: clamp_vw_sp_b(599);
+        @include mixin.sp_b(599px) {
+          width: mixin.clamp_vw_sp_b(599);
           height: auto;
           flex-direction: row;
           justify-content: flex-start;
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
-          width: clamp_vw_sp_v(420);
-          height: clamp_vw_sp_v(170);
+        @include mixin.sp_v(479px) {
+          width: mixin.clamp_vw_sp_v(420);
+          height: mixin.clamp_vw_sp_v(170);
           flex-direction: row;
           justify-content: flex-start;
         }
@@ -2474,26 +2474,26 @@ div.access__wrapper {
           border-color: #e7e7e7;
 
           /* pc 1920px以上  */
-          @include pc-l(1920px) {
+          @include mixin.pc-l(1920px) {
           }
 
           /* PC */
-          @include pc(1919px) {
+          @include mixin.pc(1919px) {
           }
 
           /* タブレット */
-          @include tab(1024px) {
+          @include mixin.tab(1024px) {
           }
 
           /* スマートフォン横画面 */
-          @include sp_b(599px) {
-            width: clamp_vw_sp_b(180);
+          @include mixin.sp_b(599px) {
+            width: mixin.clamp_vw_sp_b(180);
             height: auto;
           }
 
           /* スマートフォン縦画面 */
-          @include sp_v(479px) {
-            width: clamp_vw_sp_v(150);
+          @include mixin.sp_v(479px) {
+            width: mixin.clamp_vw_sp_v(150);
             height: auto;
           }
 
@@ -2505,28 +2505,28 @@ div.access__wrapper {
             margin-left: 4.5px;
 
             /* pc 1920px以上  */
-            @include pc-l(1920px) {
+            @include mixin.pc-l(1920px) {
             }
 
             /* PC */
-            @include pc(1919px) {
+            @include mixin.pc(1919px) {
             }
 
             /* タブレット */
-            @include tab(1024px) {
+            @include mixin.tab(1024px) {
             }
 
             /* スマートフォン横画面 */
-            @include sp_b(599px) {
-              font-size: clamp_vw_sp_b(16);
-              margin-top: clamp_vw_sp_b(38);
+            @include mixin.sp_b(599px) {
+              font-size: mixin.clamp_vw_sp_b(16);
+              margin-top: mixin.clamp_vw_sp_b(38);
               text-align: center;
             }
 
             /* スマートフォン縦画面 */
-            @include sp_v(479px) {
-              font-size: clamp_vw_sp_v(14);
-              margin-top: clamp_vw_sp_v(38);
+            @include mixin.sp_v(479px) {
+              font-size: mixin.clamp_vw_sp_v(14);
+              margin-top: mixin.clamp_vw_sp_v(38);
               text-align: center;
             }
           }
@@ -2542,26 +2542,26 @@ div.access__wrapper {
           flex-wrap: wrap;
 
           /* pc 1920px以上  */
-          @include pc-l(1920px) {
+          @include mixin.pc-l(1920px) {
           }
 
           /* PC */
-          @include pc(1919px) {
+          @include mixin.pc(1919px) {
           }
 
           /* タブレット */
-          @include tab(1024px) {
+          @include mixin.tab(1024px) {
           }
 
           /* スマートフォン横画面 */
-          @include sp_b(599px) {
-            width: clamp_vw_sp_b(400);
+          @include mixin.sp_b(599px) {
+            width: mixin.clamp_vw_sp_b(400);
             height: auto;
           }
 
           /* スマートフォン縦画面 */
-          @include sp_v(479px) {
-            width: clamp_vw_sp_v(250);
+          @include mixin.sp_v(479px) {
+            width: mixin.clamp_vw_sp_v(250);
             height: auto;
           }
 
@@ -2574,28 +2574,28 @@ div.access__wrapper {
             font-size: 0; // display: inline-block;ズレ対策
 
             /* pc 1920px以上  */
-            @include pc-l(1920px) {
+            @include mixin.pc-l(1920px) {
             }
 
             /* PC */
-            @include pc(1919px) {
+            @include mixin.pc(1919px) {
             }
 
             /* タブレット */
-            @include tab(1024px) {
+            @include mixin.tab(1024px) {
             }
 
             /* スマートフォン横画面 */
-            @include sp_b(599px) {
-              width: clamp_vw_sp_b(450);
+            @include mixin.sp_b(599px) {
+              width: mixin.clamp_vw_sp_b(450);
               flex-wrap: nowrap;
               justify-content: flex-start;
               margin: 0;
             }
 
             /* スマートフォン縦画面 */
-            @include sp_v(479px) {
-              width: clamp_vw_sp_v(250);
+            @include mixin.sp_v(479px) {
+              width: mixin.clamp_vw_sp_v(250);
               flex-wrap: nowrap;
               justify-content: flex-start;
               margin: 0;
@@ -2610,36 +2610,36 @@ div.access__wrapper {
               margin: 5px 23px 0 28px;
 
               /* pc 1920px以上  */
-              @include pc-l(1920px) {
+              @include mixin.pc-l(1920px) {
               }
 
               /* PC */
-              @include pc(1919px) {
+              @include mixin.pc(1919px) {
               }
 
               /* タブレット */
-              @include tab(1024px) {
+              @include mixin.tab(1024px) {
               }
 
               /* スマートフォン横画面 */
-              @include sp_b(599px) {
-                width: clamp_vw_sp_b(100);
-                font-size: clamp_vw_sp_b(16);
+              @include mixin.sp_b(599px) {
+                width: mixin.clamp_vw_sp_b(100);
+                font-size: mixin.clamp_vw_sp_b(16);
                 margin: 0;
-                margin-top: clamp_vw_sp_b(30);
-                margin-left: clamp_vw_sp_b(15);
-                margin-right: clamp_vw_sp_v(40);
+                margin-top: mixin.clamp_vw_sp_b(30);
+                margin-left: mixin.clamp_vw_sp_b(15);
+                margin-right: mixin.clamp_vw_sp_v(40);
                 text-align: right;
               }
 
               /* スマートフォン縦画面 */
-              @include sp_v(479px) {
+              @include mixin.sp_v(479px) {
                 display: inline-block;
-                width: clamp_vw_sp_v(120);
-                font-size: clamp_vw_sp_v(14);
+                width: mixin.clamp_vw_sp_v(120);
+                font-size: mixin.clamp_vw_sp_v(14);
                 margin: 0;
-                margin-top: clamp_vw_sp_v(30);
-                margin-right: clamp_vw_sp_v(20);
+                margin-top: mixin.clamp_vw_sp_v(30);
+                margin-right: mixin.clamp_vw_sp_v(20);
                 text-align: right;
               }
             }
@@ -2648,28 +2648,28 @@ div.access__wrapper {
 
             .morning_afternoon__wrapper--upper {
               /* pc 1920px以上  */
-              @include pc-l(1920px) {
+              @include mixin.pc-l(1920px) {
                 margin-top: 5px;
               }
 
               /* PC */
-              @include pc(1919px) {
+              @include mixin.pc(1919px) {
               }
 
               /* タブレット */
-              @include tab(1024px) {
+              @include mixin.tab(1024px) {
               }
 
               /* スマートフォン横画面 */
-              @include sp_b(599px) {
-                width: clamp_vw_sp_b(250);
-                margin-top: clamp_vw_sp_b(23);
+              @include mixin.sp_b(599px) {
+                width: mixin.clamp_vw_sp_b(250);
+                margin-top: mixin.clamp_vw_sp_b(23);
               }
 
               /* スマートフォン縦画面 */
-              @include sp_v(479px) {
-                width: clamp_vw_sp_v(150);
-                margin-top: clamp_vw_sp_v(23);
+              @include mixin.sp_v(479px) {
+                width: mixin.clamp_vw_sp_v(150);
+                margin-top: mixin.clamp_vw_sp_v(23);
               }
 
               // ===================
@@ -2681,34 +2681,34 @@ div.access__wrapper {
                 display: inline-block;
 
                 /* pc 1920px以上  */
-                @include pc-l(1920px) {
+                @include mixin.pc-l(1920px) {
                 }
 
                 /* PC */
-                @include pc(1919px) {
+                @include mixin.pc(1919px) {
                 }
 
                 /* タブレット */
-                @include tab(1024px) {
+                @include mixin.tab(1024px) {
                 }
 
                 // /* スマートフォン横画面 */
-                // @include sp_b(599px) {
-                //   width: clamp_vw_sp_b(250);
-                //   font-size: clamp_vw_sp_b(16);
+                // @include mixin.sp_b(599px) {
+                //   width: mixin.clamp_vw_sp_b(250);
+                //   font-size: mixin.clamp_vw_sp_b(16);
                 //   display: block;
-                //   margin-top: clamp_vw_sp_b(8);
-                //   margin-right: clamp_vw_sp_b(20);
-                //   margin-left: clamp_vw_sp_b(20);
+                //   margin-top: mixin.clamp_vw_sp_b(8);
+                //   margin-right: mixin.clamp_vw_sp_b(20);
+                //   margin-left: mixin.clamp_vw_sp_b(20);
                 // }
 
                 // /* スマートフォン縦画面 */
-                // @include sp_v(479px) {
-                //   font-size: clamp_vw_sp_v(14);
+                // @include mixin.sp_v(479px) {
+                //   font-size: mixin.clamp_vw_sp_v(14);
                 //   display: block;
                 //   margin: 0;
-                //   margin-right: clamp_vw_sp_v(20);
-                //   margin-left: clamp_vw_sp_v(20);
+                //   margin-right: mixin.clamp_vw_sp_v(20);
+                //   margin-left: mixin.clamp_vw_sp_v(20);
                 // }
               }
 
@@ -2722,34 +2722,34 @@ div.access__wrapper {
                 margin-left: 4px;
 
                 /* pc 1920px以上  */
-                @include pc-l(1920px) {
+                @include mixin.pc-l(1920px) {
                 }
 
                 /* PC */
-                @include pc(1919px) {
+                @include mixin.pc(1919px) {
                 }
 
                 /* タブレット */
-                @include tab(1024px) {
+                @include mixin.tab(1024px) {
                 }
 
                 /* スマートフォン横画面 */
-                @include sp_b(599px) {
-                  width: clamp_vw_sp_b(250);
-                  font-size: clamp_vw_sp_b(16);
+                @include mixin.sp_b(599px) {
+                  width: mixin.clamp_vw_sp_b(250);
+                  font-size: mixin.clamp_vw_sp_b(16);
                   display: block;
-                  margin-top: clamp_vw_sp_b(8);
-                  margin-right: clamp_vw_sp_b(20);
-                  margin-left: clamp_vw_sp_b(20);
+                  margin-top: mixin.clamp_vw_sp_b(8);
+                  margin-right: mixin.clamp_vw_sp_b(20);
+                  margin-left: mixin.clamp_vw_sp_b(20);
                 }
 
                 /* スマートフォン縦画面 */
-                @include sp_v(479px) {
-                  font-size: clamp_vw_sp_v(14);
+                @include mixin.sp_v(479px) {
+                  font-size: mixin.clamp_vw_sp_v(14);
                   display: block;
                   margin: 0;
-                  margin-right: clamp_vw_sp_v(20);
-                  margin-left: clamp_vw_sp_v(20);
+                  margin-right: mixin.clamp_vw_sp_v(20);
+                  margin-left: mixin.clamp_vw_sp_v(20);
                 }
               }
             }
@@ -2763,36 +2763,36 @@ div.access__wrapper {
               margin: 16px 23px 0 28px;
 
               /* pc 1920px以上  */
-              @include pc-l(1920px) {
+              @include mixin.pc-l(1920px) {
               }
 
               /* PC */
-              @include pc(1919px) {
+              @include mixin.pc(1919px) {
               }
 
               /* タブレット */
-              @include tab(1024px) {
+              @include mixin.tab(1024px) {
               }
 
               /* スマートフォン横画面 */
-              @include sp_b(599px) {
-                width: clamp_vw_sp_b(100);
-                font-size: clamp_vw_sp_b(16);
+              @include mixin.sp_b(599px) {
+                width: mixin.clamp_vw_sp_b(100);
+                font-size: mixin.clamp_vw_sp_b(16);
                 margin: 0;
-                margin-top: clamp_vw_sp_b(30);
-                margin-left: clamp_vw_sp_b(15);
-                margin-right: clamp_vw_sp_v(40);
+                margin-top: mixin.clamp_vw_sp_b(30);
+                margin-left: mixin.clamp_vw_sp_b(15);
+                margin-right: mixin.clamp_vw_sp_v(40);
                 text-align: right;
               }
 
               /* スマートフォン縦画面 */
-              @include sp_v(479px) {
-                width: clamp_vw_sp_v(200);
-                font-size: clamp_vw_sp_v(14);
+              @include mixin.sp_v(479px) {
+                width: mixin.clamp_vw_sp_v(200);
+                font-size: mixin.clamp_vw_sp_v(14);
                 margin: 0;
-                margin-top: clamp_vw_sp_v(30);
-                margin-right: clamp_vw_sp_v(20);
-                margin-left: clamp_vw_sp_v(20);
+                margin-top: mixin.clamp_vw_sp_v(30);
+                margin-right: mixin.clamp_vw_sp_v(20);
+                margin-left: mixin.clamp_vw_sp_v(20);
               }
             }
 
@@ -2800,29 +2800,29 @@ div.access__wrapper {
 
             .morning_afternoon__wrapper--middle {
               /* pc 1920px以上  */
-              @include pc-l(1920px) {
+              @include mixin.pc-l(1920px) {
                 margin-top: 17px;
               }
 
               /* PC */
-              @include pc(1919px) {
+              @include mixin.pc(1919px) {
               }
 
               /* タブレット */
-              @include tab(1024px) {
+              @include mixin.tab(1024px) {
               }
 
               /* メディアクエリスマートフォン横画面 */
-              @include sp_b(599px) {
-                width: clamp_vw_sp_b(250);
-                font-size: clamp_vw_sp_b(16);
-                margin-top: clamp_vw_sp_b(20);
+              @include mixin.sp_b(599px) {
+                width: mixin.clamp_vw_sp_b(250);
+                font-size: mixin.clamp_vw_sp_b(16);
+                margin-top: mixin.clamp_vw_sp_b(20);
               }
 
               /* スマートフォン縦画面 */
-              @include sp_v(479px) {
-                width: clamp_vw_sp_v(150);
-                margin-top: clamp_vw_sp_v(23);
+              @include mixin.sp_v(479px) {
+                width: mixin.clamp_vw_sp_v(150);
+                margin-top: mixin.clamp_vw_sp_v(23);
               }
 
               // ======================
@@ -2834,34 +2834,34 @@ div.access__wrapper {
                 display: inline-block;
 
                 /* pc 1920px以上  */
-                @include pc-l(1920px) {
+                @include mixin.pc-l(1920px) {
                 }
 
                 /* PC */
-                @include pc(1919px) {
+                @include mixin.pc(1919px) {
                 }
 
                 /* タブレット */
-                @include tab(1024px) {
+                @include mixin.tab(1024px) {
                 }
 
                 /* スマートフォン横画面 */
-                @include sp_b(599px) {
-                  width: clamp_vw_sp_b(250);
-                  font-size: clamp_vw_sp_b(16);
+                @include mixin.sp_b(599px) {
+                  width: mixin.clamp_vw_sp_b(250);
+                  font-size: mixin.clamp_vw_sp_b(16);
                   display: block;
-                  margin-top: clamp_vw_sp_b(8);
-                  margin-right: clamp_vw_sp_b(20);
-                  margin-left: clamp_vw_sp_b(20);
+                  margin-top: mixin.clamp_vw_sp_b(8);
+                  margin-right: mixin.clamp_vw_sp_b(20);
+                  margin-left: mixin.clamp_vw_sp_b(20);
                 }
 
                 /* スマートフォン縦画面 */
-                @include sp_v(479px) {
-                  font-size: clamp_vw_sp_v(14);
+                @include mixin.sp_v(479px) {
+                  font-size: mixin.clamp_vw_sp_v(14);
                   display: block;
                   margin: 0;
-                  margin-right: clamp_vw_sp_v(20);
-                  margin-left: clamp_vw_sp_v(20);
+                  margin-right: mixin.clamp_vw_sp_v(20);
+                  margin-left: mixin.clamp_vw_sp_v(20);
                 }
               }
 
@@ -2875,34 +2875,34 @@ div.access__wrapper {
                 margin-left: 4px;
 
                 /* pc 1920px以上  */
-                @include pc-l(1920px) {
+                @include mixin.pc-l(1920px) {
                 }
 
                 /* PC */
-                @include pc(1919px) {
+                @include mixin.pc(1919px) {
                 }
 
                 /* タブレット */
-                @include tab(1024px) {
+                @include mixin.tab(1024px) {
                 }
 
                 /* スマートフォン横画面 */
-                @include sp_b(599px) {
-                  width: clamp_vw_sp_b(250);
-                  font-size: clamp_vw_sp_b(16);
+                @include mixin.sp_b(599px) {
+                  width: mixin.clamp_vw_sp_b(250);
+                  font-size: mixin.clamp_vw_sp_b(16);
                   display: block;
-                  margin-top: clamp_vw_sp_b(8);
-                  margin-right: clamp_vw_sp_b(20);
-                  margin-left: clamp_vw_sp_b(20);
+                  margin-top: mixin.clamp_vw_sp_b(8);
+                  margin-right: mixin.clamp_vw_sp_b(20);
+                  margin-left: mixin.clamp_vw_sp_b(20);
                 }
 
                 /* スマートフォン縦画面 */
-                @include sp_v(479px) {
-                  font-size: clamp_vw_sp_v(14);
+                @include mixin.sp_v(479px) {
+                  font-size: mixin.clamp_vw_sp_v(14);
                   display: block;
                   margin: 0;
-                  margin-right: clamp_vw_sp_v(20);
-                  margin-left: clamp_vw_sp_v(20);
+                  margin-right: mixin.clamp_vw_sp_v(20);
+                  margin-left: mixin.clamp_vw_sp_v(20);
                 }
               }
             }
@@ -2916,35 +2916,35 @@ div.access__wrapper {
               margin: 17px 23px 0 28px;
 
               /* pc 1920px以上  */
-              @include pc-l(1920px) {
+              @include mixin.pc-l(1920px) {
               }
 
               /* PC */
-              @include pc(1919px) {
+              @include mixin.pc(1919px) {
               }
 
               /* タブレット */
-              @include tab(1024px) {
+              @include mixin.tab(1024px) {
               }
 
               /* スマートフォン横画面 */
-              @include sp_b(599px) {
-                width: clamp_vw_sp_b(100);
-                font-size: clamp_vw_sp_b(16);
+              @include mixin.sp_b(599px) {
+                width: mixin.clamp_vw_sp_b(100);
+                font-size: mixin.clamp_vw_sp_b(16);
                 margin: 0;
-                margin-top: clamp_vw_sp_b(30);
-                margin-left: clamp_vw_sp_b(15);
-                margin-right: clamp_vw_sp_v(40);
+                margin-top: mixin.clamp_vw_sp_b(30);
+                margin-left: mixin.clamp_vw_sp_b(15);
+                margin-right: mixin.clamp_vw_sp_v(40);
                 text-align: right;
               }
 
               /* スマートフォン縦画面 */
-              @include sp_v(479px) {
-                font-size: clamp_vw_sp_v(14);
+              @include mixin.sp_v(479px) {
+                font-size: mixin.clamp_vw_sp_v(14);
                 margin: 0;
-                margin-top: clamp_vw_sp_v(30);
-                margin-right: clamp_vw_sp_v(20);
-                margin-left: clamp_vw_sp_v(20);
+                margin-top: mixin.clamp_vw_sp_v(30);
+                margin-right: mixin.clamp_vw_sp_v(20);
+                margin-left: mixin.clamp_vw_sp_v(20);
               }
             }
 
@@ -2952,28 +2952,28 @@ div.access__wrapper {
 
             .morning_afternoon__wrapper--lower {
               /* pc 1920px以上  */
-              @include pc-l(1920px) {
+              @include mixin.pc-l(1920px) {
                 margin-top: 17px;
               }
 
               /* PC */
-              @include pc(1919px) {
+              @include mixin.pc(1919px) {
               }
 
               /* タブレット */
-              @include tab(1024px) {
+              @include mixin.tab(1024px) {
               }
 
               /* スマートフォン横画面 */
-              @include sp_b(599px) {
-                width: clamp_vw_sp_b(250);
-                margin-top: clamp_vw_sp_b(20);
+              @include mixin.sp_b(599px) {
+                width: mixin.clamp_vw_sp_b(250);
+                margin-top: mixin.clamp_vw_sp_b(20);
               }
 
               /* スマートフォン縦画面 */
-              @include sp_v(479px) {
-                width: clamp_vw_sp_v(150);
-                margin-top: clamp_vw_sp_v(23);
+              @include mixin.sp_v(479px) {
+                width: mixin.clamp_vw_sp_v(150);
+                margin-top: mixin.clamp_vw_sp_v(23);
               }
 
               // =============================
@@ -2985,34 +2985,34 @@ div.access__wrapper {
                 display: inline-block;
 
                 /* pc 1920px以上  */
-                @include pc-l(1920px) {
+                @include mixin.pc-l(1920px) {
                 }
 
                 /* PC */
-                @include pc(1919px) {
+                @include mixin.pc(1919px) {
                 }
 
                 /* タブレット */
-                @include tab(1024px) {
+                @include mixin.tab(1024px) {
                 }
 
                 /* スマートフォン横画面 */
-                @include sp_b(599px) {
-                  width: clamp_vw_sp_b(250);
-                  font-size: clamp_vw_sp_b(16);
+                @include mixin.sp_b(599px) {
+                  width: mixin.clamp_vw_sp_b(250);
+                  font-size: mixin.clamp_vw_sp_b(16);
                   display: block;
-                  margin-top: clamp_vw_sp_b(8);
-                  margin-right: clamp_vw_sp_b(20);
-                  margin-left: clamp_vw_sp_b(20);
+                  margin-top: mixin.clamp_vw_sp_b(8);
+                  margin-right: mixin.clamp_vw_sp_b(20);
+                  margin-left: mixin.clamp_vw_sp_b(20);
                 }
 
                 /* スマートフォン縦画面 */
-                @include sp_v(479px) {
-                  font-size: clamp_vw_sp_v(14);
+                @include mixin.sp_v(479px) {
+                  font-size: mixin.clamp_vw_sp_v(14);
                   display: block;
                   margin: 0;
-                  margin-right: clamp_vw_sp_v(20);
-                  margin-left: clamp_vw_sp_v(20);
+                  margin-right: mixin.clamp_vw_sp_v(20);
+                  margin-left: mixin.clamp_vw_sp_v(20);
                 }
               }
 
@@ -3026,34 +3026,34 @@ div.access__wrapper {
                 margin-left: 4px;
 
                 /* pc 1920px以上  */
-                @include pc-l(1920px) {
+                @include mixin.pc-l(1920px) {
                 }
 
                 /* PC */
-                @include pc(1919px) {
+                @include mixin.pc(1919px) {
                 }
 
                 /* タブレット */
-                @include tab(1024px) {
+                @include mixin.tab(1024px) {
                 }
 
                 /* スマートフォン横画面 */
-                @include sp_b(599px) {
-                  width: clamp_vw_sp_b(250);
-                  font-size: clamp_vw_sp_b(16);
+                @include mixin.sp_b(599px) {
+                  width: mixin.clamp_vw_sp_b(250);
+                  font-size: mixin.clamp_vw_sp_b(16);
                   display: block;
-                  margin-top: clamp_vw_sp_b(8);
-                  margin-right: clamp_vw_sp_b(20);
-                  margin-left: clamp_vw_sp_b(20);
+                  margin-top: mixin.clamp_vw_sp_b(8);
+                  margin-right: mixin.clamp_vw_sp_b(20);
+                  margin-left: mixin.clamp_vw_sp_b(20);
                 }
 
                 /* スマートフォン縦画面 */
-                @include sp_v(479px) {
-                  font-size: clamp_vw_sp_v(14);
+                @include mixin.sp_v(479px) {
+                  font-size: mixin.clamp_vw_sp_v(14);
                   display: block;
                   margin: 0;
-                  margin-right: clamp_vw_sp_v(20);
-                  margin-left: clamp_vw_sp_v(20);
+                  margin-right: mixin.clamp_vw_sp_v(20);
+                  margin-left: mixin.clamp_vw_sp_v(20);
                 }
               }
             }
@@ -3071,27 +3071,27 @@ div.access__wrapper {
         flex-wrap: wrap;
 
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
         }
 
         /* PC */
-        @include pc(1919px) {
+        @include mixin.pc(1919px) {
         }
 
         /* タブレット */
-        @include tab(1024px) {
+        @include mixin.tab(1024px) {
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          width: clamp_vw_sp_b(420);
-          margin-top: clamp_vw_sp_b(10);
+        @include mixin.sp_b(599px) {
+          width: mixin.clamp_vw_sp_b(420);
+          margin-top: mixin.clamp_vw_sp_b(10);
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
-          width: clamp_vw_sp_v(420);
-          margin-top: clamp_vw_sp_v(10);
+        @include mixin.sp_v(479px) {
+          width: mixin.clamp_vw_sp_v(420);
+          margin-top: mixin.clamp_vw_sp_v(10);
         }
 
         // ====================
@@ -3107,27 +3107,27 @@ div.access__wrapper {
           padding-left: 5px;
 
           /* pc 1920px以上  */
-          @include pc-l(1920px) {
+          @include mixin.pc-l(1920px) {
           }
 
           /* PC */
-          @include pc(1919px) {
+          @include mixin.pc(1919px) {
           }
 
           /* タブレット */
-          @include tab(1024px) {
+          @include mixin.tab(1024px) {
           }
 
           /* スマートフォン横画面 */
-          @include sp_b(599px) {
-            width: clamp_vw_sp_b(180);
-            font-size: clamp_vw_sp_b(16);
+          @include mixin.sp_b(599px) {
+            width: mixin.clamp_vw_sp_b(180);
+            font-size: mixin.clamp_vw_sp_b(16);
           }
 
           /* スマートフォン縦画面 */
-          @include sp_v(479px) {
-            width: clamp_vw_sp_v(150);
-            font-size: clamp_vw_sp_v(14);
+          @include mixin.sp_v(479px) {
+            width: mixin.clamp_vw_sp_v(150);
+            font-size: mixin.clamp_vw_sp_v(14);
           }
         }
       }
@@ -3143,25 +3143,25 @@ div.access__wrapper {
         padding-left: 28px;
 
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
         }
 
         /* PC */
-        @include pc(1919px) {
+        @include mixin.pc(1919px) {
         }
 
         /* タブレット */
-        @include tab(1024px) {
+        @include mixin.tab(1024px) {
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
-          width: clamp_vw_sp_b(250);
+        @include mixin.sp_b(599px) {
+          width: mixin.clamp_vw_sp_b(250);
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
-          width: clamp_vw_sp_v(250);
+        @include mixin.sp_v(479px) {
+          width: mixin.clamp_vw_sp_v(250);
         }
       }
 
@@ -3175,25 +3175,25 @@ div.access__wrapper {
         margin-left: 5px;
 
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
         }
 
         /* PC */
-        @include pc(1919px) {
+        @include mixin.pc(1919px) {
         }
 
         /* タブレット */
-        @include tab(1024px) {
+        @include mixin.tab(1024px) {
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
+        @include mixin.sp_b(599px) {
           width: 100%;
           margin: 0 auto;
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
+        @include mixin.sp_v(479px) {
           width: 100%;
           margin: 0 auto;
         }
@@ -3206,25 +3206,25 @@ div.access__wrapper {
         font-size: 0; // display: inline-block;ズレ
 
         /* pc 1920px以上  */
-        @include pc-l(1920px) {
+        @include mixin.pc-l(1920px) {
         }
 
         /* PC */
-        @include pc(1919px) {
+        @include mixin.pc(1919px) {
         }
 
         /* タブレット */
-        @include tab(1024px) {
+        @include mixin.tab(1024px) {
         }
 
         /* スマートフォン横画面 */
-        @include sp_b(599px) {
+        @include mixin.sp_b(599px) {
           width: 100%;
           margin: 0 auto;
         }
 
         /* スマートフォン縦画面 */
-        @include sp_v(479px) {
+        @include mixin.sp_v(479px) {
           width: 100%;
           margin: 0 auto;
         }
@@ -3236,26 +3236,26 @@ div.access__wrapper {
           display: inline-block;
 
           /* pc 1920px以上  */
-          @include pc-l(1920px) {
+          @include mixin.pc-l(1920px) {
           }
 
           /* PC */
-          @include pc(1919px) {
+          @include mixin.pc(1919px) {
           }
 
           /* タブレット */
-          @include tab(1024px) {
+          @include mixin.tab(1024px) {
           }
 
           /* スマートフォン横画面 */
-          @include sp_b(599px) {
-            font-size: clamp_vw_sp_b(11);
+          @include mixin.sp_b(599px) {
+            font-size: mixin.clamp_vw_sp_b(11);
             display: none;
           }
 
           /* スマートフォン縦画面 */
-          @include sp_v(479px) {
-            font-size: clamp_vw_sp_v(11);
+          @include mixin.sp_v(479px) {
+            font-size: mixin.clamp_vw_sp_v(11);
             display: none;
           }
         }
