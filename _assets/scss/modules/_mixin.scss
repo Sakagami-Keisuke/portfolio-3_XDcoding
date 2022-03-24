@@ -41,14 +41,25 @@ $sp_V: 479px; // ~479px  スマホ縦vertical
     @content;
   }
 }
+
 //レスポンシブ PC =============================================
-// ===========================================================
+
 @function clamp_vw_pc($num) {
   $minWidth: 1025;
   $maxWidth: 1919;
   $val_max: $num * 1px;
   $val_vw: round(calc($num / $maxWidth) * 100);
   $val_min: round($minWidth * calc($val_vw / 100)) * 1px;
+  @return clamp(#{$val_min}, #{$val_vw * 1vw}, #{$val_max});
+}
+
+//レスポンシブ PC $upper~$lowerのPX範囲で可変===========================
+@function clampPc($upper, $lower) {
+  $minVW: 1025;
+  $maxVW: 1919;
+  $val_min: $lower * 1px;
+  $val_vw: round(calc($upper / $maxVW) * 100);
+  $val_max: $upper * 1px;
   @return clamp(#{$val_min}, #{$val_vw * 1vw}, #{$val_max});
 }
 
@@ -117,18 +128,20 @@ $sp_V: 479px; // ~479px  スマホ縦vertical
 // ===========================================================
 // ===========================================================
 
-// ＜em＞可変フォント pc 1024~1919
+
+
+// ＜rem＞可変フォント pc 1024~1919
 // ===========================================================
 // ===========================================================
 @function variableFontPc($upper, $lower) {
-  $max-em: $upper;
-  $min-em: $lower;
+  $max: $upper;
+  $min: $lower;
   $viewMin: calc(1024 / 100) + px;
-  $font-emDiff: calc($max-em - $min-em);
+  $diff: calc($max - $min);
   $viewPxDiff: calc(1919 - 1024);
-  $ratio: calc((($font-emDiff*10) / $viewPxDiff) * 100);
+  $ratio: calc((($diff * 10) / $viewPxDiff) * 100);
 
-  @return calc(#{$min-em}em + ((1vw - #{$viewMin})) * #{$ratio});
+  @return calc(#{$min}rem + ((1vw - #{$viewMin})) * #{$ratio});
 }
 
 // $min:指定したい文字サイズの最小値

@@ -2,9 +2,7 @@
 
 // header＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
-div.header {
-    // background-color: red;
-
+.header {
     /* pc 1920px以上  */
     @include mixin.pc-l(1920px) {
         width: 1920px;
@@ -13,60 +11,55 @@ div.header {
 
     /* PC */
     @include mixin.pc(1919px) {
-        width: mixin.clamp_vw_pc(1919);
-        height: 130px;
+        background-color: rgb(248, 170, 170);
+        width: mixin.clampPc(1919,1025);
+        height: auto;
     }
 
     /* タブレット */
     @include mixin.tab(1024px) {
         width: mixin.clamp_vw_tab(1024);
-        height: mixin.clamp_vw_tab(220);
+        height: auto;
     }
 
     /* スマートフォン横画面 */
     @include mixin.sp_b(599px) {
-        width: auto;
         max-width: 100%;
         height: mixin.clamp_vw_sp_b(160);
     }
 
     /* スマートフォン縦画面 */
     @include mixin.sp_v(479px) {
-        width: auto;
         max-width: 100%;
         height: mixin.clamp_vw_sp_v(160);
     }
 
     // =======================================
+
     &_container {
+        height:100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
             width: 1180px;
-            height: 130px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            align-items: center;
+            height:100%;
         }
 
         /* PC */
         @include mixin.pc(1919px) {
             background-color: rgb(103, 231, 220);
-            width: mixin.clamp_vw_pc(1180);
-            height: mixin.clamp_vw_pc(130);
-            margin: 0 auto;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            align-items: center;
+            // width: mixin.clamp_vw_pc(1180);
+            width: mixin.clampPc(1180,1000);
         }
 
         /* タブレット */
         @include mixin.tab(1024px) {
-           
             width: auto;
             max-width: 100%;
             height: auto;
@@ -89,28 +82,27 @@ div.header {
             display: block;
         }
 
-        // ===============================================
+        // ========================================
+
         .header__top-left {
-            // background-color: yellow;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+
             /* pc 1920px以上  */
             @include mixin.pc-l(1920px) {
                 width: 350px;
                 height: 73px;
                 margin-left: 20px;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                align-items: center;
-            }
+                }
 
             /* PC */
             @include mixin.pc(1919px) {
-                width:mixin.clamp_vw_pc(350);
-                height:  73px;
+                background-color: yellow;
+                width: mixin.clampPc(300,200);
+                height: 73px;
                 margin-left: 20px;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
             }
 
             /* タブレット */
@@ -140,7 +132,12 @@ div.header {
             }
 
             // ==============================================
+
             &-logo {
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
                 /* pc 1920px以上  */
                 @include mixin.pc-l(1920px) {
                     width: 73px;
@@ -149,9 +146,7 @@ div.header {
 
                 /* PC */
                 @include mixin.pc(1919px) {
-                    width: mixin.clamp_vw_pc(73  );
-                    height: auto;
-                    margin-right: 20px;
+                    width: mixin.clampPc(73,65);
                 }
 
                 /* タブレット */
@@ -160,8 +155,8 @@ div.header {
                     height: mixin.clamp_vw_tab(73);
 
                     img {
-                        width: 100%;
-                        height: 100%;
+             
+
                     }
                 }
 
@@ -189,8 +184,8 @@ div.header {
             }
 
             // ================================================
+
             &-tagline {
-                // background-color: rgb(224, 149, 195);
                 /* pc 1920px以上  */
                 @include mixin.pc-l(1920px) {
                     width: 190px;
@@ -199,9 +194,9 @@ div.header {
 
                 /* PC */
                 @include mixin.pc(1919px) {
-                    width:  mixin.clamp_vw_pc(250  );
-                    height:  mixin.clamp_vw_pc(73  );
-   
+                    background-color: rgb(59, 46, 236);
+                    width: 100%;
+                    height: mixin.clampPc(73,45);
                 }
 
                 /* タブレット */
@@ -219,24 +214,23 @@ div.header {
                     height: clamp(34px, 15.208vw, 73px);
                 }
 
-                // ===================================================================
+                // =========================================
+
                 &--upper {
+                    text-align: left;
 
                     /* pc 1920px以上  */
                     @include mixin.pc-l(1920px) {
                         padding-left: 8px;
-                        font-size: 3em;
-                        text-align: left;
+                        font-size: 3rem;
                         line-height: 28px;
                     }
 
                     /* PC */
                     @include mixin.pc(1919px) {
-                        width: mixin.clamp_vw_pc( 260 );
+                        background-color: red;
+                        height: mixin.clampPc(30,20);
                         font-size: mixin.variableFontPc(3, 2);
-                        text-align: left;
-                        line-height: 28px;
-                        padding-left:  mixin.clamp_vw_pc(25 );
                     }
 
                     /* タブレット */
@@ -257,24 +251,24 @@ div.header {
                     }
                 }
 
-                // =====================================================
+                // =================================================
+                
                 &--lower {
-                    // background-color: rgb(195, 61, 128);
                     /* pc 1920px以上  */
                     @include mixin.pc-l(1920px) {
-                        padding-left:  mixin.clamp_vw_pc(12  );
-                        font-size: 3em;
+                        padding-left: 12px;
+                        font-size: 3rem;
                         text-align: center;
                         line-height: 48px;
                     }
 
                     /* PC */
                     @include mixin.pc(1919px) {
-                        width: mixin.clamp_vw_pc( 260 );
+                        background-color: rgb(20, 235, 170);
+                        height: mixin.clampPc(48,40);
                         font-size: mixin.variableFontPc(3, 2);
-                        text-align: left;
-                        line-height: 48px;
-                        padding-left:  mixin.clamp_vw_pc(25 );
+                        text-align: center;
+                        padding-top: mixin.clampPc(4,1);
                     }
 
                     /* タブレット */
@@ -307,6 +301,7 @@ div.header {
         }
 
         // =======================================================
+
         .header__top-right {
             /* pc 1920px以上  */
             @include mixin.pc-l(1920px) {
@@ -317,9 +312,12 @@ div.header {
 
             /* PC */
             @include mixin.pc(1919px) {
-                width:mixin.clamp_vw_pc(450 );
-                height: mixin.clamp_vw_pc( 73 );
-                margin-right:  mixin.clamp_vw_pc(20  );
+                background-color: rgb(224, 149, 195);
+                // width: mixin.clamp_vw_pc(460);
+                // height: mixin.clamp_vw_pc(73);
+                width: mixin.clampPc(460,260);
+                height: mixin.clampPc(73,50);
+                margin-right: mixin.clamp_vw_pc(20);
             }
 
             /* タブレット */
@@ -351,21 +349,20 @@ div.header {
             }
 
             // =======================================================
+            
             &--reception {
+                text-align: right;
+                padding-right: 4px;
+                margin-top: 7px;
                 /* pc 1920px以上  */
                 @include mixin.pc-l(1920px) {
-                    font-size: 1.4em;
-                    text-align: right;
-                    padding-right: 4px;
-                    margin-top: 7px;
+                    font-size: 1.4rem;
                 }
 
                 /* PC */
                 @include mixin.pc(1919px) {
-                    font-size: mixin.variableFontPc(1.4,1.2);
-                    letter-spacing: 0.2px;
-                    text-align: right;
-                    margin-top: 5px;
+                    background-color: rgb(149, 224, 180);
+                    font-size: mixin.variableFontPc(1.4, 1.2);
                 }
 
                 /* タブレット */
@@ -394,15 +391,16 @@ div.header {
             }
 
             // ============================================
+
             &--tel::before {
+                content: "";
+                background: url("../images/受話器の線画アイコン.jpg") no-repeat;
+                background-size: contain;
                 /* pc 1920px以上  */
                 @include mixin.pc-l(1920px) {
-                    content: "";
                     display: inline-block;
                     width: 25px;
                     height: 25px;
-                    background: url("../images/受話器の線画アイコン.jpg") no-repeat;
-                    background-size: contain;
                     margin-right: 16px;
                     position: relative;
                     top: 5px;
@@ -410,14 +408,11 @@ div.header {
 
                 /* PC */
                 @include mixin.pc(1919px) {
-                    content: "";
                     display: inline-block;
-                    width:  mixin.clamp_vw_pc( 25 );
-                    height:  mixin.clamp_vw_pc( 25 );
-                    background: url("../images/受話器の線画アイコン.jpg") no-repeat;
-                    background-size: contain;
+                    width: mixin.clampPc(25,16);
+                    height: mixin.clampPc(25,16);
                     margin-top: 1.5px;
-                    margin-right: mixin.clamp_vw_pc( 17 );
+                    margin-right: mixin.clampPc(17,15);
                 }
 
                 /* タブレット */
@@ -443,26 +438,27 @@ div.header {
                 }
             }
 
-            // ===================================================
+            // ==========================================
+
             &--tel {
+                font-weight: 500;
+                text-align: right;
+                color: #21a937;
+
                 /* pc 1920px以上  */
                 @include mixin.pc-l(1920px) {
-                    color: #21a937;
-                    font-size: 2.2em;
-                    font-weight: 500;
+                    font-size: 2.2rem;
                     letter-spacing: 1px;
                     margin-top: 11px;
-                    text-align: right;
                 }
 
                 /* PC */
                 @include mixin.pc(1919px) {
+                    background-color: rgb(239, 248, 114);
                     color: #21a937;
-                    font-size: mixin.variableFontPc(2.2, 16);
-                    font-weight: 500;
-                    letter-spacing: 0.5px;
-                    margin-top: mixin.clamp_vw_pc(13  );
-                    text-align: right;
+                    font-size: mixin.variableFontPc(2.2, 1.6);
+                    letter-spacing: 1px;
+                    margin-top: 11px;
                 }
 
                 /* タブレット */
