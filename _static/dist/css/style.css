@@ -426,8 +426,6 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -437,46 +435,32 @@ ul {
     height: 130px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .header {
-    background-color: #f8aaaa;
-    width: clamp(1025px, 100vw, 1919px);
+    width: 100vw;
     height: auto;
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .header {
-    width: clamp(600px, 100vw, 1024px);
+    width: 100vw;
     height: auto;
+    padding-bottom: 10px;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .header {
-    max-width: 100%;
-    height: clamp(130px, 27vw, 160px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .header {
-    max-width: 100%;
-    height: clamp(124px, 33vw, 160px);
+    width: 100vw;
+    height: auto;
+    padding-bottom: 10px;
   }
 }
 .header_container {
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -485,50 +469,45 @@ ul {
   .header_container {
     width: 1180px;
     height: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .header_container {
-    background-color: #67e7dc;
     width: clamp(1000px, 61vw, 1180px);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .header_container {
     width: auto;
-    max-width: 100%;
-    height: auto;
-    display: block;
+    flex-direction: column;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .header_container {
     width: auto;
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-}
-@media not all and (min-width: 479px) {
-  .header_container {
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    display: block;
+    flex-direction: column;
   }
 }
 .header_container .header__top-left {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -538,40 +517,35 @@ ul {
     width: 350px;
     height: 73px;
     margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .header_container .header__top-left {
-    background-color: yellow;
     width: clamp(200px, 16vw, 300px);
     height: 73px;
     margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .header_container .header__top-left {
     width: auto;
-    height: clamp(54px, 9vw, 90px);
-    margin-left: clamp(204px, 34vw, 345px);
-    padding-top: 30px;
+    padding-top: clamp(25px, 4vw, 40px);
+    margin-left: 0;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .header_container .header__top-left {
     width: auto;
-    max-width: 65%;
-    height: clamp(58px, 12vw, 73px);
-    margin-left: clamp(134px, 28vw, 170px);
-    padding-top: 25px;
-  }
-}
-@media not all and (min-width: 479px) {
-  .header_container .header__top-left {
-    width: auto;
-    max-width: 65%;
-    height: clamp(56px, 15vw, 73px);
+    height: clamp(50px, 12vw, 73px);
     margin: 0 auto;
-    padding-top: 20px;
   }
 }
 .header_container .header__top-left-logo {
@@ -580,8 +554,6 @@ ul {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -596,35 +568,21 @@ ul {
     height: 73px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .header_container .header__top-left-logo {
     width: clamp(65px, 4vw, 73px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .header_container .header__top-left-logo {
-    width: clamp(42px, 7vw, 73px);
-    height: clamp(42px, 7vw, 73px);
+    width: clamp(70px, 7vw, 73px);
+    height: clamp(70px, 7vw, 73px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .header_container .header__top-left-logo {
-    width: clamp(58px, 12vw, 73px);
-    height: clamp(58px, 12vw, 73px);
-  }
-  .header_container .header__top-left-logo img {
-    width: 100%;
-    height: 100%;
-  }
-}
-@media not all and (min-width: 479px) {
-  .header_container .header__top-left-logo {
-    width: clamp(56px, 15vw, 73px);
-    height: clamp(56px, 15vw, 73px);
-  }
-  .header_container .header__top-left-logo img {
-    width: 100%;
-    height: 100%;
+    width: clamp(35px, 12vw, 73px);
+    height: clamp(35px, 8vw, 50px);
   }
 }
 .header_container .header__top-left-tagline {
@@ -633,8 +591,6 @@ ul {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -645,37 +601,30 @@ ul {
     height: 73px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .header_container .header__top-left-tagline {
-    background-color: #3b2eec;
     width: 100%;
     height: clamp(45px, 4vw, 73px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .header_container .header__top-left-tagline {
-    height: clamp(42px, 7vw, 73px);
+    height: clamp(60px, 7vw, 73px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .header_container .header__top-left-tagline {
-    height: clamp(56px, 15vw, 73px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .header_container .header__top-left-tagline {
-    height: clamp(34px, 15.208vw, 73px);
+    height: clamp(35px, 8vw, 50px);
   }
 }
 .header_container .header__top-left-tagline--upper {
-  text-align: left;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
+  /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -683,33 +632,27 @@ ul {
     padding-left: 8px;
     font-size: 3rem;
     line-height: 28px;
+    text-align: left;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .header_container .header__top-left-tagline--upper {
-    background-color: red;
     height: clamp(20px, 2vw, 30px);
     font-size: calc(2rem + ((1vw - 10.24px)) * 1.1173184358);
+    text-align: center;
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .header_container .header__top-left-tagline--upper {
     width: auto;
-    max-width: 100%;
-    font-size: clamp(18px, 3vw, 30px);
+    font-size: calc(1.8rem + ((1vw - 6px)) * 0.9433962264);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .header_container .header__top-left-tagline--upper {
-    /* スマートフォン縦画面 */
-    /* $** pxを含まずそれより小さい */
-  }
-  @media not all and (min-width: 479px) {
-    .header_container .header__top-left-tagline--upper {
-      width: auto;
-      max-width: 100%;
-      font-size: clamp(23px, 6vw, 30px);
-    }
+    width: auto;
+    font-size: calc(1.5rem + ((1vw - 3.75px)) * 2.2321428571);
+    text-align: center;
   }
 }
 .header_container .header__top-left-tagline--lower {
@@ -718,8 +661,6 @@ ul {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -732,39 +673,24 @@ ul {
     line-height: 48px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .header_container .header__top-left-tagline--lower {
-    background-color: #14ebaa;
     height: clamp(40px, 3vw, 48px);
     font-size: calc(2rem + ((1vw - 10.24px)) * 1.1173184358);
     text-align: center;
     padding-top: clamp(1px, 0vw, 4px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .header_container .header__top-left-tagline--lower {
     width: auto;
-    max-width: 100%;
-    font-size: clamp(18px, 3vw, 30px);
-    line-height: clamp(30px, 5vw, 48px);
-    padding-left: clamp(12px, 2vw, 25px);
+    font-size: calc(1.8rem + ((1vw - 6px)) * 0.9433962264);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .header_container .header__top-left-tagline--lower {
     width: auto;
-    max-width: 100%;
-    font-size: clamp(24px, 5vw, 30px);
-    line-height: clamp(38px, 8vw, 48px);
-    padding-left: clamp(19px, 4vw, 25px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .header_container .header__top-left-tagline--lower {
-    width: auto;
-    max-width: 100%;
-    font-size: clamp(23px, 6vw, 30px);
-    line-height: clamp(38px, 10vw, 48px);
+    font-size: calc(1.5rem + ((1vw - 3.75px)) * 2.2321428571);
   }
 }
 .header_container .header__top-right {
@@ -773,8 +699,6 @@ ul {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -786,53 +710,32 @@ ul {
     margin-right: 20px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .header_container .header__top-right {
-    background-color: #e095c3;
     width: clamp(260px, 24vw, 460px);
     height: clamp(50px, 4vw, 73px);
-    margin-right: clamp(10px, 1vw, 20px);
+    margin-right: 20px;
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .header_container .header__top-right {
-    width: auto;
-    max-width: 85%;
-    height: clamp(42px, 7vw, 73px);
-    margin: 0 auto;
-    margin-top: 24px;
+    text-align: center;
+    margin-right: 0;
+    margin-top: clamp(10px, 1vw, 15px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .header_container .header__top-right {
-    width: auto;
-    max-width: 85%;
-    height: clamp(58px, 12vw, 73px);
-    margin: 0 auto;
-    margin-top: 24px;
-  }
-}
-@media not all and (min-width: 479px) {
-  .header_container .header__top-right {
-    width: auto;
-    max-width: 85%;
-    height: clamp(33px, 14.583vw, 73px);
-    /* 最小値33(vw225),70÷479×100vw,最大値70(vw479) */
-    margin: 0 auto;
-    margin-top: 24px;
+    text-align: center;
+    margin-top: clamp(15px, 4vw, 25px);
   }
 }
 .header_container .header__top-right--reception {
-  text-align: right;
-  padding-right: 4px;
-  margin-top: 7px;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -840,36 +743,31 @@ ul {
 @media (min-width: 1920px) {
   .header_container .header__top-right--reception {
     font-size: 1.4rem;
+    text-align: right;
+    padding-right: 4px;
+    margin-top: 7px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .header_container .header__top-right--reception {
-    background-color: #95e0b4;
     font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
+    text-align: right;
+    padding-right: 4px;
+    margin-top: 7px;
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .header_container .header__top-right--reception {
-    width: auto;
-    max-width: 100%;
     text-align: center;
-    font-size: clamp(12px, 2vw, 20px);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
+    margin-top: 0;
+    padding-right: 0;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .header_container .header__top-right--reception {
-    width: auto;
-    max-width: 100%;
     text-align: center;
-    font-size: clamp(14px, 3vw, 20px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .header_container .header__top-right--reception {
-    width: auto;
-    max-width: 100%;
-    text-align: center;
-    font-size: clamp(15px, 4vw, 18px);
+    font-size: calc(1.1rem + ((1vw - 3.75px)) * 0.8928571429);
   }
 }
 .header_container .header__top-right--tel::before {
@@ -881,11 +779,6 @@ ul {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  margin-top: clamp(0px, 0vw, 5px);
-  margin-right: 0px;
-  height: clamp(12px, 2vw, 25px);
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -900,7 +793,7 @@ ul {
     top: 5px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .header_container .header__top-right--tel::before {
     display: inline-block;
     width: clamp(16px, 1vw, 25px);
@@ -909,18 +802,14 @@ ul {
     margin-right: clamp(15px, 1vw, 17px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   .header_container .header__top-right--tel::before {
-    margin-top: clamp(5px, 1vw, 5px);
-    margin-right: 0px;
-    height: clamp(19px, 4vw, 25px);
+    margin-top: clamp(5px, 1vw, 10px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   .header_container .header__top-right--tel::before {
-    margin-top: clamp(4px, 1vw, 5px);
-    margin-right: 0px;
-    height: clamp(19px, 5vw, 25px);
+    margin-top: clamp(5px, 2vw, 10px);
   }
 }
 .header_container .header__top-right--tel {
@@ -933,8 +822,6 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -945,94 +832,38 @@ ul {
     margin-top: 11px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .header_container .header__top-right--tel {
-    background-color: #eff872;
-    color: #21a937;
     font-size: calc(1.6rem + ((1vw - 10.24px)) * 0.6703910615);
     letter-spacing: 1px;
     margin-top: 11px;
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .header_container .header__top-right--tel {
     width: auto;
-    max-width: 100%;
     text-align: center;
-    font-size: clamp(18px, 3vw, 28px);
-    margin-top: clamp(0px, 0vw, 5px);
+    margin-top: 0;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .header_container .header__top-right--tel {
     width: auto;
-    max-width: 100%;
     text-align: center;
-    font-size: clamp(24px, 5vw, 28px);
-    margin-top: clamp(5px, 1vw, 5px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .header_container .header__top-right--tel {
-    width: auto;
-    max-width: 100%;
-    text-align: center;
-    font-size: clamp(19px, 5vw, 25px);
-    margin-top: -1px;
+    font-size: calc(1.3rem + ((1vw - 3.75px)) * 0.8928571429);
+    margin-top: 0;
   }
 }
 
 .body {
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
-  /* $** pxを含まずそれより小さい */
-}
-@media (min-width: 1920px) {
-  .body {
-    width: 100vw;
-  }
-}
-@media not all and (min-width: 1919px) {
-  .body {
-    width: 100vw;
-  }
-}
-@media not all and (min-width: 1024px) {
-  .body {
-    width: 100vw;
-  }
-}
-@media not all and (min-width: 599px) {
-  .body {
-    width: clamp(480px, 100vw, 599px);
-    padding: 0;
-    max-width: 0;
-  }
-}
-@media not all and (min-width: 479px) {
-  .body {
-    width: clamp(375px, 100vw, 479px);
-    padding: 0;
-    max-width: 0;
-  }
+  width: 100vw;
 }
 .body .top-page_wrapper {
+  width: 100vw;
+  height: auto;
+  margin: 0 auto;
   /* pc 1920px以上  */
   /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
-  /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
   .body .top-page_wrapper {
@@ -1041,42 +872,12 @@ ul {
     margin-left: calc((100vw - 1920px) / 2);
   }
 }
-@media not all and (min-width: 1919px) {
-  .body .top-page_wrapper {
-    width: 100vw;
-    height: auto;
-    margin: 0 auto;
-  }
-}
-@media not all and (min-width: 1024px) {
-  .body .top-page_wrapper {
-    width: 100vw;
-    height: auto;
-    margin: 0 auto;
-  }
-}
-@media not all and (min-width: 599px) {
-  .body .top-page_wrapper {
-    width: 100vw;
-    height: auto;
-    margin: 0 auto;
-  }
-}
-@media not all and (min-width: 479px) {
-  .body .top-page_wrapper {
-    width: 100vw;
-    height: auto;
-    margin: 0 auto;
-  }
-}
 .body .top-page_wrapper .first-view_inner {
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -1088,42 +889,36 @@ ul {
     position: relative;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .body .top-page_wrapper .first-view_inner {
     width: clamp(1025px, 100vw, 1919px);
-    height: clamp Pc(505, 947);
+    height: clamp(450px, 49vw, 947px);
     position: relative;
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .body .top-page_wrapper .first-view_inner {
     width: clamp(600px, 100vw, 1024px);
-    height: clamp(600px, 100vw, 1024px);
-    margin-top: clamp(6px, 1vw, 10px);
+    height: auto;
+    position: relative;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .body .top-page_wrapper .first-view_inner {
-    width: clamp(470px, 98vw, 589px);
-    height: clamp(470px, 98vw, 589px);
+    width: clamp(479px, 80vw, 479px);
+    height: clamp(479px, 80vw, 479px);
     margin-top: clamp(10px, 2vw, 10px);
   }
 }
-@media not all and (min-width: 479px) {
-  .body .top-page_wrapper .first-view_inner {
-    width: clamp(375px, 100vw, 479px);
-    height: clamp(375px, 100vw, 479px);
-    margin-top: clamp(8px, 2vw, 10px);
-  }
-}
 .body .top-page_wrapper .first-view_inner__message-left {
+  writing-mode: vertical-rl;
+  background-color: white;
+  position: absolute;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -1132,80 +927,49 @@ ul {
   .body .top-page_wrapper .first-view_inner__message-left {
     width: 102px;
     height: 565px;
-    writing-mode: vertical-rl;
     font-size: 2.8rem;
     font-weight: 500;
     letter-spacing: 5.5px;
     padding-top: 25px;
     line-height: 102px;
-    background-color: white;
-    position: absolute;
     top: 133px;
     left: 210px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .body .top-page_wrapper .first-view_inner__message-left {
     width: clamp(55px, 5vw, 102px);
     line-height: clamp(55px, 5vw, 102px);
     height: clamp(300px, 29vw, 565px);
-    writing-mode: vertical-rl;
     font-size: calc(1.4rem + ((1vw - 10.24px)) * 1.5642458101);
-    font-weight: 500;
     letter-spacing: 5.5px;
     padding-top: clamp(20px, 1vw, 25px);
-    background-color: white;
-    position: absolute;
     top: clamp(70px, 7vw, 133px);
     left: clamp(100px, 11vw, 210px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .body .top-page_wrapper .first-view_inner__message-left {
-    width: clamp(54px, 9vw, 90px);
-    height: clamp(408px, 68vw, 700px);
-    font-size: clamp(18px, 3vw, 26px);
-    letter-spacing: clamp(6px, 1vw, 6px);
-    padding-top: 0px;
-    text-align: center;
-    line-height: clamp(48px, 8vw, 78px);
-    top: clamp(60px, 10vw, 100px);
-    left: clamp(84px, 14vw, 140px);
+    width: clamp(30px, 5vw, 50px);
+    height: clamp(280px, 44vw, 450px);
+    font-size: calc(1.2rem + ((1vw - 6px)) * 2.358490566);
+    line-height: clamp(24px, 5vw, 56px);
+    top: clamp(10px, 1vw, 10px);
+    left: clamp(100px, 15vw, 150px);
     z-index: 5;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .body .top-page_wrapper .first-view_inner__message-left {
-    width: clamp(43px, 9vw, 55px);
-    height: clamp(278px, 58vw, 345px);
-    font-size: clamp(14px, 3vw, 20px);
+    width: clamp(55px, 9vw, 55px);
+    height: clamp(345px, 58vw, 345px);
+    font-size: clamp(20px, 3vw, 20px);
     letter-spacing: 0px;
     padding-top: 0px;
     text-align: center;
-    line-height: clamp(43px, 9vw, 55px);
-    top: clamp(82px, 17vw, 100px);
-    left: clamp(24px, 5vw, 30px);
-    z-index: 5;
-  }
-}
-@media not all and (min-width: 479px) {
-  .body .top-page_wrapper .first-view_inner__message-left {
-    width: clamp(41px, 11vw, 55px);
-    /* 最小値30(vw225),65÷479×100vw,最大値65(vw479) */
-    height: clamp(270px, 72vw, 345px);
-    /* 最小値162(vw225),345÷479×100vw,最大値345(vw479) */
-    font-size: clamp(15px, 4vw, 20px);
-    /* 最小値9(vw225),20÷479×100vw,最大値20(vw479) */
-    letter-spacing: 0px;
-    padding-top: 0px;
-    text-align: center;
-    line-height: clamp(41px, 11vw, 55px);
-    /* 最小値30(vw225),65÷479×100vw,最大値65(vw479) */
-    /* 最小値30(vw225),65÷479×100vw,最大値65(vw479) */
-    top: clamp(79px, 21vw, 100px);
-    /* 最小値47(vw225),100÷479×100vw,最大値100(vw479) */
-    left: clamp(23px, 6vw, 30px);
-    /* 最小値14(vw225),30÷479×100vw,最大値30(vw479) */
+    line-height: clamp(55px, 9vw, 55px);
+    top: clamp(100px, 17vw, 100px);
+    left: clamp(30px, 5vw, 30px);
     z-index: 5;
   }
 }
@@ -1217,8 +981,6 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -1229,35 +991,24 @@ ul {
     margin-bottom: -8px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .body .top-page_wrapper .first-view_inner__message-left span.color {
     letter-spacing: 5.5px;
     margin-top: -8px;
     margin-bottom: -8px;
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .body .top-page_wrapper .first-view_inner__message-left span.color {
-    font-size: clamp(18px, 3vw, 26px);
-    letter-spacing: clamp(6px, 1vw, 6px);
-    padding-top: clamp(0px, 0vw, 3px);
-    padding-bottom: clamp(0px, 0vw, 3px);
+    font-size: calc(1.2rem + ((1vw - 6px)) * 2.358490566);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .body .top-page_wrapper .first-view_inner__message-left span.color {
-    font-size: clamp(14px, 3vw, 20px);
+    font-size: clamp(20px, 3vw, 20px);
     letter-spacing: 0px;
-    padding-top: clamp(5px, 1vw, 3px);
-    padding-bottom: clamp(5px, 1vw, 3px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .body .top-page_wrapper .first-view_inner__message-left span.color {
-    font-size: clamp(15px, 4vw, 20px);
-    letter-spacing: 0px;
-    padding-top: clamp(4px, 1vw, 3px);
-    padding-bottom: clamp(4px, 1vw, 3px);
+    padding-top: clamp(3px, 1vw, 3px);
+    padding-bottom: clamp(3px, 1vw, 3px);
   }
 }
 .body .top-page_wrapper .first-view_inner__message-right {
@@ -1266,8 +1017,6 @@ ul {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -1288,7 +1037,7 @@ ul {
     left: 393px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .body .top-page_wrapper .first-view_inner__message-right {
     width: clamp(55px, 5vw, 102px);
     line-height: clamp(55px, 5vw, 102px);
@@ -1304,45 +1053,28 @@ ul {
     left: clamp(200px, 20vw, 393px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .body .top-page_wrapper .first-view_inner__message-right {
-    width: clamp(54px, 9vw, 90px);
-    height: clamp(408px, 68vw, 700px);
-    font-size: clamp(18px, 3vw, 26px);
-    letter-spacing: clamp(6px, 1vw, 6px);
-    padding-top: 0px;
-    text-align: center;
-    line-height: clamp(48px, 8vw, 78px);
-    top: clamp(60px, 10vw, 100px);
-    left: clamp(174px, 29vw, 300px);
+    width: clamp(30px, 5vw, 50px);
+    height: clamp(280px, 44vw, 450px);
+    font-size: calc(1.2rem + ((1vw - 6px)) * 2.358490566);
+    line-height: clamp(24px, 5vw, 56px);
+    top: clamp(10px, 1vw, 10px);
+    left: clamp(180px, 24vw, 250px);
     z-index: 5;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .body .top-page_wrapper .first-view_inner__message-right {
-    width: clamp(43px, 9vw, 55px);
-    height: clamp(278px, 58vw, 345px);
-    font-size: clamp(14px, 3vw, 20px);
+    width: clamp(55px, 9vw, 55px);
+    height: clamp(345px, 58vw, 345px);
+    font-size: clamp(20px, 3vw, 20px);
     letter-spacing: 0px;
     padding-top: 0px;
     text-align: center;
-    line-height: clamp(43px, 9vw, 55px);
-    top: clamp(82px, 17vw, 100px);
-    left: clamp(82px, 17vw, 100px);
-    z-index: 5;
-  }
-}
-@media not all and (min-width: 479px) {
-  .body .top-page_wrapper .first-view_inner__message-right {
-    width: clamp(41px, 11vw, 55px);
-    height: clamp(270px, 72vw, 345px);
-    font-size: clamp(15px, 4vw, 20px);
-    letter-spacing: 0px;
-    padding-top: 0px;
-    text-align: center;
-    line-height: clamp(41px, 11vw, 55px);
-    top: clamp(79px, 21vw, 100px);
-    left: clamp(79px, 21vw, 100px);
+    line-height: clamp(55px, 9vw, 55px);
+    top: clamp(100px, 17vw, 100px);
+    left: clamp(100px, 17vw, 100px);
     z-index: 5;
   }
 }
@@ -1352,8 +1084,6 @@ ul {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* $** pxを含まずそれより小さい */
 }
@@ -1368,39 +1098,22 @@ ul {
     height: 947px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .body .top-page_wrapper .first-view_inner__image {
     width: clamp(1024px, 100vw, 1919px);
     height: clamp(500px, 49vw, 947px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .body .top-page_wrapper .first-view_inner__image {
     width: clamp(600px, 100vw, 1024px);
-    height: clamp(600px, 100vw, 1024px);
-    background: url("../images/firstview_image_SP.jpg") no-repeat;
-    background-size: contain;
-    position: absolute;
-    left: clamp(0px, 0vw, 0px);
+    height: auto;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .body .top-page_wrapper .first-view_inner__image {
-    width: clamp(480px, 100vw, 599px);
-    height: clamp(480px, 100vw, 599px);
-    background: url("../images/firstview_image_SP.jpg") no-repeat;
-    background-size: contain;
-    position: absolute;
-    left: clamp(0px, 0vw, 0px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .body .top-page_wrapper .first-view_inner__image {
-    width: clamp(375px, 100vw, 479px);
-    height: clamp(375px, 100vw, 479px);
-    background: url("../images/firstview_image_SP.jpg") no-repeat;
-    background-size: contain;
-    position: absolute;
+    width: clamp(479px, 80vw, 479px);
+    height: clamp(479px, 80vw, 479px);
   }
 }
 .body .self-introduction {
@@ -1413,8 +1126,6 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -1424,31 +1135,25 @@ ul {
     height: 664px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .body .self-introduction {
     width: clamp(1024px, 61vw, 1180px);
     height: clamp(400px, 35vw, 664px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .body .self-introduction {
     width: clamp(600px, 100vw, 1024px);
-    height: clamp(516px, 86vw, 880px);
-    display: block;
+    height: auto;
+    margin-bottom: clamp(20px, 6vw, 60px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .body .self-introduction {
-    width: clamp(470px, 98vw, 589px);
-    height: clamp(528px, 110vw, 660px);
+    width: clamp(479px, 80vw, 479px);
+    height: clamp(660px, 110vw, 660px);
     display: block;
-  }
-}
-@media not all and (min-width: 479px) {
-  .body .self-introduction {
-    width: clamp(375px, 100vw, 479px);
-    height: clamp(518px, 138vw, 660px);
-    display: block;
+    margin-bottom: 60px;
   }
 }
 .body .self-introduction-inner {
@@ -1457,8 +1162,6 @@ ul {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -1469,26 +1172,20 @@ ul {
     height: 420px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .body .self-introduction-inner {
     width: clamp(440px, 26vw, 490px);
     height: clamp(200px, 22vw, 420px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .body .self-introduction-inner {
-    width: clamp(600px, 100vw, 1024px);
+    width: clamp(400px, 43vw, 440px);
     height: auto;
     text-align: center;
   }
 }
-@media not all and (min-width: 599px) {
-  .body .self-introduction-inner {
-    width: auto;
-    height: auto;
-  }
-}
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   .body .self-introduction-inner {
     width: auto;
     height: auto;
@@ -1504,8 +1201,6 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -1517,7 +1212,7 @@ ul {
     margin-left: 32px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .body .self-introduction-inner__first-line_text {
     font-size: calc(2rem + ((1vw - 10.24px)) * 0.4469273743);
     line-height: calc(2rem + ((1vw - 10.24px)) * 0.2234636872);
@@ -1525,22 +1220,17 @@ ul {
     margin-left: clamp(20px, 2vw, 32px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .body .self-introduction-inner__first-line_text {
-    margin-top: clamp(36px, 6vw, 60px);
-    font-size: clamp(18px, 3vw, 26px);
+    font-size: calc(1.6rem + ((1vw - 6px)) * 0.9433962264);
+    line-height: clamp(32px, 4vw, 40px);
+    margin-top: clamp(70px, 12vw, 120px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .body .self-introduction-inner__first-line_text {
-    margin-top: clamp(48px, 10vw, 60px);
-    font-size: clamp(19px, 4vw, 23px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .body .self-introduction-inner__first-line_text {
-    margin-top: clamp(49px, 13vw, 60px);
-    font-size: clamp(19px, 5vw, 23px);
+    margin-top: clamp(60px, 10vw, 60px);
+    font-size: clamp(23px, 4vw, 23px);
   }
 }
 .body .self-introduction-inner__second-line_text {
@@ -1552,8 +1242,6 @@ ul {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -1567,31 +1255,26 @@ ul {
     margin-left: 32px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .body .self-introduction-inner__second-line_text {
     font-size: calc(2rem + ((1vw - 10.24px)) * 0.4469273743);
-    line-height: calc(2rem + ((1vw - 10.24px)) * 0.2234636872);
-    margin-top: clamp(15px, 1vw, 20px);
+    line-height: clamp(40px, 3vw, 48px);
+    margin-top: clamp(12px, 1vw, 15px);
     margin-left: clamp(20px, 2vw, 32px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .body .self-introduction-inner__second-line_text {
-    margin-top: clamp(36px, 6vw, 60px);
-    font-size: clamp(18px, 3vw, 26px);
+    font-size: calc(1.6rem + ((1vw - 6px)) * 0.9433962264);
+    line-height: clamp(32px, 4vw, 40px);
+    margin-top: clamp(20px, 3vw, 30px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .body .self-introduction-inner__second-line_text {
-    font-size: clamp(19px, 4vw, 23px);
-    margin-top: clamp(24px, 5vw, 30px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .body .self-introduction-inner__second-line_text {
-    font-size: clamp(19px, 5vw, 23px);
-    margin-top: clamp(23px, 6vw, 30px);
-    letter-spacing: clamp(-4px, -1vw, -3px);
+    font-size: clamp(23px, 4vw, 23px);
+    margin-top: clamp(30px, 5vw, 30px);
+    letter-spacing: clamp(-3px, -1vw, -3px);
     text-align: center;
     background: linear-gradient(transparent 60%, #86eb86 90%);
   }
@@ -1603,8 +1286,6 @@ ul {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -1619,7 +1300,7 @@ ul {
     margin-left: 32px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .body .self-introduction-inner__third-line_text {
     font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.4469273743);
     line-height: clamp(24px, 2vw, 38px);
@@ -1627,34 +1308,23 @@ ul {
     margin-left: clamp(28px, 2vw, 32px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .body .self-introduction-inner__third-line_text {
-    font-size: clamp(12px, 2vw, 16px);
-    text-align: center;
-    line-height: clamp(24px, 4vw, 36px);
-    letter-spacing: clamp(0px, 0vw, -2px);
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.9433962264);
+    line-height: clamp(24px, 3vw, 32px);
+    letter-spacing: clamp(-2px, 0vw, -2px);
+    margin-top: clamp(30px, 4vw, 45px);
     text-align: left;
-    margin-top: clamp(18px, 3vw, 30px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .body .self-introduction-inner__third-line_text {
-    font-size: clamp(14px, 3vw, 16px);
+    font-size: clamp(16px, 3vw, 16px);
     text-align: center;
-    line-height: clamp(29px, 6vw, 36px);
-    letter-spacing: clamp(0px, 0vw, -2px);
+    line-height: clamp(36px, 6vw, 36px);
+    letter-spacing: clamp(-2px, 0vw, -2px);
     text-align: left;
-    margin-top: clamp(24px, 5vw, 30px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .body .self-introduction-inner__third-line_text {
-    font-size: clamp(11px, 3vw, 16px);
-    text-align: center;
-    line-height: clamp(30px, 8vw, 36px);
-    letter-spacing: clamp(0px, 0vw, -2px);
-    text-align: left;
-    margin-top: clamp(23px, 6vw, 30px);
+    margin-top: clamp(30px, 5vw, 30px);
   }
 }
 .body .self-introduction__image {
@@ -1663,8 +1333,6 @@ ul {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -1681,33 +1349,23 @@ ul {
     margin-top: 162px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .body .self-introduction__image {
     width: clamp(360px, 36vw, 690px);
     height: clamp(250px, 22vw, 420px);
     margin-top: clamp(100px, 8vw, 162px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .body .self-introduction__image {
-    width: clamp(306px, 51vw, 520px);
-    height: clamp(234px, 39vw, 400px);
-    margin: 0 auto;
-    margin-top: clamp(18px, 3vw, 30px);
+    width: clamp(320px, 41vw, 420px);
+    margin-top: clamp(100px, 12vw, 120px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .body .self-introduction__image {
-    width: clamp(418px, 87vw, 520px);
-    height: clamp(322px, 67vw, 400px);
-    margin: 0 auto;
-    margin-top: clamp(24px, 5vw, 30px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .body .self-introduction__image {
-    width: clamp(375px, 100vw, 479px);
-    height: clamp(315px, 84vw, 400px);
+    width: clamp(479px, 80vw, 479px);
+    height: clamp(400px, 67vw, 400px);
     margin-top: 0px;
   }
 }
@@ -1721,8 +1379,6 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -1734,42 +1390,36 @@ ul {
     padding-bottom: 112px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents {
     width: clamp(1025px, 100vw, 1919px);
     height: auto;
     text-align: center;
-    padding-bottom: clamp(62px, 6vw, 112px);
+    padding-bottom: clamp(50px, 6vw, 112px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents {
-    width: clamp(600px, 100vw, 1024px);
+    width: 100vw;
     height: auto;
+    text-align: center;
+    padding-bottom: clamp(50px, 11vw, 112px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents {
-    width: clamp(480px, 100vw, 599px);
-    height: clamp(2242px, 467vw, 2800px);
-    height: auto;
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents {
-    width: clamp(375px, 100vw, 479px);
-    height: clamp(2194px, 585vw, 2800px);
+    width: 100vw;
     height: auto;
   }
 }
 .medical-treatment-contents__first-line-text {
+  background: linear-gradient(transparent 60%, #86eb86 90%);
+  font-weight: 500;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -1778,37 +1428,32 @@ ul {
   .medical-treatment-contents__first-line-text {
     width: auto;
     font-size: 2.4rem;
-    font-weight: 500;
     line-height: 22px;
-    background: linear-gradient(transparent 60%, #86eb86 90%);
     margin-top: 84px;
     display: inline-block;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents__first-line-text {
     display: inline-block;
     width: auto;
     font-size: 2.4rem;
-    font-weight: 500;
     line-height: 22px;
-    background: linear-gradient(transparent 60%, #86eb86 90%);
-    margin-top: clamp(41px, 4vw, 85px);
+    margin-top: clamp(30px, 4vw, 85px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents__first-line-text {
-    font-size: clamp(18px, 3vw, 28px);
+    display: inline-block;
+    width: auto;
+    font-size: calc(2rem + ((1vw - 6px)) * 0.4716981132);
+    line-height: clamp(40px, 4vw, 44px);
+    margin-top: clamp(10px, 10vw, 100px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents__first-line-text {
-    font-size: clamp(19px, 4vw, 24px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents__first-line-text {
-    font-size: clamp(19px, 5vw, 24px);
+    font-size: clamp(24px, 4vw, 24px);
   }
 }
 .medical-treatment-contents__second-line-text {
@@ -1818,8 +1463,6 @@ ul {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -1833,28 +1476,27 @@ ul {
     margin-top: 77px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents__second-line-text {
     display: inline-block;
     width: auto;
     font-size: 1.6rem;
     line-height: 22px;
-    margin-top: clamp(41px, 4vw, 79px);
+    margin-top: clamp(45px, 4vw, 79px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents__second-line-text {
-    font-size: clamp(12px, 2vw, 24px);
+    display: inline-block;
+    width: auto;
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.9433962264);
+    line-height: clamp(24px, 3vw, 32px);
+    margin-top: clamp(45px, 4vw, 40px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents__second-line-text {
-    letter-spacing: clamp(0px, 0vw, 2.5px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents__second-line-text {
-    letter-spacing: clamp(4px, 1vw, 2.5px);
+    letter-spacing: clamp(2.5px, 0vw, 2.5px);
   }
 }
 .medical-treatment-contents__inner {
@@ -1863,8 +1505,6 @@ ul {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -1877,7 +1517,7 @@ ul {
     margin-top: 34px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents__inner {
     display: flex;
     flex-wrap: wrap;
@@ -1885,35 +1525,29 @@ ul {
     margin-top: clamp(30px, 2vw, 34px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents__inner {
+    width: 100%;
     margin: 0;
-    width: clamp(600px, 100vw, 1024px);
-    margin-top: clamp(30px, 5vw, 50px);
+    margin-top: clamp(20px, 3vw, 30px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents__inner {
     margin: 0;
-    width: clamp(480px, 100vw, 599px);
-    margin-top: clamp(38px, 8vw, 50px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents__inner {
-    margin: 0;
-    width: clamp(375px, 100vw, 479px);
-    margin-top: clamp(38px, 10vw, 50px);
+    width: clamp(479px, 80vw, 479px);
+    margin-top: clamp(50px, 8vw, 50px);
   }
 }
 .medical-treatment-contents__inner-article-board {
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: white;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -1922,55 +1556,40 @@ ul {
   .medical-treatment-contents__inner-article-board {
     width: 380px;
     height: 591px;
-    border: 1px solid;
-    border-radius: 10px;
     margin: 0 10px 0 10px;
     position: relative;
-    background-color: white;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents__inner-article-board {
     width: clamp(280px, 20vw, 380px);
     height: clamp(350px, 31vw, 591px);
-    border: 1px solid;
-    border-radius: 10px;
-    margin-left: clamp(10px, 1vw, 10px);
-    margin-right: clamp(10px, 1vw, 10px);
+    margin-left: clamp(8px, 1vw, 10px);
+    margin-right: clamp(8px, 1vw, 10px);
     text-align: center;
     position: relative;
-    background-color: white;
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents__inner-article-board {
-    width: clamp(468px, 78vw, 800px);
-    height: clamp(408px, 68vw, 700px);
-    margin-top: clamp(18px, 3vw, 30px);
+    width: clamp(150px, 29vw, 300px);
+    height: clamp(360px, 39vw, 400px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents__inner-article-board {
-    width: clamp(398px, 83vw, 500px);
-    height: clamp(461px, 96vw, 575px);
-    margin-top: clamp(24px, 5vw, 30px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents__inner-article-board {
-    width: clamp(315px, 84vw, 400px);
-    height: clamp(450px, 120vw, 575px);
-    margin-top: clamp(23px, 6vw, 30px);
+    width: clamp(400px, 67vw, 400px);
+    height: clamp(575px, 96vw, 575px);
+    margin-top: clamp(30px, 5vw, 30px);
   }
 }
 .medical-treatment-contents__inner-article-board--title {
+  font-weight: 500;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -1978,37 +1597,26 @@ ul {
 @media (min-width: 1920px) {
   .medical-treatment-contents__inner-article-board--title {
     font-size: 2.4rem;
-    font-weight: 500;
     text-align: center;
     margin-top: 43px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents__inner-article-board--title {
     font-size: calc(1.8rem + ((1vw - 10.24px)) * 0.6703910615);
-    font-weight: 500;
-    margin-top: clamp(21px, 2vw, 35px);
+    margin-top: clamp(30px, 2vw, 35px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents__inner-article-board--title {
-    font-size: clamp(18px, 3vw, 26px);
-    margin: 0 auto;
-    margin-top: clamp(18px, 3vw, 35px);
+    font-size: calc(1.6rem + ((1vw - 6px)) * 0.9433962264);
+    margin-top: clamp(30px, 3vw, 35px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents__inner-article-board--title {
-    font-size: clamp(19px, 4vw, 24px);
-    margin: 0 auto;
-    margin-top: clamp(29px, 6vw, 35px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents__inner-article-board--title {
-    font-size: clamp(19px, 5vw, 24px);
-    margin: 0 auto;
-    margin-top: clamp(26px, 7vw, 35px);
+    font-size: clamp(24px, 4vw, 24px);
+    margin-top: clamp(35px, 6vw, 35px);
   }
 }
 .medical-treatment-contents__inner-article-board--content-left {
@@ -2020,8 +1628,6 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -2035,7 +1641,7 @@ ul {
     margin: 42px 29px 111px 31px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents__inner-article-board--content-left {
     max-width: 100%;
     height: auto;
@@ -2045,34 +1651,23 @@ ul {
     margin-top: clamp(21px, 2vw, 42px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents__inner-article-board--content-left {
-    font-size: clamp(12px, 2vw, 22px);
+    font-size: calc(1rem + ((1vw - 6px)) * 0.4716981132);
     text-align: center;
-    line-height: clamp(24px, 4vw, 38px);
-    width: clamp(408px, 68vw, 700px);
-    margin-top: clamp(18px, 3vw, 35px);
+    line-height: clamp(22px, 2vw, 24px);
+    letter-spacing: -1.5px;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents__inner-article-board--content-left {
-    font-size: clamp(14px, 3vw, 18px);
-    letter-spacing: clamp(0px, 0vw, 0px);
-    text-align: center;
-    line-height: clamp(29px, 6vw, 38px);
-    width: clamp(398px, 83vw, 500px);
-    margin-top: clamp(29px, 6vw, 35px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents__inner-article-board--content-left {
-    font-size: clamp(15px, 4vw, 18px);
-    letter-spacing: clamp(-4px, -1vw, -3px);
+    font-size: clamp(18px, 3vw, 18px);
+    letter-spacing: clamp(-3px, -1vw, -3px);
     text-align: left;
-    line-height: clamp(30px, 8vw, 38px);
-    width: clamp(274px, 73vw, 350px);
+    line-height: clamp(38px, 6vw, 38px);
+    width: clamp(350px, 58vw, 350px);
     margin: 0 auto;
-    margin-top: clamp(26px, 7vw, 35px);
+    margin-top: clamp(35px, 6vw, 35px);
   }
 }
 .medical-treatment-contents__inner-article-board--content-center {
@@ -2084,8 +1679,6 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -2099,7 +1692,7 @@ ul {
     margin: 42px 29px 111px 31px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents__inner-article-board--content-center {
     max-width: 100%;
     height: auto;
@@ -2109,33 +1702,22 @@ ul {
     margin-top: clamp(21px, 2vw, 42px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents__inner-article-board--content-center {
-    font-size: clamp(12px, 2vw, 22px);
+    font-size: calc(1rem + ((1vw - 6px)) * 0.4716981132);
     text-align: center;
-    line-height: clamp(24px, 4vw, 38px);
-    width: clamp(408px, 68vw, 700px);
-    margin-top: clamp(18px, 3vw, 35px);
+    line-height: clamp(22px, 2vw, 24px);
+    letter-spacing: -1.5px;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents__inner-article-board--content-center {
-    font-size: clamp(14px, 3vw, 18px);
-    letter-spacing: clamp(0px, 0vw, 0px);
-    text-align: center;
-    line-height: clamp(29px, 6vw, 38px);
-    width: clamp(398px, 83vw, 500px);
-    margin-top: clamp(29px, 6vw, 35px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents__inner-article-board--content-center {
-    font-size: clamp(15px, 4vw, 18px);
-    letter-spacing: clamp(-4px, -1vw, -3px);
+    font-size: clamp(18px, 3vw, 18px);
+    letter-spacing: clamp(-3px, -1vw, -3px);
     text-align: left;
-    line-height: clamp(30px, 8vw, 38px);
-    width: clamp(274px, 73vw, 350px);
-    margin-top: clamp(26px, 7vw, 35px);
+    line-height: clamp(38px, 6vw, 38px);
+    width: clamp(350px, 58vw, 350px);
+    margin-top: clamp(35px, 6vw, 35px);
   }
 }
 .medical-treatment-contents__inner-article-board--content-right {
@@ -2147,8 +1729,6 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -2162,7 +1742,7 @@ ul {
     margin: 42px 29px 111px 31px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents__inner-article-board--content-right {
     max-width: 100%;
     height: auto;
@@ -2172,43 +1752,34 @@ ul {
     margin-top: clamp(21px, 2vw, 42px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents__inner-article-board--content-right {
-    font-size: clamp(12px, 2vw, 22px);
+    font-size: calc(1rem + ((1vw - 6px)) * 0.4716981132);
     text-align: center;
-    line-height: clamp(24px, 4vw, 38px);
-    width: clamp(408px, 68vw, 700px);
-    margin-top: clamp(18px, 3vw, 35px);
+    line-height: clamp(22px, 2vw, 24px);
+    letter-spacing: -1.5px;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents__inner-article-board--content-right {
-    font-size: clamp(14px, 3vw, 18px);
-    letter-spacing: clamp(0px, 0vw, 0px);
-    text-align: center;
-    line-height: clamp(29px, 6vw, 38px);
-    width: clamp(398px, 83vw, 500px);
-    margin-top: clamp(29px, 6vw, 35px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents__inner-article-board--content-right {
-    font-size: clamp(15px, 4vw, 18px);
-    letter-spacing: clamp(-4px, -1vw, -3px);
+    font-size: clamp(18px, 3vw, 18px);
+    letter-spacing: clamp(-3px, -1vw, -3px);
     text-align: left;
-    line-height: clamp(30px, 8vw, 38px);
-    width: clamp(274px, 73vw, 350px);
-    margin-top: clamp(26px, 7vw, 35px);
+    line-height: clamp(38px, 6vw, 38px);
+    width: clamp(350px, 58vw, 350px);
+    margin-top: clamp(35px, 6vw, 35px);
   }
 }
 .medical-treatment-contents__inner-article-board--image-left {
+  position: absolute;
+  top: 84%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -2221,52 +1792,37 @@ ul {
   .medical-treatment-contents__inner-article-board--image-left {
     width: 187px;
     height: 187px;
-    position: absolute;
-    top: 84%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents__inner-article-board--image-left {
-    max-width: 100%;
-    height: auto;
-    position: absolute;
     top: 80%;
     left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents__inner-article-board--image-left {
-    width: clamp(198px, 33vw, 340px);
-    height: clamp(198px, 33vw, 340px);
-    top: 72%;
+    top: 78%;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents__inner-article-board--image-left {
-    width: clamp(182px, 38vw, 230px);
-    height: clamp(182px, 38vw, 230px);
-    top: 77%;
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents__inner-article-board--image-left {
-    width: clamp(180px, 48vw, 230px);
-    height: clamp(180px, 48vw, 230px);
+    width: clamp(230px, 38vw, 230px);
+    height: clamp(230px, 38vw, 230px);
     top: 77%;
   }
 }
 .medical-treatment-contents__inner-article-board--image-center {
   /* pc 1920px以上  */
+  position: absolute;
+  top: 84%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -2279,51 +1835,36 @@ ul {
   .medical-treatment-contents__inner-article-board--image-center {
     width: 187px;
     height: 187px;
-    position: absolute;
-    top: 84%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents__inner-article-board--image-center {
-    max-width: 100%;
-    height: auto;
-    position: absolute;
     top: 80%;
     left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents__inner-article-board--image-center {
-    width: clamp(198px, 33vw, 340px);
-    height: clamp(198px, 33vw, 340px);
-    top: 70%;
+    top: 78%;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents__inner-article-board--image-center {
-    width: clamp(182px, 38vw, 230px);
-    height: clamp(182px, 38vw, 230px);
-    top: 70%;
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents__inner-article-board--image-center {
-    width: clamp(180px, 48vw, 230px);
-    height: clamp(180px, 48vw, 230px);
+    width: clamp(230px, 38vw, 230px);
+    height: clamp(230px, 38vw, 230px);
     top: 70%;
   }
 }
 .medical-treatment-contents__inner-article-board--image-right {
+  position: absolute;
+  top: 84%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -2336,40 +1877,23 @@ ul {
   .medical-treatment-contents__inner-article-board--image-right {
     width: 187px;
     height: 187px;
-    position: absolute;
-    top: 84%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents__inner-article-board--image-right {
-    max-width: 100%;
-    height: auto;
-    position: absolute;
     top: 80%;
     left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents__inner-article-board--image-right {
-    width: clamp(198px, 33vw, 340px);
-    height: clamp(198px, 33vw, 340px);
-    top: 72%;
+    top: 78%;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents__inner-article-board--image-right {
-    width: clamp(182px, 38vw, 230px);
-    height: clamp(182px, 38vw, 230px);
-    top: 77%;
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents__inner-article-board--image-right {
-    width: clamp(180px, 48vw, 230px);
-    height: clamp(180px, 48vw, 230px);
+    width: clamp(230px, 38vw, 230px);
+    height: clamp(230px, 38vw, 230px);
     top: 77%;
   }
 }
@@ -2384,8 +1908,6 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -2396,26 +1918,23 @@ ul {
     margin-top: 88px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents .notice-title {
     display: inline-block;
     width: auto;
     margin-top: clamp(60px, 5vw, 88px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents .notice-title {
-    font-size: clamp(18px, 3vw, 28px);
+    margin-top: clamp(80px, 10vw, 100px);
+    font-size: calc(1.8rem + ((1vw - 6px)) * 0.9433962264);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents .notice-title {
-    font-size: clamp(19px, 4vw, 24px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents .notice-title {
-    font-size: clamp(19px, 5vw, 24px);
+    margin-top: clamp(50px, 6vw, 60px);
+    font-size: calc(1.8rem + ((1vw - 6px)) * 0.9433962264);
   }
 }
 .medical-treatment-contents .notice-detail_container {
@@ -2436,8 +1955,6 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -2448,32 +1965,25 @@ ul {
     margin-top: 74px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents .notice-detail_container {
     width: clamp(1000px, 61vw, 1180px);
     height: auto;
     margin-top: clamp(50px, 4vw, 74px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents .notice-detail_container {
-    width: clamp(528px, 88vw, 900px);
+    width: 95vw;
     height: auto;
-    margin-top: clamp(30px, 5vw, 50px);
+    margin-top: clamp(50px, 7vw, 74px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents .notice-detail_container {
-    width: clamp(432px, 90vw, 540px);
+    width: clamp(420px, 70vw, 420px);
     height: auto;
-    margin-top: clamp(38px, 8vw, 50px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents .notice-detail_container {
-    width: clamp(330px, 88vw, 420px);
-    height: auto;
-    margin-top: clamp(38px, 10vw, 50px);
+    margin-top: clamp(50px, 8vw, 50px);
   }
 }
 .medical-treatment-contents .notice-detail_container__margin-upper {
@@ -2484,8 +1994,6 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -2494,36 +2002,32 @@ ul {
     width: 1100px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents .notice-detail_container__margin-upper {
     width: clamp(1000px, 57vw, 1100px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents .notice-detail_container__margin-upper {
-    width: clamp(528px, 88vw, 900px);
+    width: 100%;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents .notice-detail_container__margin-upper {
-    width: clamp(394px, 82vw, 490px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents .notice-detail_container__margin-upper {
-    width: clamp(296px, 79vw, 380px);
+    width: clamp(380px, 63vw, 380px);
   }
 }
 .medical-treatment-contents .notice-detail_container .article-inner {
   width: 1048px;
   border-bottom: 1px solid #e7e7e7;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -2533,78 +2037,40 @@ ul {
     margin: 0px 66px 0px 66px;
     padding-top: 18px;
     padding-bottom: 18.5px;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents .notice-detail_container .article-inner {
     width: clamp(920px, 55vw, 1048px);
     margin-right: clamp(20px, 3vw, 66px);
     margin-left: clamp(20px, 3vw, 66px);
     padding-top: clamp(12px, 1vw, 24.5px);
     padding-bottom: clamp(10px, 1vw, 20.5px);
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents .notice-detail_container .article-inner {
-    margin-left: clamp(12px, 2vw, 20px);
-    margin-right: clamp(12px, 2vw, 20px);
-    align-items: flex-start;
+    width: 95%;
+    padding-top: clamp(12px, 2vw, 24.5px);
+    padding-bottom: clamp(10px, 2vw, 20.5px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents .notice-detail_container .article-inner {
-    margin-left: clamp(14px, 3vw, 20px);
-    margin-right: clamp(14px, 3vw, 20px);
-    align-items: flex-start;
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents .notice-detail_container .article-inner {
-    margin-left: clamp(15px, 4vw, 20px);
-    margin-right: clamp(15px, 4vw, 20px);
+    margin-left: clamp(20px, 3vw, 20px);
+    margin-right: clamp(20px, 3vw, 20px);
     align-items: flex-start;
   }
 }
 .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper {
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
+  display: flex;
+  flex-wrap: nowrap;
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
-@media (min-width: 1920px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-}
-@media not all and (min-width: 1919px) {
-  .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-}
-@media not all and (min-width: 599px) {
-  .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper {
-    width: clamp(96px, 20vw, 120px);
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper {
-    width: clamp(79px, 21vw, 100px);
+    width: clamp(100px, 17vw, 100px);
     flex-direction: column;
     align-items: flex-start;
   }
@@ -2618,6 +2084,8 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
+  /* スマートフォン縦画面 */
+  /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
   .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--date {
@@ -2628,20 +2096,26 @@ ul {
     display: inline-block;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--date {
     font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.4469273743);
     height: clamp(22px, 1vw, 25px);
     line-height: clamp(22px, 1vw, 25px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--date {
-    width: clamp(72px, 12vw, 120px);
-    font-size: clamp(12px, 2vw, 16px);
-    text-align: center;
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.9433962264);
+    height: clamp(22px, 2vw, 25px);
+    line-height: clamp(22px, 2vw, 25px);
+  }
+}
+@media not all and (min-width: 600px) {
+  .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--date {
+    width: clamp(100px, 17vw, 100px);
+    font-size: clamp(16px, 3vw, 16px);
     margin: 0;
-    margin-top: clamp(6px, 1vw, 10px);
+    margin-top: clamp(10px, 2vw, 10px);
   }
 }
 .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
@@ -2655,8 +2129,6 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -2669,7 +2141,7 @@ ul {
     margin-left: 38px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
     font-size: calc(1rem + ((1vw - 10.24px)) * 0.2234636872);
     width: clamp(50px, 4vw, 80px);
@@ -2678,30 +2150,21 @@ ul {
     margin-left: clamp(15px, 2vw, 38px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
-    margin: 0;
-    font-size: clamp(6px, 1vw, 12px);
-    text-align: center;
-    margin-top: clamp(6px, 1vw, 10px);
-    margin-bottom: clamp(6px, 1vw, 10px);
+    font-size: calc(1rem + ((1vw - 6px)) * 0.4716981132);
+    width: clamp(45px, 6vw, 60px);
+    height: clamp(22px, 2vw, 25px);
+    line-height: clamp(22px, 2vw, 25px);
+    margin-left: clamp(5px, 2vw, 25px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
+    font-size: clamp(14px, 2vw, 14px);
     margin: 0;
-    font-size: clamp(10px, 2vw, 12px);
-    text-align: center;
     margin-top: clamp(10px, 2vw, 10px);
     margin-bottom: clamp(10px, 2vw, 10px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
-    font-size: clamp(11px, 3vw, 14px);
-    margin: 0;
-    margin-top: clamp(8px, 2vw, 10px);
-    margin-bottom: clamp(8px, 2vw, 10px);
   }
 }
 .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right {
@@ -2711,8 +2174,6 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -2721,7 +2182,7 @@ ul {
     margin-left: 35px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right {
     font-size: calc(1rem + ((1vw - 10.24px)) * 0.2234636872);
     width: clamp(800px, 47vw, 900px);
@@ -2731,19 +2192,14 @@ ul {
     margin-left: clamp(10px, 2vw, 35px);
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right {
-    width: clamp(294px, 49vw, 500px);
+    font-size: calc(1rem + ((1vw - 6px)) * 0.4716981132);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right {
-    width: clamp(278px, 58vw, 350px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right {
-    width: clamp(195px, 52vw, 250px);
+    width: clamp(250px, 42vw, 250px);
   }
 }
 .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right-text {
@@ -2756,8 +2212,6 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -2766,39 +2220,26 @@ ul {
     font-size: 1.6rem;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right-text {
     font-size: calc(1.3rem + ((1vw - 10.24px)) * 0.3351955307);
     letter-spacing: -0.5px;
   }
 }
-@media not all and (min-width: 1024px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right-text {
-    font-size: clamp(12px, 2vw, 16px);
-    margin: 0;
-    margin-top: clamp(6px, 1vw, 10px);
-    margin-bottom: clamp(6px, 1vw, 10px);
-    margin-left: clamp(18px, 3vw, 30px);
+    font-size: calc(1rem + ((1vw - 6px)) * 0.9433962264);
+    letter-spacing: -2px;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right-text {
-    width: clamp(254px, 53vw, 320px);
-    font-size: clamp(14px, 3vw, 16px);
+    width: clamp(250px, 42vw, 250px);
+    font-size: clamp(14px, 2vw, 14px);
     margin: 0;
     margin-top: clamp(10px, 2vw, 10px);
     margin-bottom: clamp(10px, 2vw, 10px);
-    margin-left: clamp(24px, 5vw, 30px);
-  }
-}
-@media not all and (min-width: 479px) {
-  .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right-text {
-    width: clamp(195px, 52vw, 250px);
-    font-size: clamp(11px, 3vw, 14px);
-    margin: 0;
-    margin-top: clamp(8px, 2vw, 10px);
-    margin-bottom: clamp(8px, 2vw, 10px);
-    margin-left: clamp(23px, 6vw, 30px);
+    margin-left: clamp(30px, 5vw, 30px);
   }
 }
 .medical-treatment-contents .notice-detail_container .see-all_inner {
@@ -2807,8 +2248,6 @@ ul {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -2820,25 +2259,25 @@ ul {
     margin-left: 66px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents .notice-detail_container .see-all_inner {
     width: clamp(920px, 55vw, 1065px);
     margin-left: clamp(20px, 3vw, 66px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents .notice-detail_container .see-all_inner {
-    width: clamp(384px, 80vw, 480px);
-    height: clamp(82px, 17vw, 100px);
-    margin: 0;
+    width: clamp(200px, 83vw, 850px);
+    height: clamp(50px, 8vw, 80px);
+    margin-left: clamp(10px, 7vw, 70px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents .notice-detail_container .see-all_inner {
-    width: clamp(338px, 90vw, 430px);
-    height: clamp(38px, 10vw, 50px);
+    width: clamp(430px, 72vw, 430px);
+    height: clamp(50px, 8vw, 50px);
     margin: 0;
-    margin-top: clamp(19px, 5vw, 25px);
+    margin-top: clamp(25px, 4vw, 25px);
   }
 }
 .medical-treatment-contents .notice-detail_container .see-all_inner__text {
@@ -2854,28 +2293,25 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   .medical-treatment-contents .notice-detail_container .see-all_inner__text {
     font-size: calc(1.3rem + ((1vw - 10.24px)) * 0.3351955307);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents .notice-detail_container .see-all_inner__text {
-    font-size: clamp(14px, 3vw, 16px);
-    margin: 0;
-    margin-right: clamp(5px, 1vw, 7px);
+    font-size: calc(1rem + ((1vw - 6px)) * 0.9433962264);
+    margin-top: clamp(10px, 2vw, 20px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   .medical-treatment-contents .notice-detail_container .see-all_inner__text {
-    font-size: clamp(11px, 3vw, 16px);
+    font-size: clamp(16px, 3vw, 16px);
     margin: 0;
-    margin-right: clamp(4px, 1vw, 7px);
+    margin-right: clamp(7px, 1vw, 7px);
   }
 }
 .medical-treatment-contents .notice-detail_container .see-all_inner__icon {
@@ -2883,28 +2319,25 @@ ul {
   width: 12px;
   height: 14px;
   display: inline-block;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 1025px) {
   .medical-treatment-contents .notice-detail_container .see-all_inner__icon {
-    font-size: clamp(11px, 3vw, 14px);
+    font-size: calc(1rem + ((1vw - 6px)) * 0.9433962264);
+  }
+}
+@media not all and (min-width: 600px) {
+  .medical-treatment-contents .notice-detail_container .see-all_inner__icon {
+    font-size: clamp(14px, 2vw, 14px);
     margin: 0;
-    margin-right: clamp(38px, 10vw, 50px);
+    margin-right: clamp(50px, 8vw, 50px);
   }
 }
 
 div.access__wrapper {
-  width: 1190px;
-  height: 799px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -2915,29 +2348,30 @@ div.access__wrapper {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
-@media not all and (min-width: 1919px) {
+@media (min-width: 1920px) {
+  div.access__wrapper {
+    width: 1190px;
+    height: 799px;
+  }
+}
+@media not all and (min-width: 1920px) {
   div.access__wrapper {
     width: clamp(1000px, 62vw, 1190px);
-    height: clamp(700px, 42vw, 799px);
+    height: clamp(300px, 42vw, 799px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper {
-    width: clamp(470px, 98vw, 589px);
-    height: auto;
-    flex-direction: column-reverse;
-    padding: 0;
-    margin: 0;
+    width: 100vw;
+    height: clamp(350px, 39vw, 400px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper {
-    width: clamp(375px, 100vw, 479px);
+    width: 100vw;
     height: auto;
     flex-direction: column-reverse;
     padding: 0;
@@ -2946,81 +2380,47 @@ div.access__wrapper {
 }
 div.access__wrapper div.copyright-reserved__inner-sp {
   visibility: hidden;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper div.copyright-reserved__inner-sp {
     visibility: visible;
-    width: clamp(398px, 83vw, 500px);
+    width: clamp(400px, 67vw, 400px);
     margin: 0 auto;
-    margin-top: clamp(24px, 5vw, 30px);
-    text-align: center;
-  }
-}
-@media not all and (min-width: 479px) {
-  div.access__wrapper div.copyright-reserved__inner-sp {
-    visibility: visible;
-    width: clamp(315px, 84vw, 400px);
-    margin: 0 auto;
-    margin-top: clamp(23px, 6vw, 30px);
+    margin-top: clamp(30px, 5vw, 30px);
     text-align: center;
   }
 }
 div.access__wrapper div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
   visibility: hidden;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
     visibility: visible;
-    font-size: clamp(14px, 3vw, 18px);
-  }
-}
-@media not all and (min-width: 479px) {
-  div.access__wrapper div.copyright-reserved__inner-sp small.copyright-reserved__text-sp {
-    visibility: visible;
-    font-size: clamp(11px, 3vw, 14px);
+    font-size: clamp(14px, 2vw, 14px);
   }
 }
 div.access__wrapper .access-container {
+  margin: 0 auto;
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-start;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
+  justify-content: center;
   /* タブレット */
   /* $** pxを含まずそれより小さい */
   /* $** pxを含まずそれより小さい */
-  /* $** pxを含まずそれより小さい */
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container {
-    width: clamp(480px, 100vw, 599px);
+    width: 100vw;
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container {
-    width: clamp(375px, 100vw, 479px);
+    width: 100vw;
   }
 }
 div.access__wrapper .access-container__map {
@@ -3029,8 +2429,6 @@ div.access__wrapper .access-container__map {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -3046,70 +2444,70 @@ div.access__wrapper .access-container__map img {
     margin-top: 181px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__map {
     width: clamp(400px, 32vw, 608px);
-    margin-top: clamp(120px, 9vw, 181px);
+    margin-top: clamp(30px, 9vw, 181px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__map {
-    width: clamp(446px, 93vw, 559px);
-    height: clamp(398px, 83vw, 500px);
-    margin: 0 auto;
-    margin-top: clamp(24px, 5vw, 30px);
+    width: clamp(150px, 29vw, 300px);
+    margin-top: clamp(50px, 7vw, 70px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__map {
-    width: clamp(330px, 88vw, 420px);
-    height: clamp(244px, 65vw, 310px);
+    width: clamp(420px, 70vw, 420px);
+    height: clamp(310px, 52vw, 310px);
     margin: 0 auto;
-    margin-top: clamp(23px, 6vw, 30px);
+    margin-top: clamp(30px, 5vw, 30px);
   }
 }
 div.access__wrapper .access-container__detail {
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  width: 538px;
-  height: 625px;
-  margin-top: 181px;
-  margin-left: 33px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
+  /* pc 1920px以上  */
+  /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
-@media not all and (min-width: 1919px) {
+@media (min-width: 1920px) {
+  div.access__wrapper .access-container__detail {
+    width: 538px;
+    height: 625px;
+    margin-top: 181px;
+    margin-left: 33px;
+  }
+}
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail {
     width: clamp(450px, 28vw, 538px);
-    height: auto;
-    margin-top: clamp(120px, 9vw, 181px);
+    height: clamp(300px, 33vw, 625px);
+    margin-top: clamp(30px, 9vw, 181px);
+    margin-left: clamp(20px, 2vw, 33px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail {
-    width: clamp(480px, 100vw, 599px);
-    height: auto;
-    margin: 0 auto;
-    margin-top: clamp(72px, 15vw, 90px);
-    flex-wrap: nowrap;
+    width: clamp(350px, 44vw, 450px);
+    height: clamp(280px, 29vw, 300px);
+    margin-top: clamp(50px, 7vw, 70px);
+    margin-left: clamp(15px, 2vw, 20px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail {
-    width: clamp(330px, 88vw, 420px);
+    width: clamp(420px, 70vw, 420px);
     height: auto;
     margin: 0 auto;
-    margin-top: clamp(94px, 25vw, 120px);
+    margin-top: clamp(120px, 20vw, 120px);
     flex-wrap: nowrap;
   }
 }
@@ -3120,31 +2518,32 @@ div.access__wrapper .access-container__detail-logo_inner {
   align-items: center;
   /* pc 1920px以上  */
   /* 1920px 以上 */
-  width: 275x;
-  height: 73px;
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
-@media not all and (min-width: 1919px) {
+@media (min-width: 1920px) {
+  div.access__wrapper .access-container__detail-logo_inner {
+    width: 275x;
+    height: 73px;
+  }
+}
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-logo_inner {
     width: clamp(250px, 14vw, 275px);
     height: clamp(55px, 4vw, 73px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-logo_inner {
-    width: 100%;
-    margin-left: 0px;
-    margin: 0 auto;
+    width: clamp(230px, 24vw, 250px);
+    height: clamp(50px, 6vw, 60px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-logo_inner {
     width: 100%;
     margin-left: 0px;
@@ -3158,8 +2557,6 @@ div.access__wrapper .access-container__detail-logo_inner--icon {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -3169,24 +2566,23 @@ div.access__wrapper .access-container__detail-logo_inner--icon {
     height: 73px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-logo_inner--icon {
     width: clamp(45px, 4vw, 73px);
     height: clamp(45px, 4vw, 73px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-logo_inner--icon {
-    width: clamp(58px, 12vw, 73px);
-    height: clamp(58px, 12vw, 73px);
-    margin-left: clamp(115px, 24vw, 145px);
+    width: clamp(35px, 7vw, 73px);
+    height: clamp(35px, 7vw, 73px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-logo_inner--icon {
-    width: clamp(56px, 15vw, 73px);
-    height: clamp(56px, 15vw, 73px);
-    margin-left: clamp(56px, 15vw, 73px);
+    width: clamp(73px, 12vw, 73px);
+    height: clamp(73px, 12vw, 73px);
+    margin-left: clamp(73px, 12vw, 73px);
   }
 }
 div.access__wrapper .access-container__detail-logo_inner-tagline {
@@ -3195,8 +2591,6 @@ div.access__wrapper .access-container__detail-logo_inner-tagline {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -3207,25 +2601,25 @@ div.access__wrapper .access-container__detail-logo_inner-tagline {
     height: 73px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-logo_inner-tagline {
     width: 95%;
     height: clamp(45px, 4vw, 73px);
     margin-left: clamp(15px, 1vw, 15px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-logo_inner-tagline {
-    width: clamp(158px, 33vw, 200px);
-    height: clamp(58px, 12vw, 73px);
-    margin-left: clamp(14px, 3vw, 15px);
+    width: 95%;
+    height: clamp(45px, 5vw, 55px);
+    margin-left: clamp(10px, 1vw, 15px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-logo_inner-tagline {
-    width: clamp(158px, 42vw, 200px);
-    height: clamp(56px, 15vw, 73px);
-    margin-left: clamp(11px, 3vw, 15px);
+    width: clamp(200px, 33vw, 200px);
+    height: clamp(73px, 12vw, 73px);
+    margin-left: clamp(15px, 3vw, 15px);
   }
 }
 div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
@@ -3234,8 +2628,6 @@ div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -3248,25 +2640,25 @@ div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
     padding-left: 11px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
     height: clamp(20px, 2vw, 30px);
     font-size: calc(1.9rem + ((1vw - 10.24px)) * 1.0055865922);
     text-align: center;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
-    font-size: clamp(24px, 5vw, 30px);
-    line-height: clamp(24px, 5vw, 30px);
-    padding-left: clamp(10px, 2vw, 11px);
+    height: clamp(20px, 3vw, 30px);
+    font-size: calc(2rem + ((1vw - 6px)) * 0.4716981132);
+    text-align: center;
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
-    font-size: clamp(23px, 6vw, 30px);
-    line-height: clamp(23px, 6vw, 30px);
-    padding-left: clamp(8px, 2vw, 11px);
+    font-size: clamp(30px, 5vw, 30px);
+    line-height: clamp(30px, 5vw, 30px);
+    padding-left: clamp(11px, 2vw, 11px);
   }
 }
 div.access__wrapper .access-container__detail-logo_inner-tagline--lower {
@@ -3275,8 +2667,6 @@ div.access__wrapper .access-container__detail-logo_inner-tagline--lower {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -3289,7 +2679,7 @@ div.access__wrapper .access-container__detail-logo_inner-tagline--lower {
     line-height: 48px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-logo_inner-tagline--lower {
     height: clamp(40px, 3vw, 48px);
     font-size: calc(1.9rem + ((1vw - 10.24px)) * 1.1173184358);
@@ -3297,30 +2687,30 @@ div.access__wrapper .access-container__detail-logo_inner-tagline--lower {
     padding-top: clamp(3px, 1vw, 10px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-logo_inner-tagline--lower {
-    font-size: clamp(24px, 5vw, 30px);
-    line-height: clamp(24px, 5vw, 30px);
-    padding-left: clamp(19px, 4vw, 26px);
-    margin-top: clamp(14px, 3vw, 16px);
+    height: clamp(20px, 3vw, 30px);
+    font-size: calc(2rem + ((1vw - 6px)) * 0.4716981132);
+    text-align: center;
+    padding-top: clamp(3px, 1vw, 8px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-logo_inner-tagline--lower {
-    font-size: clamp(23px, 6vw, 30px);
-    line-height: clamp(23px, 6vw, 30px);
-    padding-left: clamp(19px, 5vw, 26px);
-    margin-top: clamp(11px, 3vw, 16px);
+    font-size: clamp(30px, 5vw, 30px);
+    line-height: clamp(30px, 5vw, 30px);
+    padding-left: clamp(26px, 4vw, 26px);
+    margin-top: clamp(16px, 3vw, 16px);
   }
 }
 div.access__wrapper .access-container__detail-address-inner {
+  display: flex;
+  flex-wrap: wrap;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -3328,45 +2718,36 @@ div.access__wrapper .access-container__detail-address-inner {
 @media (min-width: 1920px) {
   div.access__wrapper .access-container__detail-address-inner {
     margin-top: 28px;
-    display: flex;
-    flex-wrap: wrap;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-address-inner {
     margin-top: clamp(25px, 1vw, 28px);
-    display: flex;
-    flex-wrap: wrap;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
+  div.access__wrapper .access-container__detail-address-inner {
+    margin-top: clamp(24px, 3vw, 27px);
+  }
+}
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-address-inner {
     width: 100%;
     margin: 0 auto;
-    margin-top: clamp(24px, 5vw, 30px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-@media not all and (min-width: 479px) {
-  div.access__wrapper .access-container__detail-address-inner {
-    width: 100%;
-    margin: 0 auto;
-    margin-top: clamp(23px, 6vw, 30px);
-    display: flex;
+    margin-top: clamp(30px, 5vw, 30px);
     flex-direction: column;
     align-items: center;
   }
 }
 div.access__wrapper .access-container__detail-address-inner--number {
+  margin-top: 1px;
+  margin-right: 16px;
+  letter-spacing: 0.1px;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -3374,28 +2755,22 @@ div.access__wrapper .access-container__detail-address-inner--number {
 @media (min-width: 1920px) {
   div.access__wrapper .access-container__detail-address-inner--number {
     font-size: 1.6rem;
-    margin-top: 1px;
-    margin-right: 16px;
-    letter-spacing: 0.1px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-address-inner--number {
     font-size: calc(1.4rem + ((1vw - 10.24px)) * 0.2234636872);
-    margin-top: 1px;
-    margin-right: 16px;
-    letter-spacing: 0.1px;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-address-inner--number {
-    font-size: clamp(14px, 3vw, 16px);
-    display: inline-block;
+    font-size: calc(1.3rem + ((1vw - 6px)) * 0.4716981132);
+    margin-top: 5px;
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-address-inner--number {
-    font-size: clamp(11px, 3vw, 16px);
+    font-size: clamp(16px, 3vw, 16px);
     display: inline-block;
   }
 }
@@ -3406,8 +2781,6 @@ div.access__wrapper .access-container__detail-address-inner--text {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -3417,24 +2790,23 @@ div.access__wrapper .access-container__detail-address-inner--text {
     margin-top: 1px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-address-inner--text {
     font-size: calc(1.4rem + ((1vw - 10.24px)) * 0.2234636872);
     margin-top: 1px;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-address-inner--text {
-    font-size: clamp(14px, 3vw, 18px);
-    display: inline-block;
-    margin-top: clamp(10px, 2vw, 10px);
+    font-size: calc(1.3rem + ((1vw - 6px)) * 0.4716981132);
+    margin-top: 5px;
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-address-inner--text {
-    font-size: clamp(15px, 4vw, 18px);
+    font-size: clamp(18px, 3vw, 18px);
     display: inline-block;
-    margin-top: clamp(8px, 2vw, 10px);
+    margin-top: clamp(10px, 2vw, 10px);
   }
 }
 div.access__wrapper .access-container__detail-tel {
@@ -3443,8 +2815,6 @@ div.access__wrapper .access-container__detail-tel {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -3457,7 +2827,7 @@ div.access__wrapper .access-container__detail-tel {
     margin-top: 30px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-tel {
     height: clamp(5px, 2vw, 32px);
     width: 220px;
@@ -3465,20 +2835,18 @@ div.access__wrapper .access-container__detail-tel {
     margin-top: clamp(5px, 2vw, 30px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-tel {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: clamp(14px, 3vw, 15px);
-    display: flex;
-    justify-content: center;
+    width: 220px;
+    position: relative;
+    margin-top: clamp(5px, 1vw, 15px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-tel {
     width: 80%;
     margin: 0 auto;
-    margin-top: clamp(19px, 5vw, 25px);
+    margin-top: clamp(25px, 4vw, 25px);
     display: flex;
     justify-content: center;
   }
@@ -3487,39 +2855,38 @@ div.access__wrapper .access-container__detail-tel--number::before {
   content: "";
   background: url("../images/受話器の線画アイコン.jpg") no-repeat;
   background-size: contain;
+  display: inline-block;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
   div.access__wrapper .access-container__detail-tel--number::before {
-    display: inline-block;
     width: 26px;
     height: 26px;
     margin-right: 15px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-tel--number::before {
-    display: inline-block;
     width: clamp(20px, 1vw, 26px);
     height: clamp(20px, 1vw, 26px);
     margin-right: clamp(12px, 1vw, 15px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-tel--number::before {
-    margin: 0;
+    width: clamp(10px, 2vw, 20px);
+    height: clamp(10px, 2vw, 20px);
+    margin-right: clamp(8px, 1vw, 12px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-tel--number::before {
     margin: 0;
   }
@@ -3534,8 +2901,6 @@ div.access__wrapper .access-container__detail-tel--number {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -3546,19 +2911,14 @@ div.access__wrapper .access-container__detail-tel--number {
     position: absolute;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-tel--number {
     font-size: calc(1.6rem + ((1vw - 10.24px)) * 0.8938547486);
     padding-left: clamp(1px, 0vw, 4px);
     position: absolute;
   }
 }
-@media not all and (min-width: 599px) {
-  div.access__wrapper .access-container__detail-tel--number {
-    margin: 0;
-  }
-}
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-tel--number {
     margin: 0;
   }
@@ -3572,8 +2932,6 @@ div.access__wrapper .access-container__detail-blank-border {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -3584,20 +2942,19 @@ div.access__wrapper .access-container__detail-blank-border {
     margin-left: 4px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-blank-border {
     height: clamp(2px, 1vw, 27px);
     width: clamp(400px, 28vw, 533px);
     margin-left: clamp(2px, 0vw, 4px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-blank-border {
-    width: 100%;
-    margin: 0 auto;
+    width: clamp(330px, 28vw, 533px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-blank-border {
     width: 100%;
     margin: 0 auto;
@@ -3610,8 +2967,6 @@ div.access__wrapper .access-container__detail-blank-margin {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -3621,19 +2976,12 @@ div.access__wrapper .access-container__detail-blank-margin {
     width: 533px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-blank-margin {
     height: clamp(3px, 1vw, 18px);
   }
 }
-@media not all and (min-width: 599px) {
-  div.access__wrapper .access-container__detail-blank-margin {
-    height: clamp(14px, 3vw, 20px);
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-blank-margin {
     width: 100%;
     margin: 0 auto;
@@ -3650,8 +2998,6 @@ div.access__wrapper .access-container__detail-business-hour-inner {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -3661,24 +3007,16 @@ div.access__wrapper .access-container__detail-business-hour-inner {
     height: 95px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner {
     width: clamp(400px, 28vw, 533px);
     height: clamp(60px, 6vw, 114px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner {
-    width: clamp(480px, 100vw, 599px);
-    height: auto;
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-}
-@media not all and (min-width: 479px) {
-  div.access__wrapper .access-container__detail-business-hour-inner {
-    width: clamp(330px, 88vw, 420px);
-    height: clamp(131px, 35vw, 170px);
+    width: clamp(420px, 70vw, 420px);
+    height: clamp(170px, 28vw, 170px);
     flex-direction: row;
     justify-content: flex-start;
   }
@@ -3692,8 +3030,6 @@ div.access__wrapper .access-container__detail-business-hour-inner--consultation-
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -3704,22 +3040,21 @@ div.access__wrapper .access-container__detail-business-hour-inner--consultation-
     font-size: 1.4rem;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--consultation-time {
     width: 89px;
     height: clamp(50px, 6vw, 114px);
     font-size: calc(1.1rem + ((1vw - 10.24px)) * 0.3351955307);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--consultation-time {
-    width: clamp(144px, 30vw, 180px);
-    height: auto;
+    width: clamp(60px, 10vw, 100px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--consultation-time {
-    width: clamp(116px, 31vw, 150px);
+    width: clamp(150px, 25vw, 150px);
     height: auto;
   }
 }
@@ -3729,8 +3064,6 @@ div.access__wrapper .access-container__detail-business-hour-inner--consultation-
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -3742,24 +3075,17 @@ div.access__wrapper .access-container__detail-business-hour-inner--consultation-
     margin-left: 4.5px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--consultation-time p {
     font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
     margin-top: clamp(2px, 0vw, 5px);
     margin-left: clamp(2px, 0vw, 4.5px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--consultation-time p {
-    font-size: clamp(14px, 3vw, 16px);
-    margin-top: clamp(29px, 6vw, 38px);
-    text-align: center;
-  }
-}
-@media not all and (min-width: 479px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--consultation-time p {
-    font-size: clamp(11px, 3vw, 14px);
-    margin-top: clamp(30px, 8vw, 38px);
+    font-size: clamp(14px, 2vw, 14px);
+    margin-top: clamp(38px, 6vw, 38px);
     text-align: center;
   }
 }
@@ -3773,8 +3099,6 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -3784,21 +3108,20 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable {
     height: 114px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable {
     width: clamp(370px, 23vw, 449px);
     height: clamp(100px, 6vw, 114px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable {
-    width: clamp(322px, 67vw, 400px);
-    height: auto;
+    width: clamp(250px, 32vw, 330px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable {
-    width: clamp(195px, 52vw, 250px);
+    width: clamp(250px, 42vw, 250px);
     height: auto;
   }
 }
@@ -3812,22 +3135,17 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern {
-    width: clamp(360px, 75vw, 450px);
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    margin: 0;
+    width: clamp(235px, 31vw, 320px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern {
-    width: clamp(195px, 52vw, 250px);
+    width: clamp(250px, 42vw, 250px);
     flex-wrap: nowrap;
     justify-content: flex-start;
     margin: 0;
@@ -3840,8 +3158,6 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -3853,7 +3169,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin: 5px 23px 0 28px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_upper {
     background-color: white;
     width: clamp(42px, 2vw, 42px);
@@ -3864,60 +3180,40 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin-right: clamp(20px, 1vw, 28px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_upper {
-    width: clamp(82px, 17vw, 100px);
-    font-size: clamp(14px, 3vw, 16px);
-    margin: 0;
-    margin-top: clamp(24px, 5vw, 30px);
-    margin-left: clamp(14px, 3vw, 15px);
-    margin-right: clamp(30px, 8vw, 40px);
-    text-align: right;
+    margin-top: 5px;
+    margin-left: clamp(5px, 1vw, 10px);
+    margin-right: clamp(5px, 1vw, 10px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_upper {
     display: inline-block;
-    width: clamp(94px, 25vw, 120px);
-    font-size: clamp(11px, 3vw, 14px);
+    width: clamp(120px, 20vw, 120px);
+    font-size: clamp(14px, 2vw, 14px);
     margin: 0;
-    margin-top: clamp(23px, 6vw, 30px);
-    margin-right: clamp(15px, 4vw, 20px);
+    margin-top: clamp(30px, 5vw, 30px);
+    margin-right: clamp(20px, 3vw, 20px);
     text-align: right;
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper {
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
+  margin-top: 5px;
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
-@media (min-width: 1920px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper {
     margin-top: 5px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper {
-    margin-top: 5px;
-  }
-}
-@media not all and (min-width: 599px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper {
-    width: clamp(202px, 42vw, 250px);
-    margin-top: clamp(19px, 4vw, 23px);
-  }
-}
-@media not all and (min-width: 479px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper {
-    width: clamp(116px, 31vw, 150px);
-    margin-top: clamp(19px, 5vw, 23px);
+    width: clamp(150px, 25vw, 150px);
+    margin-top: clamp(23px, 4vw, 23px);
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.morning_upper {
@@ -3926,6 +3222,8 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
+  /* $** pxを含まずそれより小さい */
+  /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3936,12 +3234,29 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     display: inline-block;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.morning_upper {
     width: clamp(95px, 6vw, 115px);
     font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
     letter-spacing: 0.2px;
     display: inline-block;
+  }
+}
+@media not all and (min-width: 1025px) {
+  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.morning_upper {
+    width: auto;
+    letter-spacing: -1px;
+    margin-right: clamp(5px, 1vw, 10px);
+    margin-left: clamp(5px, 1vw, 10px);
+  }
+}
+@media not all and (min-width: 600px) {
+  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.morning_upper {
+    font-size: clamp(14px, 2vw, 14px);
+    display: block;
+    margin: 0;
+    margin-right: clamp(20px, 3vw, 20px);
+    margin-left: clamp(20px, 3vw, 20px);
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
@@ -3950,8 +3265,6 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -3965,7 +3278,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin-left: 4px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
     width: clamp(115px, 6vw, 120px);
     font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
@@ -3974,23 +3287,21 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin-left: clamp(2px, 0vw, 4px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
-    width: clamp(202px, 42vw, 250px);
-    font-size: clamp(14px, 3vw, 16px);
-    display: block;
-    margin-top: clamp(5px, 1vw, 8px);
-    margin-right: clamp(14px, 3vw, 20px);
-    margin-left: clamp(14px, 3vw, 20px);
+    width: auto;
+    letter-spacing: -1px;
+    margin-right: clamp(5px, 1vw, 10px);
+    margin-left: clamp(5px, 1vw, 10px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
-    font-size: clamp(11px, 3vw, 14px);
+    font-size: clamp(14px, 2vw, 14px);
     display: block;
     margin: 0;
-    margin-right: clamp(15px, 4vw, 20px);
-    margin-left: clamp(15px, 4vw, 20px);
+    margin-right: clamp(20px, 3vw, 20px);
+    margin-left: clamp(20px, 3vw, 20px);
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_middle {
@@ -3999,8 +3310,6 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -4013,7 +3322,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin: 16px 23px 0 28px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_middle {
     background-color: white;
     width: clamp(42px, 2vw, 42px);
@@ -4024,60 +3333,43 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin-right: clamp(20px, 1vw, 28px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_middle {
-    width: clamp(82px, 17vw, 100px);
-    font-size: clamp(14px, 3vw, 16px);
-    margin: 0;
-    margin-top: clamp(24px, 5vw, 30px);
-    margin-left: clamp(14px, 3vw, 15px);
-    margin-right: clamp(30px, 8vw, 40px);
-    text-align: right;
+    margin-top: 10px;
+    margin-left: clamp(5px, 1vw, 10px);
+    margin-right: clamp(5px, 1vw, 10px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_middle {
-    width: clamp(158px, 42vw, 200px);
-    font-size: clamp(11px, 3vw, 14px);
+    width: clamp(200px, 33vw, 200px);
+    font-size: clamp(14px, 2vw, 14px);
     margin: 0;
-    margin-top: clamp(23px, 6vw, 30px);
-    margin-right: clamp(15px, 4vw, 20px);
-    margin-left: clamp(15px, 4vw, 20px);
+    margin-top: clamp(30px, 5vw, 30px);
+    margin-right: clamp(20px, 3vw, 20px);
+    margin-left: clamp(20px, 3vw, 20px);
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle {
+  margin-top: 17px;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* メディアクエリスマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
-@media (min-width: 1920px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle {
-    margin-top: 17px;
+    margin-top: 10px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle {
-    margin-top: 17px;
-  }
-}
-@media not all and (min-width: 599px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle {
-    width: clamp(202px, 42vw, 250px);
-    font-size: clamp(14px, 3vw, 16px);
-    margin-top: clamp(14px, 3vw, 20px);
-  }
-}
-@media not all and (min-width: 479px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle {
-    width: clamp(116px, 31vw, 150px);
-    margin-top: clamp(19px, 5vw, 23px);
+    width: clamp(150px, 25vw, 150px);
+    margin-top: clamp(23px, 4vw, 23px);
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.morning_middle {
@@ -4086,8 +3378,6 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -4100,7 +3390,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     display: inline-block;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.morning_middle {
     width: clamp(95px, 6vw, 115px);
     font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
@@ -4108,23 +3398,21 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     display: inline-block;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.morning_middle {
-    width: clamp(202px, 42vw, 250px);
-    font-size: clamp(14px, 3vw, 16px);
-    display: block;
-    margin-top: clamp(5px, 1vw, 8px);
-    margin-right: clamp(14px, 3vw, 20px);
-    margin-left: clamp(14px, 3vw, 20px);
+    width: auto;
+    letter-spacing: -1px;
+    margin-right: clamp(5px, 1vw, 10px);
+    margin-left: clamp(5px, 1vw, 10px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.morning_middle {
-    font-size: clamp(11px, 3vw, 14px);
+    font-size: clamp(14px, 2vw, 14px);
     display: block;
     margin: 0;
-    margin-right: clamp(15px, 4vw, 20px);
-    margin-left: clamp(15px, 4vw, 20px);
+    margin-right: clamp(20px, 3vw, 20px);
+    margin-left: clamp(20px, 3vw, 20px);
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
@@ -4133,8 +3421,6 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -4148,7 +3434,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin-left: clamp(2px, 0vw, 4px);
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
     width: clamp(115px, 6vw, 115px);
     font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
@@ -4157,23 +3443,21 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin-left: 4px;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
-    width: clamp(202px, 42vw, 250px);
-    font-size: clamp(14px, 3vw, 16px);
-    display: block;
-    margin-top: clamp(5px, 1vw, 8px);
-    margin-right: clamp(14px, 3vw, 20px);
-    margin-left: clamp(14px, 3vw, 20px);
+    width: auto;
+    letter-spacing: -1px;
+    margin-right: clamp(5px, 1vw, 10px);
+    margin-left: clamp(5px, 1vw, 10px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
-    font-size: clamp(11px, 3vw, 14px);
+    font-size: clamp(14px, 2vw, 14px);
     display: block;
     margin: 0;
-    margin-right: clamp(15px, 4vw, 20px);
-    margin-left: clamp(15px, 4vw, 20px);
+    margin-right: clamp(20px, 3vw, 20px);
+    margin-left: clamp(20px, 3vw, 20px);
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_lower {
@@ -4182,8 +3466,6 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -4196,7 +3478,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin: 17px 23px 0 28px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_lower {
     background-color: white;
     width: clamp(42px, 2vw, 42px);
@@ -4207,24 +3489,20 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin-right: clamp(20px, 1vw, 28px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_lower {
-    width: clamp(82px, 17vw, 100px);
-    font-size: clamp(14px, 3vw, 16px);
-    margin: 0;
-    margin-top: clamp(24px, 5vw, 30px);
-    margin-left: clamp(14px, 3vw, 15px);
-    margin-right: clamp(30px, 8vw, 40px);
-    text-align: right;
+    margin-top: 10px;
+    margin-left: clamp(5px, 1vw, 10px);
+    margin-right: clamp(5px, 1vw, 10px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_lower {
-    font-size: clamp(11px, 3vw, 14px);
+    font-size: clamp(14px, 2vw, 14px);
     margin: 0;
-    margin-top: clamp(23px, 6vw, 30px);
-    margin-right: clamp(15px, 4vw, 20px);
-    margin-left: clamp(15px, 4vw, 20px);
+    margin-top: clamp(30px, 5vw, 30px);
+    margin-right: clamp(20px, 3vw, 20px);
+    margin-left: clamp(20px, 3vw, 20px);
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower {
@@ -4234,8 +3512,6 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -4244,21 +3520,20 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin-top: 17px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower {
     margin-top: 17px;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower {
-    width: clamp(202px, 42vw, 250px);
-    margin-top: clamp(14px, 3vw, 20px);
+    margin-top: 10px;
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower {
-    width: clamp(116px, 31vw, 150px);
-    margin-top: clamp(19px, 5vw, 23px);
+    width: clamp(150px, 25vw, 150px);
+    margin-top: clamp(23px, 4vw, 23px);
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.morning_lower {
@@ -4267,8 +3542,6 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -4281,30 +3554,28 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     display: inline-block;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.morning_lower {
     width: clamp(95px, 6vw, 115px);
     font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
     display: inline-block;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.morning_lower {
-    width: clamp(202px, 42vw, 250px);
-    font-size: clamp(14px, 3vw, 16px);
-    display: block;
-    margin-top: clamp(5px, 1vw, 8px);
-    margin-right: clamp(14px, 3vw, 20px);
-    margin-left: clamp(14px, 3vw, 20px);
+    width: auto;
+    letter-spacing: -1px;
+    margin-right: clamp(5px, 1vw, 10px);
+    margin-left: clamp(5px, 1vw, 10px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.morning_lower {
-    font-size: clamp(11px, 3vw, 14px);
+    font-size: clamp(14px, 2vw, 14px);
     display: block;
     margin: 0;
-    margin-right: clamp(15px, 4vw, 20px);
-    margin-left: clamp(15px, 4vw, 20px);
+    margin-right: clamp(20px, 3vw, 20px);
+    margin-left: clamp(20px, 3vw, 20px);
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.afternoon_lower {
@@ -4313,8 +3584,6 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -4328,7 +3597,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin-left: 4px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.afternoon_lower {
     width: clamp(115px, 6vw, 115px);
     font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
@@ -4337,23 +3606,21 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin-left: clamp(2px, 0vw, 4px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.afternoon_lower {
-    width: clamp(202px, 42vw, 250px);
-    font-size: clamp(14px, 3vw, 16px);
-    display: block;
-    margin-top: clamp(5px, 1vw, 8px);
-    margin-right: clamp(14px, 3vw, 20px);
-    margin-left: clamp(14px, 3vw, 20px);
+    width: auto;
+    letter-spacing: -1px;
+    margin-right: clamp(5px, 1vw, 10px);
+    margin-left: clamp(5px, 1vw, 10px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.afternoon_lower {
-    font-size: clamp(11px, 3vw, 14px);
+    font-size: clamp(14px, 2vw, 14px);
     display: block;
     margin: 0;
-    margin-right: clamp(15px, 4vw, 20px);
-    margin-left: clamp(15px, 4vw, 20px);
+    margin-right: clamp(20px, 3vw, 20px);
+    margin-left: clamp(20px, 3vw, 20px);
   }
 }
 div.access__wrapper .access-container__detail .closed-day--inner {
@@ -4366,8 +3633,6 @@ div.access__wrapper .access-container__detail .closed-day--inner {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -4377,22 +3642,21 @@ div.access__wrapper .access-container__detail .closed-day--inner {
     height: 50px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail .closed-day--inner {
     width: clamp(400px, 28vw, 533px);
     height: clamp(30px, 3vw, 50px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail .closed-day--inner {
-    width: clamp(336px, 70vw, 420px);
-    margin-top: clamp(10px, 2vw, 10px);
+    width: clamp(250px, 34vw, 350px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail .closed-day--inner {
-    width: clamp(330px, 88vw, 420px);
-    margin-top: clamp(8px, 2vw, 10px);
+    width: clamp(420px, 70vw, 420px);
+    margin-top: clamp(10px, 2vw, 10px);
   }
 }
 div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
@@ -4403,8 +3667,6 @@ div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -4419,7 +3681,7 @@ div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
     padding-left: 5px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
     width: 89px;
     height: 25px;
@@ -4429,16 +3691,15 @@ div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
     padding-left: 5px;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
-    width: clamp(144px, 30vw, 180px);
-    font-size: clamp(14px, 3vw, 16px);
+    width: clamp(60px, 10vw, 100px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
-    width: clamp(116px, 31vw, 150px);
-    font-size: clamp(11px, 3vw, 14px);
+    width: clamp(150px, 25vw, 150px);
+    font-size: clamp(14px, 2vw, 14px);
   }
 }
 div.access__wrapper .access-container__detail .closed-day-of-week {
@@ -4447,8 +3708,6 @@ div.access__wrapper .access-container__detail .closed-day-of-week {
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
@@ -4463,7 +3722,7 @@ div.access__wrapper .access-container__detail .closed-day-of-week {
     padding-left: 28px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail .closed-day-of-week {
     width: 449px;
     height: 114px;
@@ -4473,14 +3732,16 @@ div.access__wrapper .access-container__detail .closed-day-of-week {
     padding-left: 28px;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail .closed-day-of-week {
-    width: clamp(202px, 42vw, 250px);
+    width: clamp(200px, 22vw, 230px);
+    margin-left: clamp(25px, 3vw, 30px);
+    padding-left: 0;
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail .closed-day-of-week {
-    width: clamp(195px, 52vw, 250px);
+    width: clamp(250px, 42vw, 250px);
   }
 }
 div.access__wrapper .access-container__detail-blank-border--lower {
@@ -4492,8 +3753,6 @@ div.access__wrapper .access-container__detail-blank-border--lower {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -4504,20 +3763,19 @@ div.access__wrapper .access-container__detail-blank-border--lower {
     margin-left: 5px;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-blank-border--lower {
     height: clamp(10px, 1vw, 19px);
     width: clamp(400px, 28vw, 533px);
     margin-left: clamp(2px, 0vw, 5px);
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-blank-border--lower {
-    width: 100%;
-    margin: 0 auto;
+    width: clamp(330px, 28vw, 533px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-blank-border--lower {
     width: 100%;
     margin: 0 auto;
@@ -4530,8 +3788,6 @@ div.access__wrapper .access-container__detail .access-container__detail-copyrigh
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -4542,19 +3798,18 @@ div.access__wrapper .access-container__detail .access-container__detail-copyrigh
     text-align: right;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc {
     width: clamp(400px, 29vw, 554px);
     text-align: right;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc {
-    width: 100%;
-    margin: 0 auto;
+    width: clamp(340px, 39vw, 400px);
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc {
     width: 100%;
     margin: 0 auto;
@@ -4567,8 +3822,6 @@ div.access__wrapper .access-container__detail .access-container__detail-copyrigh
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン横画面 */
-  /* $** pxを含まずそれより小さい */
   /* スマートフォン縦画面 */
   /* $** pxを含まずそれより小さい */
 }
@@ -4580,7 +3833,7 @@ div.access__wrapper .access-container__detail .access-container__detail-copyrigh
     display: inline-block;
   }
 }
-@media not all and (min-width: 1919px) {
+@media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc small {
     font-size: calc(1rem + ((1vw - 10.24px)) * 0.1117318436);
     letter-spacing: 0.15px;
@@ -4588,15 +3841,17 @@ div.access__wrapper .access-container__detail .access-container__detail-copyrigh
     display: inline-block;
   }
 }
-@media not all and (min-width: 599px) {
+@media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc small {
-    font-size: clamp(10px, 2vw, 11px);
-    display: none;
+    font-size: calc(1rem + ((1vw - 6px)) * 0.2358490566);
+    letter-spacing: -0.5px;
+    padding-right: 0;
+    display: inline-block;
   }
 }
-@media not all and (min-width: 479px) {
+@media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc small {
-    font-size: clamp(8px, 2vw, 11px);
+    font-size: clamp(11px, 2vw, 11px);
     display: none;
   }
 }
