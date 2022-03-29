@@ -25,8 +25,7 @@
     /* スマートフォン縦画面 */
     @include mixin.sp(600px) {
         width: 100vw;
-        height: auto;
-        padding-bottom: 10px;
+        padding-bottom: 0px;
     }
 
     // =======================================
@@ -65,7 +64,6 @@
 
         /* スマートフォン縦画面 */
         @include mixin.sp(600px) {
-            width: auto;
             flex-direction: column;
         }
 
@@ -103,9 +101,7 @@
 
             /* スマートフォン縦画面 */
             @include mixin.sp(600px) {
-                width: auto;
                 height: mixin.clampSp(73, 50);
-                margin: 0 auto;
             }
 
             // ==============================================
@@ -191,8 +187,8 @@
 
                     /* スマートフォン縦画面 */
                     @include mixin.sp(600px) {
-                        width: auto;
-                        font-size: mixin.variableFontSp(2, 1.5);
+                        height: auto;
+                        font-size: mixin.variableFontSp(2,1.2);
                         text-align: center;
                     }
                 }
@@ -224,8 +220,8 @@
 
                     /* スマートフォン縦画面 */
                     @include mixin.sp(600px) {
-                        width: auto;
-                        font-size: mixin.variableFontSp(2, 1.5);
+                        font-size: mixin.variableFontSp(2, 1.2);
+                        padding-top: mixin.clampSp(5,0);
                     }
                 }
             }
@@ -257,7 +253,6 @@
 
             /* スマートフォン縦画面 */
             @include mixin.sp(600px) {
-                text-align: center;
                 margin-top: mixin.clampSp(25, 15);
             }
 
@@ -290,8 +285,7 @@
 
                 /* スマートフォン縦画面 */
                 @include mixin.sp(600px) {
-                    text-align: center;
-                    font-size: mixin.variableFontSp(1.3, 1.1);
+                    font-size: mixin.variableFontSp(1.2, 1);
                 }
             }
 
@@ -329,7 +323,11 @@
 
                 /* スマートフォン縦画面 */
                 @include mixin.sp(600px) {
-                    margin-top: mixin.clampSp(10, 5);
+                    margin-top: mixin.clampSp(15,10);
+                    width: mixin.clampSp(14,10);
+                    height:mixin.clampSp(14,10);
+                    margin-right:mixin.clampSp(12,5);
+                    position: relative;
                 }
             }
 
@@ -363,8 +361,6 @@
 
                 /* スマートフォン縦画面 */
                 @include mixin.sp(600px) {
-                    width: auto;
-                    text-align: center;
                     font-size: mixin.variableFontSp(1.5, 1.3);
                     margin-top: 0;
                 }
