@@ -2243,7 +2243,7 @@ ul {
 }
 @media not all and (min-width: 600px) {
   .medical-treatment-contents .notice-detail_container .see-all_inner {
-    width: clamp(300px, 72vw, 430px);
+    width: clamp(300px, 86vw, 515px);
     height: clamp(10px, 8vw, 50px);
     margin: 0;
     margin-top: clamp(5px, 4vw, 25px);
@@ -2367,6 +2367,7 @@ div.access__wrapper .access-container {
   div.access__wrapper .access-container {
     display: block;
     width: 100vw;
+    height: clamp(670px, 159vw, 950px);
   }
 }
 div.access__wrapper .access-container__map {
@@ -3003,7 +3004,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--consultation-
 }
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--consultation-time {
-    width: clamp(60px, 25vw, 150px);
+    width: clamp(60px, 33vw, 200px);
     height: auto;
     margin-top: 10px;
   }
@@ -3066,12 +3067,12 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable {
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable {
-    width: clamp(250px, 32vw, 330px);
+    width: clamp(250px, 29vw, 300px);
   }
 }
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable {
-    width: clamp(250px, 42vw, 250px);
+    width: clamp(250px, 50vw, 300px);
     height: auto;
   }
 }
@@ -3143,8 +3144,8 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     width: clamp(60px, 20vw, 120px);
     height: clamp(40px, 10vw, 60px);
     font-size: calc(1.1rem + ((1vw - 3.75px)) * 1.3392857143);
-    padding-top: 15px;
     text-align: right;
+    padding-top: 25px;
     padding-right: 15px;
   }
 }
@@ -3162,11 +3163,10 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 }
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper {
-    margin: 0;
     width: clamp(120px, 25vw, 150px);
     height: clamp(40px, 10vw, 60px);
-    margin-top: 5px;
-    margin-left: 15px;
+    margin-top: 20px;
+    margin-left: 30px;
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.morning_upper {
@@ -3319,7 +3319,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin: 0;
     width: clamp(120px, 25vw, 150px);
     height: clamp(40px, 10vw, 60px);
-    margin-left: 15px;
+    margin-left: 30px;
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.morning_middle {
@@ -3481,7 +3481,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin: 0;
     width: clamp(120px, 25vw, 150px);
     height: clamp(40px, 10vw, 60px);
-    margin-left: 15px;
+    margin-left: 30px;
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.morning_lower {
@@ -3641,9 +3641,9 @@ div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
 }
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
-    font-size: calc(1.1rem + ((1vw - 3.75px)) * 1.3392857143);
-    width: clamp(60px, 25vw, 150px);
+    width: clamp(60px, 33vw, 200px);
     height: auto;
+    font-size: calc(1.1rem + ((1vw - 3.75px)) * 1.3392857143);
     text-align: center;
   }
 }
