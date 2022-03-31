@@ -99,11 +99,13 @@
         @include mixin.sp(600px) {
           width: mixin.clampSp(40, 30);
           height: mixin.clampSp(350, 280);
-          font-size: mixin.variableFontSp(1.6, 1.2);
           line-height: mixin.clampSp(40, 30);
           top: mixin.clampSp(10, 10);
           left: mixin.clampSp(80, 50);
           z-index: 5;
+          
+          font-size: mixin.variableFontSp(1.6, 1.15);
+          letter-spacing: mixin.clampSp(5.5,3.8);
         }
 
         // ==============================
@@ -132,7 +134,8 @@
 
           /* スマートフォン縦画面 */
           @include mixin.sp(600px) {
-            font-size: mixin.variableFontSp(1.6, 1.2);
+            font-size: mixin.variableFontSp(1.6, 1.15);
+            letter-spacing: mixin.clampSp(5.5,3.8);
           }
         }
       }
@@ -187,11 +190,12 @@
         @include mixin.sp(600px) {
           width: mixin.clampSp(40, 30);
           height: mixin.clampSp(350, 280);
-          font-size: mixin.variableFontSp(1.6, 1.2);
+          font-size: mixin.variableFontSp(1.6, 1.15);
           line-height: mixin.clampSp(40, 30);
           top: mixin.clampSp(10, 10);
           left: mixin.clampSp(150, 100);
           z-index: 5;
+          letter-spacing: mixin.clampSp(5.5,3.8);
         }
       }
 

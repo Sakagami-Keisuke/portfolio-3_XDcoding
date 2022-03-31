@@ -959,11 +959,12 @@ ul {
   .body .top-page_wrapper .first-view_inner__message-left {
     width: clamp(30px, 7vw, 40px);
     height: clamp(280px, 58vw, 350px);
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.7857142857);
     line-height: clamp(30px, 7vw, 40px);
     top: clamp(10px, 2vw, 10px);
     left: clamp(50px, 13vw, 80px);
     z-index: 5;
+    font-size: calc(1.15rem + ((1vw - 3.75px)) * 2.0089285714);
+    letter-spacing: clamp(3.8px, 1vw, 5.5px);
   }
 }
 .body .top-page_wrapper .first-view_inner__message-left span.color {
@@ -998,7 +999,8 @@ ul {
 }
 @media not all and (min-width: 600px) {
   .body .top-page_wrapper .first-view_inner__message-left span.color {
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.7857142857);
+    font-size: calc(1.15rem + ((1vw - 3.75px)) * 2.0089285714);
+    letter-spacing: clamp(3.8px, 1vw, 5.5px);
   }
 }
 .body .top-page_wrapper .first-view_inner__message-right {
@@ -1058,11 +1060,12 @@ ul {
   .body .top-page_wrapper .first-view_inner__message-right {
     width: clamp(30px, 7vw, 40px);
     height: clamp(280px, 58vw, 350px);
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.7857142857);
+    font-size: calc(1.15rem + ((1vw - 3.75px)) * 2.0089285714);
     line-height: clamp(30px, 7vw, 40px);
     top: clamp(10px, 2vw, 10px);
     left: clamp(100px, 25vw, 150px);
     z-index: 5;
+    letter-spacing: clamp(3.8px, 1vw, 5.5px);
   }
 }
 .body .top-page_wrapper .first-view_inner__image {
