@@ -426,7 +426,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -461,7 +461,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -507,7 +507,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -551,7 +551,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 .header_container .header__top-left-logo img {
@@ -588,7 +588,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -614,13 +614,14 @@ ul {
   }
 }
 .header_container .header__top-left-tagline--upper {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -647,18 +648,19 @@ ul {
 @media not all and (min-width: 600px) {
   .header_container .header__top-left-tagline--upper {
     height: auto;
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 3.5714285714);
+    font-size: calc(1.4rem + ((1vw - 3.75px)) * 2.6785714286);
     text-align: center;
   }
 }
 .header_container .header__top-left-tagline--lower {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -685,7 +687,7 @@ ul {
 }
 @media not all and (min-width: 600px) {
   .header_container .header__top-left-tagline--lower {
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 3.5714285714);
+    font-size: calc(1.4rem + ((1vw - 3.75px)) * 2.6785714286);
     padding-top: clamp(0px, 1vw, 5px);
   }
 }
@@ -696,7 +698,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -726,13 +728,14 @@ ul {
   }
 }
 .header_container .header__top-right--reception {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -761,7 +764,7 @@ ul {
 }
 @media not all and (min-width: 600px) {
   .header_container .header__top-right--reception {
-    font-size: calc(1rem + ((1vw - 3.75px)) * 0.8928571429);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0);
   }
 }
 .header_container .header__top-right--tel::before {
@@ -774,7 +777,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -811,7 +814,7 @@ ul {
   }
 }
 .header_container .header__top-right--tel {
-  font-weight: 500;
+  font-weight: 700;
   text-align: right;
   color: #21a937;
   /* pc 1920px以上  */
@@ -820,7 +823,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -839,6 +842,7 @@ ul {
 }
 @media not all and (min-width: 1025px) {
   .header_container .header__top-right--tel {
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.7075471698);
     width: auto;
     text-align: center;
     margin-top: 0;
@@ -846,7 +850,7 @@ ul {
 }
 @media not all and (min-width: 600px) {
   .header_container .header__top-right--tel {
-    font-size: calc(1.3rem + ((1vw - 3.75px)) * 0.8928571429);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.3392857143);
     margin-top: 0;
   }
 }
@@ -875,7 +879,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -894,7 +898,7 @@ ul {
 }
 @media not all and (min-width: 1025px) {
   .body .top-page_wrapper .first-view_inner {
-    width: clamp(600px, 100vw, 1024px);
+    width: 100vw;
     height: auto;
     position: relative;
   }
@@ -907,6 +911,7 @@ ul {
   }
 }
 .body .top-page_wrapper .first-view_inner__message-left {
+  font-weight: 700;
   writing-mode: vertical-rl;
   background-color: white;
   position: absolute;
@@ -916,7 +921,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -924,7 +929,6 @@ ul {
     width: 102px;
     height: 565px;
     font-size: 2.8rem;
-    font-weight: 500;
     letter-spacing: 5.5px;
     padding-top: 25px;
     line-height: 102px;
@@ -963,19 +967,20 @@ ul {
     top: clamp(10px, 2vw, 10px);
     left: clamp(50px, 13vw, 80px);
     z-index: 5;
-    font-size: calc(1rem + ((1vw - 3.75px)) * 2.6785714286);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.7857142857);
     letter-spacing: clamp(2px, 1vw, 5px);
   }
 }
 .body .top-page_wrapper .first-view_inner__message-left span.color {
   color: green;
+  font-weight: 700;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1004,13 +1009,14 @@ ul {
   }
 }
 .body .top-page_wrapper .first-view_inner__message-right {
+  font-weight: 700;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1019,7 +1025,6 @@ ul {
     height: 565px;
     writing-mode: vertical-rl;
     font-size: 2.8rem;
-    font-weight: 500;
     letter-spacing: 6px;
     padding-top: 25px;
     line-height: 102px;
@@ -1036,7 +1041,6 @@ ul {
     height: clamp(300px, 29vw, 565px);
     writing-mode: vertical-rl;
     font-size: calc(1.4rem + ((1vw - 10.24px)) * 1.5642458101);
-    font-weight: 500;
     letter-spacing: 5.5px;
     padding-top: clamp(20px, 1vw, 25px);
     background-color: white;
@@ -1064,7 +1068,7 @@ ul {
     top: clamp(10px, 2vw, 10px);
     left: clamp(100px, 25vw, 150px);
     z-index: 5;
-    font-size: calc(1rem + ((1vw - 3.75px)) * 2.6785714286);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.7857142857);
     letter-spacing: clamp(2px, 1vw, 5px);
   }
 }
@@ -1096,14 +1100,18 @@ ul {
 }
 @media not all and (min-width: 1025px) {
   .body .top-page_wrapper .first-view_inner__image {
-    width: 100vw;
+    width: clamp(600px, 100vw, 1024px);
     height: auto;
   }
 }
 @media not all and (min-width: 600px) {
+  .body .top-page_wrapper .first-view_inner__image {
+    width: clamp(375px, 100vw, 600px);
+    height: auto;
+  }
   .body .top-page_wrapper .first-view_inner__image img {
     width: clamp(375px, 100vw, 599px);
-    height: clamp(300px, 63vw, 380px);
+    height: clamp(300px, 67vw, 400px);
     object-fit: cover;
   }
 }
@@ -1117,7 +1125,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1152,7 +1160,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1180,7 +1188,7 @@ ul {
   }
 }
 .body .self-introduction-inner__first-line_text {
-  font-weight: 500;
+  font-weight: 700;
   display: inline-block;
   background: linear-gradient(transparent 60%, #86eb86 90%);
   /* pc 1920px以上  */
@@ -1189,7 +1197,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1222,7 +1230,7 @@ ul {
   }
 }
 .body .self-introduction-inner__second-line_text {
-  font-weight: 500;
+  font-weight: 700;
   display: inline-block;
   background: linear-gradient(transparent 60%, #86eb86 90%);
   /* pc 1920px以上  */
@@ -1231,7 +1239,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1264,6 +1272,7 @@ ul {
   }
 }
 .body .self-introduction-inner__third-line_text {
+  font-weight: 400;
   display: inline-block;
   /* pc 1920px以上  */
   /* 1920px 以上 */
@@ -1271,7 +1280,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1303,7 +1312,7 @@ ul {
 }
 @media not all and (min-width: 600px) {
   .body .self-introduction-inner__third-line_text {
-    font-size: calc(1.1rem + ((1vw - 3.75px)) * 0.4464285714);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0);
     letter-spacing: 0;
   }
 }
@@ -1314,7 +1323,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 .body .self-introduction__image img {
@@ -1368,7 +1377,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1401,15 +1410,15 @@ ul {
   }
 }
 .medical-treatment-contents__first-line-text {
+  font-weight: 700;
   background: linear-gradient(transparent 60%, #86eb86 90%);
-  font-weight: 500;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1445,14 +1454,14 @@ ul {
   }
 }
 .medical-treatment-contents__second-line-text {
-  font-weight: 500;
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1484,7 +1493,7 @@ ul {
 }
 @media not all and (min-width: 600px) {
   .medical-treatment-contents__second-line-text {
-    font-size: calc(1.1rem + ((1vw - 3.75px)) * 1.7857142857);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.3392857143);
   }
 }
 .medical-treatment-contents__inner {
@@ -1494,7 +1503,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1515,9 +1524,10 @@ ul {
 }
 @media not all and (min-width: 1025px) {
   .medical-treatment-contents__inner {
-    width: 100%;
+    width: 100vw;
     margin: 0;
     margin-top: clamp(20px, 3vw, 30px);
+    flex-wrap: wrap;
   }
 }
 @media not all and (min-width: 600px) {
@@ -1536,7 +1546,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1559,8 +1569,10 @@ ul {
 }
 @media not all and (min-width: 1025px) {
   .medical-treatment-contents__inner-article-board {
-    width: clamp(150px, 29vw, 300px);
+    width: clamp(270px, 29vw, 300px);
     height: clamp(360px, 39vw, 400px);
+    margin-top: clamp(15px, 1vw, 20px);
+    margin-bottom: clamp(15px, 1vw, 20px);
   }
 }
 @media not all and (min-width: 600px) {
@@ -1571,14 +1583,14 @@ ul {
   }
 }
 .medical-treatment-contents__inner-article-board--title {
-  font-weight: 500;
+  font-weight: 700;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1607,7 +1619,7 @@ ul {
   }
 }
 .medical-treatment-contents__inner-article-board--content-left {
-  font-weight: 500;
+  font-weight: 700;
   margin: 0 auto;
   /* pc 1920px以上  */
   /* 1920px 以上 */
@@ -1615,7 +1627,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1631,7 +1643,7 @@ ul {
   .medical-treatment-contents__inner-article-board--content-left {
     max-width: 100%;
     height: auto;
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.6703910615);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.4469273743);
     letter-spacing: -0.11px;
     line-height: clamp(19px, 2vw, 38px);
     margin-top: clamp(21px, 2vw, 42px);
@@ -1639,7 +1651,7 @@ ul {
 }
 @media not all and (min-width: 1025px) {
   .medical-treatment-contents__inner-article-board--content-left {
-    font-size: calc(1rem + ((1vw - 6px)) * 0.4716981132);
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0);
     text-align: center;
     line-height: clamp(22px, 2vw, 24px);
     letter-spacing: -1.5px;
@@ -1647,12 +1659,12 @@ ul {
 }
 @media not all and (min-width: 600px) {
   .medical-treatment-contents__inner-article-board--content-left {
-    font-size: calc(1rem + ((1vw - 3.75px)) * 2.6785714286);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.7857142857);
     letter-spacing: 1px;
   }
 }
 .medical-treatment-contents__inner-article-board--content-center {
-  font-weight: 500;
+  font-weight: 700;
   margin: 0 auto;
   /* pc 1920px以上  */
   /* 1920px 以上 */
@@ -1660,7 +1672,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1676,7 +1688,7 @@ ul {
   .medical-treatment-contents__inner-article-board--content-center {
     max-width: 100%;
     height: auto;
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.6703910615);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.4469273743);
     letter-spacing: -0.11px;
     line-height: clamp(19px, 2vw, 38px);
     margin-top: clamp(21px, 2vw, 42px);
@@ -1684,7 +1696,7 @@ ul {
 }
 @media not all and (min-width: 1025px) {
   .medical-treatment-contents__inner-article-board--content-center {
-    font-size: calc(1rem + ((1vw - 6px)) * 0.4716981132);
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0);
     text-align: center;
     line-height: clamp(22px, 2vw, 24px);
     letter-spacing: -1.5px;
@@ -1692,12 +1704,12 @@ ul {
 }
 @media not all and (min-width: 600px) {
   .medical-treatment-contents__inner-article-board--content-center {
-    font-size: calc(1rem + ((1vw - 3.75px)) * 2.6785714286);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.7857142857);
     letter-spacing: 1px;
   }
 }
 .medical-treatment-contents__inner-article-board--content-right {
-  font-weight: 500;
+  font-weight: 700;
   margin: 0 auto;
   /* pc 1920px以上  */
   /* 1920px 以上 */
@@ -1705,7 +1717,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1722,7 +1734,7 @@ ul {
   .medical-treatment-contents__inner-article-board--content-right {
     max-width: 100%;
     height: auto;
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.6703910615);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.4469273743);
     letter-spacing: -0.11px;
     line-height: clamp(19px, 2vw, 38px);
     margin-top: clamp(21px, 2vw, 42px);
@@ -1730,7 +1742,7 @@ ul {
 }
 @media not all and (min-width: 1025px) {
   .medical-treatment-contents__inner-article-board--content-right {
-    font-size: calc(1rem + ((1vw - 6px)) * 0.4716981132);
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0);
     text-align: center;
     line-height: clamp(22px, 2vw, 24px);
     letter-spacing: -1.5px;
@@ -1738,7 +1750,7 @@ ul {
 }
 @media not all and (min-width: 600px) {
   .medical-treatment-contents__inner-article-board--content-right {
-    font-size: calc(1rem + ((1vw - 3.75px)) * 2.6785714286);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.7857142857);
     letter-spacing: 1px;
   }
 }
@@ -1753,7 +1765,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 .medical-treatment-contents__inner-article-board--image-left img {
@@ -1796,7 +1808,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 .medical-treatment-contents__inner-article-board--image-center img {
@@ -1838,7 +1850,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 .medical-treatment-contents__inner-article-board--image-right img {
@@ -1871,7 +1883,7 @@ ul {
 }
 .medical-treatment-contents .notice-title {
   font-size: 2.4rem;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 22px;
   background: linear-gradient(transparent 60%, #86eb86 90%);
   /* pc 1920px以上  */
@@ -1880,7 +1892,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1927,7 +1939,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -1965,7 +1977,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2001,7 +2013,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2037,7 +2049,7 @@ ul {
 .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper {
   display: flex;
   flex-wrap: nowrap;
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media not all and (min-width: 600px) {
@@ -2049,7 +2061,7 @@ ul {
   }
 }
 .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--date {
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
   width: auto;
   /* 1920px 以上 */
@@ -2057,7 +2069,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2089,7 +2101,7 @@ ul {
   }
 }
 .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
-  font-weight: 500;
+  font-weight: 700;
   color: white;
   text-align: center;
   background-color: #444444;
@@ -2099,7 +2111,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2113,7 +2125,7 @@ ul {
 }
 @media not all and (min-width: 1920px) {
   .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.2234636872);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0);
     width: clamp(50px, 4vw, 80px);
     height: clamp(22px, 1vw, 25px);
     line-height: clamp(22px, 1vw, 25px);
@@ -2122,8 +2134,8 @@ ul {
 }
 @media not all and (min-width: 1025px) {
   .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
-    font-size: calc(1rem + ((1vw - 6px)) * 0.4716981132);
-    width: clamp(45px, 6vw, 60px);
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0);
+    width: clamp(60px, 6vw, 60px);
     height: clamp(22px, 2vw, 25px);
     line-height: clamp(22px, 2vw, 25px);
     margin-left: clamp(5px, 2vw, 25px);
@@ -2133,19 +2145,20 @@ ul {
   .medical-treatment-contents .notice-detail_container .article-inner__left-wrapper--info {
     margin: 0;
     width: 100%;
-    font-size: calc(1rem + ((1vw - 3.75px)) * 1.7857142857);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
     letter-spacing: 2px;
     padding: 0 4px 0 4px;
   }
 }
 .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right {
+  font-weight: 700;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2155,7 +2168,7 @@ ul {
 }
 @media not all and (min-width: 1920px) {
   .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right {
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.2234636872);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0);
     width: clamp(800px, 47vw, 900px);
     height: clamp(22px, 1vw, 25px);
     line-height: clamp(22px, 1vw, 25px);
@@ -2165,11 +2178,15 @@ ul {
 }
 @media not all and (min-width: 1025px) {
   .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right {
-    font-size: calc(1rem + ((1vw - 6px)) * 0.4716981132);
+    font-size: 12px;
+    width: clamp(400px, 78vw, 800px);
+    text-align: left;
+    height: auto;
   }
 }
 @media not all and (min-width: 600px) {
   .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right {
+    font-size: 12px;
     width: clamp(250px, 67vw, 400px);
     height: clamp(50px, 13vw, 80px);
     margin: 0;
@@ -2177,7 +2194,7 @@ ul {
   }
 }
 .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right-text {
-  font-weight: 500;
+  font-weight: 700;
   text-align: left;
   width: auto;
   /* pc 1920px以上  */
@@ -2186,7 +2203,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2202,13 +2219,13 @@ ul {
 }
 @media not all and (min-width: 1025px) {
   .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right-text {
-    font-size: calc(1rem + ((1vw - 6px)) * 0.9433962264);
-    letter-spacing: -2px;
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
+    letter-spacing: 0px;
   }
 }
 @media not all and (min-width: 600px) {
   .medical-treatment-contents .notice-detail_container .article-inner .article-inner__right-text {
-    font-size: calc(1rem + ((1vw - 3.75px)) * 1.7857142857);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
     margin: 4.5px 0 5px;
     letter-spacing: 2px;
     line-height: clamp(12px, 4vw, 25px);
@@ -2221,7 +2238,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2253,6 +2270,7 @@ ul {
   }
 }
 .medical-treatment-contents .notice-detail_container .see-all_inner__text {
+  font-weight: 700;
   font-size: 1.6rem;
   width: auto;
   margin-top: 40px;
@@ -2265,7 +2283,7 @@ ul {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media not all and (min-width: 1920px) {
@@ -2275,13 +2293,13 @@ ul {
 }
 @media not all and (min-width: 1025px) {
   .medical-treatment-contents .notice-detail_container .see-all_inner__text {
-    font-size: calc(1rem + ((1vw - 6px)) * 0.9433962264);
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
     margin-top: clamp(10px, 2vw, 20px);
   }
 }
 @media not all and (min-width: 600px) {
   .medical-treatment-contents .notice-detail_container .see-all_inner__text {
-    font-size: calc(1rem + ((1vw - 3.75px)) * 1.7857142857);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
     margin: 0;
     margin-right: clamp(0px, 1vw, 7px);
   }
@@ -2293,17 +2311,17 @@ ul {
   display: inline-block;
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media not all and (min-width: 1025px) {
   .medical-treatment-contents .notice-detail_container .see-all_inner__icon {
-    font-size: calc(1rem + ((1vw - 6px)) * 0.9433962264);
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
   }
 }
 @media not all and (min-width: 600px) {
   .medical-treatment-contents .notice-detail_container .see-all_inner__icon {
-    font-size: calc(1rem + ((1vw - 3.75px)) * 1.7857142857);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
     margin: 0;
     margin-right: clamp(0px, 1vw, 7px);
   }
@@ -2321,7 +2339,7 @@ div.access__wrapper {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2380,7 +2398,7 @@ div.access__wrapper .access-container__map {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 div.access__wrapper .access-container__map img {
@@ -2424,7 +2442,7 @@ div.access__wrapper .access-container__detail {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2446,7 +2464,7 @@ div.access__wrapper .access-container__detail {
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail {
     width: clamp(350px, 44vw, 450px);
-    height: clamp(280px, 29vw, 300px);
+    height: auto;
     margin-top: clamp(50px, 7vw, 70px);
     margin-left: clamp(15px, 2vw, 20px);
   }
@@ -2470,7 +2488,7 @@ div.access__wrapper .access-container__detail-logo_inner {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2504,7 +2522,7 @@ div.access__wrapper .access-container__detail-logo_inner--icon {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2543,7 +2561,7 @@ div.access__wrapper .access-container__detail-logo_inner-tagline {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2574,13 +2592,14 @@ div.access__wrapper .access-container__detail-logo_inner-tagline {
   }
 }
 div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2612,13 +2631,14 @@ div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
   }
 }
 div.access__wrapper .access-container__detail-logo_inner-tagline--lower {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2660,7 +2680,7 @@ div.access__wrapper .access-container__detail-address-inner {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2688,6 +2708,7 @@ div.access__wrapper .access-container__detail-address-inner {
   }
 }
 div.access__wrapper .access-container__detail-address-inner--number {
+  font-weight: 400;
   margin-top: 1px;
   margin-right: 16px;
   letter-spacing: 0.1px;
@@ -2697,7 +2718,7 @@ div.access__wrapper .access-container__detail-address-inner--number {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2723,13 +2744,14 @@ div.access__wrapper .access-container__detail-address-inner--number {
   }
 }
 div.access__wrapper .access-container__detail-address-inner--text {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2764,7 +2786,7 @@ div.access__wrapper .access-container__detail-tel {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2792,7 +2814,7 @@ div.access__wrapper .access-container__detail-tel {
 }
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-tel {
-    height: 100px;
+    height: clamp(5px, 2vw, 10px);
     margin: 0 auto;
     margin-top: clamp(5px, 3vw, 15px);
     display: flex;
@@ -2810,7 +2832,7 @@ div.access__wrapper .access-container__detail-tel--number::before {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2842,7 +2864,7 @@ div.access__wrapper .access-container__detail-tel--number::before {
   }
 }
 div.access__wrapper .access-container__detail-tel--number {
-  font-weight: 500;
+  font-weight: 700;
   text-align: right;
   color: #21a937;
   /* pc 1920px以上  */
@@ -2851,7 +2873,7 @@ div.access__wrapper .access-container__detail-tel--number {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2868,10 +2890,15 @@ div.access__wrapper .access-container__detail-tel--number {
     position: absolute;
   }
 }
+@media not all and (min-width: 1025px) {
+  div.access__wrapper .access-container__detail-tel--number {
+    font-size: calc(1.4rem + ((1vw - 6px)) * 1.4150943396);
+  }
+}
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-tel--number {
-    margin: 0;
     font-size: calc(1.4rem + ((1vw - 3.75px)) * 2.6785714286);
+    margin: 0;
   }
 }
 div.access__wrapper .access-container__detail-blank-border {
@@ -2883,7 +2910,7 @@ div.access__wrapper .access-container__detail-blank-border {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2919,7 +2946,7 @@ div.access__wrapper .access-container__detail-blank-margin {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2951,7 +2978,7 @@ div.access__wrapper .access-container__detail-business-hour-inner {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2962,8 +2989,14 @@ div.access__wrapper .access-container__detail-business-hour-inner {
 }
 @media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner {
-    width: clamp(400px, 28vw, 533px);
-    height: clamp(60px, 6vw, 114px);
+    width: clamp(350px, 28vw, 533px);
+    height: clamp(85px, 6vw, 120px);
+  }
+}
+@media not all and (min-width: 1025px) {
+  div.access__wrapper .access-container__detail-business-hour-inner {
+    width: clamp(300px, 39vw, 400px);
+    height: clamp(115px, 12vw, 120px);
   }
 }
 @media not all and (min-width: 600px) {
@@ -2975,6 +3008,7 @@ div.access__wrapper .access-container__detail-business-hour-inner {
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--consultation-time {
+  font-weight: 400;
   border-right: 1px solid;
   border-color: #e7e7e7;
   /* pc 1920px以上  */
@@ -2983,7 +3017,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--consultation-
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -2996,13 +3030,14 @@ div.access__wrapper .access-container__detail-business-hour-inner--consultation-
 @media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--consultation-time {
     width: 89px;
-    height: clamp(50px, 6vw, 114px);
-    font-size: calc(1.1rem + ((1vw - 10.24px)) * 0.3351955307);
+    height: clamp(90px, 6vw, 110px);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
   }
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--consultation-time {
     width: clamp(60px, 10vw, 100px);
+    height: clamp(110px, 12vw, 120px);
   }
 }
 @media not all and (min-width: 600px) {
@@ -3013,13 +3048,14 @@ div.access__wrapper .access-container__detail-business-hour-inner--consultation-
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--consultation-time p {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3031,14 +3067,20 @@ div.access__wrapper .access-container__detail-business-hour-inner--consultation-
 }
 @media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--consultation-time p {
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
     margin-top: clamp(2px, 0vw, 5px);
     margin-left: clamp(2px, 0vw, 4.5px);
   }
 }
+@media not all and (min-width: 1025px) {
+  div.access__wrapper .access-container__detail-business-hour-inner--consultation-time p {
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
+    padding-top: 5px;
+  }
+}
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--consultation-time p {
-    font-size: calc(1.1rem + ((1vw - 3.75px)) * 1.3392857143);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
     margin-top: clamp(15px, 5vw, 30px);
     text-align: center;
   }
@@ -3053,7 +3095,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3064,13 +3106,14 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable {
 }
 @media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable {
-    width: clamp(370px, 23vw, 449px);
-    height: clamp(100px, 6vw, 114px);
+    width: clamp(330px, 23vw, 449px);
+    height: clamp(90px, 6vw, 120px);
   }
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable {
     width: clamp(250px, 29vw, 300px);
+    height: clamp(120px, 13vw, 130px);
   }
 }
 @media not all and (min-width: 600px) {
@@ -3089,12 +3132,18 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
+}
+@media not all and (min-width: 1920px) {
+  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern {
+    width: clamp(330px, 23vw, 450px);
+  }
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern {
     width: clamp(235px, 31vw, 320px);
+    flex-wrap: nowrap;
   }
 }
 @media not all and (min-width: 600px) {
@@ -3106,13 +3155,14 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_upper {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3126,7 +3176,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 @media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_upper {
     width: clamp(42px, 2vw, 42px);
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
     display: inline-block;
     margin-top: 5px;
     margin-left: clamp(10px, 1vw, 23px);
@@ -3135,18 +3185,20 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_upper {
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
     margin-top: 5px;
     margin-left: clamp(5px, 1vw, 10px);
     margin-right: clamp(5px, 1vw, 10px);
+    padding-top: 5px;
   }
 }
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_upper {
     display: inline-block;
-    margin: 0;
     width: clamp(60px, 20vw, 120px);
     height: clamp(40px, 10vw, 60px);
-    font-size: calc(1.1rem + ((1vw - 3.75px)) * 1.3392857143);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
+    margin: 0;
     text-align: right;
     padding-top: 25px;
     padding-right: 15px;
@@ -3156,12 +3208,13 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   margin-top: 5px;
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper {
     margin-top: 5px;
+    width: 60%;
   }
 }
 @media not all and (min-width: 600px) {
@@ -3173,13 +3226,14 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.morning_upper {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3193,7 +3247,8 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 @media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.morning_upper {
     width: clamp(95px, 6vw, 115px);
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
+    width: auto;
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
     letter-spacing: 0.2px;
     display: inline-block;
   }
@@ -3201,6 +3256,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.morning_upper {
     width: auto;
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
     letter-spacing: -1px;
     margin-right: clamp(5px, 1vw, 10px);
     margin-left: clamp(5px, 1vw, 10px);
@@ -3208,18 +3264,19 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 }
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.morning_upper {
-    font-size: calc(1.1rem + ((1vw - 3.75px)) * 1.3392857143);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
     padding-top: 5px;
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3234,7 +3291,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 @media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
     width: clamp(115px, 6vw, 120px);
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
     letter-spacing: 0.1px;
     display: inline-block;
     margin-left: clamp(2px, 0vw, 4px);
@@ -3243,6 +3300,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
     width: auto;
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
     letter-spacing: -1px;
     margin-right: clamp(5px, 1vw, 10px);
     margin-left: clamp(5px, 1vw, 10px);
@@ -3250,18 +3308,19 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 }
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
-    font-size: calc(1.1rem + ((1vw - 3.75px)) * 1.3392857143);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
     padding-top: 5px;
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_middle {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3275,18 +3334,20 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 @media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_middle {
     width: clamp(42px, 2vw, 42px);
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
     display: inline-block;
-    margin-top: clamp(2px, 1vw, 17px);
+    margin-top: clamp(15px, 1vw, 20px);
     margin-left: clamp(10px, 1vw, 23px);
     margin-right: clamp(20px, 1vw, 28px);
   }
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_middle {
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
     margin-top: 10px;
     margin-left: clamp(5px, 1vw, 10px);
     margin-right: clamp(5px, 1vw, 10px);
+    padding-top: 5px;
   }
 }
 @media not all and (min-width: 600px) {
@@ -3295,7 +3356,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin: 0;
     width: clamp(60px, 20vw, 120px);
     height: clamp(40px, 10vw, 60px);
-    font-size: calc(1.1rem + ((1vw - 3.75px)) * 1.3392857143);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
     text-align: right;
     padding-top: 15px;
     padding-right: 15px;
@@ -3309,12 +3370,13 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle {
     margin-top: 10px;
+    width: 60%;
   }
 }
 @media not all and (min-width: 600px) {
@@ -3326,13 +3388,14 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.morning_middle {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3346,7 +3409,8 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 @media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.morning_middle {
     width: clamp(95px, 6vw, 115px);
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
+    width: auto;
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
     letter-spacing: 0.2px;
     display: inline-block;
   }
@@ -3354,6 +3418,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.morning_middle {
     width: auto;
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
     letter-spacing: -1px;
     margin-right: clamp(5px, 1vw, 10px);
     margin-left: clamp(5px, 1vw, 10px);
@@ -3361,18 +3426,19 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 }
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.morning_middle {
-    font-size: calc(1.1rem + ((1vw - 3.75px)) * 1.3392857143);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
     padding-top: 5px;
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3387,7 +3453,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 @media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
     width: clamp(115px, 6vw, 115px);
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
     letter-spacing: 0.2px;
     display: inline-block;
     margin-left: 4px;
@@ -3396,6 +3462,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
     width: auto;
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
     letter-spacing: -1px;
     margin-right: clamp(5px, 1vw, 10px);
     margin-left: clamp(5px, 1vw, 10px);
@@ -3403,18 +3470,19 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 }
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
-    font-size: calc(1.1rem + ((1vw - 3.75px)) * 1.3392857143);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
     padding-top: 5px;
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_lower {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3428,18 +3496,20 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 @media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_lower {
     width: clamp(42px, 2vw, 42px);
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
     display: inline-block;
-    margin-top: clamp(2px, 1vw, 17px);
+    margin-top: clamp(15px, 1vw, 20px);
     margin-left: clamp(10px, 1vw, 23px);
     margin-right: clamp(20px, 1vw, 28px);
   }
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_lower {
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
     margin-top: 10px;
     margin-left: clamp(5px, 1vw, 10px);
     margin-right: clamp(5px, 1vw, 10px);
+    padding-top: 5px;
   }
 }
 @media not all and (min-width: 600px) {
@@ -3448,7 +3518,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
     margin: 0;
     width: clamp(60px, 20vw, 120px);
     height: clamp(40px, 10vw, 60px);
-    font-size: calc(1.1rem + ((1vw - 3.75px)) * 1.3392857143);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
     padding-top: 15px;
     text-align: right;
     padding-right: 15px;
@@ -3461,7 +3531,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3477,6 +3547,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower {
     margin-top: 10px;
+    width: 60%;
   }
 }
 @media not all and (min-width: 600px) {
@@ -3488,13 +3559,14 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.morning_lower {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3508,13 +3580,15 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 @media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.morning_lower {
     width: clamp(95px, 6vw, 115px);
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
+    width: auto;
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
     display: inline-block;
   }
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.morning_lower {
     width: auto;
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
     letter-spacing: -1px;
     margin-right: clamp(5px, 1vw, 10px);
     margin-left: clamp(5px, 1vw, 10px);
@@ -3522,7 +3596,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 }
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.morning_lower {
-    font-size: calc(1.1rem + ((1vw - 3.75px)) * 1.3392857143);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
     padding-top: 5px;
   }
 }
@@ -3533,7 +3607,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3548,15 +3622,16 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 @media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.afternoon_lower {
     width: clamp(115px, 6vw, 115px);
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
     letter-spacing: 0.2px;
     display: inline-block;
-    margin-left: clamp(2px, 0vw, 4px);
+    margin-left: clamp(8px, 1vw, 10px);
   }
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.afternoon_lower {
     width: auto;
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
     letter-spacing: -1px;
     margin-right: clamp(5px, 1vw, 10px);
     margin-left: clamp(5px, 1vw, 10px);
@@ -3564,7 +3639,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable .pa
 }
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.afternoon_lower {
-    font-size: calc(1.1rem + ((1vw - 3.75px)) * 1.3392857143);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
     padding-top: 5px;
   }
 }
@@ -3578,7 +3653,7 @@ div.access__wrapper .access-container__detail .closed-day--inner {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3606,6 +3681,7 @@ div.access__wrapper .access-container__detail .closed-day--inner {
   }
 }
 div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
+  font-weight: 400;
   border-right: 1px solid;
   border-color: #e7e7e7;
   /* pc 1920px以上  */
@@ -3614,7 +3690,7 @@ div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3631,7 +3707,7 @@ div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
   div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
     width: 89px;
     height: 25px;
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
     margin-top: clamp(5px, 1vw, 20px);
     padding-top: 7px;
     padding-left: 5px;
@@ -3640,24 +3716,26 @@ div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
     width: clamp(60px, 10vw, 100px);
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
   }
 }
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
     width: clamp(60px, 33vw, 200px);
     height: auto;
-    font-size: calc(1.1rem + ((1vw - 3.75px)) * 1.3392857143);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
     text-align: center;
   }
 }
 div.access__wrapper .access-container__detail .closed-day-of-week {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3674,7 +3752,7 @@ div.access__wrapper .access-container__detail .closed-day-of-week {
   div.access__wrapper .access-container__detail .closed-day-of-week {
     width: 449px;
     height: 114px;
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.4469273743);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
     margin-top: clamp(5px, 1vw, 20px);
     padding-top: 7px;
     padding-left: clamp(10px, 1vw, 15px);
@@ -3683,13 +3761,14 @@ div.access__wrapper .access-container__detail .closed-day-of-week {
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail .closed-day-of-week {
     width: clamp(200px, 22vw, 230px);
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
     padding-left: clamp(35px, 3vw, 35px);
   }
 }
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail .closed-day-of-week {
     width: clamp(200px, 42vw, 250px);
-    font-size: calc(1rem + ((1vw - 3.75px)) * 1.7857142857);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
   }
 }
 div.access__wrapper .access-container__detail-blank-border--lower {
@@ -3701,7 +3780,7 @@ div.access__wrapper .access-container__detail-blank-border--lower {
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3736,7 +3815,7 @@ div.access__wrapper .access-container__detail .access-container__detail-copyrigh
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3755,8 +3834,9 @@ div.access__wrapper .access-container__detail .access-container__detail-copyrigh
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc {
-    width: clamp(340px, 39vw, 400px);
-    margin-top: clamp(10px, 2vw, 20px);
+    width: 90%;
+    margin: 0 auto;
+    text-align: right;
   }
 }
 @media not all and (min-width: 600px) {
@@ -3768,13 +3848,14 @@ div.access__wrapper .access-container__detail .access-container__detail-copyrigh
   }
 }
 div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc small {
+  font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
-  /* スマートフォン縦画面 */
+  /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
@@ -3787,7 +3868,7 @@ div.access__wrapper .access-container__detail .access-container__detail-copyrigh
 }
 @media not all and (min-width: 1920px) {
   div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc small {
-    font-size: calc(1rem + ((1vw - 10.24px)) * 0.1117318436);
+    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0);
     letter-spacing: 0.15px;
     padding-right: 15px;
     display: inline-block;
@@ -3795,15 +3876,16 @@ div.access__wrapper .access-container__detail .access-container__detail-copyrigh
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc small {
-    font-size: calc(1rem + ((1vw - 6px)) * 0.2358490566);
+    padding-right: 25px;
+    font-size: calc(1.2rem + ((1vw - 6px)) * 0);
     letter-spacing: -0.5px;
-    padding-right: 0;
     display: inline-block;
+    margin: 15px 0 15px 0;
   }
 }
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc small {
-    font-size: calc(1rem + ((1vw - 3.75px)) * 0.8928571429);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0);
     margin: 15px 0 15px 0;
   }
 }
