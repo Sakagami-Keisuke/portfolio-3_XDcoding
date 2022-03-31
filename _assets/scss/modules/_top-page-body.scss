@@ -91,21 +91,21 @@
           font-size: mixin.variableFontTab(2.2, 1.2);
           line-height: mixin.clampTab(56, 24);
           top: mixin.clampTab(10, 10);
-          left: mixin.clampTab(150, 100);
+          left: mixin.clampTab(150, 120);
           z-index: 5;
         }
 
         /* スマートフォン縦画面 */
         @include mixin.sp(600px) {
           width: mixin.clampSp(40, 30);
-          height: mixin.clampSp(350, 280);
+          height: mixin.clampSp(350, 230);
           line-height: mixin.clampSp(40, 30);
           top: mixin.clampSp(10, 10);
           left: mixin.clampSp(80, 50);
           z-index: 5;
-          
-          font-size: mixin.variableFontSp(1.6, 1.15);
-          letter-spacing: mixin.clampSp(5.5,3.8);
+
+          font-size: mixin.variableFontSp(1.6, 1);
+          letter-spacing: mixin.clampSp(5, 2);
         }
 
         // ==============================
@@ -134,8 +134,8 @@
 
           /* スマートフォン縦画面 */
           @include mixin.sp(600px) {
-            font-size: mixin.variableFontSp(1.6, 1.15);
-            letter-spacing: mixin.clampSp(5.5,3.8);
+            font-size: mixin.variableFontSp(1.6, 1);
+            letter-spacing: mixin.clampSp(5, 2);
           }
         }
       }
@@ -182,20 +182,20 @@
           font-size: mixin.variableFontTab(2.2, 1.2);
           line-height: mixin.clampTab(56, 24);
           top: mixin.clampTab(10, 10);
-          left: mixin.clampTab(250, 180);
+          left: mixin.clampTab(280, 180);
           z-index: 5;
         }
 
         /* スマートフォン縦画面 */
         @include mixin.sp(600px) {
           width: mixin.clampSp(40, 30);
-          height: mixin.clampSp(350, 280);
-          font-size: mixin.variableFontSp(1.6, 1.15);
+          height: mixin.clampSp(350, 230);
           line-height: mixin.clampSp(40, 30);
           top: mixin.clampSp(10, 10);
           left: mixin.clampSp(150, 100);
           z-index: 5;
-          letter-spacing: mixin.clampSp(5.5,3.8);
+          font-size: mixin.variableFontSp(1.6, 1);
+          letter-spacing: mixin.clampSp(5, 2);
         }
       }
 
@@ -1353,7 +1353,7 @@ div.access__wrapper {
     @include mixin.sp(600px) {
       display: block;
       width: 100vw;
-      height:mixin.clampSp(950,670);
+      height: mixin.clampSp(950, 670);
     }
 
     // ================
