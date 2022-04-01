@@ -958,6 +958,7 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
     height: clamp(280px, 44vw, 450px);
     font-size: calc(1.2rem + ((1vw - 6px)) * 2.358490566);
     line-height: clamp(24px, 5vw, 56px);
+    letter-spacing: clamp(3px, 0vw, 5px);
     top: clamp(10px, 1vw, 10px);
     left: clamp(120px, 15vw, 150px);
     z-index: 5;
@@ -972,7 +973,7 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
     left: clamp(50px, 13vw, 80px);
     z-index: 5;
     font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.7857142857);
-    letter-spacing: clamp(2px, 1vw, 5px);
+    letter-spacing: clamp(0px, 1vw, 3px);
   }
 }
 .body .top-page_wrapper .first-view_inner__message-left span.color {
@@ -1004,12 +1005,17 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
 @media not all and (min-width: 1025px) {
   .body .top-page_wrapper .first-view_inner__message-left span.color {
     font-size: calc(1.2rem + ((1vw - 6px)) * 2.358490566);
+    letter-spacing: clamp(3px, 0vw, 5px);
+    padding-top: clamp(3px, 0vw, 5px);
+    padding-bottom: clamp(3px, 0vw, 5px);
   }
 }
 @media not all and (min-width: 600px) {
   .body .top-page_wrapper .first-view_inner__message-left span.color {
     font-size: calc(1rem + ((1vw - 3.75px)) * 2.6785714286);
-    letter-spacing: clamp(2px, 1vw, 5px);
+    letter-spacing: clamp(0px, 1vw, 3px);
+    padding-top: clamp(0px, 1vw, 3px);
+    padding-bottom: clamp(0px, 1vw, 3px);
   }
 }
 .body .top-page_wrapper .first-view_inner__message-right {
@@ -1059,6 +1065,7 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
     height: clamp(280px, 44vw, 450px);
     font-size: calc(1.2rem + ((1vw - 6px)) * 2.358490566);
     line-height: clamp(24px, 5vw, 56px);
+    letter-spacing: clamp(3px, 1vw, 7px);
     top: clamp(10px, 1vw, 10px);
     left: clamp(180px, 27vw, 280px);
     z-index: 5;
@@ -1069,11 +1076,11 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
     width: clamp(30px, 7vw, 40px);
     height: clamp(230px, 58vw, 350px);
     line-height: clamp(30px, 7vw, 40px);
+    letter-spacing: clamp(0px, 1vw, 3px);
     top: clamp(10px, 2vw, 10px);
     left: clamp(100px, 25vw, 150px);
     z-index: 5;
     font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.7857142857);
-    letter-spacing: clamp(2px, 1vw, 5px);
   }
 }
 .body .top-page_wrapper .first-view_inner__image {
@@ -2988,7 +2995,7 @@ div.access__wrapper .access-container__detail-blank-margin {
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-blank-margin {
     width: 90%;
-    height: 18px;
+    height: 5px;
     margin: 0 auto;
   }
 }
@@ -3027,7 +3034,7 @@ div.access__wrapper .access-container__detail-business-hour-inner {
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner {
     width: 100vw;
-    height: clamp(200px, 33vw, 200px);
+    height: clamp(150px, 33vw, 200px);
     flex-direction: row;
     justify-content: flex-start;
   }
@@ -3068,7 +3075,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--consultation-
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--consultation-time {
     width: clamp(60px, 33vw, 200px);
-    height: auto;
+    height: clamp(150px, 33vw, 200px);
     margin-top: 10px;
   }
 }
@@ -3144,7 +3151,7 @@ div.access__wrapper .access-container__detail-business-hour-inner--timetable {
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-business-hour-inner--timetable {
     width: clamp(250px, 50vw, 300px);
-    height: auto;
+    height: clamp(150px, 33vw, 200px);
   }
 }
 div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern {

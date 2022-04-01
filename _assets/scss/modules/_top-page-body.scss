@@ -90,6 +90,7 @@
           height: mixin.clampTab(450, 280);
           font-size: mixin.variableFontTab(2.2, 1.2);
           line-height: mixin.clampTab(56, 24);
+          letter-spacing: mixin.clampTab(5,3);
           top: mixin.clampTab(10, 10);
           left: mixin.clampTab(150, 120);
           z-index: 5;
@@ -104,7 +105,7 @@
           left: mixin.clampSp(80, 50);
           z-index: 5;
           font-size: mixin.variableFontSp(1.6, 1.2);
-          letter-spacing: mixin.clampSp(5, 2);
+          letter-spacing: mixin.clampSp(3, 0);
         }
 
         // ==============================
@@ -129,12 +130,17 @@
           /* タブレット */
           @include mixin.tab(1025px) {
             font-size: mixin.variableFontTab(2.2, 1.2);
+            letter-spacing: mixin.clampTab(5,3);
+            padding-top:mixin.clampTab(5,3);
+            padding-bottom:mixin.clampTab(5,3);
           }
 
           /* スマートフォン */
           @include mixin.sp(600px) {
             font-size: mixin.variableFontSp(1.6, 1);
-            letter-spacing: mixin.clampSp(5, 2);
+            letter-spacing: mixin.clampSp(3,0);
+            padding-top:mixin.clampSp(3,0);
+            padding-bottom:mixin.clampSp(3,0);
           }
         }
       }
@@ -179,6 +185,7 @@
           height: mixin.clampTab(450, 280);
           font-size: mixin.variableFontTab(2.2, 1.2);
           line-height: mixin.clampTab(56, 24);
+          letter-spacing: mixin.clampTab(7,3);
           top: mixin.clampTab(10, 10);
           left: mixin.clampTab(280, 180);
           z-index: 5;
@@ -189,11 +196,11 @@
           width: mixin.clampSp(40, 30);
           height: mixin.clampSp(350, 230);
           line-height: mixin.clampSp(40, 30);
+          letter-spacing: mixin.clampSp(3,0);
           top: mixin.clampSp(10, 10);
           left: mixin.clampSp(150, 100);
           z-index: 5;
           font-size: mixin.variableFontSp(1.6, 1.2);
-          letter-spacing: mixin.clampSp(5, 2);
         }
       }
 
@@ -1875,7 +1882,7 @@ div.access__wrapper {
         /* スマートフォン */
         @include mixin.sp(600px) {
           width: 90%;
-          height: 18px;
+          height:5px;
           margin: 0 auto;
         }
       }
@@ -1909,7 +1916,7 @@ div.access__wrapper {
         /* スマートフォン */
         @include mixin.sp(600px) {
           width: 100vw;
-          height: mixin.clampSp(200, 200);
+          height: mixin.clampSp(200, 150);
           flex-direction: row;
           justify-content: flex-start;
         }
@@ -1943,7 +1950,7 @@ div.access__wrapper {
           /* スマートフォン */
           @include mixin.sp(600px) {
             width: mixin.clampSp(200, 60);
-            height: auto;
+            height: mixin.clampSp(200,150);
             margin-top: 10px;
           }
 
@@ -2008,7 +2015,7 @@ div.access__wrapper {
           /* スマートフォン */
           @include mixin.sp(600px) {
             width: mixin.clampSp(300, 250);
-            height: auto;
+            height: mixin.clampSp(200,150);
           }
 
           // ==========================
