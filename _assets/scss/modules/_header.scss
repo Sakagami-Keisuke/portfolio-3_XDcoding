@@ -1,5 +1,11 @@
 @use "mixin";
 
+/*XDのAV(トラッキング値)letter-spacing”em”で設定
+XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
+
+/*XDの行送り値（px）÷ フォントサイズ（px）をline-heightに指定
+// 28÷15=1.8666...なので1.86。¸line-height : 1.86 ;*/
+
 // header＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 .header {
@@ -167,7 +173,7 @@
                     font-weight: 400; //regular
                     /* pc 1920px以上  */
                     @include mixin.pc-l(1920px) {
-                        padding-left: 8px;
+                        padding-left: 9px;
                         font-size: 3rem;
                         line-height: 28px;
                         text-align: left;
@@ -189,7 +195,7 @@
                     /* スマートフォン */
                     @include mixin.sp(600px) {
                         height: auto;
-                        font-size: mixin.variableFontSp(2,1.4);
+                        font-size: mixin.variableFontSp(2, 1.4);
                         text-align: center;
                     }
                 }
@@ -223,7 +229,7 @@
                     /* スマートフォン */
                     @include mixin.sp(600px) {
                         font-size: mixin.variableFontSp(2, 1.4);
-                        padding-top: mixin.clampSp(5,0);
+                        padding-top: mixin.clampSp(5, 0);
                     }
                 }
             }
@@ -326,10 +332,10 @@
 
                 /* スマートフォン */
                 @include mixin.sp(600px) {
-                    margin-top: mixin.clampSp(15,10);
-                    width: mixin.clampSp(14,10);
-                    height:mixin.clampSp(14,10);
-                    margin-right:mixin.clampSp(12,5);
+                    margin-top: mixin.clampSp(15, 10);
+                    width: mixin.clampSp(14, 10);
+                    height: mixin.clampSp(14, 10);
+                    margin-right: mixin.clampSp(12, 5);
                     position: relative;
                 }
             }
@@ -344,7 +350,7 @@
                 /* pc 1920px以上  */
                 @include mixin.pc-l(1920px) {
                     font-size: 2.2rem;
-                    letter-spacing: 1px;
+                    letter-spacing: 0.25px;
                     margin-top: 11px;
                 }
 

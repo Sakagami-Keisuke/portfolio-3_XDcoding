@@ -110,7 +110,7 @@
         // ==============================
 
         span.color {
-          color: green;
+          color: #21a937;
           font-weight: 700; //bold
           /* pc 1920px以上  */
           @include mixin.pc-l(1920px) {
@@ -220,16 +220,16 @@
 
         /* タブレット */
         @include mixin.tab(1025px) {
-          width: mixin.clampTab(1024,600);
+          width: mixin.clampTab(1024, 600);
           height: auto;
         }
 
         @include mixin.sp(600px) {
-          width: mixin.clampSp(600,375);
+          width: mixin.clampSp(600, 375);
           height: auto;
           img {
             width: mixin.clampSp(599, 375);
-            height: mixin.clampSp(400,300);
+            height: mixin.clampSp(400, 300);
             object-fit: cover;
           }
         }
@@ -238,7 +238,6 @@
   }
 
   // section 1 <ファーストビュー>============================================================================================
-
 
   // section 2 <自己紹介>============================================================================================
 
@@ -291,12 +290,12 @@
       @include mixin.tab(1025px) {
         width: mixin.clampTab(440, 400);
         height: auto;
-        text-align: center;
       }
 
       /* スマートフォン */
       @include mixin.sp(600px) {
         width: auto;
+        text-align: center;
       }
 
       // ======================
@@ -304,35 +303,39 @@
       &__first-line_text {
         font-weight: 700; //bold
         display: inline-block;
-        background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+        background: linear-gradient(transparent 70%, #99e5a5 70%);
 
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           font-size: 2.4rem;
-          line-height: 22px;
-          margin-top: 200px;
+          line-height: 1.2; //29/24
+          margin-top: 195px;
           margin-left: 32px;
         }
 
         /* PC */
         @include mixin.pc(1920px) {
           font-size: mixin.variableFontPc(2.4, 2);
-          line-height: mixin.variableFontPc(2.2, 2);
+          line-height: mixin.variableFontPc(3, 2);
           margin-top: mixin.clampPc(189, 45);
-          margin-left: mixin.clampPc(32, 20);
+          margin-left: mixin.clampPc(32, 28);
+          display: inline-block;
+          height:mixin.clampPc(30,25);
         }
 
         /* タブレット */
         @include mixin.tab(1025px) {
           font-size: mixin.variableFontTab(2, 1.6);
-          line-height: mixin.clampTab(40, 32);
+          line-height: mixin.clampSp(22,20);
           margin-top: mixin.clampTab(120, 70);
+          margin-left: 35px;
         }
 
         /* スマートフォン */
         @include mixin.sp(600px) {
-          margin-top: mixin.clampSp(60, 60);
           font-size: mixin.variableFontSp(1.6, 1.4);
+          margin-top: mixin.clampSp(60, 60);
+          margin-left: 0;
         }
       }
 
@@ -341,13 +344,13 @@
       &__second-line_text {
         font-weight: 700; //bold
         display: inline-block;
-        background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+        background: linear-gradient(transparent 70%, #99e5a5 70%);
 
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           font-size: 2.4rem;
+          line-height: 1.2; //29/24
           letter-spacing: -0.2px;
-          line-height: 24px;
           margin-top: 41px;
           margin-left: 32px;
         }
@@ -355,21 +358,25 @@
         /* PC */
         @include mixin.pc(1920px) {
           font-size: mixin.variableFontPc(2.4, 2);
-          line-height: mixin.clampPc(48, 40);
-          margin-top: mixin.clampPc(15, 12);
+          line-height: mixin.variableFontPc(3, 2);
+          margin-top: mixin.clampPc(35, 15);
           margin-left: mixin.clampPc(32, 20);
+          display: inline-block;
+          height:mixin.clampPc(30,25);
         }
 
         /* タブレット */
         @include mixin.tab(1025px) {
           font-size: mixin.variableFontTab(2, 1.6);
-          line-height: mixin.clampTab(40, 32);
+          line-height: mixin.clampSp(22,20);
           margin-top: mixin.clampTab(30, 20);
+          margin-left: 35px;
         }
 
         /* スマートフォン */
         @include mixin.sp(600px) {
           font-size: mixin.variableFontSp(1.6, 1.4);
+          margin-left: 0;
         }
       }
 
@@ -385,7 +392,7 @@
           font-size: 1.6rem;
           line-height: 38px;
           letter-spacing: -0.15px;
-          margin-top: 35px;
+          margin-top: 32px;
           margin-left: 32px;
         }
 
@@ -393,7 +400,7 @@
         @include mixin.pc(1920px) {
           font-size: mixin.variableFontPc(1.6, 1.2);
           line-height: mixin.clampPc(38, 24);
-          margin-top: mixin.clampPc(30, 25);
+          margin-top: mixin.clampPc(35, 25);
           margin-left: mixin.clampPc(32, 28);
         }
 
@@ -403,13 +410,14 @@
           line-height: mixin.clampTab(32, 24);
           letter-spacing: mixin.clampTab(-2, -2);
           margin-top: mixin.clampTab(45, 30);
-          text-align: left;
+          margin-left: 35px;
         }
 
         /* スマートフォン */
         @include mixin.sp(600px) {
           font-size: mixin.variableFontSp(1.2, 1.2);
           letter-spacing: 0;
+          margin-left: 0;
         }
       }
     }
@@ -464,7 +472,6 @@
 
 // section 2 <自己紹介> ============================================================================================
 
-
 // section 3 <治療内容>============================================================================================
 
 .medical-treatment-contents {
@@ -504,13 +511,14 @@
 
   &__first-line-text {
     font-weight: 700; //bold
-    background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+    background: linear-gradient(transparent 70%, #99e5a5 70%);
+
     /* pc 1920px以上  */
     @include mixin.pc-l(1920px) {
-      width: auto;
+      width: 105px;
       font-size: 2.4rem;
-      line-height: 22px;
-      margin-top: 84px;
+      line-height: 1.58; //38/24
+      margin-top: 78px;
       display: inline-block;
     }
 
@@ -519,7 +527,7 @@
       display: inline-block;
       width: auto;
       font-size: 2.4rem;
-      line-height: 22px;
+      line-height: mixin.variableFontPc(3, 2);
       margin-top: mixin.clampPc(85, 30);
     }
 
@@ -528,13 +536,14 @@
       display: inline-block;
       width: auto;
       font-size: mixin.variableFontTab(2.2, 2);
-      line-height: mixin.clampTab(44, 40);
+      line-height: mixin.clampSp(25,20);
       margin-top: mixin.clampTab(100, 10);
     }
 
     /* スマートフォン */
     @include mixin.sp(600px) {
       font-size: mixin.variableFontSp(2, 1.8);
+      line-height: mixin.clampSp(22,20);
     }
   }
 
@@ -548,7 +557,7 @@
       font-size: 1.6em;
       line-height: 22px;
       display: inline-block;
-      margin-top: 77px;
+      margin-top: 68px;
     }
 
     /* PC */
@@ -636,8 +645,8 @@
       @include mixin.tab(1025px) {
         width: mixin.clampTab(300, 270);
         height: mixin.clampTab(400, 360);
-        margin-top: mixin.clampPc(20,15);
-        margin-bottom: mixin.clampPc(20,15);
+        margin-top: mixin.clampPc(20, 15);
+        margin-bottom: mixin.clampPc(20, 15);
       }
 
       /* スマートフォン */
@@ -911,32 +920,38 @@
   .notice-title {
     font-size: 2.4rem;
     font-weight: 700; //bold
-    line-height: 22px;
-    background: linear-gradient(transparent 60%, rgb(134, 235, 134) 90%);
+    line-height: 1.58; //38/24
+    background: linear-gradient(transparent 70%, #99e5a5 70%);
+    -webkit-background: linear-gradient(transparent 70%, #99e5a5 70%);
+    -moz-background: linear-gradient(transparent 70%, #99e5a5 70%);
+    -ms-background: linear-gradient(transparent 70%, #99e5a5 70%);
 
     /* pc 1920px以上  */
     @include mixin.pc-l(1920px) {
       display: inline-block;
-      width: auto;
-      margin-top: 88px;
+      width: 105px;
+      margin-top: 80px;
     }
 
     /* PC */
     @include mixin.pc(1920px) {
       display: inline-block;
       width: auto;
+      line-height: mixin.variableFontPc(3, 2);
       margin-top: mixin.clampPc(88, 60);
     }
 
     /* タブレット */
     @include mixin.tab(1025px) {
-      margin-top: mixin.clampTab(100, 80);
       font-size: mixin.variableFontTab(2.2, 1.8);
+      line-height: mixin.clampSp(22,20);
+      margin-top: mixin.clampTab(100, 80);
     }
 
     /* スマートフォン */
     @include mixin.sp(600px) {
       font-size: mixin.variableFontTab(2.2, 1.8);
+      line-height: mixin.clampSp(22,20);
       margin-top: mixin.clampSp(80, 70);
     }
   }
@@ -960,7 +975,7 @@
     @include mixin.pc-l(1920px) {
       width: 1180px;
       height: 394px;
-      margin-top: 74px;
+      margin-top: 69px;
     }
 
     /* PC */
@@ -1021,7 +1036,7 @@
       /* pc 1920px以上  */
       @include mixin.pc-l(1920px) {
         margin: 0px 66px 0px 66px;
-        padding-top: 18px;
+        padding-top: 17px;
         padding-bottom: 18.5px;
       }
 
@@ -1065,6 +1080,7 @@
         // ========================================================
 
         &--date {
+          color: #21a937;
           font-weight: 700; //bold
           text-align: center;
           width: auto;
@@ -1074,7 +1090,7 @@
             height: 25px;
             line-height: 25px;
             font-size: 1.6rem;
-            letter-spacing: -0.3px;
+            letter-spacing: -0.5px;
             display: inline-block;
           }
 
@@ -1108,11 +1124,11 @@
 
           // /* pc 1920px以上  */
           @include mixin.pc-l(1920px) {
-            width: 80px;
-            height: 25px;
+            width: 81px;
+            height: 25.5px;
             font-size: 1.2rem;
             line-height: 25px;
-            margin-left: 38px;
+            margin-left: 32px;
           }
 
           /* PC */
@@ -1136,7 +1152,7 @@
           /* スマートフォン */
           @include mixin.sp(600px) {
             margin: 0;
-            width: 100%;
+            width: mixin.clampSp(80, 75);
             font-size: mixin.variableFontSp(1.4, 1.2);
             letter-spacing: 2px;
             padding: 0 4px 0 4px;
@@ -1151,6 +1167,7 @@
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           margin-left: 34px;
+          letter-spacing: -0.07px;
         }
 
         /* PC */
@@ -1165,15 +1182,15 @@
 
         /* タブレット */
         @include mixin.tab(1025px) {
-          font-size:12px;
-          width: mixin.clampTab(800,400);
+          font-size: 12px;
+          width: mixin.clampTab(800, 400);
           text-align: left;
           height: auto;
         }
 
         /* スマートフォン */
         @include mixin.sp(600px) {
-          font-size:12px;
+          font-size: 12px;
           width: mixin.clampSp(400, 250);
           height: mixin.clampSp(80, 50);
           margin: 0;
@@ -1208,7 +1225,6 @@
           @include mixin.sp(600px) {
             font-size: mixin.variableFontSp(1.4, 1.2);
             margin: 4.5px 0 5px;
-            letter-spacing: 2px;
             line-height: mixin.clampSp(25, 12);
           }
         }
@@ -1224,7 +1240,7 @@
       @include mixin.pc-l(1920px) {
         width: 1065px;
         height: 100px;
-        margin-left: 66px;
+        margin-left: 65px;
       }
 
       /* PC */
@@ -1257,7 +1273,7 @@
         margin-top: 40px;
         margin-bottom: 49px;
         display: inline-block;
-        letter-spacing: 1.2px;
+        letter-spacing: 0.5px;
 
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
@@ -1307,7 +1323,6 @@
 }
 
 // section 3 <治療内容> ============================================================================================
-
 
 // section 4 <アクセス> ============================================================================================
 
@@ -1412,7 +1427,7 @@ div.access__wrapper {
       @include mixin.pc-l(1920px) {
         width: 538px;
         height: 625px;
-        margin-top: 181px;
+        margin-top: 179px;
         margin-left: 33px;
       }
 
@@ -1452,6 +1467,7 @@ div.access__wrapper {
         @include mixin.pc-l(1920px) {
           width: 275x;
           height: 73px;
+          margin-left: 1px;
         }
 
         /* PC */
@@ -1544,7 +1560,7 @@ div.access__wrapper {
               font-size: 3rem;
               line-height: 26px;
               margin-top: 2px;
-              padding-left: 11px;
+              padding-left: 10px;
             }
 
             /* PC */
@@ -1700,10 +1716,10 @@ div.access__wrapper {
       &-tel {
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
-          height: 32px;
+          height: 34px;
           width: 220px;
           position: relative;
-          margin-top: 30px;
+          margin-top: 28px;
         }
 
         /* PC */
@@ -1723,7 +1739,7 @@ div.access__wrapper {
 
         /* スマートフォン */
         @include mixin.sp(600px) {
-          height:mixin.clampSp(10, 5);
+          height: mixin.clampSp(10, 5);
           margin: 0 auto;
           margin-top: mixin.clampSp(15, 5);
           display: flex;
@@ -1742,7 +1758,9 @@ div.access__wrapper {
           @include mixin.pc-l(1920px) {
             width: 26px;
             height: 26px;
+            margin-top: 3px;
             margin-right: 15px;
+            transform: translateY(2px);
           }
 
           /* PC */
@@ -1770,13 +1788,14 @@ div.access__wrapper {
         // ================
 
         &--number {
+          color: #21a937;
           font-weight: 700; //bold
           text-align: right;
-          color: #21a937;
 
           /* pc 1920px以上  */
           @include mixin.pc-l(1920px) {
             font-size: 2.4rem;
+            letter-spacing: -1px;
             padding-left: 4px;
             position: absolute;
           }
@@ -1878,13 +1897,13 @@ div.access__wrapper {
         /* PC */
         @include mixin.pc(1920px) {
           width: mixin.clampPc(533, 350);
-          height: mixin.clampPc(120,85);
+          height: mixin.clampPc(120, 85);
         }
 
         /* タブレット */
         @include mixin.tab(1025px) {
-          width: mixin.clampTab(400,300);
-          height: mixin.clampTab(120,115);
+          width: mixin.clampTab(400, 300);
+          height: mixin.clampTab(120, 115);
         }
 
         /* スマートフォン */
@@ -1911,14 +1930,14 @@ div.access__wrapper {
           /* PC */
           @include mixin.pc(1920px) {
             width: 89px;
-            height: mixin.clampPc(110,90);
+            height: mixin.clampPc(110, 90);
             font-size: mixin.variableFontPc(1.4, 1.2);
           }
 
           /* タブレット */
           @include mixin.tab(1025px) {
             width: mixin.clampTab(100, 60);
-            height:  mixin.clampTab(120,110);
+            height: mixin.clampTab(120, 110);
           }
 
           /* スマートフォン */
@@ -1977,13 +1996,13 @@ div.access__wrapper {
           /* PC */
           @include mixin.pc(1920px) {
             width: mixin.clampPc(449, 330);
-            height: mixin.clampPc(120,90);
+            height: mixin.clampPc(120, 90);
           }
 
           /* タブレット */
           @include mixin.tab(1025px) {
-            width: mixin.clampTab(300,250);
-            height:  mixin.clampTab(130,120);
+            width: mixin.clampTab(300, 250);
+            height: mixin.clampTab(130, 120);
           }
 
           /* スマートフォン */
@@ -2005,7 +2024,7 @@ div.access__wrapper {
 
             /* PC */
             @include mixin.pc(1920px) {
-              width: mixin.clampPc(450,330);
+              width: mixin.clampPc(450, 330);
             }
 
             /* タブレット */
@@ -2178,7 +2197,7 @@ div.access__wrapper {
                 width: mixin.clampPc(42, 42);
                 font-size: mixin.variableFontPc(1.4, 1.2);
                 display: inline-block;
-                margin-top: mixin.clampPc(20,15);
+                margin-top: mixin.clampPc(20, 15);
                 margin-left: mixin.clampPc(23, 10);
                 margin-right: mixin.clampPc(28, 20);
               }
@@ -2189,7 +2208,7 @@ div.access__wrapper {
                 margin-top: 10px;
                 margin-left: mixin.clampTab(10, 5);
                 margin-right: mixin.clampTab(10, 5);
-                padding-top: 5px
+                padding-top: 5px;
               }
 
               /* スマートフォン */
@@ -2246,7 +2265,7 @@ div.access__wrapper {
                 /* PC */
                 @include mixin.pc(1920px) {
                   width: mixin.clampPc(115, 95);
-                  width:auto;
+                  width: auto;
                   font-size: mixin.variableFontPc(1.4, 1.2);
                   letter-spacing: 0.2px;
                   display: inline-block;
@@ -2324,7 +2343,7 @@ div.access__wrapper {
                 width: mixin.clampPc(42, 42);
                 font-size: mixin.variableFontPc(1.4, 1.2);
                 display: inline-block;
-                margin-top: mixin.clampPc(20,15);
+                margin-top: mixin.clampPc(20, 15);
                 margin-left: mixin.clampPc(23, 10);
                 margin-right: mixin.clampPc(28, 20);
               }
@@ -2335,7 +2354,7 @@ div.access__wrapper {
                 margin-top: 10px;
                 margin-left: mixin.clampTab(10, 5);
                 margin-right: mixin.clampTab(10, 5);
-                padding-top: 5px
+                padding-top: 5px;
               }
 
               /* スマートフォン */
@@ -2393,7 +2412,7 @@ div.access__wrapper {
                 /* PC */
                 @include mixin.pc(1920px) {
                   width: mixin.clampPc(115, 95);
-                  width:auto;
+                  width: auto;
                   font-size: mixin.variableFontPc(1.4, 1.2);
                   display: inline-block;
                 }
@@ -2432,7 +2451,7 @@ div.access__wrapper {
                   font-size: mixin.variableFontPc(1.4, 1.2);
                   letter-spacing: 0.2px;
                   display: inline-block;
-                  margin-left: mixin.clampPc(10,8);
+                  margin-left: mixin.clampPc(10, 8);
                 }
 
                 /* タブレット */
@@ -2644,7 +2663,7 @@ div.access__wrapper {
 
           /* PC */
           @include mixin.pc(1920px) {
-            font-size: mixin.variableFontPc(1.2,1.2);
+            font-size: mixin.variableFontPc(1.2, 1.2);
             letter-spacing: 0.15px;
             padding-right: 15px;
             display: inline-block;
@@ -2653,7 +2672,7 @@ div.access__wrapper {
           /* タブレット */
           @include mixin.tab(1025px) {
             padding-right: 25px;
-            font-size: mixin.variableFontTab(1.2,1.2);
+            font-size: mixin.variableFontTab(1.2, 1.2);
             letter-spacing: -0.5px;
             display: inline-block;
             margin: 15px 0 15px 0;
