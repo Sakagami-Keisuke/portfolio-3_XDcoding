@@ -861,6 +861,7 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
 
 .body {
   width: 100vw;
+  color: #444444;
 }
 .body .top-page_wrapper {
   width: 100vw;
@@ -917,8 +918,11 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
 .body .top-page_wrapper .first-view_inner__message-left {
   font-weight: 700;
   writing-mode: vertical-rl;
-  background-color: white;
+  display: flex;
+  align-items: center;
   position: absolute;
+  z-index: 5;
+  background-color: white;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
@@ -935,7 +939,6 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
     font-size: 2.8rem;
     letter-spacing: 5.5px;
     padding-top: 25px;
-    line-height: 102px;
     top: 133px;
     left: 210px;
   }
@@ -943,8 +946,7 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
 @media not all and (min-width: 1920px) {
   .body .top-page_wrapper .first-view_inner__message-left {
     width: clamp(55px, 5vw, 102px);
-    line-height: clamp(55px, 5vw, 102px);
-    height: clamp(300px, 29vw, 565px);
+    height: clamp(330px, 29vw, 565px);
     font-size: calc(1.4rem + ((1vw - 10.24px)) * 1.5642458101);
     letter-spacing: 5.5px;
     padding-top: clamp(20px, 1vw, 25px);
@@ -955,30 +957,30 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
 @media not all and (min-width: 1025px) {
   .body .top-page_wrapper .first-view_inner__message-left {
     width: clamp(30px, 5vw, 50px);
-    height: clamp(280px, 44vw, 450px);
+    height: clamp(305px, 44vw, 450px);
     font-size: calc(1.2rem + ((1vw - 6px)) * 2.358490566);
-    line-height: clamp(24px, 5vw, 56px);
-    letter-spacing: clamp(3px, 0vw, 5px);
+    letter-spacing: clamp(2px, 1vw, 6px);
     top: clamp(10px, 1vw, 10px);
-    left: clamp(120px, 15vw, 150px);
+    left: clamp(100px, 15vw, 150px);
     z-index: 5;
   }
 }
 @media not all and (min-width: 600px) {
   .body .top-page_wrapper .first-view_inner__message-left {
     width: clamp(30px, 7vw, 40px);
-    height: clamp(230px, 58vw, 350px);
-    line-height: clamp(30px, 7vw, 40px);
+    height: clamp(280px, 58vw, 350px);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.7857142857);
+    letter-spacing: clamp(0px, 1vw, 4px);
     top: clamp(10px, 2vw, 10px);
     left: clamp(50px, 13vw, 80px);
     z-index: 5;
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.7857142857);
-    letter-spacing: clamp(0px, 1vw, 3px);
   }
 }
 .body .top-page_wrapper .first-view_inner__message-left span.color {
   color: #21a937;
   font-weight: 700;
+  display: flex;
+  align-items: center;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
@@ -990,36 +992,38 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
 }
 @media (min-width: 1920px) {
   .body .top-page_wrapper .first-view_inner__message-left span.color {
-    letter-spacing: 5.5px;
-    margin-top: -8px;
-    margin-bottom: -8px;
+    letter-spacing: 6.3px;
   }
 }
 @media not all and (min-width: 1920px) {
   .body .top-page_wrapper .first-view_inner__message-left span.color {
-    letter-spacing: 5.5px;
-    margin-top: -8px;
-    margin-bottom: -8px;
+    letter-spacing: 6.3px;
   }
 }
 @media not all and (min-width: 1025px) {
   .body .top-page_wrapper .first-view_inner__message-left span.color {
     font-size: calc(1.2rem + ((1vw - 6px)) * 2.358490566);
-    letter-spacing: clamp(3px, 0vw, 5px);
-    padding-top: clamp(3px, 0vw, 5px);
-    padding-bottom: clamp(3px, 0vw, 5px);
+    letter-spacing: clamp(2px, 1vw, 6px);
+    margin-top: clamp(0px, 0vw, 1px);
+    margin-bottom: clamp(0px, 0vw, 1px);
   }
 }
 @media not all and (min-width: 600px) {
   .body .top-page_wrapper .first-view_inner__message-left span.color {
-    font-size: calc(1rem + ((1vw - 3.75px)) * 2.6785714286);
-    letter-spacing: clamp(0px, 1vw, 3px);
-    padding-top: clamp(0px, 1vw, 3px);
-    padding-bottom: clamp(0px, 1vw, 3px);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.7857142857);
+    letter-spacing: clamp(0px, 1vw, 4px);
+    margin-top: clamp(0px, 0vw, 1px);
+    margin-bottom: clamp(0px, 0vw, 1px);
   }
 }
 .body .top-page_wrapper .first-view_inner__message-right {
   font-weight: 700;
+  writing-mode: vertical-rl;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 5;
+  background-color: white;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
@@ -1033,13 +1037,10 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
   .body .top-page_wrapper .first-view_inner__message-right {
     width: 102px;
     height: 565px;
-    writing-mode: vertical-rl;
     font-size: 2.8rem;
     letter-spacing: 6px;
     padding-top: 25px;
-    line-height: 102px;
     background-color: white;
-    position: absolute;
     top: 133px;
     left: 393px;
   }
@@ -1047,14 +1048,11 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
 @media not all and (min-width: 1920px) {
   .body .top-page_wrapper .first-view_inner__message-right {
     width: clamp(55px, 5vw, 102px);
-    line-height: clamp(55px, 5vw, 102px);
-    height: clamp(300px, 29vw, 565px);
-    writing-mode: vertical-rl;
+    height: clamp(330px, 29vw, 565px);
     font-size: calc(1.4rem + ((1vw - 10.24px)) * 1.5642458101);
     letter-spacing: 5.5px;
     padding-top: clamp(20px, 1vw, 25px);
     background-color: white;
-    position: absolute;
     top: clamp(70px, 7vw, 133px);
     left: clamp(200px, 20vw, 393px);
   }
@@ -1062,25 +1060,21 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
 @media not all and (min-width: 1025px) {
   .body .top-page_wrapper .first-view_inner__message-right {
     width: clamp(30px, 5vw, 50px);
-    height: clamp(280px, 44vw, 450px);
+    height: clamp(305px, 44vw, 450px);
     font-size: calc(1.2rem + ((1vw - 6px)) * 2.358490566);
-    line-height: clamp(24px, 5vw, 56px);
     letter-spacing: clamp(3px, 1vw, 7px);
     top: clamp(10px, 1vw, 10px);
     left: clamp(180px, 27vw, 280px);
-    z-index: 5;
   }
 }
 @media not all and (min-width: 600px) {
   .body .top-page_wrapper .first-view_inner__message-right {
     width: clamp(30px, 7vw, 40px);
-    height: clamp(230px, 58vw, 350px);
-    line-height: clamp(30px, 7vw, 40px);
-    letter-spacing: clamp(0px, 1vw, 3px);
+    height: clamp(280px, 58vw, 350px);
+    font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.7857142857);
+    letter-spacing: clamp(0px, 1vw, 5px);
     top: clamp(10px, 2vw, 10px);
     left: clamp(100px, 25vw, 150px);
-    z-index: 5;
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 1.7857142857);
   }
 }
 .body .top-page_wrapper .first-view_inner__image {
@@ -1560,6 +1554,7 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
 .medical-treatment-contents__inner-article-board {
   border: 1px solid;
   border-radius: 10px;
+  border-color: #C9C9C9;
   background-color: white;
   /* pc 1920px以上  */
   /* 1920px 以上 */

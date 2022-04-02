@@ -80,7 +80,7 @@ const browserSyncReload = (done) => {
  * watch('監視するファイル',処理)
  */
 const watchFiles = () => {
-  gulp.watch(srcPath.scss, gulp.series(cssSass))
+  gulp.watch(srcPath.scss, gulp.series(cssSass, browserSyncReload))
   gulp.watch(srcPath.html, gulp.series(html, browserSyncReload))
 }
 

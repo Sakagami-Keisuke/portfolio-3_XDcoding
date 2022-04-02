@@ -4,6 +4,7 @@
 
 .body {
   width: 100vw;
+  color: #444444;
 
   // =========================
 
@@ -57,8 +58,11 @@
       &__message-left {
         font-weight: 700; //bold
         writing-mode: vertical-rl;
-        background-color: white;
+        display: flex;
+        align-items: center;
         position: absolute;
+        z-index: 5;
+        background-color: white;
 
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
@@ -67,7 +71,6 @@
           font-size: 2.8rem;
           letter-spacing: 5.5px;
           padding-top: 25px;
-          line-height: 102px;
           top: 133px;
           left: 210px;
         }
@@ -75,8 +78,7 @@
         /* PC */
         @include mixin.pc(1920px) {
           width: mixin.clampPc(102, 55);
-          line-height: mixin.clampPc(102, 55);
-          height: mixin.clampPc(565, 300);
+          height: mixin.clampPc(565, 330);
           font-size: mixin.variableFontPc(2.8, 1.4);
           letter-spacing: 5.5px;
           padding-top: mixin.clampPc(25, 20);
@@ -87,25 +89,23 @@
         /* タブレット */
         @include mixin.tab(1025px) {
           width: mixin.clampTab(50, 30);
-          height: mixin.clampTab(450, 280);
+          height: mixin.clampTab(450, 305);
           font-size: mixin.variableFontTab(2.2, 1.2);
-          line-height: mixin.clampTab(56, 24);
-          letter-spacing: mixin.clampTab(5,3);
+          letter-spacing: mixin.clampTab(6,2);
           top: mixin.clampTab(10, 10);
-          left: mixin.clampTab(150, 120);
+          left: mixin.clampTab(150,100);
           z-index: 5;
         }
 
         /* スマートフォン */
         @include mixin.sp(600px) {
           width: mixin.clampSp(40, 30);
-          height: mixin.clampSp(350, 230);
-          line-height: mixin.clampSp(40, 30);
+          height: mixin.clampSp(350, 280);
+          font-size: mixin.variableFontSp(1.6, 1.2);
+          letter-spacing: mixin.clampSp(4, 0);
           top: mixin.clampSp(10, 10);
           left: mixin.clampSp(80, 50);
           z-index: 5;
-          font-size: mixin.variableFontSp(1.6, 1.2);
-          letter-spacing: mixin.clampSp(3, 0);
         }
 
         // ==============================
@@ -113,34 +113,34 @@
         span.color {
           color: #21a937;
           font-weight: 700; //bold
+          display: flex;
+          align-items: center;
+
           /* pc 1920px以上  */
           @include mixin.pc-l(1920px) {
-            letter-spacing: 5.5px;
-            margin-top: -8px;
-            margin-bottom: -8px;
+            letter-spacing: 6.3px;
+
           }
 
           /* PC */
           @include mixin.pc(1920px) {
-            letter-spacing: 5.5px;
-            margin-top: -8px;
-            margin-bottom: -8px;
+            letter-spacing: 6.3px;
           }
 
           /* タブレット */
           @include mixin.tab(1025px) {
             font-size: mixin.variableFontTab(2.2, 1.2);
-            letter-spacing: mixin.clampTab(5,3);
-            padding-top:mixin.clampTab(5,3);
-            padding-bottom:mixin.clampTab(5,3);
+            letter-spacing: mixin.clampTab(6,2);
+            margin-top:mixin.clampSp(1,0);
+            margin-bottom:mixin.clampSp(1,0);
           }
 
           /* スマートフォン */
           @include mixin.sp(600px) {
-            font-size: mixin.variableFontSp(1.6, 1);
-            letter-spacing: mixin.clampSp(3,0);
-            padding-top:mixin.clampSp(3,0);
-            padding-bottom:mixin.clampSp(3,0);
+            font-size: mixin.variableFontSp(1.6, 1.2);
+            letter-spacing: mixin.clampSp(4,0);
+            margin-top:mixin.clampSp(1,0);
+            margin-bottom:mixin.clampSp(1,0);
           }
         }
       }
@@ -149,17 +149,21 @@
 
       &__message-right {
         font-weight: 700; //bold
+        writing-mode: vertical-rl;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        z-index: 5;
+        background-color: white;
+
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           width: 102px;
           height: 565px;
-          writing-mode: vertical-rl;
           font-size: 2.8rem;
           letter-spacing: 6px;
           padding-top: 25px;
-          line-height: 102px;
           background-color: white;
-          position: absolute;
           top: 133px;
           left: 393px;
         }
@@ -167,14 +171,11 @@
         /* PC */
         @include mixin.pc(1920px) {
           width: mixin.clampPc(102, 55);
-          line-height: mixin.clampPc(102, 55);
-          height: mixin.clampPc(565, 300);
-          writing-mode: vertical-rl;
+          height: mixin.clampPc(565, 330);
           font-size: mixin.variableFontPc(2.8, 1.4);
           letter-spacing: 5.5px;
           padding-top: mixin.clampPc(25, 20);
           background-color: white;
-          position: absolute;
           top: mixin.clampPc(133, 70);
           left: mixin.clampPc(393, 200);
         }
@@ -182,25 +183,21 @@
         /* タブレット */
         @include mixin.tab(1025px) {
           width: mixin.clampTab(50, 30);
-          height: mixin.clampTab(450, 280);
+          height: mixin.clampTab(450, 305);
           font-size: mixin.variableFontTab(2.2, 1.2);
-          line-height: mixin.clampTab(56, 24);
           letter-spacing: mixin.clampTab(7,3);
           top: mixin.clampTab(10, 10);
           left: mixin.clampTab(280, 180);
-          z-index: 5;
         }
 
         /* スマートフォン */
         @include mixin.sp(600px) {
           width: mixin.clampSp(40, 30);
-          height: mixin.clampSp(350, 230);
-          line-height: mixin.clampSp(40, 30);
-          letter-spacing: mixin.clampSp(3,0);
+          height: mixin.clampSp(350, 280);
+          font-size: mixin.variableFontSp(1.6, 1.2);
+          letter-spacing: mixin.clampSp(5,0);
           top: mixin.clampSp(10, 10);
           left: mixin.clampSp(150, 100);
-          z-index: 5;
-          font-size: mixin.variableFontSp(1.6, 1.2);
         }
       }
 
@@ -629,6 +626,7 @@
     &-article-board {
       border: 1px solid;
       border-radius: 10px;
+      border-color: #C9C9C9;
       background-color: rgb(255, 255, 255);
       /* pc 1920px以上  */
       @include mixin.pc-l(1920px) {
