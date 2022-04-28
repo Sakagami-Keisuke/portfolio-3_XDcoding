@@ -858,6 +858,70 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
     margin-top: 0;
   }
 }
+.header .fa-github {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 15vw;
+  color: #444444;
+  transform: scale(0.8, 0.8);
+  /* PC */
+  /* $** pxを含まずそれより小さい */
+  /* タブレット */
+  /* $** pxを含まずそれより小さい */
+  /* スマートフォン */
+  /* $** pxを含まずそれより小さい */
+}
+@media not all and (min-width: 1920px) {
+  .header .fa-github {
+    top: 10px;
+    right: 15vw;
+  }
+}
+@media not all and (min-width: 1025px) {
+  .header .fa-github {
+    right: 15vw;
+  }
+}
+@media not all and (min-width: 600px) {
+  .header .fa-github {
+    top: 12px;
+    right: 4.5vw;
+  }
+}
+.header .source {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15.3vw;
+  color: #444444;
+  transform: scale(1, 1);
+  /* pc 1367px以上  */
+  /* 1920px 以上 */
+  /* PC */
+  /* $** pxを含まずそれより小さい */
+  /* タブレット */
+  /* $** pxを含まずそれより小さい */
+  /* スマートフォン */
+  /* $** pxを含まずそれより小さい */
+}
+@media not all and (min-width: 1366px) {
+  .header .source {
+    top: 55px;
+    right: 15.5vw;
+  }
+}
+@media not all and (min-width: 1025px) {
+  .header .source {
+    right: 15.3vw;
+  }
+}
+@media not all and (min-width: 600px) {
+  .header .source {
+    top: 55px;
+    right: 5.3vw;
+  }
+}
 
 .body {
   width: 100vw;
