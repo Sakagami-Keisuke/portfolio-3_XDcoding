@@ -91,9 +91,9 @@
           width: mixin.clampTab(50, 30);
           height: mixin.clampTab(450, 305);
           font-size: mixin.variableFontTab(2.2, 1.2);
-          letter-spacing: mixin.clampTab(6,2);
+          letter-spacing: mixin.clampTab(6, 2);
           top: mixin.clampTab(10, 10);
-          left: mixin.clampTab(150,100);
+          left: mixin.clampTab(150, 100);
           z-index: 5;
         }
 
@@ -119,7 +119,6 @@
           /* pc 1920px以上  */
           @include mixin.pc-l(1920px) {
             letter-spacing: 6.3px;
-
           }
 
           /* PC */
@@ -130,17 +129,17 @@
           /* タブレット */
           @include mixin.tab(1025px) {
             font-size: mixin.variableFontTab(2.2, 1.2);
-            letter-spacing: mixin.clampTab(6,2);
-            margin-top:mixin.clampSp(1,0);
-            margin-bottom:mixin.clampSp(1,0);
+            letter-spacing: mixin.clampTab(6, 2);
+            margin-top: mixin.clampSp(1, 0);
+            margin-bottom: mixin.clampSp(1, 0);
           }
 
           /* スマートフォン */
           @include mixin.sp(600px) {
             font-size: mixin.variableFontSp(1.6, 1.2);
-            letter-spacing: mixin.clampSp(4,0);
-            margin-top:mixin.clampSp(1,0);
-            margin-bottom:mixin.clampSp(1,0);
+            letter-spacing: mixin.clampSp(4, 0);
+            margin-top: mixin.clampSp(1, 0);
+            margin-bottom: mixin.clampSp(1, 0);
           }
         }
       }
@@ -185,7 +184,7 @@
           width: mixin.clampTab(50, 30);
           height: mixin.clampTab(450, 305);
           font-size: mixin.variableFontTab(2.2, 1.2);
-          letter-spacing: mixin.clampTab(7,3);
+          letter-spacing: mixin.clampTab(7, 3);
           top: mixin.clampTab(10, 10);
           left: mixin.clampTab(280, 180);
         }
@@ -195,7 +194,7 @@
           width: mixin.clampSp(40, 30);
           height: mixin.clampSp(350, 280);
           font-size: mixin.variableFontSp(1.6, 1.2);
-          letter-spacing: mixin.clampSp(5,0);
+          letter-spacing: mixin.clampSp(5, 0);
           top: mixin.clampSp(10, 10);
           left: mixin.clampSp(150, 100);
         }
@@ -231,6 +230,7 @@
         @include mixin.sp(600px) {
           width: mixin.clampSp(600, 375);
           height: auto;
+
           img {
             width: mixin.clampSp(599, 375);
             height: mixin.clampSp(400, 300);
@@ -324,13 +324,13 @@
           margin-top: mixin.clampPc(189, 45);
           margin-left: mixin.clampPc(32, 28);
           display: inline-block;
-          height:mixin.clampPc(30,25);
+          height: mixin.clampPc(30, 25);
         }
 
         /* タブレット */
         @include mixin.tab(1025px) {
           font-size: mixin.variableFontTab(2, 1.6);
-          line-height: mixin.clampSp(22,20);
+          line-height: mixin.clampSp(22, 20);
           margin-top: mixin.clampTab(120, 70);
           margin-left: 35px;
         }
@@ -366,13 +366,13 @@
           margin-top: mixin.clampPc(35, 15);
           margin-left: mixin.clampPc(32, 20);
           display: inline-block;
-          height:mixin.clampPc(30,25);
+          height: mixin.clampPc(30, 25);
         }
 
         /* タブレット */
         @include mixin.tab(1025px) {
           font-size: mixin.variableFontTab(2, 1.6);
-          line-height: mixin.clampSp(22,20);
+          line-height: mixin.clampSp(22, 20);
           margin-top: mixin.clampTab(30, 20);
           margin-left: 35px;
         }
@@ -456,6 +456,7 @@
           height: auto;
           /*縦横比固定*/
         }
+
         width: mixin.clampTab(420, 320);
         margin-top: mixin.clampTab(120, 100);
       }
@@ -467,6 +468,7 @@
           height: auto;
           /*縦横比固定*/
         }
+
         margin: 0 auto;
         margin-top: mixin.clampSp(80, 50);
       }
@@ -540,14 +542,14 @@
       display: inline-block;
       width: auto;
       font-size: mixin.variableFontTab(2.2, 2);
-      line-height: mixin.clampSp(25,20);
+      line-height: mixin.clampSp(25, 20);
       margin-top: mixin.clampTab(100, 10);
     }
 
     /* スマートフォン */
     @include mixin.sp(600px) {
       font-size: mixin.variableFontSp(2, 1.8);
-      line-height: mixin.clampSp(22,20);
+      line-height: mixin.clampSp(22, 20);
     }
   }
 
@@ -555,6 +557,7 @@
 
   &__second-line-text {
     font-weight: 400; //regular
+
     /* pc 1920px以上  */
     @include mixin.pc-l(1920px) {
       width: auto;
@@ -626,8 +629,9 @@
     &-article-board {
       border: 1px solid;
       border-radius: 10px;
-      border-color: #C9C9C9;
+      border-color: #c9c9c9;
       background-color: rgb(255, 255, 255);
+
       /* pc 1920px以上  */
       @include mixin.pc-l(1920px) {
         width: 380px;
@@ -665,6 +669,7 @@
 
       &--title {
         font-weight: 700; //bold
+
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           font-size: 2.4rem;
@@ -696,6 +701,7 @@
       &--content-left {
         font-weight: 700; //bold
         margin: 0 auto;
+
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           width: 320px;
@@ -735,6 +741,7 @@
       &--content-center {
         font-weight: 700; //bold
         margin: 0 auto;
+
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           width: 320px;
@@ -774,6 +781,7 @@
       &--content-right {
         font-weight: 700; //bold
         margin: 0 auto;
+
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           width: 320px;
@@ -816,10 +824,12 @@
           max-width: 100%;
           height: auto;
         }
+
         position: absolute;
         top: 84%;
         left: 50%;
         transform: translate(-50%, -50%);
+
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           width: 187px;
@@ -853,10 +863,12 @@
           max-width: 100%;
           height: auto;
         }
+
         position: absolute;
         top: 84%;
         left: 50%;
         transform: translate(-50%, -50%);
+
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           width: 187px;
@@ -889,10 +901,12 @@
           max-width: 100%;
           height: auto;
         }
+
         position: absolute;
         top: 84%;
         left: 50%;
         transform: translate(-50%, -50%);
+
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           width: 187px;
@@ -949,14 +963,14 @@
     /* タブレット */
     @include mixin.tab(1025px) {
       font-size: mixin.variableFontTab(2.2, 1.8);
-      line-height: mixin.clampSp(22,20);
+      line-height: mixin.clampSp(22, 20);
       margin-top: mixin.clampTab(100, 80);
     }
 
     /* スマートフォン */
     @include mixin.sp(600px) {
       font-size: mixin.variableFontTab(2.2, 1.8);
-      line-height: mixin.clampSp(22,20);
+      line-height: mixin.clampSp(22, 20);
       margin-top: mixin.clampSp(80, 70);
     }
   }
@@ -1038,6 +1052,7 @@
       display: flex;
       flex-wrap: nowrap;
       align-items: center;
+
       /* pc 1920px以上  */
       @include mixin.pc-l(1920px) {
         margin: 0px 66px 0px 66px;
@@ -1169,6 +1184,7 @@
 
       .article-inner__right {
         font-weight: 700; //bold
+
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           margin-left: 34px;
@@ -1377,6 +1393,9 @@ div.access__wrapper {
     /* タブレット */
     @include mixin.tab(1025px) {
       width: 100vw;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
     }
 
     @include mixin.sp(600px) {
@@ -1389,6 +1408,7 @@ div.access__wrapper {
 
     &__map {
       img {
+        width: 100%;
         max-width: 100%;
         height: auto;
       }
@@ -1408,8 +1428,8 @@ div.access__wrapper {
 
       /* タブレット */
       @include mixin.tab(1025px) {
-        width: mixin.clampTab(300, 150);
-        margin-top: mixin.clampTab(70, 50);
+        width: 75vw;
+        margin-top: 10vw;
       }
 
       /* スマートフォン */
@@ -1446,10 +1466,9 @@ div.access__wrapper {
 
       /* タブレット */
       @include mixin.tab(1025px) {
-        width: mixin.clampTab(450, 350);
+        width: 100vw;
         height: auto;
-        margin-top: mixin.clampTab(70, 50);
-        margin-left: mixin.clampTab(20, 15);
+        margin-top: 10vw;
       }
 
       /* スマートフォン */
@@ -1483,8 +1502,9 @@ div.access__wrapper {
 
         /* タブレット */
         @include mixin.tab(1025px) {
-          width: mixin.clampTab(250, 230);
-          height: mixin.clampTab(60, 50);
+          width: 250px;
+          height: 60px;
+          margin: 0 auto;
         }
 
         /* スマートフォン */
@@ -1510,8 +1530,8 @@ div.access__wrapper {
 
           /* タブレット */
           @include mixin.tab(1025px) {
-            width: mixin.clampTab(73, 35);
-            height: mixin.clampTab(73, 35);
+            width: 73px;
+            height: 73px;
           }
 
           /* スマートフォン */
@@ -1519,6 +1539,7 @@ div.access__wrapper {
             margin: 0;
             width: mixin.clampSp(73, 30);
             height: mixin.clampSp(73, 30);
+
             img {
               max-width: 100%;
               height: auto;
@@ -1544,9 +1565,8 @@ div.access__wrapper {
 
           /* タブレット */
           @include mixin.tab(1025px) {
-            width: 95%;
-            height: mixin.clampTab(55, 45);
-            margin-left: mixin.clampTab(15, 10);
+            height: 75px;
+            margin-left: 5px;
           }
 
           /* スマートフォン */
@@ -1560,6 +1580,7 @@ div.access__wrapper {
 
           &--upper {
             font-weight: 400; //regular
+
             /* pc 1920px以上  */
             @include mixin.pc-l(1920px) {
               font-size: 3rem;
@@ -1577,8 +1598,8 @@ div.access__wrapper {
 
             /* タブレット */
             @include mixin.tab(1025px) {
-              height: mixin.clampTab(30, 20);
-              font-size: mixin.variableFontTab(2.2, 2);
+              height: 30px;
+              font-size: 25px;
               text-align: center;
             }
 
@@ -1593,6 +1614,7 @@ div.access__wrapper {
 
           &--lower {
             font-weight: 400; //regular
+
             /* pc 1920px以上  */
             @include mixin.pc-l(1920px) {
               font-size: 3rem;
@@ -1611,10 +1633,9 @@ div.access__wrapper {
 
             /* タブレット */
             @include mixin.tab(1025px) {
-              height: mixin.clampTab(30, 20);
-              font-size: mixin.variableFontTab(2.2, 2);
+              height: 35px;
+              font-size: 25px;
               text-align: center;
-              padding-top: mixin.clampTab(8, 3);
             }
 
             /* スマートフォン */
@@ -1631,6 +1652,7 @@ div.access__wrapper {
       &-address-inner {
         display: flex;
         flex-wrap: wrap;
+
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
           margin-top: 28px;
@@ -1643,7 +1665,12 @@ div.access__wrapper {
 
         /* タブレット */
         @include mixin.tab(1025px) {
-          margin-top: mixin.clampTab(27, 24);
+          width: 100%;
+          margin-top: 30px;
+          justify-content: center;
+          p {
+            font-size: 14px;
+          }
         }
 
         /* スマートフォン */
@@ -1662,6 +1689,7 @@ div.access__wrapper {
           margin-top: 1px;
           margin-right: 16px;
           letter-spacing: 0.1px;
+
           /* pc 1920px以上  */
           @include mixin.pc-l(1920px) {
             font-size: 1.6rem;
@@ -1689,6 +1717,7 @@ div.access__wrapper {
 
         &--text {
           font-weight: 400; //regular
+
           /* pc 1920px以上  */
           @include mixin.pc-l(1920px) {
             font-size: 1.6rem;
@@ -1737,9 +1766,10 @@ div.access__wrapper {
 
         /* タブレット */
         @include mixin.tab(1025px) {
-          width: 220px;
+          width: 100vw;
           position: relative;
-          margin-top: mixin.clampTab(15, 5);
+          margin-top: 15px;
+          margin-bottom: 25px;
         }
 
         /* スマートフォン */
@@ -1777,9 +1807,9 @@ div.access__wrapper {
 
           /* タブレット */
           @include mixin.tab(1025px) {
-            width: mixin.clampTab(20, 10);
-            height: mixin.clampTab(20, 10);
-            margin-right: mixin.clampTab(12, 8);
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
           }
 
           /* スマートフォン */
@@ -1815,7 +1845,9 @@ div.access__wrapper {
 
           /* タブレット */
           @include mixin.tab(1025px) {
-            font-size: mixin.variableFontTab(2, 1.4);
+            width: 100%;
+            font-size: 20px;
+            text-align: center;
           }
 
           /* スマートフォン */
@@ -1848,7 +1880,7 @@ div.access__wrapper {
 
         /* タブレット */
         @include mixin.tab(1025px) {
-          width: mixin.clampPc(533, 330);
+          width: 90vw;
         }
 
         /* スマートフォン */
@@ -1875,819 +1907,481 @@ div.access__wrapper {
 
         /* タブレット */
         @include mixin.tab(1025px) {
+          width: 100vw;
         }
 
         /* スマートフォン */
         @include mixin.sp(600px) {
           width: 90%;
-          height:5px;
+          height: 5px;
           margin: 0 auto;
         }
       }
 
       // ========================
 
-      &-business-hour-inner {
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-
-        /* pc 1920px以上  */
-        @include mixin.pc-l(1920px) {
-          width: 533px;
-          height: 95px;
-        }
-
-        /* PC */
-        @include mixin.pc(1920px) {
-          width: mixin.clampPc(533, 350);
-          height: mixin.clampPc(120, 85);
-        }
+      .business-hour__inner {
+        width: 500px;
+        height: 100px;
 
         /* タブレット */
         @include mixin.tab(1025px) {
-          width: mixin.clampTab(400, 300);
-          height: mixin.clampTab(120, 115);
+          width: 90vw;
+          margin-left: 5vw;
         }
 
         /* スマートフォン */
         @include mixin.sp(600px) {
+          // background-color: red;
           width: 100vw;
-          height: mixin.clampSp(200, 150);
-          flex-direction: row;
-          justify-content: flex-start;
+          height: 200px;
         }
 
-        // ======================
-
-        &--consultation-time {
-          font-weight: 400; //regular
-          border-right: 1px solid;
-          border-color: #e7e7e7;
-          /* pc 1920px以上  */
-          @include mixin.pc-l(1920px) {
-            width: 90px;
-            height: 114px;
-            font-size: 1.4rem;
-          }
-
-          /* PC */
-          @include mixin.pc(1920px) {
-            width: 89px;
-            height: mixin.clampPc(110, 90);
-            font-size: mixin.variableFontPc(1.4, 1.2);
-          }
-
-          /* タブレット */
-          @include mixin.tab(1025px) {
-            width: mixin.clampTab(100, 60);
-            height: mixin.clampTab(120, 110);
-          }
-
-          /* スマートフォン */
-          @include mixin.sp(600px) {
-            width: mixin.clampSp(200, 60);
-            height: mixin.clampSp(200,150);
-            margin-top: 10px;
-          }
-
-          // ====================
-
-          p {
-            font-weight: 400; //regular
-            /* pc 1920px以上  */
-            @include mixin.pc-l(1920px) {
-              font-size: 1.4rem;
-              margin-top: 5px;
-              margin-left: 4.5px;
-            }
-
-            /* PC */
-            @include mixin.pc(1920px) {
-              font-size: mixin.variableFontPc(1.4, 1.2);
-              margin-top: mixin.clampPc(5, 2);
-              margin-left: mixin.clampPc(4.5, 2);
-            }
-
-            /* タブレット */
-            @include mixin.tab(1025px) {
-              font-size: mixin.variableFontTab(1.4, 1.2);
-              padding-top: 5px;
-            }
-
-            /* スマートフォン */
-            @include mixin.sp(600px) {
-              font-size: mixin.variableFontSp(1.4, 1.2);
-              margin-top: mixin.clampSp(30, 15);
-              text-align: center;
-            }
-          }
-        }
-
-        // ===============
-
-        &--timetable {
-          display: flex;
-          flex-direction: column;
-          flex-wrap: wrap;
-
-          /* pc 1920px以上  */
-          @include mixin.pc-l(1920px) {
-            width: 449px;
-            height: 114px;
-          }
-
-          /* PC */
-          @include mixin.pc(1920px) {
-            width: mixin.clampPc(449, 330);
-            height: mixin.clampPc(120, 90);
-          }
-
-          /* タブレット */
-          @include mixin.tab(1025px) {
-            width: mixin.clampTab(300, 250);
-            height: mixin.clampTab(130, 120);
-          }
-
-          /* スマートフォン */
-          @include mixin.sp(600px) {
-            width: mixin.clampSp(300, 250);
-            height: mixin.clampSp(200,150);
-          }
-
-          // ==========================
-
-          .pattern {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-
-            /* pc 1920px以上  */
-            @include mixin.pc-l(1920px) {
-            }
-
-            /* PC */
-            @include mixin.pc(1920px) {
-              width: mixin.clampPc(450, 330);
-            }
-
-            /* タブレット */
-            @include mixin.tab(1025px) {
-              width: mixin.clampTab(320, 235);
-              flex-wrap: nowrap;
-            }
-
-            /* スマートフォン */
-            @include mixin.sp(600px) {
-              margin: 0;
-              width: 90%;
-              flex-wrap: nowrap;
-              align-items: center;
-            }
-
-            // ========================================
-
-            p.day-of-week_upper {
-              font-weight: 400; //regular
-              /* pc 1920px以上  */
-              @include mixin.pc-l(1920px) {
-                width: 42px;
-                font-size: 1.4rem;
-                display: inline-block;
-                margin: 5px 23px 0 28px;
-              }
-
-              /* PC */
-              @include mixin.pc(1920px) {
-                width: mixin.clampPc(42, 42);
-                font-size: mixin.variableFontPc(1.4, 1.2);
-                display: inline-block;
-                margin-top: 5px;
-                margin-left: mixin.clampPc(23, 10);
-                margin-right: mixin.clampPc(28, 20);
-              }
-
-              /* タブレット */
-              @include mixin.tab(1025px) {
-                font-size: mixin.variableFontTab(1.4, 1.2);
-                margin-top: 5px;
-                margin-left: mixin.clampTab(10, 5);
-                margin-right: mixin.clampTab(10, 5);
-                padding-top: 5px;
-              }
-
-              /* スマートフォン */
-              @include mixin.sp(600px) {
-                display: inline-block;
-                width: mixin.clampSp(120, 60);
-                height: mixin.clampSp(60, 40);
-                font-size: mixin.variableFontSp(1.4, 1.2);
-                margin: 0;
-                text-align: right;
-                padding-top: 25px;
-                padding-right: 15px;
-              }
-            }
-
-            // =======================================
-
-            .morning_afternoon__wrapper--upper {
-              margin-top: 5px;
-
-              /* タブレット */
-              @include mixin.tab(1025px) {
-                margin-top: 5px;
-                width: 60%;
-              }
-
-              /* スマートフォン */
-              @include mixin.sp(600px) {
-                width: mixin.clampSp(150, 120);
-                height: mixin.clampSp(60, 40);
-                margin-top: 20px;
-                margin-left: 30px;
-              }
-
-              // ===================
-
-              p.morning_upper {
-                font-weight: 400; //regular
-                /* pc 1920px以上  */
-                @include mixin.pc-l(1920px) {
-                  width: 115px;
-                  font-size: 1.4rem;
-                  letter-spacing: 0.2px;
-                  display: inline-block;
-                }
-
-                /* PC */
-                @include mixin.pc(1920px) {
-                  width: mixin.clampPc(115, 95);
-                  width: auto;
-                  font-size: mixin.variableFontPc(1.4, 1.2);
-                  letter-spacing: 0.2px;
-                  display: inline-block;
-                }
-
-                /* タブレット */
-                @include mixin.tab(1025px) {
-                  width: auto;
-                  font-size: mixin.variableFontTab(1.4, 1.2);
-                  letter-spacing: -1px;
-                  margin-right: mixin.clampTab(10, 5);
-                  margin-left: mixin.clampTab(10, 5);
-                }
-
-                /* スマートフォン */
-                @include mixin.sp(600px) {
-                  font-size: mixin.variableFontSp(1.4, 1.2);
-                  padding-top: 5px;
-                }
-              }
-
-              // ===================
-
-              p.afternoon_upper {
-                font-weight: 400; //regular
-                /* pc 1920px以上  */
-                @include mixin.pc-l(1920px) {
-                  width: 120px;
-                  font-size: 1.4rem;
-                  letter-spacing: 0.1px;
-                  display: inline-block;
-                  margin-left: 4px;
-                }
-
-                /* PC */
-                @include mixin.pc(1920px) {
-                  width: mixin.clampPc(120, 115);
-                  font-size: mixin.variableFontPc(1.4, 1.2);
-                  letter-spacing: 0.1px;
-                  display: inline-block;
-                  margin-left: mixin.clampPc(4, 2);
-                }
-
-                /* タブレット */
-                @include mixin.tab(1025px) {
-                  width: auto;
-                  font-size: mixin.variableFontTab(1.4, 1.2);
-                  letter-spacing: -1px;
-                  margin-right: mixin.clampTab(10, 5);
-                  margin-left: mixin.clampTab(10, 5);
-                }
-
-                /* スマートフォン */
-                @include mixin.sp(600px) {
-                  font-size: mixin.variableFontSp(1.4, 1.2);
-                  padding-top: 5px;
-                }
-              }
-            }
-
-            // ======================
-
-            p.day-of-week_middle {
-              font-weight: 400; //regular
-              /* pc 1920px以上  */
-              @include mixin.pc-l(1920px) {
-                font-size: 1.4rem;
-                display: inline-block;
-                width: 42px;
-                margin: 16px 23px 0 28px;
-              }
-
-              /* PC */
-              @include mixin.pc(1920px) {
-                width: mixin.clampPc(42, 42);
-                font-size: mixin.variableFontPc(1.4, 1.2);
-                display: inline-block;
-                margin-top: mixin.clampPc(20, 15);
-                margin-left: mixin.clampPc(23, 10);
-                margin-right: mixin.clampPc(28, 20);
-              }
-
-              /* タブレット */
-              @include mixin.tab(1025px) {
-                font-size: mixin.variableFontTab(1.4, 1.2);
-                margin-top: 10px;
-                margin-left: mixin.clampTab(10, 5);
-                margin-right: mixin.clampTab(10, 5);
-                padding-top: 5px;
-              }
-
-              /* スマートフォン */
-              @include mixin.sp(600px) {
-                display: inline-block;
-                margin: 0;
-                width: mixin.clampSp(120, 60);
-                height: mixin.clampSp(60, 40);
-                font-size: mixin.variableFontSp(1.4, 1.2);
-                text-align: right;
-                padding-top: 15px;
-                padding-right: 15px;
-              }
-            }
-
-            // ======================================
-
-            .morning_afternoon__wrapper--middle {
-              margin-top: 17px;
-              /* pc 1920px以上  */
-              @include mixin.pc-l(1920px) {
-              }
-
-              /* PC */
-              @include mixin.pc(1920px) {
-              }
-
-              /* タブレット */
-              @include mixin.tab(1025px) {
-                margin-top: 10px;
-                width: 60%;
-              }
-
-              /* スマートフォン */
-              @include mixin.sp(600px) {
-                margin: 0;
-                width: mixin.clampSp(150, 120);
-                height: mixin.clampSp(60, 40);
-                margin-left: 30px;
-              }
-
-              // ======================
-
-              p.morning_middle {
-                font-weight: 400; //regular
-                /* pc 1920px以上  */
-                @include mixin.pc-l(1920px) {
-                  width: 115px;
-                  font-size: 1.4rem;
-                  letter-spacing: 0.2px;
-                  display: inline-block;
-                }
-
-                /* PC */
-                @include mixin.pc(1920px) {
-                  width: mixin.clampPc(115, 95);
-                  width: auto;
-                  font-size: mixin.variableFontPc(1.4, 1.2);
-                  letter-spacing: 0.2px;
-                  display: inline-block;
-                }
-
-                /* タブレット */
-                @include mixin.tab(1025px) {
-                  width: auto;
-                  font-size: mixin.variableFontTab(1.4, 1.2);
-                  letter-spacing: -1px;
-                  margin-right: mixin.clampTab(10, 5);
-                  margin-left: mixin.clampTab(10, 5);
-                }
-
-                /* スマートフォン */
-                @include mixin.sp(600px) {
-                  font-size: mixin.variableFontSp(1.4, 1.2);
-                  padding-top: 5px;
-                }
-              }
-
-              // ===================
-
-              p.afternoon_middle {
-                font-weight: 400; //regular
-                /* pc 1920px以上  */
-                @include mixin.pc-l(1920px) {
-                  width: 120px;
-                  font-size: 1.4rem;
-                  letter-spacing: 0.1px;
-                  display: inline-block;
-                  margin-left: mixin.clampPc(4, 2);
-                }
-
-                /* PC */
-                @include mixin.pc(1920px) {
-                  width: mixin.clampPc(115, 115);
-                  font-size: mixin.variableFontPc(1.4, 1.2);
-                  letter-spacing: 0.2px;
-                  display: inline-block;
-                  margin-left: 4px;
-                }
-
-                /* タブレット */
-                @include mixin.tab(1025px) {
-                  width: auto;
-                  font-size: mixin.variableFontTab(1.4, 1.2);
-                  letter-spacing: -1px;
-                  margin-right: mixin.clampTab(10, 5);
-                  margin-left: mixin.clampTab(10, 5);
-                }
-
-                /* スマートフォン */
-                @include mixin.sp(600px) {
-                  font-size: mixin.variableFontSp(1.4, 1.2);
-                  padding-top: 5px;
-                }
-              }
-            }
-
-            // ======================
-
-            p.day-of-week_lower {
-              font-weight: 400; //regular
-              /* pc 1920px以上  */
-              @include mixin.pc-l(1920px) {
-                font-size: 1.4rem;
-                display: inline-block;
-                width: 42px;
-                margin: 17px 23px 0 28px;
-              }
-
-              /* PC */
-              @include mixin.pc(1920px) {
-                width: mixin.clampPc(42, 42);
-                font-size: mixin.variableFontPc(1.4, 1.2);
-                display: inline-block;
-                margin-top: mixin.clampPc(20, 15);
-                margin-left: mixin.clampPc(23, 10);
-                margin-right: mixin.clampPc(28, 20);
-              }
-
-              /* タブレット */
-              @include mixin.tab(1025px) {
-                font-size: mixin.variableFontTab(1.4, 1.2);
-                margin-top: 10px;
-                margin-left: mixin.clampTab(10, 5);
-                margin-right: mixin.clampTab(10, 5);
-                padding-top: 5px;
-              }
-
-              /* スマートフォン */
-              @include mixin.sp(600px) {
-                display: inline-block;
-                margin: 0;
-                width: mixin.clampSp(120, 60);
-                height: mixin.clampSp(60, 40);
-                font-size: mixin.variableFontSp(1.4, 1.2);
-                padding-top: 15px;
-                text-align: right;
-                padding-right: 15px;
-              }
-            }
-
-            // =======================================
-
-            .morning_afternoon__wrapper--lower {
-              /* pc 1920px以上  */
-              @include mixin.pc-l(1920px) {
-                margin-top: 17px;
-              }
-
-              /* PC */
-              @include mixin.pc(1920px) {
-                margin-top: 17px;
-              }
-
-              /* タブレット */
-              @include mixin.tab(1025px) {
-                margin-top: 10px;
-                width: 60%;
-              }
-
-              /* スマートフォン */
-              @include mixin.sp(600px) {
-                margin: 0;
-                width: mixin.clampSp(150, 120);
-                height: mixin.clampSp(60, 40);
-                margin-left: 30px;
-              }
-
-              // =============================
-
-              p.morning_lower {
-                font-weight: 400; //regular
-                /* pc 1920px以上  */
-                @include mixin.pc-l(1920px) {
-                  width: 115px;
-                  font-size: 1.4rem;
-                  letter-spacing: 0.2px;
-                  display: inline-block;
-                }
-
-                /* PC */
-                @include mixin.pc(1920px) {
-                  width: mixin.clampPc(115, 95);
-                  width: auto;
-                  font-size: mixin.variableFontPc(1.4, 1.2);
-                  display: inline-block;
-                }
-
-                /* タブレット */
-                @include mixin.tab(1025px) {
-                  width: auto;
-                  font-size: mixin.variableFontTab(1.4, 1.2);
-                  letter-spacing: -1px;
-                  margin-right: mixin.clampTab(10, 5);
-                  margin-left: mixin.clampTab(10, 5);
-                }
-
-                /* スマートフォン */
-                @include mixin.sp(600px) {
-                  font-size: mixin.variableFontSp(1.4, 1.2);
-                  padding-top: 5px;
-                }
-              }
-
-              // ====================
-
-              p.afternoon_lower {
-                /* pc 1920px以上  */
-                @include mixin.pc-l(1920px) {
-                  width: 120px;
-                  font-size: 1.4rem;
-                  letter-spacing: 0.1px;
-                  display: inline-block;
-                  margin-left: 4px;
-                }
-
-                /* PC */
-                @include mixin.pc(1920px) {
-                  width: mixin.clampPc(115, 115);
-                  font-size: mixin.variableFontPc(1.4, 1.2);
-                  letter-spacing: 0.2px;
-                  display: inline-block;
-                  margin-left: mixin.clampPc(10, 8);
-                }
-
-                /* タブレット */
-                @include mixin.tab(1025px) {
-                  width: auto;
-                  font-size: mixin.variableFontTab(1.4, 1.2);
-                  letter-spacing: -1px;
-                  margin-right: mixin.clampTab(10, 5);
-                  margin-left: mixin.clampTab(10, 5);
-                }
-
-                /* スマートフォン */
-                @include mixin.sp(600px) {
-                  font-size: mixin.variableFontSp(1.4, 1.2);
-                  padding-top: 5px;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      // ====================
-
-      .closed-day--inner {
+        //left-box, right-box
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        flex-direction: row;
+      }
 
-        /* pc 1920px以上  */
-        @include mixin.pc-l(1920px) {
-          width: 533px;
-          height: 50px;
-        }
+      // ========================
 
-        /* PC */
-        @include mixin.pc(1920px) {
-          width: mixin.clampPc(533, 400);
-          height: mixin.clampPc(50, 30);
+      .left-box {
+        // background-color: rgb(183, 174, 174);
+        width: 90px;
+        height: 100%;
+        border-right: 1px solid;
+        border-color: #e7e7e7;
+
+        span {
+          font-size: 14px;
+          display: inline-block;
+          padding-top: 8px;
+          padding-left: 5px;
+          letter-spacing: -1px;
         }
 
         /* タブレット */
         @include mixin.tab(1025px) {
-          width: mixin.clampTab(350, 250);
+          width: 30.5vw;
+          span {
+            font-size: 14px;
+            display: inline-block;
+            padding-top: 5%;
+            padding-left: 5vw;
+            letter-spacing: 0px;
+          }
         }
 
         /* スマートフォン */
         @include mixin.sp(600px) {
-          width: mixin.clampSp(420, 350);
-          margin-top: mixin.clampSp(10, 10);
-          margin-bottom: mixin.clampSp(10, 10);
+          width: 45vw;
+          span {
+            font-size: 14px;
+            display: inline-block;
+            padding-top: 45%;
+            padding-left: 15vw;
+            letter-spacing: 0px;
+          }
         }
+      }
 
-        // ====================
+      // ========================
 
-        .closed-day {
-          font-weight: 400; //regular
-          border-right: 1px solid;
-          border-color: #e7e7e7;
-          /* pc 1920px以上  */
-          @include mixin.pc-l(1920px) {
-            width: 89px;
-            height: 25px;
-            font-size: 1.4rem;
-            margin-top: 20px;
-            padding-top: 7px;
-            padding-left: 5px;
-          }
+      .right-box {
+        // background-color: rgb(239, 223, 223);
+        width: calc(100% - 90px);
+        height: 100%;
 
-          /* PC */
-          @include mixin.pc(1920px) {
-            width: 89px;
-            height: 25px;
-            font-size: mixin.variableFontPc(1.4, 1.2);
-            margin-top: mixin.clampPc(20, 5);
-            padding-top: 7px;
-            padding-left: 5px;
-          }
+        // ========================
 
-          /* タブレット */
-          @include mixin.tab(1025px) {
-            width: mixin.clampTab(100, 60);
-            font-size: mixin.variableFontTab(1.4, 1.2);
+        p.right-box__line01 {
+          padding-top: 9px;
+          //改行
+          span.br {
+            display: none;
+            /* スマートフォン */
+            @include mixin.sp(600px) {
+              display: inline;
+            }
           }
 
           /* スマートフォン */
           @include mixin.sp(600px) {
-            width: mixin.clampSp(200, 60);
-            height: auto;
-            font-size: mixin.variableFontSp(1.4, 1.2);
-            text-align: center;
+          }
+
+          .day-of-week {
+            font-size: 14px;
+            padding-left: 28px;
+            /* スマートフォン */
+            @include mixin.sp(600px) {
+              padding-left: 23vw;
+            }
+          }
+
+          .morning {
+            font-size: 14px;
+            padding-left: 20px;
+            /* スマートフォン */
+            @include mixin.sp(600px) {
+              padding-left: 15vw;
+            }
+          }
+
+          .afternoon {
+            font-size: 14px;
+            padding-left: 15px;
+            /* スマートフォン */
+            @include mixin.sp(600px) {
+              padding-left: 15vw;
+            }
           }
         }
+
+        // ========================
+
+        p.right-box__line02 {
+          padding-top: 16px;
+
+          //改行
+          span.br {
+            display: none;
+            /* スマートフォン */
+            @include mixin.sp(600px) {
+              display: inline;
+            }
+          }
+
+          .day-of-week {
+            font-size: 14px;
+            padding-left: 28px;
+            /* スマートフォン */
+            @include mixin.sp(600px) {
+              padding-left: 23vw;
+            }
+          }
+
+          .morning {
+            font-size: 14px;
+            padding-left: 20px;
+            /* スマートフォン */
+            @include mixin.sp(600px) {
+              padding-left: 15vw;
+            }
+          }
+
+          .afternoon {
+            font-size: 14px;
+            padding-left: 15px;
+            /* スマートフォン */
+            @include mixin.sp(600px) {
+              padding-left: 15vw;
+            }
+          }
+        }
+
+        // ========================
+
+        p.right-box__line03 {
+          padding-top: 16px;
+
+          //改行
+          span.br {
+            display: none;
+            /* スマートフォン */
+            @include mixin.sp(600px) {
+              display: inline;
+            }
+          }
+
+          .day-of-week {
+            font-size: 14px;
+            padding-left: 28px;
+            /* スマートフォン */
+            @include mixin.sp(600px) {
+              padding-left: 23vw;
+            }
+          }
+
+          .morning {
+            font-size: 14px;
+            padding-left: 20px;
+            /* スマートフォン */
+            @include mixin.sp(600px) {
+              padding-left: 15vw;
+            }
+          }
+
+          .afternoon {
+            font-size: 14px;
+            padding-left: 15px;
+            /* スマートフォン */
+            @include mixin.sp(600px) {
+              padding-left: 15vw;
+            }
+          }
+        }
+      }
+    }
+
+    // ========================
+
+    .closed-day--inner {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      /* pc 1920px以上  */
+      @include mixin.pc-l(1920px) {
+        width: 533px;
+        height: 50px;
+      }
+
+      /* PC */
+      @include mixin.pc(1920px) {
+        width: mixin.clampPc(533, 400);
+        height: mixin.clampPc(50, 30);
+      }
+
+      /* タブレット */
+      @include mixin.tab(1025px) {
+        width: 100vw;
+        margin-left: 5vw;
+      }
+
+      /* スマートフォン */
+      @include mixin.sp(600px) {
+        width: 100vw;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
 
       // ====================
 
-      .closed-day-of-week {
+      .closed-day {
         font-weight: 400; //regular
-        /* pc 1920px以上  */
-        @include mixin.pc-l(1920px) {
-          width: 449px;
-          height: 114px;
-          font-size: 1.4em;
-          margin-top: 20px;
-          padding-top: 7px;
-          padding-left: 28px;
-        }
-
-        /* PC */
-        @include mixin.pc(1920px) {
-          width: 449px;
-          height: 114px;
-          font-size: mixin.variableFontPc(1.4, 1.2);
-          margin-top: mixin.clampPc(20, 5);
-          padding-top: 7px;
-          padding-left: mixin.clampPc(15, 10);
-        }
-
-        /* タブレット */
-        @include mixin.tab(1025px) {
-          width: mixin.clampTab(230, 200);
-          font-size: mixin.variableFontTab(1.4, 1.2);
-          padding-left: mixin.clampTab(35, 35);
-        }
-
-        /* スマートフォン */
-        @include mixin.sp(600px) {
-          width: mixin.clampSp(250, 200);
-          font-size: mixin.variableFontSp(1.4, 1.2);
-        }
-      }
-
-      // =============================
-
-      &-blank-border--lower {
-        border-bottom: 1px solid;
+        border-right: 1px solid;
         border-color: #e7e7e7;
 
         /* pc 1920px以上  */
         @include mixin.pc-l(1920px) {
-          height: 19px;
-          width: 533px;
-          margin-left: 5px;
+          width: 89px;
+          height: 25px;
+          font-size: 1.4rem;
+          margin-top: 20px;
+          padding-top: 7px;
+          padding-left: 5px;
         }
 
         /* PC */
         @include mixin.pc(1920px) {
-          height: mixin.clampPc(19, 10);
-          width: mixin.clampPc(533, 400);
-          margin-left: mixin.clampPc(5, 2);
+          width: 89px;
+          height: 25px;
+          font-size: mixin.variableFontPc(1.4, 1.2);
+          margin-top: mixin.clampPc(20, 5);
+          padding-top: 7px;
+          padding-left: 5px;
         }
-
-        /* タブレット */
-        @include mixin.tab(1025px) {
-          width: mixin.clampPc(533, 330);
-        }
-
-        /* スマートフォン */
-        @include mixin.sp(600px) {
-          width: 90vw;
-          margin: 0 auto;
-        }
-      }
-
-      //================================================
-
-      .access-container__detail-copyright_reserved--pc {
-        /* pc 1920px以上  */
-        @include mixin.pc-l(1920px) {
-          width: 554px;
-          margin-top: 24.5px;
-          text-align: right;
-        }
-
-        /* PC */
-        @include mixin.pc(1920px) {
-          width: mixin.clampPc(554, 400);
-          text-align: right;
-          margin-top: mixin.clampPc(20, 10);
-        }
-
-        /* タブレット */
-        @include mixin.tab(1025px) {
-          width: 90%;
-          margin: 0 auto;
-          text-align: right;
-        }
-
-        /* スマートフォン */
-        @include mixin.sp(600px) {
-          width: 100%;
-          margin: 0 auto;
-          text-align: center;
-          margin-top: mixin.clampSp(20, 10);
-        }
-
-        // ==================================
-
-        small {
-          font-weight: 400; //regular
-          /* pc 1920px以上  */
-          @include mixin.pc-l(1920px) {
-            font-size: 1.1em;
-            letter-spacing: 0.15px;
-            padding-right: 15px;
-            display: inline-block;
-          }
-
-          /* PC */
-          @include mixin.pc(1920px) {
-            font-size: mixin.variableFontPc(1.2, 1.2);
-            letter-spacing: 0.15px;
-            padding-right: 15px;
-            display: inline-block;
-          }
 
           /* タブレット */
           @include mixin.tab(1025px) {
-            padding-right: 25px;
-            font-size: mixin.variableFontTab(1.2, 1.2);
-            letter-spacing: -0.5px;
-            display: inline-block;
-            margin: 15px 0 15px 0;
-          }
+      border-right: 1px solid;
+      border-color: #e7e7e7;
+      width: 24.5vw;
+      span {
+        font-size: 14px;
+        display: inline-block;
+        padding-left: 5vw;
+        letter-spacing: 0px;
+      }
+    }
 
-          /* スマートフォン */
-          @include mixin.sp(600px) {
-            font-size: mixin.variableFontSp(1.2, 1.2);
-            margin: 15px 0 15px 0;
+        /* スマートフォン */
+        @include mixin.sp(600px) {
+          // background-color: rgb(183, 174, 174);
+          width: 36.5vw;
+          height: 100%;
+          border-right: 1px solid;
+          border-color: #e7e7e7;
+
+          span {
+            font-size: 14px;
+            padding-left: 45%;
           }
+        }
+      }
+    }
+
+    // ====================
+
+    .closed-day-of-week {
+      font-weight: 400; //regular
+
+      /* pc 1920px以上  */
+      @include mixin.pc-l(1920px) {
+        width: 449px;
+        height: 114px;
+        font-size: 1.4em;
+        margin-top: 20px;
+        padding-top: 7px;
+        padding-left: 28px;
+      }
+
+      /* PC */
+      @include mixin.pc(1920px) {
+        width: 449px;
+        height: 114px;
+        font-size: mixin.variableFontPc(1.4, 1.2);
+        margin-top: mixin.clampPc(20, 5);
+        padding-top: 7px;
+        padding-left: mixin.clampPc(15, 10);
+      }
+
+      /* タブレット */
+      @include mixin.tab(1025px) {
+        width: 75vw;
+        font-size: 14px;
+        padding-left: 25vw;
+        letter-spacing: 0px;
+      }
+
+      /* スマートフォン */
+      @include mixin.sp(600px) {
+        width: 65vw;
+        font-size: 14px;
+        padding-left: 18vw;
+        letter-spacing: 0px;
+      }
+    }
+
+    // =============================
+
+    &-blank-border--lower {
+      border-bottom: 1px solid;
+      border-color: #e7e7e7;
+
+      /* pc 1920px以上  */
+      @include mixin.pc-l(1920px) {
+        height: 19px;
+        width: 533px;
+        margin-left: 5px;
+      }
+
+      /* PC */
+      @include mixin.pc(1920px) {
+        height: mixin.clampPc(19, 10);
+        width: mixin.clampPc(533, 400);
+        margin-left: mixin.clampPc(5, 2);
+      }
+
+      /* タブレット */
+      @include mixin.tab(1025px) {
+        width: 90vw;
+      }
+
+      /* スマートフォン */
+      @include mixin.sp(600px) {
+        width: 90vw;
+        margin: 0 auto;
+      }
+    }
+
+    //================================================
+
+    .blank-border--lower {
+      border-bottom: 1px solid;
+      border-color: #e7e7e7;
+
+      /* pc 1920px以上  */
+      @include mixin.pc-l(1920px) {
+        height: 19px;
+        width: 533px;
+        margin-left: 5px;
+      }
+
+      /* PC */
+      @include mixin.pc(1920px) {
+        height: mixin.clampPc(19, 10);
+        width: mixin.clampPc(533, 400);
+        margin-left: mixin.clampPc(5, 2);
+      }
+
+      /* タブレット */
+      @include mixin.tab(1025px) {
+        width: 90vw;
+      }
+
+      /* スマートフォン */
+      @include mixin.sp(600px) {
+        width: 90vw;
+        margin: 0 auto;
+      }
+    }
+
+    //================================================
+
+    .copyright_reserved--pc {
+      /* pc 1920px以上  */
+      @include mixin.pc-l(1920px) {
+        width: 554px;
+        margin-top: 25px;
+        text-align: right;
+      }
+
+      /* PC */
+      @include mixin.pc(1920px) {
+        width: mixin.clampPc(554, 400);
+        text-align: right;
+        margin-top: mixin.clampPc(20, 10);
+      }
+
+      /* タブレット */
+      @include mixin.tab(1025px) {
+        width: 90%;
+        margin: 0 auto;
+        text-align: right;
+      }
+
+      /* スマートフォン */
+      @include mixin.sp(600px) {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: mixin.clampSp(20, 10);
+      }
+
+      // ==================================
+
+      small {
+        font-weight: 400; //regular
+
+        /* pc 1920px以上  */
+        @include mixin.pc-l(1920px) {
+          font-size: 1.1em;
+          letter-spacing: 0.15px;
+          padding-right: 15px;
+          display: inline-block;
+        }
+
+        /* PC */
+        @include mixin.pc(1920px) {
+          font-size: mixin.variableFontPc(1.2, 1.2);
+          letter-spacing: 0.15px;
+          padding-right: 15px;
+          display: inline-block;
+        }
+
+        /* タブレット */
+        @include mixin.tab(1025px) {
+          padding-right: 25px;
+          font-size: mixin.variableFontTab(1.2, 1.2);
+          letter-spacing: -0.5px;
+          display: inline-block;
+          margin: 15px 0 15px 0;
+        }
+
+        /* スマートフォン */
+        @include mixin.sp(600px) {
+          font-size: mixin.variableFontSp(1.2, 1.2);
+          margin: 15px 0 15px 0;
         }
       }
     }

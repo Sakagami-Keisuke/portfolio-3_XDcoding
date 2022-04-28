@@ -1554,8 +1554,8 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
 .medical-treatment-contents__inner-article-board {
   border: 1px solid;
   border-radius: 10px;
-  border-color: #C9C9C9;
-  background-color: white;
+  border-color: #c9c9c9;
+  background-color: rgb(255, 255, 255);
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
@@ -1946,7 +1946,7 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
 .medical-treatment-contents .notice-detail_container {
   border: 0px solid;
   border-radius: 28px;
-  border: 1px solid #eeeeee;
+  border: 1px solid rgb(238, 238, 238);
   box-shadow: rgba(238, 238, 238, 0.509804) 9px 9px 10px -4px;
   -webkit-box-shadow: rgba(238, 238, 238, 0.509804) 9px 9px 10px -4px;
   -moz-box-shadow: rgba(238, 238, 238, 0.509804) 9px 9px 10px -4px;
@@ -2405,6 +2405,9 @@ div.access__wrapper .access-container {
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container {
     width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
   }
 }
 @media not all and (min-width: 600px) {
@@ -2425,6 +2428,7 @@ div.access__wrapper .access-container__map {
   /* $** pxを含まずそれより小さい */
 }
 div.access__wrapper .access-container__map img {
+  width: 100%;
   max-width: 100%;
   height: auto;
 }
@@ -2443,8 +2447,8 @@ div.access__wrapper .access-container__map img {
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__map {
-    width: clamp(150px, 29vw, 300px);
-    margin-top: clamp(50px, 7vw, 70px);
+    width: 75vw;
+    margin-top: 10vw;
   }
 }
 @media not all and (min-width: 600px) {
@@ -2486,10 +2490,9 @@ div.access__wrapper .access-container__detail {
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail {
-    width: clamp(350px, 44vw, 450px);
+    width: 100vw;
     height: auto;
-    margin-top: clamp(50px, 7vw, 70px);
-    margin-left: clamp(15px, 2vw, 20px);
+    margin-top: 10vw;
   }
 }
 @media not all and (min-width: 600px) {
@@ -2529,8 +2532,9 @@ div.access__wrapper .access-container__detail-logo_inner {
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-logo_inner {
-    width: clamp(230px, 24vw, 250px);
-    height: clamp(50px, 6vw, 60px);
+    width: 250px;
+    height: 60px;
+    margin: 0 auto;
   }
 }
 @media not all and (min-width: 600px) {
@@ -2563,8 +2567,8 @@ div.access__wrapper .access-container__detail-logo_inner--icon {
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-logo_inner--icon {
-    width: clamp(35px, 7vw, 73px);
-    height: clamp(35px, 7vw, 73px);
+    width: 73px;
+    height: 73px;
   }
 }
 @media not all and (min-width: 600px) {
@@ -2603,9 +2607,8 @@ div.access__wrapper .access-container__detail-logo_inner-tagline {
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-logo_inner-tagline {
-    width: 95%;
-    height: clamp(45px, 5vw, 55px);
-    margin-left: clamp(10px, 1vw, 15px);
+    height: 75px;
+    margin-left: 5px;
   }
 }
 @media not all and (min-width: 600px) {
@@ -2643,8 +2646,8 @@ div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-logo_inner-tagline--upper {
-    height: clamp(20px, 3vw, 30px);
-    font-size: calc(2rem + ((1vw - 6px)) * 0.4716981132);
+    height: 30px;
+    font-size: 25px;
     text-align: center;
   }
 }
@@ -2683,10 +2686,9 @@ div.access__wrapper .access-container__detail-logo_inner-tagline--lower {
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-logo_inner-tagline--lower {
-    height: clamp(20px, 3vw, 30px);
-    font-size: calc(2rem + ((1vw - 6px)) * 0.4716981132);
+    height: 35px;
+    font-size: 25px;
     text-align: center;
-    padding-top: clamp(3px, 1vw, 8px);
   }
 }
 @media not all and (min-width: 600px) {
@@ -2719,7 +2721,12 @@ div.access__wrapper .access-container__detail-address-inner {
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-address-inner {
-    margin-top: clamp(24px, 3vw, 27px);
+    width: 100%;
+    margin-top: 30px;
+    justify-content: center;
+  }
+  div.access__wrapper .access-container__detail-address-inner p {
+    font-size: 14px;
   }
 }
 @media not all and (min-width: 600px) {
@@ -2831,9 +2838,10 @@ div.access__wrapper .access-container__detail-tel {
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-tel {
-    width: 220px;
+    width: 100vw;
     position: relative;
-    margin-top: clamp(5px, 1vw, 15px);
+    margin-top: 15px;
+    margin-bottom: 25px;
   }
 }
 @media not all and (min-width: 600px) {
@@ -2877,9 +2885,9 @@ div.access__wrapper .access-container__detail-tel--number::before {
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-tel--number::before {
-    width: clamp(10px, 2vw, 20px);
-    height: clamp(10px, 2vw, 20px);
-    margin-right: clamp(8px, 1vw, 12px);
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
   }
 }
 @media not all and (min-width: 600px) {
@@ -2919,7 +2927,9 @@ div.access__wrapper .access-container__detail-tel--number {
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-tel--number {
-    font-size: calc(1.4rem + ((1vw - 6px)) * 1.4150943396);
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
   }
 }
 @media not all and (min-width: 600px) {
@@ -2956,7 +2966,7 @@ div.access__wrapper .access-container__detail-blank-border {
 }
 @media not all and (min-width: 1025px) {
   div.access__wrapper .access-container__detail-blank-border {
-    width: clamp(330px, 28vw, 533px);
+    width: 90vw;
   }
 }
 @media not all and (min-width: 600px) {
@@ -2987,6 +2997,11 @@ div.access__wrapper .access-container__detail-blank-margin {
     height: clamp(3px, 1vw, 18px);
   }
 }
+@media not all and (min-width: 1025px) {
+  div.access__wrapper .access-container__detail-blank-margin {
+    width: 100vw;
+  }
+}
 @media not all and (min-width: 600px) {
   div.access__wrapper .access-container__detail-blank-margin {
     width: 90%;
@@ -2994,683 +3009,214 @@ div.access__wrapper .access-container__detail-blank-margin {
     margin: 0 auto;
   }
 }
-div.access__wrapper .access-container__detail-business-hour-inner {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
+div.access__wrapper .access-container__detail .business-hour__inner {
+  width: 500px;
+  height: 100px;
   /* タブレット */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン */
   /* $** pxを含まずそれより小さい */
-}
-@media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner {
-    width: 533px;
-    height: 95px;
-  }
-}
-@media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner {
-    width: clamp(350px, 28vw, 533px);
-    height: clamp(85px, 6vw, 120px);
-  }
-}
-@media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner {
-    width: clamp(300px, 39vw, 400px);
-    height: clamp(115px, 12vw, 120px);
-  }
-}
-@media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner {
-    width: 100vw;
-    height: clamp(150px, 33vw, 200px);
-    flex-direction: row;
-    justify-content: flex-start;
-  }
-}
-div.access__wrapper .access-container__detail-business-hour-inner--consultation-time {
-  font-weight: 400;
-  border-right: 1px solid;
-  border-color: #e7e7e7;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン */
-  /* $** pxを含まずそれより小さい */
-}
-@media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--consultation-time {
-    width: 90px;
-    height: 114px;
-    font-size: 1.4rem;
-  }
-}
-@media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--consultation-time {
-    width: 89px;
-    height: clamp(90px, 6vw, 110px);
-    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
-  }
-}
-@media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--consultation-time {
-    width: clamp(60px, 10vw, 100px);
-    height: clamp(110px, 12vw, 120px);
-  }
-}
-@media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--consultation-time {
-    width: clamp(60px, 33vw, 200px);
-    height: clamp(150px, 33vw, 200px);
-    margin-top: 10px;
-  }
-}
-div.access__wrapper .access-container__detail-business-hour-inner--consultation-time p {
-  font-weight: 400;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン */
-  /* $** pxを含まずそれより小さい */
-}
-@media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--consultation-time p {
-    font-size: 1.4rem;
-    margin-top: 5px;
-    margin-left: 4.5px;
-  }
-}
-@media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--consultation-time p {
-    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
-    margin-top: clamp(2px, 0vw, 5px);
-    margin-left: clamp(2px, 0vw, 4.5px);
-  }
-}
-@media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--consultation-time p {
-    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
-    padding-top: 5px;
-  }
-}
-@media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--consultation-time p {
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
-    margin-top: clamp(15px, 5vw, 30px);
-    text-align: center;
-  }
-}
-div.access__wrapper .access-container__detail-business-hour-inner--timetable {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
-  /* スマートフォン */
-  /* $** pxを含まずそれより小さい */
-}
-@media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable {
-    width: 449px;
-    height: 114px;
-  }
-}
-@media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable {
-    width: clamp(330px, 23vw, 449px);
-    height: clamp(90px, 6vw, 120px);
-  }
-}
-@media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable {
-    width: clamp(250px, 29vw, 300px);
-    height: clamp(120px, 13vw, 130px);
-  }
-}
-@media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable {
-    width: clamp(250px, 50vw, 300px);
-    height: clamp(150px, 33vw, 200px);
-  }
-}
-div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
+}
+@media not all and (min-width: 1025px) {
+  div.access__wrapper .access-container__detail .business-hour__inner {
+    width: 90vw;
+    margin-left: 5vw;
+  }
+}
+@media not all and (min-width: 600px) {
+  div.access__wrapper .access-container__detail .business-hour__inner {
+    width: 100vw;
+    height: 200px;
+  }
+}
+div.access__wrapper .access-container__detail .left-box {
+  width: 90px;
+  height: 100%;
+  border-right: 1px solid;
+  border-color: #e7e7e7;
   /* タブレット */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
-@media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern {
-    width: clamp(330px, 23vw, 450px);
-  }
+div.access__wrapper .access-container__detail .left-box span {
+  font-size: 14px;
+  display: inline-block;
+  padding-top: 8px;
+  padding-left: 5px;
+  letter-spacing: -1px;
 }
 @media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern {
-    width: clamp(235px, 31vw, 320px);
-    flex-wrap: nowrap;
+  div.access__wrapper .access-container__detail .left-box {
+    width: 30.5vw;
+  }
+  div.access__wrapper .access-container__detail .left-box span {
+    font-size: 14px;
+    display: inline-block;
+    padding-top: 5%;
+    padding-left: 5vw;
+    letter-spacing: 0px;
   }
 }
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern {
-    margin: 0;
-    width: 90%;
-    flex-wrap: nowrap;
-    align-items: center;
+  div.access__wrapper .access-container__detail .left-box {
+    width: 45vw;
+  }
+  div.access__wrapper .access-container__detail .left-box span {
+    font-size: 14px;
+    display: inline-block;
+    padding-top: 45%;
+    padding-left: 15vw;
+    letter-spacing: 0px;
   }
 }
-div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_upper {
-  font-weight: 400;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
+div.access__wrapper .access-container__detail .right-box {
+  width: calc(100% - 90px);
+  height: 100%;
+}
+div.access__wrapper .access-container__detail .right-box p.right-box__line01 {
+  padding-top: 9px;
   /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
-@media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_upper {
-    width: 42px;
-    font-size: 1.4rem;
-    display: inline-block;
-    margin: 5px 23px 0 28px;
-  }
-}
-@media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_upper {
-    width: clamp(42px, 2vw, 42px);
-    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
-    display: inline-block;
-    margin-top: 5px;
-    margin-left: clamp(10px, 1vw, 23px);
-    margin-right: clamp(20px, 1vw, 28px);
-  }
-}
-@media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_upper {
-    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
-    margin-top: 5px;
-    margin-left: clamp(5px, 1vw, 10px);
-    margin-right: clamp(5px, 1vw, 10px);
-    padding-top: 5px;
-  }
-}
-@media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_upper {
-    display: inline-block;
-    width: clamp(60px, 20vw, 120px);
-    height: clamp(40px, 10vw, 60px);
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
-    margin: 0;
-    text-align: right;
-    padding-top: 25px;
-    padding-right: 15px;
-  }
-}
-div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper {
-  margin-top: 5px;
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
+div.access__wrapper .access-container__detail .right-box p.right-box__line01 span.br {
+  display: none;
   /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
-@media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper {
-    margin-top: 5px;
-    width: 60%;
-  }
-}
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper {
-    width: clamp(120px, 25vw, 150px);
-    height: clamp(40px, 10vw, 60px);
-    margin-top: 20px;
-    margin-left: 30px;
+  div.access__wrapper .access-container__detail .right-box p.right-box__line01 span.br {
+    display: inline;
   }
 }
-div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.morning_upper {
-  font-weight: 400;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
+div.access__wrapper .access-container__detail .right-box p.right-box__line01 .day-of-week {
+  font-size: 14px;
+  padding-left: 28px;
   /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
-@media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.morning_upper {
-    width: 115px;
-    font-size: 1.4rem;
-    letter-spacing: 0.2px;
-    display: inline-block;
-  }
-}
-@media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.morning_upper {
-    width: clamp(95px, 6vw, 115px);
-    width: auto;
-    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
-    letter-spacing: 0.2px;
-    display: inline-block;
-  }
-}
-@media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.morning_upper {
-    width: auto;
-    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
-    letter-spacing: -1px;
-    margin-right: clamp(5px, 1vw, 10px);
-    margin-left: clamp(5px, 1vw, 10px);
-  }
-}
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.morning_upper {
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
-    padding-top: 5px;
+  div.access__wrapper .access-container__detail .right-box p.right-box__line01 .day-of-week {
+    padding-left: 23vw;
   }
 }
-div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
-  font-weight: 400;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
+div.access__wrapper .access-container__detail .right-box p.right-box__line01 .morning {
+  font-size: 14px;
+  padding-left: 20px;
   /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
-@media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
-    width: 120px;
-    font-size: 1.4rem;
-    letter-spacing: 0.1px;
-    display: inline-block;
-    margin-left: 4px;
-  }
-}
-@media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
-    width: clamp(115px, 6vw, 120px);
-    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
-    letter-spacing: 0.1px;
-    display: inline-block;
-    margin-left: clamp(2px, 0vw, 4px);
-  }
-}
-@media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
-    width: auto;
-    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
-    letter-spacing: -1px;
-    margin-right: clamp(5px, 1vw, 10px);
-    margin-left: clamp(5px, 1vw, 10px);
-  }
-}
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--upper p.afternoon_upper {
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
-    padding-top: 5px;
+  div.access__wrapper .access-container__detail .right-box p.right-box__line01 .morning {
+    padding-left: 15vw;
   }
 }
-div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_middle {
-  font-weight: 400;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
+div.access__wrapper .access-container__detail .right-box p.right-box__line01 .afternoon {
+  font-size: 14px;
+  padding-left: 15px;
   /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
-@media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_middle {
-    font-size: 1.4rem;
-    display: inline-block;
-    width: 42px;
-    margin: 16px 23px 0 28px;
-  }
-}
-@media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_middle {
-    width: clamp(42px, 2vw, 42px);
-    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
-    display: inline-block;
-    margin-top: clamp(15px, 1vw, 20px);
-    margin-left: clamp(10px, 1vw, 23px);
-    margin-right: clamp(20px, 1vw, 28px);
-  }
-}
-@media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_middle {
-    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
-    margin-top: 10px;
-    margin-left: clamp(5px, 1vw, 10px);
-    margin-right: clamp(5px, 1vw, 10px);
-    padding-top: 5px;
-  }
-}
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_middle {
-    display: inline-block;
-    margin: 0;
-    width: clamp(60px, 20vw, 120px);
-    height: clamp(40px, 10vw, 60px);
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
-    text-align: right;
-    padding-top: 15px;
-    padding-right: 15px;
+  div.access__wrapper .access-container__detail .right-box p.right-box__line01 .afternoon {
+    padding-left: 15vw;
   }
 }
-div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle {
-  margin-top: 17px;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
+div.access__wrapper .access-container__detail .right-box p.right-box__line02 {
+  padding-top: 16px;
+}
+div.access__wrapper .access-container__detail .right-box p.right-box__line02 span.br {
+  display: none;
   /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
-@media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle {
-    margin-top: 10px;
-    width: 60%;
-  }
-}
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle {
-    margin: 0;
-    width: clamp(120px, 25vw, 150px);
-    height: clamp(40px, 10vw, 60px);
-    margin-left: 30px;
+  div.access__wrapper .access-container__detail .right-box p.right-box__line02 span.br {
+    display: inline;
   }
 }
-div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.morning_middle {
-  font-weight: 400;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
+div.access__wrapper .access-container__detail .right-box p.right-box__line02 .day-of-week {
+  font-size: 14px;
+  padding-left: 28px;
   /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
-@media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.morning_middle {
-    width: 115px;
-    font-size: 1.4rem;
-    letter-spacing: 0.2px;
-    display: inline-block;
-  }
-}
-@media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.morning_middle {
-    width: clamp(95px, 6vw, 115px);
-    width: auto;
-    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
-    letter-spacing: 0.2px;
-    display: inline-block;
-  }
-}
-@media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.morning_middle {
-    width: auto;
-    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
-    letter-spacing: -1px;
-    margin-right: clamp(5px, 1vw, 10px);
-    margin-left: clamp(5px, 1vw, 10px);
-  }
-}
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.morning_middle {
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
-    padding-top: 5px;
+  div.access__wrapper .access-container__detail .right-box p.right-box__line02 .day-of-week {
+    padding-left: 23vw;
   }
 }
-div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
-  font-weight: 400;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
+div.access__wrapper .access-container__detail .right-box p.right-box__line02 .morning {
+  font-size: 14px;
+  padding-left: 20px;
   /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
-@media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
-    width: 120px;
-    font-size: 1.4rem;
-    letter-spacing: 0.1px;
-    display: inline-block;
-    margin-left: clamp(2px, 0vw, 4px);
-  }
-}
-@media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
-    width: clamp(115px, 6vw, 115px);
-    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
-    letter-spacing: 0.2px;
-    display: inline-block;
-    margin-left: 4px;
-  }
-}
-@media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
-    width: auto;
-    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
-    letter-spacing: -1px;
-    margin-right: clamp(5px, 1vw, 10px);
-    margin-left: clamp(5px, 1vw, 10px);
-  }
-}
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--middle p.afternoon_middle {
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
-    padding-top: 5px;
+  div.access__wrapper .access-container__detail .right-box p.right-box__line02 .morning {
+    padding-left: 15vw;
   }
 }
-div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_lower {
-  font-weight: 400;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
+div.access__wrapper .access-container__detail .right-box p.right-box__line02 .afternoon {
+  font-size: 14px;
+  padding-left: 15px;
   /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
-@media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_lower {
-    font-size: 1.4rem;
-    display: inline-block;
-    width: 42px;
-    margin: 17px 23px 0 28px;
-  }
-}
-@media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_lower {
-    width: clamp(42px, 2vw, 42px);
-    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
-    display: inline-block;
-    margin-top: clamp(15px, 1vw, 20px);
-    margin-left: clamp(10px, 1vw, 23px);
-    margin-right: clamp(20px, 1vw, 28px);
-  }
-}
-@media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_lower {
-    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
-    margin-top: 10px;
-    margin-left: clamp(5px, 1vw, 10px);
-    margin-right: clamp(5px, 1vw, 10px);
-    padding-top: 5px;
-  }
-}
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern p.day-of-week_lower {
-    display: inline-block;
-    margin: 0;
-    width: clamp(60px, 20vw, 120px);
-    height: clamp(40px, 10vw, 60px);
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
-    padding-top: 15px;
-    text-align: right;
-    padding-right: 15px;
+  div.access__wrapper .access-container__detail .right-box p.right-box__line02 .afternoon {
+    padding-left: 15vw;
   }
 }
-div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower {
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
+div.access__wrapper .access-container__detail .right-box p.right-box__line03 {
+  padding-top: 16px;
+}
+div.access__wrapper .access-container__detail .right-box p.right-box__line03 span.br {
+  display: none;
   /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
-@media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower {
-    margin-top: 17px;
-  }
-}
-@media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower {
-    margin-top: 17px;
-  }
-}
-@media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower {
-    margin-top: 10px;
-    width: 60%;
-  }
-}
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower {
-    margin: 0;
-    width: clamp(120px, 25vw, 150px);
-    height: clamp(40px, 10vw, 60px);
-    margin-left: 30px;
+  div.access__wrapper .access-container__detail .right-box p.right-box__line03 span.br {
+    display: inline;
   }
 }
-div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.morning_lower {
-  font-weight: 400;
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
+div.access__wrapper .access-container__detail .right-box p.right-box__line03 .day-of-week {
+  font-size: 14px;
+  padding-left: 28px;
   /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
-@media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.morning_lower {
-    width: 115px;
-    font-size: 1.4rem;
-    letter-spacing: 0.2px;
-    display: inline-block;
-  }
-}
-@media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.morning_lower {
-    width: clamp(95px, 6vw, 115px);
-    width: auto;
-    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
-    display: inline-block;
-  }
-}
-@media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.morning_lower {
-    width: auto;
-    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
-    letter-spacing: -1px;
-    margin-right: clamp(5px, 1vw, 10px);
-    margin-left: clamp(5px, 1vw, 10px);
-  }
-}
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.morning_lower {
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
-    padding-top: 5px;
+  div.access__wrapper .access-container__detail .right-box p.right-box__line03 .day-of-week {
+    padding-left: 23vw;
   }
 }
-div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.afternoon_lower {
-  /* pc 1920px以上  */
-  /* 1920px 以上 */
-  /* PC */
-  /* $** pxを含まずそれより小さい */
-  /* タブレット */
-  /* $** pxを含まずそれより小さい */
+div.access__wrapper .access-container__detail .right-box p.right-box__line03 .morning {
+  font-size: 14px;
+  padding-left: 20px;
   /* スマートフォン */
   /* $** pxを含まずそれより小さい */
 }
-@media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.afternoon_lower {
-    width: 120px;
-    font-size: 1.4rem;
-    letter-spacing: 0.1px;
-    display: inline-block;
-    margin-left: 4px;
+@media not all and (min-width: 600px) {
+  div.access__wrapper .access-container__detail .right-box p.right-box__line03 .morning {
+    padding-left: 15vw;
   }
 }
-@media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.afternoon_lower {
-    width: clamp(115px, 6vw, 115px);
-    font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
-    letter-spacing: 0.2px;
-    display: inline-block;
-    margin-left: clamp(8px, 1vw, 10px);
-  }
-}
-@media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.afternoon_lower {
-    width: auto;
-    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
-    letter-spacing: -1px;
-    margin-right: clamp(5px, 1vw, 10px);
-    margin-left: clamp(5px, 1vw, 10px);
-  }
+div.access__wrapper .access-container__detail .right-box p.right-box__line03 .afternoon {
+  font-size: 14px;
+  padding-left: 15px;
+  /* スマートフォン */
+  /* $** pxを含まずそれより小さい */
 }
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-business-hour-inner--timetable .pattern .morning_afternoon__wrapper--lower p.afternoon_lower {
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
-    padding-top: 5px;
+  div.access__wrapper .access-container__detail .right-box p.right-box__line03 .afternoon {
+    padding-left: 15vw;
   }
 }
-div.access__wrapper .access-container__detail .closed-day--inner {
+div.access__wrapper .access-container .closed-day--inner {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -3684,30 +3230,31 @@ div.access__wrapper .access-container__detail .closed-day--inner {
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail .closed-day--inner {
+  div.access__wrapper .access-container .closed-day--inner {
     width: 533px;
     height: 50px;
   }
 }
 @media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail .closed-day--inner {
+  div.access__wrapper .access-container .closed-day--inner {
     width: clamp(400px, 28vw, 533px);
     height: clamp(30px, 3vw, 50px);
   }
 }
 @media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail .closed-day--inner {
-    width: clamp(250px, 34vw, 350px);
+  div.access__wrapper .access-container .closed-day--inner {
+    width: 100vw;
+    margin-left: 5vw;
   }
 }
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail .closed-day--inner {
-    width: clamp(350px, 70vw, 420px);
-    margin-top: clamp(10px, 2vw, 10px);
-    margin-bottom: clamp(10px, 2vw, 10px);
+  div.access__wrapper .access-container .closed-day--inner {
+    width: 100vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
-div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
+div.access__wrapper .access-container .closed-day--inner .closed-day {
   font-weight: 400;
   border-right: 1px solid;
   border-color: #e7e7e7;
@@ -3721,7 +3268,7 @@ div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
+  div.access__wrapper .access-container .closed-day--inner .closed-day {
     width: 89px;
     height: 25px;
     font-size: 1.4rem;
@@ -3731,7 +3278,7 @@ div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
   }
 }
 @media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
+  div.access__wrapper .access-container .closed-day--inner .closed-day {
     width: 89px;
     height: 25px;
     font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
@@ -3741,20 +3288,31 @@ div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
   }
 }
 @media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
-    width: clamp(60px, 10vw, 100px);
-    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
+  div.access__wrapper .access-container .closed-day--inner .closed-day {
+    border-right: 1px solid;
+    border-color: #e7e7e7;
+    width: 24.5vw;
+  }
+  div.access__wrapper .access-container .closed-day--inner .closed-day span {
+    font-size: 14px;
+    display: inline-block;
+    padding-left: 5vw;
+    letter-spacing: 0px;
   }
 }
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail .closed-day--inner .closed-day {
-    width: clamp(60px, 33vw, 200px);
-    height: auto;
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
-    text-align: center;
+  div.access__wrapper .access-container .closed-day--inner .closed-day {
+    width: 36.5vw;
+    height: 100%;
+    border-right: 1px solid;
+    border-color: #e7e7e7;
+  }
+  div.access__wrapper .access-container .closed-day--inner .closed-day span {
+    font-size: 14px;
+    padding-left: 45%;
   }
 }
-div.access__wrapper .access-container__detail .closed-day-of-week {
+div.access__wrapper .access-container .closed-day-of-week {
   font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
@@ -3766,7 +3324,7 @@ div.access__wrapper .access-container__detail .closed-day-of-week {
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail .closed-day-of-week {
+  div.access__wrapper .access-container .closed-day-of-week {
     width: 449px;
     height: 114px;
     font-size: 1.4em;
@@ -3776,7 +3334,7 @@ div.access__wrapper .access-container__detail .closed-day-of-week {
   }
 }
 @media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail .closed-day-of-week {
+  div.access__wrapper .access-container .closed-day-of-week {
     width: 449px;
     height: 114px;
     font-size: calc(1.2rem + ((1vw - 10.24px)) * 0.2234636872);
@@ -3786,19 +3344,22 @@ div.access__wrapper .access-container__detail .closed-day-of-week {
   }
 }
 @media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail .closed-day-of-week {
-    width: clamp(200px, 22vw, 230px);
-    font-size: calc(1.2rem + ((1vw - 6px)) * 0.4716981132);
-    padding-left: clamp(35px, 3vw, 35px);
+  div.access__wrapper .access-container .closed-day-of-week {
+    width: 75vw;
+    font-size: 14px;
+    padding-left: 25vw;
+    letter-spacing: 0px;
   }
 }
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail .closed-day-of-week {
-    width: clamp(200px, 42vw, 250px);
-    font-size: calc(1.2rem + ((1vw - 3.75px)) * 0.8928571429);
+  div.access__wrapper .access-container .closed-day-of-week {
+    width: 65vw;
+    font-size: 14px;
+    padding-left: 18vw;
+    letter-spacing: 0px;
   }
 }
-div.access__wrapper .access-container__detail-blank-border--lower {
+div.access__wrapper .access-container-blank-border--lower {
   border-bottom: 1px solid;
   border-color: #e7e7e7;
   /* pc 1920px以上  */
@@ -3811,31 +3372,33 @@ div.access__wrapper .access-container__detail-blank-border--lower {
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-blank-border--lower {
+  div.access__wrapper .access-container-blank-border--lower {
     height: 19px;
     width: 533px;
     margin-left: 5px;
   }
 }
 @media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail-blank-border--lower {
+  div.access__wrapper .access-container-blank-border--lower {
     height: clamp(10px, 1vw, 19px);
     width: clamp(400px, 28vw, 533px);
     margin-left: clamp(2px, 0vw, 5px);
   }
 }
 @media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail-blank-border--lower {
-    width: clamp(330px, 28vw, 533px);
+  div.access__wrapper .access-container-blank-border--lower {
+    width: 90vw;
   }
 }
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail-blank-border--lower {
+  div.access__wrapper .access-container-blank-border--lower {
     width: 90vw;
     margin: 0 auto;
   }
 }
-div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc {
+div.access__wrapper .access-container .blank-border--lower {
+  border-bottom: 1px solid;
+  border-color: #e7e7e7;
   /* pc 1920px以上  */
   /* 1920px 以上 */
   /* PC */
@@ -3846,35 +3409,70 @@ div.access__wrapper .access-container__detail .access-container__detail-copyrigh
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc {
+  div.access__wrapper .access-container .blank-border--lower {
+    height: 19px;
+    width: 533px;
+    margin-left: 5px;
+  }
+}
+@media not all and (min-width: 1920px) {
+  div.access__wrapper .access-container .blank-border--lower {
+    height: clamp(10px, 1vw, 19px);
+    width: clamp(400px, 28vw, 533px);
+    margin-left: clamp(2px, 0vw, 5px);
+  }
+}
+@media not all and (min-width: 1025px) {
+  div.access__wrapper .access-container .blank-border--lower {
+    width: 90vw;
+  }
+}
+@media not all and (min-width: 600px) {
+  div.access__wrapper .access-container .blank-border--lower {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
+div.access__wrapper .access-container .copyright_reserved--pc {
+  /* pc 1920px以上  */
+  /* 1920px 以上 */
+  /* PC */
+  /* $** pxを含まずそれより小さい */
+  /* タブレット */
+  /* $** pxを含まずそれより小さい */
+  /* スマートフォン */
+  /* $** pxを含まずそれより小さい */
+}
+@media (min-width: 1920px) {
+  div.access__wrapper .access-container .copyright_reserved--pc {
     width: 554px;
-    margin-top: 24.5px;
+    margin-top: 25px;
     text-align: right;
   }
 }
 @media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc {
+  div.access__wrapper .access-container .copyright_reserved--pc {
     width: clamp(400px, 29vw, 554px);
     text-align: right;
     margin-top: clamp(10px, 1vw, 20px);
   }
 }
 @media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc {
+  div.access__wrapper .access-container .copyright_reserved--pc {
     width: 90%;
     margin: 0 auto;
     text-align: right;
   }
 }
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc {
+  div.access__wrapper .access-container .copyright_reserved--pc {
     width: 100%;
     margin: 0 auto;
     text-align: center;
     margin-top: clamp(10px, 3vw, 20px);
   }
 }
-div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc small {
+div.access__wrapper .access-container .copyright_reserved--pc small {
   font-weight: 400;
   /* pc 1920px以上  */
   /* 1920px 以上 */
@@ -3886,7 +3484,7 @@ div.access__wrapper .access-container__detail .access-container__detail-copyrigh
   /* $** pxを含まずそれより小さい */
 }
 @media (min-width: 1920px) {
-  div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc small {
+  div.access__wrapper .access-container .copyright_reserved--pc small {
     font-size: 1.1em;
     letter-spacing: 0.15px;
     padding-right: 15px;
@@ -3894,7 +3492,7 @@ div.access__wrapper .access-container__detail .access-container__detail-copyrigh
   }
 }
 @media not all and (min-width: 1920px) {
-  div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc small {
+  div.access__wrapper .access-container .copyright_reserved--pc small {
     font-size: calc(1.2rem + ((1vw - 10.24px)) * 0);
     letter-spacing: 0.15px;
     padding-right: 15px;
@@ -3902,7 +3500,7 @@ div.access__wrapper .access-container__detail .access-container__detail-copyrigh
   }
 }
 @media not all and (min-width: 1025px) {
-  div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc small {
+  div.access__wrapper .access-container .copyright_reserved--pc small {
     padding-right: 25px;
     font-size: calc(1.2rem + ((1vw - 6px)) * 0);
     letter-spacing: -0.5px;
@@ -3911,7 +3509,7 @@ div.access__wrapper .access-container__detail .access-container__detail-copyrigh
   }
 }
 @media not all and (min-width: 600px) {
-  div.access__wrapper .access-container__detail .access-container__detail-copyright_reserved--pc small {
+  div.access__wrapper .access-container .copyright_reserved--pc small {
     font-size: calc(1.2rem + ((1vw - 3.75px)) * 0);
     margin: 15px 0 15px 0;
   }
