@@ -388,6 +388,13 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
         color: #444444;
         transform: scale(0.8, 0.8);
 
+                /* pc 1367px以上  */
+                @include mixin.pc-l(1367px) {
+                    transform: scale(1.5, 1.5);
+                    top: 25px;
+                    right: 20vw;
+                }
+
         /* PC */
         @include mixin.pc(1920px) {
             top: 10px;
@@ -418,6 +425,9 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
 
         /* pc 1367px以上  */
         @include mixin.pc-l(1367px) {
+            transform: scale(1.5, 1.5);
+            top: 90px;
+            right: 20.2vw;
         }
 
         /* PC */

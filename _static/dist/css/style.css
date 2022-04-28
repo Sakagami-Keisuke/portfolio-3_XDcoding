@@ -865,12 +865,21 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
   right: 15vw;
   color: #444444;
   transform: scale(0.8, 0.8);
+  /* pc 1367px以上  */
+  /* 1920px 以上 */
   /* PC */
   /* $** pxを含まずそれより小さい */
   /* タブレット */
   /* $** pxを含まずそれより小さい */
   /* スマートフォン */
   /* $** pxを含まずそれより小さい */
+}
+@media (min-width: 1367px) {
+  .header .fa-github {
+    transform: scale(1.5, 1.5);
+    top: 25px;
+    right: 20vw;
+  }
 }
 @media not all and (min-width: 1920px) {
   .header .fa-github {
@@ -904,6 +913,13 @@ XDのAV 75 ÷1000 = 0.075　letter-spacing : 0.075em*/
   /* $** pxを含まずそれより小さい */
   /* スマートフォン */
   /* $** pxを含まずそれより小さい */
+}
+@media (min-width: 1367px) {
+  .header .source {
+    transform: scale(1.5, 1.5);
+    top: 90px;
+    right: 20.2vw;
+  }
 }
 @media not all and (min-width: 1366px) {
   .header .source {
